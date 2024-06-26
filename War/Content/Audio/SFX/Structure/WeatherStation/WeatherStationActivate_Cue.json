@@ -1,0 +1,49 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WeatherStationActivate_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeWavePlayer'WeatherStationActivate_Cue:SoundNodeWavePlayer_1'",
+        "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationActivate_Cue.1"
+      },
+      "VolumeMultiplier": 1.25,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 20000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 4.5,
+      "MaxDistance": 86000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WorldExplosives'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WorldExplosives.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WeatherStationActivate_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/WeatherStation/WeatherStationActivate.WeatherStationActivate",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WeatherStationActivate'",
+      "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationActivate.0"
+    }
+  }
+]

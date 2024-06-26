@@ -164,6 +164,10 @@
         "ObjectName": "ParticleSystemComponent'Default__BPMediumTank2BaseW_C:DisabledTurret5FX'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.23"
       },
+      "BoostSoundCue": {
+        "ObjectName": "SoundCue'LightTankBoost_cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/LightTanks/Colonial/LightTankBoost_cue.0"
+      },
       "DriveLoop": {
         "ObjectName": "AudioComponent'Default__BPMediumTank2BaseW_C:DriveLoop'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.5"
@@ -212,6 +216,8 @@
         "ObjectName": "AFKTimeoutComponent'Default__BPMediumTank2BaseW_C:AFKTimeoutComponent'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.3"
       },
+      "BoostSpeedModifier": 1.6,
+      "BoostGasUsageModifier": 6.0,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPMediumTank2BaseW_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.51"
@@ -367,6 +373,11 @@
     "Outer": "Default__BPMediumTank2BaseW_C",
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
+      "BoxExtent": {
+        "X": 380.0,
+        "Y": 200.0,
+        "Z": 130.0
+      },
       "OnComponentBeginOverlap": {
         "InvocationList": [
           {
@@ -883,6 +894,10 @@
     "Outer": "BPMediumTank2BaseW_C",
     "Class": "UScriptClass'VehicleSeatComponent'",
     "Properties": {
+      "EnterSFX": {
+        "ObjectName": "SoundCue'MediumTankCStart_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank/MediumTankCStart_Cue.0"
+      },
       "TriggerName": "DriverTrigger",
       "ExitName": "DriverExit",
       "RelativeLocation": {
@@ -898,6 +913,10 @@
     "Outer": "BPMediumTank2BaseW_C",
     "Class": "UScriptClass'VehicleSeatComponent'",
     "Properties": {
+      "EnterSFX": {
+        "ObjectName": "SoundCue'LightTankColonialGunnerEntrance_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/LightTanks/Colonial/LightTankColonialGunnerEntrance_Cue.0"
+      },
       "Index": 1,
       "TriggerName": "GunnerTrigger",
       "ExitName": "GunnerExit",

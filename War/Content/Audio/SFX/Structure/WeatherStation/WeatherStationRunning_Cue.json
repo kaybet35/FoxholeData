@@ -1,0 +1,251 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'WeatherStationRunning_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.7"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1350.8081,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 811.2747
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 8.0,
+      "DelayMax": 30.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'WeatherStationRunning_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WeatherStationRunning_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_2",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WeatherStationRunning_Cue:SoundNodeWavePlayer_8'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.12"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_3",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WeatherStationRunning_Cue:SoundNodeWavePlayer_9'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_4",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMax": 15.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WeatherStationRunning_Cue:SoundNodeWavePlayer_10'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'WeatherStationRunning_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.8,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'WeatherStationRunning_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.9"
+        },
+        null,
+        {
+          "ObjectName": "SoundNodeLooping'WeatherStationRunning_Cue:SoundNodeLooping_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'WeatherStationRunning_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.2"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'WeatherStationRunning_Cue:SoundNodeDelay_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'WeatherStationRunning_Cue:SoundNodeDelay_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'WeatherStationRunning_Cue:SoundNodeDelay_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationRunning_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/WeatherStation/WeatherStationIdle01.WeatherStationIdle01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'WeatherStationIdle01'",
+      "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationIdle01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/WeatherStation/WeatherStationIdle05.WeatherStationIdle05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/WeatherStation/WeatherStationIdle02.WeatherStationIdle02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/WeatherStation/WeatherStationIdle03.WeatherStationIdle03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "WeatherStationRunning_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/WeatherStation/WeatherStationIdle04.WeatherStationIdle04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

@@ -17,7 +17,7 @@
     "Properties": {
       "TargetSkeleton": {
         "ObjectName": "Skeleton'SK_FieldModificationCenter_Skeleton'",
-        "ObjectPath": "War/Content/Meshes/Structures/SK_FieldModificationCenter_Skeleton.0"
+        "ObjectPath": "War/Content/Meshes/Structures/SK_FieldModificationCenter_Skeleton.2"
       },
       "OrderedSavedPoseIndicesMap": [
         {
@@ -32,19 +32,19 @@
           "BoundFunction": "None",
           "CopyRecords": [
             {
-              "SourcePropertyName": "bIsActive",
+              "SourcePropertyName": "PulleyLength",
               "SourceSubPropertyName": "None",
               "SourceArrayIndex": 0,
               "bInstanceIsTarget": false,
               "PostCopyOperation": "EPostCopyOperation::None",
               "DestProperty": {
-                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
                 "ObjectPath": "/Script/AnimGraphRuntime"
               },
               "DestArrayIndex": 0,
-              "Size": 1,
+              "Size": 4,
               "CachedSourceProperty": {
-                "ObjectName": "BoolProperty'AssemblyStationAnimInstance:bIsActive'",
+                "ObjectName": "FloatProperty'BuildArmAnimInstance:PulleyLength'",
                 "ObjectPath": "/Script/War"
               },
               "CachedSourceStructSubProperty": null
@@ -52,8 +52,64 @@
           ],
           "Function": null,
           "ValueHandlerNodeProperty": {
-            "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendListByBool_DD78D46F464FC279F8731AB00447AFA2'",
+            "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendSpacePlayer_1782206A44C6DDCA5F99AC8239AC4031'",
             "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.7"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "SideDistance",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BuildArmAnimInstance:SideDistance'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendSpacePlayer_C900A17A43B9C18A6EC7809DD702FE01'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.8"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HorizontalDistanceToTarget",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BuildArmAnimInstance:HorizontalDistanceToTarget'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendSpacePlayer_EC673E2F42DBE56ADDC0398127BD4CD3'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.9"
           }
         }
       ],
@@ -67,7 +123,7 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'AssemblyStationAnimInstance'",
+      "ObjectName": "Class'BuildArmAnimInstance'",
       "ObjectPath": "/Script/War"
     },
     "Children": [
@@ -85,18 +141,26 @@
       },
       {
         "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_Root_5E230739427833958B7B36986EA9AC69'",
-        "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.8"
+        "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.11"
       },
       {
         "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_SequencePlayer_3D475A9A40C92E195A4DB19A7C9D75D6'",
-        "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.9"
+        "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.12"
       },
       {
-        "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_SequencePlayer_629B90094DBAFF5F2AB6D19167ED4806'",
+        "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_LayeredBoneBlend_389335DC4A0DB63CCEAA1495A258A9A0'",
         "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.10"
       },
       {
-        "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendListByBool_DD78D46F464FC279F8731AB00447AFA2'",
+        "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendSpacePlayer_EC673E2F42DBE56ADDC0398127BD4CD3'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendSpacePlayer_C900A17A43B9C18A6EC7809DD702FE01'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.8"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldModificationCenter_C:AnimGraphNode_BlendSpacePlayer_1782206A44C6DDCA5F99AC8239AC4031'",
         "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/ABP_FieldModificationCenter.7"
       }
     ],
@@ -130,7 +194,7 @@
       "UberGraphFrame": {},
       "AnimGraphNode_Root_5E230739427833958B7B36986EA9AC69": {
         "Result": {
-          "LinkID": 3
+          "LinkID": 2
         },
         "Name": "AnimGraph",
         "Group": "None"
@@ -169,60 +233,174 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_SequencePlayer_629B90094DBAFF5F2AB6D19167ED4806": {
-        "Sequence": {
-          "ObjectName": "AnimSequence'FacilityModificationCenterMovingAnim'",
-          "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/FacilityModificationCenterMovingAnim.28"
+      "AnimGraphNode_LayeredBoneBlend_389335DC4A0DB63CCEAA1495A258A9A0": {
+        "BasePose": {
+          "LinkID": 1
         },
-        "PlayRateBasis": 1.0,
+        "BlendPoses": [
+          {
+            "LinkID": 3
+          },
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 5
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Beam",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Wheel",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Zap",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "83B6DA04-49A4B5A3-32C1F6BB-75B0F00C",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_EC673E2F42DBE56ADDC0398127BD4CD3": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
         "PlayRate": 1.0,
-        "PlayRateScaleBiasClamp": {
-          "bMapRange": false,
-          "bClampResult": false,
-          "bInterpResult": false,
-          "InRange": {
-            "Min": 0.0,
-            "Max": 1.0
-          },
-          "OutRange": {
-            "Min": 0.0,
-            "Max": 1.0
-          },
-          "Scale": 1.0,
-          "Bias": 0.0,
-          "ClampMin": 0.0,
-          "ClampMax": 1.0,
-          "InterpSpeedIncreasing": 10.0,
-          "InterpSpeedDecreasing": 10.0
-        },
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
         "StartPosition": 0.0,
-        "bLoopAnimation": true,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FacilityModificationCenter_DepthMovement'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/BS_FacilityModificationCenter_DepthMovement.0"
+        },
+        "PreviousBlendSpace": null,
         "GroupIndex": -1,
         "GroupRole": "EAnimGroupRole::CanBeLeader",
         "bIgnoreForRelevancyTest": false,
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
-      "AnimGraphNode_BlendListByBool_DD78D46F464FC279F8731AB00447AFA2": {
-        "bActiveValue": false,
-        "BlendPose": [
-          {
-            "LinkID": 2
-          },
-          {
-            "LinkID": 1
-          }
-        ],
-        "BlendTime": [
-          0.1,
-          0.1
-        ],
-        "TransitionType": "EBlendListTransitionType::StandardBlend",
-        "BlendType": "EAlphaBlendOption::Linear",
-        "bResetChildOnActivation": false,
-        "CustomBlendCurve": null,
-        "BlendProfile": null
-      }
+      "AnimGraphNode_BlendSpacePlayer_C900A17A43B9C18A6EC7809DD702FE01": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FacilityModificationCenter_HookHorizontal'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/BS_FacilityModificationCenter_HookHorizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_1782206A44C6DDCA5F99AC8239AC4031": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FacilityModificationCenter_HookVertical'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Facilities/BS_FacilityModificationCenter_HookVertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "BuildSoundCue": {
+        "ObjectName": "SoundCue'FacilityAssemblyWelding_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyWelding_Cue.0"
+      },
+      "Type": "EBuildArmType::Overhead",
+      "HorizontalArmSpeed": 150.0,
+      "SideDistanceSpeed": 150.0,
+      "PulleySpeed": 200.0,
+      "MinHorizontalDistance": 0.0,
+      "MaxHorizontalDistance": 945.0,
+      "MaxSideDistanceOffset": 310.0
     }
   },
   {
@@ -271,11 +449,41 @@
   },
   {
     "Type": "StructProperty",
-    "Name": "AnimGraphNode_BlendListByBool_DD78D46F464FC279F8731AB00447AFA2",
+    "Name": "AnimGraphNode_BlendSpacePlayer_1782206A44C6DDCA5F99AC8239AC4031",
     "Outer": "ABP_FieldModificationCenter_C",
     "Class": "UScriptClass'StructProperty'",
     "Struct": {
-      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C900A17A43B9C18A6EC7809DD702FE01",
+    "Outer": "ABP_FieldModificationCenter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_EC673E2F42DBE56ADDC0398127BD4CD3",
+    "Outer": "ABP_FieldModificationCenter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_389335DC4A0DB63CCEAA1495A258A9A0",
+    "Outer": "ABP_FieldModificationCenter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
       "ObjectPath": "/Script/AnimGraphRuntime"
     }
   },
@@ -292,16 +500,6 @@
   {
     "Type": "StructProperty",
     "Name": "AnimGraphNode_SequencePlayer_3D475A9A40C92E195A4DB19A7C9D75D6",
-    "Outer": "ABP_FieldModificationCenter_C",
-    "Class": "UScriptClass'StructProperty'",
-    "Struct": {
-      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "StructProperty",
-    "Name": "AnimGraphNode_SequencePlayer_629B90094DBAFF5F2AB6D19167ED4806",
     "Outer": "ABP_FieldModificationCenter_C",
     "Class": "UScriptClass'StructProperty'",
     "Struct": {

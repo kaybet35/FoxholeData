@@ -1,0 +1,986 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Door",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Opening",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 1.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 1.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_LargeShipResourceDoor_Skeleton'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/SK_LargeShipResourceDoor_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.33"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.31"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.32"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.34"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.14"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.29"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.15"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.30"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BulkheadDoorAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.0"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.13"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.19"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.17"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.16"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.14"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.18"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.15"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_Root_B8CDFD574D88A523B1876CB5662484A9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_SequencePlayer_E7BE35624FEE9F079AA23392FA897929'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_StateResult_086DBAEB4E9627626FDA239B0C7BC21C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_SequencePlayer_A7C4136C41F6284B53F448A9FF42D8F5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_StateResult_D7B6405441D22C24BE356B9145A0EF0E'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_SequencePlayer_BC30B50F49C75BA4CFF9978E29DB9FC1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_StateResult_405A4CE84BA17D1C4F9088B57DA44689'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_SequencePlayer_DED15B16444B916647913488EA5EDD11'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_StateResult_3382CECE4930A2FC793A64A8DA877BF7'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraphNode_StateMachine_1C8B61FD4FD50041E0A16D91D069505D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.24"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_LargeShipResourceDoor": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.15"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.14"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.19"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_LargeShipResourceDoor_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.13"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_LargeShipResourceDoor_C'Default__ABP_LargeShipResourceDoor_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.2"
+    }
+  },
+  {
+    "Type": "ABP_LargeShipResourceDoor_C",
+    "Name": "Default__ABP_LargeShipResourceDoor_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.ABP_LargeShipResourceDoor_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_B8CDFD574D88A523B1876CB5662484A9": {
+        "Result": {
+          "LinkID": 15
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E7BE35624FEE9F079AA23392FA897929": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Pose_LargeShipResourceDoor_Close'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/Door/Pose_LargeShipResourceDoor_Close.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_086DBAEB4E9627626FDA239B0C7BC21C": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_A7C4136C41F6284B53F448A9FF42D8F5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Pose_LargeShipResourceDoor_Open'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/Door/Pose_LargeShipResourceDoor_Open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_D7B6405441D22C24BE356B9145A0EF0E": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_BC30B50F49C75BA4CFF9978E29DB9FC1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Pose_LargeShipResourceDoor_Open'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/Door/Pose_LargeShipResourceDoor_Open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_405A4CE84BA17D1C4F9088B57DA44689": {
+        "Result": {
+          "LinkID": 11
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_DED15B16444B916647913488EA5EDD11": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Pose_LargeShipResourceDoor_Close'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/Door/Pose_LargeShipResourceDoor_Close.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3382CECE4930A2FC793A64A8DA877BF7": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_1C8B61FD4FD50041E0A16D91D069505D": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_B8CDFD574D88A523B1876CB5662484A9",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipResourceDoor_C:ExecuteUbergraph_ABP_LargeShipResourceDoor.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.11"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipResourceDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipResourceDoor_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/Anim/ABP_LargeShipResourceDoor.12"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipResourceDoor_AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A7C4136C41F6284B53F448A9FF42D8F5",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_BC30B50F49C75BA4CFF9978E29DB9FC1",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DED15B16444B916647913488EA5EDD11",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E7BE35624FEE9F079AA23392FA897929",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_1C8B61FD4FD50041E0A16D91D069505D",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_086DBAEB4E9627626FDA239B0C7BC21C",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3382CECE4930A2FC793A64A8DA877BF7",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_405A4CE84BA17D1C4F9088B57DA44689",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D7B6405441D22C24BE356B9145A0EF0E",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_1CD772794D9C4938B1967C8EB870741E",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_3C80C3BE42EABE31E8AC61B6266B584A",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_51B37C004285F3B5E4F0238956BD0301",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_7EC095F94675A565F6AFFA8C48EA8C68",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D87A9BF1453966FE9CBAB39A1A3FD113",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_EECE318141EF8F7F3C9907A8CDB831B3",
+    "Outer": "ABP_LargeShipResourceDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

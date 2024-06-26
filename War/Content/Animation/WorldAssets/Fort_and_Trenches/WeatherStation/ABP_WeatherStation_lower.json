@@ -1,0 +1,486 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Active",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_WeatherStation_Lower_Skeleton'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/SK_WeatherStation_Lower_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeatherStationBaseAnimInstance:bIsActive'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_TransitionResult_C2944CE4419095FEC3C3FFB271A0BDBC'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.14"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsActive",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeatherStationBaseAnimInstance:bIsActive'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_TransitionResult_BB52958843AB9D47005726A728314450'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.13"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_WeatherStation_lower_C:ExecuteUbergraph_ABP_WeatherStation_lower'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeatherStationBaseAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.0"
+      },
+      {
+        "ObjectName": "Function'ABP_WeatherStation_lower_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.4"
+      },
+      {
+        "ObjectName": "Function'ABP_WeatherStation_lower_C:ExecuteUbergraph_ABP_WeatherStation_lower'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.6"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_Root_8CE1EE9F43B98B50ECE1528B13A893A1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.7"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_TransitionResult_BB52958843AB9D47005726A728314450'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_TransitionResult_C2944CE4419095FEC3C3FFB271A0BDBC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_SequencePlayer_223B41C34A1C03AFF1C0F089CB2057BF'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.8"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_StateResult_D7B611C04F747EEBC03EF19B0146E6A2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_SequencePlayer_CDE30CA048B9216E41632FB2CF37B476'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_StateResult_528CD49F4BAF3BC7429B9D90BF1FABAA'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraphNode_StateMachine_2283DE9E41F7BD0D92B1B495B6BC459E'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.10"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_WeatherStation_lower": {
+        "ObjectName": "Function'ABP_WeatherStation_lower_C:ExecuteUbergraph_ABP_WeatherStation_lower'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.6"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_WeatherStation_lower_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.4"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_WeatherStation_lower_C'Default__ABP_WeatherStation_lower_C'",
+      "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.2"
+    }
+  },
+  {
+    "Type": "ABP_WeatherStation_lower_C",
+    "Name": "Default__ABP_WeatherStation_lower_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.ABP_WeatherStation_lower_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_8CE1EE9F43B98B50ECE1528B13A893A1": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_BB52958843AB9D47005726A728314450": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_C2944CE4419095FEC3C3FFB271A0BDBC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_223B41C34A1C03AFF1C0F089CB2057BF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'ANIM_WeatherStationOn'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ANIM_WeatherStationOn.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_D7B611C04F747EEBC03EF19B0146E6A2": {
+        "Result": {
+          "LinkID": 3
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_CDE30CA048B9216E41632FB2CF37B476": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_WeatherStationOff'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/POSE_WeatherStationOff.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_528CD49F4BAF3BC7429B9D90BF1FABAA": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_2283DE9E41F7BD0D92B1B495B6BC459E": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_WeatherStation_lower_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.3"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_WeatherStation_lower",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_WeatherStation_lower",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_WeatherStation_lower_C:ExecuteUbergraph_ABP_WeatherStation_lower.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/ABP_WeatherStation_lower.5"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_8CE1EE9F43B98B50ECE1528B13A893A1",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_223B41C34A1C03AFF1C0F089CB2057BF",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CDE30CA048B9216E41632FB2CF37B476",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_2283DE9E41F7BD0D92B1B495B6BC459E",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_528CD49F4BAF3BC7429B9D90BF1FABAA",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D7B611C04F747EEBC03EF19B0146E6A2",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BB52958843AB9D47005726A728314450",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C2944CE4419095FEC3C3FFB271A0BDBC",
+    "Outer": "ABP_WeatherStation_lower_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

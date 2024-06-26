@@ -17,12 +17,12 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'Waterfall01_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.21"
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.19"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'Actor'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'EnvironmentVFX'",
+      "ObjectPath": "/Script/War"
     },
     "Children": [
       {
@@ -31,23 +31,19 @@
       },
       {
         "ObjectName": "ObjectProperty'Waterfall01_C:ParticleSystem2'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.5"
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.6"
       },
       {
         "ObjectName": "ObjectProperty'Waterfall01_C:ParticleSystem1'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.4"
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.5"
       },
       {
         "ObjectName": "ObjectProperty'Waterfall01_C:ParticleSystem'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.3"
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.4"
       },
       {
         "ObjectName": "ObjectProperty'Waterfall01_C:StaticMesh'",
         "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.7"
-      },
-      {
-        "ObjectName": "ObjectProperty'Waterfall01_C:Scene'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.6"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -65,7 +61,24 @@
   {
     "Type": "Waterfall01_C",
     "Name": "Default__Waterfall01_C",
-    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/Waterfall01.Waterfall01_C'"
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/Waterfall01.Waterfall01_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__Waterfall01_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.3"
+      },
+      "bDisableForSnowStorms": true,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__Waterfall01_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Outer": "Default__Waterfall01_C",
+    "Class": "UScriptClass'ArrowComponent'"
   },
   {
     "Type": "ObjectProperty",
@@ -102,17 +115,6 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "Scene",
-    "Outer": "Waterfall01_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'SceneComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
     "Name": "StaticMesh",
     "Outer": "Waterfall01_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -133,14 +135,19 @@
         "ObjectPath": "War/Content/FX/Waterfall02.21"
       },
       "RelativeLocation": {
-        "X": 338.9112,
+        "X": 279.08038,
         "Y": -1061.9342,
-        "Z": -322.34384
+        "Z": -595.92426
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -90.035675,
         "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.82346165,
+        "Y": 1.0,
+        "Z": 1.8487223
       },
       "PrimaryComponentTick": {
         "bStartWithTickEnabled": false
@@ -158,14 +165,19 @@
         "ObjectPath": "War/Content/FX/Waterfall03.21"
       },
       "RelativeLocation": {
-        "X": -276.7063,
+        "X": -227.85703,
         "Y": -1061.9299,
-        "Z": -109.210266
+        "Z": -201.89946
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -90.035675,
         "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.82346165,
+        "Y": 1.0,
+        "Z": 1.8487223
       },
       "PrimaryComponentTick": {
         "bStartWithTickEnabled": false
@@ -183,14 +195,19 @@
         "ObjectPath": "War/Content/FX/Waterfall03.21"
       },
       "RelativeLocation": {
-        "X": 225.4465,
+        "X": 185.64655,
         "Y": -1061.9299,
-        "Z": -398.8637
+        "Z": -737.38824
       },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -90.035675,
         "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.82346165,
+        "Y": 1.0,
+        "Z": 1.8487223
       },
       "PrimaryComponentTick": {
         "bStartWithTickEnabled": false
@@ -208,14 +225,14 @@
         "ObjectPath": "War/Content/FX/Waterfall01.36"
       },
       "RelativeLocation": {
-        "X": -78.79843,
+        "X": -64.88749,
         "Y": -583.5923,
-        "Z": 0.00012207031
+        "Z": 0.00022567411
       },
       "RelativeScale3D": {
-        "X": 0.82346165,
+        "X": 0.6780891,
         "Y": 1.0,
-        "Z": 1.8487223
+        "Z": 3.4177742
       },
       "PrimaryComponentTick": {
         "bStartWithTickEnabled": false
@@ -225,12 +242,6 @@
   {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
-    "Outer": "Waterfall01_C",
-    "Class": "UScriptClass'SceneComponent'"
-  },
-  {
-    "Type": "SceneComponent",
-    "Name": "Scene_GEN_VARIABLE",
     "Outer": "Waterfall01_C",
     "Class": "UScriptClass'SceneComponent'"
   },
@@ -264,50 +275,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'Waterfall01_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.22"
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.20"
       },
+      "ParentComponentOrVariableName": "Arrow",
+      "bIsParentComponentNative": true,
       "VariableGuid": "47AA7F4B-48F4A623-071C36B2-A0F46404",
       "InternalVariableName": "StaticMesh"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'SceneComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "SceneComponent'Waterfall01_C:Scene_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.13"
-      },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.15"
-        },
-        {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.17"
-        },
-        {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.18"
-        },
-        {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.19"
-        },
-        {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.20"
-        }
-      ],
-      "VariableGuid": "B8207E24-4F588BD2-7E07D9AF-887D2972",
-      "InternalVariableName": "Scene"
     }
   },
   {
@@ -324,6 +297,8 @@
         "ObjectName": "ParticleSystemComponent'Waterfall01_C:ParticleSystem_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.11"
       },
+      "ParentComponentOrVariableName": "Arrow",
+      "bIsParentComponentNative": true,
       "VariableGuid": "F62D4498-4D526596-F36E23AF-77131C81",
       "InternalVariableName": "ParticleSystem"
     }
@@ -342,6 +317,8 @@
         "ObjectName": "ParticleSystemComponent'Waterfall01_C:ParticleSystem1_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.8"
       },
+      "ParentComponentOrVariableName": "Arrow",
+      "bIsParentComponentNative": true,
       "VariableGuid": "D9DB6E5B-4E1DB011-051B2EA6-0B35A06E",
       "InternalVariableName": "ParticleSystem1"
     }
@@ -360,6 +337,8 @@
         "ObjectName": "ParticleSystemComponent'Waterfall01_C:ParticleSystem2_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.9"
       },
+      "ParentComponentOrVariableName": "Arrow",
+      "bIsParentComponentNative": true,
       "VariableGuid": "31624CB1-4BEF0E1B-30FD508A-DFF90F70",
       "InternalVariableName": "ParticleSystem2"
     }
@@ -378,6 +357,8 @@
         "ObjectName": "ParticleSystemComponent'Waterfall01_C:ParticleSystem3_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.10"
       },
+      "ParentComponentOrVariableName": "Arrow",
+      "bIsParentComponentNative": true,
       "VariableGuid": "9C719B3E-4F4B0F4B-81603EA9-177EA99A",
       "InternalVariableName": "ParticleSystem3"
     }
@@ -390,39 +371,51 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.14"
+        },
+        {
+          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.15"
+        },
+        {
+          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.16"
+        },
+        {
+          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.17"
+        },
+        {
+          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.18"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.16"
-        },
-        {
           "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.15"
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.14"
         },
         {
           "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.17"
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.15"
         },
         {
           "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.18"
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.16"
         },
         {
           "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.19"
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.17"
         },
         {
           "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.20"
+          "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.18"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'Waterfall01_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.14"
+        "ObjectPath": "War/Content/Blueprints/Environment/Waterfall01.13"
       }
     }
   },

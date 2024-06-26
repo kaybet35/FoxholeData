@@ -1,0 +1,192 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFireBarrel_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFireBarrel_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FireBarrel'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFireBarrel_C'Default__BPFireBarrel_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.1"
+    }
+  },
+  {
+    "Type": "BPFireBarrel_C",
+    "Name": "Default__BPFireBarrel_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/BPFireBarrel.BPFireBarrel_C'",
+    "Properties": {
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFireBarrel_C:FireBarrelArrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.2"
+      },
+      "BarrelMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPFireBarrel_C:BarrelMesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.8"
+      },
+      "FireMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPFireBarrel_C:FireMesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.9"
+      },
+      "SmokeParticleSystem": {
+        "ObjectName": "ParticleSystemComponent'Default__BPFireBarrel_C:SmokeParticleSystem'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.3"
+      },
+      "SteamParticleSystem": {
+        "ObjectName": "ParticleSystemComponent'Default__BPFireBarrel_C:SteamParticleSystem'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.4"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFireBarrel_C:FireBarrelArrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.2"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "FireBarrelArrow",
+    "Outer": "Default__BPFireBarrel_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "SmokeParticleSystem",
+    "Outer": "Default__BPFireBarrel_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'BarrelFire01'",
+        "ObjectPath": "War/Content/FX/BarrelFire01.60"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFireBarrel_C:FireBarrelArrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 110.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "SteamParticleSystem",
+    "Outer": "Default__BPFireBarrel_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'FacilitySteam1'",
+        "ObjectPath": "War/Content/FX/FacilitySteam1.18"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFireBarrel_C:FireBarrelArrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 115.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFireBarrel_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFireBarrel_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.5"
+      },
+      "VariableGuid": "1AC5CB1E-4B649355-8F41BFB1-294CE15C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFireBarrel_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFireBarrel_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BarrelMesh",
+    "Outer": "Default__BPFireBarrel_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Barrel_03'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/Barrel_03.2"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFireBarrel_C:FireBarrelArrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "FireMesh",
+    "Outer": "Default__BPFireBarrel_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BarrelFire'",
+        "ObjectPath": "War/Content/FX/Mesh/BarrelFire.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFireBarrel_C:FireBarrelArrow'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFireBarrel.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -44.451
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.2291
+      }
+    }
+  }
+]

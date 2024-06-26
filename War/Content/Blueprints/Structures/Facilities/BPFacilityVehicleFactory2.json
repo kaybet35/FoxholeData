@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "MainMesh",
+    "Name": "WarAudio",
     "Outer": "BPFacilityVehicleFactory2_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'SkeletalMeshComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'WarAudioComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.32"
       }
     },
     "SuperStruct": {
@@ -26,8 +26,20 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:MainMesh'",
+        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:WarAudio'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:ParkingSpot'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:ParticleSystem'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.15"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:MainMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.13"
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:FoundationDecal'",
@@ -35,7 +47,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2_C:PowerLineConnector'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.16"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -77,11 +89,11 @@
       },
       "TransferLocation": {
         "ObjectName": "SceneComponent'Default__BPFacilityVehicleFactory2_C:TransferLocation'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.23"
       },
       "TransferLocation2": {
         "ObjectName": "SceneComponent'Default__BPFacilityVehicleFactory2_C:TransferLocation2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.24"
       },
       "AssemblyItems": [
         {
@@ -185,24 +197,27 @@
         "PowerDelta": -8000,
         "MaxConnections": 1
       },
-      "bHasParkingSpot": true,
       "bSupportsExtraLargeShippables": true,
       "LadderLocation1": {
         "ObjectName": "SceneComponent'Default__BPFacilityVehicleFactory2_C:LadderLocation1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.20"
       },
       "LadderLocation2": {
         "ObjectName": "SceneComponent'Default__BPFacilityVehicleFactory2_C:LadderLocation2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.21"
       },
       "LadderLocation3": {
         "ObjectName": "SceneComponent'Default__BPFacilityVehicleFactory2_C:LadderLocation3'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.22"
       },
       "DisruptivePlacementVoteMultiplier": 2.0,
       "ProceduralUseVolumeFactor": 1.0,
       "bIsBuiltOnLandscape": false,
       "BuildGhostClass": null,
+      "BaseStructureClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPFacilityVehicleFactory2Destroyed_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Husks/BPFacilityVehicleFactory2Destroyed.1"
+      },
       "Description": {
         "Namespace": "",
         "Key": "5EEBA409482F1AD6C7AE7E85C975002F",
@@ -259,7 +274,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFacilityVehicleFactory2_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.35"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityVehicleFactory2_C:StructureArrow'",
@@ -301,19 +316,9 @@
     "Outer": "Default__BPFacilityVehicleFactory2_C",
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
-      "BoxExtent": {
-        "X": 970.0,
-        "Y": 467.5,
-        "Z": 50.0
-      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityVehicleFactory2_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.3"
-      },
-      "RelativeLocation": {
-        "X": 93.35,
-        "Y": 0.0,
-        "Z": 50.0
       }
     }
   },
@@ -590,7 +595,7 @@
             "bVehicleBlocksRemoval": false,
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
-            "bShowInBuildSite": false,
+            "bShowInBuildSite": true,
             "TechID": "ETechID::UnlockFacilityTier3",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
@@ -689,7 +694,7 @@
             "bVehicleBlocksRemoval": false,
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
-            "bShowInBuildSite": false,
+            "bShowInBuildSite": true,
             "TechID": "ETechID::UnlockFacilityTier3",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
@@ -744,6 +749,39 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "MainMesh",
+    "Outer": "BPFacilityVehicleFactory2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "ParkingSpot",
+    "Outer": "BPFacilityVehicleFactory2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParkingSpotComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "ParticleSystem",
+    "Outer": "BPFacilityVehicleFactory2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "PowerLineConnector",
     "Outer": "BPFacilityVehicleFactory2_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -751,6 +789,40 @@
     "PropertyClass": {
       "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParkingSpotComponent",
+    "Name": "ParkingSpot_GEN_VARIABLE",
+    "Outer": "BPFacilityVehicleFactory2_C",
+    "Class": "UScriptClass'ParkingSpotComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 20.0,
+        "Y": 0.0,
+        "Z": 65.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Outer": "BPFacilityVehicleFactory2_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'FacilitySparksAssembly1'",
+        "ObjectPath": "War/Content/FX/FacilitySparksAssembly1.66"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 2.5
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
     }
   },
   {
@@ -841,10 +913,29 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFacilityVehicleFactory2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.19"
       },
       "VariableGuid": "C5268F54-47B819EB-3600E39A-B5028EFB",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BPFacilityVehicleFactory2_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.18"
+      },
+      "AttachToName": "S_Pulley",
+      "VariableGuid": "AA275E57-4E395016-4C6401BD-5FB58F78",
+      "InternalVariableName": "ParticleSystem"
     }
   },
   {
@@ -879,12 +970,42 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPFacilityVehicleFactory2_C:MainMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.25"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.33"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.31"
+        }
+      ],
       "VariableGuid": "D48E6428-430F1D21-6A0561AD-AFA505F8",
       "InternalVariableName": "MainMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParkingSpotComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParkingSpotComponent'BPFacilityVehicleFactory2_C:ParkingSpot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.17"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FF0D817F-482DB557-6227BFA7-F277848D",
+      "InternalVariableName": "ParkingSpot"
     }
   },
   {
@@ -899,12 +1020,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFacilityVehicleFactory2_C:PowerLineConnector_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.26"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.34"
       },
       "ParentComponentOrVariableName": "PowerSocket",
       "bIsParentComponentNative": true,
       "VariableGuid": "2A06A9B2-41E900D6-A1C839AC-B13CF178",
       "InternalVariableName": "PowerLineConnector"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WarAudioComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WarAudioComponent'BPFacilityVehicleFactory2_C:WarAudio_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.36"
+      },
+      "AttachToName": "Base",
+      "VariableGuid": "60E37612-4479E993-FF54D28E-52152019",
+      "InternalVariableName": "WarAudio"
     }
   },
   {
@@ -916,34 +1056,50 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.30"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.27"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.29"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.30"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.27"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.31"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFacilityVehicleFactory2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityVehicleFactory2.25"
       }
     }
   },
@@ -1075,5 +1231,28 @@
     "Name": "StealthComponent",
     "Outer": "Default__BPFacilityVehicleFactory2_C",
     "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "WarAudioComponent",
+    "Name": "WarAudio_GEN_VARIABLE",
+    "Outer": "BPFacilityVehicleFactory2_C",
+    "Class": "UScriptClass'WarAudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'FacilityAssemblyLegMove02_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyLegMove02_Cue.0"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -412.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      },
+      "bAutoActivate": false
+    }
   }
 ]

@@ -225,6 +225,11 @@
         "Y": 0.0,
         "Z": -70.0
       },
+      "BuildOffset": {
+        "X": 450.0,
+        "Y": -70.0,
+        "Z": -340.0
+      },
       "DisplayName": {
         "Namespace": "",
         "Key": "B2F70D9E4AC79C8A5CFBBCBE1C18959B",
@@ -248,10 +253,6 @@
         "ObjectPath": "War/Content/Textures/UI/VehicleIcons/GunBoatVehicleIcon.0"
       },
       "TechID": "ETechID::UnlockGunboat",
-      "BuildSiteClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPGunboatCBuildSite_C'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.1"
-      },
       "VehicleBuildType": "EVehicleBuildType::Shipyard",
       "FactionVariant": "EFactionId::Colonials",
       "CodeName": "GunboatC",
@@ -393,11 +394,6 @@
           "SocketName": "S_GunboatCLeftMuzzle"
         }
       ],
-      "BuildSpawnOffset": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -200.0
-      },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPGunboatC_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/BPGunboatC.124"
@@ -2653,6 +2649,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
             }
           ]
         },
@@ -2954,6 +2954,10 @@
             {
               "Channel": "Work",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
             }
           ]
         }

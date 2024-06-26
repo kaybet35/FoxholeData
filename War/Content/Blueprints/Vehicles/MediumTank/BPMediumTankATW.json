@@ -352,6 +352,10 @@
             {
               "Channel": "Work",
               "Response": "ECR_Block"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
             }
           ]
         }
@@ -829,7 +833,10 @@
     "Type": "RWDVehicleMovementComponent",
     "Name": "CharMoveComp",
     "Outer": "Default__BPMediumTankATW_C",
-    "Class": "UScriptClass'RWDVehicleMovementComponent'"
+    "Class": "UScriptClass'RWDVehicleMovementComponent'",
+    "Properties": {
+      "MaxEncumbranceMass": 20000.0
+    }
   },
   {
     "Type": "SceneComponent",
@@ -1144,6 +1151,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
             }
           ]
         }
@@ -1204,7 +1215,7 @@
     "Outer": "BPMediumTankATW_C",
     "Class": "UScriptClass'VehicleSeatComponent'",
     "Properties": {
-      "bCanFireWeapon": true,
+      "bCanUseBinoculars": true,
       "bIsWoundable": true,
       "EnterSFX": {
         "ObjectName": "SoundCue'DeployExplosive_Cue'",

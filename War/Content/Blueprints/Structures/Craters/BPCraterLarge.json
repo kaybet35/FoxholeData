@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "BPTrenchBlockerCapsule",
+    "Name": "BPStructurePuddleMesh",
     "Outer": "BPCraterLarge_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "BlueprintGeneratedClass'BPTrenchBlockerCapsule_C'",
-      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPTrenchBlockerCapsule.0"
+      "ObjectName": "BlueprintGeneratedClass'BPStructurePuddleMesh_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Puddles/BPStructurePuddleMesh.0"
     }
   },
   {
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPCraterLarge_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.22"
       }
     },
     "SuperStruct": {
@@ -26,24 +26,28 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPCraterLarge_C:BPTrenchBlockerCapsule'",
+        "ObjectName": "ObjectProperty'BPCraterLarge_C:BPStructurePuddleMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPCraterLarge_C:CraterLarge01'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.8"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPCraterLarge_C:Decal'",
+        "ObjectName": "ObjectProperty'BPCraterLarge_C:BPTrenchBlockerCapsule'",
         "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.9"
       },
       {
-        "ObjectName": "ObjectProperty'BPCraterLarge_C:Floor'",
+        "ObjectName": "ObjectProperty'BPCraterLarge_C:CraterLarge01'",
         "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.10"
       },
       {
-        "ObjectName": "ObjectProperty'BPCraterLarge_C:Hole'",
+        "ObjectName": "ObjectProperty'BPCraterLarge_C:Decal'",
         "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPCraterLarge_C:Floor'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPCraterLarge_C:Hole'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.13"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -89,8 +93,9 @@
       "bAddLandscapeHolesOnBeginPlay": true,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPCraterLarge_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.25"
       },
+      "bReceivesRainfall": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPCraterLarge_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.3"
@@ -188,6 +193,18 @@
     }
   },
   {
+    "Type": "BPStructurePuddleMesh_C",
+    "Name": "BPStructurePuddleMesh_GEN_VARIABLE",
+    "Outer": "BPCraterLarge_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Puddles/BPStructurePuddleMesh.BPStructurePuddleMesh_C'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'CraterLPuddle'",
+        "ObjectPath": "War/Content/Meshes/Environment/CraterLPuddle.2"
+      }
+    }
+  },
+  {
     "Type": "BPTrenchBlockerCapsule_C",
     "Name": "BPTrenchBlockerCapsule_GEN_VARIABLE",
     "Outer": "BPCraterLarge_C",
@@ -273,6 +290,17 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "BPTrenchBlockerCapsule",
+    "Outer": "BPCraterLarge_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPTrenchBlockerCapsule_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPTrenchBlockerCapsule.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "CraterLarge01",
     "Outer": "BPCraterLarge_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -333,7 +361,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPCraterLarge_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.14"
       },
       "VariableGuid": "09FC068A-461E3DC1-311BFFAA-4DB16698",
       "InternalVariableName": "DefaultSceneRoot"
@@ -371,7 +399,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPCraterLarge_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.8"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -391,14 +419,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPCraterLarge_C:Floor_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.24"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.17"
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.19"
         }
       ],
       "VariableGuid": "2E5D3640-4E7C4C7A-0D7011A6-7BFBDA3D",
@@ -417,7 +445,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPCraterLarge_C:CraterLarge01_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.23"
       },
       "VariableGuid": "B5E00FAE-4A1DA8D2-3DC125BF-17FEC774",
       "InternalVariableName": "CraterLarge01"
@@ -435,12 +463,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BPTrenchBlockerCapsule_C'BPCraterLarge_C:BPTrenchBlockerCapsule_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.7"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "A116B3C2-46D1342C-09AA3CAC-C006A10E",
       "InternalVariableName": "BPTrenchBlockerCapsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPStructurePuddleMesh_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Puddles/BPStructurePuddleMesh.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPStructurePuddleMesh_C'BPCraterLarge_C:BPStructurePuddleMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "286C9BCF-4F177CDE-CBB7E48D-B8647303",
+      "InternalVariableName": "BPStructurePuddleMesh"
     }
   },
   {
@@ -452,46 +500,54 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.16"
         },
         {
+          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.18"
+        },
+        {
           "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.15"
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.17"
         },
         {
           "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.18"
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.21"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.16"
         },
         {
-          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.15"
+          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.18"
         },
         {
-          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.17"
         },
         {
+          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.19"
+        },
+        {
           "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.18"
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.21"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPCraterLarge_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterLarge.15"
       }
     }
   },

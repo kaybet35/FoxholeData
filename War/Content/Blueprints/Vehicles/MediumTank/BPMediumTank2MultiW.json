@@ -231,10 +231,6 @@
         "ObjectName": "ParticleSystemComponent'Default__BPMediumTank2MultiW_C:DisabledTurret5FX'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2MultiW.28"
       },
-      "BoostSoundCue": {
-        "ObjectName": "SoundCue'LightTankBoost_cue'",
-        "ObjectPath": "War/Content/Audio/SFX/Vehicles/LightTanks/Colonial/LightTankBoost_cue.0"
-      },
       "DriveLoop": {
         "ObjectName": "AudioComponent'Default__BPMediumTank2MultiW_C:DriveLoop'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2MultiW.5"
@@ -283,8 +279,6 @@
         "ObjectName": "AFKTimeoutComponent'Default__BPMediumTank2MultiW_C:AFKTimeoutComponent'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2MultiW.3"
       },
-      "BoostSpeedModifier": 1.6,
-      "BoostGasUsageModifier": 6.0,
       "MuzzleInfo": [
         {
           "GunnerIndex": 1,
@@ -465,11 +459,6 @@
     "Outer": "Default__BPMediumTank2MultiW_C",
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
-      "BoxExtent": {
-        "X": 380.0,
-        "Y": 200.0,
-        "Z": 130.0
-      },
       "OnComponentBeginOverlap": {
         "InvocationList": [
           {
@@ -937,6 +926,7 @@
       "EngineForce": 20000.0,
       "BrakeForce": 50000.0,
       "HandbrakeForce": 40000.0,
+      "MaxEncumbranceMass": 20000.0,
       "MaxWalkSpeed": 1333.3334
     }
   },
@@ -1559,6 +1549,10 @@
     "Class": "UScriptClass'VehicleSeatComponent'",
     "Properties": {
       "Direction": "ESeatDirection::Left",
+      "EnterSFX": {
+        "ObjectName": "SoundCue'LightTankColonialCmdEntrance_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/LightTanks/Colonial/LightTankColonialCmdEntrance_Cue.0"
+      },
       "Index": 2,
       "TriggerName": "CommanderTrigger",
       "ExitName": "CommanderExit",

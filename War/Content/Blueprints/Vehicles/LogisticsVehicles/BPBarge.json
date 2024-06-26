@@ -196,6 +196,11 @@
         "ObjectName": "BlueprintGeneratedClass'BPGlobalShippableInfo_C'",
         "ObjectPath": "War/Content/Blueprints/Data/BPGlobalShippableInfo.0"
       },
+      "BuildOffset": {
+        "X": 650.0,
+        "Y": 0.0,
+        "Z": -100.0
+      },
       "bInterpolatePitch": true,
       "DisplayName": {
         "Namespace": "",
@@ -212,10 +217,6 @@
       "Icon": {
         "ObjectName": "Texture2D'BargeVehicleIcon'",
         "ObjectPath": "War/Content/Textures/UI/VehicleIcons/BargeVehicleIcon.0"
-      },
-      "BuildSiteClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPBargeBuildSite_C'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.1"
       },
       "VehicleBuildType": "EVehicleBuildType::Shipyard",
       "CodeName": "Barge",
@@ -335,11 +336,6 @@
       "LinearSpeedToTurnSpeedMapCurve": {
         "ObjectName": "CurveFloat'LandingVehicleTurnSpeedCurve'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/LandingVehicleTurnSpeedCurve.0"
-      },
-      "BuildSpawnOffset": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -200.0
       },
       "ServerAnimTickMode": "EServerAnimTickMode::Custom",
       "EncumbranceManager": {
@@ -562,6 +558,10 @@
             {
               "Channel": "Visibility",
               "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
             }
           ]
         }
@@ -629,6 +629,10 @@
             },
             {
               "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "IceBlocker",
               "Response": "ECR_Block"
             }
           ]
@@ -1886,6 +1890,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
             }
           ]
         },
