@@ -1,0 +1,228 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "GrenadeMesh",
+    "Outer": "Grenade_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Grenade_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Grenade_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TimedProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'Grenade_C:GrenadeMesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Grenade_C'Default__Grenade_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/Grenade.2"
+    }
+  },
+  {
+    "Type": "Grenade_C",
+    "Name": "Default__Grenade_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/Grenade.Grenade_C'",
+    "Properties": {
+      "FuseTimer": 20.0,
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__Grenade_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.5"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__Grenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.10"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__Grenade_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__Grenade_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeCExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeCExplosion.1"
+      },
+      "ExplosiveCodeName": "GrenadeC",
+      "bProjectImpactDownward": true,
+      "RotationSpeed": {
+        "Pitch": 0.0,
+        "Yaw": 150.0,
+        "Roll": 150.0
+      },
+      "bRotationRequiresVelocity": true,
+      "RotationVelocityRequirement": 100.0,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__Grenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__Grenade_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Grenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.10"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__Grenade_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Grenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.10"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__Grenade_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "bShouldBounce": true,
+      "bInitialVelocityInLocalSpace": false,
+      "ProjectileGravityScale": 1.0,
+      "Bounciness": 0.08,
+      "Friction": 0.55,
+      "BounceVelocityStopSimulatingThreshold": 8.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Grenade_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Grenade_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.6"
+      },
+      "VariableGuid": "60C0D2B2-43DECD9A-7802A387-8BC73070",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'Grenade_C:GrenadeMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.11"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "19B9FC7C-4845E3DF-F831E79A-18405624",
+      "InternalVariableName": "GrenadeMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "Grenade_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Grenade_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/Grenade.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Grenade_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/Grenade.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Grenade_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/Grenade.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__Grenade_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.0,
+      "BodyInstance": {
+        "MassInKgOverride": 2.9279141
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "GrenadeMesh_GEN_VARIABLE",
+    "Outer": "Grenade_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GrenadeCPickup'",
+        "ObjectPath": "War/Content/Meshes/Weapons/GrenadeCPickup.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "MassInKgOverride": 2.9279146
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MechWIdle_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MechWIdle_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWIdle_Cue.1"
+      },
+      "VolumeMultiplier": 1.25,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1350.8081,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 811.2747
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'VehicleIdle'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/VehicleIdle.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MechWIdle_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MechWIdle_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWIdle_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "MechWIdle_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/DeadHarvest/MechWIdle.MechWIdle",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MechWIdle'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWIdle.0"
+    }
+  }
+]

@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "FacilityAssemblyWelding_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'FacilityAssemblyWelding_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyWelding_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 1.5400625,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "FacilityAssemblyWelding_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.99,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.99,
+      "VolumeMax": 1.01,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'FacilityAssemblyWelding_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyWelding_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "FacilityAssemblyWelding_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'FacilityAssemblyWelding_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyWelding_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'FacilityAssemblyWelding_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyWelding_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'FacilityAssemblyWelding_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityAssemblyWelding_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "FacilityAssemblyWelding_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Facilities/FacilityAssemblyWelding01.FacilityAssemblyWelding01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "FacilityAssemblyWelding_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Facilities/FacilityAssemblyWelding02.FacilityAssemblyWelding02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "FacilityAssemblyWelding_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Facilities/FacilityAssemblyWelding03.FacilityAssemblyWelding03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

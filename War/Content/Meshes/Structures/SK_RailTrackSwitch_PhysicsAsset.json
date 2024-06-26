@@ -1,0 +1,126 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_RailTrackSwitch_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RailTrackSwitch_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Structures/SK_RailTrackSwitch_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RailTrackSwitch_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Structures/SK_RailTrackSwitch_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_RailTrackSwitch_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "War/Content/Meshes/Structures/SK_RailTrackSwitch_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_RailTrackSwitch_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "Sigh",
+        "ConstraintBone1": "Sigh",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 300.45398,
+          "Z": 91.48125
+        },
+        "SecAxis2": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 1.28145246E-08
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_RailTrackSwitch_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.05135876,
+              "Y": 185.04803,
+              "Z": -3.7958527
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.82831,
+              "Roll": -82.18546
+            },
+            "Radius": 83.368195,
+            "Length": 193.79422,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B45EF6214B5DA5B4C1B9ED9ECC577203"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_RailTrackSwitch_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.02093628,
+              "Y": 0.14587025,
+              "Z": 90.0406
+            },
+            "Rotation": {
+              "Pitch": -4.0981133E-05,
+              "Yaw": -90.00001,
+              "Roll": -0.042966638
+            },
+            "Radius": 27.764002,
+            "Length": 89.34079,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "Sigh",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "FE7512F8419F957837EFEBB1C027FAEC"
+  }
+]

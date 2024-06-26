@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_3",
+    "Outer": "CameraBasedDecay",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'DitherTemporalAA'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction'CameraBasedDecay'",
+        "ObjectPath": "War/Content/Materials/CameraBasedDecay.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionQualitySwitch",
+    "Name": "MaterialExpressionQualitySwitch_2",
+    "Outer": "CameraBasedDecay",
+    "Class": "UScriptClass'MaterialExpressionQualitySwitch'",
+    "Properties": {
+      "Default": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction'CameraBasedDecay'",
+        "ObjectPath": "War/Content/Materials/CameraBasedDecay.3"
+      }
+    },
+    "Inputs": [
+      {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_5"
+      },
+      {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_6"
+      },
+      null
+    ]
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "CameraBasedDecay",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D'FirBranch'",
+        "ObjectPath": "War/Content/Textures/Foliage/FirBranch.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction'CameraBasedDecay'",
+        "ObjectPath": "War/Content/Materials/CameraBasedDecay.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "CameraBasedDecay",
+    "Class": "UScriptClass'MaterialFunction'",
+    "Properties": {
+      "Description": "Creates a decay that is based on the distance from the camera plane. all your alpha calculations go to alpha input an the final output should be the last thing that goes into Opacity Mask",
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionQualitySwitch'CameraBasedDecay:MaterialExpressionQualitySwitch_2'",
+          "ObjectPath": "War/Content/Materials/CameraBasedDecay.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'CameraBasedDecay:MaterialExpressionMaterialFunctionCall_3'",
+          "ObjectPath": "War/Content/Materials/CameraBasedDecay.0"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'CameraBasedDecay:MaterialExpressionTextureSample_0'",
+          "ObjectPath": "War/Content/Materials/CameraBasedDecay.2"
+        },
+        null,
+        null,
+        null,
+        null
+      ],
+      "bExposeToLibrary": true,
+      "StateId": "345FDE41-4E672596-77EBC680-02267C11"
+    }
+  }
+]

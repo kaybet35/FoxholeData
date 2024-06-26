@@ -1,0 +1,394 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "NoBuildArea",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDestroyedSulfurMine_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.15"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DestroyedResourceMine'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedSulfurMine_C:NoBuildArea'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedSulfurMine_C:Decal'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedSulfurMine_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.9"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDestroyedSulfurMine_C'Default__BPDestroyedSulfurMine_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.2"
+    }
+  },
+  {
+    "Type": "BPDestroyedSulfurMine_C",
+    "Name": "Default__BPDestroyedSulfurMine_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.BPDestroyedSulfurMine_C'",
+    "Properties": {
+      "GenericStockpileComponent": {
+        "ObjectName": "GenericItemStockpileComponent'Default__BPDestroyedSulfurMine_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.7"
+      },
+      "CodeName": "DestroyedSulfurMine",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedSulfurMine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDestroyedSulfurMine_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.5"
+      },
+      "MaxHealth": 100000000,
+      "Health": 100000000,
+      "UpgradeStructureCodeName": "SulfurMine",
+      "MapIconType": "EMapIconType::SulfurMine",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDestroyedSulfurMine_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.17"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedSulfurMine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "NoBuildArea_GEN_VARIABLE",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 350.0,
+        "Z": 150.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "BodyInstance": {
+        "CollisionProfileName": "NoBuildArea",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.0,
+        "Y": 750.0,
+        "Z": 149.99786
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -179.99997,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 600.0,
+        "Y": 600.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedSulfurMine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 128.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'DirtPatch'",
+        "ObjectPath": "War/Content/Materials/Decals/DirtPatch.0"
+      },
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 600.0,
+        "Z": 600.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": -90.00009
+      }
+    }
+  },
+  {
+    "Type": "GenericItemStockpileComponent",
+    "Name": "GenericStockpileComponent",
+    "Outer": "Default__BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'GenericItemStockpileComponent'"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Decal",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDestroyedSulfurMine_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.10"
+      },
+      "VariableGuid": "A3AB8F13-4593822F-7B49EE97-2C8ECB5C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDestroyedSulfurMine_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.16"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "02F03CA1-4AC6C0E5-43177F99-DACC4EA7",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPDestroyedSulfurMine_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BF86A541-42FCCE72-FA243984-5FF8392A",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedSulfurMine_C:NoBuildArea_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3A4CB397-40D12E24-BF99639A-1AE4F98F",
+      "InternalVariableName": "NoBuildArea"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDestroyedSulfurMine_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedSulfurMine.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SulfurMineDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Structures/SulfurMineDestroyed.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WoodBarnPlanksDamaged'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/WoodBarnPlanksDamaged.0"
+        },
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'SulfurMine'",
+          "ObjectPath": "War/Content/Materials/Structures/SulfurMine.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "CanCharacterStepUpOn": "ECB_No"
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDestroyedSulfurMine_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

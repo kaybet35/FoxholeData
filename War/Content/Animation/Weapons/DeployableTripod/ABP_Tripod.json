@@ -1,0 +1,671 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_Tripod_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "basic motion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3,
+                5,
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_DeployableTripod_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_DeployableTripod_Skeleton.1"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Height",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'DeployedTripodAnimInstance:Height'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_BlendSpacePlayer_8A3CC69D46616C47C948D6AF9B43191B'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.8"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RelativeYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'DeployedTripodAnimInstance:RelativeYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_BlendSpacePlayer_104BFD5E4EBCB7EE0D2E189B90EAD6CE'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.7"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RelativePitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'DeployedTripodAnimInstance:RelativePitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_BlendSpacePlayer_D272E00E40BF45C160F8C5ABAAC781DF'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.9"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDeployed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'DeployedTripodAnimInstance:bIsDeployed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_TransitionResult_9CD1D202424571349854D3931D1CEC6C'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.16"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDeployed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'DeployedTripodAnimInstance:bIsDeployed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_TransitionResult_97CB5971452A29DCAC7613AC578EA9A8'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.15"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_Tripod_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_Tripod_C:ExecuteUbergraph_ABP_Tripod'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DeployedTripodAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.0"
+      },
+      {
+        "ObjectName": "Function'ABP_Tripod_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.4"
+      },
+      {
+        "ObjectName": "Function'ABP_Tripod_C:ExecuteUbergraph_ABP_Tripod'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.6"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_Root_6E4899294BFCCC1F471D5092EECBD3A6'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_TransitionResult_97CB5971452A29DCAC7613AC578EA9A8'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_TransitionResult_9CD1D202424571349854D3931D1CEC6C'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_BlendSpacePlayer_D272E00E40BF45C160F8C5ABAAC781DF'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_BlendSpacePlayer_104BFD5E4EBCB7EE0D2E189B90EAD6CE'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.7"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_LayeredBoneBlend_D5102401450D404C97EDB3AD65D4C338'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.10"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_BlendSpacePlayer_8A3CC69D46616C47C948D6AF9B43191B'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.8"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_StateResult_E6FBF3B04E01A5E0DDFEC6AC1E59541E'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_StateResult_EE653F984F39BD7EED2D3FB0FE3E0470'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraphNode_StateMachine_7A5B62524FED6E6E8CD35C953148A2A5'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.12"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_Tripod": {
+        "ObjectName": "Function'ABP_Tripod_C:ExecuteUbergraph_ABP_Tripod'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.6"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_Tripod_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.4"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_Tripod_C'Default__ABP_Tripod_C'",
+      "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.2"
+    }
+  },
+  {
+    "Type": "ABP_Tripod_C",
+    "Name": "Default__ABP_Tripod_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.ABP_Tripod_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_6E4899294BFCCC1F471D5092EECBD3A6": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_97CB5971452A29DCAC7613AC578EA9A8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9CD1D202424571349854D3931D1CEC6C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_BlendSpacePlayer_D272E00E40BF45C160F8C5ABAAC781DF": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Tripod_VerticalPivot'",
+          "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/BS_Tripod_VerticalPivot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_104BFD5E4EBCB7EE0D2E189B90EAD6CE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Tripod_HorizontalPivot'",
+          "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/BS_Tripod_HorizontalPivot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_D5102401450D404C97EDB3AD65D4C338": {
+        "BasePose": {
+          "LinkID": 6
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 3
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "horizontal_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "vertical_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "23EF44B9-4144E360-5D163B90-E4D24F65",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_8A3CC69D46616C47C948D6AF9B43191B": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Tripod_heigh'",
+          "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/BS_Tripod_heigh.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E6FBF3B04E01A5E0DDFEC6AC1E59541E": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_EE653F984F39BD7EED2D3FB0FE3E0470": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_7A5B62524FED6E6E8CD35C953148A2A5": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_Tripod_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.3"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_Tripod",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_Tripod",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_Tripod_C:ExecuteUbergraph_ABP_Tripod.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.5"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_104BFD5E4EBCB7EE0D2E189B90EAD6CE",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_8A3CC69D46616C47C948D6AF9B43191B",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_D272E00E40BF45C160F8C5ABAAC781DF",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_D5102401450D404C97EDB3AD65D4C338",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_6E4899294BFCCC1F471D5092EECBD3A6",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_7A5B62524FED6E6E8CD35C953148A2A5",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E6FBF3B04E01A5E0DDFEC6AC1E59541E",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_EE653F984F39BD7EED2D3FB0FE3E0470",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_97CB5971452A29DCAC7613AC578EA9A8",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9CD1D202424571349854D3931D1CEC6C",
+    "Outer": "ABP_Tripod_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

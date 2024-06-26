@@ -1,0 +1,58 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "BattleTankImpactAP_cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'BattleTankImpactAP_cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/BattleTank/BattleTankImpactAP_cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 6.219229,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeExplosives'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeExplosives.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "BattleTankImpactAP_cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.7,
+      "VolumeMax": 1.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'BattleTankImpactAP_cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/BattleTank/BattleTankImpactAP_cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "BattleTankImpactAP_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/BattleTank/TankImpactAP.TankImpactAP",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'TankImpactAP'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/BattleTank/TankImpactAP.0"
+    }
+  }
+]

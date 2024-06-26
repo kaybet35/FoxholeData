@@ -1,0 +1,111 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SurfGulls",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'SurfGulls:SoundNodeLooping_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/SurfGulls.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 22500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "SurfGulls",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SurfGulls:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/SurfGulls.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "SurfGulls",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SurfGulls:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/Ambient/SurfGulls.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "SurfGulls",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.95,
+        0.05
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SurfGulls:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/SurfGulls.4"
+        },
+        {
+          "ObjectName": "SoundNodeMixer'SurfGulls:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/SurfGulls.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SurfGulls",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/Softwaves.Softwaves",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SurfGulls",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/SoftWaveGulls.SoftWaveGulls",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

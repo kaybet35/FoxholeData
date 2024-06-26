@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "EmplacedATShot_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'EmplacedATShot_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 2000.0,
+        "LPFFrequencyAtMin": 2400.0,
+        "LPFFrequencyAtMax": 10000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 11000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 2.9370625,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeExplosives'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeExplosives.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "EmplacedATShot_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        2.0,
+        0.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'EmplacedATShot_Cue:SoundNodeModulator_10'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot_Cue.2"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "EmplacedATShot_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'EmplacedATShot_Cue:SoundNodeRandom_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "EmplacedATShot_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'EmplacedATShot_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'EmplacedATShot_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "EmplacedATShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot02.EmplacedATShot02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "EmplacedATShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/EmplacedAT/EmplacedATShot01.EmplacedATShot01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

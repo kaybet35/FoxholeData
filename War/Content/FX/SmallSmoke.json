@@ -1,0 +1,708 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_3",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_3",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'SmallSmoke:ParticleModuleRequired_3'",
+        "ObjectPath": "War/Content/FX/SmallSmoke.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'SmallSmoke:ParticleModuleLifetime_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'SmallSmoke:ParticleModuleSize_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.11"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'SmallSmoke:ParticleModuleVelocity_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'SmallSmoke:ParticleModuleColor_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.4"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'SmallSmoke:ParticleModuleRotation_2'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.9"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'SmallSmoke:ParticleModuleRotationRate_2'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.10"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'SmallSmoke:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'SmallSmoke:ParticleModuleColorScaleOverLife_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'SmallSmoke:ParticleModuleSizeMultiplyLife_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.12"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'SmallSmoke:ParticleModuleAccelerationDrag_1'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.3"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'SmallSmoke:ParticleModuleSpawn_3'",
+        "ObjectPath": "War/Content/FX/SmallSmoke.13"
+      },
+      "PeakActiveParticles": 9
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_1",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.05,
+        "MaxValue": 0.05,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.05
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.485,
+        "MaxValue": 0.485,
+        "MinValueVec": {
+          "X": 0.485,
+          "Y": 0.485,
+          "Z": 0.485
+        },
+        "MaxValueVec": {
+          "X": 0.485,
+          "Y": 0.485,
+          "Z": 0.485
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.485,
+            0.485,
+            0.485
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 0.9960265,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 62.999996,
+          "Values": [
+            0.0,
+            0.12727073,
+            0.41909087,
+            0.7420919,
+            0.96290547,
+            0.99583584,
+            0.9945399,
+            0.99207795,
+            0.98854923,
+            0.98405325,
+            0.9786894,
+            0.97255707,
+            0.9657556,
+            0.95838463,
+            0.9505433,
+            0.94233114,
+            0.9338476,
+            0.9251921,
+            0.91646385,
+            0.9077625,
+            0.8991873,
+            0.8908377,
+            0.8828132,
+            0.8752131,
+            0.86813676,
+            0.86165726,
+            0.8543857,
+            0.8444042,
+            0.83177316,
+            0.8166571,
+            0.79922074,
+            0.77962893,
+            0.7580461,
+            0.73463726,
+            0.7095667,
+            0.6829995,
+            0.65509975,
+            0.6260328,
+            0.59596294,
+            0.5650551,
+            0.5334736,
+            0.50138354,
+            0.46894932,
+            0.43633574,
+            0.40370718,
+            0.37122893,
+            0.33906513,
+            0.30738086,
+            0.2763404,
+            0.24610877,
+            0.21685039,
+            0.18873027,
+            0.16191253,
+            0.13656262,
+            0.112844564,
+            0.09092341,
+            0.07096356,
+            0.053130172,
+            0.037587434,
+            0.024500132,
+            0.014033122,
+            0.0063508926,
+            0.0016184526,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 64,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 4.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            4.0,
+            2.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "ROffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "ROffset2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0,
+                0.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material'Smoke'",
+        "ObjectPath": "War/Content/FX/Materials/Smoke.0"
+      },
+      "SortMode": "PSORTMODE_DistanceToView",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'SmallSmoke:ParticleModuleRequired_3.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_2",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_2",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 5.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 5.0,
+          "Y": 5.0,
+          "Z": 5.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0,
+            5.0,
+            5.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.3,
+        "MaxValue": 2.0004115,
+        "MinValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "MaxValueVec": {
+          "X": 2.00006,
+          "Y": 2.00006,
+          "Z": 2.0004115
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            0.3,
+            0.3,
+            0.3,
+            0.94095385,
+            0.94095385,
+            0.95217746,
+            1.3964497,
+            1.3964497,
+            1.4120383,
+            1.6981431,
+            1.6981431,
+            1.7131085,
+            1.8776892,
+            1.8776892,
+            1.8889138,
+            1.9667441,
+            1.9667441,
+            1.9729804,
+            1.9969623,
+            1.9969623,
+            1.9988337,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 2.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'SmallSmoke:ParticleModuleSpawn_3.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -3.0,
+        "MaxValue": 5.0,
+        "MinValueVec": {
+          "X": -3.0,
+          "Y": -3.0,
+          "Z": 3.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 3.0,
+          "Z": 5.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -3.0,
+            -3.0,
+            3.0,
+            3.0,
+            3.0,
+            5.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "SmallSmoke",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'SmallSmoke:ParticleSpriteEmitter_3.ParticleLODLevel_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "SmallSmoke",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'SmallSmoke:ParticleSpriteEmitter_3'",
+          "ObjectPath": "War/Content/FX/SmallSmoke.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -1000.0,
+          "Y": -1000.0,
+          "Z": -1000.0
+        },
+        "Max": {
+          "X": 1000.0,
+          "Y": 1000.0,
+          "Z": 1000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

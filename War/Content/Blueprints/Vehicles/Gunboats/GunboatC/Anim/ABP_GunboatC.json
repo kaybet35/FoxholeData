@@ -1,0 +1,1530 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_GunboatC_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Maingun Shooting State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 13,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                14
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_GunBoatC_Skeleton'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/SK_GunBoatC_Skeleton.5"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner02Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner02Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_BA83FBC4443B8F7C9DECC989DCB656A4'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.16"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner02Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner02Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_40816A0646139C9C90E21DA2A379F7D2'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.13"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_1A01A135428A63FB31E27696AD1BF370'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.11"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_342D6FDC46B618E62EF35DB94C81CDFB'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.12"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_RotationOffsetBlendSpace_EF4C747741217061AC9C89B2E8FBA18F'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_A181D51C441062E9473F23AC26E6BACA'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.14"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_A4CDD4B04EDB21099796AD99F68B883C'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.15"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_TransitionResult_9D90F64A4C63C666865B7D83428BEB5B'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.29"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GunboatC_AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GunboatC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GunboatC_AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.28"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_SequencePlayer_8925EF7648002957E68C0B926BFB91B9'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.22"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_GunboatC_C:ExecuteUbergraph_ABP_GunboatC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.0"
+      },
+      {
+        "ObjectName": "Function'ABP_GunboatC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.9"
+      },
+      {
+        "ObjectName": "Function'ABP_GunboatC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GunboatC_AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.10"
+      },
+      {
+        "ObjectName": "Function'ABP_GunboatC_C:ExecuteUbergraph_ABP_GunboatC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_Root_60C9E6E3467E335A7A1B668A354718C1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_SequencePlayer_8925EF7648002957E68C0B926BFB91B9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_LayeredBoneBlend_E502949540B541B2C2E7C189CD5E68E2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_TransitionResult_9D90F64A4C63C666865B7D83428BEB5B'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_SequencePlayer_E3354F00455ED307FFEB6A9DA6D3559A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_StateResult_37D921A9478726289318A09E08CCFCA9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_SequencePlayer_CF76C51845C76218AD74028D86D8194A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_StateResult_D721354D46B378311F59D7BDF2A8CBDC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_StateMachine_17041FA3458EB5723E45C3B1CC09B577'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_LayeredBoneBlend_B5848CB844E832D4010CBF84A018E61A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_A4CDD4B04EDB21099796AD99F68B883C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_A181D51C441062E9473F23AC26E6BACA'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_LayeredBoneBlend_C897284B4277131540F81093F8A791BC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_LayeredBoneBlend_BA2FA02A4972562E054F9F870B2A20AE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_RotationOffsetBlendSpace_EF4C747741217061AC9C89B2E8FBA18F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_342D6FDC46B618E62EF35DB94C81CDFB'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_1A01A135428A63FB31E27696AD1BF370'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_40816A0646139C9C90E21DA2A379F7D2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraphNode_BlendSpacePlayer_BA83FBC4443B8F7C9DECC989DCB656A4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.16"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_GunboatC": {
+        "ObjectName": "Function'ABP_GunboatC_C:ExecuteUbergraph_ABP_GunboatC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GunboatC_AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11": {
+        "ObjectName": "Function'ABP_GunboatC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GunboatC_AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.10"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_GunboatC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_GunboatC_C'Default__ABP_GunboatC_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.2"
+    }
+  },
+  {
+    "Type": "ABP_GunboatC_C",
+    "Name": "Default__ABP_GunboatC_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.ABP_GunboatC_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_60C9E6E3467E335A7A1B668A354718C1": {
+        "Result": {
+          "LinkID": 2
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_8925EF7648002957E68C0B926BFB91B9": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GunboatC_PropellorSpin'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/Anim_GunboatC_PropellorSpin.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_E502949540B541B2C2E7C189CD5E68E2": {
+        "BasePose": {
+          "LinkID": 15
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 13
+          },
+          {
+            "LinkID": 14
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "MainGunHorizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TripodMountHorizontal_Right",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TripodMountHorizontal_Left",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "13510FEF-426BFE12-242929A6-3E68D69B",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9D90F64A4C63C666865B7D83428BEB5B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E3354F00455ED307FFEB6A9DA6D3559A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GunboatC_Maingun_Firing'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/Anim_GunboatC_Maingun_Firing.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_37D921A9478726289318A09E08CCFCA9": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_CF76C51845C76218AD74028D86D8194A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GunboatC_POSE_Neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/Anim_GunboatC_POSE_Neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_D721354D46B378311F59D7BDF2A8CBDC": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_17041FA3458EB5723E45C3B1CC09B577": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_B5848CB844E832D4010CBF84A018E61A": {
+        "BasePose": {
+          "LinkID": 12
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 9
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "MainGunVertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "MainGunRecoil",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "13510FEF-426BFE12-242929A6-3E68D69B",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_A4CDD4B04EDB21099796AD99F68B883C": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Turrets_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/BS_Turrets_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_A181D51C441062E9473F23AC26E6BACA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Turrets_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/BS_Turrets_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_C897284B4277131540F81093F8A791BC": {
+        "BasePose": {
+          "LinkID": 17
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 16
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TripodMountVertical_Right",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "13510FEF-426BFE12-242929A6-3E68D69B",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_LayeredBoneBlend_BA2FA02A4972562E054F9F870B2A20AE": {
+        "BasePose": {
+          "LinkID": 19
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 18
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TripodMountVertical_Left",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "13510FEF-426BFE12-242929A6-3E68D69B",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_EF4C747741217061AC9C89B2E8FBA18F": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'AO_Rudder_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/AO_Rudder_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_342D6FDC46B618E62EF35DB94C81CDFB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Turrets_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/BS_Turrets_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_1A01A135428A63FB31E27696AD1BF370": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Turrets_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/BS_Turrets_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_40816A0646139C9C90E21DA2A379F7D2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Turrets_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/BS_Turrets_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_BA83FBC4443B8F7C9DECC989DCB656A4": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Turrets_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/BS_Turrets_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "bIsGunnerFiring": true
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_60C9E6E3467E335A7A1B668A354718C1",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_GunboatC",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_GunboatC",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_GunboatC_C:ExecuteUbergraph_ABP_GunboatC.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_GunboatC_C:ExecuteUbergraph_ABP_GunboatC.CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GunboatC_C:ExecuteUbergraph_ABP_GunboatC.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_GunboatC",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEnd_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_GunboatC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_GunboatC_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/Anim/ABP_GunboatC.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GunboatC_AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_1A01A135428A63FB31E27696AD1BF370",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_342D6FDC46B618E62EF35DB94C81CDFB",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_40816A0646139C9C90E21DA2A379F7D2",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_A181D51C441062E9473F23AC26E6BACA",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_A4CDD4B04EDB21099796AD99F68B883C",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_BA83FBC4443B8F7C9DECC989DCB656A4",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_B5848CB844E832D4010CBF84A018E61A",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_BA2FA02A4972562E054F9F870B2A20AE",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_C897284B4277131540F81093F8A791BC",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_E502949540B541B2C2E7C189CD5E68E2",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_EF4C747741217061AC9C89B2E8FBA18F",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8925EF7648002957E68C0B926BFB91B9",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CF76C51845C76218AD74028D86D8194A",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E3354F00455ED307FFEB6A9DA6D3559A",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_17041FA3458EB5723E45C3B1CC09B577",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_37D921A9478726289318A09E08CCFCA9",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D721354D46B378311F59D7BDF2A8CBDC",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_85B7797146253D5FEAFDF6B28EAE3E11",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9D90F64A4C63C666865B7D83428BEB5B",
+    "Outer": "ABP_GunboatC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

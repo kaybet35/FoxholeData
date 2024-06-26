@@ -1,0 +1,733 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "idle to shooting",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 4,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.001,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_CoastalGun_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Structures/SK_CoastalGun_Skeleton.1"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "isShooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'ABP_CoastalGun_C:isShooting'",
+                "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.3"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_TransitionResult_421A20EE4FE2D999C54AED89D568F3EF'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "isShooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'ABP_CoastalGun_C:isShooting'",
+                "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.3"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_TransitionResult_08B658DD4EF34EEA933DAB88FA4E0474'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.19"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "verticalAiming_Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'ABP_CoastalGun_C:verticalAiming_Pitch'",
+                "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.5"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_BlendSpacePlayer_1545BE9342EC08F839D57A9ACF990CF6'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.10"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TrackingAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'CoastalGunAnimInstance:TrackingAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_BlendSpacePlayer_3DF0C6544E1193E9757FC1B81A3E281C'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.11"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_CoastalGun_C:ExecuteUbergraph_ABP_CoastalGun'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CoastalGunAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.0"
+      },
+      {
+        "ObjectName": "Function'ABP_CoastalGun_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.7"
+      },
+      {
+        "ObjectName": "Function'ABP_CoastalGun_C:ExecuteUbergraph_ABP_CoastalGun'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_Root_48D83C304E6BD3480B76718F9A80C178'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_BlendSpacePlayer_3DF0C6544E1193E9757FC1B81A3E281C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_LayeredBoneBlend_94A0B6494353979172BAF5A7327F38EE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_BlendSpacePlayer_1545BE9342EC08F839D57A9ACF990CF6'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.10"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_LayeredBoneBlend_B5C08E5F4ECB84E4F9B89EB55277A1D0'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_TransitionResult_08B658DD4EF34EEA933DAB88FA4E0474'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_TransitionResult_421A20EE4FE2D999C54AED89D568F3EF'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_SequencePlayer_A9EF42F2437EF26A94632B9AF8CAE4E5'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_StateResult_C62541B74D6D51B091BA029CA977DA81'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_StateResult_FB4B499848F70C1CB7053AB4235C288C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraphNode_StateMachine_8B1EFFA445C9E40B272D9086694BA322'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.16"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_CoastalGun_C:isShooting'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.3"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_CoastalGun_C:horizontalAiming_Yaw'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_CoastalGun_C:verticalAiming_Pitch'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.5"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_CoastalGun": {
+        "ObjectName": "Function'ABP_CoastalGun_C:ExecuteUbergraph_ABP_CoastalGun'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.9"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_CoastalGun_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.7"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_CoastalGun_C'Default__ABP_CoastalGun_C'",
+      "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.2"
+    }
+  },
+  {
+    "Type": "ABP_CoastalGun_C",
+    "Name": "Default__ABP_CoastalGun_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.ABP_CoastalGun_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_48D83C304E6BD3480B76718F9A80C178": {
+        "Result": {
+          "LinkID": 4
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_3DF0C6544E1193E9757FC1B81A3E281C": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_CoastalGun_horizontalMove'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/BS_CoastalGun_horizontalMove.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_94A0B6494353979172BAF5A7327F38EE": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 3
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "vertical_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "D26CC8CD-40CED2BA-071A148C-FFDCBA3B",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_1545BE9342EC08F839D57A9ACF990CF6": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_CoastalGun_verticalMove'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/BS_CoastalGun_verticalMove.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_B5C08E5F4ECB84E4F9B89EB55277A1D0": {
+        "BasePose": {
+          "LinkID": 2
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 10
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "mainBody",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "D26CC8CD-40CED2BA-071A148C-FFDCBA3B",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_TransitionResult_08B658DD4EF34EEA933DAB88FA4E0474": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_421A20EE4FE2D999C54AED89D568F3EF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_A9EF42F2437EF26A94632B9AF8CAE4E5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_CoastalGun_shooting'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/Anim_CoastalGun_shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C62541B74D6D51B091BA029CA977DA81": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_FB4B499848F70C1CB7053AB4235C288C": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_8B1EFFA445C9E40B272D9086694BA322": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "isShooting",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'BoolProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "horizontalAiming_Yaw",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'FloatProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "verticalAiming_Pitch",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'FloatProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_CoastalGun_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_CoastalGun",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_CoastalGun",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_CoastalGun_C:ExecuteUbergraph_ABP_CoastalGun.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/CoastalGun/ABP_CoastalGun.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_1545BE9342EC08F839D57A9ACF990CF6",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_3DF0C6544E1193E9757FC1B81A3E281C",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_94A0B6494353979172BAF5A7327F38EE",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_B5C08E5F4ECB84E4F9B89EB55277A1D0",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_48D83C304E6BD3480B76718F9A80C178",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A9EF42F2437EF26A94632B9AF8CAE4E5",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_8B1EFFA445C9E40B272D9086694BA322",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C62541B74D6D51B091BA029CA977DA81",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FB4B499848F70C1CB7053AB4235C288C",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_08B658DD4EF34EEA933DAB88FA4E0474",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_421A20EE4FE2D999C54AED89D568F3EF",
+    "Outer": "ABP_CoastalGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

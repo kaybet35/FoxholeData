@@ -1,0 +1,1562 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "PowerLineConnector",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFacilityRefinery1_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.27"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FacilityRefinery'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPFacilityRefinery1_C:PowerLineConnector'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityRefinery1_C:ProducingSFX'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityRefinery1_C:PointLight1'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityRefinery1_C:FoundationDecal'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityRefinery1_C:Smoke'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.15"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityRefinery1_C:MainMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.12"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFacilityRefinery1_C'Default__BPFacilityRefinery1_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.2"
+    }
+  },
+  {
+    "Type": "BPFacilityRefinery1_C",
+    "Name": "Default__BPFacilityRefinery1_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.BPFacilityRefinery1_C'",
+    "Properties": {
+      "GenericStockpileComponent": {
+        "ObjectName": "GenericStockpileComponent'Default__BPFacilityRefinery1_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.9"
+      },
+      "UpgradeSlotComponent": {
+        "ObjectName": "ModificationSlotComponent'Default__BPFacilityRefinery1_C:UpgradeSlotComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.10"
+      },
+      "CraneSpawnLocationComponent": {
+        "ObjectName": "CraneSpawnLocationComponent'Default__BPFacilityRefinery1_C:CraneSpawnLocationComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.6"
+      },
+      "PowerSocket": {
+        "ObjectName": "BuildSocketComponent'Default__BPFacilityRefinery1_C:PowerSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.5"
+      },
+      "LightComponent": {
+        "ObjectName": "FacilityLightComponent'Default__BPFacilityRefinery1_C:LightComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.8"
+      },
+      "TransferLocation": {
+        "ObjectName": "SceneComponent'Default__BPFacilityRefinery1_C:TransferLocation'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.19"
+      },
+      "ConversionEntries": [
+        {
+          "ItemInput": [
+            {
+              "CodeName": "Metal",
+              "Quantity": 10,
+              "Limit": 32000
+            }
+          ],
+          "LiquidInput": [],
+          "ItemOutput": [
+            {
+              "CodeName": "FacilityMaterials1",
+              "Quantity": 1,
+              "Limit": 3200
+            }
+          ],
+          "LiquidOutput": [],
+          "Duration": 25,
+          "PowerDelta": 0,
+          "bConsumeResourceNodes": false
+        },
+        {
+          "ItemInput": [
+            {
+              "CodeName": "Metal",
+              "Quantity": 100,
+              "Limit": 32000
+            }
+          ],
+          "LiquidInput": [],
+          "ItemOutput": [
+            {
+              "CodeName": "MaintenanceSupplies",
+              "Quantity": 20,
+              "Limit": 6400
+            }
+          ],
+          "LiquidOutput": [],
+          "Duration": 25,
+          "PowerDelta": -3000,
+          "bConsumeResourceNodes": false
+        }
+      ],
+      "Modifications": [
+        {
+          "Key": "EFortModificationType::Forge",
+          "Value": {
+            "ConversionEntries": [
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 15,
+                    "Limit": 32000
+                  },
+                  {
+                    "CodeName": "FacilityCoal1",
+                    "Quantity": 75,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials4",
+                    "Quantity": 1,
+                    "Limit": 425
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 60,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              },
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 15,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [
+                  {
+                    "CodeName": "Petrol",
+                    "Quantity": 50.0,
+                    "Limit": 32000.0
+                  }
+                ],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials5",
+                    "Quantity": 1,
+                    "Limit": 425
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 60,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::MetalPress",
+          "Value": {
+            "ConversionEntries": [
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 15,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [
+                  {
+                    "CodeName": "Petrol",
+                    "Quantity": 25.0,
+                    "Limit": 32000.0
+                  }
+                ],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials1",
+                    "Quantity": 3,
+                    "Limit": 3840
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 25,
+                "PowerDelta": -4000,
+                "bConsumeResourceNodes": false
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Recycler",
+          "Value": {
+            "ConversionEntries": [
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 25,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials1",
+                    "Quantity": 1,
+                    "Limit": 1280
+                  },
+                  {
+                    "CodeName": "SandbagMaterials",
+                    "Quantity": 5,
+                    "Limit": 6400
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 25,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              },
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 25,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials1",
+                    "Quantity": 1,
+                    "Limit": 6400
+                  },
+                  {
+                    "CodeName": "BarbedWireMaterials",
+                    "Quantity": 5,
+                    "Limit": 6400
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 25,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              },
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 25,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials1",
+                    "Quantity": 1,
+                    "Limit": 1280
+                  },
+                  {
+                    "CodeName": "MetalBeamMaterials",
+                    "Quantity": 1,
+                    "Limit": 1280
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 25,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Smelter",
+          "Value": {
+            "ConversionEntries": [
+              {
+                "ItemInput": [
+                  {
+                    "CodeName": "Metal",
+                    "Quantity": 15,
+                    "Limit": 32000
+                  },
+                  {
+                    "CodeName": "FacilityCoal1",
+                    "Quantity": 25,
+                    "Limit": 32000
+                  }
+                ],
+                "LiquidInput": [],
+                "ItemOutput": [
+                  {
+                    "CodeName": "FacilityMaterials1",
+                    "Quantity": 3,
+                    "Limit": 3840
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 25,
+                "PowerDelta": -4000,
+                "bConsumeResourceNodes": false
+              }
+            ]
+          }
+        }
+      ],
+      "FuelTanks": [
+        {
+          "RemainingFuel": 0.0,
+          "FuelCapacity": 5000.0,
+          "FuelItemCodeName": "Petrol",
+          "bCanRefuelFromTanker": true,
+          "bCanSiphon": true
+        }
+      ],
+      "PowerGridInfo": {
+        "PowerDelta": -2000,
+        "MaxConnections": 1
+      },
+      "ProceduralUseVolumeFactor": 0.666667,
+      "bIsBuiltOnLandscape": false,
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "77F7A5C245872D31C6810B8DFAFF6296",
+        "SourceString": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials.",
+        "LocalizedString": "A factory that refines raw resources into Construction Materials for advanced facilities. Additional modifications allow for the development of a variety of different materials."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'MetalworksFactoryBase'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/MetalworksFactoryBase.0"
+      },
+      "BuildCategory": "EBuildCategory::Facility",
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "bDropsLargeMaterialsWhenDestroyed": false,
+      "ValidBuildTools": 24,
+      "CodeName": "FacilityRefinery1",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "C776334E42EE0B3A70C7BCA08985DD60",
+        "SourceString": "Materials Factory",
+        "LocalizedString": "Materials Factory"
+      },
+      "ProfileType": "EStructureProfileType::FieldLogiStructure",
+      "ArmourType": "EArmourType::Tier2Structure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPFacilityRefinery1_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'BridgeExplosion1'",
+        "ObjectPath": "War/Content/FX/BridgeExplosion1.52"
+      },
+      "MaxHealth": 3000,
+      "Health": 3000,
+      "IsVaultable": false,
+      "ScreenToUse": "ESimScreen::Facility",
+      "MapIntelligenceType": "EMapIntelligenceType::Facility",
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Large",
+      "ClaimStatus": {
+        "bIsEnabled": true,
+        "bCanBeDemolished": true,
+        "bCanBuildSiteBeDemolished": true,
+        "DemolishDurationHours": 672
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPFacilityRefinery1_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.30"
+      },
+      "NetCullDistanceSquared": 49000000.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 468.75,
+        "Y": 937.5,
+        "Z": 512.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -100.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "PowerSocket",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 131072,
+          "SocketTypeCategory": 1048576,
+          "Tag": "None",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      },
+      "RelativeLocation": {
+        "X": -28.952824,
+        "Y": 489.7469,
+        "Z": 613.1992
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "CraneSpawnLocationComponent",
+    "Name": "CraneSpawnLocationComponent",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'CraneSpawnLocationComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "FoundationDecal_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'FoundationsDirtDecal'",
+        "ObjectPath": "War/Content/Materials/Decals/FoundationsDirtDecal.0"
+      },
+      "DecalSize": {
+        "X": 50.0,
+        "Y": 550.0,
+        "Z": 1000.0
+      },
+      "RelativeLocation": {
+        "X": 5.734968E-06,
+        "Y": -96.2168,
+        "Z": -1.7204906E-05
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "FacilityLightComponent",
+    "Name": "LightComponent",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'FacilityLightComponent'",
+    "Properties": {
+      "TargetTag": "HasEmissiveLight",
+      "Materials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'LanternOn-Off'",
+          "ObjectPath": "War/Content/Materials/Environment/LanternOn-Off.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'HeatGlowOn-Off'",
+          "ObjectPath": "War/Content/Materials/Environment/HeatGlowOn-Off.0"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "GenericStockpileComponent",
+    "Name": "GenericStockpileComponent",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'GenericStockpileComponent'",
+    "Properties": {
+      "Configs": [
+        {
+          "Type": "EStockpileEntryType::Items",
+          "QuantityLimit": 32000,
+          "TotalQuantityLimit": 0,
+          "QuantityOverrides": [],
+          "TotalQuantityOverrides": [],
+          "ValidEntriesOverride": [],
+          "PreStockedEntries": [],
+          "RetrieveDurationModifiers": [
+            {
+              "Key": "MaintenanceSupplies",
+              "Value": 0.01
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ModificationSlotComponent",
+    "Name": "UpgradeSlotComponent",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ModificationSlotComponent'",
+    "Properties": {
+      "Modifications": [
+        {
+          "Key": "EFortModificationType::Default",
+          "Value": {
+            "DisplayName": {
+              "CultureInvariantString": null
+            },
+            "Description": {
+              "CultureInvariantString": null
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 32.0,
+                "Y": 32.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": null,
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": false,
+            "TechID": "ETechID::None",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": null,
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityRefinery1Base_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityRefinery1Base.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Forge",
+          "Value": {
+            "DisplayName": {
+              "Namespace": "",
+              "Key": "38AA2F854873950355FCCAB11415BB06",
+              "SourceString": "Forge",
+              "LocalizedString": "Forge"
+            },
+            "Description": {
+              "Namespace": "",
+              "Key": "B30AA138497437782A4300886DD21F45",
+              "SourceString": "A unique factory for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol.",
+              "LocalizedString": "A unique factory for forging specialized machinery parts needed to construct vehicles. Requires Coke or Petrol."
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 256.0,
+                "Y": 256.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilityForgeIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilityForgeIcon.0"
+              },
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": false,
+            "TechID": "ETechID::None",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "FacilityMaterials1",
+                      "Quantity": 200
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": null,
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityRefinery1Forge_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityRefinery1Forge.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::MetalPress",
+          "Value": {
+            "DisplayName": {
+              "Namespace": "",
+              "Key": "A1A86EF042657683CB7010B6656CE2E3",
+              "SourceString": "Metal Press",
+              "LocalizedString": "Metal Press"
+            },
+            "Description": {
+              "Namespace": "",
+              "Key": "46724B5540021ABA9BCBB096CCD52C7E",
+              "SourceString": "A heavy automatic press that refines materials into a denser form.",
+              "LocalizedString": "A heavy automatic press that refines materials into a denser form."
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 256.0,
+                "Y": 256.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilityMetalPressIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilityMetalPressIcon.0"
+              },
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": false,
+            "TechID": "ETechID::None",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "FacilityMaterials1",
+                      "Quantity": 25
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": null,
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityRefinery1Metal_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityRefinery1Metal.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Recycler",
+          "Value": {
+            "DisplayName": {
+              "Namespace": "",
+              "Key": "962993C94EEE298FB2DB74AA6ACCFAE7",
+              "SourceString": "Assembly Bay",
+              "LocalizedString": "Assembly Bay"
+            },
+            "Description": {
+              "Namespace": "",
+              "Key": "CAF0D5B94820FA9927F5CFA48CA6FC91",
+              "SourceString": "An assembly bay with specialized equipment for quickly building and packing materials needed on the frontline.",
+              "LocalizedString": "An assembly bay with specialized equipment for quickly building and packing materials needed on the frontline."
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 256.0,
+                "Y": 256.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilityRecyclerIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilityRecyclerIcon.0"
+              },
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": false,
+            "TechID": "ETechID::None",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "cloth",
+                      "Quantity": 50
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": null,
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityRefinery1Recycler_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityRefinery1Recycler.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Smelter",
+          "Value": {
+            "DisplayName": {
+              "Namespace": "",
+              "Key": "A09F66644EAC732CBE1BA9B67F0FC537",
+              "SourceString": "Smelter",
+              "LocalizedString": "Smelter"
+            },
+            "Description": {
+              "Namespace": "",
+              "Key": "9412D2F44236A4C90F19698CC2B4C79F",
+              "SourceString": "An industrial smelter for melting down Salvage to remove impurities. Requires Coke.",
+              "LocalizedString": "An industrial smelter for melting down Salvage to remove impurities. Requires Coke."
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 256.0,
+                "Y": 256.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilitySmelterIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilitySmelterIcon.0"
+              },
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": false,
+            "TechID": "ETechID::None",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "FacilityMaterials1",
+                      "Quantity": 25
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": {
+                    "ObjectName": "StaticMesh'FacilityRefinery1Smelter'",
+                    "ObjectPath": "War/Content/Meshes/Structures/FacilityRefinery1Smelter.2"
+                  },
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityRefinery1Smelter_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityRefinery1Smelter.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "bPreviewAllInGhost": true,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 185.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FoundationDecal",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MainMesh",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PointLight1",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'PointLightComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "ProducingSFX",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'WarAudioComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Smoke",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "Smoke_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'FacilitySmoke1'",
+        "ObjectPath": "War/Content/FX/FacilitySmoke1.17"
+      },
+      "RelativeLocation": {
+        "X": 146.29529,
+        "Y": -161.05313,
+        "Z": 727.9596
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "PointLight1_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "bUseInverseSquaredFalloff": false,
+      "LightFalloffExponent": 2.75,
+      "SourceRadius": 8.100976,
+      "AttenuationRadius": 500.0,
+      "ShadowSharpen": 0.155963,
+      "bUseRayTracedDistanceFieldShadows": true,
+      "Intensity": 7.0,
+      "LightColor": {
+        "B": 140,
+        "G": 211,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFD38C"
+      },
+      "CastShadows": false,
+      "CastStaticShadows": false,
+      "bAffectTranslucentLighting": false,
+      "RelativeLocation": {
+        "X": 0.35710144,
+        "Y": 546.2579,
+        "Z": 399.7733
+      },
+      "ComponentTags": [
+        "HasEmissiveLight"
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransferLocation",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFacilityRefinery1_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.3"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFacilityRefinery1_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.18"
+      },
+      "VariableGuid": "E1EC2F2B-4ED95E3F-0E631E87-D60E7D9B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BPFacilityRefinery1_C:Smoke_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.16"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "99F6A212-4DCFE4EF-E2B5A6A5-18413923",
+      "InternalVariableName": "Smoke"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPFacilityRefinery1_C:PowerLineConnector_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.29"
+      },
+      "ParentComponentOrVariableName": "PowerSocket",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D88AEA03-4C421C34-A9ACAFB5-FDC2E934",
+      "InternalVariableName": "PowerLineConnector"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_27",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPFacilityRefinery1_C:MainMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.28"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AB0EF8FB-434BE973-DD84579A-D23FEC79",
+      "InternalVariableName": "MainMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PointLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PointLightComponent'BPFacilityRefinery1_C:PointLight1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.17"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F0A45C7A-42D5AB21-00F2B0A5-5A8CEAE5",
+      "InternalVariableName": "PointLight1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPFacilityRefinery1_C:FoundationDecal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "801CF4D8-4C4AD8E3-7610D5A8-A4119B60",
+      "InternalVariableName": "FoundationDecal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'WarAudioComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "WarAudioComponent'BPFacilityRefinery1_C:ProducingSFX_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.31"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "89C9EA27-45173CB3-8324CB88-F98B5DFB",
+      "InternalVariableName": "ProducingSFX"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.22"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_27'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFacilityRefinery1_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityRefinery1.20"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MainMesh_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FacilityRefinery1'",
+        "ObjectPath": "War/Content/Meshes/Structures/FacilityRefinery1.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 185.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "HasEmissiveLight"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PowerLineConnector_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'PowerLineAttachment'",
+        "ObjectPath": "War/Content/Meshes/Structures/PowerLineAttachment.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'Powerlines'",
+          "ObjectPath": "War/Content/Materials/Structures/Powerlines.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -3.5835876,
+        "Y": -45.890823,
+        "Z": -0.13018799
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 14.036263,
+        "Roll": 104.03628
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPFacilityRefinery1_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "WarAudioComponent",
+    "Name": "ProducingSFX_GEN_VARIABLE",
+    "Outer": "BPFacilityRefinery1_C",
+    "Class": "UScriptClass'WarAudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'FacilityMaterialFactoryBase_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityMaterialFactoryBase_Cue.0"
+      },
+      "VolumeMultiplier": 0.25,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1064.6285
+      },
+      "bAutoActivate": false
+    }
+  }
+]

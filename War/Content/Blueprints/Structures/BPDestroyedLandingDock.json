@@ -1,0 +1,268 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDestroyedLandingDock_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DestroyedStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedLandingDock_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedLandingDock_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDestroyedLandingDock_C'Default__BPDestroyedLandingDock_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.2"
+    }
+  },
+  {
+    "Type": "BPDestroyedLandingDock_C",
+    "Name": "Default__BPDestroyedLandingDock_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPDestroyedLandingDock.BPDestroyedLandingDock_C'",
+    "Properties": {
+      "CodeName": "DestroyedLandingDock",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedLandingDock_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDestroyedLandingDock_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.5"
+      },
+      "MaxHealth": 100000000,
+      "UpgradeStructureCodeName": "LandingDock",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDestroyedLandingDock_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedLandingDock_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.84364,
+        "Y": 663.0536,
+        "Z": 133.7824
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -400.0,
+        "Y": -120.0,
+        "Z": 190.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 1150.0,
+        "Y": 920.5854,
+        "Z": 256.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedLandingDock_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.3"
+      },
+      "RelativeLocation": {
+        "X": -810.0,
+        "Y": -118.16759,
+        "Z": 240.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDestroyedLandingDock_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.7"
+      },
+      "VariableGuid": "A7695526-4DF34F5A-241FD684-AB0C62D1",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDestroyedLandingDock_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.12"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FC602C94-464769BD-7D07EA92-678EE754",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedLandingDock_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9E8F9BC5-4C1E870C-C234FCB3-6C55F25A",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedLandingDock_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedLandingDock_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedLandingDock_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedLandingDock_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDestroyedLandingDock_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LandingDockDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Structures/LandingDockDestroyed.2"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDestroyedLandingDock_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFoxholeFill_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPFoxhole_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPFoxhole.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFoxholeFill_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPFoxholeFill_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPFoxhole_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPFoxhole.1"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFoxholeFill_C'Default__BPFoxholeFill_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.1"
+    }
+  },
+  {
+    "Type": "BPFoxholeFill_C",
+    "Name": "Default__BPFoxholeFill_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Fills/BPFoxholeFill.BPFoxholeFill_C'",
+    "Properties": {
+      "Description": {
+        "Namespace": "",
+        "Key": "5AE781E14167E6E84C9705B68AF4A532",
+        "SourceString": "Fills in this Foxhole, restoring the landscape around it.",
+        "LocalizedString": "Fills in this Foxhole, restoring the landscape around it."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'FillTrenchIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/FillTrenchIcon.0"
+      },
+      "BuildLocationType": "EBuildLocationType::None",
+      "bIsFillStructureProxy": true,
+      "ValidBuildTools": 18,
+      "CodeName": "FoxholeFill",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "3A06383E4980F00A6FF5C581A0ADCCFA",
+        "SourceString": "Fill In",
+        "LocalizedString": "Fill In"
+      },
+      "ProfileType": "EStructureProfileType::Fill",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFoxholeFill_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.2"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPFoxholeFill_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.4"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPFoxholeFill_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.3"
+      },
+      "DestroyedFX": null,
+      "UpgradeStructureCodeName": "FoxholeFill",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPFoxholeFill_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.9"
+      },
+      "NetDormancy": "DORM_Awake",
+      "NetCullDistanceSquared": 25000000.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFoxholeFill_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.2"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPFoxholeFill_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPFoxholeFill_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFoxholeFill_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPFoxholeFill_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFoxholeFill_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.2"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPFoxholeFill_C",
+    "Class": "UScriptClass'InheritableComponentHandler'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFoxholeFill_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFoxholeFill_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.6"
+      },
+      "VariableGuid": "EA98489A-496B8447-BF78ADBA-70DCF039",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFoxholeFill_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFoxholeFill_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Fills/BPFoxholeFill.7"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPFoxholeFill_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

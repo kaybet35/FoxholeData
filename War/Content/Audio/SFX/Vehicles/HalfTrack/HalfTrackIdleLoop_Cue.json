@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "HalfTrackIdleLoop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'HalfTrackIdleLoop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/HalfTrack/HalfTrackIdleLoop_Cue.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1350.8081,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 811.2747
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "HalfTrackIdleLoop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HalfTrackIdleLoop_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/HalfTrack/HalfTrackIdleLoop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "HalfTrackIdleLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/HalfTrack/HalfTrackIdleLoop.HalfTrackIdleLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'HalfTrackIdleLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/HalfTrack/HalfTrackIdleLoop.0"
+    }
+  }
+]

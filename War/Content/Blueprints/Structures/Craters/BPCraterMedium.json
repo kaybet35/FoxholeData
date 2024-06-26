@@ -1,0 +1,443 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "CraterSmall01",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPCraterMedium_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPCraterMedium_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.16"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Crater'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPCraterMedium_C:CraterSmall01'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPCraterMedium_C:Decal'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.7"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPCraterMedium_C:Floor'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPCraterMedium_C:Hole'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.9"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPCraterMedium_C'Default__BPCraterMedium_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.2"
+    }
+  },
+  {
+    "Type": "BPCraterMedium_C",
+    "Name": "Default__BPCraterMedium_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Craters/BPCraterMedium.BPCraterMedium_C'",
+    "Properties": {
+      "BuildGhostClass": null,
+      "ValidBuildTools": 2,
+      "ConversionCodeNames": [
+        "CraterMediumFill"
+      ],
+      "CodeName": "CraterMedium",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "770167924C272500D86179992E951FC9",
+        "SourceString": "Crater",
+        "LocalizedString": "Crater"
+      },
+      "ProfileType": "EStructureProfileType::Crater",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPCraterMedium_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPCraterMedium_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.5"
+      },
+      "MaxHealth": 1000,
+      "Health": 1000,
+      "bAddLandscapeHolesOnBeginPlay": true,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPCraterMedium_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.19"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPCraterMedium_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPCraterMedium_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Hole_GEN_VARIABLE",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 270.0,
+        "Y": 270.0,
+        "Z": 100.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "LandscapeHole",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Landscape",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "LandscapeOverlap",
+        "LandscapeHoleCircle"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPCraterMedium_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPCraterMedium_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.3"
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'NoMansLand1'",
+        "ObjectPath": "War/Content/Materials/Decals/NoMansLand1.0"
+      },
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 768.0,
+        "Z": 768.0
+      },
+      "RelativeLocation": {
+        "X": 8.910894E-06,
+        "Y": -0.0021362305,
+        "Z": -102.08972
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Decal",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Floor",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Hole",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPCraterMedium_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.10"
+      },
+      "VariableGuid": "09FC068A-461E3DC1-311BFFAA-4DB16698",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPCraterMedium_C:Hole_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C001E97D-41294338-414BBF9E-27F42144",
+      "InternalVariableName": "Hole"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPCraterMedium_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7962BE55-4D5F1A41-40ADF189-7AF24818",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPCraterMedium_C:Floor_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.18"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.15"
+        }
+      ],
+      "VariableGuid": "2E5D3640-4E7C4C7A-0D7011A6-7BFBDA3D",
+      "InternalVariableName": "Floor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPCraterMedium_C:CraterSmall01_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.17"
+      },
+      "VariableGuid": "4CB95569-479F5277-6EB9D5BF-A9950606",
+      "InternalVariableName": "CraterSmall01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPCraterMedium_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Craters/BPCraterMedium.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "CraterSmall01_GEN_VARIABLE",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'CraterM01'",
+        "ObjectPath": "War/Content/Meshes/Environment/CraterM01.2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Floor_GEN_VARIABLE",
+    "Outer": "BPCraterMedium_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'CraterM'",
+        "ObjectPath": "War/Content/Meshes/Environment/CraterM.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'DirtPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/DirtPhys.0"
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 3.0
+      },
+      "ComponentTags": [
+        "RandomVisualVariance"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPCraterMedium_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

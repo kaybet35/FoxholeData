@@ -1,0 +1,272 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "GrenadeMesh",
+    "Outer": "BPHEGrenade_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPHEGrenade_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPHEGrenade_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPHEGrenade_C:GrenadeMesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPHEGrenade_C'Default__BPHEGrenade_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.2"
+    }
+  },
+  {
+    "Type": "BPHEGrenade_C",
+    "Name": "Default__BPHEGrenade_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPHEGrenade.BPHEGrenade_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPHEGrenade_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.5"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPHEGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.10"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPHEGrenade_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPHEGrenade_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'HEGrenadeExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/HEGrenadeExplosion.1"
+      },
+      "ExplosiveCodeName": "HEGrenade",
+      "ProjectileDeathDelay": 0.5,
+      "bProjectImpactDownward": true,
+      "RotationSpeed": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 300.0
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPHEGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPHEGrenade_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPHEGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.10"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPHEGrenade_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPHEGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.10"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPHEGrenade_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "bInitialVelocityInLocalSpace": false,
+      "ProjectileGravityScale": 1.0,
+      "Bounciness": 0.08,
+      "Friction": 0.55,
+      "BounceVelocityStopSimulatingThreshold": 8.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPHEGrenade_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPHEGrenade_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.6"
+      },
+      "VariableGuid": "60C0D2B2-43DECD9A-7802A387-8BC73070",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPHEGrenade_C:GrenadeMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.11"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "19B9FC7C-4845E3DF-F831E79A-18405624",
+      "InternalVariableName": "GrenadeMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "BPHEGrenade_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPHEGrenade_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPHEGrenade_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPHEGrenade_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPHEGrenade.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPHEGrenade_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.0,
+      "BodyInstance": {
+        "MassInKgOverride": 2.9279141
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "GrenadeMesh_GEN_VARIABLE",
+    "Outer": "BPHEGrenade_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'HEGrenade'",
+        "ObjectPath": "War/Content/Meshes/Pickups/HEGrenade.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 2.9279146
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -26.85286
+      }
+    }
+  }
+]

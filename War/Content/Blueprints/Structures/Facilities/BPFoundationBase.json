@@ -1,0 +1,287 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Foundation",
+    "Outer": "BPFoundationBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFoundationBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFoundationBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Foundation'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPFoundationBase_C:Foundation'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFoundationBase_C'Default__BPFoundationBase_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.2"
+    }
+  },
+  {
+    "Type": "BPFoundationBase_C",
+    "Name": "Default__BPFoundationBase_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/BPFoundationBase.BPFoundationBase_C'",
+    "Properties": {
+      "Tier": "EFortTier::T1",
+      "ProceduralUseVolumeFactor": 1.0,
+      "NoBuildPhysicalMaterials": [
+        {
+          "ObjectName": "PhysicalMaterial'WetSandPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/WetSandPhys.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'TownStone'",
+          "ObjectPath": "War/Content/PhysicalMaterials/TownStone.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'T1RoadPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/T1RoadPhys.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'T2RoadPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/T2RoadPhys.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'T3RoadPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/T3RoadPhys.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'SandPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/SandPhys.0"
+        }
+      ],
+      "bBuildOnWater": true,
+      "BuildGhostClass": null,
+      "BuildSiteClass": {
+        "ObjectName": "Class'FoundationBuildSite'",
+        "ObjectPath": "/Script/War"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "CDDD81B84541976034E1D6BA163C62BB",
+        "SourceString": "A foundation that provides a suitable surface for constructing Facilities.",
+        "LocalizedString": "A foundation that provides a suitable surface for constructing Facilities."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'FoundationIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/FoundationIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Foundation",
+      "bDropsLargeMaterialsWhenDestroyed": false,
+      "ProfileType": "EStructureProfileType::FieldStructure",
+      "ArmourType": "EArmourType::Trench",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFoundationBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPFoundationBase_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.5"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPFoundationBase_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'BridgeExplosion1'",
+        "ObjectPath": "War/Content/FX/BridgeExplosion1.52"
+      },
+      "MaxHealth": 5000,
+      "Health": 5000,
+      "ClaimStatus": {
+        "DemolishDurationHours": 672
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPFoundationBase_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.11"
+      },
+      "DecaySupplyDrain": 2,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFoundationBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPFoundationBase_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPFoundationBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFoundationBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPFoundationBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 245.0,
+        "Y": 245.0,
+        "Z": 295.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFoundationBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -260.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFoundationBase_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFoundationBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.6"
+      },
+      "VariableGuid": "5684B9B9-499CFF16-5734B08A-CEA62A1E",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPFoundationBase_C:Foundation_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.10"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A6C1E728-4B09B653-1C586DA6-A48E4C1D",
+      "InternalVariableName": "Foundation"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFoundationBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFoundationBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFoundationBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFoundationBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFoundationBase.7"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Foundation_GEN_VARIABLE",
+    "Outer": "BPFoundationBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ConcreteFoundation01'",
+        "ObjectPath": "War/Content/Meshes/Structures/Foundations/ConcreteFoundation01.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        },
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'FoundationPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/FoundationPhys.0"
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 40.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPFoundationBase_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

@@ -1,0 +1,188 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPGrenadeW_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'Grenade_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/Grenade.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPGrenadeW_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPGrenadeW_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'Grenade_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/Grenade.1"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPGrenadeW_C'Default__BPGrenadeW_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.1"
+    }
+  },
+  {
+    "Type": "BPGrenadeW_C",
+    "Name": "Default__BPGrenadeW_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPGrenadeW.BPGrenadeW_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPGrenadeW_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.5"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPGrenadeW_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.9"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPGrenadeW_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPGrenadeW_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.2"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Grenade'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_Grenade.0"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeExplosion.1"
+      },
+      "ExplosiveCodeName": "GrenadeW",
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPGrenadeW_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.9"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPGrenadeW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPGrenadeW_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.9"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPGrenadeW_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BPGrenadeW_C:GrenadeMesh_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'Grenade_C'",
+              "ObjectPath": "War/Content/Blueprints/Items/Grenade.1"
+            },
+            "SCSVariableName": "GrenadeMesh",
+            "AssociatedGuid": "19B9FC7C-4845E3DF-F831E79A-18405624"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPGrenadeW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPGrenadeW_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.9"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPGrenadeW_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPGrenadeW_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPGrenadeW_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.6"
+      },
+      "VariableGuid": "60C0D2B2-43DECD9A-7802A387-8BC73070",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "BPGrenadeW_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPGrenadeW_C:SimpleConstructionScript_1.SCS_Node_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPGrenadeW.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPGrenadeW_C",
+    "Class": "UScriptClass'SphereComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "GrenadeMesh_GEN_VARIABLE",
+    "Outer": "BPGrenadeW_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Grenade01'",
+        "ObjectPath": "War/Content/FX/Mesh/Grenade01.2"
+      }
+    }
+  }
+]

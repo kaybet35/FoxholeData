@@ -1,0 +1,269 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "TorpedoExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'TorpedoExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'TorpedoExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'TorpedoExplosion_C:ExecuteUbergraph_TorpedoExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'TorpedoExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.0"
+      },
+      {
+        "ObjectName": "Function'TorpedoExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.6"
+      },
+      {
+        "ObjectName": "Function'TorpedoExplosion_C:ExecuteUbergraph_TorpedoExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'TorpedoExplosion_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.3"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_TorpedoExplosion": {
+        "ObjectName": "Function'TorpedoExplosion_C:ExecuteUbergraph_TorpedoExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'TorpedoExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "TorpedoExplosion_C'Default__TorpedoExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.2"
+    }
+  },
+  {
+    "Type": "TorpedoExplosion_C",
+    "Name": "Default__TorpedoExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/TorpedoExplosion.TorpedoExplosion_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'UnderWaterExplosion01'",
+            "ObjectPath": "War/Content/FX/UnderWaterExplosion01.85"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 200.0,
+              "Y": 200.0,
+              "Z": 200.0
+            },
+            "LifeSpan": 500.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "RadialHitImpact": {
+        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      },
+      "ExplosionLightFadeOut": 0.15,
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'TorpedoExplosion_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/TorpedoExplosion_Cue.0"
+      },
+      "CameraShake": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeCameraShake_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeCameraShake.0"
+      },
+      "CameraShakeOuterRadius": 1800.0,
+      "TankArmourEffectBehaviour": "ETankArmourEffectBehaviour::DoNotPlayEffect",
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__TorpedoExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.7"
+      },
+      "InitialLifeSpan": 30.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__TorpedoExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.7"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_TorpedoExplosion",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_TorpedoExplosion",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'TorpedoExplosion_C:ExecuteUbergraph_TorpedoExplosion.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__TorpedoExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 3000.0,
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 114,
+        "G": 174,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAE72"
+      },
+      "bAffectsWorld": false
+    }
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Properties": {
+      "Radius": 500.0,
+      "ImpulseStrength": 100000.0,
+      "DestructibleDamage": 100.0,
+      "ObjectTypesToAffect": [
+        63
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'TorpedoExplosion_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.8"
+      },
+      "ParentComponentOrVariableName": "ExplosionLight",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED95043C-4BF9474F-1DC08DA0-C2DD8674",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'TorpedoExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.9"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "TorpedoExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'TorpedoExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'TorpedoExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'TorpedoExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.11"
+      }
+    }
+  }
+]

@@ -1,0 +1,1794 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Shooting State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_MediumTankCol_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_MediumTankCol_Skeleton.15"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "AltGunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:Y'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendSpacePlayer_3E56F9204CD2DD906F2633B44C8D36FD'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.15"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_TransitionResult_CFCEECEF4BE74882C87E51AE387F567C'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.30"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MediumTankC_AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_MediumTankC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MediumTankC_AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.29"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsTopHatchOpen",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsTopHatchOpen'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendListByBool_EFE95E9B42802AA144259B92020A9AD6'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.13"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TrackDisabledIntensity",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_ApplyAdditive:Alpha'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TrackDisabledIntensity'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_ApplyAdditive_611AAABA4E3B4312F86201B07986703F'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.11"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendListByBool_E655C29D49B79CDC08CBA1AFAC681828'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.12"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "InertialRoll",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:InertialRoll'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "InertialPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:Y'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:InertialPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_RotationOffsetBlendSpace_C8FAE51B49D4910B1DFC98A4553F2886'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.19"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendSpacePlayer_BFDF9A2444915DFAF401149684C4DDFE'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.16"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendSpacePlayer_1270BCE54BCBA4A017A37FB12E6AE6BA'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.14"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_11EA0559403043FCE82D96BC5026ECD5'",
+            "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.20"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_MediumTankC_C:ExecuteUbergraph_ABP_MediumTankC'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.0"
+      },
+      {
+        "ObjectName": "Function'ABP_MediumTankC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.9"
+      },
+      {
+        "ObjectName": "Function'ABP_MediumTankC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MediumTankC_AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.10"
+      },
+      {
+        "ObjectName": "Function'ABP_MediumTankC_C:ExecuteUbergraph_ABP_MediumTankC'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_Root_14FE472D4C928C18CC9FDCB1F58971D9'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_11EA0559403043FCE82D96BC5026ECD5'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_LayeredBoneBlend_9397FD034FC2FED30DE0D6814AF16DD8'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendSpacePlayer_1270BCE54BCBA4A017A37FB12E6AE6BA'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendSpacePlayer_BFDF9A2444915DFAF401149684C4DDFE'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_RotationOffsetBlendSpace_C8FAE51B49D4910B1DFC98A4553F2886'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_FB68F5D6444CB8960064869C8EA6122F'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_BD3AFA6A48C995C24DBE859C8AD591B5'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendListByBool_E655C29D49B79CDC08CBA1AFAC681828'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_ApplyAdditive_611AAABA4E3B4312F86201B07986703F'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_3A81845B42E7F6B83CC1B3B1E6E5C8CE'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendListByBool_EFE95E9B42802AA144259B92020A9AD6'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_79D33CFF45809DA72ADC22B090D9794B'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_LayeredBoneBlend_2F2D71024C9D7113094392B160BD3376'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_TransitionResult_CFCEECEF4BE74882C87E51AE387F567C'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_SequencePlayer_2D33700B4D2441AC6DC196BBBD8D2735'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_StateResult_3DC14A6C48672E01EEE2BDA13F7E4B49'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_StateResult_A4E9B6EF418A4A07DA4CC59311B743BD'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_StateMachine_8921F8AC4D5C5B8A9B0440968F64DF7F'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraphNode_BlendSpacePlayer_3E56F9204CD2DD906F2633B44C8D36FD'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.15"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_MediumTankC": {
+        "ObjectName": "Function'ABP_MediumTankC_C:ExecuteUbergraph_ABP_MediumTankC'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MediumTankC_AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E": {
+        "ObjectName": "Function'ABP_MediumTankC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MediumTankC_AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.10"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_MediumTankC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_MediumTankC_C'Default__ABP_MediumTankC_C'",
+      "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.2"
+    }
+  },
+  {
+    "Type": "ABP_MediumTankC_C",
+    "Name": "Default__ABP_MediumTankC_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.ABP_MediumTankC_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_14FE472D4C928C18CC9FDCB1F58971D9": {
+        "Result": {
+          "LinkID": 8
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_11EA0559403043FCE82D96BC5026ECD5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MediumTankCol_speed341_5262'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/Anim_MediumTankCol_speed341_5262.0"
+        },
+        "PlayRateBasis": 341.5262,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_9397FD034FC2FED30DE0D6814AF16DD8": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 3
+          },
+          {
+            "LinkID": 13
+          },
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 20
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "gun_pivot",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "gunOffensive_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "commanderHatch",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "commanderHatchOffensive",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "gun_Right_pivot",
+                "BlendDepth": 1
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "BFED3F13-4630753A-1BA264BE-41E3BAA6",
+        "VirtualBoneGuid": "4CB7ADAB-4407CEAE-DA04579F-3F60B2A7"
+      },
+      "AnimGraphNode_BlendSpacePlayer_1270BCE54BCBA4A017A37FB12E6AE6BA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MediumTankCol_HorizontalTurret'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/BS_MediumTankCol_HorizontalTurret.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_BFDF9A2444915DFAF401149684C4DDFE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MediumTankCol_VerticalTurret'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/BS_MediumTankCol_VerticalTurret.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_C8FAE51B49D4910B1DFC98A4553F2886": {
+        "BasePose": {
+          "LinkID": 2
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace'AO_MediumTankCol_inertia'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/AO_MediumTankCol_inertia.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_FB68F5D6444CB8960064869C8EA6122F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MediumTankCol_exploding'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/Anim_MediumTankCol_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_BD3AFA6A48C995C24DBE859C8AD591B5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MediumTankCol_tracked'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/Anim_MediumTankCol_tracked.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_E655C29D49B79CDC08CBA1AFAC681828": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 6
+          },
+          {
+            "LinkID": 9
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_ApplyAdditive_611AAABA4E3B4312F86201B07986703F": {
+        "Base": {
+          "LinkID": 5
+        },
+        "Additive": {
+          "LinkID": 7
+        },
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "LODThreshold": -1,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true
+      },
+      "AnimGraphNode_SequencePlayer_3A81845B42E7F6B83CC1B3B1E6E5C8CE": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MediumTankCol_POSE_hatchClose'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/Anim_MediumTankCol_POSE_hatchClose.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_EFE95E9B42802AA144259B92020A9AD6": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 10
+          }
+        ],
+        "BlendTime": [
+          0.7,
+          1.0
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_79D33CFF45809DA72ADC22B090D9794B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MediumTankCol_POSE_hatchOpen'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/Anim_MediumTankCol_POSE_hatchOpen.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_2F2D71024C9D7113094392B160BD3376": {
+        "BasePose": {
+          "LinkID": 4
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 19
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "gun_muzzle",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "gunOffensive_muzzle",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "BFED3F13-4630753A-1BA264BE-41E3BAA6",
+        "VirtualBoneGuid": "4CB7ADAB-4407CEAE-DA04579F-3F60B2A7"
+      },
+      "AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_CFCEECEF4BE74882C87E51AE387F567C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_2D33700B4D2441AC6DC196BBBD8D2735": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MediumTankCol_shooting'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/Anim_MediumTankCol_shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3DC14A6C48672E01EEE2BDA13F7E4B49": {
+        "Result": {
+          "LinkID": 16
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_A4E9B6EF418A4A07DA4CC59311B743BD": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_8921F8AC4D5C5B8A9B0440968F64DF7F": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_BlendSpacePlayer_3E56F9204CD2DD906F2633B44C8D36FD": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace'BS_MediumTank2Col_RightTurret'",
+          "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/BS_MediumTank2Col_RightTurret.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_14FE472D4C928C18CC9FDCB1F58971D9",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_MediumTankC",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_MediumTankC",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_MediumTankC_C:ExecuteUbergraph_ABP_MediumTankC.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_MediumTankC_C:ExecuteUbergraph_ABP_MediumTankC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_MediumTankC_C:ExecuteUbergraph_ABP_MediumTankC.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MediumTankC",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_MediumTankC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_MediumTankC_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Tanks/MediumTankCol/ABP_MediumTankC.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MediumTankC_AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ApplyAdditive_611AAABA4E3B4312F86201B07986703F",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_ApplyAdditive'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_E655C29D49B79CDC08CBA1AFAC681828",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_EFE95E9B42802AA144259B92020A9AD6",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_1270BCE54BCBA4A017A37FB12E6AE6BA",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_3E56F9204CD2DD906F2633B44C8D36FD",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_BFDF9A2444915DFAF401149684C4DDFE",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_2F2D71024C9D7113094392B160BD3376",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_9397FD034FC2FED30DE0D6814AF16DD8",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_C8FAE51B49D4910B1DFC98A4553F2886",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_11EA0559403043FCE82D96BC5026ECD5",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_2D33700B4D2441AC6DC196BBBD8D2735",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_3A81845B42E7F6B83CC1B3B1E6E5C8CE",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_79D33CFF45809DA72ADC22B090D9794B",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_BD3AFA6A48C995C24DBE859C8AD591B5",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FB68F5D6444CB8960064869C8EA6122F",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_8921F8AC4D5C5B8A9B0440968F64DF7F",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3DC14A6C48672E01EEE2BDA13F7E4B49",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_A4E9B6EF418A4A07DA4CC59311B743BD",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_42D6789243B07FAB47E323946E1AD83E",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_CFCEECEF4BE74882C87E51AE387F567C",
+    "Outer": "ABP_MediumTankC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

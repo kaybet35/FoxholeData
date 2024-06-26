@@ -1,0 +1,1440 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "basicMovement",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 17,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 13,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                14
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "moving",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 18,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 15,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                16
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_RelicLightTank_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicLightTank_Skeleton.3"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendListByBool_0C6E94E64A86248547C4E0B7E4386909'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.13"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TrackDisabledIntensity",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_ApplyAdditive:Alpha'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TrackDisabledIntensity'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_ApplyAdditive_8CD364C64D683DC517CE8D970CD696F4'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.12"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsTopHatchOpen",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsTopHatchOpen'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendListByBool_76E313524BB471B95A76D180A055F204'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.14"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendSpacePlayer_683942A841F77B7EB88A849522637E06'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.16"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendSpacePlayer_43AE278C41F4A3DE9BC333B6D3E6A2A9'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.15"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_B0553ED54D8DB19E19DD47B5C2B237CD'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.24"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_RelicLightTank_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.11"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.30"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_RelicLightTank_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.29"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_RelicLightTank_C:ExecuteUbergraph_ABP_RelicLightTank'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.0"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicLightTank_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.9"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicLightTank_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.11"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicLightTank_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.10"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicLightTank_C:ExecuteUbergraph_ABP_RelicLightTank'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_Root_D80FB5E74B782494957A969EE45AE817'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_1DFC148349A8BAB93BB1DD8324E5437D'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_StateResult_37EE42BB40B4F59EDBA38F821364CA03'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_4C1CCCA346440F40ECBCC09F3C7A9C64'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_StateResult_2C1F820A4E3610C19EC0E9996B9D1C5C'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_StateMachine_53ADDE3147CC91BBB07CF4980063DB21'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_LayeredBoneBlend_6566FAB04B4200EE67ECF0B68F514B7A'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_B0553ED54D8DB19E19DD47B5C2B237CD'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendSpacePlayer_43AE278C41F4A3DE9BC333B6D3E6A2A9'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendSpacePlayer_683942A841F77B7EB88A849522637E06'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_LayeredBoneBlend_E4543AEA4170B4C2DFE45FBA95FB6618'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendListByBool_76E313524BB471B95A76D180A055F204'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_655E4BD6427B8227B2BFE5BA3A1ACEF8'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_B47D619B46869CEDCC06858953D0B274'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_87854E07480FA390F37CE5B3C8AFFEDC'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_ApplyAdditive_8CD364C64D683DC517CE8D970CD696F4'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_BlendListByBool_0C6E94E64A86248547C4E0B7E4386909'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraphNode_SequencePlayer_63FF8FBC4ED5A3EA82DEE79E0B0B4CE4'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.21"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_RelicLightTank": {
+        "ObjectName": "Function'ABP_RelicLightTank_C:ExecuteUbergraph_ABP_RelicLightTank'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F": {
+        "ObjectName": "Function'ABP_RelicLightTank_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.10"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84": {
+        "ObjectName": "Function'ABP_RelicLightTank_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.11"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_RelicLightTank_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_RelicLightTank_C'Default__ABP_RelicLightTank_C'",
+      "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.2"
+    }
+  },
+  {
+    "Type": "ABP_RelicLightTank_C",
+    "Name": "Default__ABP_RelicLightTank_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/RelicVehicles/ABP_RelicLightTank.ABP_RelicLightTank_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_D80FB5E74B782494957A969EE45AE817": {
+        "Result": {
+          "LinkID": 18
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_1DFC148349A8BAB93BB1DD8324E5437D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_body_speed200'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_body_speed200.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_37EE42BB40B4F59EDBA38F821364CA03": {
+        "Result": {
+          "LinkID": 3
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_4C1CCCA346440F40ECBCC09F3C7A9C64": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_body_speed200'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_body_speed200.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2C1F820A4E3610C19EC0E9996B9D1C5C": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_53ADDE3147CC91BBB07CF4980063DB21": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_6566FAB04B4200EE67ECF0B68F514B7A": {
+        "BasePose": {
+          "LinkID": 7
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 12
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "track_pivot_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "track_pivot_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "98E6FD29-4B807D19-95F3F4A6-1CACE81D",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_B0553ED54D8DB19E19DD47B5C2B237CD": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_wheels_speed400'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_wheels_speed400.0"
+        },
+        "PlayRateBasis": 400.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_43AE278C41F4A3DE9BC333B6D3E6A2A9": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_RelicLightTank_turret'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/BS_RelicLIghtTank_turret.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_683942A841F77B7EB88A849522637E06": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_RelicLightTank_gun'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/BS_RelicLightTank_gun.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_E4543AEA4170B4C2DFE45FBA95FB6618": {
+        "BasePose": {
+          "LinkID": 10
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 13
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_gun",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_hatch",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "98E6FD29-4B807D19-95F3F4A6-1CACE81D",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendListByBool_76E313524BB471B95A76D180A055F204": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 15
+          },
+          {
+            "LinkID": 14
+          }
+        ],
+        "BlendTime": [
+          0.5,
+          0.5
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_655E4BD6427B8227B2BFE5BA3A1ACEF8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_POSE_commanderHatch_closed'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_POSE_commanderHatch_closed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_B47D619B46869CEDCC06858953D0B274": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_POSE_commanderHatch_open'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_POSE_commanderHatch_open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_87854E07480FA390F37CE5B3C8AFFEDC": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_tracked'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_tracked.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_ApplyAdditive_8CD364C64D683DC517CE8D970CD696F4": {
+        "Base": {
+          "LinkID": 8
+        },
+        "Additive": {
+          "LinkID": 16
+        },
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "LODThreshold": -1,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true
+      },
+      "AnimGraphNode_BlendListByBool_0C6E94E64A86248547C4E0B7E4386909": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 19
+          },
+          {
+            "LinkID": 17
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_63FF8FBC4ED5A3EA82DEE79E0B0B4CE4": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicLightTank_exploding'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicLightTank_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_D80FB5E74B782494957A969EE45AE817",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_RelicLightTank",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_RelicLightTank",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_RelicLightTank_C:ExecuteUbergraph_ABP_RelicLightTank.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_RelicLightTank_C:ExecuteUbergraph_ABP_RelicLightTank.CallFunc_Greater_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_RelicLightTank_C:ExecuteUbergraph_ABP_RelicLightTank.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.7"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_RelicLightTank",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_RelicLightTank",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_RelicLightTank_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicLightTank.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicLightTank_AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ApplyAdditive_8CD364C64D683DC517CE8D970CD696F4",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_ApplyAdditive'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_0C6E94E64A86248547C4E0B7E4386909",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_76E313524BB471B95A76D180A055F204",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_43AE278C41F4A3DE9BC333B6D3E6A2A9",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_683942A841F77B7EB88A849522637E06",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_6566FAB04B4200EE67ECF0B68F514B7A",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_E4543AEA4170B4C2DFE45FBA95FB6618",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1DFC148349A8BAB93BB1DD8324E5437D",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4C1CCCA346440F40ECBCC09F3C7A9C64",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_63FF8FBC4ED5A3EA82DEE79E0B0B4CE4",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_655E4BD6427B8227B2BFE5BA3A1ACEF8",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_87854E07480FA390F37CE5B3C8AFFEDC",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_B0553ED54D8DB19E19DD47B5C2B237CD",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_B47D619B46869CEDCC06858953D0B274",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_53ADDE3147CC91BBB07CF4980063DB21",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_2C1F820A4E3610C19EC0E9996B9D1C5C",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_37EE42BB40B4F59EDBA38F821364CA03",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_45CF418A4F34A6F5B4795F9F6B7E299F",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_474FE2594507C70B53286E8D5E7AEC84",
+    "Outer": "ABP_RelicLightTank_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

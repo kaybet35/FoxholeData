@@ -1,0 +1,131 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBoundaryHex_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBoundaryHex_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/BPBoundaryHex.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BoundaryHex'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBoundaryHex_C'Default__BPBoundaryHex_C'",
+      "ObjectPath": "War/Content/Blueprints/BPBoundaryHex.1"
+    }
+  },
+  {
+    "Type": "BPBoundaryHex_C",
+    "Name": "Default__BPBoundaryHex_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/BPBoundaryHex.BPBoundaryHex_C'",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPBoundaryHex_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/BPBoundaryHex.5"
+      },
+      "EditorMesh": null,
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPBoundaryHex_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/BPBoundaryHex.5"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBoundaryHex_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBoundaryHex_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/BPBoundaryHex.2"
+      },
+      "VariableGuid": "111A8D7D-46E994A6-BF9BE5A4-F482BB43",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBoundaryHex_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBoundaryHex_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/BPBoundaryHex.3"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPBoundaryHex_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BoundaryHex'",
+        "ObjectPath": "War/Content/FX/Mesh/BoundaryHex.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'WorldGridMaterial'",
+          "ObjectPath": "Engine/Content/EngineMaterials/WorldGridMaterial.0"
+        },
+        {
+          "ObjectName": "Material'Invisible'",
+          "ObjectPath": "War/Content/Materials/Structures/Invisible.0"
+        },
+        {
+          "ObjectName": "Material'Invisible'",
+          "ObjectPath": "War/Content/Materials/Structures/Invisible.0"
+        },
+        {
+          "ObjectName": "Material'BoundaryPulse'",
+          "ObjectPath": "War/Content/FX/Materials/BoundaryPulse.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

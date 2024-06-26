@@ -1,0 +1,606 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionParticleMass",
+    "Outer": "ParticleModuleCollision_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 0.1
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_4",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'LRAShellEject:ParticleModuleRequired_4'",
+        "ObjectPath": "War/Content/FX/LRAShellEject.7"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'LRAShellEject:ParticleModuleLifetime_4'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'LRAShellEject:ParticleModuleSize_4'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.10"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'LRAShellEject:ParticleModuleSizeMultiplyLife_4'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.11"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'LRAShellEject:ParticleModuleVelocity_2'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'LRAShellEject:ParticleModuleColor_4'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.5"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'LRAShellEject:ParticleModuleAccelerationConstant_2'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.3"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'LRAShellEject:ParticleModuleRotation_1'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.8"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'LRAShellEject:ParticleModuleRotationRate_1'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.9"
+        },
+        {
+          "ObjectName": "ParticleModuleCollision'LRAShellEject:ParticleModuleCollision_0'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.4"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh'LRAShellEject:ParticleModuleTypeDataMesh_1'",
+        "ObjectPath": "War/Content/FX/LRAShellEject.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'LRAShellEject:ParticleModuleSpawn_4'",
+        "ObjectPath": "War/Content/FX/LRAShellEject.12"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_2",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -2000.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleCollision",
+    "Name": "ParticleModuleCollision_0",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleCollision'",
+    "Properties": {
+      "DampingFactor": {
+        "MinValue": 0.5,
+        "MaxValue": 0.3,
+        "MinValueVec": {
+          "X": 0.5,
+          "Y": 0.5,
+          "Z": 0.5
+        },
+        "MaxValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5,
+            0.5,
+            0.5,
+            0.3,
+            0.3,
+            0.3
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "DampingFactorRotation": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "MaxCollisions": {
+        "MinValue": 8.0,
+        "MaxValue": 15.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            8.0,
+            15.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "CollisionCompletionOption": "EPCC_FreezeRotation",
+      "ParticleMass": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'LRAShellEject:ParticleModuleCollision_0.DistributionParticleMass'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.0"
+        }
+      },
+      "DelayAmount": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_4",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_4",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 3.0,
+        "MaxValue": 4.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            3.0,
+            4.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_4",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'LRArtilleryAmmo'",
+        "ObjectPath": "War/Content/Materials/Pickups/LRArtilleryAmmo.0"
+      },
+      "ScreenAlignment": "PSA_Rectangle",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'LRAShellEject:ParticleModuleRequired_4.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_1",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_1",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": 0.5,
+        "MaxValue": 1.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5,
+            1.5
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_4",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_4",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 69.999985,
+          "TimeBias": 0.9,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            0.94459015,
+            0.94459015,
+            0.94459015,
+            0.8017331,
+            0.8017331,
+            0.8017331,
+            0.6064075,
+            0.6064075,
+            0.6064075,
+            0.3935928,
+            0.3935928,
+            0.3935928,
+            0.19826679,
+            0.19826679,
+            0.19826679,
+            0.055409256,
+            0.055409256,
+            0.055409256,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_4",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_1",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleTypeDataMesh'",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh'LRArtilleryAmmoEmpty'",
+        "ObjectPath": "War/Content/FX/Mesh/LRArtilleryAmmoEmpty.2"
+      },
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_2",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -100.0,
+        "MaxValue": 200.0,
+        "MinValueVec": {
+          "X": -100.0,
+          "Y": 50.0,
+          "Z": 400.0
+        },
+        "MaxValueVec": {
+          "X": 100.0,
+          "Y": 20.0,
+          "Z": 200.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -100.0,
+            50.0,
+            400.0,
+            100.0,
+            20.0,
+            200.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "LRAShellEject",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'LRAShellEject:ParticleSpriteEmitter_3.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "LRAShellEject",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'LRAShellEject:ParticleSpriteEmitter_3'",
+          "ObjectPath": "War/Content/FX/LRAShellEject.15"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -8000.0,
+          "Y": -8000.0,
+          "Z": -8000.0
+        },
+        "Max": {
+          "X": 8000.0,
+          "Y": 8000.0,
+          "Z": 8000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,1142 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 0.5
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceScaleOverLifeDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'TrainSparks01:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/TrainSparks01.9"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'TrainSparks01:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.8"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'TrainSparks01:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.10"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'TrainSparks01:ParticleModuleColor_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.6"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'TrainSparks01:ParticleModuleVelocity_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.16"
+        },
+        {
+          "ObjectName": "ParticleModuleVectorFieldLocal'TrainSparks01:ParticleModuleVectorFieldLocal_1'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.14"
+        },
+        {
+          "ObjectName": "ParticleModuleVectorFieldRotationRate'TrainSparks01:ParticleModuleVectorFieldRotationRate_1'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'TrainSparks01:ParticleModuleColorScaleOverLife_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'TrainSparks01:ParticleModuleSizeMultiplyLife_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.11"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'TrainSparks01:ParticleModuleAccelerationConstant_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.4"
+        },
+        {
+          "ObjectName": "ParticleModuleCollisionGPU'TrainSparks01:ParticleModuleCollisionGPU_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.5"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu'TrainSparks01:ParticleModuleTypeDataGpu_1'",
+        "ObjectPath": "War/Content/FX/TrainSparks01.13"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'TrainSparks01:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/TrainSparks01.12"
+      },
+      "PeakActiveParticles": 37
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -500.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleCollisionGPU",
+    "Name": "ParticleModuleCollisionGPU_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleCollisionGPU'",
+    "Properties": {
+      "Resilience": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'TrainSparks01:ParticleModuleCollisionGPU_0.ResilienceDistribution'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.0"
+        }
+      },
+      "ResilienceScaleOverLife": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'TrainSparks01:ParticleModuleCollisionGPU_0.ResilienceScaleOverLifeDistribution'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.84963,
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 2.0,
+          "Y": 1.528676,
+          "Z": 0.84963
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 1.528676,
+          "Z": 0.84963
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0,
+            1.528676,
+            0.84963
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.2,
+        "MaxValue": 0.3,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.2,
+            0.3
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Sparks02'",
+        "ObjectPath": "War/Content/FX/Materials/Sparks02.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "bEmitterDurationUseRange": true,
+      "EmitterDuration": 0.6,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'TrainSparks01:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.2"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "bDurationRecalcEachLoop": true,
+      "EmitterLoops": 1,
+      "EmitterDurationLow": 1.2,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 12.0,
+        "MaxValue": 40.0,
+        "MinValueVec": {
+          "X": 24.0,
+          "Y": 30.0,
+          "Z": 12.0
+        },
+        "MaxValueVec": {
+          "X": 30.0,
+          "Y": 40.0,
+          "Z": 20.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            24.0,
+            30.0,
+            12.0,
+            30.0,
+            40.0,
+            20.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 120.0,
+        "MaxValue": 120.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            120.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_1",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleTypeDataGpu'",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired'TrainSparks01:ParticleModuleRequired_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.9"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn'TrainSparks01:ParticleModuleSpawn_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.12"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired'TrainSparks01:ParticleModuleRequired_0'",
+            "ObjectPath": "War/Content/FX/TrainSparks01.9"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime'TrainSparks01:ParticleModuleLifetime_0'",
+            "ObjectPath": "War/Content/FX/TrainSparks01.8"
+          },
+          {
+            "ObjectName": "ParticleModuleSize'TrainSparks01:ParticleModuleSize_0'",
+            "ObjectPath": "War/Content/FX/TrainSparks01.10"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity'TrainSparks01:ParticleModuleVelocity_0'",
+            "ObjectPath": "War/Content/FX/TrainSparks01.16"
+          }
+        ],
+        "LocalVectorField": {
+          "Field": {
+            "ObjectName": "VectorFieldStatic'VF_Perlin_HighFreq_32x32x32'",
+            "ObjectPath": "War/Content/FX/VectorFields/VF_Perlin_HighFreq_32x32x32.0"
+          },
+          "Transform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.9999999,
+              "Z": 0.0,
+              "W": -1.1920929E-07,
+              "IsNormalized": true,
+              "Size": 0.9999999,
+              "SizeSquared": 0.99999976
+            },
+            "Scale3D": {
+              "X": 400.0,
+              "Y": 200.0,
+              "Z": 200.0
+            }
+          },
+          "RotationRate": {
+            "Pitch": 0.0,
+            "Yaw": -36.0,
+            "Roll": 0.0
+          },
+          "Intensity": 3000.0,
+          "Tightness": 0.05,
+          "bTileX": true,
+          "bTileY": true,
+          "bTileZ": true,
+          "bUseFixDT": true
+        },
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -500.0
+        },
+        "InvMaxSize": {
+          "X": 0.025,
+          "Y": 0.025
+        },
+        "InvRotationRateScale": 3.3333333,
+        "MaxLifetime": 0.3,
+        "MaxParticleCount": 37,
+        "ScreenAlignment": "PSA_Velocity",
+        "bEnableCollision": true
+      },
+      "ResourceData": {
+        "QuantizedColorSamples": [
+          {
+            "B": 255,
+            "G": 255,
+            "R": 255,
+            "A": 0,
+            "Hex": "FFFFFF"
+          },
+          {
+            "B": 254,
+            "G": 254,
+            "R": 254,
+            "A": 0,
+            "Hex": "FEFEFE"
+          },
+          {
+            "B": 253,
+            "G": 253,
+            "R": 253,
+            "A": 0,
+            "Hex": "FDFDFD"
+          },
+          {
+            "B": 252,
+            "G": 252,
+            "R": 252,
+            "A": 0,
+            "Hex": "FCFCFC"
+          },
+          {
+            "B": 250,
+            "G": 250,
+            "R": 250,
+            "A": 0,
+            "Hex": "FAFAFA"
+          },
+          {
+            "B": 247,
+            "G": 247,
+            "R": 247,
+            "A": 0,
+            "Hex": "F7F7F7"
+          },
+          {
+            "B": 245,
+            "G": 245,
+            "R": 245,
+            "A": 0,
+            "Hex": "F5F5F5"
+          },
+          {
+            "B": 241,
+            "G": 241,
+            "R": 241,
+            "A": 0,
+            "Hex": "F1F1F1"
+          },
+          {
+            "B": 237,
+            "G": 237,
+            "R": 237,
+            "A": 0,
+            "Hex": "EDEDED"
+          },
+          {
+            "B": 233,
+            "G": 233,
+            "R": 233,
+            "A": 0,
+            "Hex": "E9E9E9"
+          },
+          {
+            "B": 228,
+            "G": 228,
+            "R": 228,
+            "A": 0,
+            "Hex": "E4E4E4"
+          },
+          {
+            "B": 223,
+            "G": 223,
+            "R": 223,
+            "A": 0,
+            "Hex": "DFDFDF"
+          },
+          {
+            "B": 218,
+            "G": 218,
+            "R": 218,
+            "A": 0,
+            "Hex": "DADADA"
+          },
+          {
+            "B": 212,
+            "G": 212,
+            "R": 212,
+            "A": 0,
+            "Hex": "D4D4D4"
+          },
+          {
+            "B": 206,
+            "G": 206,
+            "R": 206,
+            "A": 0,
+            "Hex": "CECECE"
+          },
+          {
+            "B": 200,
+            "G": 200,
+            "R": 200,
+            "A": 0,
+            "Hex": "C8C8C8"
+          },
+          {
+            "B": 194,
+            "G": 194,
+            "R": 194,
+            "A": 0,
+            "Hex": "C2C2C2"
+          },
+          {
+            "B": 187,
+            "G": 187,
+            "R": 187,
+            "A": 0,
+            "Hex": "BBBBBB"
+          },
+          {
+            "B": 180,
+            "G": 180,
+            "R": 180,
+            "A": 0,
+            "Hex": "B4B4B4"
+          },
+          {
+            "B": 173,
+            "G": 173,
+            "R": 173,
+            "A": 0,
+            "Hex": "ADADAD"
+          },
+          {
+            "B": 166,
+            "G": 166,
+            "R": 166,
+            "A": 0,
+            "Hex": "A6A6A6"
+          },
+          {
+            "B": 159,
+            "G": 159,
+            "R": 159,
+            "A": 0,
+            "Hex": "9F9F9F"
+          },
+          {
+            "B": 151,
+            "G": 151,
+            "R": 151,
+            "A": 0,
+            "Hex": "979797"
+          },
+          {
+            "B": 144,
+            "G": 144,
+            "R": 144,
+            "A": 0,
+            "Hex": "909090"
+          },
+          {
+            "B": 136,
+            "G": 136,
+            "R": 136,
+            "A": 0,
+            "Hex": "888888"
+          },
+          {
+            "B": 129,
+            "G": 129,
+            "R": 129,
+            "A": 0,
+            "Hex": "818181"
+          },
+          {
+            "B": 121,
+            "G": 121,
+            "R": 121,
+            "A": 0,
+            "Hex": "797979"
+          },
+          {
+            "B": 113,
+            "G": 113,
+            "R": 113,
+            "A": 0,
+            "Hex": "717171"
+          },
+          {
+            "B": 106,
+            "G": 106,
+            "R": 106,
+            "A": 0,
+            "Hex": "6A6A6A"
+          },
+          {
+            "B": 98,
+            "G": 98,
+            "R": 98,
+            "A": 0,
+            "Hex": "626262"
+          },
+          {
+            "B": 91,
+            "G": 91,
+            "R": 91,
+            "A": 0,
+            "Hex": "5B5B5B"
+          },
+          {
+            "B": 84,
+            "G": 84,
+            "R": 84,
+            "A": 0,
+            "Hex": "545454"
+          },
+          {
+            "B": 77,
+            "G": 77,
+            "R": 77,
+            "A": 0,
+            "Hex": "4D4D4D"
+          },
+          {
+            "B": 70,
+            "G": 70,
+            "R": 70,
+            "A": 0,
+            "Hex": "464646"
+          },
+          {
+            "B": 63,
+            "G": 63,
+            "R": 63,
+            "A": 0,
+            "Hex": "3F3F3F"
+          },
+          {
+            "B": 56,
+            "G": 56,
+            "R": 56,
+            "A": 0,
+            "Hex": "383838"
+          },
+          {
+            "B": 50,
+            "G": 50,
+            "R": 50,
+            "A": 0,
+            "Hex": "323232"
+          },
+          {
+            "B": 44,
+            "G": 44,
+            "R": 44,
+            "A": 0,
+            "Hex": "2C2C2C"
+          },
+          {
+            "B": 38,
+            "G": 38,
+            "R": 38,
+            "A": 0,
+            "Hex": "262626"
+          },
+          {
+            "B": 33,
+            "G": 33,
+            "R": 33,
+            "A": 0,
+            "Hex": "212121"
+          },
+          {
+            "B": 28,
+            "G": 28,
+            "R": 28,
+            "A": 0,
+            "Hex": "1C1C1C"
+          },
+          {
+            "B": 23,
+            "G": 23,
+            "R": 23,
+            "A": 0,
+            "Hex": "171717"
+          },
+          {
+            "B": 18,
+            "G": 18,
+            "R": 18,
+            "A": 0,
+            "Hex": "121212"
+          },
+          {
+            "B": 14,
+            "G": 14,
+            "R": 14,
+            "A": 0,
+            "Hex": "0E0E0E"
+          },
+          {
+            "B": 11,
+            "G": 11,
+            "R": 11,
+            "A": 0,
+            "Hex": "0B0B0B"
+          },
+          {
+            "B": 8,
+            "G": 8,
+            "R": 8,
+            "A": 0,
+            "Hex": "080808"
+          },
+          {
+            "B": 5,
+            "G": 5,
+            "R": 5,
+            "A": 0,
+            "Hex": "050505"
+          },
+          {
+            "B": 3,
+            "G": 3,
+            "R": 3,
+            "A": 0,
+            "Hex": "030303"
+          },
+          {
+            "B": 1,
+            "G": 1,
+            "R": 1,
+            "A": 0,
+            "Hex": "010101"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 255,
+            "R": 255,
+            "A": 0,
+            "Hex": "FFFF00"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "ColorScale": {
+          "X": 48.0,
+          "Y": 36.688225,
+          "Z": 20.391119,
+          "W": 0.0
+        },
+        "ColorBias": {
+          "X": 2.0,
+          "Y": 1.528676,
+          "Z": 0.84963,
+          "W": 1.0
+        },
+        "MiscScale": {
+          "X": 40.0,
+          "Y": 40.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -500.0
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "ResilienceBias": 0.5,
+        "CollisionRadiusScale": 0.5,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 0.3,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVectorFieldLocal",
+    "Name": "ParticleModuleVectorFieldLocal_1",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleVectorFieldLocal'",
+    "Properties": {
+      "VectorField": {
+        "ObjectName": "VectorFieldStatic'VF_Perlin_HighFreq_32x32x32'",
+        "ObjectPath": "War/Content/FX/VectorFields/VF_Perlin_HighFreq_32x32x32.0"
+      },
+      "RelativeRotation": {
+        "Pitch": -180.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 400.0,
+        "Y": 200.0,
+        "Z": 200.0
+      },
+      "Intensity": 3000.0,
+      "Tightness": 0.05,
+      "bTileX": true,
+      "bTileY": true,
+      "bTileZ": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVectorFieldRotationRate",
+    "Name": "ParticleModuleVectorFieldRotationRate_1",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleVectorFieldRotationRate'",
+    "Properties": {
+      "RotationRate": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -0.1
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -100.0,
+        "MaxValue": 1000.0,
+        "MinValueVec": {
+          "X": 200.0,
+          "Y": -100.0,
+          "Z": 600.0
+        },
+        "MaxValueVec": {
+          "X": 1000.0,
+          "Y": 100.0,
+          "Z": 500.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            200.0,
+            -100.0,
+            600.0,
+            1000.0,
+            100.0,
+            500.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "TrainSparks01",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'TrainSparks01:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "TrainSparks01",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'TrainSparks01:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/TrainSparks01.17"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -10000.0,
+          "Y": -10000.0,
+          "Z": -10000.0
+        },
+        "Max": {
+          "X": 10000.0,
+          "Y": 10000.0,
+          "Z": 10000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

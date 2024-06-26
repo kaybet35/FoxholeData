@@ -1,0 +1,118 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "HeavyTruckOpenDoorStart_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'HeavyTruckOpenDoorStart_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/HeavyTruckOpenDoorStart_Cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1600.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 5.2411666,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "HeavyTruckOpenDoorStart_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 1.85,
+      "DelayMax": 1.85,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeavyTruckOpenDoorStart_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/HeavyTruckOpenDoorStart_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "HeavyTruckOpenDoorStart_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        2.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HeavyTruckOpenDoorStart_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/HeavyTruckOpenDoorStart_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'HeavyTruckOpenDoorStart_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/HeavyTruckOpenDoorStart_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "HeavyTruckOpenDoorStart_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'HeavyTruckOpenDoorStart_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/HeavyTruckOpenDoorStart_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "HeavyTruckOpenDoorStart_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/BigTrucks/BigTrucksDoorOpenClose.BigTrucksDoorOpenClose",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BigTrucksDoorOpenClose'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/BigTrucksDoorOpenClose.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "HeavyTruckOpenDoorStart_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/BigTrucks/TruckHeavyStart.TruckHeavyStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'TruckHeavyStart'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/BigTrucks/TruckHeavyStart.0"
+    }
+  }
+]

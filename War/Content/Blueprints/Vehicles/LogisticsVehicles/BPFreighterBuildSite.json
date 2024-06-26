@@ -1,0 +1,334 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFreighterBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VehicleBuildSite'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPFreighterBuildSite_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFreighterBuildSite_C:Freighter'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFreighterBuildSite_C'Default__BPFreighterBuildSite_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.2"
+    }
+  },
+  {
+    "Type": "BPFreighterBuildSite_C",
+    "Name": "Default__BPFreighterBuildSite_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.BPFreighterBuildSite_C'",
+    "Properties": {
+      "BuildOffset": {
+        "X": 150.0,
+        "Y": -75.0,
+        "Z": 0.0
+      },
+      "CodeName": "FreighterBuildSite",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFreighterBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPFreighterBuildSite_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.5"
+      },
+      "Health": 0,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPFreighterBuildSite_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPFreighterBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPFreighterBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 1060.0,
+        "Y": 400.0,
+        "Z": 300.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "VehicleBuildSite",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 140.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPFreighterBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 300.0,
+        "Y": 256.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPFreighterBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 230.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Freighter",
+    "Outer": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFreighterBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.7"
+      },
+      "VariableGuid": "83B4B79D-431106A7-863F4193-3565B561",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPFreighterBuildSite_C:Freighter_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.12"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "80491679-44CFE3BE-E7AF0684-A820810F",
+      "InternalVariableName": "Freighter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPFreighterBuildSite_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2C766000-4B4A4601-87F9119F-481F47CD",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFreighterBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFreighterBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFreighterBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFreighterBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFreighterBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPFreighterBuildSite.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Freighter_GEN_VARIABLE",
+    "Outer": "BPFreighterBuildSite_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Freighter_C'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.1"
+      },
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'Anim_Freighter_opening'",
+          "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/Anim_Freighter_opening.0"
+        },
+        "bSavedLooping": false,
+        "bSavedPlaying": false
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Freighter'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_Freighter.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -175.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPFreighterBuildSite_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

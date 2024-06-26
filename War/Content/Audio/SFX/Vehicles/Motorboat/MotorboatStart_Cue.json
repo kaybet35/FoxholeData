@@ -1,0 +1,118 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MotorboatStart_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MotorboatStart_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorboatStart_Cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1600.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 3.4024038,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "MotorboatStart_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.6,
+      "DelayMax": 0.6,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MotorboatStart_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorboatStart_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "MotorboatStart_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MotorboatStart_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorboatStart_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'MotorboatStart_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorboatStart_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MotorboatStart_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'MotorboatStart_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorboatStart_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "MotorboatStart_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Motorboat/MotorBoatStart.MotorBoatStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MotorBoatStart'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorBoatStart.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MotorboatStart_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Motorboat/MotorBoatEnter.MotorBoatEnter",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MotorBoatEnter'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/Motorboat/MotorBoatEnter.0"
+    }
+  }
+]

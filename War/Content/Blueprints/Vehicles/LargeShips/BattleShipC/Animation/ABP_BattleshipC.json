@@ -1,0 +1,4923 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Turret05R_Crank",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 4,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Cranking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Turret05L_Crank",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Cranking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Turret05R Shoot",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 19,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                21
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Turret05L Shoot",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 31,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 28,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 32,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 29,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                30
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_LargeShipBattleShipC_body_Skeleton'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/SK_LargeShipBattleShipC_body_Skeleton.16"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltGunner03Working",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltGunner03Working'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_48979A664ADD58333583F58271DA5435'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.69"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltGunner03Working",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltGunner03Working'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_3800596941F65F07EB8C20B7B01428A0'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.67"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltGunner04Working",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltGunner04Working'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_B56872D940F75F7939C9489462542942'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.71"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltGunner04Working",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltGunner04Working'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_06CD14C444F632E35FB9088B46769D48'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.65"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner07Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:AltGunner07Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_320DF58E4B417EE271F1DB8585E4E007'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner07Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:AltGunner07Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_3DD531014083E3F58520DE818DE22CEB'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.23"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltGunner03Firing",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltGunner03Firing'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_417B3E5D4C7B294AE1355697FB26D663'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.68"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.72"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner03Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner03Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_869E75794D1299882E5DF4A57D780C5D'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.27"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner03Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner03Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_C376C0DC4A8D265C89B17FBF3748FB47'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.28"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltGunner04Firing",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltGunner04Firing'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_14D1AA2A4024F1EFD4C40598CEBC7C47'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.66"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.70"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner04Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner04Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_EDD5ABB341EF3F121EE3789A1CE0EE79'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.35"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner04Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner04Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_E48DAA5949156DB008378E9B99A3BA90'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.34"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner05Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:AltGunner05Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_6DD7B21F44221521A9FD6983AC391D50'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.26"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner05Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:AltGunner05Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_DCFCD80A40AA17E93C0FC09F441BBE02'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.33"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner06Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:AltGunner06Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_D9442380486DA472E242A7823BF9AA8F'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.30"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner06Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:AltGunner06Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_27DFF900486C4849278416A7A55166A2'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_363E125446065003A5DF9382131987E2'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_D0DC8F814222AF4C33FC55ABF396041C'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.29"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_DB1DF36044B4AEAF986886925338FE00'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.31"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner02Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner02Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_4B2C3DA94A693B6F13A626BAC29E7545'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner02Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner02Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_445FF9AE47A740C0EDB42DAA4BA88E19'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_F4C5DCD34A2604B4202FFA9B17548412'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.36"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRateBasis'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_47082C35476640EE4BA1809E4CDBF58C'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.47"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_D8A0516C4A2B932EDA9321BBCC0A028A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.3"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'LargeShipAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.0"
+      },
+      {
+        "ObjectName": "Function'ABP_BattleshipC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.16"
+      },
+      {
+        "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.18"
+      },
+      {
+        "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.19"
+      },
+      {
+        "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.17"
+      },
+      {
+        "ObjectName": "Function'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_D8A0516C4A2B932EDA9321BBCC0A028A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_47082C35476640EE4BA1809E4CDBF58C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_4D17E10844514C39540EB3AE2F2786ED'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_F4C5DCD34A2604B4202FFA9B17548412'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_5EBACD994F623D1A09BB9AA3CA3DF1E5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.39"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_445FF9AE47A740C0EDB42DAA4BA88E19'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_4B2C3DA94A693B6F13A626BAC29E7545'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_DB1DF36044B4AEAF986886925338FE00'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_EA3F1C61467979FA3A83E2B5D5701A47'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_D0DC8F814222AF4C33FC55ABF396041C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_363E125446065003A5DF9382131987E2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_Root_7B93144C40B9BAB180A64A8033C10F08'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_F68542F746153A348EDDD4875ACD2CC9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.44"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_27DFF900486C4849278416A7A55166A2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_D9442380486DA472E242A7823BF9AA8F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_D0D87BF847D9F39E5BC01180E571971F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_DCFCD80A40AA17E93C0FC09F441BBE02'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_6DD7B21F44221521A9FD6983AC391D50'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_AD449DBD43AD55C98D945C98EBC544D2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_E48DAA5949156DB008378E9B99A3BA90'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_EDD5ABB341EF3F121EE3789A1CE0EE79'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.70"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_14D1AA2A4024F1EFD4C40598CEBC7C47'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.66"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_9854D0194EE0F525470255AD10F14F23'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_F44D96E94FB105C59E035F973033AD2A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.63"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_5C383FEF4B513A515057E0945C4BC153'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.59"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateMachine_EEA95E9C4A64D9BFC6E371A40FC5FA39'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.56"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_66955FD24BAA90D240BDFF97D2048C45'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.40"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_C376C0DC4A8D265C89B17FBF3748FB47'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_869E75794D1299882E5DF4A57D780C5D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.72"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_417B3E5D4C7B294AE1355697FB26D663'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.68"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_DE334B2F4922687350100D92BC76E1EA'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.52"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_6375DD534DDD429B10CB4993733D6AB8'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.60"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_A5239D4249E2714B3B86A789BBEDC7C0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.61"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateMachine_9FEBA7124C590C8D2A136F8C7C73FB84'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.54"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_F80BC69B4A4E6220983CA79AF699159F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_DC2EB1C044207A5A3E795ABF25717F11'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.51"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_3DD531014083E3F58520DE818DE22CEB'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_BlendSpacePlayer_320DF58E4B417EE271F1DB8585E4E007'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_LayeredBoneBlend_49C452814A7BF560400A98A22314BE26'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_06CD14C444F632E35FB9088B46769D48'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.65"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_B56872D940F75F7939C9489462542942'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.71"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_65388ED645762ED916ED5AAF317F3590'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_BFD341104226B7F01F29AB994E9FF86F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.62"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_1E023E9E443D0B6502FDC6AAC136A0DA'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.57"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateMachine_CC908E8B418474BBED2B9981DF8F2729'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.55"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_3800596941F65F07EB8C20B7B01428A0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.67"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_TransitionResult_48979A664ADD58333583F58271DA5435'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.69"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_SequencePlayer_A08E06D349ABB91F5248B3839119153D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.50"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_45DFE2D5457EE8BEF046DCB079F9A877'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.58"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateResult_F75BF9714CFAEB5EC3164BB5CFE57071'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.64"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraphNode_StateMachine_48581D004F2188874711F79DF80F640F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.53"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_BattleshipC_C:isRadarOn'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_BattleshipC_C:isAltGunner05Firing'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_BattleshipC_C:isAltGunner06Firing'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_BattleshipC_C:isAltGunner07Firing'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.10"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_BattleshipC": {
+        "ObjectName": "Function'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3": {
+        "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52": {
+        "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE": {
+        "ObjectName": "Function'ABP_BattleshipC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.18"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_BattleshipC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.16"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_BattleshipC_C'Default__ABP_BattleshipC_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.2"
+    }
+  },
+  {
+    "Type": "ABP_BattleshipC_C",
+    "Name": "Default__ABP_BattleshipC_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.ABP_BattleshipC_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_BlendSpacePlayer_D8A0516C4A2B932EDA9321BBCC0A028A": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_47082C35476640EE4BA1809E4CDBF58C": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_BattleShipC_driving'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/Anim_BattleShipC_driving.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_4D17E10844514C39540EB3AE2F2786ED": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 7
+          },
+          {
+            "LinkID": 38
+          },
+          {
+            "LinkID": 37
+          },
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 15
+          },
+          {
+            "LinkID": 18
+          },
+          {
+            "LinkID": 27
+          },
+          {
+            "LinkID": 36
+          },
+          {
+            "LinkID": 41
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Rudder1_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rudder1_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rudder2_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rudder2_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Radar",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "RangeFinder",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret1_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret2_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret3_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret4_Horizontal_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret4_Horizontal_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Horizontal_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Horizontal_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret6_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 9,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 9,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 9,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 10,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 10,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 10,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 9,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_F4C5DCD34A2604B4202FFA9B17548412": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_5EBACD994F623D1A09BB9AA3CA3DF1E5": {
+        "BasePose": {
+          "LinkID": 3
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 0
+          },
+          {
+            "LinkID": -1
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret1_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret1_Barrel",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_445FF9AE47A740C0EDB42DAA4BA88E19": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_4B2C3DA94A693B6F13A626BAC29E7545": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_DB1DF36044B4AEAF986886925338FE00": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Rudder_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Rudder_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_EA3F1C61467979FA3A83E2B5D5701A47": {
+        "BasePose": {
+          "LinkID": 5
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 6
+          },
+          {
+            "LinkID": -1
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret2_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret2_Barrel",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_D0DC8F814222AF4C33FC55ABF396041C": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_363E125446065003A5DF9382131987E2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_Root_7B93144C40B9BAB180A64A8033C10F08": {
+        "Result": {
+          "LinkID": 2
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_F68542F746153A348EDDD4875ACD2CC9": {
+        "BasePose": {
+          "LinkID": 9
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": -1
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret3_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret3_Barrel",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_27DFF900486C4849278416A7A55166A2": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_D9442380486DA472E242A7823BF9AA8F": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_D0D87BF847D9F39E5BC01180E571971F": {
+        "BasePose": {
+          "LinkID": 13
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 14
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret4_Vertical_L",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_DCFCD80A40AA17E93C0FC09F441BBE02": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_6DD7B21F44221521A9FD6983AC391D50": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_AD449DBD43AD55C98D945C98EBC544D2": {
+        "BasePose": {
+          "LinkID": 16
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 17
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret4_Vertical_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_E48DAA5949156DB008378E9B99A3BA90": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_EDD5ABB341EF3F121EE3789A1CE0EE79": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_14D1AA2A4024F1EFD4C40598CEBC7C47": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_9854D0194EE0F525470255AD10F14F23": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_BattleShipC_shoot'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/Anim_BattleShipC_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F44D96E94FB105C59E035F973033AD2A": {
+        "Result": {
+          "LinkID": 23
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_5C383FEF4B513A515057E0945C4BC153": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_EEA95E9C4A64D9BFC6E371A40FC5FA39": {
+        "StateMachineIndexInClass": 3,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_66955FD24BAA90D240BDFF97D2048C45": {
+        "BasePose": {
+          "LinkID": 19
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 20
+          },
+          {
+            "LinkID": 26
+          },
+          {
+            "LinkID": 47
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Vertical_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Barrel_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Crank_L",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_C376C0DC4A8D265C89B17FBF3748FB47": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_869E75794D1299882E5DF4A57D780C5D": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_417B3E5D4C7B294AE1355697FB26D663": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_DE334B2F4922687350100D92BC76E1EA": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_BattleShipC_shoot'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/Anim_BattleShipC_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_6375DD534DDD429B10CB4993733D6AB8": {
+        "Result": {
+          "LinkID": 32
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_A5239D4249E2714B3B86A789BBEDC7C0": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_9FEBA7124C590C8D2A136F8C7C73FB84": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_F80BC69B4A4E6220983CA79AF699159F": {
+        "BasePose": {
+          "LinkID": 28
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 29
+          },
+          {
+            "LinkID": 35
+          },
+          {
+            "LinkID": 53
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Vertical_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Barrel_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret5_Crank_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_BlendSpacePlayer_DC2EB1C044207A5A3E795ABF25717F11": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_BattleShipC_radar'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/Anim_BattleShipC_radar.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_3DD531014083E3F58520DE818DE22CEB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_320DF58E4B417EE271F1DB8585E4E007": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_BattleShipC_Turret_Vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/BS_BattleShipC_Turret_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_49C452814A7BF560400A98A22314BE26": {
+        "BasePose": {
+          "LinkID": 39
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 40
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Turret6_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "5AF8D7BE-4D6B90BA-5913A18B-2DE267C8",
+        "VirtualBoneGuid": "21E485B5-4A03F240-F8BBBEBD-9CDFCF35"
+      },
+      "AnimGraphNode_TransitionResult_06CD14C444F632E35FB9088B46769D48": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_B56872D940F75F7939C9489462542942": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_65388ED645762ED916ED5AAF317F3590": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_BattleShipC_Turret5_Crank'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/Anim_BattleShipC_Turret5_Crank.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_BFD341104226B7F01F29AB994E9FF86F": {
+        "Result": {
+          "LinkID": 44
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_1E023E9E443D0B6502FDC6AAC136A0DA": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_CC908E8B418474BBED2B9981DF8F2729": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_TransitionResult_3800596941F65F07EB8C20B7B01428A0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_48979A664ADD58333583F58271DA5435": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_A08E06D349ABB91F5248B3839119153D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_BattleShipC_Turret5_Crank'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/Anim_BattleShipC_Turret5_Crank.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_45DFE2D5457EE8BEF046DCB079F9A877": {
+        "Result": {
+          "LinkID": 50
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_F75BF9714CFAEB5EC3164BB5CFE57071": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_48581D004F2188874711F79DF80F640F": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_D8A0516C4A2B932EDA9321BBCC0A028A",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_BattleshipC",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_BattleshipC",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.13"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC.CallFunc_Conv_BoolToFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.12"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.6"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.14"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_BattleshipC_C:ExecuteUbergraph_ABP_BattleshipC.CallFunc_LessEqual_FloatFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.7"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_BattleshipC",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_BattleshipC",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "isAltGunner05Firing",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'BoolProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "isAltGunner06Firing",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'BoolProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "isAltGunner07Firing",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'BoolProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "isRadarOn",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'BoolProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_BattleshipC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_BattleshipC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_BattleshipC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_BattleshipC_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Animation/ABP_BattleshipC.15"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_BattleshipC_AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_27DFF900486C4849278416A7A55166A2",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_320DF58E4B417EE271F1DB8585E4E007",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_363E125446065003A5DF9382131987E2",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_3DD531014083E3F58520DE818DE22CEB",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_445FF9AE47A740C0EDB42DAA4BA88E19",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_4B2C3DA94A693B6F13A626BAC29E7545",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6DD7B21F44221521A9FD6983AC391D50",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_869E75794D1299882E5DF4A57D780C5D",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C376C0DC4A8D265C89B17FBF3748FB47",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_D0DC8F814222AF4C33FC55ABF396041C",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_D9442380486DA472E242A7823BF9AA8F",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_DB1DF36044B4AEAF986886925338FE00",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_DC2EB1C044207A5A3E795ABF25717F11",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_DCFCD80A40AA17E93C0FC09F441BBE02",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_E48DAA5949156DB008378E9B99A3BA90",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_EDD5ABB341EF3F121EE3789A1CE0EE79",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F4C5DCD34A2604B4202FFA9B17548412",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_49C452814A7BF560400A98A22314BE26",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_4D17E10844514C39540EB3AE2F2786ED",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_5EBACD994F623D1A09BB9AA3CA3DF1E5",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_66955FD24BAA90D240BDFF97D2048C45",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_AD449DBD43AD55C98D945C98EBC544D2",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_D0D87BF847D9F39E5BC01180E571971F",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_EA3F1C61467979FA3A83E2B5D5701A47",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_F68542F746153A348EDDD4875ACD2CC9",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_F80BC69B4A4E6220983CA79AF699159F",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_7B93144C40B9BAB180A64A8033C10F08",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_47082C35476640EE4BA1809E4CDBF58C",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_65388ED645762ED916ED5AAF317F3590",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_9854D0194EE0F525470255AD10F14F23",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A08E06D349ABB91F5248B3839119153D",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_AF6A1F314E9DECDC39411ABAA92F0BB3",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DE334B2F4922687350100D92BC76E1EA",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_48581D004F2188874711F79DF80F640F",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_9FEBA7124C590C8D2A136F8C7C73FB84",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_CC908E8B418474BBED2B9981DF8F2729",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_EEA95E9C4A64D9BFC6E371A40FC5FA39",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_1E023E9E443D0B6502FDC6AAC136A0DA",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_45DFE2D5457EE8BEF046DCB079F9A877",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5C383FEF4B513A515057E0945C4BC153",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_6375DD534DDD429B10CB4993733D6AB8",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_A5239D4249E2714B3B86A789BBEDC7C0",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_BFD341104226B7F01F29AB994E9FF86F",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F44D96E94FB105C59E035F973033AD2A",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F75BF9714CFAEB5EC3164BB5CFE57071",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_06CD14C444F632E35FB9088B46769D48",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_14D1AA2A4024F1EFD4C40598CEBC7C47",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_3800596941F65F07EB8C20B7B01428A0",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_417B3E5D4C7B294AE1355697FB26D663",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_48979A664ADD58333583F58271DA5435",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_552DCCE54AF499966E34EEB7651D67BE",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B56872D940F75F7939C9489462542942",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BF5D8AFB4693590CCCF4FA9025CC9A52",
+    "Outer": "ABP_BattleshipC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

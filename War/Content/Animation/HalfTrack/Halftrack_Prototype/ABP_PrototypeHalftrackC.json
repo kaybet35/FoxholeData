@@ -1,0 +1,1861 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "cranking",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "cranking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_PrototypeHalftrackC_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_PrototypeHalftrackC_Skeleton.8"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsTopHatchOpen",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsTopHatchOpen'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendListByBool_5EC2333F47863D4C841FB498D796436C'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.9"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerWorking",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerWorking'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_TransitionResult_558E9E5F49FBCA000419869E76F1EC0F'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.30"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerWorking",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerWorking'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_TransitionResult_01FC134148F5C156052A5CB5C7F9ADC6'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.29"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendSpacePlayer_86759DFB461B72687C2BB2A3D70E2FAD'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.11"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendSpacePlayer_377C341B40E19F5AFF1A9BAA8B2B4B80'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.10"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TrackDisabledIntensity",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_ApplyAdditive:Alpha'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TrackDisabledIntensity'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_ApplyAdditive_405EB2DC4F7B60F05CCD2D97FC9E5512'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.7"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:Y'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendSpacePlayer_C1176D584BD881FDC94EB28C123D74BF'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.12"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_C6D3558F4423EECF6F26DBA0C2CB6999'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.23"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_RotationOffsetBlendSpace_5A404CAE4FA95F1CA8B100B3853004B1'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.17"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_237B49694A829F242B4703A34731B365'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.19"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_CA75F51B406789D9DABDCDA2FDAA6F65'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "InertialRoll",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:InertialRoll'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "InertialPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:Y'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:InertialPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_RotationOffsetBlendSpace_5224C27B478CA0E92978A08470F2CB9F'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.16"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendListByBool_57C19C564ABB37015E3B3883BCB585EC'",
+            "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.8"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_PrototypeHalftrackC_C:ExecuteUbergraph_ABP_PrototypeHalftrackC'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.0"
+      },
+      {
+        "ObjectName": "Function'ABP_PrototypeHalftrackC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.4"
+      },
+      {
+        "ObjectName": "Function'ABP_PrototypeHalftrackC_C:ExecuteUbergraph_ABP_PrototypeHalftrackC'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.6"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_Root_3A0F14A64E68A99F29D714BABEC45121'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendListByBool_57C19C564ABB37015E3B3883BCB585EC'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.8"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_C12710BC4E266DC0D7FF5BA9B7B8D9F4'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_RotationOffsetBlendSpace_5224C27B478CA0E92978A08470F2CB9F'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_LayeredBoneBlend_A2F45A04468FA2FA33CB4D8D6F475913'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_CA75F51B406789D9DABDCDA2FDAA6F65'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_237B49694A829F242B4703A34731B365'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_RotationOffsetBlendSpace_5A404CAE4FA95F1CA8B100B3853004B1'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_C6D3558F4423EECF6F26DBA0C2CB6999'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendSpacePlayer_C1176D584BD881FDC94EB28C123D74BF'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_D94FA6C94A123625DFC6608BB15191E2'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_ApplyAdditive_405EB2DC4F7B60F05CCD2D97FC9E5512'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.7"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_LayeredBoneBlend_02205A2645F614A9D50509A190D79A45'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendSpacePlayer_377C341B40E19F5AFF1A9BAA8B2B4B80'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.10"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendSpacePlayer_86759DFB461B72687C2BB2A3D70E2FAD'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_TransitionResult_01FC134148F5C156052A5CB5C7F9ADC6'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_TransitionResult_558E9E5F49FBCA000419869E76F1EC0F'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_4D78BD1049992BEF35A39982F02708E3'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_StateResult_3B8F444E43ADF9857345B3AAB8A27125'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_StateResult_CA0F7E5545C9192EB85E299A2554C330'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_StateMachine_853A6C8B48A3585591483D989B1551E4'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_BlendListByBool_5EC2333F47863D4C841FB498D796436C'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_17ACB5764C59AA94AE13AD80B41275A8'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraphNode_SequencePlayer_B396A39F47675A941C65DA91E7F2968C'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.21"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_PrototypeHalftrackC": {
+        "ObjectName": "Function'ABP_PrototypeHalftrackC_C:ExecuteUbergraph_ABP_PrototypeHalftrackC'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.6"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_PrototypeHalftrackC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.4"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_PrototypeHalftrackC_C'Default__ABP_PrototypeHalftrackC_C'",
+      "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.2"
+    }
+  },
+  {
+    "Type": "ABP_PrototypeHalftrackC_C",
+    "Name": "Default__ABP_PrototypeHalftrackC_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.ABP_PrototypeHalftrackC_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_3A0F14A64E68A99F29D714BABEC45121": {
+        "Result": {
+          "LinkID": 1
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendListByBool_57C19C564ABB37015E3B3883BCB585EC": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 2
+          },
+          {
+            "LinkID": 11
+          }
+        ],
+        "BlendTime": [
+          0.001,
+          0.001
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_C12710BC4E266DC0D7FF5BA9B7B8D9F4": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_exploding'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_5224C27B478CA0E92978A08470F2CB9F": {
+        "BasePose": {
+          "LinkID": 4
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace'AO_HalftrackC_inertia'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/AO_HalftrackC_inertia.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_A2F45A04468FA2FA33CB4D8D6F475913": {
+        "BasePose": {
+          "LinkID": 5
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 7
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 21
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "frontAxle_PIVOT",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "backAxle_PIVOT",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "HMGmount_PIVOT",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "mortar_PIVOT",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "commander_hatch",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "82652F1F-47D032EC-71C2B284-900F19BA",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_CA75F51B406789D9DABDCDA2FDAA6F65": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_driving'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_driving.0"
+        },
+        "PlayRateBasis": 300.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_237B49694A829F242B4703A34731B365": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_driving'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_driving.0"
+        },
+        "PlayRateBasis": 403.28107,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_5A404CAE4FA95F1CA8B100B3853004B1": {
+        "BasePose": {
+          "LinkID": 6
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'AO_HalftrackC_wheelDirection'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/AO_HalftrackC_wheelDirection.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_C6D3558F4423EECF6F26DBA0C2CB6999": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_driving'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_driving.0"
+        },
+        "PlayRateBasis": 262.93246,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_C1176D584BD881FDC94EB28C123D74BF": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace'BS_HalftrackC_gunAiming'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/BS_HalftrackC_gunAiming.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_D94FA6C94A123625DFC6608BB15191E2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_tracked'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_tracked.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_ApplyAdditive_405EB2DC4F7B60F05CCD2D97FC9E5512": {
+        "Base": {
+          "LinkID": 3
+        },
+        "Additive": {
+          "LinkID": 10
+        },
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "LODThreshold": -1,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_02205A2645F614A9D50509A190D79A45": {
+        "BasePose": {
+          "LinkID": 13
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 14
+          },
+          {
+            "LinkID": 20
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "mortar_verticalHinge",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "mortar_pistonVerticalHinge",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "mortar_handle",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "82652F1F-47D032EC-71C2B284-900F19BA",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_377C341B40E19F5AFF1A9BAA8B2B4B80": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_HalfTrackC_mortarHorizontalAim'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/BS_HalfTrackC_mortarHorizontalAim.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_86759DFB461B72687C2BB2A3D70E2FAD": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_HalfTrackC_mortarVerticalAim'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/BS_HalfTrackC_mortarVerticalAim.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_01FC134148F5C156052A5CB5C7F9ADC6": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_558E9E5F49FBCA000419869E76F1EC0F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_4D78BD1049992BEF35A39982F02708E3": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_crankMoving'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_crankMoving.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3B8F444E43ADF9857345B3AAB8A27125": {
+        "Result": {
+          "LinkID": 17
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_CA0F7E5545C9192EB85E299A2554C330": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_853A6C8B48A3585591483D989B1551E4": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_BlendListByBool_5EC2333F47863D4C841FB498D796436C": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 22
+          },
+          {
+            "LinkID": 23
+          }
+        ],
+        "BlendTime": [
+          0.7,
+          1.5
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_17ACB5764C59AA94AE13AD80B41275A8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_POSE_commanderHatch_open'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_POSE_commanderHatch_open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_B396A39F47675A941C65DA91E7F2968C": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HalftrackC_POSE_commanderHatch_closed'",
+          "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/Anim_HalftrackC_POSE_commanderHatch_closed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_PrototypeHalftrackC_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.3"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_PrototypeHalftrackC",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_PrototypeHalftrackC",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_PrototypeHalftrackC_C:ExecuteUbergraph_ABP_PrototypeHalftrackC.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/HalfTrack/Halftrack_Prototype/ABP_PrototypeHalftrackC.5"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ApplyAdditive_405EB2DC4F7B60F05CCD2D97FC9E5512",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_ApplyAdditive'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_57C19C564ABB37015E3B3883BCB585EC",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_5EC2333F47863D4C841FB498D796436C",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_377C341B40E19F5AFF1A9BAA8B2B4B80",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_86759DFB461B72687C2BB2A3D70E2FAD",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C1176D584BD881FDC94EB28C123D74BF",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_02205A2645F614A9D50509A190D79A45",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_A2F45A04468FA2FA33CB4D8D6F475913",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_3A0F14A64E68A99F29D714BABEC45121",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_5224C27B478CA0E92978A08470F2CB9F",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_5A404CAE4FA95F1CA8B100B3853004B1",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_17ACB5764C59AA94AE13AD80B41275A8",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_237B49694A829F242B4703A34731B365",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4D78BD1049992BEF35A39982F02708E3",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_B396A39F47675A941C65DA91E7F2968C",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C12710BC4E266DC0D7FF5BA9B7B8D9F4",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C6D3558F4423EECF6F26DBA0C2CB6999",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CA75F51B406789D9DABDCDA2FDAA6F65",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D94FA6C94A123625DFC6608BB15191E2",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_853A6C8B48A3585591483D989B1551E4",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3B8F444E43ADF9857345B3AAB8A27125",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_CA0F7E5545C9192EB85E299A2554C330",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_01FC134148F5C156052A5CB5C7F9ADC6",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_558E9E5F49FBCA000419869E76F1EC0F",
+    "Outer": "ABP_PrototypeHalftrackC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

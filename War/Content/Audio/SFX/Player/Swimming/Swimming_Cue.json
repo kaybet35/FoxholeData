@@ -1,0 +1,185 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "Swimming_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'Swimming_Cue:SoundNodeLooping_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 800.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'CharacterFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/CharacterFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.95,
+      "DelayMax": 0.8,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'Swimming_Cue:SoundNodeModulator_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'Swimming_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.85,
+      "PitchMax": 1.15,
+      "VolumeMin": 0.85,
+      "VolumeMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'Swimming_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.1,
+        0.6,
+        0.1,
+        0.6,
+        0.6
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'Swimming_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Swimming_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Swimming_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Swimming_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'Swimming_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/Swimming/Swimming_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/Swimming/Swim01.Swim01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/Swimming/Swim02.Swim02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/Swimming/Swim03.Swim03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/Swimming/Swim04.Swim04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "Swimming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/Swimming/Swim05.Swim05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

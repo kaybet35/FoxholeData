@@ -1,0 +1,240 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "DepthChargeMesh",
+    "Outer": "BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDepthChargeProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DepthProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDepthChargeProjectile_C:DepthChargeMesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDepthChargeProjectile_C'Default__BPDepthChargeProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.2"
+    }
+  },
+  {
+    "Type": "BPDepthChargeProjectile_C",
+    "Name": "Default__BPDepthChargeProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPDepthChargeProjectile.BPDepthChargeProjectile_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "DepthProjectileMovementComponent'Default__BPDepthChargeProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.4"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPDepthChargeProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.11"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPDepthChargeProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.5"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPDepthChargeProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'HEGrenadeExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/HEGrenadeExplosion.1"
+      },
+      "ExplosiveCodeName": "DepthChargeAmmo",
+      "AutoDetonateTime": 20.0,
+      "ProjectileDeathDelay": 8.0,
+      "RotationSpeed": {
+        "Pitch": 300.0,
+        "Yaw": 0.0,
+        "Roll": 300.0
+      },
+      "UnderWaterExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'DepthChargeExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/DepthChargeExplosion.1"
+      },
+      "WaterSurfaceExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'WaterSurfaceExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.1"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPDepthChargeProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.11"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RPGLoop'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/RPGLoop.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPDepthChargeProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.11"
+      }
+    }
+  },
+  {
+    "Type": "DepthProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'DepthProjectileMovementComponent'",
+    "Properties": {
+      "ProjectileGravityScale": 1.5
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPDepthChargeProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.11"
+      },
+      "RelativeLocation": {
+        "X": -48.873615,
+        "Y": -6.484985E-05,
+        "Z": -8.3306804E-07
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDepthChargeProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.6"
+      },
+      "VariableGuid": "AF3504CB-4A663998-49D95DB7-C638B653",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPDepthChargeProjectile_C:DepthChargeMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.10"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0A0D054D-4EF9AD19-87638E97-B17614AA",
+      "InternalVariableName": "DepthChargeMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDepthChargeProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDepthChargeProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDepthChargeProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDepthChargeProjectile.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "DepthChargeMesh_GEN_VARIABLE",
+    "Outer": "BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_DepthChargeAmmo'",
+        "ObjectPath": "War/Content/Meshes/Pickups/SK_DepthChargeAmmo.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPDepthChargeProjectile_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.0
+    }
+  }
+]

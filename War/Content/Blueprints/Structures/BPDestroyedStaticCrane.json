@@ -1,0 +1,331 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDestroyedStaticCrane_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DestroyedStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedStaticCrane_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedStaticCrane_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDestroyedStaticCrane_C'Default__BPDestroyedStaticCrane_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.2"
+    }
+  },
+  {
+    "Type": "BPDestroyedStaticCrane_C",
+    "Name": "Default__BPDestroyedStaticCrane_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPDestroyedStaticCrane.BPDestroyedStaticCrane_C'",
+    "Properties": {
+      "CodeName": "DestroyedStaticCrane",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "B7AB672A4B1C0A1708E1208FAC70D517",
+        "SourceString": "Destroyed Stationary Crane",
+        "LocalizedString": "Destroyed Stationary Crane"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedStaticCrane_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDestroyedStaticCrane_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.5"
+      },
+      "MaxHealth": 100000000,
+      "UpgradeStructureCodeName": "StaticCrane",
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Large",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDestroyedStaticCrane_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedStaticCrane_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 165.0,
+        "Y": 165.0,
+        "Z": 525.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 525.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 350.0,
+        "Y": 350.0,
+        "Z": 525.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedStaticCrane_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 525.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDestroyedStaticCrane_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.7"
+      },
+      "VariableGuid": "7253A15B-4BDF12E0-531FBB95-0710EF48",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDestroyedStaticCrane_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.12"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C548435F-43C516C4-C18FB396-23D81F52",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedStaticCrane_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BE0428AE-43E54A51-F87CE9A2-223CF797",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedStaticCrane_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedStaticCrane_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedStaticCrane_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedStaticCrane_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDestroyedStaticCrane_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedStaticCrane.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'StaticCraneDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Structures/StaticCraneDestroyed.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDestroyedStaticCrane_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

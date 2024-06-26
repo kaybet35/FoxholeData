@@ -1,0 +1,3842 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionDragCoefficient",
+    "Outer": "ParticleModuleAccelerationDrag_3",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 0.1
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "ResilienceScaleOverLifeDistribution",
+    "Outer": "ParticleModuleCollisionGPU_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_12",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_2",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatUniform",
+    "Name": "DistributionFloatUniform_0",
+    "Outer": "ParticleModuleParameterDynamic_0",
+    "Class": "UScriptClass'DistributionFloatUniform'",
+    "Properties": {
+      "Min": -1.0,
+      "Max": 1.0,
+      "bCanBeBaked": false
+    }
+  },
+  {
+    "Type": "DistributionFloatUniform",
+    "Name": "DistributionFloatUniform_0",
+    "Outer": "ParticleModuleParameterDynamic_8",
+    "Class": "UScriptClass'DistributionFloatUniform'",
+    "Properties": {
+      "Min": -1.0,
+      "Max": 1.0,
+      "bCanBeBaked": false
+    }
+  },
+  {
+    "Type": "DistributionVectorConstantCurve",
+    "Name": "DistributionVectorConstantCurve_0",
+    "Outer": "ParticleModuleSizeMultiplyLife_3",
+    "Class": "UScriptClass'DistributionVectorConstantCurve'",
+    "Properties": {
+      "ConstantCurve": {
+        "Points": [
+          {
+            "InVal": 0.0,
+            "OutVal": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          },
+          {
+            "InVal": 1.0,
+            "OutVal": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "ArriveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LeaveTangent": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "InterpMode": "CIM_Linear"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionOffsetAmount",
+    "Outer": "ParticleModuleOrbit_0",
+    "Class": "UScriptClass'DistributionVectorUniform'",
+    "Properties": {
+      "Max": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionRotationAmount",
+    "Outer": "ParticleModuleOrbit_0",
+    "Class": "UScriptClass'DistributionVectorUniform'",
+    "Properties": {
+      "Max": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "DistributionVectorUniform",
+    "Name": "DistributionRotationRateAmount",
+    "Outer": "ParticleModuleOrbit_0",
+    "Class": "UScriptClass'DistributionVectorUniform'",
+    "Properties": {
+      "Max": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.48"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'FieldGunMF:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.35"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'FieldGunMF:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.57"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'FieldGunMF:ParticleModuleColor_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.26"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'FieldGunMF:ParticleModuleSizeMultiplyLife_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.62"
+        },
+        {
+          "ObjectName": "ParticleModuleMeshRotation'FieldGunMF:ParticleModuleMeshRotation_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.43"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'FieldGunMF:ParticleModuleColorScaleOverLife_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.31"
+        },
+        {
+          "ObjectName": "ParticleModuleMeshRotationRate'FieldGunMF:ParticleModuleMeshRotationRate_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.44"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh'FieldGunMF:ParticleModuleTypeDataMesh_0'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.73"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'FieldGunMF:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.67"
+      },
+      "PeakActiveParticles": 4
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_1",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_1'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.49"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'FieldGunMF:ParticleModuleLifetime_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.36"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'FieldGunMF:ParticleModuleSize_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.58"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'FieldGunMF:ParticleModuleVelocity_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.75"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'FieldGunMF:ParticleModuleColor_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.27"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'FieldGunMF:ParticleModuleRotation_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.53"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'FieldGunMF:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.46"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'FieldGunMF:ParticleModuleRotationRate_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.55"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'FieldGunMF:ParticleModuleAccelerationConstant_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.19"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'FieldGunMF:ParticleModuleSizeMultiplyLife_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.63"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'FieldGunMF:ParticleModuleColorScaleOverLife_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.32"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'FieldGunMF:ParticleModuleAccelerationDrag_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.22"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'FieldGunMF:ParticleModuleSpawn_1'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.68"
+      },
+      "PeakActiveParticles": 23
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_2",
+    "Outer": "ParticleSpriteEmitter_12",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_12'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.50"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'FieldGunMF:ParticleModuleLifetime_12'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.37"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'FieldGunMF:ParticleModuleSize_12'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.59"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'FieldGunMF:ParticleModuleColor_11'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.28"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'FieldGunMF:ParticleModuleRotation_5'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.54"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'FieldGunMF:ParticleModuleParameterDynamic_8'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.47"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'FieldGunMF:ParticleModuleRotationRate_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.56"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'FieldGunMF:ParticleModuleAccelerationConstant_10'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.21"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'FieldGunMF:ParticleModuleSizeMultiplyLife_6'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.66"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'FieldGunMF:ParticleModuleColorScaleOverLife_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.34"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere'FieldGunMF:ParticleModuleLocationPrimitiveSphere_10'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.42"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'FieldGunMF:ParticleModuleVelocity_4'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.76"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'FieldGunMF:ParticleModuleAccelerationDrag_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.23"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'FieldGunMF:ParticleModuleSpawn_12'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.69"
+      },
+      "PeakActiveParticles": 33
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_2",
+    "Outer": "ParticleSpriteEmitter_2",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_2'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.51"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'FieldGunMF:ParticleModuleLifetime_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.38"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'FieldGunMF:ParticleModuleSize_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.60"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'FieldGunMF:ParticleModuleColor_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.29"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'FieldGunMF:ParticleModuleSizeMultiplyLife_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.64"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'FieldGunMF:ParticleModuleColorScaleOverLife_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.33"
+        },
+        {
+          "ObjectName": "ParticleModuleLight'FieldGunMF:ParticleModuleLight_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.40"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'FieldGunMF:ParticleModuleSpawn_2'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.70"
+      },
+      "PeakActiveParticles": 4
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_3'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.52"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'FieldGunMF:ParticleModuleLifetime_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.39"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'FieldGunMF:ParticleModuleSize_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.61"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'FieldGunMF:ParticleModuleVelocity_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.74"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere'FieldGunMF:ParticleModuleLocationPrimitiveSphere_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.41"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'FieldGunMF:ParticleModuleColor_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.30"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'FieldGunMF:ParticleModuleAccelerationConstant_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.20"
+        },
+        {
+          "ObjectName": "ParticleModuleCollisionGPU'FieldGunMF:ParticleModuleCollisionGPU_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.25"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'FieldGunMF:ParticleModuleAccelerationDrag_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.24"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'FieldGunMF:ParticleModuleSizeMultiplyLife_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.65"
+        },
+        {
+          "ObjectName": "ParticleModuleOrbit'FieldGunMF:ParticleModuleOrbit_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.45"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataGpu'FieldGunMF:ParticleModuleTypeDataGpu_0'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.72"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'FieldGunMF:ParticleModuleSpawn_3'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.71"
+      },
+      "PeakActiveParticles": 21
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": -50.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1500.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_10",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 3.0,
+        "Y": 0.0,
+        "Z": 5.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.75,
+        "MaxValue": 0.75,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.75
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleAccelerationDrag_3.DistributionDragCoefficient'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.0"
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleCollisionGPU",
+    "Name": "ParticleModuleCollisionGPU_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleCollisionGPU'",
+    "Properties": {
+      "Resilience": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleCollisionGPU_0.ResilienceDistribution'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.1"
+        }
+      },
+      "ResilienceScaleOverLife": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleCollisionGPU_0.ResilienceScaleOverLifeDistribution'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.2"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.665,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.665,
+          "Y": 0.665,
+          "Z": 0.665
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.665,
+            0.665,
+            0.665,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 3,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_11",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.705,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.705,
+          "Y": 0.705,
+          "Z": 0.705
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.705,
+            0.705,
+            0.705,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 3,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.207839,
+        "MaxValue": 1.2,
+        "MinValueVec": {
+          "X": 1.2,
+          "Y": 0.73951,
+          "Z": 0.207839
+        },
+        "MaxValueVec": {
+          "X": 1.2,
+          "Y": 0.73951,
+          "Z": 0.207839
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.2,
+            0.73951,
+            0.207839
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.637685,
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 2.0,
+          "Y": 1.169639,
+          "Z": 0.637685
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 1.169639,
+          "Z": 0.637685
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0,
+            1.169639,
+            0.637685
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.77,
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.9880151,
+          "Z": 0.77
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 1.61969,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0554098,
+            0.99769306,
+            0.9461053,
+            1.198267,
+            1.0689201,
+            0.90879804,
+            1.3935925,
+            1.1877276,
+            0.88233334,
+            1.6064075,
+            1.3281618,
+            0.8609662,
+            1.801733,
+            1.4642693,
+            0.8389515,
+            1.9445902,
+            1.5700966,
+            0.81054443,
+            2.0,
+            1.61969,
+            0.77
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": -1.0862152E-08,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            0.43237475,
+            0.1474422,
+            0.06780544,
+            0.032229282,
+            0.011697133,
+            0.0022677751,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.375,
+        "MaxValue": 0.525,
+        "MinValueVec": {
+          "X": 0.375,
+          "Y": 0.375,
+          "Z": 0.375
+        },
+        "MaxValueVec": {
+          "X": 0.525,
+          "Y": 0.525,
+          "Z": 0.525
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            0.375,
+            0.375,
+            0.375,
+            0.525,
+            0.525,
+            0.525
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 127.0,
+          "Values": [
+            0.0,
+            0.06658911,
+            0.23511228,
+            0.45870322,
+            0.69049585,
+            0.8836238,
+            0.99122083,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.99835235,
+            0.9912209,
+            0.97879356,
+            0.9614452,
+            0.93955094,
+            0.9134855,
+            0.88362396,
+            0.8503411,
+            0.814012,
+            0.7750112,
+            0.7337142,
+            0.6904958,
+            0.64573073,
+            0.5997941,
+            0.55306065,
+            0.5059054,
+            0.45870328,
+            0.41182923,
+            0.36565816,
+            0.3205651,
+            0.2769249,
+            0.23511243,
+            0.19550264,
+            0.15847057,
+            0.12439066,
+            0.09363854,
+            0.06658912,
+            0.04361677,
+            0.025096893,
+            0.011404157,
+            0.0029135942,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 128,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.77,
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.9880151,
+          "Z": 0.77
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 1.61969,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.0554098,
+            0.99769306,
+            0.9461053,
+            1.198267,
+            1.0689201,
+            0.90879804,
+            1.3935925,
+            1.1877276,
+            0.88233334,
+            1.6064075,
+            1.3281618,
+            0.8609662,
+            1.801733,
+            1.4642693,
+            0.8389515,
+            1.9445902,
+            1.5700966,
+            0.81054443,
+            2.0,
+            1.61969,
+            0.77
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": -1.0862152E-08,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            0.43237475,
+            0.1474422,
+            0.06780544,
+            0.032229282,
+            0.011697133,
+            0.0022677751,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.375,
+        "MaxValue": 0.525,
+        "MinValueVec": {
+          "X": 0.375,
+          "Y": 0.375,
+          "Z": 0.375
+        },
+        "MaxValueVec": {
+          "X": 0.525,
+          "Y": 0.525,
+          "Z": 0.525
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 1.0,
+          "Values": [
+            0.375,
+            0.375,
+            0.375,
+            0.525,
+            0.525,
+            0.525
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 127.0,
+          "Values": [
+            0.0,
+            0.06658911,
+            0.23511228,
+            0.45870322,
+            0.69049585,
+            0.8836238,
+            0.99122083,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.999815,
+            0.99835235,
+            0.995472,
+            0.9912209,
+            0.9856458,
+            0.97879356,
+            0.97071105,
+            0.9614452,
+            0.9510429,
+            0.9395508,
+            0.9270161,
+            0.9134854,
+            0.89900565,
+            0.8836238,
+            0.8673866,
+            0.85034096,
+            0.8325338,
+            0.8140118,
+            0.7948221,
+            0.77501136,
+            0.7546265,
+            0.7337144,
+            0.71232194,
+            0.69049597,
+            0.66828316,
+            0.64573073,
+            0.6228854,
+            0.5997941,
+            0.57650346,
+            0.55306065,
+            0.5295123,
+            0.5059054,
+            0.4822867,
+            0.45870328,
+            0.43520188,
+            0.41182923,
+            0.38863242,
+            0.36565816,
+            0.34295344,
+            0.3205651,
+            0.29854,
+            0.27692467,
+            0.25576657,
+            0.23511231,
+            0.21500862,
+            0.19550246,
+            0.17664087,
+            0.15847039,
+            0.14103812,
+            0.12439072,
+            0.10857546,
+            0.09363878,
+            0.07962775,
+            0.06658912,
+            0.05456972,
+            0.04361677,
+            0.03377676,
+            0.025096893,
+            0.017623663,
+            0.011404157,
+            0.0064851046,
+            0.0029135942,
+            0.00073611736,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 128,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.2,
+        "MaxValue": 0.25,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.2,
+            0.25
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 10.0,
+        "MaxValue": 7.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0,
+            7.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_12",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 6.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            6.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.2,
+        "MaxValue": 0.25,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.2,
+            0.25
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 8.0,
+        "MaxValue": 6.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            8.0,
+            6.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLight",
+    "Name": "ParticleModuleLight_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLight'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "BrightnessOverLife": {
+        "MinValue": 2048.0,
+        "MaxValue": 2048.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2048.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RadiusScale": {
+        "MinValue": 1200.0,
+        "MaxValue": 1200.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1200.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LightExponent": {
+        "MinValue": 16.0,
+        "MaxValue": 16.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            16.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLocationPrimitiveSphere'",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "Positive_Y": false,
+      "Negative_X": false,
+      "Negative_Y": false,
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_10",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleLocationPrimitiveSphere'",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": 3.0,
+        "MaxValue": 3.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            3.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleMeshRotation",
+    "Name": "ParticleModuleMeshRotation_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleMeshRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleMeshRotationRate",
+    "Name": "ParticleModuleMeshRotationRate_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleMeshRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": -1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrbit",
+    "Name": "ParticleModuleOrbit_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleOrbit'",
+    "Properties": {
+      "OffsetAmount": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform'FieldGunMF:ParticleModuleOrbit_0.DistributionOffsetAmount'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.11"
+        }
+      },
+      "RotationAmount": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform'FieldGunMF:ParticleModuleOrbit_0.DistributionRotationAmount'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.12"
+        }
+      },
+      "RotationRateAmount": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorUniform'FieldGunMF:ParticleModuleOrbit_0.DistributionRotationRateAmount'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.13"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": -1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                -1.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": -1.0,
+            "MaxValue": 1.0,
+            "Distribution": {
+              "ObjectName": "DistributionFloatUniform'FieldGunMF:ParticleModuleParameterDynamic_0.DistributionFloatUniform_0'",
+              "ObjectPath": "War/Content/FX/FieldGunMF.8"
+            },
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                -1.0,
+                1.0
+              ],
+              "Op": 0,
+              "EntryCount": 0,
+              "EntryStride": 0,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 12,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_8",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "ROffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": -1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                -1.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": -1.0,
+            "MaxValue": 1.0,
+            "Distribution": {
+              "ObjectName": "DistributionFloatUniform'FieldGunMF:ParticleModuleParameterDynamic_8.DistributionFloatUniform_0'",
+              "ObjectPath": "War/Content/FX/FieldGunMF.9"
+            },
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                -1.0,
+                1.0
+              ],
+              "Op": 0,
+              "EntryCount": 0,
+              "EntryStride": 0,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param3",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "Param4",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 12,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material'RifleMuzzleFlash'",
+        "ObjectPath": "War/Content/FX/Materials/Weapons/RifleMuzzleFlash.0"
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.3"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'SmokeGrenade03'",
+        "ObjectPath": "War/Content/FX/Materials/SmokeGrenade03.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleRequired_1.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.4"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_12",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Steam'",
+        "ObjectPath": "War/Content/FX/Materials/Steam.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleRequired_12.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.5"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material'RifleMuzzleFlash'",
+        "ObjectPath": "War/Content/FX/Materials/Weapons/RifleMuzzleFlash.0"
+      },
+      "EmitterOrigin": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleRequired_2.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.6"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Sparks02'",
+        "ObjectPath": "War/Content/FX/Materials/Sparks02.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'FieldGunMF:ParticleModuleRequired_3.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.7"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_5",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.05,
+        "MaxValue": 0.05,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.05,
+            0.05
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.025,
+        "MaxValue": 0.025,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.025,
+            0.025
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 3.0,
+        "MaxValue": 4.0,
+        "MinValueVec": {
+          "X": 3.0,
+          "Y": 4.0,
+          "Z": 4.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 4.0,
+          "Z": 4.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            3.0,
+            4.0,
+            4.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 50.0,
+        "MaxValue": 65.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 65.0,
+          "Y": 65.0,
+          "Z": 65.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0,
+            50.0,
+            50.0,
+            65.0,
+            65.0,
+            65.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_12",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 30.0,
+        "MaxValue": 50.0,
+        "MinValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 30.0
+        },
+        "MaxValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            30.0,
+            30.0,
+            30.0,
+            50.0,
+            50.0,
+            50.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0,
+            25.0,
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.096954,
+        "MinValueVec": {
+          "X": 0.5,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0097039,
+          "Y": 1.096954,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 30.889566,
+          "Values": [
+            0.5,
+            0.0,
+            1.0,
+            0.5440704,
+            0.35260698,
+            1.0,
+            0.60021853,
+            0.60798395,
+            1.0,
+            0.6594545,
+            0.78028095,
+            1.0,
+            0.7127884,
+            0.8836484,
+            1.0,
+            0.75123024,
+            0.93223614,
+            1.0,
+            0.77586436,
+            0.9527917,
+            1.0,
+            0.7986159,
+            0.9710563,
+            1.0,
+            0.81989896,
+            0.98772055,
+            1.0,
+            0.83975947,
+            1.002857,
+            1.0,
+            0.8582433,
+            1.0165385,
+            1.0,
+            0.87539154,
+            1.0288326,
+            1.0,
+            0.891253,
+            1.0398153,
+            1.0,
+            0.90587616,
+            1.0495619,
+            1.0,
+            0.91930705,
+            1.0581454,
+            1.0,
+            0.9315915,
+            1.0656383,
+            1.0,
+            0.94277555,
+            1.0721133,
+            1.0,
+            0.9529051,
+            1.077643,
+            1.0,
+            0.9620261,
+            1.0823004,
+            1.0,
+            0.9701845,
+            1.0861584,
+            1.0,
+            0.9774263,
+            1.0892891,
+            1.0,
+            0.98379576,
+            1.0917646,
+            1.0,
+            0.98933756,
+            1.0936568,
+            1.0,
+            0.9941011,
+            1.0950412,
+            1.0,
+            0.9981323,
+            1.0959901,
+            1.0,
+            1.001477,
+            1.0965767,
+            1.0,
+            1.0041814,
+            1.0968733,
+            1.0,
+            1.0062912,
+            1.0969529,
+            1.0,
+            1.0078523,
+            1.0968881,
+            1.0,
+            1.0089109,
+            1.0967517,
+            1.0,
+            1.0095128,
+            1.0966163,
+            1.0,
+            1.0097039,
+            1.0965548,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.5,
+        "MaxValue": 6.011059,
+        "MinValueVec": {
+          "X": 1.5,
+          "Y": 1.5,
+          "Z": 1.5
+        },
+        "MaxValueVec": {
+          "X": 6.011059,
+          "Y": 6.011059,
+          "Z": 6.011059
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 14.999999,
+          "Values": [
+            1.5,
+            1.5,
+            1.5,
+            2.420671,
+            2.420671,
+            2.420671,
+            3.207831,
+            3.207831,
+            3.207831,
+            3.8711898,
+            3.8711898,
+            3.8711898,
+            4.4217396,
+            4.4217396,
+            4.4217396,
+            4.869509,
+            4.869509,
+            4.869509,
+            5.2252097,
+            5.2252097,
+            5.2252097,
+            5.499111,
+            5.499111,
+            5.499111,
+            5.7017236,
+            5.7017236,
+            5.7017236,
+            5.8434787,
+            5.8434787,
+            5.8434787,
+            5.934764,
+            5.934764,
+            5.934764,
+            5.986094,
+            5.986094,
+            5.986094,
+            6.007812,
+            6.007812,
+            6.007812,
+            6.0104403,
+            6.0104403,
+            6.0104403,
+            6.004354,
+            6.004354,
+            6.004354,
+            6.0,
+            6.0,
+            6.0
+          ],
+          "Op": 1,
+          "EntryCount": 16,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.096954,
+        "MinValueVec": {
+          "X": 0.5,
+          "Y": 0.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0097039,
+          "Y": 1.096954,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 30.889566,
+          "Values": [
+            0.5,
+            0.0,
+            1.0,
+            0.5440704,
+            0.35260698,
+            1.0,
+            0.60021853,
+            0.60798395,
+            1.0,
+            0.6594545,
+            0.78028095,
+            1.0,
+            0.7127884,
+            0.8836484,
+            1.0,
+            0.75123024,
+            0.93223614,
+            1.0,
+            0.77586436,
+            0.9527917,
+            1.0,
+            0.7986159,
+            0.9710563,
+            1.0,
+            0.81989896,
+            0.98772055,
+            1.0,
+            0.83975947,
+            1.002857,
+            1.0,
+            0.8582433,
+            1.0165385,
+            1.0,
+            0.87539154,
+            1.0288326,
+            1.0,
+            0.891253,
+            1.0398153,
+            1.0,
+            0.90587616,
+            1.0495619,
+            1.0,
+            0.91930705,
+            1.0581454,
+            1.0,
+            0.9315915,
+            1.0656383,
+            1.0,
+            0.94277555,
+            1.0721133,
+            1.0,
+            0.9529051,
+            1.077643,
+            1.0,
+            0.9620261,
+            1.0823004,
+            1.0,
+            0.9701845,
+            1.0861584,
+            1.0,
+            0.9774263,
+            1.0892891,
+            1.0,
+            0.98379576,
+            1.0917646,
+            1.0,
+            0.98933756,
+            1.0936568,
+            1.0,
+            0.9941011,
+            1.0950412,
+            1.0,
+            0.9981323,
+            1.0959901,
+            1.0,
+            1.001477,
+            1.0965767,
+            1.0,
+            1.0041814,
+            1.0968733,
+            1.0,
+            1.0062912,
+            1.0969529,
+            1.0,
+            1.0078523,
+            1.0968881,
+            1.0,
+            1.0089109,
+            1.0967517,
+            1.0,
+            1.0095128,
+            1.0966163,
+            1.0,
+            1.0097039,
+            1.0965548,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "Distribution": {
+          "ObjectName": "DistributionVectorConstantCurve'FieldGunMF:ParticleModuleSizeMultiplyLife_3.DistributionVectorConstantCurve_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.10"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_6",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.5,
+        "MaxValue": 7.001078,
+        "MinValueVec": {
+          "X": 1.5,
+          "Y": 1.5,
+          "Z": 1.5
+        },
+        "MaxValueVec": {
+          "X": 7.0,
+          "Y": 7.0,
+          "Z": 7.001078
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 127.0,
+          "Values": [
+            1.5,
+            1.5,
+            1.5,
+            1.6682955,
+            1.6682955,
+            2.1365342,
+            1.925884,
+            1.925884,
+            2.746397,
+            2.252405,
+            2.252405,
+            3.3236609,
+            2.6274972,
+            2.6274972,
+            3.8623989,
+            3.0307992,
+            3.0307992,
+            4.356682,
+            3.441951,
+            3.441951,
+            4.800585,
+            3.840591,
+            3.840591,
+            5.188178,
+            4.2063584,
+            4.2063584,
+            5.5135355,
+            4.5188923,
+            4.5188923,
+            5.7707286,
+            4.757831,
+            4.757831,
+            5.9538293,
+            4.902815,
+            4.902815,
+            6.0569134,
+            4.955825,
+            4.955825,
+            6.0898356,
+            4.99851,
+            4.99851,
+            6.1151576,
+            5.0406322,
+            5.0406322,
+            6.140009,
+            5.082194,
+            5.082194,
+            6.164392,
+            5.1231985,
+            5.1231985,
+            6.1883125,
+            5.163649,
+            5.163649,
+            6.2117743,
+            5.2035494,
+            5.2035494,
+            6.234782,
+            5.242903,
+            5.242903,
+            6.257341,
+            5.281713,
+            5.281713,
+            6.2794547,
+            5.3199825,
+            5.3199825,
+            6.301127,
+            5.3577156,
+            5.3577156,
+            6.322363,
+            5.3949146,
+            5.3949146,
+            6.3431664,
+            5.431584,
+            5.431584,
+            6.3635435,
+            5.467726,
+            5.467726,
+            6.3834968,
+            5.5033455,
+            5.5033455,
+            6.4030313,
+            5.5384445,
+            5.5384445,
+            6.422152,
+            5.5730267,
+            5.5730267,
+            6.4408627,
+            5.6070957,
+            5.6070957,
+            6.4591675,
+            5.640655,
+            5.640655,
+            6.477072,
+            5.6737075,
+            5.6737075,
+            6.4945793,
+            5.706257,
+            5.706257,
+            6.5116944,
+            5.738306,
+            5.738306,
+            6.5284214,
+            5.76986,
+            5.76986,
+            6.544766,
+            5.800919,
+            5.800919,
+            6.560731,
+            5.8314886,
+            5.8314886,
+            6.5763206,
+            5.861573,
+            5.861573,
+            6.591542,
+            5.8911734,
+            5.8911734,
+            6.6063957,
+            5.9202952,
+            5.9202952,
+            6.620889,
+            5.9489393,
+            5.9489393,
+            6.6350255,
+            5.977112,
+            5.977112,
+            6.6488094,
+            6.004813,
+            6.004813,
+            6.6622453,
+            6.032049,
+            6.032049,
+            6.675337,
+            6.0588236,
+            6.0588236,
+            6.6880903,
+            6.0851374,
+            6.0851374,
+            6.7005086,
+            6.1109943,
+            6.1109943,
+            6.7125955,
+            6.1363997,
+            6.1363997,
+            6.724357,
+            6.1613555,
+            6.1613555,
+            6.735797,
+            6.1858644,
+            6.1858644,
+            6.74692,
+            6.209932,
+            6.209932,
+            6.75773,
+            6.2335596,
+            6.2335596,
+            6.768232,
+            6.2567515,
+            6.2567515,
+            6.7784295,
+            6.279511,
+            6.279511,
+            6.788328,
+            6.3018413,
+            6.3018413,
+            6.797931,
+            6.3237453,
+            6.3237453,
+            6.807244,
+            6.3452272,
+            6.3452272,
+            6.81627,
+            6.36629,
+            6.36629,
+            6.825014,
+            6.386937,
+            6.386937,
+            6.833481,
+            6.407172,
+            6.407172,
+            6.841675,
+            6.426998,
+            6.426998,
+            6.8496,
+            6.446418,
+            6.446418,
+            6.8572617,
+            6.465436,
+            6.465436,
+            6.864662,
+            6.4840546,
+            6.4840546,
+            6.871809,
+            6.5022783,
+            6.5022783,
+            6.8787036,
+            6.520109,
+            6.520109,
+            6.8853517,
+            6.5375524,
+            6.5375524,
+            6.8917584,
+            6.5546093,
+            6.5546093,
+            6.897927,
+            6.571285,
+            6.571285,
+            6.903862,
+            6.5875807,
+            6.5875807,
+            6.909569,
+            6.6035023,
+            6.6035023,
+            6.9150505,
+            6.6190515,
+            6.6190515,
+            6.920313,
+            6.634232,
+            6.634232,
+            6.925359,
+            6.649047,
+            6.649047,
+            6.930194,
+            6.663501,
+            6.663501,
+            6.934822,
+            6.6775956,
+            6.6775956,
+            6.939248,
+            6.6913357,
+            6.6913357,
+            6.9434767,
+            6.7047234,
+            6.7047234,
+            6.9475107,
+            6.717763,
+            6.717763,
+            6.951356,
+            6.7304583,
+            6.7304583,
+            6.955016,
+            6.7428107,
+            6.7428107,
+            6.958496,
+            6.7548256,
+            6.7548256,
+            6.9618006,
+            6.7665052,
+            6.7665052,
+            6.9649334,
+            6.777853,
+            6.777853,
+            6.967899,
+            6.788873,
+            6.788873,
+            6.970702,
+            6.799568,
+            6.799568,
+            6.9733467,
+            6.809942,
+            6.809942,
+            6.9758377,
+            6.8199973,
+            6.8199973,
+            6.978179,
+            6.829738,
+            6.829738,
+            6.9803753,
+            6.8391676,
+            6.8391676,
+            6.9824314,
+            6.8482885,
+            6.8482885,
+            6.984351,
+            6.8571053,
+            6.8571053,
+            6.9861393,
+            6.8656206,
+            6.8656206,
+            6.9877996,
+            6.8738384,
+            6.8738384,
+            6.989338,
+            6.8817616,
+            6.8817616,
+            6.990757,
+            6.8893933,
+            6.8893933,
+            6.9920626,
+            6.896737,
+            6.896737,
+            6.9932575,
+            6.9037967,
+            6.9037967,
+            6.9943476,
+            6.9105754,
+            6.9105754,
+            6.9953375,
+            6.917075,
+            6.917075,
+            6.9962296,
+            6.923302,
+            6.923302,
+            6.997031,
+            6.9292574,
+            6.9292574,
+            6.997744,
+            6.9349446,
+            6.9349446,
+            6.998374,
+            6.9403687,
+            6.9403687,
+            6.9989257,
+            6.945531,
+            6.945531,
+            6.9994025,
+            6.950436,
+            6.950436,
+            6.9998093,
+            6.9550867,
+            6.9550867,
+            7.0001507,
+            6.959487,
+            6.959487,
+            7.000431,
+            6.9636393,
+            6.9636393,
+            7.0006547,
+            6.967548,
+            6.967548,
+            7.000826,
+            6.9712152,
+            6.9712152,
+            7.0009494,
+            6.9746456,
+            6.9746456,
+            7.0010295,
+            6.977842,
+            6.977842,
+            7.00107,
+            6.9808083,
+            6.9808083,
+            7.0010767,
+            6.9835467,
+            6.9835467,
+            7.001053,
+            6.9860616,
+            6.9860616,
+            7.001003,
+            6.9883556,
+            6.9883556,
+            7.0009317,
+            6.9904323,
+            6.9904323,
+            7.0008435,
+            6.9922957,
+            6.9922957,
+            7.000743,
+            6.9939485,
+            6.9939485,
+            7.000634,
+            6.995394,
+            6.995394,
+            7.000521,
+            6.996637,
+            6.996637,
+            7.00041,
+            6.9976783,
+            6.9976783,
+            7.000303,
+            6.998523,
+            6.998523,
+            7.0002055,
+            6.999174,
+            6.999174,
+            7.000122,
+            6.999635,
+            6.999635,
+            7.0000577,
+            6.999909,
+            6.999909,
+            7.000015,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "Op": 1,
+          "EntryCount": 128,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 2,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 20,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_12",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 30,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 2,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 20,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataGpu",
+    "Name": "ParticleModuleTypeDataGpu_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleTypeDataGpu'",
+    "Properties": {
+      "EmitterInfo": {
+        "RequiredModule": {
+          "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.52"
+        },
+        "SpawnModule": {
+          "ObjectName": "ParticleModuleSpawn'FieldGunMF:ParticleModuleSpawn_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.71"
+        },
+        "SpawnModules": [
+          {
+            "ObjectName": "ParticleModuleRequired'FieldGunMF:ParticleModuleRequired_3'",
+            "ObjectPath": "War/Content/FX/FieldGunMF.52"
+          },
+          {
+            "ObjectName": "ParticleModuleLifetime'FieldGunMF:ParticleModuleLifetime_3'",
+            "ObjectPath": "War/Content/FX/FieldGunMF.39"
+          },
+          {
+            "ObjectName": "ParticleModuleSize'FieldGunMF:ParticleModuleSize_3'",
+            "ObjectPath": "War/Content/FX/FieldGunMF.61"
+          },
+          {
+            "ObjectName": "ParticleModuleVelocity'FieldGunMF:ParticleModuleVelocity_0'",
+            "ObjectPath": "War/Content/FX/FieldGunMF.74"
+          },
+          {
+            "ObjectName": "ParticleModuleLocationPrimitiveSphere'FieldGunMF:ParticleModuleLocationPrimitiveSphere_0'",
+            "ObjectPath": "War/Content/FX/FieldGunMF.41"
+          }
+        ],
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -1500.0
+        },
+        "OrbitOffsetRange": {
+          "X": 0.0,
+          "Y": 49.99999,
+          "Z": 0.0
+        },
+        "InvMaxSize": {
+          "X": 0.04,
+          "Y": 0.04
+        },
+        "InvRotationRateScale": 0.16666667,
+        "MaxLifetime": 6.0,
+        "MaxParticleCount": 21,
+        "ScreenAlignment": "PSA_Velocity",
+        "bEnableCollision": true
+      },
+      "ResourceData": {
+        "QuantizedMiscSamples": [
+          {
+            "B": 0,
+            "G": 255,
+            "R": 255,
+            "A": 0,
+            "Hex": "FFFF00"
+          },
+          {
+            "B": 0,
+            "G": 0,
+            "R": 0,
+            "A": 0,
+            "Hex": "000000"
+          }
+        ],
+        "ColorBias": {
+          "X": 2.0,
+          "Y": 1.169639,
+          "Z": 0.637685,
+          "W": 1.0
+        },
+        "MiscScale": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 0.0,
+          "W": 0.0
+        },
+        "SimulationAttrCurveBias": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SubImageSize": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "SizeBySpeed": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 1.0,
+          "W": 1.0
+        },
+        "ConstantAcceleration": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -1500.0
+        },
+        "OrbitOffsetRange": {
+          "X": 0.0,
+          "Y": 25.0,
+          "Z": 0.0
+        },
+        "OrbitFrequencyRange": {
+          "X": 6.2831855,
+          "Y": 6.2831855,
+          "Z": -6.2831855
+        },
+        "OrbitPhaseBase": {
+          "X": 1.5707964,
+          "Y": 0.0,
+          "Z": 1.5707964
+        },
+        "OrbitPhaseRange": {
+          "X": 6.2831855,
+          "Y": 6.2831855,
+          "Z": -6.2831855
+        },
+        "PerParticleVectorFieldBias": 1.0,
+        "DragCoefficientBias": 1.0,
+        "ResilienceBias": 0.1,
+        "CollisionRadiusScale": 0.5,
+        "OneMinusFriction": 1.0,
+        "RotationRateScale": 6.0,
+        "ScreenAlignment": "PSA_Velocity"
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleTypeDataMesh'",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh'RifleMuzzleFlash'",
+        "ObjectPath": "War/Content/FX/Mesh/RifleMuzzleFlash.2"
+      },
+      "bOverrideMaterial": true,
+      "RollPitchYawRange": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -500.0,
+        "MaxValue": 3000.0,
+        "MinValueVec": {
+          "X": 500.0,
+          "Y": -500.0,
+          "Z": 150.0
+        },
+        "MaxValueVec": {
+          "X": 3000.0,
+          "Y": 500.0,
+          "Z": 300.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            500.0,
+            -500.0,
+            150.0,
+            3000.0,
+            500.0,
+            300.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -100.0,
+        "MaxValue": 4000.0,
+        "MinValueVec": {
+          "X": 1000.0,
+          "Y": -100.0,
+          "Z": -100.0
+        },
+        "MaxValueVec": {
+          "X": 4000.0,
+          "Y": 100.0,
+          "Z": 100.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1000.0,
+            -100.0,
+            -100.0,
+            4000.0,
+            100.0,
+            100.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_4",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -50.0,
+        "MaxValue": 200.0,
+        "MinValueVec": {
+          "X": 100.0,
+          "Y": -50.0,
+          "Z": -3.0
+        },
+        "MaxValueVec": {
+          "X": 200.0,
+          "Y": 50.0,
+          "Z": 3.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            100.0,
+            -50.0,
+            -3.0,
+            200.0,
+            50.0,
+            3.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'FieldGunMF:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.14"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'FieldGunMF:ParticleSpriteEmitter_1.ParticleLODLevel_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.15"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_12",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'FieldGunMF:ParticleSpriteEmitter_12.ParticleLODLevel_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.16"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_2",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "EmitterRenderMode": "ERM_LightsOnly",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'FieldGunMF:ParticleSpriteEmitter_2.ParticleLODLevel_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.17"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "FieldGunMF",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'FieldGunMF:ParticleSpriteEmitter_3.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.18"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "FieldGunMF",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'FieldGunMF:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.77"
+        },
+        {
+          "ObjectName": "ParticleSpriteEmitter'FieldGunMF:ParticleSpriteEmitter_2'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.80"
+        },
+        {
+          "ObjectName": "ParticleSpriteEmitter'FieldGunMF:ParticleSpriteEmitter_1'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.78"
+        },
+        {
+          "ObjectName": "ParticleSpriteEmitter'FieldGunMF:ParticleSpriteEmitter_12'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.79"
+        },
+        {
+          "ObjectName": "ParticleSpriteEmitter'FieldGunMF:ParticleSpriteEmitter_3'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.81"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -25000.0,
+          "Y": -25000.0,
+          "Z": -25000.0
+        },
+        "Max": {
+          "X": 25000.0,
+          "Y": 25000.0,
+          "Z": 25000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

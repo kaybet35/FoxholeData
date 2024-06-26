@@ -1,0 +1,200 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPATRPGCProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPATRPGCProjectile.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPATRPGLightCProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.8"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPATRPGLightCProjectile_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.3"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPATRPGCProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPATRPGCProjectile.1"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPATRPGLightCProjectile_C'Default__BPATRPGLightCProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.1"
+    }
+  },
+  {
+    "Type": "BPATRPGLightCProjectile_C",
+    "Name": "Default__BPATRPGLightCProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPATRPGLightCProjectile.BPATRPGLightCProjectile_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPATRPGLightCProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.5"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPATRPGLightCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.9"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPATRPGLightCProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPATRPGLightCProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.2"
+      },
+      "ExplosiveCodeName": "ATRPGLightCAmmo",
+      "AutoDetonateTime": 0.55,
+      "PenetrationBonusMaxRange": 1500.0,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPATRPGLightCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.9"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": null,
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPATRPGLightCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.9"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BPATRPGLightCProjectile_C:Mesh_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.10"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPATRPGCProjectile_C'",
+              "ObjectPath": "War/Content/Blueprints/Items/BPATRPGCProjectile.1"
+            },
+            "SCSVariableName": "Mesh",
+            "AssociatedGuid": "555B364E-4B8B9C2C-844BD88C-A5E695D7"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'MechWRocketTrail'",
+        "ObjectPath": "War/Content/FX/MechWRocketTrail.18"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPATRPGLightCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.9"
+      },
+      "RelativeLocation": {
+        "X": -29.132626,
+        "Y": -0.00030899048,
+        "Z": -1.847744E-06
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "ProjectileGravityScale": 0.5
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPATRPGLightCProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.6"
+      },
+      "VariableGuid": "33E3F296-416300E3-75F7C88C-A2C93402",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPATRPGLightCProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPATRPGLightCProjectile.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'SphereComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "BPATRPGLightCProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RpgShortATCShellPickup'",
+        "ObjectPath": "War/Content/Meshes/Weapons/RpgShortATCShellPickup.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,250 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFortLadder_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFortLadder_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ReplicatedLadder'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFortLadder_C'Default__BPFortLadder_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.1"
+    }
+  },
+  {
+    "Type": "BPFortLadder_C",
+    "Name": "Default__BPFortLadder_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/BPFortLadder.BPFortLadder_C'",
+    "Properties": {
+      "LadderComponent": {
+        "ObjectName": "LadderComponent'Default__BPFortLadder_C:Ladder'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.5"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPFortLadder_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.11"
+      },
+      "ClimbVolume": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:ClimbVolume'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.3"
+      },
+      "ClimbVolumeTop": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:ClimbVolumeTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.4"
+      },
+      "EnterPositionBottom": {
+        "ObjectName": "SceneComponent'Default__BPFortLadder_C:EnterPositionBottom'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.7"
+      },
+      "EnterPositionTop": {
+        "ObjectName": "SceneComponent'Default__BPFortLadder_C:EnterPositionTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.8"
+      },
+      "bReplicates": false,
+      "RemoteRole": "ROLE_None",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxCollision",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 4.431171,
+        "Y": 37.0,
+        "Z": 140.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolume",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 44.86595,
+        "Z": 35.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      },
+      "RelativeLocation": {
+        "X": -23.698383,
+        "Y": 3.0517578E-05,
+        "Z": -110.50824
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolumeTop",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      },
+      "RelativeLocation": {
+        "X": 33.84996,
+        "Y": 0.0,
+        "Z": 171.78322
+      }
+    }
+  },
+  {
+    "Type": "LadderComponent",
+    "Name": "Ladder",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'LadderComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFortLadder_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionBottom",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      },
+      "RelativeLocation": {
+        "X": -55.0,
+        "Y": 0.0,
+        "Z": -186.31802
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionTop",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      },
+      "RelativeLocation": {
+        "X": 55.0,
+        "Y": -8.0898855E-07,
+        "Z": 137.35289
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFortLadder_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.6"
+      },
+      "VariableGuid": "B2102D72-4C08FF25-154AC592-B5E0FCE2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFortLadder_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFortLadder_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPFortLadder_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FortLadder'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortLadder.2"
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPFortLadder_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPFortLadder.2"
+      },
+      "RelativeLocation": {
+        "X": -52.000015,
+        "Y": 0.0017354693,
+        "Z": -157.5
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

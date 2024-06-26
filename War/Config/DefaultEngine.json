@@ -1,0 +1,439 @@
+[/Script/EngineSettings.GameMapsSettings]
+EditorStartupMap=/Game/Maps/Sandbox.Sandbox
+GameInstanceClass=/Game/Blueprints/BPWarGameInstance.BPWarGameInstance_C
+bUseSplitscreen=False
+GameDefaultMap=/Game/Maps/MainMenu.MainMenu
+ServerDefaultMap=/Game/Maps/Master/DeadlandsHex.DeadlandsHex
+
+[/Script/Engine.Engine]
+GameViewportClientClassName=/Script/War.WarGameViewportClient
+LocalPlayerClassName=/Script/War.WarLocalPlayer
+GameUserSettingsClassName=/Script/War.WarGameUserSettings
+AssetManagerClassName=/Script/War.WarAssetManager
+bSmoothFrameRate=true
+
+[/Script/HardwareTargeting.HardwareTargetingSettings]
+TargetedHardwareClass=Desktop
+AppliedTargetedHardwareClass=Desktop
+DefaultGraphicsPerformance=Maximum
+AppliedDefaultGraphicsPerformance=Maximum
+
+[/Script/OnlineSubsystemUtils.IpNetDriver]
+;Turn this off for builds we want to detect server disconnects on (is turned off automatically in shipping)
+bNoTimeouts=false
+;---------------------------------------------------------------
+InitialConnectTimeout=60.0
+ConnectionTimeout=15.0
+
+[/Script/OnlineSubsystemUtils.OnlineBeacon]
+BeaconConnectionInitialTimeout=30.0
+BeaconConnectionTimeout=45.0
+
+[PacketHandlerComponents]
++Components=OnlineSubsystemSteam.SteamAuthComponentModuleInterface
+
+[CrashReportClient]
+CrashReportClientVersion=1.0
+DataRouterUrl="https://o461815.ingest.sentry.io/api/5464159/unreal/1758677a67ef4cb89ac4f9116fc01388/"
+
+[/Script/Engine.RendererSettings]
+r.MobileHDR=True
+r.MobileNumDynamicPointLights=4
+r.MobileDynamicPointLightsUseStaticBranch=True
+r.AllowOcclusionQueries=True
+r.MinScreenRadiusForLights=0.030000
+r.MinScreenRadiusForDepthPrepass=0.030000
+r.PrecomputedVisibilityWarning=False
+r.TextureStreaming=True
+Compat.UseDXT5NormalMaps=False
+r.AllowStaticLighting=False
+r.NormalMapsForStaticLighting=False
+r.GenerateMeshDistanceFields=False
+r.GenerateLandscapeGIData=False
+r.TessellationAdaptivePixelsPerTriangle=48.000000
+r.SeparateTranslucency=True
+r.TranslucentSortPolicy=0
+TranslucentSortAxis=(X=0.000000,Y=-1.000000,Z=0.000000)
+r.CustomDepth=3
+r.DefaultFeature.Bloom=True
+r.DefaultFeature.AmbientOcclusion=True
+r.DefaultFeature.AmbientOcclusionStaticFraction=True
+r.DefaultFeature.AutoExposure=False
+r.DefaultFeature.MotionBlur=True
+r.DefaultFeature.LensFlare=True
+r.DefaultFeature.AntiAliasing=1
+r.EarlyZPass=2
+r.EarlyZPassMovable=False
+r.DBuffer=True
+r.ClearSceneMethod=1
+r.BasePassOutputsVelocity=False
+r.WireframeCullThreshold=5.000000
+UIScaleRule=ShortestSide
+UIScaleCurve=(EditorCurveData=(PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant,Keys=,DefaultValue=340282346638528859811704183484516925440.000000),ExternalCurve=None)
+r.TonemapperFilm=0
+
+[PacketSimulationSettings]
+PktLag=0
+PktLagVariance=0
+PktLoss=0
+PktOrder=0
+PktDup=0
+
+[/Script/Engine.UserInterfaceSettings]
+RenderFocusRule=NavigationOnly
+DefaultCursor=None
+TextEditBeamCursor=None
+CrosshairsCursor=/Game/Slate/CrosshairWidget.CrosshairWidget_C
+GrabHandCursor=None
+GrabHandClosedCursor=None
+SlashedCircleCursor=None
+ApplicationScale=1.000000
+UIScaleRule=ShortestSide
+CustomScalingRuleClass=None
+UIScaleCurve=(EditorCurveData=(PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant,Keys=((Time=480.000000,Value=0.444000),(Time=720.000000,Value=0.666000),(Time=1080.000000,Value=1.000000),(Time=8640.000000,Value=8.000000)),DefaultValue=340282346638528859811704183484516925440.000000),ExternalCurve=None)
+
+[/Script/Engine.AudioSettings]
+DefaultBaseSoundMix=/Game/Audio/BaseSoundMix.BaseSoundMix
+VoiPSoundClass=/Game/Audio/SoundClasses/SFX.VoiceClips
+
+[/Script/Engine.GameEngine]
++NetDriverDefinitions=(DefName="GameNetDriver",  DriverClassName="SteamSockets.SteamSocketsNetDriver",DriverClassNameFallback="OnlineSubsystemUtils.IpNetDriver")
++NetDriverDefinitions=(DefName="BeaconNetDriver",DriverClassName="SteamSockets.SteamSocketsNetDriver",DriverClassNameFallback="OnlineSubsystemUtils.IpNetDriver")
+
+[OnlineSubsystem]
+DefaultPlatformService=Steam
+bHasVoiceEnabled=true
+
+[OnlineSubsystemSteam]
+bEnabled=true
+SteamDevAppId=505460
+bAllowP2PPacketRelay=true
+P2PConnectionTimeout=90
+
+[/Script/Engine.Player]
+ConfiguredLanSpeed=80000
+ConfiguredInternetSpeed=80000
+
+[/Script/OnlineSubsystemSteam.SteamNetDriver]
+NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
+MaxClientRate=80000
+MaxInternetClientRate=80000
+MaxNetTickRate=30
+
+[/Script/SteamSockets.SteamSocketsNetDriver]
+MaxClientRate=80000
+MaxInternetClientRate=80000
+MaxNetTickRate=30
+
+[/Script/OnlineSubsystemUtils.IpNetDriver]
+MaxClientRate=80000
+MaxInternetClientRate=80000
+LogPortUnreach=false
+MaxNetTickRate=30
+
+[/Script/Engine.StreamingSettings]
+s.EventDrivenLoaderEnabled=False
+
+[/Script/Engine.NetworkSettings]
+n.VerifyPeer=true
+
+[CoreRedirects]
++PropertyRedirects=(OldName="IconsStyle.GarrisonSupplies",NewName="IconsStyle.MaintenanceSupplies")
++PropertyRedirects=(OldName="WeaponFiringConeInfo.RecoilSettleTime",NewName="WeaponFiringConeInfo.StabilityCostPerShot")
++ClassRedirects=(OldName="LightTankGunnerMountComponent",NewName="TankGunnerMountComponent")
++ClassRedirects=(OldName="HalftrackGunnerComponent",NewName="VehicleMachineGunnerComponent")
++ClassRedirects=(OldName="Aartillery",NewName="AArtillery")
++ClassRedirects=(OldName="ProxyLoadingDock",NewName="PersistentProxy")
++ClassRedirects=(OldName="ProxyLoadingDockComponent",NewName="PersistentProxyComponent")
++ClassRedirects=(OldName="VehicleTriggerComponent",NewName="SeatTriggerComponent")
++ClassRedirects=(OldName="VehicleExitComponent",NewName="SeatExitComponent")
++ClassRedirects=(OldName="OccupiableComponent",NewName="StructureSeatComponent")
++ClassRedirects=(OldName="ItemHolderBoxComponent",NewName="AccessBoxComponent")
++StructRedirects=(OldName="BaseUIStyle",NewName="BaseStyle")
++PropertyRedirects=(OldName="TeamStructure.bCanDecayBePreventedBySupplyStation",NewName="TeamStructure.bCanDecayBePreventedByMaintenanceShed")
+
+;ClientLogging - LogClient is enabled. Most other categories are opt-in.
+;Server Logging is setup in DedicatedServerEngine.ini
+[Core.Log]
+VivoxCore=Warning
+LogWarTravel=Verbose
+AnimBlueprintLog=NoLogging
+LogStructureIsland=NoLogging
+LogWorld=NoLogging
+LogUObjectArray=NoLogging
+LogUObjectAllocator=NoLogging
+LogTextLocalizationManager=NoLogging
+LogStreamableManager=NoLogging
+LogShaderLibrary=NoLogging
+LogRenderer=NoLogging
+LogPluginManager=NoLogging
+LogPlatformFile=NoLogging
+LogPakFile=NoLogging
+LogPackageLocalizationCache=NoLogging
+LogOcInput=NoLogging
+LogMoviePlayer=NoLogging
+LogModuleManager=NoLogging
+LogGameplayTags=NoLogging
+LogAIModule=NoLogging
+LogDevObjectVersion=NoLogging
+LogTaskGraph=NoLogging
+LogWindows=NoLogging
+LogInit=NoLogging
+LogStreaming=NoLogging
+LogPlatformFile=NoLogging
+LogStats=NoLogging
+LogHAL=NoLogging
+LogMemory=NoLogging
+LogSlate=NoLogging
+LogRHI=NoLogging
+LogAssetRegistry=NoLogging
+LogNetVersion=NoLogging
+LogUMG=NoLogging
+LogContentStreaming=NoLogging
+LogTemp=NoLogging
+LogHandshake=NoLogging
+LogMaterial=NoLogging
+LogConfig=Error
+LogHttp=NoLogging
+
+[Networking]
+UseLibCurl=true
+
+[/Script/PythonScriptPlugin.PythonScriptPluginSettings]
+;+StartupScripts=LoadBlueprintsAsync.py
+bDeveloperMode=False
+
+[/Script/Engine.PhysicsSettings]
+DefaultGravityZ=-980.000000
+DefaultTerminalVelocity=4000.000000
+DefaultFluidFriction=0.300000
+SimulateScratchMemorySize=262144
+RagdollAggregateThreshold=4
+TriangleMeshTriangleMinAreaThreshold=5.000000
+bEnableAsyncScene=False
+bEnableShapeSharing=False
+bEnablePCM=False
+bEnableStabilization=False
+bWarnMissingLocks=True
+bEnable2DPhysics=False
+PhysicErrorCorrection=(PingExtrapolation=0.100000,ErrorPerLinearDifference=1.000000,ErrorPerAngularDifference=1.000000,MaxRestoredStateError=1.000000,PositionLerp=0.000000,AngleLerp=0.400000,LinearVelocityCoefficient=100.000000,AngularVelocityCoefficient=10.000000,ErrorAccumulationSeconds=0.500000,ErrorAccumulationDistanceSq=15.000000,ErrorAccumulationSimilarity=100.000000)
+LockedAxis=Invalid
+DefaultDegreesOfFreedom=Full3D
+BounceThresholdVelocity=200.000000
+FrictionCombineMode=Average
+RestitutionCombineMode=Average
+MaxAngularVelocity=3600.000000
+MaxDepenetrationVelocity=0.000000
+ContactOffsetMultiplier=0.010000
+MinContactOffset=0.000100
+MaxContactOffset=1.000000
+bSimulateSkeletalMeshOnDedicatedServer=True
+DefaultShapeComplexity=CTF_UseSimpleAndComplex
+bDefaultHasComplexCollision=True
+bSuppressFaceRemapTable=False
+bSupportUVFromHitResults=False
+bDisableActiveActors=False
+bDisableKinematicStaticPairs=False
+bDisableKinematicKinematicPairs=False
+bDisableCCD=False
+bEnableEnhancedDeterminism=False
+MaxPhysicsDeltaTime=0.033333
+bSubstepping=False
+bSubsteppingAsync=False
+MaxSubstepDeltaTime=0.016667
+MaxSubsteps=6
+SyncSceneSmoothingFactor=0.000000
+AsyncSceneSmoothingFactor=0.990000
+InitialAverageFrameRate=0.016667
+PhysXTreeRebuildRate=10
++PhysicalSurfaces=(Type=SurfaceType1,Name="Dirt")
++PhysicalSurfaces=(Type=SurfaceType2,Name="Water")
++PhysicalSurfaces=(Type=SurfaceType3,Name="Snow")
++PhysicalSurfaces=(Type=SurfaceType4,Name="Grass")
++PhysicalSurfaces=(Type=SurfaceType5,Name="Flesh")
++PhysicalSurfaces=(Type=SurfaceType6,Name="Stone")
++PhysicalSurfaces=(Type=SurfaceType7,Name="Wood")
++PhysicalSurfaces=(Type=SurfaceType8,Name="Metal")
++PhysicalSurfaces=(Type=SurfaceType9,Name="Sand")
++PhysicalSurfaces=(Type=SurfaceType10,Name="WetSand")
++PhysicalSurfaces=(Type=SurfaceType11,Name="TownStone")
++PhysicalSurfaces=(Type=SurfaceType12,Name="Trench")
++PhysicalSurfaces=(Type=SurfaceType13,Name="Ice")
++PhysicalSurfaces=(Type=SurfaceType14,Name="Highway")
+DefaultBroadphaseSettings=(bUseMBPOnClient=False,bUseMBPOnServer=False,MBPBounds=(Min=(X=0.000000,Y=0.000000,Z=0.000000),Max=(X=0.000000,Y=0.000000,Z=0.000000),IsValid=0),MBPNumSubdivs=2)
+
+;DDC Settings - if you are working remotely just don't map Y or follow this guide to override and use local DDC https://docs.unrealengine.com/en-US/Engine/Basics/DerivedDataCache/index.html
+[DerivedDataBackendGraph]
+MinimumDaysToKeepFile=7
+Root=(Type=KeyLength, Length=120, Inner=AsyncPut)
+AsyncPut=(Type=AsyncPut, Inner=Hierarchy)
+Hierarchy=(Type=Hierarchical, Inner=Boot, Inner=Pak, Inner=EnginePak, Inner=Local, Inner=Shared)
+Boot=(Type=Boot, Filename=%GAMEDIR%DerivedDataCache/Boot.ddc, MaxCacheSize=256)
+Local=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, PurgeTransient=true, DeleteUnused=true, UnusedFileAge=17, FoldersToClean=-1, Path=../../../Engine/DerivedDataCache)
+Shared=(Type=FileSystem, ReadOnly=false, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=19, FoldersToClean=-1, Path=Y:\DDC, EnvPathOverride=UE-SharedDataCachePath)
+AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnused=true, UnusedFileAge=19, FoldersToClean=-1, Path=Y:\DDC2, EnvPathOverride=UE-SharedDataCachePath2)
+Pak=(Type=ReadPak, Filename=%GAMEDIR%DerivedDataCache/DDC.ddp)
+EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
+
+[/Script/Engine.CollisionProfile]
++Profiles=(Name="BarbedWire",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="For structures - Overlaps pawn only")
++Profiles=(Name="BlockAll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=,HelpMessage="WorldStatic object that blocks all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="BlockAllDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=,HelpMessage="WorldDynamic object that blocks all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="BlockOnlyPawnVehicle",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that blocks only pawns and vehicles. Everything else is ignored.")
++Profiles=(Name="BlockOnlyVehicle",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that blocks only vehicles. Everything else is ignored.")
++Profiles=(Name="BlockOnlyWork",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work")),HelpMessage="Needs description")
++Profiles=(Name="BlockOnlyWorkAndPawn",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work")),HelpMessage="Blocks Work and Pawn.")
++Profiles=(Name="BlockOnlyWorkPawnVehicle",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work")),HelpMessage="Blocks Work, Pawn, and Vehicle")
++Profiles=(Name="BlockVisibilityOnly",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="")
++Profiles=(Name="BlockWorkOverlapPawn",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work")),HelpMessage="Needs description")
++Profiles=(Name="Bulwark",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="",CustomResponses=((Channel="OverlapDowncast",Response=ECR_Ignore)),HelpMessage="Needs description")
++Profiles=(Name="ChainWall",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Work"),(Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Needs description")
++Profiles=(Name="CharacterMesh",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object that is used for Character Mesh. All other channels will be set to default.")
++Profiles=(Name="DamageableFallThrough",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Parts of a build site that can be walked through and worked on, but still accept damage")
++Profiles=(Name="DamageableFallAndShootThrough",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Accept damage and work, but don\'t block aiming or walking")
++Profiles=(Name="Destructible",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Destructible",CustomResponses=,HelpMessage="Destructible actors")
++Profiles=(Name="DestructibleProp",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="")
++Profiles=(Name="DynamicRamp",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Used for dynamic ramps (like the barge).")
++Profiles=(Name="DestructiblePropSeeThrough",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="")
++Profiles=(Name="ExplosiveMine",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Excavate")),HelpMessage="Used for placed mines (AT mine).")
++Profiles=(Name="FoliageBush",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Needs description")
++Profiles=(Name="FoliageBlocking",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="OverlapDowncast",Response=ECR_Ignore)),HelpMessage="Collision channel for blocking foliage.")
++Profiles=(Name="GarrisonRoof",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Use on roofs that can be hidden and shouldn\'t interfere with aiming")
++Profiles=(Name="GateObstructionCheck",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="Volume the gate uses to tell if it can raise")
++Profiles=(Name="HalfTrackMesh",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Collision preset for halftracks and other vehicles with people that don\'t collide with the vehicle collision box.")
++Profiles=(Name="HalfTrackRoot",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work")),HelpMessage="Collision preset for halftracks and other vehicles with people mounted in them")
++Profiles=(Name="RoomHeavilyFlooded",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap)),HelpMessage="Room volume that is currently heavily flooded.")
++Profiles=(Name="RoomVolume",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap)),HelpMessage="Room volume on a large ship.")
++Profiles=(Name="IgnoreAll",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Used for cases where we only want the shape and enabled/disabled condition.")
++Profiles=(Name="IgnoreOnlyPawn",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that ignores Pawn and Vehicle. All other channels will be set to default.")
++Profiles=(Name="InvisibleWall",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldStatic object that is invisible.")
++Profiles=(Name="InvisibleWallDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that is invisible.")
++Profiles=(Name="Landscape",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Landscape"),(Channel="OverlapDowncast"),(Channel="LandscapeAndWater")),HelpMessage="Used for map landscapes.")
++Profiles=(Name="LandscapeHole",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="Landscape",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Used for landscape holes (for trenches).")
++Profiles=(Name="LargeShipMesh",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Work"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="")
++Profiles=(Name="NoBuildArea",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="No build area")
++Profiles=(Name="NoCollision",CollisionEnabled=NoCollision,bCanModify=False,ObjectTypeName="IgnoredObjectChannel",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="Used to disable collision completely.")
++Profiles=(Name="ObscuringSmoke",CollisionEnabled=NoCollision,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="Volume used for smoke that obscure players.")
++Profiles=(Name="OverlapAll",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="OverlapAllDynamic",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="OverlapIgnoreDowncast",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="Overlap objects but ignore downcast so it doesn\'t affect aiming")
++Profiles=(Name="OverlapMapMarker",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Used to detect when player enters a map marker area")
++Profiles=(Name="OverlapOnlyCamera",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Overlap only Camera")
++Profiles=(Name="OverlapOnlyPawn",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that overlaps Pawn, Camera, and Vehicle. All other channels will be set to default. ")
++Profiles=(Name="OverlapOnlyPawnVehicle",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="WorldDynamic object that overlaps only pawns and vehicles. Everything else is ignored.")
++Profiles=(Name="OverlapOnlyWork",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap)),HelpMessage="Only Work is set to Overlap.  This is used when multiple work volumes may overlap naturally (ie Barge).")
++Profiles=(Name="Pawn",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Pawn object. Can be used for capsule of any playerable character or AI. ")
++Profiles=(Name="PhysicsActor",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="PhysicsBody",CustomResponses=,HelpMessage="Simulating actors")
++Profiles=(Name="Projectile",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Projectile",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)),HelpMessage="Profile for greandes, rockets etc.")
++Profiles=(Name="Ragdoll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="PhysicsBody",CustomResponses=((Channel="Pawn",Response=ECR_Ignore)),HelpMessage="Simulating Skeletal Mesh Component. All other channels will be set to default.")
++Profiles=(Name="ResourceNoPawnCollision",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work"),(Channel="Excavate")),HelpMessage="On resources that the player and vehicles can clip through")
++Profiles=(Name="ShipRoot",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap)),HelpMessage="Collision preset for ships.")
++Profiles=(Name="ShipHullMesh",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="Used for ship hull meshes negating the effects of water.")
++Profiles=(Name="ShootThroughDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="Needs description")
++Profiles=(Name="ShootThroughProjectileDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Allow aiming, shooting, and projectiles")
++Profiles=(Name="ShootThroughStatic",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap)),HelpMessage="Needs description")
++Profiles=(Name="Spectator",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic"),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore)),HelpMessage="Pawn object that ignores all other actors except WorldStatic.")
++Profiles=(Name="StructureBuildSite",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Work"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Used for structure build sites in some cases.")
++Profiles=(Name="StructureDamageableMesh",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Work"),(Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Structure meshes that are included in damage collisions")
++Profiles=(Name="StructureDamageableSeeThroughMesh",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Work"),(Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="For see through damageable structures")
++Profiles=(Name="StructureDamageableSeeThroughAndAimMesh",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Overlap),(Channel="Work"),(Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="For see through damageable structures that overlap OverlapDowncast")
++Profiles=(Name="StructureDamageableVToggleMesh",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Work"),(Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="Structure meshes that are included in damage collisions")
++Profiles=(Name="StructureShootAndSeeThroughMesh",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="For structure parts that can\'t be hit and that also don\'t block visibility or weapon traces.")
++Profiles=(Name="StructureUseVolume",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="For structures - Overlaps pawn only")
++Profiles=(Name="StructureVisibilityTrigger",CollisionEnabled=NoCollision,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="For volumes used to trigger visibility changes on structure parts (e.g. roofs)")
++Profiles=(Name="Suppression",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="IgnoredObjectChannel",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Suppression",Response=ECR_Overlap)),HelpMessage="Used for suppression specific volumes.")
++Profiles=(Name="TankRoot",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work")),HelpMessage="preset for tanks - no vis, landscape, or overlap downcasts")
++Profiles=(Name="Trigger",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldDynamic object that is used for trigger. All other channels will be set to default.")
++Profiles=(Name="UI",CollisionEnabled=QueryOnly,bCanModify=False,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility"),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap)),HelpMessage="WorldStatic object that overlaps all actors by default. All new custom channels will use its own default response. ")
++Profiles=(Name="Vehicle",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="Vehicle",CustomResponses=,HelpMessage="Vehicle object that blocks Vehicle, WorldStatic, and WorldDynamic. All other channels will be set to default.")
++Profiles=(Name="VehicleBuildSite",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Work"),(Channel="Damage",Response=ECR_Overlap)),HelpMessage="To be set on the \'Box\' component on vehicle build sites")
++Profiles=(Name="VehicleCapsule",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="Pawn",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="Vehicle capsule profile.")
++Profiles=(Name="VehicleRoot",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Work")),HelpMessage="Standard vehicle root that should work with most vehicles.")
++Profiles=(Name="Water",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Overlap),(Channel="LandscapeAndWater")),HelpMessage="Used for water volumes.")
++Profiles=(Name="WaterCull",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="WorldStatic",Response=ECR_Overlap),(Channel="WorldDynamic",Response=ECR_Overlap),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="For volumes used to negate water volumes in extreme circumstances or when geo is too low and sits inside the water volume logically but not visually. ")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel1,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="Landscape")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel2,DefaultResponse=ECR_Overlap,bTraceType=True,bStaticObject=False,Name="OverlapDowncast")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel3,DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False,Name="Projectile")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel4,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="Work")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel5,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="LandscapeAndWater")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel6,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="Excavate")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel7,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="Suppression")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel8,DefaultResponse=ECR_Ignore,bTraceType=False,bStaticObject=False,Name="IgnoredObjectChannel")
++DefaultChannelResponses=(Channel=ECC_GameTraceChannel9,DefaultResponse=ECR_Ignore,bTraceType=True,bStaticObject=False,Name="Damage")
++EditProfiles=(Name="Ragdoll",CustomResponses=((Channel="Camera",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore)))
++EditProfiles=(Name="OverlapAll",CustomResponses=((Channel="Projectile",Response=ECR_Overlap)))
++EditProfiles=(Name="OverlapAllDynamic",CustomResponses=((Channel="Projectile",Response=ECR_Overlap)))
++EditProfiles=(Name="Spectator",CustomResponses=((Channel="Projectile",Response=ECR_Ignore)))
++EditProfiles=(Name="Trigger",CustomResponses=((Channel="Projectile",Response=ECR_Overlap)))
++EditProfiles=(Name="UI",CustomResponses=((Channel="Projectile",Response=ECR_Overlap),(Channel="Visibility")))
++EditProfiles=(Name="BlockAllDynamic",CustomResponses=((Channel="Work"),(Channel="Damage",Response=ECR_Overlap)))
++EditProfiles=(Name="Pawn",CustomResponses=((Channel="Excavate"),(Channel="Damage",Response=ECR_Overlap)))
++EditProfiles=(Name="CharacterMesh",CustomResponses=((Channel="Damage",Response=ECR_Overlap)))
++EditProfiles=(Name="BlockAll",CustomResponses=((Channel="Damage",Response=ECR_Overlap)))
++EditProfiles=(Name="Vehicle",CustomResponses=((Channel="Damage",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore)))
++EditProfiles=(Name="OverlapOnlyPawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)))
++EditProfiles=(Name="IgnoreOnlyPawn",CustomResponses=((Channel="Visibility",Response=ECR_Ignore)))
++EditProfiles=(Name="NoCollision",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)))
++ProfileRedirects=(OldName="BlockingVolume",NewName="InvisibleWall")
++ProfileRedirects=(OldName="InterpActor",NewName="IgnoreOnlyPawn")
++ProfileRedirects=(OldName="StaticMeshComponent",NewName="BlockAllDynamic")
++ProfileRedirects=(OldName="SkeletalMeshActor",NewName="PhysicsActor")
++ProfileRedirects=(OldName="InvisibleActor",NewName="InvisibleWallDynamic")
++ProfileRedirects=(OldName="ShootThroughDynamic",NewName="ShootThroughStatic")
++ProfileRedirects=(OldName="HeavilyFlooded",NewName="RoomHeavilyFlooded")
++CollisionChannelRedirects=(OldName="Static",NewName="WorldStatic")
++CollisionChannelRedirects=(OldName="Dynamic",NewName="WorldDynamic")
++CollisionChannelRedirects=(OldName="VehicleMovement",NewName="Vehicle")
++CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
+
+[/Script/UnrealEd.CookerSettings]
+bEnableCookOnTheSide=False
+bEnableBuildDDCInBackground=False
+bIterativeCookingForLaunchOn=False
+bIterativeCookingForFileCookContent=False
+bCookOnTheFlyForLaunchOn=False
+cook.displaymode=1
+bIgnoreIniSettingsOutOfDateForIteration=False
+bIgnoreScriptPackagesOutOfDateForIteration=False
+bCompileBlueprintsInDevelopmentMode=True
+BlueprintComponentDataCookingMethod=EnabledBlueprintsOnly
++ClassesExcludedOnDedicatedServer=WidgetBlueprint
++ClassesExcludedOnDedicatedServer=GroupActor
++ClassesExcludedOnDedicatedServer=MetaData
++ClassesExcludedOnDedicatedServer=ObjectRedirector
++ClassesExcludedOnDedicatedServer=NavMeshRenderingComponent
++ClassesExcludedOnDedicatedServer=ReflectionCaptureComponent
++ClassesExcludedOnDedicatedServer=TextRenderComponent
++ClassesExcludedOnDedicatedServer=Font
++ClassesExcludedOnDedicatedServer=InterpCurveEdSetup
++ClassesExcludedOnDedicatedServer=MaterialExpression
++ClassesExcludedOnDedicatedServer=MatineeActorCameraAnim
++ClassesExcludedOnDedicatedServer=ParticleEmitter
++ClassesExcludedOnDedicatedServer=ParticleLODLevel
++ClassesExcludedOnDedicatedServer=ParticleModule
++ClassesExcludedOnDedicatedServer=SubUVAnimation
++ClassesExcludedOnDedicatedServer=SoundNode
++ClassesExcludedOnDedicatedServer=GameplayEffectUIData
++ClassesExcludedOnDedicatedClient=WidgetBlueprint
++ClassesExcludedOnDedicatedClient=GroupActor
++ClassesExcludedOnDedicatedClient=MetaData
++ClassesExcludedOnDedicatedClient=ObjectRedirector
++ClassesExcludedOnDedicatedClient=InterpCurveEdSetup
++ClassesExcludedOnDedicatedClient=MatineeActorCameraAnim
++VersionedIntRValues=r.AllowStaticLighting
++VersionedIntRValues=r.GBuffer
++VersionedIntRValues=r.BasePassOutputsVelocity
++VersionedIntRValues=r.SelectiveBasePassOutputs
++VersionedIntRValues=r.DBuffer
++VersionedIntRValues=r.Shaders.KeepDebugInfo
++VersionedIntRValues=r.Shaders.Optimize
++VersionedIntRValues=r.CompileShadersForDevelopment
++VersionedIntRValues=r.MobileHDR
++VersionedIntRValues=r.UsePreExposure
+DefaultPVRTCQuality=1
+DefaultASTCQualityBySpeed=1
+DefaultASTCQualityBySize=3
+cook.AllowCookedDataInEditorBuilds=False
+bCookBlueprintComponentTemplateData=False
+
+

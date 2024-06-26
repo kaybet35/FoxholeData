@@ -1,0 +1,235 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'RifleHeavyCShot_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 2000.0,
+        "LPFFrequencyAtMin": 2400.0,
+        "LPFFrequencyAtMax": 10000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 11000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 3.363375,
+      "MaxDistance": 12500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Rifles'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Rifles.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      },
+      "AttenuationOverrides": {
+        "LPFRadiusMin": 2000.0,
+        "LPFFrequencyAtMax": 6000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 2000.0
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'RifleHeavyCShot_Cue:SoundNodeMixer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.7,
+      "DelayMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'RifleHeavyCShot_Cue:SoundNodeAttenuation_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        2.0,
+        0.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'RifleHeavyCShot_Cue:SoundNodeModulator_10'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeModulator'RifleHeavyCShot_Cue:SoundNodeModulator_11'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_1",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        2.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RifleHeavyCShot_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'RifleHeavyCShot_Cue:SoundNodeRandom_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_11",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'RifleHeavyCShot_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RifleHeavyCShot_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RifleHeavyCShot_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RifleHeavyCShot_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RifleHeavyCShot_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/RelicRifle/RelicRifleShot01.RelicRifleShot01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/RelicRifle/RelicRifleShot02.RelicRifleShot02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/RelicRifle/RelicRifleShot03.RelicRifleShot03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "RifleHeavyCShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/RelicRifle/RelicRifleLever.RelicRifleLever",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RelicRifleLever'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/RelicRifle/RelicRifleLever.0"
+    }
+  }
+]

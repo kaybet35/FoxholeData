@@ -1,0 +1,281 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Mesh",
+    "Outer": "BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPArmoredCarTwinCRPGProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPArmoredCarTwinCRPGProjectile_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPArmoredCarTwinCRPGProjectile_C'Default__BPArmoredCarTwinCRPGProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.2"
+    }
+  },
+  {
+    "Type": "BPArmoredCarTwinCRPGProjectile_C",
+    "Name": "Default__BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.BPArmoredCarTwinCRPGProjectile_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPArmoredCarTwinCRPGProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.5"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPArmoredCarTwinCRPGProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.10"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPArmoredCarTwinCRPGProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPArmoredCarTwinCRPGProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'RPGExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RPGExplosion.1"
+      },
+      "ExplosiveCodeName": "RpgAmmo",
+      "AutoDetonateTime": 1.2,
+      "ProjectileDeathDelay": 8.0,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPArmoredCarTwinCRPGProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RPGLoop'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/RPGLoop.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPArmoredCarTwinCRPGProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.10"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'SmokeTrail'",
+        "ObjectPath": "War/Content/FX/SmokeTrail.18"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPArmoredCarTwinCRPGProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.10"
+      },
+      "RelativeLocation": {
+        "X": -48.873615,
+        "Y": -6.484985E-05,
+        "Z": -8.3306804E-07
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "ProjectileGravityScale": 0.4
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPArmoredCarTwinCRPGProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.6"
+      },
+      "VariableGuid": "AF3504CB-4A663998-49D95DB7-C638B653",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPArmoredCarTwinCRPGProjectile_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.11"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "555B364E-4B8B9C2C-844BD88C-A5E695D7",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPArmoredCarTwinCRPGProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPArmoredCarTwinCRPGProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPArmoredCarTwinCRPGProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPArmoredCarTwinCRPGProjectile.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.008392
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "BPArmoredCarTwinCRPGProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RpgAmmo'",
+        "ObjectPath": "War/Content/Meshes/Pickups/RpgAmmo.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -30.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

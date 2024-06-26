@@ -1,0 +1,986 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_Freighter_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "DoorAndPlatform",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Deployed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Deploying",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Undeploying",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_Freighter_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_Freighter_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.31"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.34"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.33"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.15"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.30"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.32"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.14"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3'",
+            "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.29"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_Freighter_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FreighterAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.0"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.13"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.15"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.17"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.18"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.19"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.16"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.14"
+      },
+      {
+        "ObjectName": "Function'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_Root_12F0AFD74427BA5942FBB8A8ACCB2354'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_SequencePlayer_EC714E444807B6A2C5FE818EB109DA72'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_StateResult_2FE13F0D4AA184857C7D54A0E8C34C0B'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_SequencePlayer_5668D8BE48211DD951DEE6AB9A14F457'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_StateResult_C2D9E8624787FF2766A0C29273B6EF9D'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_SequencePlayer_96C8CD034A0CE0C1875300975066BD8A'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_StateResult_79D3F61D467D454ACEB2CB9964F0206A'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_SequencePlayer_CE29E4A5476F3173B3551A92312C93CF'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_StateResult_F9F97637470DC9793CF3FE9D45F0E1CB'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraphNode_StateMachine_A2BE599649E60C69861CBDA5C680F15E'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.24"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_Freighter": {
+        "ObjectName": "Function'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3": {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.14"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120": {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0": {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616": {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528": {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668": {
+        "ObjectName": "Function'ABP_Freighter_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.15"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_Freighter_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.13"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_Freighter_C'Default__ABP_Freighter_C'",
+      "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.2"
+    }
+  },
+  {
+    "Type": "ABP_Freighter_C",
+    "Name": "Default__ABP_Freighter_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.ABP_Freighter_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_12F0AFD74427BA5942FBB8A8ACCB2354": {
+        "Result": {
+          "LinkID": 15
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_EC714E444807B6A2C5FE818EB109DA72": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_Freighter_closing'",
+          "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/Anim_Freighter_closing.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.5,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2FE13F0D4AA184857C7D54A0E8C34C0B": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_5668D8BE48211DD951DEE6AB9A14F457": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_Freighter_opening'",
+          "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/Anim_Freighter_opening.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.5,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C2D9E8624787FF2766A0C29273B6EF9D": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_96C8CD034A0CE0C1875300975066BD8A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_Freighter_opening'",
+          "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/Anim_Freighter_opening.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 100.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_79D3F61D467D454ACEB2CB9964F0206A": {
+        "Result": {
+          "LinkID": 11
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_CE29E4A5476F3173B3551A92312C93CF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_Freighter_closing'",
+          "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/Anim_Freighter_closing.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 100.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F9F97637470DC9793CF3FE9D45F0E1CB": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_A2BE599649E60C69861CBDA5C680F15E": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_12F0AFD74427BA5942FBB8A8ACCB2354",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_Freighter",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Freighter_C:ExecuteUbergraph_ABP_Freighter.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.11"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_Freighter",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_Freighter_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WaterVehicles/Freighter/ABP_Freighter.12"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Freighter_AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_5668D8BE48211DD951DEE6AB9A14F457",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_96C8CD034A0CE0C1875300975066BD8A",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CE29E4A5476F3173B3551A92312C93CF",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_EC714E444807B6A2C5FE818EB109DA72",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_A2BE599649E60C69861CBDA5C680F15E",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_2FE13F0D4AA184857C7D54A0E8C34C0B",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_79D3F61D467D454ACEB2CB9964F0206A",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C2D9E8624787FF2766A0C29273B6EF9D",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F9F97637470DC9793CF3FE9D45F0E1CB",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0E007BE14807F354AF4CB2B87E7622D3",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_69313F7F430E7F507766638B3236A668",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_82D62E2D4255A522DDCDFAAF1FE23120",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_AE0A60E84E8CBD3ABFC65E9F07C8B528",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B697FA1840FE08AEA24605A3509F6616",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_ED7693044AC425F2B383A0819FF74EB0",
+    "Outer": "ABP_Freighter_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

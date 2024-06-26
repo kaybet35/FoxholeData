@@ -1,0 +1,63 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "FieldBridgeExplosion_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'FieldBridgeExplosion_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Structure/FieldBridge/FieldBridgeExplosion_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 20000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 2.7793126,
+      "MaxDistance": 15200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Grenades'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Grenades.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "FieldBridgeExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'FieldBridgeExplosion_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/FieldBridge/FieldBridgeExplosion_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "FieldBridgeExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/FieldBridge/FieldBridgeExplosion.FieldBridgeExplosion",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FieldBridgeExplosion'",
+      "ObjectPath": "War/Content/Audio/SFX/Structure/FieldBridge/FieldBridgeExplosion.0"
+    }
+  }
+]

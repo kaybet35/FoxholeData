@@ -1,0 +1,287 @@
+[
+  {
+    "Type": "Material",
+    "Name": "SimpleEmissive",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "EmissiveColor": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionVectorParameter_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Masked",
+      "ShadingModel": "MSM_Unlit",
+      "ShadingModels": {
+        "ShadingModelField": 1
+      },
+      "WorldPositionOffset": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionStaticSwitchParameter_1",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "bUsedWithSkeletalMesh": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionVectorParameter'SimpleEmissive:MaterialExpressionVectorParameter_0'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.9"
+        },
+        {
+          "ObjectName": "MaterialExpressionStaticSwitchParameter'SimpleEmissive:MaterialExpressionStaticSwitchParameter_1'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.8"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'SimpleEmissive:MaterialExpressionMaterialFunctionCall_7'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'SimpleEmissive:MaterialExpressionScalarParameter_10'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.3"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'SimpleEmissive:MaterialExpressionScalarParameter_11'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'SimpleEmissive:MaterialExpressionScalarParameter_12'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.5"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'SimpleEmissive:MaterialExpressionScalarParameter_4'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.7"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'SimpleEmissive:MaterialExpressionMaterialFunctionCall_6'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'SimpleEmissive:MaterialExpressionScalarParameter_20'",
+          "ObjectPath": "War/Content/Materials/SimpleEmissive.6"
+        },
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "49637CE3-497F6537-F49E7E96-78C0735F",
+          "Function": {
+            "ObjectName": "MaterialFunction'SimpleGrassWind'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/WorldPositionOffset/SimpleGrassWind.0"
+          }
+        },
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "22D58D0F-45CC84AB-89A3628B-351D83C8",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+          }
+        }
+      ],
+      "StateId": "510CBD3E-4C2938DC-B512FAAA-1F2A7957",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_6",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'DitherTemporalAA'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+      },
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_7",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'SimpleGrassWind'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/WorldPositionOffset/SimpleGrassWind.0"
+      },
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_10",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "ParameterName": "WindPower",
+      "ExpressionGUID": "214DB76D-4F1E201C-E414BFBF-36DB24EC",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_11",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "ParameterName": "WindWeight",
+      "ExpressionGUID": "5525D74E-4BF012C5-F7729DB3-D9571DA8",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_12",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "ParameterName": "WindSpeed",
+      "ExpressionGUID": "188A2208-49D08EF8-EE8CF08F-B3BBF154",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_20",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 1.0,
+      "ParameterName": "OverlapOpacity",
+      "ExpressionGUID": "03330AF4-4629AFBC-8DA5C7BF-B6B7ABD3",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_4",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "ParameterName": "WPO",
+      "ExpressionGUID": "11F83C4B-42F8D50E-7DA4DF9F-8A7FA083",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionStaticSwitchParameter",
+    "Name": "MaterialExpressionStaticSwitchParameter_1",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+    "Properties": {
+      "A": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_7"
+      },
+      "B": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionConstant_9"
+      },
+      "ParameterName": "Movement",
+      "ExpressionGUID": "EBD1E660-42156264-18EC609E-2D5AF031",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionVectorParameter",
+    "Name": "MaterialExpressionVectorParameter_0",
+    "Outer": "SimpleEmissive",
+    "Class": "UScriptClass'MaterialExpressionVectorParameter'",
+    "Properties": {
+      "DefaultValue": {
+        "R": 0.985,
+        "G": 0.518298,
+        "B": 0.013668,
+        "A": 0.0,
+        "Hex": "FEBF1F"
+      },
+      "ParameterName": "Color",
+      "ExpressionGUID": "D336D054-4EE55B30-A8E983A7-E71DE5AF",
+      "Material": {
+        "ObjectName": "Material'SimpleEmissive'",
+        "ObjectPath": "War/Content/Materials/SimpleEmissive.0"
+      }
+    }
+  }
+]

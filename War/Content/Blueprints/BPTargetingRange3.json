@@ -1,0 +1,237 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "DamagedWall",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPTargetingRange3_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPTargetingRange3_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TargetingRange'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTargetingRange3_C:DamagedWall'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTargetingRange3_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.4"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTargetingRange3_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.5"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTargetingRange3_C'Default__BPTargetingRange3_C'",
+      "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.2"
+    }
+  },
+  {
+    "Type": "BPTargetingRange3_C",
+    "Name": "Default__BPTargetingRange3_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/BPTargetingRange3.BPTargetingRange3_C'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 1.4794235,
+        "Y": 2.5477524,
+        "Z": 198.34883
+      },
+      "RelativeScale3D": {
+        "X": 6.2009377,
+        "Y": 0.31914315,
+        "Z": 6.300515
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPTargetingRange3_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.6"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.9"
+        }
+      ],
+      "VariableGuid": "346739DB-4D8549FD-9DEF1280-7FC7F70D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPTargetingRange3_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.3"
+      },
+      "VariableGuid": "386CFF16-4E1160AC-FA07DF96-CE2B4795",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPTargetingRange3_C:DamagedWall_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.11"
+      },
+      "VariableGuid": "412D89F5-497B0096-4605608D-9120C537",
+      "InternalVariableName": "DamagedWall"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.7"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPTargetingRange3_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/BPTargetingRange3.7"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DamagedWall_GEN_VARIABLE",
+    "Outer": "BPTargetingRange3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'DamagedWall'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/DamagedWall.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,1058 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "idleToShooting",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "idleToCranking",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "cranking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 10,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                11
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_HeavyArtilleryC_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/SK_HeavyArtilleryC_Skeleton.2"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'EmplacedWeaponAnimInstance:Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_RotationOffsetBlendSpace_2DDE83D246B2EBE215714A89F1E0001A'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.13"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsShooting",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'EmplacedWeaponAnimInstance:bIsShooting'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_2EB8C5E44753D3F6DBD173B20C78173D'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.23"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_HeavyArtilleryC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.26"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCranking",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'EmplacedWeaponAnimInstance:bIsCranking'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_AB40B22A4D88F1F3B6A59F8CD6E21F70'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCranking",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'EmplacedWeaponAnimInstance:bIsCranking'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_556FA1DF4FA1D85CAB4A17B4D649A1C4'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'EmplacedWeaponAnimInstance:Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_BlendSpacePlayer_E155E44A47BD7EF821177F9640C8280A'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.11"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'EmplacedWeaponAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.0"
+      },
+      {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.9"
+      },
+      {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.10"
+      },
+      {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_Root_453069344B9024DCD49B6BA18F5BAD3F'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_BlendSpacePlayer_E155E44A47BD7EF821177F9640C8280A'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_LayeredBoneBlend_D693470243A714CC674E289A535CCEFA'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_556FA1DF4FA1D85CAB4A17B4D649A1C4'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_AB40B22A4D88F1F3B6A59F8CD6E21F70'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_SequencePlayer_FACBB31744357CA2C9A023B57EF18197'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_StateResult_C09850FC4C687F70711C50A6892DB154'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_StateResult_FF2F30CE4D03D5F4F50338915DD3C34F'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_StateMachine_A9EA233145B109086391D6808A10807B'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_TransitionResult_2EB8C5E44753D3F6DBD173B20C78173D'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_SequencePlayer_E2919B324E748A6A22C96D8DAEC8354D'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_StateResult_E1ED040549A03A8093E78997B538BC0B'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_SequencePlayer_20841D194DBC2EDC885C8EA3C118EEBD'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_StateResult_DE557BD545FED33BC4C3D7B4E4A6B7B0'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_StateMachine_AED157D7476EC512644CD088809A9CF9'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraphNode_RotationOffsetBlendSpace_2DDE83D246B2EBE215714A89F1E0001A'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.13"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_HeavyArtilleryC": {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC": {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.10"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_HeavyArtilleryC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_HeavyArtilleryC_C'Default__ABP_HeavyArtilleryC_C'",
+      "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.2"
+    }
+  },
+  {
+    "Type": "ABP_HeavyArtilleryC_C",
+    "Name": "Default__ABP_HeavyArtilleryC_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.ABP_HeavyArtilleryC_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_453069344B9024DCD49B6BA18F5BAD3F": {
+        "Result": {
+          "LinkID": 2
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_E155E44A47BD7EF821177F9640C8280A": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_HeavyArtilleryC_rotate'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/BS_HeavyArtilleryC_rotate.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_D693470243A714CC674E289A535CCEFA": {
+        "BasePose": {
+          "LinkID": 1
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 16
+          },
+          {
+            "LinkID": 8
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "verticalPivot",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "rodbottomR",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "rodbottomL",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "crank",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "EB6E2A73-4D93B7D1-8BA17E88-9600B6BD",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_TransitionResult_556FA1DF4FA1D85CAB4A17B4D649A1C4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_AB40B22A4D88F1F3B6A59F8CD6E21F70": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_FACBB31744357CA2C9A023B57EF18197": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HeavyArtilleryC_crank'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/Anim_HeavyArtilleryC_crank.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C09850FC4C687F70711C50A6892DB154": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_FF2F30CE4D03D5F4F50338915DD3C34F": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_A9EA233145B109086391D6808A10807B": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2EB8C5E44753D3F6DBD173B20C78173D": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E2919B324E748A6A22C96D8DAEC8354D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HeavyArtilleryC_shooting'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/Anim_HeavyArtilleryC_shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E1ED040549A03A8093E78997B538BC0B": {
+        "Result": {
+          "LinkID": 11
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_20841D194DBC2EDC885C8EA3C118EEBD": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_HeavyArtilleryC_rotate_front'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/Anim_HeavyArtilleryC_rotate_front.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_DE557BD545FED33BC4C3D7B4E4A6B7B0": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_AED157D7476EC512644CD088809A9CF9": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_2DDE83D246B2EBE215714A89F1E0001A": {
+        "BasePose": {
+          "LinkID": 15
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'AO_HeavyArtilleryC_Pitch'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AO_HeavyArtilleryC_Pitch.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_453069344B9024DCD49B6BA18F5BAD3F",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_HeavyArtilleryC",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_HeavyArtilleryC",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_HeavyArtilleryC",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_HeavyArtilleryC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_HeavyArtilleryC_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_HeavyArtilleryC.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_E155E44A47BD7EF821177F9640C8280A",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_D693470243A714CC674E289A535CCEFA",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_2DDE83D246B2EBE215714A89F1E0001A",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_20841D194DBC2EDC885C8EA3C118EEBD",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E2919B324E748A6A22C96D8DAEC8354D",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FACBB31744357CA2C9A023B57EF18197",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_A9EA233145B109086391D6808A10807B",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_AED157D7476EC512644CD088809A9CF9",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C09850FC4C687F70711C50A6892DB154",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_DE557BD545FED33BC4C3D7B4E4A6B7B0",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E1ED040549A03A8093E78997B538BC0B",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FF2F30CE4D03D5F4F50338915DD3C34F",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_2EB8C5E44753D3F6DBD173B20C78173D",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_556FA1DF4FA1D85CAB4A17B4D649A1C4",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_AB40B22A4D88F1F3B6A59F8CD6E21F70",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC",
+    "Outer": "ABP_HeavyArtilleryC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

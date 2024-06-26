@@ -1,0 +1,308 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPMechWRocketProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPMechWRocketProjectile_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMechWRocketProjectile_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.4"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMechWRocketProjectile_C'Default__BPMechWRocketProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.2"
+    }
+  },
+  {
+    "Type": "BPMechWRocketProjectile_C",
+    "Name": "Default__BPMechWRocketProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPMechWRocketProjectile.BPMechWRocketProjectile_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPMechWRocketProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.6"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPMechWRocketProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.12"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPMechWRocketProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.5"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPMechWRocketProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'BPMechWRocketExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketExplosion.1"
+      },
+      "ExplosiveCodeName": "RpgAmmo",
+      "AutoDetonateTime": 1.333333,
+      "ProjectileDeathDelay": 8.0,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPMechWRocketProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RPGLoop'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/RPGLoop.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPMechWRocketProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.12"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Mesh",
+    "Outer": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'MechWRocketTrail'",
+        "ObjectPath": "War/Content/FX/MechWRocketTrail.18"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPMechWRocketProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.12"
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "ProjectileGravityScale": 0.4
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPMechWRocketProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.7"
+      },
+      "VariableGuid": "AF3504CB-4A663998-49D95DB7-C638B653",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPMechWRocketProjectile_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.13"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "555B364E-4B8B9C2C-844BD88C-A5E695D7",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPMechWRocketProjectile_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.14"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "EE8004D1-4BE7C590-A6E9FC9A-61E7BD12",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPMechWRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMechWRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPMechWRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMechWRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPMechWRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMechWRocketProjectile.8"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.008392
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RpgAmmo'",
+        "ObjectPath": "War/Content/Meshes/Pickups/RpgAmmo.2"
+      },
+      "RelativeLocation": {
+        "X": -17.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.6812637,
+        "Y": 0.5756706,
+        "Z": 0.5756706
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPMechWRocketProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'MechFire'",
+        "ObjectPath": "War/Content/FX/Mesh/MechFire.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'FireStatic'",
+          "ObjectPath": "War/Content/FX/Materials/FireStatic.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -54.13205,
+        "Y": 3.8146973E-06,
+        "Z": -0.40753648
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 180.0,
+        "Roll": 180.0
+      },
+      "RelativeScale3D": {
+        "X": -0.0638888,
+        "Y": -0.0638888,
+        "Z": 0.31123257
+      }
+    }
+  }
+]

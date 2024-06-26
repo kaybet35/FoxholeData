@@ -1,0 +1,96 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "TrainHorn_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'TrainHorn_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Trains/TrainHorn_Cue.2"
+      },
+      "VolumeMultiplier": 2.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.7,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "TrainHorn_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.7,
+      "DelayMax": 0.7,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'TrainHorn_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Trains/TrainHorn_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "TrainHorn_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'TrainHorn_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Trains/TrainHorn_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'TrainHorn_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Trains/TrainHorn_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "TrainHorn_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Trains/TrainhornStart.TrainhornStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'TrainhornStart'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/Trains/TrainhornStart.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "TrainHorn_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Trains/TrainhornLoop.TrainhornLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'TrainhornLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/Trains/TrainhornLoop.0"
+    }
+  }
+]

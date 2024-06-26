@@ -1,0 +1,836 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "UseVolume",
+    "Outer": "BPTrainFlatbed_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPTrainFlatbed_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPTrainFlatbed_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.35"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FlatbedRailVehicle'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTrainFlatbed_C:UseVolume'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTrainFlatbed_C'Default__BPTrainFlatbed_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.2"
+    }
+  },
+  {
+    "Type": "BPTrainFlatbed_C",
+    "Name": "Default__BPTrainFlatbed_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.BPTrainFlatbed_C'",
+    "Properties": {
+      "BaseMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPTrainFlatbed_C:BaseMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.37"
+      },
+      "RopeMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPTrainFlatbed_C:RopeMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.39"
+      },
+      "TransferLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:TransferLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.32"
+      },
+      "GlobalShippableInfo": {
+        "ObjectName": "BlueprintGeneratedClass'BPGlobalShippableInfo_C'",
+        "ObjectPath": "War/Content/Blueprints/Data/BPGlobalShippableInfo.0"
+      },
+      "WheelBase": 510.0,
+      "FrontCoupler": {
+        "ObjectName": "RailCouplerUseComponent'Default__BPTrainFlatbed_C:FrontCoupler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.22"
+      },
+      "RearCoupler": {
+        "ObjectName": "RailCouplerUseComponent'Default__BPTrainFlatbed_C:RearCoupler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.23"
+      },
+      "CouplerCableMaterial": {
+        "ObjectName": "MaterialInstanceConstant'CouplerChain'",
+        "ObjectPath": "War/Content/Materials/Vehicles/CouplerChain.0"
+      },
+      "IdleLoop": {
+        "ObjectName": "AudioComponent'Default__BPTrainFlatbed_C:IdleLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.8"
+      },
+      "BrakeLoop": {
+        "ObjectName": "AudioComponent'Default__BPTrainFlatbed_C:BrakeLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.5"
+      },
+      "FrontClacks": {
+        "ObjectName": "AudioComponent'Default__BPTrainFlatbed_C:FrontClacks'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.7"
+      },
+      "RearClacks": {
+        "ObjectName": "AudioComponent'Default__BPTrainFlatbed_C:RearClacks'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.9"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "14F8A7854309E2C31DCC01BCB1E14A78",
+        "SourceString": "BMS Longrider",
+        "LocalizedString": "BMS Longrider"
+      },
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "1792CEF147D68089B641D3BC8CAA1387",
+        "SourceString": "Flatbed Car",
+        "LocalizedString": "Flatbed Car"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "BD812A6742F1D60A2CA2E09E408378F3",
+        "SourceString": "A flatbed car for transporting large resources and munitions by train over long-distances. ",
+        "LocalizedString": "A flatbed car for transporting large resources and munitions by train over long-distances. "
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'TrainCarVehicleIcon'",
+        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/TrainCarVehicleIcon.0"
+      },
+      "TechID": "ETechID::UnlockTrainEngine",
+      "ShippableInfo": {
+        "Type": "EShippableType::Large"
+      },
+      "CodeName": "TrainFlatbed",
+      "VehicleProfileType": "EVehicleProfileType::RailCar",
+      "VehicleMovementProfileType": "EVehicleMovementProfileType::Truck",
+      "ArmourType": "EArmourType::Tier1Tank",
+      "bCanUseStructures": true,
+      "bIsStockpilable": false,
+      "DestroyedMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPTrainFlatbed_C:DestroyedMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.38"
+      },
+      "MinorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:MinorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.20"
+      },
+      "MajorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:MajorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.19"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DisabledTurretFX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:DisabledTurretFX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.18"
+      },
+      "DisabledTurret2FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:DisabledTurret2FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.14"
+      },
+      "DisabledTurret3FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:DisabledTurret3FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.15"
+      },
+      "DisabledTurret4FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:DisabledTurret4FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.16"
+      },
+      "DisabledTurret5FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTrainFlatbed_C:DisabledTurret5FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.17"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'VehicleDeath_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Truck/VehicleDeath_Cue.0"
+      },
+      "DriveLoop": {
+        "ObjectName": "AudioComponent'Default__BPTrainFlatbed_C:DriveLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.6"
+      },
+      "BackUpSFXLoop": {
+        "ObjectName": "AudioComponent'Default__BPTrainFlatbed_C:BackUpSFXLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.4"
+      },
+      "CameraRigComponent": {
+        "ObjectName": "PlayerCameraRigComponent'Default__BPTrainFlatbed_C:CameraRigVehicle'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.21"
+      },
+      "FrontAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:FrontAxelCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.26"
+      },
+      "RearAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:RearAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.29"
+      },
+      "FrontLeftRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:FrontRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.27"
+      },
+      "FrontRightRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:RearRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.30"
+      },
+      "LeftSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:LeftSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.28"
+      },
+      "RightSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPTrainFlatbed_C:RightSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.31"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      },
+      "PassengerArea": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:PassengerBaseBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.11"
+      },
+      "AFKTimeoutComponent": {
+        "ObjectName": "AFKTimeoutComponent'Default__BPTrainFlatbed_C:AFKTimeoutComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.3"
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPTrainFlatbed_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.40"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPTrainFlatbed_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.36"
+      },
+      "CharacterMovement": {
+        "ObjectName": "RailVehicleMovementComponent'Default__BPTrainFlatbed_C:CharMoveComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.24"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "AFKTimeoutComponent",
+    "Name": "AFKTimeoutComponent",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AFKTimeoutComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BackUpSFXLoop",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BrakeLoop",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "DriveLoop",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FrontClacks",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleLoop",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "RearClacks",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseVolume_GEN_VARIABLE",
+    "Outer": "BPTrainFlatbed_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 426.0,
+        "Y": 270.0,
+        "Z": 100.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "StructureUseVolume",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PassengerBaseBox",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "VehicleCollision",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 426.0,
+        "Y": 175.0,
+        "Z": 80.0
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPTrainFlatbed_C'Default__BPTrainFlatbed_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.2"
+            },
+            "FunctionName": "VehicleCollisionTouched"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "CapsuleHalfHeight": 120.0,
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret2FX",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret3FX",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret4FX",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret5FX",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurretFX",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MajorDamagePS",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MinorDamagePS",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "PlayerCameraRigComponent",
+    "Name": "CameraRigVehicle",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'PlayerCameraRigComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      },
+      "RelativeRotation": {
+        "Pitch": -60.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "RailCouplerUseComponent",
+    "Name": "FrontCoupler",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'RailCouplerUseComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      },
+      "RelativeLocation": {
+        "X": 426.0,
+        "Y": 0.0,
+        "Z": -14.0
+      }
+    }
+  },
+  {
+    "Type": "RailCouplerUseComponent",
+    "Name": "RearCoupler",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'RailCouplerUseComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      },
+      "RelativeLocation": {
+        "X": -426.0,
+        "Y": 0.0,
+        "Z": -14.0
+      }
+    }
+  },
+  {
+    "Type": "RailVehicleMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'RailVehicleMovementComponent'",
+    "Properties": {
+      "FrictionForceCurve": {
+        "ObjectName": "CurveFloat'RailFrictionCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/RailFrictionCurve.0"
+      },
+      "BrakingFrictionForceCurve": {
+        "ObjectName": "CurveFloat'RailBrakingFrictionCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/RailBrakingFrictionCurve.0"
+      },
+      "Mass": 20000.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontAxelCastLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontRightAxleCastLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LeftSideTrackLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearAxleCastLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearRightAxleCastLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RightSideTrackLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransferLocation",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPTrainFlatbed_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.12"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 40.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPTrainFlatbed_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.25"
+      },
+      "VariableGuid": "1AD4B3D3-4EB946B9-EFFFDD88-815E4D6D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPTrainFlatbed_C:UseVolume_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.10"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2801FC88-483E5967-DE58B99A-E85EB25C",
+      "InternalVariableName": "UseVolume"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPTrainFlatbed_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTrainFlatbed_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.34"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTrainFlatbed_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.34"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPTrainFlatbed_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.33"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_TrainInfantry_C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainInfantry.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_TrainFlatbed'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_TrainFlatbed.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "OverrideMaterials": [
+        null
+      ],
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -120.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BaseMesh",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPTrainFlatbed_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.36"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 120.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DestroyedMesh",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPTrainFlatbed_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.13"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -120.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RopeMesh",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPTrainFlatbed_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainFlatbed.36"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 645.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPTrainFlatbed_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

@@ -1,0 +1,170 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "MainMesh",
+    "Outer": "BPShipPartBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPShipPartBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPShipPartBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TeamStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPShipPartBase_C:MainMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPShipPartBase_C'Default__BPShipPartBase_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.2"
+    }
+  },
+  {
+    "Type": "BPShipPartBase_C",
+    "Name": "Default__BPShipPartBase_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Ships/BPShipPartBase.BPShipPartBase_C'",
+    "Properties": {
+      "BuildCategory": "EBuildCategory::Shippables",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPShipPartBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPShipPartBase_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.4"
+      },
+      "TechID": "ETechID::UnlockFacilityVehicleFactory3",
+      "bIsStockpilable": true,
+      "bIsReserveStockpiled": true,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPShipPartBase_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.10"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPShipPartBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPShipPartBase_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPShipPartBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPShipPartBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPShipPartBase_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPShipPartBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.5"
+      },
+      "VariableGuid": "DC923832-4248E8C8-79E9D7B3-34669433",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPShipPartBase_C:MainMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.9"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "005F2631-4AA16E5E-A47872A6-C3DFD4EC",
+      "InternalVariableName": "MainMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPShipPartBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPShipPartBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPShipPartBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPShipPartBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Ships/BPShipPartBase.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MainMesh_GEN_VARIABLE",
+    "Outer": "BPShipPartBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'"
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPShipPartBase_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

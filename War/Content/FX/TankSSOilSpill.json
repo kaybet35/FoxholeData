@@ -1,0 +1,441 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'TankSSOilSpill:ParticleModuleRequired_3'",
+        "ObjectPath": "War/Content/FX/TankSSOilSpill.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'TankSSOilSpill:ParticleModuleLifetime_3'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'TankSSOilSpill:ParticleModuleSize_3'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.6"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'TankSSOilSpill:ParticleModuleVelocity_1'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.10"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'TankSSOilSpill:ParticleModuleColor_3'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'TankSSOilSpill:ParticleModuleSizeMultiplyLife_3'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.7"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'TankSSOilSpill:ParticleModuleAccelerationConstant_1'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.2"
+        }
+      ],
+      "TypeDataModule": {
+        "ObjectName": "ParticleModuleTypeDataMesh'TankSSOilSpill:ParticleModuleTypeDataMesh_1'",
+        "ObjectPath": "War/Content/FX/TankSSOilSpill.9"
+      },
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'TankSSOilSpill:ParticleModuleSpawn_3'",
+        "ObjectPath": "War/Content/FX/TankSSOilSpill.8"
+      },
+      "PeakActiveParticles": 22
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_1",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -1500.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_3",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 2.0,
+        "MaxValue": 2.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.35,
+        "MaxValue": 0.55,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.35,
+            0.55
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material'SmallSplash'",
+        "ObjectPath": "War/Content/FX/Materials/SmallSplash.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "bEmitterDurationUseRange": true,
+      "EmitterDuration": 1.5,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'TankSSOilSpill:ParticleModuleRequired_3.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "bDurationRecalcEachLoop": true,
+      "EmitterDurationLow": 0.5,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 0.5,
+        "MaxValue": 0.2,
+        "MinValueVec": {
+          "X": 0.5,
+          "Y": 0.5,
+          "Z": 0.5
+        },
+        "MaxValueVec": {
+          "X": 0.2,
+          "Y": 0.2,
+          "Z": 0.2
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5,
+            0.5,
+            0.5,
+            0.2,
+            0.2,
+            0.2
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_3",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            0.0,
+            1.0,
+            1.0,
+            0.056886803,
+            1.1010851,
+            1.1010851,
+            0.20975253,
+            1.343164,
+            1.343164,
+            0.4319847,
+            1.634623,
+            1.634623,
+            0.69697046,
+            1.8838481,
+            1.8838481,
+            0.97809756,
+            1.9992255,
+            1.9992255,
+            1.0,
+            2.0,
+            2.0,
+            1.0,
+            2.0,
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 35.0,
+        "MaxValue": 35.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            35.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 0,
+          "CountLow": 0,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleTypeDataMesh",
+    "Name": "ParticleModuleTypeDataMesh_1",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleTypeDataMesh'",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMesh'Tracer'",
+        "ObjectPath": "War/Content/FX/Mesh/Tracer.2"
+      },
+      "bOverrideMaterial": true,
+      "RollPitchYawRange": {
+        "MinValue": -90.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -90.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -90.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            -90.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_1",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -300.0,
+        "MaxValue": 200.0,
+        "MinValueVec": {
+          "X": -300.0,
+          "Y": -25.0,
+          "Z": 100.0
+        },
+        "MaxValueVec": {
+          "X": -50.0,
+          "Y": 25.0,
+          "Z": 200.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -300.0,
+            -25.0,
+            100.0,
+            -50.0,
+            25.0,
+            200.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'TankSSOilSpill:ParticleSpriteEmitter_1.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "TankSSOilSpill",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'TankSSOilSpill:ParticleSpriteEmitter_1'",
+          "ObjectPath": "War/Content/FX/TankSSOilSpill.11"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

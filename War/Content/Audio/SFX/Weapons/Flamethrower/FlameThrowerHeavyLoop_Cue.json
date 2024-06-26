@@ -1,0 +1,156 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'FlameThrowerHeavyLoop_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1900.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 10000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.2,
+      "MaxDistance": 11400.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'SmallArms'",
+        "ObjectPath": "War/Content/Audio/Attenuations/SmallArms.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.2,
+      "DelayMax": 0.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'FlameThrowerHeavyLoop_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'FlameThrowerHeavyLoop_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'FlameThrowerHeavyLoop_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'FlameThrowerHeavyLoop_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'FlameThrowerHeavyLoop_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'FlameThrowerHeavyLoop_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlameThrowerHeavyLoop_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Flamethrower/FlamethrowerLoop.FlamethrowerLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FlamethrowerLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Flamethrower/FlamethrowerLoop.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Flamethrower/FlamethrowerStart01.FlamethrowerStart01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Flamethrower/FlamethrowerStart02.FlamethrowerStart02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "FlameThrowerHeavyLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Flamethrower/FlamethrowerStart03.FlamethrowerStart03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

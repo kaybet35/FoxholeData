@@ -1,0 +1,80 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_24",
+    "Outer": "DitherTemporalAA",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction'DitherTemporalAA'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_1",
+    "Outer": "DitherTemporalAA",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Coordinates": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_24"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D'Good64x64TilingNoiseHighFreq'",
+        "ObjectPath": "Engine/Content/EngineMaterials/Good64x64TilingNoiseHighFreq.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearGrayscale",
+      "Function": {
+        "ObjectName": "MaterialFunction'DitherTemporalAA'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "DitherTemporalAA",
+    "Class": "UScriptClass'MaterialFunction'",
+    "Properties": {
+      "Description": "Stipple pattern/Dither  in screen space and time to work well with TemporalAA for things like masked translucency or anisotropic materials",
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'DitherTemporalAA:MaterialExpressionMaterialFunctionCall_24'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.0"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample'DitherTemporalAA:MaterialExpressionTextureSample_1'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "bExposeToLibrary": true,
+      "StateId": "22D58D0F-45CC84AB-89A3628B-351D83C8"
+    }
+  }
+]

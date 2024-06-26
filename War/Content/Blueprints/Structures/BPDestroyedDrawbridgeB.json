@@ -1,0 +1,702 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "SuspendedBuildSurfaceB",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.22"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DestroyedBridge'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedDrawbridgeB_C:SuspendedBuildSurfaceB'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedDrawbridgeB_C:SuspendedBuildSurfaceA'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedDrawbridgeB_C:VehicleBlocking2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedDrawbridgeB_C:VehicleBlocking'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedDrawbridgeB_C:SideB'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedDrawbridgeB_C:SideA'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.9"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDestroyedDrawbridgeB_C'Default__BPDestroyedDrawbridgeB_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.2"
+    }
+  },
+  {
+    "Type": "BPDestroyedDrawbridgeB_C",
+    "Name": "Default__BPDestroyedDrawbridgeB_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.BPDestroyedDrawbridgeB_C'",
+    "Properties": {
+      "bIsScorchable": false,
+      "CodeName": "DestroyedDrawbridgeB",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedDrawbridgeB_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDestroyedDrawbridgeB_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.8"
+      },
+      "MaxHealth": 100000000,
+      "Health": 100000000,
+      "UpgradeStructureCodeName": "DrawbridgeB",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDestroyedDrawbridgeB_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.25"
+      },
+      "NetCullDistanceSquared": 50000000.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedDrawbridgeB_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "SuspendedBuildSurfaceA_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 600.0,
+        "Y": 240.0,
+        "Z": 1.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Water",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "LandscapeAndWater",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1170.0,
+        "Z": 30.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "SuspendedBuildSurfaceB_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 600.0,
+        "Y": 240.0,
+        "Z": 1.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Water",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "LandscapeAndWater",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -1170.0,
+        "Z": 30.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "VehicleBlocking2_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 40.0,
+        "Y": 1000.0,
+        "Z": 512.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockOnlyVehicle",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -550.0,
+        "Y": 0.0,
+        "Z": -700.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "VehicleBlocking_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 40.0,
+        "Y": 1000.0,
+        "Z": 512.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockOnlyVehicle",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 550.0,
+        "Y": 0.0,
+        "Z": -700.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 700.0,
+        "Y": 2500.0,
+        "Z": 600.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedDrawbridgeB_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -420.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SideA",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SideB",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SuspendedBuildSurfaceA",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "VehicleBlocking",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "VehicleBlocking2",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDestroyedDrawbridgeB_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.14"
+      },
+      "VariableGuid": "36E3B063-4FF1B69F-5A0C3DB0-F528EA1F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDestroyedDrawbridgeB_C:SideA_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.23"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "40F6864E-44FADCB9-17413DAE-2A90FEB3",
+      "InternalVariableName": "SideA"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDestroyedDrawbridgeB_C:SideB_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.24"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6FD0C300-4C6FB497-6B33EFAE-0FA4FC69",
+      "InternalVariableName": "SideB"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedDrawbridgeB_C:VehicleBlocking_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2D7B4089-424EA7C2-026F8F8F-54DB0B3F",
+      "InternalVariableName": "VehicleBlocking"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedDrawbridgeB_C:VehicleBlocking2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "1F989D47-4B65F940-299F1286-4E03AB5B",
+      "InternalVariableName": "VehicleBlocking2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedDrawbridgeB_C:SuspendedBuildSurfaceA_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0CEC5664-467A2C2A-F9CEF094-367D21B0",
+      "InternalVariableName": "SuspendedBuildSurfaceA"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedDrawbridgeB_C:SuspendedBuildSurfaceB_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.5"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A2B4765E-462E0EAE-ADC8F3AB-4B772459",
+      "InternalVariableName": "SuspendedBuildSurfaceB"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.21"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.21"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDestroyedDrawbridgeB_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedDrawbridgeB.15"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SideA_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'DrawbridgeBDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Structures/DrawbridgeBDestroyed.2"
+      },
+      "BodyInstance": {
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'StonePhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/StonePhys.0"
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SideB_GEN_VARIABLE",
+    "Outer": "BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'DrawbridgeBDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Structures/DrawbridgeBDestroyed.2"
+      },
+      "BodyInstance": {
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'StonePhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/StonePhys.0"
+        }
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDestroyedDrawbridgeB_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

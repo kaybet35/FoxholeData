@@ -1,0 +1,3911 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_Submarine_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Right_Torpedo_Chamber",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Opening",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 3.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 1.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 5.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 1,
+              "CrossfadeDuration": 2.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Left_Torpedo_Chamber",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 24,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 25,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                21
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 26,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 27,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 16,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                17
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Opening",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 28,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 18,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                19
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 29,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 22,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                23
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 3.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 1.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 5.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 1,
+              "CrossfadeDuration": 2.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Hatch",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 46,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 47,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 38,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                39
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Opening",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 48,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 40,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                41
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 49,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 50,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 42,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                43
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Closing",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 51,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 44,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                45
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.25,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Shooting State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 57,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 54,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 58,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 55,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                56
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_SubmarineW_Body_Skeleton'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/SK_SubmarineW_Body_Skeleton.6"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.34"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.96"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.29"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.90"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.30"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.92"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.37"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.99"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.38"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.100"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.45"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.107"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.44"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.106"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.46"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.108"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.36"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.98"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.35"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.97"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.31"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.93"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.41"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.103"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "DivePlaneAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SubmarineAnimInstance:DivePlaneAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_C313569740F1D35E8F88B280663E9C0E'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.53"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "DivePlaneAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SubmarineAnimInstance:DivePlaneAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_8D7AEE4A41814559CAB06D88CD81C41F'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_22B26F674C39C196E5637B8C983D0CC6'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.48"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_8E6B511B47B8A513040F07A5B92D4D6C'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.62"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.40"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.102"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.39"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.101"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.32"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.94"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.42"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.104"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.28"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.89"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.43"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.105"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_3715613F4FACE05CB14928878F422317'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.91"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.33"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.95"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_9A59795C48BE9708E8D66D890CDF7E48'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_90162977413FE3E6313D3AB4740C5EEA'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.50"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_Submarine_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SubmarineAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.0"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.27"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.35"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.40"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.36"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.46"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.44"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.39"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.45"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.32"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.38"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.37"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.30"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.29"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.42"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.34"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.28"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.43"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.31"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.41"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.33"
+      },
+      {
+        "ObjectName": "Function'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_Root_E9FDE16A4C17292E7986B7813E8501A3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_90162977413FE3E6313D3AB4740C5EEA'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.50"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_9A59795C48BE9708E8D66D890CDF7E48'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.51"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_LayeredBoneBlend_02493D7F46289FB7F97D4DB1B7782C9F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.55"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.95"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_3715613F4FACE05CB14928878F422317'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.91"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_98E290EE42F04292F55FA392A503D31B'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.64"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_A8B303E4443F21448E6819858267E7F6'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.80"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_FF90BCBE46D185C62CD7408FBB3E9D37'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.87"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateMachine_235F56E3433D0408C0EDF486943901DC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.71"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_LayeredBoneBlend_CCCB0B9D47063E6430FA44BE678488AD'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.56"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.105"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.89"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.104"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.94"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.101"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.102"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_D94069814B5AACDE94F1BFBC5FD34902'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.68"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_DFE0FE654630B417FFD83FA454EAD5B2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.83"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_8F48FDF947B04F4EF5D74595B85C482E'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.63"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_CC9DCEC9404F7EF6E9312E860315FB28'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.82"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_AD8551F04C6C60DD94B838BFFA5C26D0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.65"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_7A4F5A7245AF2D7DC65A788E18867391'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.78"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_2FC9F0EA42C5E85F586B94B1CEE62B23'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.59"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_FB01799B498DF292BAE213B7425E0D12'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.86"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateMachine_CE81EA984559BF4D47DDDD8B38A8AF46'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.74"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_8E6B511B47B8A513040F07A5B92D4D6C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.62"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_22B26F674C39C196E5637B8C983D0CC6'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_8D7AEE4A41814559CAB06D88CD81C41F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_C313569740F1D35E8F88B280663E9C0E'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.53"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_0E2127B64BF1EAFDECD793A2FD8966F6'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_9FCBA3704F0F02A43C63EBBE20852CAB'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.52"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_BlendSpacePlayer_C8A8EEF745C62F47C1A054BCE5674C4D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.54"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.103"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.93"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.97"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.98"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.108"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.106"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_FF7C5CF54D740A7193A0EEB03C84BE4A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.70"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_BC1B159547304390855A1E91486CB237'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.81"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_0677B33D43C2B64D38B5AD82D588F256'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.57"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_FFBA045E4A964534D1B3F88659DB0D03'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.88"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_F8E9207E43D1D8B875E5E19C00C7AC85'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.69"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_5F5F1E864B1F990D387EC488C012775C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.77"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_093854A945E465985F54E9AC299253FC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.58"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_F7411E624DCEB2A03CF0C394E563605F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.85"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateMachine_C989FADA4CB79F45CDF911A38CA10B63'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.73"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.107"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.100"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.99"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.92"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.90"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.96"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_C27CDD0F408935719BE0198DC7CC2D8A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.67"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_55194A8644988CEBFA433EA18295E758'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.76"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_3D5BFE494B9AA51896CC7BA98320272F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.60"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_959C4C2E48C63CAE5BAC16B2AD90FEE5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.79"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_6933D4204749285CA98404996CE77AF2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.61"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_38BEC14A42E6D3BD4152D99E14D43E82'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.75"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_SequencePlayer_AF2D25C34A461535BC4277B1549B5766'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.66"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateResult_EAB5BF96460E11731F7EE3A54235FC42'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.84"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraphNode_StateMachine_BE68DBEA498ED0C55B5C98BB0214BB34'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.72"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_Submarine": {
+        "ObjectName": "Function'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.33"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.41"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.31"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.43"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.34"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.42"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.29"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.30"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.37"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.38"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.32"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.45"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.39"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.44"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.46"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.36"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.40"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558": {
+        "ObjectName": "Function'ABP_Submarine_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.35"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_Submarine_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.27"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_Submarine_C'Default__ABP_Submarine_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.2"
+    }
+  },
+  {
+    "Type": "ABP_Submarine_C",
+    "Name": "Default__ABP_Submarine_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.ABP_Submarine_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_E9FDE16A4C17292E7986B7813E8501A3": {
+        "Result": {
+          "LinkID": 3
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_90162977413FE3E6313D3AB4740C5EEA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Deckgun_horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Deckgun_horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_9A59795C48BE9708E8D66D890CDF7E48": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Deckgun_vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Deckgun_vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_02493D7F46289FB7F97D4DB1B7782C9F": {
+        "BasePose": {
+          "LinkID": 26
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 1
+          },
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 25
+          },
+          {
+            "LinkID": 27
+          },
+          {
+            "LinkID": 28
+          },
+          {
+            "LinkID": 29
+          },
+          {
+            "LinkID": 30
+          },
+          {
+            "LinkID": 31
+          },
+          {
+            "LinkID": 32
+          },
+          {
+            "LinkID": 47
+          },
+          {
+            "LinkID": 62
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Deckgun_horzontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Deckgun_vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "hatch",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Rudder",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Fin_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Fin_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Fin_Back_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Fin_Back_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "MainBallastMeter",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "EmergencyBallastMeter",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "BackupBallastMeter",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Torpedo_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Torpedo_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 9,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 10,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "0319AB37-417E8C66-4D1D1C94-DD55FFA0",
+        "VirtualBoneGuid": "D45373CE-441E327D-24F34984-583979F2"
+      },
+      "AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3715613F4FACE05CB14928878F422317": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_98E290EE42F04292F55FA392A503D31B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'ANIM_SubmarineW_POSE_DeckgunMuzzle_shooting'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ANIM_SubmarineW_POSE_DeckgunMuzzle_shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_A8B303E4443F21448E6819858267E7F6": {
+        "Result": {
+          "LinkID": 6
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_FF90BCBE46D185C62CD7408FBB3E9D37": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_235F56E3433D0408C0EDF486943901DC": {
+        "StateMachineIndexInClass": 3,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_CCCB0B9D47063E6430FA44BE678488AD": {
+        "BasePose": {
+          "LinkID": 2
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 9
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Deckgun_muzzle",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "0319AB37-417E8C66-4D1D1C94-DD55FFA0",
+        "VirtualBoneGuid": "D45373CE-441E327D-24F34984-583979F2"
+      },
+      "AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_D94069814B5AACDE94F1BFBC5FD34902": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_DFE0FE654630B417FFD83FA454EAD5B2": {
+        "Result": {
+          "LinkID": 17
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_8F48FDF947B04F4EF5D74595B85C482E": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_Hatch_Open'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_Hatch_Open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_CC9DCEC9404F7EF6E9312E860315FB28": {
+        "Result": {
+          "LinkID": 19
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_AD8551F04C6C60DD94B838BFFA5C26D0": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_Hatch_Open'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_Hatch_Open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7A4F5A7245AF2D7DC65A788E18867391": {
+        "Result": {
+          "LinkID": 21
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_2FC9F0EA42C5E85F586B94B1CEE62B23": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_FB01799B498DF292BAE213B7425E0D12": {
+        "Result": {
+          "LinkID": 23
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_CE81EA984559BF4D47DDDD8B38A8AF46": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_8E6B511B47B8A513040F07A5B92D4D6C": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'ANIM_LargeShipSubmarineW_propellers_speeding'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ANIM_LargeShipSubmarineW_propellers_speeding.0"
+        },
+        "PlayRateBasis": 300.0,
+        "PlayRate": 360.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_22B26F674C39C196E5637B8C983D0CC6": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Rudder_horizontal'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Rudder_horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_8D7AEE4A41814559CAB06D88CD81C41F": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Fins_vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Fins_vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_C313569740F1D35E8F88B280663E9C0E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Fins_vertical'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Fins_vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_0E2127B64BF1EAFDECD793A2FD8966F6": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Ballast'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Ballast.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_9FCBA3704F0F02A43C63EBBE20852CAB": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Ballast'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Ballast.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_C8A8EEF745C62F47C1A054BCE5674C4D": {
+        "X": 50.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_SubmarineW_Ballast'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/BS_SubmarineW_Ballast.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_FF7C5CF54D740A7193A0EEB03C84BE4A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_Torpedo_closed'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_Torpedo_closed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_BC1B159547304390855A1E91486CB237": {
+        "Result": {
+          "LinkID": 39
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_0677B33D43C2B64D38B5AD82D588F256": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_FFBA045E4A964534D1B3F88659DB0D03": {
+        "Result": {
+          "LinkID": 41
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_F8E9207E43D1D8B875E5E19C00C7AC85": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5F5F1E864B1F990D387EC488C012775C": {
+        "Result": {
+          "LinkID": 43
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_093854A945E465985F54E9AC299253FC": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_Torpedo_closed'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_Torpedo_closed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F7411E624DCEB2A03CF0C394E563605F": {
+        "Result": {
+          "LinkID": 45
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_C989FADA4CB79F45CDF911A38CA10B63": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_C27CDD0F408935719BE0198DC7CC2D8A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_Torpedo_closed'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_Torpedo_closed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_55194A8644988CEBFA433EA18295E758": {
+        "Result": {
+          "LinkID": 54
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_3D5BFE494B9AA51896CC7BA98320272F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_959C4C2E48C63CAE5BAC16B2AD90FEE5": {
+        "Result": {
+          "LinkID": 56
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_6933D4204749285CA98404996CE77AF2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_neutral'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_neutral.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_38BEC14A42E6D3BD4152D99E14D43E82": {
+        "Result": {
+          "LinkID": 58
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_AF2D25C34A461535BC4277B1549B5766": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'POSE_LargeShipSubmarineW_Torpedo_closed'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/POSE_LargeShipSubmarineW_Torpedo_closed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_EAB5BF96460E11731F7EE3A54235FC42": {
+        "Result": {
+          "LinkID": 60
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_BE68DBEA498ED0C55B5C98BB0214BB34": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_E9FDE16A4C17292E7986B7813E8501A3",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_Submarine",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.19"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.20"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_NotEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.21"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.12"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.13"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_6'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.14"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_7'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.15"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_8'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.16"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.17"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_10'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_NotEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.22"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_NotEqual_ByteByte_ReturnValue_4'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.23"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_NotEqual_ByteByte_ReturnValue_5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.24"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_EqualEqual_ByteByte_ReturnValue_11'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.9"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.25"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_Submarine_C:ExecuteUbergraph_ABP_Submarine.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.18"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_10",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_11",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_4",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_5",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_6",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_7",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_8",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_9",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_4",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_5",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_Submarine",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_Submarine_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/Animation/ABP_Submarine.26"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_Submarine_AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_0E2127B64BF1EAFDECD793A2FD8966F6",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_22B26F674C39C196E5637B8C983D0CC6",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_8D7AEE4A41814559CAB06D88CD81C41F",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_90162977413FE3E6313D3AB4740C5EEA",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_9A59795C48BE9708E8D66D890CDF7E48",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_9FCBA3704F0F02A43C63EBBE20852CAB",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C313569740F1D35E8F88B280663E9C0E",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C8A8EEF745C62F47C1A054BCE5674C4D",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_02493D7F46289FB7F97D4DB1B7782C9F",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_CCCB0B9D47063E6430FA44BE678488AD",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_0677B33D43C2B64D38B5AD82D588F256",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_093854A945E465985F54E9AC299253FC",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_2FC9F0EA42C5E85F586B94B1CEE62B23",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_3D5BFE494B9AA51896CC7BA98320272F",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_6933D4204749285CA98404996CE77AF2",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8E6B511B47B8A513040F07A5B92D4D6C",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8F48FDF947B04F4EF5D74595B85C482E",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_98E290EE42F04292F55FA392A503D31B",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_AD8551F04C6C60DD94B838BFFA5C26D0",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_AF2D25C34A461535BC4277B1549B5766",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C27CDD0F408935719BE0198DC7CC2D8A",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D94069814B5AACDE94F1BFBC5FD34902",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_F8E9207E43D1D8B875E5E19C00C7AC85",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FF7C5CF54D740A7193A0EEB03C84BE4A",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_235F56E3433D0408C0EDF486943901DC",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_BE68DBEA498ED0C55B5C98BB0214BB34",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_C989FADA4CB79F45CDF911A38CA10B63",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_CE81EA984559BF4D47DDDD8B38A8AF46",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_38BEC14A42E6D3BD4152D99E14D43E82",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_55194A8644988CEBFA433EA18295E758",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5F5F1E864B1F990D387EC488C012775C",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7A4F5A7245AF2D7DC65A788E18867391",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_959C4C2E48C63CAE5BAC16B2AD90FEE5",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_A8B303E4443F21448E6819858267E7F6",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_BC1B159547304390855A1E91486CB237",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_CC9DCEC9404F7EF6E9312E860315FB28",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_DFE0FE654630B417FFD83FA454EAD5B2",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_EAB5BF96460E11731F7EE3A54235FC42",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F7411E624DCEB2A03CF0C394E563605F",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FB01799B498DF292BAE213B7425E0D12",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FF90BCBE46D185C62CD7408FBB3E9D37",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FFBA045E4A964534D1B3F88659DB0D03",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_07AC9E5844B978424E198A8A66B55DBC",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_232C81BB4C47950D7A3D31BF2A4CDCDC",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_3715613F4FACE05CB14928878F422317",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_60CD37B5483AB5392DFA0AA084C537E4",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_61427C0C423F95F6D9AF6D8B5702DFA8",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_6625CE69480AB33B0AD00A952B4984D4",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_768D23D94687C81B30AA98989C8E2843",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8877EABE4885C42420B0F6818D3DFE3D",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8E7F83B84D1D141831F3E181B0E4D558",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8EA34DF64E7D759394734C98B33B1D83",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_AEB920F34561686D122D73BC806CAE0A",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BB3F8BEA4E248973CF35D085287BC8C7",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BD8DB35244E3FB77BF125587286AE1DF",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C55C5F254D103324172634B787606FB0",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D1DB8AE44F7E24FC669F59AD9530AF81",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E3CAC12C450349717095A1B70EA50A61",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E640764C428B036FB1F9FD93E3FD8780",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E8FA49494DD6FB9AB143F8865C7DEBBB",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F4A0933C46ADE7EF049B398BF114F054",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_FE5E7924451C1AFF42D220A1CBB984D9",
+    "Outer": "ABP_Submarine_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

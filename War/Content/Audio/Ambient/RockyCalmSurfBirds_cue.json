@@ -1,0 +1,118 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RockyCalmSurfBirds_cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'RockyCalmSurfBirds_cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/RockyCalmSurfBirds_cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 22500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "RockyCalmSurfBirds_cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 20.0,
+      "DelayMax": 90.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RockyCalmSurfBirds_cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/RockyCalmSurfBirds_cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "RockyCalmSurfBirds_cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'RockyCalmSurfBirds_cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/RockyCalmSurfBirds_cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "RockyCalmSurfBirds_cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RockyCalmSurfBirds_cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/RockyCalmSurfBirds_cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'RockyCalmSurfBirds_cue:SoundNodeLooping_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/RockyCalmSurfBirds_cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "RockyCalmSurfBirds_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/OceanBirds.OceanBirds",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'OceanBirds'",
+      "ObjectPath": "War/Content/Audio/Ambient/OceanBirds.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "RockyCalmSurfBirds_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/Softwaves.Softwaves",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Softwaves'",
+      "ObjectPath": "War/Content/Audio/Ambient/Softwaves.0"
+    }
+  }
+]

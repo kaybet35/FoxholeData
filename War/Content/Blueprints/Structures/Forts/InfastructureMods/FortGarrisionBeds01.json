@@ -1,0 +1,778 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Decal",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'FortGarrisionBeds01_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.22"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ModificationTemplate'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:Decal'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:StaticLight'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:IModBedBlanket02'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.7"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:StaticMesh2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:Collision'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:Locker01'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionBeds01_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FortGarrisionBeds01_C'Default__FortGarrisionBeds01_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.2"
+    }
+  },
+  {
+    "Type": "FortGarrisionBeds01_C",
+    "Name": "Default__FortGarrisionBeds01_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.FortGarrisionBeds01_C'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Collision_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 220.0,
+        "Y": 40.0,
+        "Z": 100.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.00036621094,
+        "Y": -48.75976,
+        "Z": 123.58263
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'FortFloorGrundge01'",
+        "ObjectPath": "War/Content/Materials/Decals/FortFloorGrundge01.0"
+      },
+      "RelativeLocation": {
+        "X": -25.35306,
+        "Y": -115.16254,
+        "Z": -17.99082
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 360.00012,
+        "Roll": -180.00027
+      },
+      "RelativeScale3D": {
+        "X": 0.169172,
+        "Y": 0.53426784,
+        "Z": 1.0273796
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Collision",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "IModBedBlanket02",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Locker01",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticLight",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh2",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "StaticLight_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'LanternFireNosparks'",
+        "ObjectPath": "War/Content/FX/LanternFireNosparks.28"
+      },
+      "RelativeLocation": {
+        "X": 5.593181E-05,
+        "Y": -4.438567E-05,
+        "Z": 18.834614
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 5.122641E-06,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'FortGarrisionBeds01_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.13"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.21"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.16"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.17"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.18"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.15"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.20"
+        }
+      ],
+      "VariableGuid": "59F9E07F-46E8BAEA-B3D4D28E-EADB13D5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'FortGarrisionBeds01_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.26"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.19"
+        }
+      ],
+      "VariableGuid": "83866075-41F6B0F3-B2C30485-AD17F82C",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'FortGarrisionBeds01_C:Collision_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.3"
+      },
+      "VariableGuid": "3D7654C5-4A8E9357-865FDAB3-BE52E782",
+      "InternalVariableName": "Collision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'FortGarrisionBeds01_C:StaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.25"
+      },
+      "VariableGuid": "535923CA-45D50DD8-1B571CA7-8AA47E7A",
+      "InternalVariableName": "StaticMesh2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'FortGarrisionBeds01_C:IModBedBlanket02_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.23"
+      },
+      "VariableGuid": "724E06B3-41B1AC9A-461D43AA-17E6EA97",
+      "InternalVariableName": "IModBedBlanket02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'FortGarrisionBeds01_C:StaticLight_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.12"
+      },
+      "VariableGuid": "0C1F1CC7-45A3E753-69852585-0B5C62AC",
+      "InternalVariableName": "StaticLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'FortGarrisionBeds01_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.4"
+      },
+      "VariableGuid": "8ADD264D-475D672A-D6595596-CBCAC42F",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'FortGarrisionBeds01_C:Locker01_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.24"
+      },
+      "VariableGuid": "25C22E99-4DC0FF4B-AFA0C492-0B2D3CE3",
+      "InternalVariableName": "Locker01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.14"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.21"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.16"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.17"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.18"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.15"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.19"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.20"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'FortGarrisionBeds01_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionBeds01.14"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "IModBedBlanket02_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'IModBedBlanket02'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/InfastructureMod/IModBedBlanket02.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 156.0087,
+        "Y": -79.09872,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -270.00037,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Locker01_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FortIModBeds01'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/InfastructureMod/FortIModBeds01.2"
+      },
+      "bReceivesDecals": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.0001220703,
+        "Y": -75.75849,
+        "Z": 0.000579834
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -270.0006,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh2_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'CoverHalfTrashcan1b'",
+        "ObjectPath": "War/Content/Meshes/Environment/Towns/Props/CoverHalfTrashcan1b.2"
+      },
+      "bReceivesDecals": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -174.71391,
+        "Y": -56.934593,
+        "Z": 68.14354
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -190.00056,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.47784364,
+        "Y": 0.47784364,
+        "Z": 0.47784364
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "FortGarrisionBeds01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Lantern'",
+        "ObjectPath": "War/Content/Meshes/Structures/Lantern.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -161.422,
+        "Y": -122.37827,
+        "Z": 69.14354
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 154.99942,
+        "Roll": 0.0
+      }
+    }
+  }
+]

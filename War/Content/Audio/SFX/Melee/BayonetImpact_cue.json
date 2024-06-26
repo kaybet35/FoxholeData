@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "BayonetImpact_cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'BayonetImpact_cue:SoundNodeModulator_1'",
+        "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetImpact_cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 800.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Impact.0"
+      },
+      "Duration": 1.1039166,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "BayonetImpact_cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.85,
+      "PitchMax": 1.15,
+      "VolumeMin": 0.85,
+      "VolumeMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'BayonetImpact_cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetImpact_cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "BayonetImpact_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/BayonetImpact.BayonetImpact",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'BayonetImpact'",
+      "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetImpact.0"
+    }
+  }
+]

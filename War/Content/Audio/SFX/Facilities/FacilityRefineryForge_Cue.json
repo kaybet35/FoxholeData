@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "FacilityRefineryForge_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'FacilityRefineryForge_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityRefineryForge_Cue.1"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "FacilityRefineryForge_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.99,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.99,
+      "VolumeMax": 1.01,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'FacilityRefineryForge_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityRefineryForge_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "FacilityRefineryForge_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Facilities/FacilityRefineryForge.FacilityRefineryForge",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FacilityRefineryForge'",
+      "ObjectPath": "War/Content/Audio/SFX/Facilities/FacilityRefineryForge.0"
+    }
+  }
+]

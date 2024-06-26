@@ -1,0 +1,67 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SMGC-RFShot_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SMGC-RFShot_Cue:SoundNodeModulator_10'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/SMGC/SMGC-RFShot_Cue.1"
+      },
+      "VolumeMultiplier": 1.5,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1900.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 10000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 11400.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'SmallArms'",
+        "ObjectPath": "War/Content/Audio/Attenuations/SmallArms.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "SMGC-RFShot_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.0,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SMGC-RFShot_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SMGC/SMGC-RFShot_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "SMGC-RFShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/SMGC/SMGC-RFShot01.SMGC-RFShot01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SMGC-RFShot01'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/SMGC/SMGC-RFShot01.0"
+    }
+  }
+]

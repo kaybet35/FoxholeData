@@ -1,0 +1,509 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box1",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DrawbridgeBuildSite'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPConcreteBridgeBuildSite_C:Box1'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPConcreteBridgeBuildSite_C:BridgeMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPConcreteBridgeBuildSite_C:Reference'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPConcreteBridgeBuildSite_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.8"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPConcreteBridgeBuildSite_C'Default__BPConcreteBridgeBuildSite_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.2"
+    }
+  },
+  {
+    "Type": "BPConcreteBridgeBuildSite_C",
+    "Name": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.BPConcreteBridgeBuildSite_C'",
+    "Properties": {
+      "SideAProxy": {
+        "ObjectName": "PersistentProxyComponent'Default__BPConcreteBridgeBuildSite_C:SideAProxy'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.11"
+      },
+      "SideBProxy": {
+        "ObjectName": "PersistentProxyComponent'Default__BPConcreteBridgeBuildSite_C:SideBProxy'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.12"
+      },
+      "ObstructionCheckVolume": {
+        "ObjectName": "BoxComponent'Default__BPConcreteBridgeBuildSite_C:ObstructionCheckVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.6"
+      },
+      "bIsNeutral": true,
+      "CodeName": "ConcreteBridgeBuildSite",
+      "ArmourType": "EArmourType::HeavyBuildSite",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPConcreteBridgeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPConcreteBridgeBuildSite_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.7"
+      },
+      "MaxHealth": 500,
+      "Health": 500,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPConcreteBridgeBuildSite_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.22"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPConcreteBridgeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box1_GEN_VARIABLE",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 45.0,
+        "Y": 430.0,
+        "Z": 200.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 794.09595,
+        "Y": 0.00012207031,
+        "Z": 324.475
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 45.0,
+        "Y": 430.0,
+        "Z": 200.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -768.83496,
+        "Y": 0.0,
+        "Z": 324.475
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ObstructionCheckVolume",
+    "Outer": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPConcreteBridgeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 180.0,
+        "Y": 180.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPConcreteBridgeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BridgeMesh",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Reference",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "PersistentProxyComponent",
+    "Name": "SideAProxy",
+    "Outer": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'PersistentProxyComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPConcreteBridgeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "PersistentProxyComponent",
+    "Name": "SideBProxy",
+    "Outer": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'PersistentProxyComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPConcreteBridgeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPConcreteBridgeBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.13"
+      },
+      "VariableGuid": "648ADD0B-44A316A8-296FFAB4-6D7AC019",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPConcreteBridgeBuildSite_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.5"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5029A512-4B7FF4DA-28294C8B-F3637E51",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPConcreteBridgeBuildSite_C:Box1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "82855D40-4E59C345-56FB3CAD-4BBDB7D6",
+      "InternalVariableName": "Box1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPConcreteBridgeBuildSite_C:Reference_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.21"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0525C4A6-4AAA9A05-8517BBAA-AF0BE95C",
+      "InternalVariableName": "Reference"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPConcreteBridgeBuildSite_C:BridgeMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.20"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E01F773B-44B618D7-45B7F880-B40029F3",
+      "InternalVariableName": "BridgeMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.16"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPConcreteBridgeBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConcreteBridgeBuildSite.14"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BridgeMesh_GEN_VARIABLE",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BridgeGhost'",
+        "ObjectPath": "War/Content/Meshes/Structures/BridgeGhost.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Reference_GEN_VARIABLE",
+    "Outer": "BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BridgeBroken'",
+        "ObjectPath": "War/Content/Meshes/Structures/BridgeBroken.2"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPConcreteBridgeBuildSite_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

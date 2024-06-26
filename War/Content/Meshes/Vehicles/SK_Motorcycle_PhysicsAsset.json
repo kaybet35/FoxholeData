@@ -1,0 +1,393 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Motorcycle_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Motorcycle_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Motorcycle_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Motorcycle_PhysicsAsset:SkeletalBodySetup_6'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.9"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_Motorcycle_PhysicsAsset:SkeletalBodySetup_12'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.7"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Motorcycle_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Motorcycle_PhysicsAsset:PhysicsConstraintTemplate_4'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Motorcycle_PhysicsAsset:PhysicsConstraintTemplate_5'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_Motorcycle_PhysicsAsset:PhysicsConstraintTemplate_11'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_Motorcycle_PhysicsAsset.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "sideways_pivot",
+        "ConstraintBone1": "sideways_pivot",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -25.0,
+          "Z": 0.0
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_11",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "sidecar_pivot",
+        "ConstraintBone1": "sidecar_pivot",
+        "ConstraintBone2": "sideways_pivot",
+        "Pos2": {
+          "X": -15.1617985,
+          "Y": -38.807835,
+          "Z": 45.383957
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "frontWheel_suspension",
+        "ConstraintBone1": "frontWheel_suspension",
+        "ConstraintBone2": "sideways_pivot",
+        "Pos2": {
+          "X": -2.842171E-14,
+          "Y": 109.1979,
+          "Z": 76.118484
+        },
+        "SecAxis2": {
+          "X": 0.0,
+          "Y": 0.8660254,
+          "Z": 0.5
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_5",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "wheel_front",
+        "ConstraintBone1": "wheel_front",
+        "ConstraintBone2": "frontWheel_suspension",
+        "Pos2": {
+          "X": -3.1554436E-30,
+          "Y": -0.35201162,
+          "Z": -35.794308
+        },
+        "SecAxis2": {
+          "X": 0.0,
+          "Y": 0.8660254,
+          "Z": -0.5
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -175.18103,
+              "Y": -112.680145,
+              "Z": 45.552795
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 32.49994,
+            "Y": 112.49947,
+            "Z": 94.27926,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 0.2748413,
+              "Y": -112.680145,
+              "Z": 45.552795
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 32.49994,
+            "Y": 112.49947,
+            "Z": 94.27926,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 27.029907,
+              "Y": -119.48688,
+              "Z": 67.705635
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 23.979797,
+            "Y": 68.61941,
+            "Z": 64.812,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": -203.43112,
+              "Y": -119.48688,
+              "Z": 67.705635
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 23.979797,
+            "Y": 68.61941,
+            "Z": 64.812,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": -104.07527,
+              "Y": -158.2958,
+              "Z": 130.19525
+            },
+            "Rotation": {
+              "Pitch": 49.999958,
+              "Yaw": -89.999985,
+              "Roll": -1.32823525E-05
+            },
+            "X": 23.979797,
+            "Y": 90.021324,
+            "Z": 95.90915,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ],
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -89.99999
+            },
+            "Radius": 0.505,
+            "Length": 0.505,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C3A6C5054907D857E942B49AE46D8C95"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -0.09358225,
+              "Y": -14.890299,
+              "Z": 65.72555
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.90182,
+              "Roll": -86.78761
+            },
+            "X": 46.603848,
+            "Y": 84.69733,
+            "Z": 201.86784,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "sideways_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "4B9EBF614EE75449F6B5968D8A2FB638"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_12",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -101.093346,
+              "Y": 1.5022106,
+              "Z": 47.818604
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 3.4285753,
+              "Roll": -90.150955
+            },
+            "Radius": 52.413376,
+            "Length": 119.99581,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "sidecar_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "EB9CF97444ABCD6E360D239220F78D62"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -3.5762787E-06,
+              "Y": 1.9193287,
+              "Z": 34.08788
+            },
+            "Rotation": {
+              "Pitch": -0.56344277,
+              "Yaw": 90.0,
+              "Roll": 180.0
+            },
+            "X": 62.510807,
+            "Y": 45.91329,
+            "Z": 106.88276,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "frontWheel_suspension",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "5D367BBA4698D6A8F1DAEC8C583CE814"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "SK_Motorcycle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -3.8146973E-06,
+              "Y": 1.1444092E-05,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 19.987392,
+            "Y": 93.150764,
+            "Z": 93.150764,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "wheel_front",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "CBD8115F4A6E0E0152A9A2B723416DEE"
+  }
+]

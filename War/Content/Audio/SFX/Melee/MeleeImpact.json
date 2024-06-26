@@ -1,0 +1,277 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MeleeImpact",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MeleeImpact:SoundNodeModulator_1'",
+        "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 800.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 3000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Impact.0"
+      },
+      "Duration": 1.0239456,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MeleeImpact:SoundNodeRandom_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.3"
+        },
+        {
+          "ObjectName": "SoundNodeRandom'MeleeImpact:SoundNodeRandom_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.85,
+      "PitchMax": 1.15,
+      "VolumeMin": 0.85,
+      "VolumeMax": 1.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'MeleeImpact:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_3",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_9'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.14"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_10'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_11'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_12'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_13'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_4",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.10"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_6'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.11"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_7'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.12"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeImpact:SoundNodeWavePlayer_8'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeImpact.13"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_10",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeHit02.MeleeHit02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_11",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeHit03.MeleeHit03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_12",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeHit04.MeleeHit04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_13",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeHit05.MeleeHit05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeEnhancer01.MeleeEnhancer01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeEnhancer02.MeleeEnhancer02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeEnhancer03.MeleeEnhancer03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeEnhancer04.MeleeEnhancer04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeEnhancer05.MeleeEnhancer05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_9",
+    "Outer": "MeleeImpact",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeHit01.MeleeHit01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

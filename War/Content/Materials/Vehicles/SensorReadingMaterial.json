@@ -1,0 +1,155 @@
+[
+  {
+    "Type": "Material",
+    "Name": "SensorReadingMaterial",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "EmissiveColor": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionConstant4Vector_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Masked",
+      "ShadingModel": "MSM_Unlit",
+      "ShadingModels": {
+        "ShadingModelField": 1
+      },
+      "WorldPositionOffset": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAdd_0",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "bUsedWithSkeletalMesh": true,
+      "bFullyRough": true,
+      "bOutputVelocityOnBasePass": false,
+      "Expressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'SensorReadingMaterial:MaterialExpressionMaterialFunctionCall_6'",
+          "ObjectPath": "War/Content/Materials/Vehicles/SensorReadingMaterial.2"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'SensorReadingMaterial:MaterialExpressionScalarParameter_20'",
+          "ObjectPath": "War/Content/Materials/Vehicles/SensorReadingMaterial.3"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'SensorReadingMaterial:MaterialExpressionMaterialFunctionCall_0'",
+          "ObjectPath": "War/Content/Materials/Vehicles/SensorReadingMaterial.1"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "71028A8D-47BF4037-3A3A0B8A-D7B60E53",
+          "Function": {
+            "ObjectName": "MaterialFunction'ScreenAlignedPixelToPixelUVs'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Texturing/ScreenAlignedPixelToPixelUVs.0"
+          }
+        },
+        {
+          "StateId": "22D58D0F-45CC84AB-89A3628B-351D83C8",
+          "Function": {
+            "ObjectName": "MaterialFunction'DitherTemporalAA'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+          }
+        },
+        {
+          "StateId": "6BB97146-49B75878-03A98399-9B3C01AF",
+          "Function": {
+            "ObjectName": "MaterialFunction'VectorLength'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+          }
+        }
+      ],
+      "bCastRayTracedShadows": false,
+      "StateId": "A37170DC-4CAB867F-0FB7AE99-A5D919D5",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "SensorReadingMaterial",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'VectorLength'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/VectorLength.0"
+      },
+      "Material": {
+        "ObjectName": "Material'SensorReadingMaterial'",
+        "ObjectPath": "War/Content/Materials/Vehicles/SensorReadingMaterial.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_6",
+    "Outer": "SensorReadingMaterial",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'DitherTemporalAA'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/DitherTemporalAA.2"
+      },
+      "Material": {
+        "ObjectName": "Material'SensorReadingMaterial'",
+        "ObjectPath": "War/Content/Materials/Vehicles/SensorReadingMaterial.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_20",
+    "Outer": "SensorReadingMaterial",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 1.0,
+      "ParameterName": "Opacity",
+      "ExpressionGUID": "4CF25E6E-45987A90-3F47A8A2-18BBC839",
+      "Material": {
+        "ObjectName": "Material'SensorReadingMaterial'",
+        "ObjectPath": "War/Content/Materials/Vehicles/SensorReadingMaterial.0"
+      }
+    }
+  }
+]

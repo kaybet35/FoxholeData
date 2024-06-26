@@ -1,0 +1,222 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RevolverFiring",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'RevolverFiring:SoundNodeModulator_2'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.3"
+      },
+      "VolumeMultiplier": 1.75,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1900.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 10000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 6.1955833,
+      "MaxDistance": 11400.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'SmallArms'",
+        "ObjectPath": "War/Content/Audio/Attenuations/SmallArms.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.7,
+      "DelayMax": 0.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'RevolverFiring:SoundNodeRandom_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.2
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'RevolverFiring:SoundNodeRandom_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.4"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'RevolverFiring:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.1,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'RevolverFiring:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RevolverFiring:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RevolverFiring:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RevolverFiring:SoundNodeWavePlayer_6'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RevolverFiring:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.8"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RevolverFiring:SoundNodeWavePlayer_8'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.11"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'RevolverFiring:SoundNodeWavePlayer_7'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Pistol/RevolverFiring.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Pistol/RevolverShot01.RevolverShot01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Pistol/RevolverShot02.RevolverShot02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Pistol/RevolverHammer01.RevolverHammer01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Pistol/RevolverShot03.RevolverShot03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Pistol/RevolverHammer02.RevolverHammer02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_8",
+    "Outer": "RevolverFiring",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Pistol/RevolverHammer03.RevolverHammer03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

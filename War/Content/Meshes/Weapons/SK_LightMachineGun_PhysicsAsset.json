@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_LightMachineGun_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightMachineGun_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Weapons/SK_LightMachineGun_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightMachineGun_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Weapons/SK_LightMachineGun_PhysicsAsset.3"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_LightMachineGun_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "War/Content/Meshes/Weapons/SK_LightMachineGun_PhysicsAsset.1"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_LightMachineGun_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "magazineClip",
+        "ConstraintBone1": "magazineClip",
+        "ConstraintBone2": "mainBody",
+        "Pos2": {
+          "X": -2.4158454E-14,
+          "Y": -2.1408293,
+          "Z": 3.1553907
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_LightMachineGun_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.24096677,
+              "Y": 21.749693,
+              "Z": -7.4997864
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -0.6356786,
+              "Roll": -87.083435
+            },
+            "Radius": 26.279926,
+            "Length": 80.02699,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "mainBody",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "9A0924824EC3A4F85EF4EC841DB33174"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_LightMachineGun_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 3.331113E-11,
+              "Y": -0.010229588,
+              "Z": 6.068244
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -180.0,
+              "Roll": -89.70353
+            },
+            "Radius": 17.849483,
+            "Length": 17.870625,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "magazineClip",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "5BF47D5D47B9EECC38807E88E0B755A3"
+  }
+]

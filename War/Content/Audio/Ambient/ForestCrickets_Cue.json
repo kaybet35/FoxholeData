@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ForestCrickets_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'ForestCrickets_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/ForestCrickets_Cue.3"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 6081.788
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 22500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "ForestCrickets_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 60.0,
+      "DelayMax": 180.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestCrickets_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestCrickets_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "ForestCrickets_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ForestCrickets_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestCrickets_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ForestCrickets_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestCrickets_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestCrickets_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'ForestCrickets_Cue:SoundNodeLooping_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestCrickets_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ForestCrickets_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/Owl2.Owl2",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Owl2'",
+      "ObjectPath": "War/Content/Audio/Ambient/Owl2.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ForestCrickets_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/ForestCrickets.ForestCrickets",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ForestCrickets'",
+      "ObjectPath": "War/Content/Audio/Ambient/ForestCrickets.0"
+    }
+  }
+]

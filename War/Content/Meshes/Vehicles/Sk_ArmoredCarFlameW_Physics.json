@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "Sk_ArmoredCarFlameW_Physics",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'Sk_ArmoredCarFlameW_Physics:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/Sk_ArmoredCarFlameW_Physics.3"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Sk_ArmoredCarFlameW_Physics:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/Sk_ArmoredCarFlameW_Physics.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'Sk_ArmoredCarFlameW_Physics:SkeletalBodySetup_2'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/Sk_ArmoredCarFlameW_Physics.5"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Sk_ArmoredCarFlameW_Physics:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/Sk_ArmoredCarFlameW_Physics.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'Sk_ArmoredCarFlameW_Physics:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/Sk_ArmoredCarFlameW_Physics.2"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "Sk_ArmoredCarFlameW_Physics",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "turret_pivot",
+        "ConstraintBone1": "turret_pivot",
+        "ConstraintBone2": "chassis",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 1.4302784E-05,
+          "Z": 174.88438
+        },
+        "SecAxis2": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": -1.753102E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "Sk_ArmoredCarFlameW_Physics",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "mgun_pivot",
+        "ConstraintBone1": "mgun_pivot",
+        "ConstraintBone2": "turret_pivot",
+        "Pos2": {
+          "X": -5.5826312E-14,
+          "Y": 81.367294,
+          "Z": 30.904907
+        },
+        "SecAxis2": {
+          "X": 0.0,
+          "Y": 1.0,
+          "Z": 1.110215E-07
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "Sk_ArmoredCarFlameW_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.7339532,
+              "Y": -61.90136,
+              "Z": 75.31798
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -0.4786607,
+              "Roll": -86.57191
+            },
+            "Radius": 126.860855,
+            "Length": 303.23846,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "chassis",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "032973CE4A50120BD6B11594E0412D13"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "Sk_ArmoredCarFlameW_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.51443106,
+              "Y": 12.044659,
+              "Z": 34.736343
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -2.445634,
+              "Roll": -87.91738
+            },
+            "Radius": 79.96408,
+            "Length": 93.224174,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "turret_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "2B079D76462F7E52999161BFC52157D9"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "Sk_ArmoredCarFlameW_Physics",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.010601861,
+              "Y": 79.44839,
+              "Z": 1.5979538
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 179.9912,
+              "Roll": -88.872536
+            },
+            "Radius": 18.325155,
+            "Length": 98.67664,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "mgun_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "99D72D9244B89264DB3472A2F066B35F"
+  }
+]

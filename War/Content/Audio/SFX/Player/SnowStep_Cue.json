@@ -1,0 +1,174 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SnowStep_Cue:SoundNodeModulator_12'",
+        "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "AttenuationShapeExtents": {
+          "X": 250.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 2500.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopOldest"
+      },
+      "Duration": 0.84099776,
+      "MaxDistance": 3000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'CharacterFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/CharacterFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_12",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.6,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SnowStep_Cue:SoundNodeRandom_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_5",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SnowStep_Cue:SoundNodeWavePlayer_16'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SnowStep_Cue:SoundNodeWavePlayer_17'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.6"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SnowStep_Cue:SoundNodeWavePlayer_18'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SnowStep_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SnowStep_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SnowStep_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Player/SnowStep_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/GroundStep01.GroundStep01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/GroundStep05.GroundStep05",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_16",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/GroundStep02.GroundStep02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_17",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/GroundStep03.GroundStep03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_18",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/GroundStep04.GroundStep04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SnowStep_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Player/GroundStep06.GroundStep06",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

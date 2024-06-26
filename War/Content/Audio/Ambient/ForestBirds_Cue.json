@@ -1,0 +1,131 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'ForestBirds_Cue:SoundNodeLooping_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/ForestBirds_Cue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 6081.788
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 22500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 50.0,
+      "DelayMax": 120.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ForestBirds_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestBirds_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'ForestBirds_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestBirds_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestBirds_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestBirds_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestBirds_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestBirds_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestBirds_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestBirds_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/ForestBirds01.ForestBirds01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/ForestBirds02.ForestBirds02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ForestBirds_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/ForestBirds03.ForestBirds03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

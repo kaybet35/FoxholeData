@@ -1,0 +1,358 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "WaterProjectileTrail",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'WaterBucketfullProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.15"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'WaterBucketfullProjectile_C:WaterProjectileTrail'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'WaterBucketfullProjectile_C:WaterTrail'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'WaterBucketfullProjectile_C:BloodBall'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.4"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WaterBucketfullProjectile_C'Default__WaterBucketfullProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.2"
+    }
+  },
+  {
+    "Type": "WaterBucketfullProjectile_C",
+    "Name": "Default__WaterBucketfullProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/WaterBucketfullProjectile.WaterBucketfullProjectile_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__WaterBucketfullProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.9"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__WaterBucketfullProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.16"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__WaterBucketfullProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.6"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__WaterBucketfullProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'WaterExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterExplosion.1"
+      },
+      "ExplosiveCodeName": "WaterBucketfull",
+      "AutoDetonateTime": 2.0,
+      "bImpactsWater": true,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__WaterBucketfullProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.16"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__WaterBucketfullProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.16"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BloodBall",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WaterTrail",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__WaterBucketfullProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.16"
+      },
+      "RelativeLocation": {
+        "X": -59.95925,
+        "Y": 7.6293945E-06,
+        "Z": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "WaterProjectileTrail_GEN_VARIABLE",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'WaterProjectileTrail'",
+        "ObjectPath": "War/Content/FX/WaterProjectileTrail.13"
+      },
+      "RelativeLocation": {
+        "X": 4.7683716E-06,
+        "Y": -0.00010673702,
+        "Z": 39.13016
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": -151.82141,
+        "Roll": 118.17856
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "WaterTrail_GEN_VARIABLE",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'WaterTrail'",
+        "ObjectPath": "War/Content/FX/WaterTrail.42"
+      },
+      "RelativeLocation": {
+        "X": 2.2053719E-06,
+        "Y": 0.00038432702,
+        "Z": 35.13902
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": -151.82141,
+        "Roll": 118.17856
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "InitialSpeed": 1000.0,
+      "MaxSpeed": 1500.0,
+      "ProjectileGravityScale": 2.5
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'WaterBucketfullProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.10"
+      },
+      "VariableGuid": "EC754D80-40F691ED-2CC9D6B1-673939A7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'WaterBucketfullProjectile_C:BloodBall_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.17"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.13"
+        },
+        {
+          "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.14"
+        }
+      ],
+      "VariableGuid": "77033E9D-46C30B2E-059E179D-8A549D66",
+      "InternalVariableName": "BloodBall"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'WaterBucketfullProjectile_C:WaterTrail_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.8"
+      },
+      "VariableGuid": "160CF489-419E79F1-2D4A4F84-D20739D6",
+      "InternalVariableName": "WaterTrail"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'WaterBucketfullProjectile_C:WaterProjectileTrail_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.7"
+      },
+      "VariableGuid": "E043A122-4F88FAB6-0895D299-63607FCC",
+      "InternalVariableName": "WaterProjectileTrail"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.12"
+        },
+        {
+          "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.13"
+        },
+        {
+          "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'WaterBucketfullProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterBucketfullProjectile.11"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'SphereComponent'"
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BloodBall_GEN_VARIABLE",
+    "Outer": "WaterBucketfullProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BloodBall'",
+        "ObjectPath": "War/Content/FX/Mesh/DeadHarvest/BloodBall.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'WaterBall'",
+          "ObjectPath": "War/Content/FX/Materials/WaterBall.0"
+        }
+      ],
+      "RelativeRotation": {
+        "Pitch": 6.830189E-06,
+        "Yaw": -90.00006,
+        "Roll": 90.00002
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.7468453
+      }
+    }
+  }
+]

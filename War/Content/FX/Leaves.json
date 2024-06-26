@@ -1,0 +1,691 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatUniform",
+    "Name": "DistributionFloatUniform_0",
+    "Outer": "ParticleModuleRotationRate_0",
+    "Class": "UScriptClass'DistributionFloatUniform'",
+    "Properties": {
+      "Min": -5.0,
+      "Max": 5.0,
+      "bCanBeBaked": false
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'Leaves:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/Leaves.11"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'Leaves:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/Leaves.8"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'Leaves:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/Leaves.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'Leaves:ParticleModuleColor_0'",
+          "ObjectPath": "War/Content/FX/Leaves.6"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere'Leaves:ParticleModuleLocationPrimitiveSphere_1'",
+          "ObjectPath": "War/Content/FX/Leaves.9"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'Leaves:ParticleModuleAccelerationDrag_0'",
+          "ObjectPath": "War/Content/FX/Leaves.5"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'Leaves:ParticleModuleRotation_0'",
+          "ObjectPath": "War/Content/FX/Leaves.12"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'Leaves:ParticleModuleRotationRate_0'",
+          "ObjectPath": "War/Content/FX/Leaves.13"
+        },
+        {
+          "ObjectName": "ParticleModuleOrbit'Leaves:ParticleModuleOrbit_0'",
+          "ObjectPath": "War/Content/FX/Leaves.10"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'Leaves:ParticleModuleColorScaleOverLife_0'",
+          "ObjectPath": "War/Content/FX/Leaves.7"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'Leaves:ParticleModuleAccelerationConstant_0'",
+          "ObjectPath": "War/Content/FX/Leaves.4"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'Leaves:ParticleModuleVelocity_0'",
+          "ObjectPath": "War/Content/FX/Leaves.17"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'Leaves:ParticleModuleSizeMultiplyLife_0'",
+          "ObjectPath": "War/Content/FX/Leaves.15"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'Leaves:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/Leaves.16"
+      },
+      "PeakActiveParticles": 77
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": -50.0,
+        "Y": 0.0,
+        "Z": -50.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.003094,
+        "MaxValue": 0.175,
+        "MinValueVec": {
+          "X": 0.175,
+          "Y": 0.101068,
+          "Z": 0.003094
+        },
+        "MaxValueVec": {
+          "X": 0.175,
+          "Y": 0.046,
+          "Z": 0.01925
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.175,
+            0.101068,
+            0.003094,
+            0.175,
+            0.046,
+            0.01925
+          ],
+          "Op": 3,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 20.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_1",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleLocationPrimitiveSphere'",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 1500.0,
+        "MaxValue": 1500.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1500.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "Negative_Z": false,
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": -0.1,
+        "MaxValue": 0.3,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.3
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "b3DDrawMode": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrbit",
+    "Name": "ParticleModuleOrbit_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleOrbit'",
+    "Properties": {
+      "OffsetAmount": {
+        "MinValue": -100.0,
+        "MaxValue": 100.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": -100.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 100.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            -100.0,
+            0.0,
+            0.0,
+            100.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "RotationAmount": {
+        "MinValue": -50.0,
+        "MaxValue": 50.0,
+        "MinValueVec": {
+          "X": -0.1,
+          "Y": -50.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.1,
+          "Y": 50.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            -50.0,
+            0.0,
+            0.1,
+            50.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "RotationRateAmount": {
+        "MinValue": -0.3,
+        "MaxValue": 0.3,
+        "MinValueVec": {
+          "X": -0.1,
+          "Y": -0.3,
+          "Z": -0.1
+        },
+        "MaxValueVec": {
+          "X": 0.1,
+          "Y": 0.3,
+          "Z": 0.1
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            -0.3,
+            -0.1,
+            0.1,
+            0.3,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Leaves'",
+        "ObjectPath": "War/Content/FX/Materials/Leaves.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Leaves:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/Leaves.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": {
+          "ObjectName": "DistributionFloatUniform'Leaves:ParticleModuleRotationRate_0.DistributionFloatUniform_0'",
+          "ObjectPath": "War/Content/FX/Leaves.2"
+        },
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ]
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 30.0,
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 30.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            30.0,
+            30.0,
+            30.0,
+            10.0,
+            10.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 20.0,
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 2,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Leaves:ParticleModuleSpawn_0.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/Leaves.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Leaves",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'Leaves:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/Leaves.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Leaves",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "WarmupTime": 15.0,
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'Leaves:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/Leaves.18"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -20000.0,
+          "Y": -20000.0,
+          "Z": -20000.0
+        },
+        "Max": {
+          "X": 20000.0,
+          "Y": 20000.0,
+          "Z": 20000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

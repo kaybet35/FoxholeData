@@ -1,0 +1,98 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ForestRiverBirds_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'ForestRiverBirds_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/ForestRiverBirds_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "ConcurrencySet": [
+        {
+          "ObjectName": "SoundConcurrency'Rivers'",
+          "ObjectPath": "War/Content/Audio/Attenuations/Rivers.0"
+        }
+      ],
+      "ConcurrencyOverrides": {
+        "MaxCount": 3,
+        "VolumeScale": 0.5
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 15820.084,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'RiverAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/RiverAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ForestRiverBirds_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.5,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestRiverBirds_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestRiverBirds_Cue.2"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ForestRiverBirds_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/ForestRiverBirds_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ForestRiverBirds_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/NewRiver01.NewRiver01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'NewRiver01'",
+      "ObjectPath": "War/Content/Audio/Ambient/NewRiver01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ForestRiverBirds_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/ForestBirds01.ForestBirds01",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ForestBirds01'",
+      "ObjectPath": "War/Content/Audio/Ambient/ForestBirds01.0"
+    }
+  }
+]

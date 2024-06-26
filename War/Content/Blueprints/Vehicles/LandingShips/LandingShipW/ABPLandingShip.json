@@ -1,0 +1,1860 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABPLandingShip_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Ramp",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Undocked",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 21,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4,
+                6,
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Docking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9,
+                10
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Docked",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 24,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 25,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 12,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                13,
+                14
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Undocking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 26,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 16,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                17,
+                19,
+                20
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_LandingShipW_Skeleton'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/SK_LandingShipW_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendListByBool_3F711D8145A525AD901409A7338B8D3A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "PropellerSpeed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BargeAnimInstance:PropellerSpeed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_F0F66EB34A6B40E186B2598447C34503'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.33"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_5D3CBFA843F7521AB5BDCF8D7C98FC31'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BargeAnimInstance:RampAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_F8324A694AB95FD4AAA7028337B0967F'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.26"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampExtension",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BargeAnimInstance:RampExtension'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_F73F62874BE2A883B159D09CF3CE33EF'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BargeAnimInstance:RampAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_7C1CC3184CC46B6044004DA1416C151F'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampExtension",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BargeAnimInstance:RampExtension'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_5FEA97F648FA909FC28E8EA464951B51'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "PropellerSpeed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'BargeAnimInstance:PropellerSpeed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_FACC4E054B7A48D7CD44F2871B42758A'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.34"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_6BB858C544DED2EA16FDA5B5D7505CB8'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.23"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.44"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.45"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.15"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.42"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.46"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.43"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.14"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.41"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABPLandingShip_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BargeAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.0"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.13"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.15"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.19"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.18"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.17"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.16"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.14"
+      },
+      {
+        "ObjectName": "Function'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_Root_D062F5224F883EFBDB379B93D9E1611C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.44"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_6BB858C544DED2EA16FDA5B5D7505CB8'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_FACC4E054B7A48D7CD44F2871B42758A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_LayeredBoneBlend_F1C61BB84A750EB65A99EC8BBE00DAC5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_FB9C359945CCBE024DFB50A6A9473B17'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_StateResult_8D28FAB9489FDAA47691418847CE5CA5'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_LayeredBoneBlend_6582EDF8479FF982684599A0C8F7FA1C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_5FEA97F648FA909FC28E8EA464951B51'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_7C1CC3184CC46B6044004DA1416C151F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_StateResult_C3DE1E7A4734DBC1B44B47A3DA5C8437'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.39"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_LayeredBoneBlend_72D9B682406C2F1E04D16ABE4DC70110'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_F73F62874BE2A883B159D09CF3CE33EF'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_F8324A694AB95FD4AAA7028337B0967F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_StateResult_BF2F39784F7CE5B2B71899A76BCA714B'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendSpacePlayer_5D3CBFA843F7521AB5BDCF8D7C98FC31'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_F0F66EB34A6B40E186B2598447C34503'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_LayeredBoneBlend_CF705B704ED603903FF2B99CA4387B18'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_A7CB69814F3935FD16E3F2A562CDBEC6'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_StateResult_E343170644EC9B9FA30038A76E108177'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.40"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_StateMachine_17BE56274239925A0535D19605C4388F'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_SequencePlayer_6CEDCAD642CBF7D2EF6748B17E604431'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraphNode_BlendListByBool_3F711D8145A525AD901409A7338B8D3A'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.20"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABPLandingShip": {
+        "ObjectName": "Function'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790": {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.14"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3": {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0": {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1": {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9": {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC": {
+        "ObjectName": "Function'ABPLandingShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.15"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABPLandingShip_C:AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.13"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABPLandingShip_C'Default__ABPLandingShip_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.2"
+    }
+  },
+  {
+    "Type": "ABPLandingShip_C",
+    "Name": "Default__ABPLandingShip_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.ABPLandingShip_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_D062F5224F883EFBDB379B93D9E1611C": {
+        "Result": {
+          "LinkID": 27
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_BlendSpacePlayer_6BB858C544DED2EA16FDA5B5D7505CB8": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BSLandingShipRodder'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BSLandingShipRodder.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_FACC4E054B7A48D7CD44F2871B42758A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LandingShipWPropellerSpin'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/Anim_LandingShipWPropellerSpin.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_F1C61BB84A750EB65A99EC8BBE00DAC5": {
+        "BasePose": {
+          "LinkID": 7
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 10
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Propeller",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Ramp",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "FFE0197E-41B01A2A-14561FBE-92F7BAA7",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_FB9C359945CCBE024DFB50A6A9473B17": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Pose_LandingShip_Ramp75'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/Pose_LandingShip_Ramp75.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8D28FAB9489FDAA47691418847CE5CA5": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_6582EDF8479FF982684599A0C8F7FA1C": {
+        "BasePose": {
+          "LinkID": 14
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 13
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "RampUpper",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "FFE0197E-41B01A2A-14561FBE-92F7BAA7",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_5FEA97F648FA909FC28E8EA464951B51": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BSLandingShipRampExtension'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BSLandingShipRampExtension.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_7C1CC3184CC46B6044004DA1416C151F": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'LandingShipRamp'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/LandingShipRamp.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C3DE1E7A4734DBC1B44B47A3DA5C8437": {
+        "Result": {
+          "LinkID": 12
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_72D9B682406C2F1E04D16ABE4DC70110": {
+        "BasePose": {
+          "LinkID": 18
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 17
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "RampUpper",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "FFE0197E-41B01A2A-14561FBE-92F7BAA7",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_F73F62874BE2A883B159D09CF3CE33EF": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BSLandingShipRampExtension'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BSLandingShipRampExtension.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_F8324A694AB95FD4AAA7028337B0967F": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'LandingShipRamp'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/LandingShipRamp.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_BF2F39784F7CE5B2B71899A76BCA714B": {
+        "Result": {
+          "LinkID": 16
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_5D3CBFA843F7521AB5BDCF8D7C98FC31": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BSLandingShipRodder'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BSLandingShipRodder.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_F0F66EB34A6B40E186B2598447C34503": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LandingShipWPropellerSpin'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/Anim_LandingShipWPropellerSpin.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_CF705B704ED603903FF2B99CA4387B18": {
+        "BasePose": {
+          "LinkID": 20
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 21
+          },
+          {
+            "LinkID": 23
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Propeller",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Ramp",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "FFE0197E-41B01A2A-14561FBE-92F7BAA7",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_A7CB69814F3935FD16E3F2A562CDBEC6": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Pose_LandingShip_Ramp75'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/Pose_LandingShip_Ramp75.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E343170644EC9B9FA30038A76E108177": {
+        "Result": {
+          "LinkID": 22
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_17BE56274239925A0535D19605C4388F": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_6CEDCAD642CBF7D2EF6748B17E604431": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LandingShipWDeath'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/Anim_LandingShipWDeath.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_3F711D8145A525AD901409A7338B8D3A": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 26
+          },
+          {
+            "LinkID": 25
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_D062F5224F883EFBDB379B93D9E1611C",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABPLandingShip",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABPLandingShip_C:ExecuteUbergraph_ABPLandingShip.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.9"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABPLandingShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABPLandingShip_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/ABPLandingShip.12"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABPLandingShip_AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_3F711D8145A525AD901409A7338B8D3A",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_5D3CBFA843F7521AB5BDCF8D7C98FC31",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_5FEA97F648FA909FC28E8EA464951B51",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6BB858C544DED2EA16FDA5B5D7505CB8",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_7C1CC3184CC46B6044004DA1416C151F",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F73F62874BE2A883B159D09CF3CE33EF",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F8324A694AB95FD4AAA7028337B0967F",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_6582EDF8479FF982684599A0C8F7FA1C",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_72D9B682406C2F1E04D16ABE4DC70110",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_CF705B704ED603903FF2B99CA4387B18",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_F1C61BB84A750EB65A99EC8BBE00DAC5",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_6CEDCAD642CBF7D2EF6748B17E604431",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A7CB69814F3935FD16E3F2A562CDBEC6",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_F0F66EB34A6B40E186B2598447C34503",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FACC4E054B7A48D7CD44F2871B42758A",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FB9C359945CCBE024DFB50A6A9473B17",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_17BE56274239925A0535D19605C4388F",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_8D28FAB9489FDAA47691418847CE5CA5",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_BF2F39784F7CE5B2B71899A76BCA714B",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C3DE1E7A4734DBC1B44B47A3DA5C8437",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E343170644EC9B9FA30038A76E108177",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_176117E4497FCA08C6C43F8CAFDCC790",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_1D6260E44C94BA4CE712D5933650D8EC",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_864103A9485815776BAE1398A67ECEC3",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_AD4AD96B4C5C9A11411AAEBD20B745B0",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DF9F58F0423F044B92E6FF97F612EEF1",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F7E7E1CE41033D2E54B5288C51E1F6E9",
+    "Outer": "ABPLandingShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

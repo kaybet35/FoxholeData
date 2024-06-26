@@ -1,0 +1,317 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPGunboatCBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VehicleBuildSite'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPGunboatCBuildSite_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPGunboatCBuildSite_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPGunboatCBuildSite_C'Default__BPGunboatCBuildSite_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.2"
+    }
+  },
+  {
+    "Type": "BPGunboatCBuildSite_C",
+    "Name": "Default__BPGunboatCBuildSite_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.BPGunboatCBuildSite_C'",
+    "Properties": {
+      "BuildOffset": {
+        "X": 100.0,
+        "Y": 25.0,
+        "Z": -75.0
+      },
+      "BuildRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "CodeName": "GunboatCBuildSite",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPGunboatCBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPGunboatCBuildSite_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.5"
+      },
+      "Health": 0,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPGunboatCBuildSite_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPGunboatCBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 1100.0,
+        "Y": 300.0,
+        "Z": 300.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "VehicleBuildSite",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 120.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 250.0,
+        "Y": 250.0,
+        "Z": 70.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPGunboatCBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 165.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Mesh",
+    "Outer": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPGunboatCBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.7"
+      },
+      "VariableGuid": "83B4B79D-431106A7-863F4193-3565B561",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPGunboatCBuildSite_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.12"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "80491679-44CFE3BE-E7AF0684-A820810F",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPGunboatCBuildSite_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2C766000-4B4A4601-87F9119F-481F47CD",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPGunboatCBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPGunboatCBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPGunboatCBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPGunboatCBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPGunboatCBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/BPGunboatCBuildSite.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimationData": {
+        "bSavedLooping": false,
+        "bSavedPlaying": false,
+        "SavedPosition": 3.3333333
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_GunBoatC'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Gunboats/GunboatC/SK_GunBoatC.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -72.52513,
+        "Y": 2.1E-05,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPGunboatCBuildSite_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

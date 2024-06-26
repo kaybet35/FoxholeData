@@ -1,0 +1,129 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DeadlyGasGrenadeExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'DeadlyGasGrenadeExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DeadlyGasGrenadeExplosion_C'Default__DeadlyGasGrenadeExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.1"
+    }
+  },
+  {
+    "Type": "DeadlyGasGrenadeExplosion_C",
+    "Name": "Default__DeadlyGasGrenadeExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.DeadlyGasGrenadeExplosion_C'",
+    "Properties": {
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'DeadlyGas'",
+            "ObjectPath": "War/Content/FX/DeadlyGas.55"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 200.0,
+              "Y": 200.0,
+              "Z": 200.0
+            },
+            "LifeSpan": 500.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "RadialHitImpact": {
+        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      },
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'SmokeGrenadeHiss_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.0"
+      },
+      "bDoNotOrientToImpactNormal": true,
+      "bManualDestruction": true,
+      "bDestroyWhenParticleSystemCompletes": false,
+      "bHasPersistentEffect": true,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__DeadlyGasGrenadeExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.2"
+      },
+      "InitialLifeSpan": 20.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__DeadlyGasGrenadeExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.2"
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__DeadlyGasGrenadeExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 3000.0,
+      "Intensity": 0.0,
+      "LightColor": {
+        "B": 114,
+        "G": 174,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAE72"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "DeadlyGasGrenadeExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'DeadlyGasGrenadeExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.3"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "DeadlyGasGrenadeExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'DeadlyGasGrenadeExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/DeadlyGasGrenadeExplosion.4"
+      }
+    }
+  }
+]

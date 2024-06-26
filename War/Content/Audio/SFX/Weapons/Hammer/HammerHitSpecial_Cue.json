@@ -1,0 +1,130 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'HammerHitSpecial_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Hammer/HammerHitSpecial_Cue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1600.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 5000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Impact.0"
+      },
+      "Duration": 1.2618124,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.7
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'HammerHitSpecial_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Hammer/HammerHitSpecial_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'HammerHitSpecial_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Hammer/HammerHitSpecial_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.5,
+        1.0,
+        0.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'HammerHitSpecial_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Hammer/HammerHitSpecial_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'HammerHitSpecial_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Hammer/HammerHitSpecial_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'HammerHitSpecial_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Hammer/HammerHitSpecial_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Hammer/HammerCopperImpact01.HammerCopperImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Hammer/HammerCopperImpact02.HammerCopperImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "HammerHitSpecial_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Hammer/HammerCopperImpact03.HammerCopperImpact03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

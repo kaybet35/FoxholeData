@@ -1,0 +1,73 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ArtilleryHeavyIncoming_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeRandom'ArtilleryHeavyIncoming_Cue:SoundNodeRandom_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryHeavyIncoming_Cue.1"
+      },
+      "VolumeMultiplier": 1.25,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 3.0506876,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeExplosives'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeExplosives.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ArtilleryHeavyIncoming_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArtilleryHeavyIncoming_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryHeavyIncoming_Cue.2"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArtilleryHeavyIncoming_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryHeavyIncoming_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ArtilleryHeavyIncoming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/StaticArtillery/ArtilleryIncoming03.ArtilleryIncoming03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ArtilleryHeavyIncoming_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/StaticArtillery/ArtilleryIncoming04.ArtilleryIncoming04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

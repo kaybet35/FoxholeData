@@ -1,0 +1,79 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ZombieMoan",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeRandom'ZombieMoan:SoundNodeRandom_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan.1"
+      },
+      "VolumeMultiplier": 0.45,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 5
+      },
+      "Duration": 8.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ZombieMoan",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.015,
+        0.015,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ZombieMoan:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan.2"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ZombieMoan:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan.3"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ZombieMoan",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Zombie/ZombieSnarl2.ZombieSnarl2",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ZombieMoan",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Zombie/ZombieRoar.ZombieRoar",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

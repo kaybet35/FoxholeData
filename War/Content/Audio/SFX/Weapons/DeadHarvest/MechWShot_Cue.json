@@ -1,0 +1,118 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MechWShot_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MechWShot_Cue:SoundNodeModulator_10'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWShot_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1900.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 10000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "Duration": 1.6226667,
+      "MaxDistance": 15200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'HeavyMachineGun'",
+        "ObjectPath": "War/Content/Audio/Attenuations/HeavyMachineGun.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "MechWShot_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.6,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MechWShot_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWShot_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "MechWShot_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MechWShot_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWShot_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MechWShot_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWShot_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MechWShot_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/DeadHarvest/MechWShot_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "MechWShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/DeadHarvest/MechWShot01.MechWShot01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "MechWShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/DeadHarvest/MechWShot02.MechWShot02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "MechWShot_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/DeadHarvest/MechWShot03.MechWShot03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

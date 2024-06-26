@@ -1,0 +1,119 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "GullCall_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'GullCall_Cue:SoundNodeLooping_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/GullCall_Cue.3"
+      },
+      "VolumeMultiplier": 0.5,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "bOverrideConcurrency": true,
+      "bHasDelayNode": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 2,
+        "ResolutionRule": "EMaxConcurrentResolutionRule::StopFarthestThenPreventNew"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 22500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "GullCall_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 1.0,
+      "DelayMax": 900.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'GullCall_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/GullCall_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "GullCall_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 1.0,
+      "DelayMax": 900.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'GullCall_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/GullCall_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "GullCall_Cue",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'GullCall_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/GullCall_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "GullCall_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.7,
+        0.3
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'GullCall_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/GullCall_Cue.1"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'GullCall_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/GullCall_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "GullCall_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/GullCall.GullCall",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

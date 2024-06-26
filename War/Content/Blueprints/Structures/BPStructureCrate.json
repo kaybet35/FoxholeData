@@ -1,0 +1,242 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "BoxMesh",
+    "Outer": "BPStructureCrate_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPStructureCrate_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPStructureCrate_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'StructureCrate'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPStructureCrate_C:BoxMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPStructureCrate_C'Default__BPStructureCrate_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.2"
+    }
+  },
+  {
+    "Type": "BPStructureCrate_C",
+    "Name": "Default__BPStructureCrate_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPStructureCrate.BPStructureCrate_C'",
+    "Properties": {
+      "ShippableMesh": {
+        "ObjectName": "StaticMesh'ProductionPartsPacked'",
+        "ObjectPath": "War/Content/Meshes/Shippables/ProductionPartsPacked.2"
+      },
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "ACF04FFB45D3815A46FBA8A4817BAB49",
+        "SourceString": "A crate of packed structures.",
+        "LocalizedString": "A crate of packed structures."
+      },
+      "ShippableInfo": {
+        "Type": "EShippableType::Normal"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'ProductionPartsStructureIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/ProductionPartsStructureIcon.0"
+      },
+      "ValidBuildTools": 1,
+      "CodeName": "StructureCrate",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "D88C1B644C2C0C27B896F980A1374438",
+        "SourceString": "Structure Crate",
+        "LocalizedString": "Structure Crate"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPStructureCrate_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPStructureCrate_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "MaxHealth": 800,
+      "Health": 800,
+      "ScreenToUse": "ESimScreen::Crate",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPStructureCrate_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.10"
+      },
+      "NetCullDistanceSquared": 25000000.0,
+      "MinNetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPStructureCrate_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPStructureCrate_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPStructureCrate_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 300.0,
+        "Z": 200.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPStructureCrate_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 165.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPStructureCrate_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPStructureCrate_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.5"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPStructureCrate_C:BoxMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.9"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "CE4B2598-4A6E5B26-B09586BA-F1ECC4BB",
+      "InternalVariableName": "BoxMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPStructureCrate_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPStructureCrate_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPStructureCrate_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPStructureCrate_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureCrate.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BoxMesh_GEN_VARIABLE",
+    "Outer": "BPStructureCrate_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'ProductionParts'",
+        "ObjectPath": "War/Content/Meshes/Shippables/ProductionParts.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        },
+        "MassInKgOverride": 168.54219
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPStructureCrate_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

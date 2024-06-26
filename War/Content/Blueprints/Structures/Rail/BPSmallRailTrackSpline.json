@@ -1,0 +1,1739 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPSmallRailTrackSpline_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'RailwayTrack'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPSmallRailTrackSpline_C'Default__BPSmallRailTrackSpline_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.1"
+    }
+  },
+  {
+    "Type": "BPSmallRailTrackSpline_C",
+    "Name": "Default__BPSmallRailTrackSpline_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.BPSmallRailTrackSpline_C'",
+    "Properties": {
+      "SplineConnector": {
+        "ObjectName": "SplineConnectorComponent'Default__BPSmallRailTrackSpline_C:SplineConnector'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.13"
+      },
+      "GrassCullRadius": 300.0,
+      "BackSocket": {
+        "ObjectName": "BuildSocketComponent'Default__BPSmallRailTrackSpline_C:BackSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.4"
+      },
+      "FrontSocket": {
+        "ObjectName": "BuildSocketComponent'Default__BPSmallRailTrackSpline_C:FrontSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.5"
+      },
+      "BackSwitch": {
+        "ObjectName": "RailSwitchUseComponent'Default__BPSmallRailTrackSpline_C:BackSwitch'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.6"
+      },
+      "FrontSwitch": {
+        "ObjectName": "RailSwitchUseComponent'Default__BPSmallRailTrackSpline_C:FrontSwitch'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.7"
+      },
+      "BackSwitchMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPSmallRailTrackSpline_C:BackSwitchMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.11"
+      },
+      "FrontSwitchMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPSmallRailTrackSpline_C:FrontSwitchMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.12"
+      },
+      "TrackGauge": "ETrackGauge::Small",
+      "MaxHeightAboveRoad": 40.0,
+      "MaxHeightForPathConnection": 50.0,
+      "RailZOffset": 20.0,
+      "SnappablePathSocketClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPSmallRailTrackSplinePathSocket_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSplinePathSocket.0"
+      },
+      "NoBuildPhysicalMaterials": [
+        {
+          "ObjectName": "PhysicalMaterial'WetSandPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/WetSandPhys.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'TownStone'",
+          "ObjectPath": "War/Content/PhysicalMaterials/TownStone.0"
+        },
+        {
+          "ObjectName": "PhysicalMaterial'SandPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/SandPhys.0"
+        }
+      ],
+      "bIsBuiltOnFoundation": true,
+      "bIsPartiallyBuiltOnFoundation": true,
+      "ConnectorMinLength": 500.0,
+      "ConnectorMaxLength": 3000.0,
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "666A59564F4699BB4E6CA99411AEF1E5",
+        "SourceString": "A segment of railway for small gauge train cars. Tracks can attach to or fork from existing railways to form complex networks.",
+        "LocalizedString": "A segment of railway for small gauge train cars. Tracks can attach to or fork from existing railways to form complex networks."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'SmallRailTrackIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/SmallRailTrackIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Foundation",
+      "BuildOrder": 7,
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "bDropsLargeMaterialsWhenDestroyed": false,
+      "ValidBuildTools": 1,
+      "DescriptionDetails": [
+        {
+          "TooltipDetailType": "ETooltipDetailType::MediumVisibility",
+          "Text": {
+            "Namespace": "",
+            "Key": "1A369228461BEFED3E331880C8F35514",
+            "SourceString": "Use mouse wheel to elevate track",
+            "LocalizedString": "Use mouse wheel to elevate track"
+          }
+        }
+      ],
+      "bUsesImpactsMaterial": true,
+      "CodeName": "SmallRailTrackSpline",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "B0E0E1AA475B9C9CB80F739E843DF3AB",
+        "SourceString": "Small Gauge Railway Track",
+        "LocalizedString": "Small Gauge Railway Track"
+      },
+      "ArmourType": "EArmourType::Trench",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPSmallRailTrackSpline_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.3"
+      },
+      "MaxHealth": 750,
+      "Health": 750,
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "bCanBuildSiteBeDemolished": true,
+        "DemolishDurationHours": 6
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPSmallRailTrackSpline_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.14"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "BackSocket",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 2097152,
+          "SocketTypeCategory": 2097152,
+          "Tag": "BackSwitch",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 4194304,
+          "SocketTypeCategory": 2097152,
+          "Tag": "None",
+          "ShowsTag": "BackSwitch",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "MaxRotation": 10.0,
+      "SlopeRotationMode": "ESlopeRotationMode::ManualControl",
+      "MaxHeightAboveLandscape": 260.0,
+      "MaxDepthBelowLandscape": 260.0,
+      "bAllowRotatedPlacement": true,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "FrontSocket",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 2097152,
+          "SocketTypeCategory": 2097152,
+          "Tag": "FrontSwitch",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 4194304,
+          "SocketTypeCategory": 2097152,
+          "Tag": "None",
+          "ShowsTag": "FrontSwitch",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "MaxHeightAboveLandscape": 260.0,
+      "MaxDepthBelowLandscape": 260.0,
+      "bAllowRotatedPlacement": true,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      },
+      "RelativeLocation": {
+        "X": 500.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "ManualConnectorSocket"
+      ]
+    }
+  },
+  {
+    "Type": "RailSwitchUseComponent",
+    "Name": "BackSwitch",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'RailSwitchUseComponent'",
+    "Properties": {
+      "Icon": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'RailTrackSwitchIcon'",
+          "ObjectPath": "War/Content/Textures/UI/StructureIcons/RailTrackSwitchIcon.0"
+        }
+      },
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 200.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 300.0,
+        "Z": 110.0
+      }
+    }
+  },
+  {
+    "Type": "RailSwitchUseComponent",
+    "Name": "FrontSwitch",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'RailSwitchUseComponent'",
+    "Properties": {
+      "Icon": {
+        "ImageSize": {
+          "X": 256.0,
+          "Y": 256.0
+        },
+        "ResourceObject": {
+          "ObjectName": "Texture2D'RailTrackSwitchIcon'",
+          "ObjectPath": "War/Content/Textures/UI/StructureIcons/RailTrackSwitchIcon.0"
+        }
+      },
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 200.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPSmallRailTrackSpline_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.8"
+      },
+      "VariableGuid": "986FD16C-4AC770F4-99CB90A0-551AB1F3",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPSmallRailTrackSpline_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "BackSwitchMesh",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Trackswitch_C'",
+        "ObjectPath": "War/Content/Animation/RailStructures/ABP_Trackswitch.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_RailTrackSwitch'",
+        "ObjectPath": "War/Content/Meshes/Structures/SK_RailTrackSwitch.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "FrontSwitchMesh",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Trackswitch_C'",
+        "ObjectPath": "War/Content/Animation/RailStructures/ABP_Trackswitch.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_RailTrackSwitch'",
+        "ObjectPath": "War/Content/Meshes/Structures/SK_RailTrackSwitch.0"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      }
+    }
+  },
+  {
+    "Type": "SplineConnectorComponent",
+    "Name": "SplineConnector",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'SplineConnectorComponent'",
+    "Properties": {
+      "MaxTargetDistance": 2000.0,
+      "MeshConfigs": [
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SmallGaugeTrack_Trackbed01'",
+            "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Trackbed01.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [
+            "PreserveProfileInBuildSite"
+          ],
+          "CollisionProfileName": "StructureDamageableMesh",
+          "bCollisionOnly": true,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_No",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [
+            {
+              "ObjectName": "StaticMesh'SmallGaugeTrack_Tie'",
+              "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Tie.2"
+            }
+          ],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_No",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": true,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 1.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": true,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [
+            {
+              "ObjectName": "StaticMesh'SmallGaugeTrack_Tie'",
+              "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Tie.2"
+            }
+          ],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 2.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SmallGaugeTrack_Rail'",
+            "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Rail.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.001,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SmallGaugeTrack_Trackbed01'",
+            "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Trackbed01.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": true,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_No",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 200.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.002,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": true,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": true,
+            "SurfaceDeltaLowerBound": -40.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": true,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [],
+          "Decals": [
+            {
+              "DecalMaterial": {
+                "ObjectName": "MaterialInstanceConstant'Trackbed01'",
+                "ObjectPath": "War/Content/Materials/Decals/Trackbed01.0"
+              },
+              "DecalSize": {
+                "X": 128.0,
+                "Y": 128.0,
+                "Z": 128.0
+              },
+              "LifeSpan": 0.0,
+              "FadeScreenSize": 0.01
+            },
+            {
+              "DecalMaterial": {
+                "ObjectName": "MaterialInstanceConstant'Trackbed03'",
+                "ObjectPath": "War/Content/Materials/Decals/Trackbed03.0"
+              },
+              "DecalSize": {
+                "X": 128.0,
+                "Y": 128.0,
+                "Z": 128.0
+              },
+              "LifeSpan": 0.0,
+              "FadeScreenSize": 0.01
+            },
+            {
+              "DecalMaterial": {
+                "ObjectName": "MaterialInstanceConstant'Trackbed04'",
+                "ObjectPath": "War/Content/Materials/Decals/Trackbed04.0"
+              },
+              "DecalSize": {
+                "X": 128.0,
+                "Y": 128.0,
+                "Z": 128.0
+              },
+              "LifeSpan": 0.0,
+              "FadeScreenSize": 0.01
+            }
+          ],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "None",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 128.0,
+          "IntervalDeltaPerDegree": -0.351562,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": true,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 64.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": -128.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 45.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 20.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": 4,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [],
+          "Decals": [
+            {
+              "DecalMaterial": {
+                "ObjectName": "MaterialInstanceConstant'Trackbed01'",
+                "ObjectPath": "War/Content/Materials/Decals/Trackbed01.0"
+              },
+              "DecalSize": {
+                "X": 128.0,
+                "Y": 128.0,
+                "Z": 128.0
+              },
+              "LifeSpan": 0.0,
+              "FadeScreenSize": 0.01
+            },
+            {
+              "DecalMaterial": {
+                "ObjectName": "MaterialInstanceConstant'Trackbed03'",
+                "ObjectPath": "War/Content/Materials/Decals/Trackbed03.0"
+              },
+              "DecalSize": {
+                "X": 128.0,
+                "Y": 128.0,
+                "Z": 128.0
+              },
+              "LifeSpan": 0.0,
+              "FadeScreenSize": 0.01
+            },
+            {
+              "DecalMaterial": {
+                "ObjectName": "MaterialInstanceConstant'Trackbed04'",
+                "ObjectPath": "War/Content/Materials/Decals/Trackbed04.0"
+              },
+              "DecalSize": {
+                "X": 128.0,
+                "Y": 128.0,
+                "Z": 128.0
+              },
+              "LifeSpan": 0.0,
+              "FadeScreenSize": 0.01
+            }
+          ],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "None",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 128.0,
+          "IntervalDeltaPerDegree": -0.351562,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": true,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 64.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 128.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 45.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 20.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": 4,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SmallGaugeTrack_Trackbed02'",
+            "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Trackbed02.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.002,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": true,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": true,
+            "SurfaceDeltaLowerBound": -100.0,
+            "bEnableSurfaceDeltaUpperBound": true,
+            "SurfaceDeltaUpperBound": -40.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [
+            {
+              "ObjectName": "StaticMesh'SmallGaugeTrack_Trackbed02side'",
+              "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Trackbed02side.2"
+            }
+          ],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 115.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 115.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": 7,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SmallGaugeTrack_Trackbed03'",
+            "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Trackbed03.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.002,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": true,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [
+            {
+              "ObjectName": "StaticMesh'SmallGaugeTrack_Trackbed03side'",
+              "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_Trackbed03side.2"
+            }
+          ],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 115.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 115.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": 9,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SmallGaugeTrack_TrackbedTransition'",
+            "ObjectPath": "War/Content/Meshes/Structures/SmallGaugeTrack_TrackbedTransition.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": true,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": 4,
+          "bIsEndCap": true,
+          "bEndCapReactsToSockets": true,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        }
+      ],
+      "ComponentConfigs": [
+        {
+          "ComponentName": "FrontSwitchMesh",
+          "RelativeTransform": {
+            "Rotation": {
+              "X": -0.0,
+              "Y": 0.0,
+              "Z": -1.0,
+              "W": 0.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "Distance": 1.0
+        },
+        {
+          "ComponentName": "FrontSwitch",
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": -300.0,
+              "Z": 110.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "Distance": 1.0
+        }
+      ],
+      "PathMode": "EConnectorPathMode::Biarc",
+      "bWorldSpaceArcTangents": true,
+      "MinBuffer": 200.0,
+      "MaxBuffer": 200.0,
+      "MinRadius": 500.0,
+      "MaxRadius": 0.0,
+      "MaxArcAngle": 60.0,
+      "BuildFootprintShapeType": "ESplineFootprintShapeType::CapsuleWithBoxEnds",
+      "BuildFootprintCapsuleRadius": 100.0,
+      "BuildFootprintCapsuleHalfHeight": 200.0,
+      "BuildFootprintStartOffset": 100.0,
+      "BuildFootprintEndOffset": 100.0,
+      "MaxSlopeAngle": 10.0,
+      "MaxFootprintDepthBelowSurface": 40.0,
+      "MaxHeightAboveSurfaceAtEnds": 60.0,
+      "NumHeightEndSamples": 1,
+      "WaterPlacementRequirement": "ESplineWaterPlacementRequirement::NoPlacementAboveWater",
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSmallRailTrackSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rail/BPSmallRailTrackSpline.2"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPSmallRailTrackSpline_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

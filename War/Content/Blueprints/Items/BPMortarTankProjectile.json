@@ -1,0 +1,236 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "SK_MortarTankAmmo",
+    "Outer": "BPMortarTankProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPMortarTankProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPMortarTankProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPMortarTankProjectile_C:SK_MortarTankAmmo'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMortarTankProjectile_C'Default__BPMortarTankProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.2"
+    }
+  },
+  {
+    "Type": "BPMortarTankProjectile_C",
+    "Name": "Default__BPMortarTankProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPMortarTankProjectile.BPMortarTankProjectile_C'",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPMortarTankProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.5"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPMortarTankProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.11"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPMortarTankProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPMortarTankProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'BPMortarTankExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankExplosion.1"
+      },
+      "ExplosiveCodeName": "MortarTankAmmo",
+      "AutoDetonateTime": 1.75,
+      "ProjectileDeathDelay": 8.0,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPMortarTankProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.11"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPMortarTankProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'RPGLoop'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/RPGLoop.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPMortarTankProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.11"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPMortarTankProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'SmokeTrail2'",
+        "ObjectPath": "War/Content/FX/SmokeTrail2.18"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPMortarTankProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.11"
+      },
+      "RelativeLocation": {
+        "X": -48.873615,
+        "Y": -6.484985E-05,
+        "Z": -8.3306804E-07
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPMortarTankProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "ProjectileGravityScale": 4.13
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPMortarTankProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPMortarTankProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.6"
+      },
+      "VariableGuid": "AF3504CB-4A663998-49D95DB7-C638B653",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPMortarTankProjectile_C:SK_MortarTankAmmo_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.10"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0A0D054D-4EF9AD19-87638E97-B17614AA",
+      "InternalVariableName": "SK_MortarTankAmmo"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPMortarTankProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPMortarTankProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPMortarTankProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPMortarTankProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.7"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SK_MortarTankAmmo_GEN_VARIABLE",
+    "Outer": "BPMortarTankProjectile_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_MortarTankAmmo'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_MortarTankAmmo.0"
+      },
+      "RelativeLocation": {
+        "X": -34.00737,
+        "Y": -7.663915E-06,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPMortarTankProjectile_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.0
+    }
+  }
+]

@@ -1,0 +1,108 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MolotovImpact_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MolotovImpact_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Molotov/MolotovImpact_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Impact'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Impact.0"
+      },
+      "Duration": 1.59625,
+      "MaxDistance": 15200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Grenades'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Grenades.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MolotovImpact_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.7,
+      "VolumeMax": 1.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MolotovImpact_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Molotov/MolotovImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "MolotovImpact_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MolotovImpact_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Molotov/MolotovImpact_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MolotovImpact_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Molotov/MolotovImpact_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MolotovImpact_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Molotov/MolotovImpact_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "MolotovImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Molotov/MolotovImpact01.MolotovImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MolotovImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Molotov/MolotovImpact02.MolotovImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "MolotovImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Molotov/MolotovImpact03.MolotovImpact03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

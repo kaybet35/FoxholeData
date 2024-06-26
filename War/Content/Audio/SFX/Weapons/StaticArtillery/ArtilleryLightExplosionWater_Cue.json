@@ -1,0 +1,174 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'ArtilleryLightExplosionWater_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1900.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 20000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 4.792917,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeExplosives'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeExplosives.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_1",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'MuffledExplosion'",
+        "ObjectPath": "War/Content/Audio/Attenuations/MuffledExplosion.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ArtilleryLightExplosionWater_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.5,
+        1.75
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'ArtilleryLightExplosionWater_Cue:SoundNodeModulator_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeModulator'ArtilleryLightExplosionWater_Cue:SoundNodeModulator_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArtilleryLightExplosionWater_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_2",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'ArtilleryLightExplosionWater_Cue:SoundNodeAttenuation_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArtilleryLightExplosionWater_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.7"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ArtilleryLightExplosionWater_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/StaticArtillery/ArtilleryLightExplosionWater_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Water/SmallWaterExplosionImpact.SmallWaterExplosionImpact",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SmallWaterExplosionImpact'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/SmallWaterExplosionImpact.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/StaticArtillery/ArtilleryExplosion01.ArtilleryExplosion01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "ArtilleryLightExplosionWater_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/StaticArtillery/ArtilleryExplosion02.ArtilleryExplosion02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

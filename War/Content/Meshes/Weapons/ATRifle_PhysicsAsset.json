@@ -1,0 +1,324 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'ATRifle_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'ATRifle_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'ATRifle_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'ATRifle_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'ATRifle_PhysicsAsset:SkeletalBodySetup_4'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.9"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'ATRifle_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'ATRifle_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'ATRifle_PhysicsAsset:PhysicsConstraintTemplate_2'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.3"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'ATRifle_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_PhysicsAsset.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "stand_pivot",
+        "ConstraintBone1": "stand_pivot",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": -1.4210855E-14,
+          "Y": 75.586266,
+          "Z": 10.531803
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "mainBody",
+        "ConstraintBone1": "mainBody",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 37.79528,
+          "Z": 21.051144
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_2",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "muzzle",
+        "ConstraintBone1": "muzzle",
+        "ConstraintBone2": "mainBody",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 74.045555,
+          "Z": 2.842171E-14
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "magazineClip",
+        "ConstraintBone1": "magazineClip",
+        "ConstraintBone2": "mainBody",
+        "Pos2": {
+          "X": -2.842171E-14,
+          "Y": 4.40751,
+          "Z": 10.6570015
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -4.4911178E-07,
+              "Y": 39.026268,
+              "Z": 10.034967
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 180.0,
+              "Roll": -78.91265
+            },
+            "Radius": 16.162785,
+            "Length": 59.516556,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "E5851B874304609985641982DF8CCE63"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.022539735,
+              "Y": 2.2917135,
+              "Z": -18.13254
+            },
+            "Rotation": {
+              "Pitch": -9.742677,
+              "Yaw": -89.999985,
+              "Roll": -90.07374
+            },
+            "Radius": 22.014503,
+            "Length": 22.112322,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "stand_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B4BB2A7A4001629A354EDFA850ED0C87"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 4.0970373,
+              "Y": -7.256954,
+              "Z": -5.85557
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -176.87936,
+              "Roll": -87.55621
+            },
+            "Radius": 25.55754,
+            "Length": 87.7714,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "mainBody",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "0B9C2901405903778060AF8BE7ACC543"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 3.3237903,
+              "Y": 23.276003,
+              "Z": 3.5776176
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 1.6141338,
+              "Roll": -88.29726
+            },
+            "Radius": 10.503564,
+            "Length": 74.8177,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "muzzle",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B32849E64E0412521E442BB5EEFE8C66"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "ATRifle_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.000112229725,
+              "Y": 1.5631552,
+              "Z": 10.945303
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0037688934,
+              "Roll": -79.52269
+            },
+            "Radius": 13.94737,
+            "Length": 14.150743,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "magazineClip",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "4C3C9258425BCCA14ABC128F63BEC8FC"
+  }
+]

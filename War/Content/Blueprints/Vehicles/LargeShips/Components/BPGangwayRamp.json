@@ -1,0 +1,94 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPGangwayRamp_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'GangwayRamp'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPGangwayRamp_C'Default__BPGangwayRamp_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/Components/BPGangwayRamp.1"
+    }
+  },
+  {
+    "Type": "BPGangwayRamp_C",
+    "Name": "Default__BPGangwayRamp_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LargeShips/Components/BPGangwayRamp.BPGangwayRamp_C'",
+    "Properties": {
+      "RampData": {
+        "bUseGangwayRampTransformAsPivot": true,
+        "MaxExtension": 620.0,
+        "SurfaceOffset": 5.0,
+        "Width": 140.0,
+        "MinimumAngle": -45.0,
+        "bRequireSandWhenNotAtDock": false
+      },
+      "InteractionVolumeOffset": {
+        "X": -170.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "InteractionVolumeExtents": {
+        "X": 400.0,
+        "Y": 100.0,
+        "Z": 150.0
+      },
+      "DeployLoopSoundCue": {
+        "ObjectName": "SoundCue'RampDeployLoop_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/NavalGeneral/RampDeployLoop_Cue.0"
+      },
+      "DeployCompleteSoundCue": {
+        "ObjectName": "SoundCue'RampDeployComplete_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/NavalGeneral/RampDeployComplete_Cue.0"
+      },
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_GangwayRamp_C'",
+        "ObjectPath": "War/Content/Animation/LargeShips/DestroyerC/ABP_GangwayRamp.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_GangwayRamp'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_GangwayRamp.0"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_Vehicle",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "bOverrideWalkableSlopeOnInstance": true,
+        "CollisionProfileName": "DynamicRamp",
+        "CollisionResponses": {
+          "ResponseToChannels": {
+            "WorldStatic": "ECR_Block",
+            "WorldDynamic": "ECR_Block",
+            "Pawn": "ECR_Block",
+            "Camera": "ECR_Block",
+            "PhysicsBody": "ECR_Block",
+            "Vehicle": "ECR_Block",
+            "Destructible": "ECR_Block",
+            "GameTraceChannel2": "ECR_Overlap",
+            "GameTraceChannel3": "ECR_Block"
+          },
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "WalkableSlopeOverride": {
+          "WalkableSlopeBehavior": "WalkableSlope_Increase",
+          "WalkableSlopeAngle": 70.0
+        }
+      },
+      "bUseAttachParentBound": true
+    }
+  }
+]

@@ -1,0 +1,281 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'SniperShotC_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.6"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 2000.0,
+        "LPFFrequencyAtMin": 2400.0,
+        "LPFFrequencyAtMax": 10000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 11000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 9.098958,
+      "MaxDistance": 20000.0
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponTails'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponTails.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SniperShotC_Cue:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_1",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SniperShotC_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.10"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_2",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Rifles'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Rifles.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SniperShotC_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.9"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.15,
+      "DelayMax": 0.15,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'SniperShotC_Cue:SoundNodeAttenuation_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.8,
+      "DelayMax": 0.8,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'SniperShotC_Cue:SoundNodeModulator_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0,
+        1.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'SniperShotC_Cue:SoundNodeModulator_10'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.8"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'SniperShotC_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'SniperShotC_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.85,
+      "PitchMax": 0.9,
+      "VolumeMin": 0.86,
+      "VolumeMax": 0.9,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'SniperShotC_Cue:SoundNodeAttenuation_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 0.9,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'SniperShotC_Cue:SoundNodeAttenuation_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SniperShotC_Cue:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.12"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SniperShotC_Cue:SoundNodeWavePlayer_6'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.13"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SniperShotC_Cue:SoundNodeWavePlayer_7'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SniperC/SniperShotC_Cue.14"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/AntiTankGun/ATGunBolt01.ATGunBolt01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ATGunBolt01'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/AntiTankGun/ATGunBolt01.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Sniper/Sniper_Tail.Sniper_Tail",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'Sniper_Tail'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Sniper/Sniper_Tail.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/SniperC/SniperCShot01.SniperCShot01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_6",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/SniperC/SniperCShot02.SniperCShot02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_7",
+    "Outer": "SniperShotC_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/SniperC/SniperCShot03.SniperCShot03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

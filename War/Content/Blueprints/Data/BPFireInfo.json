@@ -1,0 +1,184 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "BPFireInfo_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFireInfo_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFireInfo_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FireInfo'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPFireInfo_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFireInfo_C'Default__BPFireInfo_C'",
+      "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.2"
+    }
+  },
+  {
+    "Type": "BPFireInfo_C",
+    "Name": "Default__BPFireInfo_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Data/BPFireInfo.BPFireInfo_C'",
+    "Properties": {
+      "FireIntensityThresholds": [
+        {
+          "Intensity": "EFireIntensity::None",
+          "DamageThreshold": -1.0,
+          "FlamesPerSquareMeter": 0.0,
+          "CharacterBurn": 0.0,
+          "FireDamageBaseGainRate": 0.0,
+          "FireDamageBaseDecayRate": 0.0
+        },
+        {
+          "Intensity": "EFireIntensity::Low",
+          "DamageThreshold": 0.0,
+          "FlamesPerSquareMeter": 0.01,
+          "CharacterBurn": 0.15,
+          "FireDamageBaseGainRate": 0.5,
+          "FireDamageBaseDecayRate": 0.5
+        },
+        {
+          "Intensity": "EFireIntensity::Medium",
+          "DamageThreshold": 8.0,
+          "FlamesPerSquareMeter": 0.01,
+          "CharacterBurn": 0.15,
+          "FireDamageBaseGainRate": 2.0,
+          "FireDamageBaseDecayRate": 0.5
+        },
+        {
+          "Intensity": "EFireIntensity::High",
+          "DamageThreshold": 16.0,
+          "FlamesPerSquareMeter": 0.01,
+          "CharacterBurn": 0.15,
+          "FireDamageBaseGainRate": 3.5,
+          "FireDamageBaseDecayRate": 0.5
+        },
+        {
+          "Intensity": "EFireIntensity::Blazing",
+          "DamageThreshold": 25.0,
+          "FlamesPerSquareMeter": 0.025,
+          "CharacterBurn": 0.25,
+          "FireDamageBaseGainRate": 5.0,
+          "FireDamageBaseDecayRate": 0.5
+        },
+        {
+          "Intensity": "EFireIntensity::Blazing2",
+          "DamageThreshold": 40.0,
+          "FlamesPerSquareMeter": 0.045,
+          "CharacterBurn": 0.25,
+          "FireDamageBaseGainRate": 5.0,
+          "FireDamageBaseDecayRate": 0.5
+        }
+      ],
+      "MaxPreMitigationFireDamagePerTick": 200.0,
+      "TickPeriodSeconds": 5.0,
+      "WeatherIntensityEffectMultiplier": 8.0,
+      "CharacterOnFireDamage": 10.0,
+      "BurningSpreadWindScale": 100.0,
+      "BurningBuildingHeatRange": 600.0,
+      "FlameActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPStructureFlame_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureFlame.1"
+      },
+      "BuildingsDamagingPlayersDamageType": {
+        "ObjectName": "BlueprintGeneratedClass'BPIncendiaryDamageType_C'",
+        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPIncendiaryDamageType.0"
+      },
+      "BuildingsFireSpreadDamageType": {
+        "ObjectName": "BlueprintGeneratedClass'BPIncendiaryDamageType_C'",
+        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPIncendiaryDamageType.0"
+      },
+      "BurningSelfDamageType": {
+        "ObjectName": "BlueprintGeneratedClass'BPFireDamageType_C'",
+        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPFireDamageType.0"
+      },
+      "WaterFireLoopSFX": {
+        "ObjectName": "SoundCue'WaterFireImpactLoop_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Fire/WaterFireImpactLoop_Cue.0"
+      },
+      "WaterFireTailSFX": {
+        "ObjectName": "SoundCue'WaterFireImpactTail_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Fire/WaterFireImpactTail_Cue.0"
+      },
+      "WaterFireVFX": {
+        "ObjectName": "ParticleSystem'WaterFireImpact'",
+        "ObjectPath": "War/Content/FX/WaterFireImpact.29"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFireInfo_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFireInfo_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.3"
+      },
+      "VariableGuid": "D6C5F643-42658BAB-0122E7A2-B9D60D05",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFireInfo_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFireInfo_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.4"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFireInfo_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.4"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFireInfo_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Data/BPFireInfo.4"
+      }
+    }
+  }
+]

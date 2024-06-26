@@ -1,0 +1,4298 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_ATRifle_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "crouch_firing_1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "firing",
+              "Transitions": [],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "Idle_to_aiming_1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "EmptyEntryState",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 14,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 17,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "scoping",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 18,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "idleToScoped",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 19,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 20,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 10,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                11
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "scopedToIdle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 21,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 12,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                13
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 3,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "prone_firing_1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "firing",
+              "Transitions": [],
+              "StateRootNodeIndex": 26,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                27
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "crouch_firing",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "firing",
+              "Transitions": [],
+              "StateRootNodeIndex": 30,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                31
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "prone_reload",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Prone_Reload",
+              "Transitions": [],
+              "StateRootNodeIndex": 33,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                34
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "prone_unequip",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Prone_Unequip",
+              "Transitions": [],
+              "StateRootNodeIndex": 36,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                37
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "prone_equip",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Prone_Equip",
+              "Transitions": [],
+              "StateRootNodeIndex": 39,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                40
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "prone_idle",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Prone_Idle",
+              "Transitions": [],
+              "StateRootNodeIndex": 42,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                43
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "stand_unequip_1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Stand_Unequip",
+              "Transitions": [],
+              "StateRootNodeIndex": 45,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                46
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "stand_equip_1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Stand_Equip",
+              "Transitions": [],
+              "StateRootNodeIndex": 48,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                49
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "stand_reload",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Stand_Reload",
+              "Transitions": [],
+              "StateRootNodeIndex": 51,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                52
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "stand_unequip",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Stand_Unequip",
+              "Transitions": [],
+              "StateRootNodeIndex": 54,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                55
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "stand_equip",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Stand_Equip",
+              "Transitions": [],
+              "StateRootNodeIndex": 57,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                58
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "crouch_reload",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Crouch_Reload",
+              "Transitions": [],
+              "StateRootNodeIndex": 60,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                61
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        },
+        {
+          "MachineName": "Idle_to_aiming",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "EmptyEntryState",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 72,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 73,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 71,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 74,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 63,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                64
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "scoping",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 75,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 65,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                66
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "idleToScoped",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 76,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 77,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 67,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                68
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "scopedToIdle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 78,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 69,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                70
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 3,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 4,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'ATRifle_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Weapons/ATRifle_Skeleton.4"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CharacterSpeed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'WeaponAnimInstance:CharacterSpeed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendSpacePlayer_6075102C48B4D7231BF33BA455C1EDF8'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_7C3C2CDE405F291AE7C6DBB561175B45'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.96"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_1D949E2B49D4AB7F34BFB98CC9CF108A'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.91"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_166FEBCD41D30A6FA7F03789E6DAF401'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.90"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_9AB6084B4F7EA613C70F5EBC345FE7A0'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.98"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_3CD27B374C493D05FA6E9D9A07C0A8F3'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.93"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.89"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.100"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_75EE0BA8447D3A6AA34DD89D18649BDC'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.94"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_9F9662E543F0377DFC9616A955872F00'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.99"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_EFE21E2E44CE113AEF7DB386B6025755'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.102"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_783513B44C30D4E57DA666BA02FAFA99'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.95"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsCharacterScoping",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'WeaponAnimInstance:bIsCharacterScoping'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_DC82AEE142B9A6311DFBC4953280A6A1'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.101"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.97"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.92"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CharacterActivityState",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty'AnimNode_BlendListByEnum:ActiveEnumValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "EnumProperty'WeaponAnimInstance:CharacterActivityState'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_104701204B52AD046CE2EA87FAA184F0'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CharacterActivityState",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty'AnimNode_BlendListByEnum:ActiveEnumValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "EnumProperty'WeaponAnimInstance:CharacterActivityState'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_4967CD42411824D7EA65B98BA959A5A6'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CharacterActivityState",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty'AnimNode_BlendListByEnum:ActiveEnumValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "EnumProperty'WeaponAnimInstance:CharacterActivityState'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_70DE23FF4D0E7FFAD6B9088848320CC6'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.23"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CharacterStance",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "ByteProperty'AnimNode_BlendListByEnum:ActiveEnumValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "EnumProperty'WeaponAnimInstance:CharacterStance'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_63CEF9A7471D61021234E188A181B77E'",
+            "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.22"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WeaponAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.0"
+      },
+      {
+        "ObjectName": "Function'ABP_ATRifle_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.15"
+      },
+      {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.16"
+      },
+      {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.19"
+      },
+      {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.18"
+      },
+      {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.17"
+      },
+      {
+        "ObjectName": "Function'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_Root_04051CE84917E9D3AF2D86AE635BB6C2'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_63CEF9A7471D61021234E188A181B77E'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_70DE23FF4D0E7FFAD6B9088848320CC6'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_4967CD42411824D7EA65B98BA959A5A6'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendListByEnum_104701204B52AD046CE2EA87FAA184F0'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.92"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.97"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_DC82AEE142B9A6311DFBC4953280A6A1'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.101"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_783513B44C30D4E57DA666BA02FAFA99'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.95"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_EFE21E2E44CE113AEF7DB386B6025755'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.102"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_9F9662E543F0377DFC9616A955872F00'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.99"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_75EE0BA8447D3A6AA34DD89D18649BDC'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.94"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_4A6AB4FA40CE99B7A4BBA0BBBE563DAF'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.71"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_814EC75C43ACF1DFC0D9C89C4B8CECD9'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.40"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_B17A81F54D945F22E115F3B3D7F423F1'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.85"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_C82B478044283FC652800D9B64E9EE9E'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_9BBA55074D862DCC5C595A8B8B579B4D'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.83"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_ADCC525840E7115AF1B79AB5D7F02B1A'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.44"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_8A515FF7487227DEB2C16CA2F5A427A6'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.81"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_1939F849490F031830E7FFA15A02D4FD'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_4CA1BBF0432DB40BD91567B43A96EF87'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.72"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_E03481B64172A036910DB38021549020'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.65"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_351DF6B944507BCE5FD0DEADB60EF068'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_E3D3C0B847F39ABBBBAFD1912858F714'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.87"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_6BDE65DC440077DE2E9C99B7FDA023EF'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.59"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_774F551849C6D447203A39B05CC2716F'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_664158D948A29F3EFC7FDB853BBAFF3B'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.75"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_1454389543E045F8418E248CDC0944FE'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.52"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_C60D2F5A414F72DB6DE00F916F79CA2A'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_18C7F0FC4CC84CFA251B0C9B55451933'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.67"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_6BE260A24BEBBF53566F3AA8D24F41BC'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.60"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_CA29D77044353FD8122E518C65AD1F07'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_77733714401E833DC0A28D8A50418A52'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.79"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_691C96D1449FB187714215B1EDE2635B'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.58"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_B41E8BF94BF897D89A63DBB26CC04379'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_55EEA1794E08DE672B4E05BB619F1F97'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.73"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_DEE5B8C84ABAA61D3A79E49930EF42F4'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.64"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_A795BE424179744E0D4B399520FF272C'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_8A2F7A8F41AA63AAA085A4B0F32A64AE'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.80"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_011B6BF745FC347C51145BBAD728C020'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.51"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_1C6179D74BE8A3E44C84F891D3C76A36'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_1C26D7684DA13805DE6C518B6FF9D46F'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.68"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_6C00AFE747D61546917109B3F6862697'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.61"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_05C48B934FB3312D72F6B893647A2CEC'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_2E864273401BEB667A37C4AD3DFD28F4'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.69"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_A2161344407A87ADE3C74F988A527677'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.63"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_E9B12EB64A9D4004790CF3B37CDA177B'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_F97CDDA7426762A1814313A77C999222'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.88"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_7133207346CFFF67ADF8FD845E852042'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.62"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_1147B2A5400B3047952C9488BC6A1011'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_C363D5E04297858B8BF46B8EE2946EBA'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.86"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_4CA30D67479D11477926F5BC9E74C9C1'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.57"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_6A78D832483915A2E44C8483CFFDDB60'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_703DCA6445A7B162D56C2EA1B33BA37F'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.78"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_25B4007B42C316ACB994F8946410482A'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.55"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_LayeredBoneBlend_E6A27D194BA59FA49EF6F48AD885DB18'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_E9F1EA3247937053471ECC97A0613F1B'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.50"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_9C904CE542BB222CAE3F90844348E253'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.84"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_14B09BEC4216C1120068B781FAE758FF'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.53"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_LayeredBoneBlend_2800925A401325DAC5E5458AC0D31BCB'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_08A01CEB4AF2473BAEB44D80B15A8472'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_1A9A88FF49F1A0C1A015E2BB1DD6DB95'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.100"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.89"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_3CD27B374C493D05FA6E9D9A07C0A8F3'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.93"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_9AB6084B4F7EA613C70F5EBC345FE7A0'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.98"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_166FEBCD41D30A6FA7F03789E6DAF401'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.90"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_1D949E2B49D4AB7F34BFB98CC9CF108A'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.91"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_TransitionResult_7C3C2CDE405F291AE7C6DBB561175B45'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.96"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_4105D90A405CA256E2BBB5BFFEF7F16D'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.70"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_822B8B464D65C1B3246B89BAA499C953'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_5A5EF7A14D4A52C0D5D87DAD7305A0FC'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.74"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_696120AA412DA64C78FC9799B488F2BC'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_69B6BAF5458EA624D804288EF3EF2F9B'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.77"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_5D14885C47409823867223BB50DF86C8'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_080D9F404D7953E057DC6C80CF26ABCE'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.66"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_BlendSpacePlayer_6075102C48B4D7231BF33BA455C1EDF8'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_966AF80344992BDE64936B91CFA3FF0D'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.82"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_2CD20A444CC24EE06B39D4B3FC303677'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.56"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_A10F662F42DCF579CAF7578482983AD6'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateResult_698BFE4A478FEFC5837311AD449D7343'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.76"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_StateMachine_1F5AC3BB4D447EF486273C9CB80E918C'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.54"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_LayeredBoneBlend_85827ED14254F4EC88E675814AF58AD5'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraphNode_SequencePlayer_7B27502543ED62454D9C9DAC58C59CC8'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.39"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_ATRifle": {
+        "ObjectName": "Function'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507": {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123": {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD": {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4": {
+        "ObjectName": "Function'ABP_ATRifle_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.16"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_ATRifle_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.15"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_ATRifle_C'Default__ABP_ATRifle_C'",
+      "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.2"
+    }
+  },
+  {
+    "Type": "ABP_ATRifle_C",
+    "Name": "Default__ABP_ATRifle_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/Weapons/ABP_ATRifle.ABP_ATRifle_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_04051CE84917E9D3AF2D86AE635BB6C2": {
+        "Result": {
+          "LinkID": 1
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendListByEnum_63CEF9A7471D61021234E188A181B77E": {
+        "EnumToPoseIndex": [
+          0,
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 2
+          },
+          {
+            "LinkID": 3
+          },
+          {
+            "LinkID": 4
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendListByEnum_70DE23FF4D0E7FFAD6B9088848320CC6": {
+        "EnumToPoseIndex": [
+          0,
+          1,
+          2,
+          4,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 78
+          },
+          {
+            "LinkID": 27
+          },
+          {
+            "LinkID": 30
+          },
+          {
+            "LinkID": 33
+          },
+          {
+            "LinkID": 82
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.01,
+          0.01,
+          0.01,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendListByEnum_4967CD42411824D7EA65B98BA959A5A6": {
+        "EnumToPoseIndex": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 21
+          },
+          {
+            "LinkID": 36
+          },
+          {
+            "LinkID": 39
+          },
+          {
+            "LinkID": 55
+          },
+          {
+            "LinkID": 24
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_BlendListByEnum_104701204B52AD046CE2EA87FAA184F0": {
+        "EnumToPoseIndex": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "ActiveEnumValue": 0,
+        "BlendPose": [
+          {
+            "LinkID": 42
+          },
+          {
+            "LinkID": 45
+          },
+          {
+            "LinkID": 48
+          },
+          {
+            "LinkID": 59
+          },
+          {
+            "LinkID": 51
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.01,
+          0.01,
+          0.01,
+          0.01
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_DC82AEE142B9A6311DFBC4953280A6A1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_783513B44C30D4E57DA666BA02FAFA99": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_EFE21E2E44CE113AEF7DB386B6025755": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9F9662E543F0377DFC9616A955872F00": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_75EE0BA8447D3A6AA34DD89D18649BDC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_StateResult_4A6AB4FA40CE99B7A4BBA0BBBE563DAF": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_814EC75C43ACF1DFC0D9C89C4B8CECD9": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idleToAim'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idleToAim.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": -1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 1.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_B17A81F54D945F22E115F3B3D7F423F1": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_C82B478044283FC652800D9B64E9EE9E": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idleToAim'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idleToAim.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_9BBA55074D862DCC5C595A8B8B579B4D": {
+        "Result": {
+          "LinkID": 15
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_ADCC525840E7115AF1B79AB5D7F02B1A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idleToAim'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idleToAim.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 1.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8A515FF7487227DEB2C16CA2F5A427A6": {
+        "Result": {
+          "LinkID": 17
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_1939F849490F031830E7FFA15A02D4FD": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idle'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4CA1BBF0432DB40BD91567B43A96EF87": {
+        "Result": {
+          "LinkID": 19
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_E03481B64172A036910DB38021549020": {
+        "StateMachineIndexInClass": 14,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_351DF6B944507BCE5FD0DEADB60EF068": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_reload'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_reload.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E3D3C0B847F39ABBBBAFD1912858F714": {
+        "Result": {
+          "LinkID": 22
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_6BDE65DC440077DE2E9C99B7FDA023EF": {
+        "StateMachineIndexInClass": 13,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_774F551849C6D447203A39B05CC2716F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_stand_equip'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_stand_equip.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_664158D948A29F3EFC7FDB853BBAFF3B": {
+        "Result": {
+          "LinkID": 25
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_1454389543E045F8418E248CDC0944FE": {
+        "StateMachineIndexInClass": 12,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_C60D2F5A414F72DB6DE00F916F79CA2A": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_stand_equip'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_stand_equip.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": -1.5,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 2.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_18C7F0FC4CC84CFA251B0C9B55451933": {
+        "Result": {
+          "LinkID": 28
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_6BE260A24BEBBF53566F3AA8D24F41BC": {
+        "StateMachineIndexInClass": 11,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_CA29D77044353FD8122E518C65AD1F07": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_stand_reload'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_stand_reload.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_77733714401E833DC0A28D8A50418A52": {
+        "Result": {
+          "LinkID": 31
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_691C96D1449FB187714215B1EDE2635B": {
+        "StateMachineIndexInClass": 10,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_B41E8BF94BF897D89A63DBB26CC04379": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_stand_equip'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_stand_equip.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_55EEA1794E08DE672B4E05BB619F1F97": {
+        "Result": {
+          "LinkID": 34
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_DEE5B8C84ABAA61D3A79E49930EF42F4": {
+        "StateMachineIndexInClass": 9,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_A795BE424179744E0D4B399520FF272C": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_stand_equip'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_stand_equip.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": -1.5,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 2.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8A2F7A8F41AA63AAA085A4B0F32A64AE": {
+        "Result": {
+          "LinkID": 37
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_011B6BF745FC347C51145BBAD728C020": {
+        "StateMachineIndexInClass": 8,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_1C6179D74BE8A3E44C84F891D3C76A36": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_idle'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_1C26D7684DA13805DE6C518B6FF9D46F": {
+        "Result": {
+          "LinkID": 40
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_6C00AFE747D61546917109B3F6862697": {
+        "StateMachineIndexInClass": 7,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_05C48B934FB3312D72F6B893647A2CEC": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_equip'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_equip.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2E864273401BEB667A37C4AD3DFD28F4": {
+        "Result": {
+          "LinkID": 43
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_A2161344407A87ADE3C74F988A527677": {
+        "StateMachineIndexInClass": 6,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_E9B12EB64A9D4004790CF3B37CDA177B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_equip'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_equip.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": -1.5,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 2.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F97CDDA7426762A1814313A77C999222": {
+        "Result": {
+          "LinkID": 46
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_7133207346CFFF67ADF8FD845E852042": {
+        "StateMachineIndexInClass": 5,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_1147B2A5400B3047952C9488BC6A1011": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_reload'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_reload.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C363D5E04297858B8BF46B8EE2946EBA": {
+        "Result": {
+          "LinkID": 49
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_4CA30D67479D11477926F5BC9E74C9C1": {
+        "StateMachineIndexInClass": 4,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_6A78D832483915A2E44C8483CFFDDB60": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_shoot'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_703DCA6445A7B162D56C2EA1B33BA37F": {
+        "Result": {
+          "LinkID": 52
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_25B4007B42C316ACB994F8946410482A": {
+        "StateMachineIndexInClass": 3,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_E6A27D194BA59FA49EF6F48AD885DB18": {
+        "BasePose": {
+          "LinkID": 54
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 60
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "muzzle",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "1EAB02BB-445529F3-9D8B8EBC-7958C23C",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_E9F1EA3247937053471ECC97A0613F1B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_shoot'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_9C904CE542BB222CAE3F90844348E253": {
+        "Result": {
+          "LinkID": 56
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_14B09BEC4216C1120068B781FAE758FF": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_2800925A401325DAC5E5458AC0D31BCB": {
+        "BasePose": {
+          "LinkID": 58
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 61
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "muzzle",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "1EAB02BB-445529F3-9D8B8EBC-7958C23C",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_08A01CEB4AF2473BAEB44D80B15A8472": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_idle'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_1A9A88FF49F1A0C1A015E2BB1DD6DB95": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_idle'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_3CD27B374C493D05FA6E9D9A07C0A8F3": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9AB6084B4F7EA613C70F5EBC345FE7A0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_166FEBCD41D30A6FA7F03789E6DAF401": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1D949E2B49D4AB7F34BFB98CC9CF108A": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_7C3C2CDE405F291AE7C6DBB561175B45": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_StateResult_4105D90A405CA256E2BBB5BFFEF7F16D": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_822B8B464D65C1B3246B89BAA499C953": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idleToAim'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idleToAim.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": -1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 1.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5A5EF7A14D4A52C0D5D87DAD7305A0FC": {
+        "Result": {
+          "LinkID": 70
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_696120AA412DA64C78FC9799B488F2BC": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idleToAim'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idleToAim.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_69B6BAF5458EA624D804288EF3EF2F9B": {
+        "Result": {
+          "LinkID": 72
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_5D14885C47409823867223BB50DF86C8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_idleToAim'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_idleToAim.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 1.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_080D9F404D7953E057DC6C80CF26ABCE": {
+        "Result": {
+          "LinkID": 74
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_6075102C48B4D7231BF33BA455C1EDF8": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_ATRifle_Movement'",
+          "ObjectPath": "War/Content/Animation/Weapons/BS_ATRifle_Movement.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_966AF80344992BDE64936B91CFA3FF0D": {
+        "Result": {
+          "LinkID": 76
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_2CD20A444CC24EE06B39D4B3FC303677": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_A10F662F42DCF579CAF7578482983AD6": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_crouch_shoot'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_crouch_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_698BFE4A478FEFC5837311AD449D7343": {
+        "Result": {
+          "LinkID": 79
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_1F5AC3BB4D447EF486273C9CB80E918C": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_85827ED14254F4EC88E675814AF58AD5": {
+        "BasePose": {
+          "LinkID": 81
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 83
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "muzzle",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "1EAB02BB-445529F3-9D8B8EBC-7958C23C",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_7B27502543ED62454D9C9DAC58C59CC8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ATRifle_prone_idle'",
+          "ObjectPath": "War/Content/Animation/Weapons/Anim_ATRifle_prone_idle.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_04051CE84917E9D3AF2D86AE635BB6C2",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_ATRifle",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.12"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.6"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_LessEqual_FloatFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.7"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.13"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_LessEqual_FloatFloat_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.8"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ATRifle_C:ExecuteUbergraph_ABP_ATRifle.CallFunc_LessEqual_FloatFloat_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.9"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFraction_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_ATRifle",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_ATRifle_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/ABP_ATRifle.14"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ATRifle_AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_104701204B52AD046CE2EA87FAA184F0",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByEnum'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_4967CD42411824D7EA65B98BA959A5A6",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByEnum'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_63CEF9A7471D61021234E188A181B77E",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByEnum'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByEnum_70DE23FF4D0E7FFAD6B9088848320CC6",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByEnum'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6075102C48B4D7231BF33BA455C1EDF8",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_2800925A401325DAC5E5458AC0D31BCB",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_85827ED14254F4EC88E675814AF58AD5",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_E6A27D194BA59FA49EF6F48AD885DB18",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_05C48B934FB3312D72F6B893647A2CEC",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_08A01CEB4AF2473BAEB44D80B15A8472",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1147B2A5400B3047952C9488BC6A1011",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1939F849490F031830E7FFA15A02D4FD",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1A9A88FF49F1A0C1A015E2BB1DD6DB95",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1C6179D74BE8A3E44C84F891D3C76A36",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_351DF6B944507BCE5FD0DEADB60EF068",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_5D14885C47409823867223BB50DF86C8",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_696120AA412DA64C78FC9799B488F2BC",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_6A78D832483915A2E44C8483CFFDDB60",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_774F551849C6D447203A39B05CC2716F",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_7B27502543ED62454D9C9DAC58C59CC8",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_814EC75C43ACF1DFC0D9C89C4B8CECD9",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_822B8B464D65C1B3246B89BAA499C953",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A10F662F42DCF579CAF7578482983AD6",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A795BE424179744E0D4B399520FF272C",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_ADCC525840E7115AF1B79AB5D7F02B1A",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_B41E8BF94BF897D89A63DBB26CC04379",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C60D2F5A414F72DB6DE00F916F79CA2A",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C82B478044283FC652800D9B64E9EE9E",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CA29D77044353FD8122E518C65AD1F07",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E9B12EB64A9D4004790CF3B37CDA177B",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E9F1EA3247937053471ECC97A0613F1B",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_011B6BF745FC347C51145BBAD728C020",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_1454389543E045F8418E248CDC0944FE",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_14B09BEC4216C1120068B781FAE758FF",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_1F5AC3BB4D447EF486273C9CB80E918C",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_25B4007B42C316ACB994F8946410482A",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_2CD20A444CC24EE06B39D4B3FC303677",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_4CA30D67479D11477926F5BC9E74C9C1",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_691C96D1449FB187714215B1EDE2635B",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_6BDE65DC440077DE2E9C99B7FDA023EF",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_6BE260A24BEBBF53566F3AA8D24F41BC",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_6C00AFE747D61546917109B3F6862697",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_7133207346CFFF67ADF8FD845E852042",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_A2161344407A87ADE3C74F988A527677",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_DEE5B8C84ABAA61D3A79E49930EF42F4",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_E03481B64172A036910DB38021549020",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_080D9F404D7953E057DC6C80CF26ABCE",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_18C7F0FC4CC84CFA251B0C9B55451933",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_1C26D7684DA13805DE6C518B6FF9D46F",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_2E864273401BEB667A37C4AD3DFD28F4",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4105D90A405CA256E2BBB5BFFEF7F16D",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4A6AB4FA40CE99B7A4BBA0BBBE563DAF",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4CA1BBF0432DB40BD91567B43A96EF87",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_55EEA1794E08DE672B4E05BB619F1F97",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5A5EF7A14D4A52C0D5D87DAD7305A0FC",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_664158D948A29F3EFC7FDB853BBAFF3B",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_698BFE4A478FEFC5837311AD449D7343",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_69B6BAF5458EA624D804288EF3EF2F9B",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_703DCA6445A7B162D56C2EA1B33BA37F",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_77733714401E833DC0A28D8A50418A52",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_8A2F7A8F41AA63AAA085A4B0F32A64AE",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_8A515FF7487227DEB2C16CA2F5A427A6",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_966AF80344992BDE64936B91CFA3FF0D",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_9BBA55074D862DCC5C595A8B8B579B4D",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_9C904CE542BB222CAE3F90844348E253",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_B17A81F54D945F22E115F3B3D7F423F1",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C363D5E04297858B8BF46B8EE2946EBA",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E3D3C0B847F39ABBBBAFD1912858F714",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F97CDDA7426762A1814313A77C999222",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_067D23504E1B3256FB7E0BA90323F2D4",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_166FEBCD41D30A6FA7F03789E6DAF401",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_1D949E2B49D4AB7F34BFB98CC9CF108A",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_39D4ADC5483B2D8087CA4B99FCAA5507",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_3CD27B374C493D05FA6E9D9A07C0A8F3",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_75EE0BA8447D3A6AA34DD89D18649BDC",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_783513B44C30D4E57DA666BA02FAFA99",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_7C3C2CDE405F291AE7C6DBB561175B45",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9684906745DE4D688785DC8B293FF123",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9AB6084B4F7EA613C70F5EBC345FE7A0",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9F9662E543F0377DFC9616A955872F00",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BEBC63EA481E8B652BB07EA228F961BD",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_DC82AEE142B9A6311DFBC4953280A6A1",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_EFE21E2E44CE113AEF7DB386B6025755",
+    "Outer": "ABP_ATRifle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

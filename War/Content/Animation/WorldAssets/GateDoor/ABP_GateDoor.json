@@ -1,0 +1,1377 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_GateDoor_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Movement",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 8,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 9,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "OpenForward",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 6,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "OpenBackward",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 17,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "FullyOpenBackward",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 18,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "FullyOpenForward",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 19,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 7,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 8,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                9
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 2,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 4,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 4,
+              "NextState": 1,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 3,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 4,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_GateDoor-T1_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Structures/Walls/SK_GateDoor-T1_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.27"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.47"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.26"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.46"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.23"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.43"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.30"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.50"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.28"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.48"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.24"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.44"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.31"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.51"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.29"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.49"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.25"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.45"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.22"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.42"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'GateAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.0"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.21"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.31"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.24"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.28"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.29"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.30"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.23"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.26"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.27"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.25"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.22"
+      },
+      {
+        "ObjectName": "Function'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_Root_97A4A02043A8CEC3A617638E363EB7B6'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.51"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.44"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.50"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_SequencePlayer_24FC57664280047923AD518247FC0F2B'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_StateResult_D84A8F90426D04378B7872A6B49AF363'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.40"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_SequencePlayer_C535EDCD45E1EAAAC9FC96AAD793C014'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_StateResult_44AFD3E1465C629431E138AC4D10E229'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_SequencePlayer_8A64EAD641A4A10D08EB848E5FFB3DBD'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_StateResult_BC6E28784C00CAD331C05891F8FAEFB9'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.39"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_SequencePlayer_4C9E9BA3439761865EBD7BBAE6B43179'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_StateResult_EEB0A1514331829565A8EBA2760560AD'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_StateResult_B256C3A7474F137EFC97E7AEE79FDFAE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraphNode_StateMachine_9433427E443FA1FFA3605BA70A8ED454'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.36"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_GateDoor": {
+        "ObjectName": "Function'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.22"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.25"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.27"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.26"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.23"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.30"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.29"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.24"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE": {
+        "ObjectName": "Function'ABP_GateDoor_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.31"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_GateDoor_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.21"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_GateDoor_C'Default__ABP_GateDoor_C'",
+      "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.2"
+    }
+  },
+  {
+    "Type": "ABP_GateDoor_C",
+    "Name": "Default__ABP_GateDoor_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.ABP_GateDoor_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_97A4A02043A8CEC3A617638E363EB7B6": {
+        "Result": {
+          "LinkID": 20
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_24FC57664280047923AD518247FC0F2B": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GateDoor_OpenForward'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/Anim_GateDoor_OpenForward.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 1.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_D84A8F90426D04378B7872A6B49AF363": {
+        "Result": {
+          "LinkID": 11
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_C535EDCD45E1EAAAC9FC96AAD793C014": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GateDoor_OpenBackward'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/Anim_GateDoor_OpenBackward.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 1.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_44AFD3E1465C629431E138AC4D10E229": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_8A64EAD641A4A10D08EB848E5FFB3DBD": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GateDoor_OpenBackward'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/Anim_GateDoor_OpenBackward.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_BC6E28784C00CAD331C05891F8FAEFB9": {
+        "Result": {
+          "LinkID": 15
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_4C9E9BA3439761865EBD7BBAE6B43179": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_GateDoor_OpenForward'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/Anim_GateDoor_OpenForward.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_EEB0A1514331829565A8EBA2760560AD": {
+        "Result": {
+          "LinkID": 17
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_B256C3A7474F137EFC97E7AEE79FDFAE": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_9433427E443FA1FFA3605BA70A8ED454": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_97A4A02043A8CEC3A617638E363EB7B6",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_GateDoor",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.14"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.15"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_NotEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.16"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_NotEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.17"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_BooleanAND_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_BooleanAND_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_NotEqual_ByteByte_ReturnValue_4'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.18"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_4'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.12"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_EqualEqual_ByteByte_ReturnValue_5'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.13"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_GateDoor_C:ExecuteUbergraph_ABP_GateDoor.CallFunc_NotEqual_ByteByte_ReturnValue_5'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.19"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanAND_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_4",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_5",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_4",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_5",
+    "Outer": "ExecuteUbergraph_ABP_GateDoor",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_GateDoor_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/GateDoor/ABP_GateDoor.20"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_GateDoor_AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_24FC57664280047923AD518247FC0F2B",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4C9E9BA3439761865EBD7BBAE6B43179",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8A64EAD641A4A10D08EB848E5FFB3DBD",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C535EDCD45E1EAAAC9FC96AAD793C014",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_9433427E443FA1FFA3605BA70A8ED454",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_44AFD3E1465C629431E138AC4D10E229",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_B256C3A7474F137EFC97E7AEE79FDFAE",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_BC6E28784C00CAD331C05891F8FAEFB9",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D84A8F90426D04378B7872A6B49AF363",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_EEB0A1514331829565A8EBA2760560AD",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_079CCC914081AF995121089B8D02A80B",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0AF1A1D2463EADC4A5D0A8A614D55C29",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_4BE1CEBC4CC4B4B59B15F5B0CD4FDCE2",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_6279826E4E64348F8D7D3996047B4EB2",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_65FC5AA14251A006F80399A45584A91C",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_7ABD07A94A059B446DA0D59A5F3BE363",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A74F7A294CE760E7955FF1B03F491AE1",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B976E2524D801A87F13533B9E6A753DE",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_BA40081E4E892D230103CA995A92CFBA",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C28CA8A9412E7210B62B16AFFF2170EE",
+    "Outer": "ABP_GateDoor_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

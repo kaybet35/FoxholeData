@@ -1,0 +1,336 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'SulfurLight:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/SulfurLight.5"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'SulfurLight:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/SulfurLight.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'SulfurLight:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/SulfurLight.6"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'SulfurLight:ParticleModuleColor_0'",
+          "ObjectPath": "War/Content/FX/SulfurLight.2"
+        },
+        {
+          "ObjectName": "ParticleModuleLight'SulfurLight:ParticleModuleLight_0'",
+          "ObjectPath": "War/Content/FX/SulfurLight.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'SulfurLight:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/SulfurLight.7"
+      },
+      "PeakActiveParticles": 3
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.127857,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 0.554051,
+          "Z": 0.127857
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 0.554051,
+          "Z": 0.127857
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            0.554051,
+            0.127857
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 2.25,
+        "MaxValue": 2.25,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.25
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLight",
+    "Name": "ParticleModuleLight_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleModuleLight'",
+    "Properties": {
+      "bUseInverseSquaredFalloff": false,
+      "SpawnFraction": 96.318275,
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "BrightnessOverLife": {
+        "MinValue": 32.0,
+        "MaxValue": 32.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            32.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RadiusScale": {
+        "MinValue": 15.0,
+        "MaxValue": 15.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            15.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LightExponent": {
+        "MinValue": 16.0,
+        "MaxValue": 16.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            16.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "Material'DefaultParticle'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultParticle.0"
+      },
+      "bUseLocalSpace": true,
+      "bUseLegacyEmitterTime": false,
+      "EmitterDuration": 2.2,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'SulfurLight:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/SulfurLight.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "bDurationRecalcEachLoop": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 25.0,
+        "MaxValue": 25.0,
+        "MinValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "MaxValueVec": {
+          "X": 25.0,
+          "Y": 25.0,
+          "Z": 25.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            25.0,
+            25.0,
+            25.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 1,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "SulfurLight",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "EmitterRenderMode": "ERM_LightsOnly",
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'SulfurLight:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/SulfurLight.1"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "SulfurLight",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'SulfurLight:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/SulfurLight.8"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true
+    }
+  }
+]

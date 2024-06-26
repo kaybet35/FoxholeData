@@ -1,0 +1,114 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "RainStormModerate_Cue1",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'RainStormModerate_Cue1:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/RainStormModerate_Cue1.3"
+      },
+      "VolumeMultiplier": 1.25,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 2097152.0
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "RainStormModerate_Cue1",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 40.0,
+      "DelayMax": 300.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RainStormModerate_Cue1:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/RainStormModerate_Cue1.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "RainStormModerate_Cue1",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'RainStormModerate_Cue1:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/RainStormModerate_Cue1.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "RainStormModerate_Cue1",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'RainStormModerate_Cue1:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/Ambient/RainStormModerate_Cue1.5"
+        },
+        {
+          "ObjectName": "SoundNodeLooping'RainStormModerate_Cue1:SoundNodeLooping_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/RainStormModerate_Cue1.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "RainStormModerate_Cue1",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/ThunderDistant.ThunderDistant",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ThunderDistant'",
+      "ObjectPath": "War/Content/Audio/Ambient/ThunderDistant.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "RainStormModerate_Cue1",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/RainstormModerate.RainstormModerate",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RainstormModerate'",
+      "ObjectPath": "War/Content/Audio/Ambient/RainstormModerate.0"
+    }
+  }
+]

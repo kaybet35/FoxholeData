@@ -1,0 +1,346 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "DamageBox",
+    "Outer": "BPSignPost_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPSignPost_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPSignPost_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SignPost'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPSignPost_C:DamageBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSignPost_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPSignPost_C'Default__BPSignPost_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.2"
+    }
+  },
+  {
+    "Type": "BPSignPost_C",
+    "Name": "Default__BPSignPost_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPSignPost.BPSignPost_C'",
+    "Properties": {
+      "bIsBuiltOnFoundation": true,
+      "BuildGhostClass": null,
+      "BuildSiteClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPSignPostBuildSite_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPostBuildSite.1"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "F5E727A94E4FFA6FF5986B9BF90B3B98",
+        "SourceString": "A sign used to relay information to other soldiers.",
+        "LocalizedString": "A sign used to relay information to other soldiers."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'BuildableSignpostIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/BuildableSignpostIcon.0"
+      },
+      "BuildOrder": 6,
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "ValidBuildTools": 1,
+      "CodeName": "SignPost",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "5A701006423EBFF956AC69A033696A12",
+        "SourceString": "Signpost",
+        "LocalizedString": "Signpost"
+      },
+      "ArmourType": "EArmourType::Tier1Structure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPSignPost_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPSignPost_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.5"
+      },
+      "MaxHealth": 1000,
+      "Health": 1000,
+      "ScreenToUse": "ESimScreen::SignPost",
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "bCanBuildSiteBeDemolished": true,
+        "DemolishDurationHours": 336
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPSignPost_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPSignPost_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPSignPost_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "DamageBox_GEN_VARIABLE",
+    "Outer": "BPSignPost_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -5.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPSignPost_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSignPost_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.3"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "BPSignPost_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPSignPost_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPSignPost_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.7"
+      },
+      "VariableGuid": "0C4D41FE-4A194A94-5B958BA6-A694F80F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPSignPost_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.12"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9A48B8F5-4B03C38B-CA3E1E9C-1ED0EF5B",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPSignPost_C:DamageBox_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "91E9CAF0-4AF77DAD-CC107385-CEFE5F5E",
+      "InternalVariableName": "DamageBox"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPSignPost_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPSignPost_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSignPost_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPSignPost_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSignPost_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPSignPost_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPSignPost.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPSignPost_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BuildableSign01'",
+        "ObjectPath": "War/Content/Meshes/Structures/BuildableSign01.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPSignPost_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

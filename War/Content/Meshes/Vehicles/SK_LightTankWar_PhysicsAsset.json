@@ -1,0 +1,481 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_42'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_43'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_3'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_7'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.9"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_LightTankWar_PhysicsAsset:SkeletalBodySetup_8'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.10"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_LightTankWar_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_LightTankWar_PhysicsAsset:PhysicsConstraintTemplate_41'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_LightTankWar_PhysicsAsset:PhysicsConstraintTemplate_42'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_LightTankWar_PhysicsAsset.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "turret_pivot",
+        "ConstraintBone1": "turret_pivot",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 69.6078,
+          "Z": 267.3077
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_41",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "front_ColisionBone",
+        "ConstraintBone1": "front_ColisionBone",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 297.70074,
+          "Z": 229.4406
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_42",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "back_ColisionBone",
+        "ConstraintBone1": "back_ColisionBone",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": -380.54498,
+          "Z": 215.92987
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.999985,
+              "Roll": 0.0
+            },
+            "Radius": 0.505,
+            "Length": 0.505,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "3E722F5D4A3317A45774EEADE818D11E"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 6.8991323,
+              "Y": 10.809628,
+              "Z": 8.849224
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.092267975,
+              "Roll": -89.99999
+            },
+            "Radius": 110.70371,
+            "Length": 40.57874,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "turret_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "4D2B851D4A8BB80498AD218C444ADC05"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_3",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 17.531555,
+              "Z": 125.02501
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 297.7525,
+            "Y": 227.45294,
+            "Z": 146.7796,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": -189.68546,
+              "Z": 96.4413
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 226.65991,
+            "Y": 185.31046,
+            "Z": 89.99051,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "body_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "7B676D31450E1DDDDF7C559BA2F3E95B"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_42",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -1.4728079,
+              "Y": -115.895035,
+              "Z": -42.17444
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.999954,
+              "Roll": 0.0
+            },
+            "X": 100.0,
+            "Y": 218.08458,
+            "Z": 158.41907,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 46.237305,
+              "Y": -37.380707,
+              "Z": -24.202408
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 79.682594,
+            "Y": 79.682594,
+            "Z": 121.465805,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": -40.262024,
+              "Z": -118.8065
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 225.76013,
+            "Y": 85.52304,
+            "Z": 85.52304,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "front_ColisionBone",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "7424B4D24E6A94070E97BD8F2CF667ED"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_43",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -0.0011138916,
+              "Y": 192.68745,
+              "Z": 17.904903
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": -15.000126
+            },
+            "X": 286.4775,
+            "Y": 207.93877,
+            "Z": 17.33995,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 0.21298218,
+              "Y": 49.766388,
+              "Z": -1.7701111
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 161.95267,
+            "Y": 97.191925,
+            "Z": 90.5802,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": -0.00012207031,
+              "Y": 94.052155,
+              "Z": -94.21777
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 223.72058,
+            "Y": 7.5,
+            "Z": 94.95984,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": -134.04422,
+              "Y": 246.87262,
+              "Z": 8.196899
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 18.420044,
+            "Y": 75.83034,
+            "Z": 35.811115,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "Center": {
+              "X": 134.04422,
+              "Y": 246.87262,
+              "Z": 8.196899
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 18.420044,
+            "Y": 75.83034,
+            "Z": 35.811115,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "back_ColisionBone",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F558F4584FD127947DD3BCA2E86A2391"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_7",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 39.719482,
+              "Y": -12.694275,
+              "Z": -8.9367075
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 62.93982,
+            "Y": 681.43994,
+            "Z": 169.12042,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "tracks_pivot_L",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "B36805A94708C94F3C0682900535C872"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_8",
+    "Outer": "SK_LightTankWar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": -39.719482,
+              "Y": -12.694275,
+              "Z": -8.288849
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 62.93982,
+            "Y": 681.43994,
+            "Z": 168.0199,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "tracks_pivot_R",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "D4F645EB4927DD1D498BA7B403D13B02"
+  }
+]

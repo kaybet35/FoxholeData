@@ -1,0 +1,5246 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Door State",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Undocked",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Docked",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Docking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Undocking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "Ramp State",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Undocked",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 30,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 31,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 22,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                23
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Docked",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 32,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 33,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 18,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                19,
+                20
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Docking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 34,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 24,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                25,
+                26
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Undocking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 35,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 28,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                29
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 3.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 1,
+              "CrossfadeDuration": 3.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 3,
+              "CrossfadeDuration": 1.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 1.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "TurretF Shooting State Machine_1",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 42,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 39,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 43,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 40,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                41
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "TurretB Shooting State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 52,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 49,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 53,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 50,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                51
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "TurretF Shooting State Machine",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 63,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 60,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 64,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 61,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                62
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_LargeShipStorageShipBody_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_LargeShipStorageShipBody_Skeleton.27"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_70A1C81B42613BB03964B7872C63AA1B'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.44"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_592746A04A7D0C365A26E8A2AB020D51'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.67"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.39"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.106"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.29"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.94"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.26"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.91"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.28"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.93"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.34"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.99"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.32"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.97"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:RampAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_F0C57DB848873A056CCD978827E35681'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.52"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampExtension",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:RampExtension'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_88A762554B190A187DF06F80E4229735'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.46"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:RampAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_F23CD1FC493FD3F3ACCC918B292B9693'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.53"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RampExtension",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'LargeShipAnimInstance:RampExtension'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_79F1BE6E46351DF198E35E8AF2A68B73'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.45"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.35"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.101"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.37"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.104"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.30"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.95"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.40"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.108"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.31"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.96"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.38"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.105"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner02Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner02Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_3073A786426F89D2B3F5CA866E7508C7'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.41"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_DCCE37E84F33F5A07341278E3414F17A'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.50"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_B31295394A0405F01CBFA3873B52EDEC'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.103"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.27"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.92"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner02Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner02Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_5C7A76FF4B391EFD26F3169E3F9121E3'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.43"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsAltFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsAltFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_985445E248C272A03EAC47AD50AC8295'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.100"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.33"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.98"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_E0CC6BFB44C6BB8A5623E2A60D2AA3FC'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_B1547541428AE9417A812C9140743FCF'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.47"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner03Pitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner03Pitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_52A554194C08A9981DBC599258EA8EEE'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.42"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunner03Yaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunner03Yaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_C9192D7D4E5353FFA8C4FA85F17BF0A4'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.48"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_FE3466E1448903853C9BF19EA83A9ECF'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.107"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.36"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.102"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "AltGunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:AltGunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_C968E6BD41BDC5AF0E5CA58D935AF559'",
+            "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.49"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'LargeShipAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.0"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.25"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.31"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.32"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.34"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.28"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.26"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.38"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.29"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.39"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.27"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.40"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.33"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.30"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.36"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.37"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.35"
+      },
+      {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_Root_976BFB624F4EC33B95427798E0436A0D'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_0B23FED941FEB3B0C01219B230CC34CD'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.54"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_966D81C84ABABE45FD7E33A5AF003107'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.58"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_C968E6BD41BDC5AF0E5CA58D935AF559'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.102"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_FE3466E1448903853C9BF19EA83A9ECF'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.107"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_CB3448474E545FE01A8340BEBBCB286E'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.69"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_6865A55741E93F2E8ADEC1BCE28378C9'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.79"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_BD64FF2E4A9BA790944EF2A6F21C43AE'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.83"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateMachine_D7745F4A417F78160CEDC3A399A2CDA8'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.76"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_C9192D7D4E5353FFA8C4FA85F17BF0A4'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_52A554194C08A9981DBC599258EA8EEE'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_D19C8198434BD0645DE0A6B48D1B0A0E'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.59"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_B1547541428AE9417A812C9140743FCF'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_E0CC6BFB44C6BB8A5623E2A60D2AA3FC'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.51"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.98"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_985445E248C272A03EAC47AD50AC8295'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.100"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_FDE28ACA45A14B79A0B4F09DD300C081'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.71"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_32FBB80A49AF22BC5531919333E03D2B'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.78"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_D8B9CDD549584443B9DE40B6FB215A41'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.88"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateMachine_6D2B05284F9D987B310A5B9F3C2A3E1B'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.72"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_6312AD024A2BBFBF80BC80B04427349F'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.57"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_DEFD44F14D2D2AC1909042A8D3016DCD'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.60"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_E35F126D4AA1413B8EA124AE9CC435D1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.61"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_5C7A76FF4B391EFD26F3169E3F9121E3'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.92"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_B31295394A0405F01CBFA3873B52EDEC'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.103"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_0DD8537A4FD1694FAFCBF893CEBD60E0'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.62"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_7E576CA044C01CFCA73A57BB9F5D719A'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.81"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_69D58D844F449B3666791B84E3961D26'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.80"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateMachine_75EA82734B0F7D52B87144AA9D9578E4'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.73"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_DCCE37E84F33F5A07341278E3414F17A'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.50"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_3073A786426F89D2B3F5CA866E7508C7'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.105"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.96"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.108"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.95"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.104"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.101"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_17ADA5FC4C3571C9DE28C08F54BEDC94'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.63"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_C5A5AE494A7DA19D6D2AA8A91D103644'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.84"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_200270DD430501FC9C82A7AE20373BE1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.55"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_79F1BE6E46351DF198E35E8AF2A68B73'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_F23CD1FC493FD3F3ACCC918B292B9693'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.53"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_27832DA04EE60A43B4F646884ECBFC1D'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.77"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_3622D61E4F538D9D168720A1465B1BB5'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.66"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_8D7E11D843EEC8F2D8F128B42C4C8276'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.82"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_LayeredBoneBlend_3F1E747B4BA66B4234BB888AC47F64CA'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.56"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_88A762554B190A187DF06F80E4229735'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_F0C57DB848873A056CCD978827E35681'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.52"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_CB2C09D746E9C53D4A559395C5D9CE19'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.85"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateMachine_B3A924BE4B3CBD441C2B73A23B0BBD26'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.75"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.97"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.99"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.93"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.91"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.94"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.106"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_E0CFB6F44DE983B7598B1D8CFD20C3D6'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.70"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_DC5D56B346020CFD4263C98B41AB76E3'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.89"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_21D7ADDC4FB22977C86227B389D73293'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.65"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_E4DEB3674091683D140B2AA5918564B2'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.90"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_7C4E06F141388CF5AB9A38A8E2CEAB43'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.68"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_D7296674448EB2C4909160A23DAFDB12'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.87"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_1EF08FB1438A6B8B7D0EE3966B26DF42'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.64"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateResult_CBF41CFF4CF75DF0C3128785989FF491'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.86"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_StateMachine_8903CEDA4CBDF267C9ED17A65B47A285'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.74"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_SequencePlayer_592746A04A7D0C365A26E8A2AB020D51'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.67"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraphNode_BlendSpacePlayer_70A1C81B42613BB03964B7872C63AA1B'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.44"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_LargeShipStorageShip": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.35"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.37"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.36"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.30"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.33"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.40"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.27"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.39"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.29"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.38"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.26"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.28"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.34"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.32"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.31"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_LargeShipStorageShip_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.25"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_LargeShipStorageShip_C'Default__ABP_LargeShipStorageShip_C'",
+      "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.2"
+    }
+  },
+  {
+    "Type": "ABP_LargeShipStorageShip_C",
+    "Name": "Default__ABP_LargeShipStorageShip_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.ABP_LargeShipStorageShip_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_976BFB624F4EC33B95427798E0436A0D": {
+        "Result": {
+          "LinkID": 1
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_0B23FED941FEB3B0C01219B230CC34CD": {
+        "BasePose": {
+          "LinkID": 22
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 12
+          },
+          {
+            "LinkID": 51
+          },
+          {
+            "LinkID": 66
+          },
+          {
+            "LinkID": 67
+          },
+          {
+            "LinkID": 68
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Crane_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Ramp1",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "FrontDoor_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "FrontDoor_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Propeller_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Propeller_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Rudder",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_LayeredBoneBlend_966D81C84ABABE45FD7E33A5AF003107": {
+        "BasePose": {
+          "LinkID": 3
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 31
+          },
+          {
+            "LinkID": 9
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Vertical_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Muzzle_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_BlendSpacePlayer_C968E6BD41BDC5AF0E5CA58D935AF559": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Gun_Horizontal'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Gun_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_FE3466E1448903853C9BF19EA83A9ECF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_CB3448474E545FE01A8340BEBBCB286E": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_Shooting'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_Shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_6865A55741E93F2E8ADEC1BCE28378C9": {
+        "Result": {
+          "LinkID": 6
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_BD64FF2E4A9BA790944EF2A6F21C43AE": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_D7745F4A417F78160CEDC3A399A2CDA8": {
+        "StateMachineIndexInClass": 4,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_BlendSpacePlayer_C9192D7D4E5353FFA8C4FA85F17BF0A4": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Crane_Horizontal'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Crane_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_52A554194C08A9981DBC599258EA8EEE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Crane_Vertical'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Crane_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_D19C8198434BD0645DE0A6B48D1B0A0E": {
+        "BasePose": {
+          "LinkID": 10
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 11
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Crane_Arm1",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_BlendSpacePlayer_B1547541428AE9417A812C9140743FCF": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Gun_Horizontal'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Gun_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_E0CC6BFB44C6BB8A5623E2A60D2AA3FC": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Gun_Vertical'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Gun_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_985445E248C272A03EAC47AD50AC8295": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_FDE28ACA45A14B79A0B4F09DD300C081": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_Shooting'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_Shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_32FBB80A49AF22BC5531919333E03D2B": {
+        "Result": {
+          "LinkID": 17
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_D8B9CDD549584443B9DE40B6FB215A41": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_6D2B05284F9D987B310A5B9F3C2A3E1B": {
+        "StateMachineIndexInClass": 3,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_6312AD024A2BBFBF80BC80B04427349F": {
+        "BasePose": {
+          "LinkID": 13
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 14
+          },
+          {
+            "LinkID": 20
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Vertical_B",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Muzzle_B",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_LayeredBoneBlend_DEFD44F14D2D2AC1909042A8D3016DCD": {
+        "BasePose": {
+          "LinkID": 21
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 2
+          },
+          {
+            "LinkID": 23
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Horizontal_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Horizontal_L",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_LayeredBoneBlend_E35F126D4AA1413B8EA124AE9CC435D1": {
+        "BasePose": {
+          "LinkID": 24
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 32
+          },
+          {
+            "LinkID": 30
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Vertical_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Muzzle_L",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_BlendSpacePlayer_5C7A76FF4B391EFD26F3169E3F9121E3": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Gun_Horizontal'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Gun_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_B31295394A0405F01CBFA3873B52EDEC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_0DD8537A4FD1694FAFCBF893CEBD60E0": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_Shooting'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_Shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7E576CA044C01CFCA73A57BB9F5D719A": {
+        "Result": {
+          "LinkID": 27
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_69D58D844F449B3666791B84E3961D26": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_75EA82734B0F7D52B87144AA9D9578E4": {
+        "StateMachineIndexInClass": 2,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_BlendSpacePlayer_DCCE37E84F33F5A07341278E3414F17A": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_FrontGun_Vertical'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_FrontGun_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_3073A786426F89D2B3F5CA866E7508C7": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_FrontGun_Vertical'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_FrontGun_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_17ADA5FC4C3571C9DE28C08F54BEDC94": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_RampFullyClosed'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_RampFullyClosed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C5A5AE494A7DA19D6D2AA8A91D103644": {
+        "Result": {
+          "LinkID": 39
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_200270DD430501FC9C82A7AE20373BE1": {
+        "BasePose": {
+          "LinkID": 43
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 42
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Ramp2",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_BlendSpacePlayer_79F1BE6E46351DF198E35E8AF2A68B73": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_RampExtension'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_RampExtension.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_F23CD1FC493FD3F3ACCC918B292B9693": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_RampAngle'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_RampAngle.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_27832DA04EE60A43B4F646884ECBFC1D": {
+        "Result": {
+          "LinkID": 41
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_3622D61E4F538D9D168720A1465B1BB5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_RampFullyClosed'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_RampFullyClosed.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8D7E11D843EEC8F2D8F128B42C4C8276": {
+        "Result": {
+          "LinkID": 45
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_3F1E747B4BA66B4234BB888AC47F64CA": {
+        "BasePose": {
+          "LinkID": 49
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 48
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Ramp2",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "87D321D3-485386E9-324DF2A3-14420A71",
+        "VirtualBoneGuid": "8612DB50-4E7731BA-ECE117A9-26438F24"
+      },
+      "AnimGraphNode_BlendSpacePlayer_88A762554B190A187DF06F80E4229735": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_RampExtension'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_RampExtension.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_F0C57DB848873A056CCD978827E35681": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_RampAngle'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_RampAngle.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_CB2C09D746E9C53D4A559395C5D9CE19": {
+        "Result": {
+          "LinkID": 47
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_B3A924BE4B3CBD441C2B73A23B0BBD26": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E0CFB6F44DE983B7598B1D8CFD20C3D6": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_idleClose'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_idleClose.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_DC5D56B346020CFD4263C98B41AB76E3": {
+        "Result": {
+          "LinkID": 58
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_21D7ADDC4FB22977C86227B389D73293": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_doorsOpen'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_doorsOpen.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E4DEB3674091683D140B2AA5918564B2": {
+        "Result": {
+          "LinkID": 60
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_7C4E06F141388CF5AB9A38A8E2CEAB43": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_idleClose'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_idleClose.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_D7296674448EB2C4909160A23DAFDB12": {
+        "Result": {
+          "LinkID": 62
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_1EF08FB1438A6B8B7D0EE3966B26DF42": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_doorsOpen'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_doorsOpen.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_CBF41CFF4CF75DF0C3128785989FF491": {
+        "Result": {
+          "LinkID": 64
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_8903CEDA4CBDF267C9ED17A65B47A285": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_592746A04A7D0C365A26E8A2AB020D51": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_LargeShipStorageShip_POSE_Propeller_speed'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/Anim_LargeShipStorageShip_POSE_Propeller_speed.0"
+        },
+        "PlayRateBasis": 300.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_70A1C81B42613BB03964B7872C63AA1B": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_LargeShipStorageShip_Rudder_Horizontal'",
+          "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/BS_LargeShipStorageShip_Rudder_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_976BFB624F4EC33B95427798E0436A0D",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.17"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_4'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.18"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.21"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_NotEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.19"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.14"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.22"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_LessEqual_FloatFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.15"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_5'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.11"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.23"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_LessEqual_FloatFloat_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.16"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_6'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.12"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_NotEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.20"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_LargeShipStorageShip_C:ExecuteUbergraph_ABP_LargeShipStorageShip.CallFunc_EqualEqual_ByteByte_ReturnValue_7'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.13"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_4",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_5",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_6",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_7",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_LargeShipStorageShip",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_LargeShipStorageShip_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/LargeShips/StorageShip/ABP_LargeShipStorageShip.24"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LargeShipStorageShip_AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_3073A786426F89D2B3F5CA866E7508C7",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_52A554194C08A9981DBC599258EA8EEE",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_5C7A76FF4B391EFD26F3169E3F9121E3",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_70A1C81B42613BB03964B7872C63AA1B",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_79F1BE6E46351DF198E35E8AF2A68B73",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_88A762554B190A187DF06F80E4229735",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_B1547541428AE9417A812C9140743FCF",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C9192D7D4E5353FFA8C4FA85F17BF0A4",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C968E6BD41BDC5AF0E5CA58D935AF559",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_DCCE37E84F33F5A07341278E3414F17A",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_E0CC6BFB44C6BB8A5623E2A60D2AA3FC",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F0C57DB848873A056CCD978827E35681",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F23CD1FC493FD3F3ACCC918B292B9693",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_0B23FED941FEB3B0C01219B230CC34CD",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_200270DD430501FC9C82A7AE20373BE1",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_3F1E747B4BA66B4234BB888AC47F64CA",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_6312AD024A2BBFBF80BC80B04427349F",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_966D81C84ABABE45FD7E33A5AF003107",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_D19C8198434BD0645DE0A6B48D1B0A0E",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_DEFD44F14D2D2AC1909042A8D3016DCD",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_E35F126D4AA1413B8EA124AE9CC435D1",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_0DD8537A4FD1694FAFCBF893CEBD60E0",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_17ADA5FC4C3571C9DE28C08F54BEDC94",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_1EF08FB1438A6B8B7D0EE3966B26DF42",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_21D7ADDC4FB22977C86227B389D73293",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_3622D61E4F538D9D168720A1465B1BB5",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_592746A04A7D0C365A26E8A2AB020D51",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_7C4E06F141388CF5AB9A38A8E2CEAB43",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CB3448474E545FE01A8340BEBBCB286E",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E0CFB6F44DE983B7598B1D8CFD20C3D6",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FDE28ACA45A14B79A0B4F09DD300C081",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_6D2B05284F9D987B310A5B9F3C2A3E1B",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_75EA82734B0F7D52B87144AA9D9578E4",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_8903CEDA4CBDF267C9ED17A65B47A285",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_B3A924BE4B3CBD441C2B73A23B0BBD26",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_D7745F4A417F78160CEDC3A399A2CDA8",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_27832DA04EE60A43B4F646884ECBFC1D",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_32FBB80A49AF22BC5531919333E03D2B",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_6865A55741E93F2E8ADEC1BCE28378C9",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_69D58D844F449B3666791B84E3961D26",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7E576CA044C01CFCA73A57BB9F5D719A",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_8D7E11D843EEC8F2D8F128B42C4C8276",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_BD64FF2E4A9BA790944EF2A6F21C43AE",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C5A5AE494A7DA19D6D2AA8A91D103644",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_CB2C09D746E9C53D4A559395C5D9CE19",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_CBF41CFF4CF75DF0C3128785989FF491",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D7296674448EB2C4909160A23DAFDB12",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_D8B9CDD549584443B9DE40B6FB215A41",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_DC5D56B346020CFD4263C98B41AB76E3",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E4DEB3674091683D140B2AA5918564B2",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0744B0344DABB9D963D3C3898F7BCCD5",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_14CA556B45B797ACDE4F8A8B366F1678",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_24F2BA094C7823DBC9E83D81D2B8700A",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_63F35BA94099047576CDAF86D6611FAB",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_6829DA0748D1E6ACF12E6DB9B81C5BDD",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_6C792B4F4A1C48D855C497A1C14FB236",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_75C978914A969C0FD7D639BFCD0C9D46",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_7B51120A4C901FACAF5C36BE7FF6C9E9",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8916BF0041E79F8FB974C1AF030C3976",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_985445E248C272A03EAC47AD50AC8295",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9ECC780C4D0F39F20CBF4C8DE863AE3B",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A7A4EE45446054C8C1BA189DDB64D144",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_B31295394A0405F01CBFA3873B52EDEC",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E4FAE1F74C5ADBEC7B10399C5C0B20A8",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_E8547EAE4337506B162F1BA6783E2B6F",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_FCF503174347A1EAE94BBAA6BB5608B1",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_FE3466E1448903853C9BF19EA83A9ECF",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_FF0B326D4A0CC8BAF8C50CB2E2AE7718",
+    "Outer": "ABP_LargeShipStorageShip_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

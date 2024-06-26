@@ -1,0 +1,382 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "NoBuildVolume",
+    "Outer": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDestroyedBorderBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DestroyedBorderBase'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedBorderBase_C:NoBuildVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedBorderBase_C:TownHallMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.7"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDestroyedBorderBase_C'Default__BPDestroyedBorderBase_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.2"
+    }
+  },
+  {
+    "Type": "BPDestroyedBorderBase_C",
+    "Name": "Default__BPDestroyedBorderBase_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.BPDestroyedBorderBase_C'",
+    "Properties": {
+      "GenericStockpileComponent": {
+        "ObjectName": "GenericItemStockpileComponent'Default__BPDestroyedBorderBase_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.6"
+      },
+      "TechTreeComponent": {
+        "ObjectName": "TechTreeComponent'Default__BPDestroyedBorderBase_C:TechTreeComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.16"
+      },
+      "RuinedComponent": {
+        "ObjectName": "RuinedComponent'Default__BPDestroyedBorderBase_C:RuinedComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.8"
+      },
+      "CodeName": "DestroyedBorderBase",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "3ACD511F4912CB4948C7A6A84A50D586",
+        "SourceString": "Border Base",
+        "LocalizedString": "Border Base"
+      },
+      "ArmourType": "EArmourType::Tier3Structure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedBorderBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDestroyedBorderBase_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.5"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "MaxHealth": 100000000,
+      "Health": 100000000,
+      "MapIconType": "EMapIconType::BorderBase",
+      "bIsMapIconVisibleToAll": false,
+      "DropLocationOffset": {
+        "X": 150.0,
+        "Y": 500.0,
+        "Z": 10.0
+      },
+      "bRotateDropLocation": true,
+      "IsVaultable": false,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDestroyedBorderBase_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.15"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedBorderBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "NoBuildVolume_GEN_VARIABLE",
+    "Outer": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 400.0,
+        "Y": 500.0,
+        "Z": 255.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "NoBuildArea",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 100.0,
+        "Z": 80.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 700.0,
+        "Y": 700.0,
+        "Z": 255.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedBorderBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 80.0
+      }
+    }
+  },
+  {
+    "Type": "GenericItemStockpileComponent",
+    "Name": "GenericStockpileComponent",
+    "Outer": "Default__BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'GenericItemStockpileComponent'"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "TownHallMesh",
+    "Outer": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "RuinedComponent",
+    "Name": "RuinedComponent",
+    "Outer": "Default__BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'RuinedComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedBorderBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDestroyedBorderBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.9"
+      },
+      "VariableGuid": "E3C1AF73-43D88F05-F59AB7A7-79208843",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDestroyedBorderBase_C:TownHallMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.14"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C721EC3E-459AE76A-76A5D993-0E713622",
+      "InternalVariableName": "TownHallMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedBorderBase_C:NoBuildVolume_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "336DC118-466EDFC7-ADB4BA97-47714ED1",
+      "InternalVariableName": "NoBuildVolume"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedBorderBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedBorderBase_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDestroyedBorderBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedBorderBase_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDestroyedBorderBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPDestroyedBorderBase.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "TownHallMesh_GEN_VARIABLE",
+    "Outer": "BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BorderBaseDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Structures/BorderBaseDestroyed.2"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "bReceivesDecals": false,
+      "bAffectDistanceFieldLighting": false,
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "TechTreeComponent",
+    "Name": "TechTreeComponent",
+    "Outer": "Default__BPDestroyedBorderBase_C",
+    "Class": "UScriptClass'TechTreeComponent'"
+  }
+]

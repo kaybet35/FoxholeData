@@ -1,0 +1,315 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "PistolImpactEffect_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'PistolImpactEffect_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'PistolImpactEffect_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'PistolImpactEffect_C:ExecuteUbergraph_PistolImpactEffect'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ImpactEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'PistolImpactEffect_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.0"
+      },
+      {
+        "ObjectName": "Function'PistolImpactEffect_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.6"
+      },
+      {
+        "ObjectName": "Function'PistolImpactEffect_C:ExecuteUbergraph_PistolImpactEffect'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'PistolImpactEffect_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.3"
+      },
+      {
+        "ObjectName": "ObjectProperty'PistolImpactEffect_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.7"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_PistolImpactEffect": {
+        "ObjectName": "Function'PistolImpactEffect_C:ExecuteUbergraph_PistolImpactEffect'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'PistolImpactEffect_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "PistolImpactEffect_C'Default__PistolImpactEffect_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.2"
+    }
+  },
+  {
+    "Type": "PistolImpactEffect_C",
+    "Name": "Default__PistolImpactEffect_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/PistolImpactEffect.PistolImpactEffect_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "EffectOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "EmitterTemplate": {
+            "ObjectName": "ParticleSystem'SimplePistolImpact'",
+            "ObjectPath": "War/Content/FX/SimplePistolImpact.43"
+          },
+          "HitSound": {
+            "ObjectName": "SoundCue'SimpleBallisticsHit_Cue'",
+            "ObjectPath": "War/Content/Audio/SFX/SimpleBallisticsHit_Cue.0"
+          },
+          "Decal": {
+            "DecalMaterial": {
+              "ObjectName": "MaterialInstanceConstant'MI_BulletHoles'",
+              "ObjectPath": "War/Content/Materials/Decals/MI_BulletHoles.0"
+            },
+            "DecalSize": {
+              "X": 15.0,
+              "Y": 15.0,
+              "Z": 15.0
+            },
+            "LifeSpan": 100.0,
+            "FadeScreenSize": 0.005
+          },
+          "bOrientToHitDirection": false,
+          "DamageThreshold": 0.0
+        },
+        {
+          "PhysicalSurface": "SurfaceType5",
+          "EmitterTemplate": {
+            "ObjectName": "ParticleSystem'BloodSplat'",
+            "ObjectPath": "War/Content/FX/BloodSplat.35"
+          },
+          "HitSound": {
+            "ObjectName": "SoundCue'FleshBallisticsHit_Cue'",
+            "ObjectPath": "War/Content/Audio/SFX/FleshBallisticsHit_Cue.0"
+          },
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          },
+          "bOrientToHitDirection": true,
+          "DamageThreshold": 1.0
+        },
+        {
+          "PhysicalSurface": "SurfaceType8",
+          "EmitterTemplate": {
+            "ObjectName": "ParticleSystem'TruckBulletImpact'",
+            "ObjectPath": "War/Content/FX/TruckBulletImpact.26"
+          },
+          "HitSound": {
+            "ObjectName": "SoundCue'SimpleMetalHit_Cue'",
+            "ObjectPath": "War/Content/Audio/SFX/SimpleMetalHit_Cue.0"
+          },
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          },
+          "bOrientToHitDirection": true,
+          "DamageThreshold": 0.0
+        }
+      ],
+      "FleshBloodSplatterDecal": {
+        "DecalMaterial": {
+          "ObjectName": "Material'BloodDecal01'",
+          "ObjectPath": "War/Content/FX/Materials/BloodDecal01.0"
+        },
+        "DecalSize": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 300.0
+        },
+        "LifeSpan": 500.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_PistolImpactEffect",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_PistolImpactEffect",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'PistolImpactEffect_C:ExecuteUbergraph_PistolImpactEffect.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Properties": {
+      "Radius": 500.0,
+      "ImpulseStrength": 12000.0,
+      "ObjectTypesToAffect": [
+        62
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'PistolImpactEffect_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'PistolImpactEffect_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.11"
+        }
+      ],
+      "VariableGuid": "04535695-47D39B74-0CF183A6-99947170",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'PistolImpactEffect_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.8"
+      },
+      "VariableGuid": "92F0834F-4952CC1F-8476219C-7443237A",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "PistolImpactEffect_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'PistolImpactEffect_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'PistolImpactEffect_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.10"
+        },
+        {
+          "ObjectName": "SCS_Node'PistolImpactEffect_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'PistolImpactEffect_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/PistolImpactEffect.10"
+      }
+    }
+  }
+]

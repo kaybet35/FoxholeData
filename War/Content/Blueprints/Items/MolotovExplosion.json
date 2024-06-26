@@ -1,0 +1,268 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "MolotovExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'MolotovExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'MolotovExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'MolotovExplosion_C:ExecuteUbergraph_MolotovExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'MolotovExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.0"
+      },
+      {
+        "ObjectName": "Function'MolotovExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.6"
+      },
+      {
+        "ObjectName": "Function'MolotovExplosion_C:ExecuteUbergraph_MolotovExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'MolotovExplosion_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.3"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_MolotovExplosion": {
+        "ObjectName": "Function'MolotovExplosion_C:ExecuteUbergraph_MolotovExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'MolotovExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "MolotovExplosion_C'Default__MolotovExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.2"
+    }
+  },
+  {
+    "Type": "MolotovExplosion_C",
+    "Name": "Default__MolotovExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/MolotovExplosion.MolotovExplosion_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'MolotovImpact'",
+            "ObjectPath": "War/Content/FX/MolotovImpact.68"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "RadialHitImpact": {
+        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      },
+      "ExplosionLightFadeOut": 0.15,
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'MolotovImpact_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Molotov/MolotovImpact_Cue.0"
+      },
+      "CameraShake": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeCameraShake_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeCameraShake.0"
+      },
+      "CameraShakeOuterRadius": 1800.0,
+      "bDoNotOrientToImpactNormal": true,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__MolotovExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.7"
+      },
+      "InitialLifeSpan": 30.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__MolotovExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.7"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_MolotovExplosion",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_MolotovExplosion",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'MolotovExplosion_C:ExecuteUbergraph_MolotovExplosion.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__MolotovExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 3000.0,
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 114,
+        "G": 174,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAE72"
+      }
+    }
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Properties": {
+      "Radius": 250.0,
+      "ImpulseStrength": 100000.0,
+      "DestructibleDamage": 100.0,
+      "ObjectTypesToAffect": [
+        63
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'MolotovExplosion_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.8"
+      },
+      "ParentComponentOrVariableName": "ExplosionLight",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED95043C-4BF9474F-1DC08DA0-C2DD8674",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'MolotovExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.9"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "MolotovExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'MolotovExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'MolotovExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'MolotovExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/MolotovExplosion.11"
+      }
+    }
+  }
+]

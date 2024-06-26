@@ -1,0 +1,311 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Cable",
+    "Outer": "BPPowerLine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'CableComponent'",
+      "ObjectPath": "/Script/CableComponent"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPPowerLine_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPPowerLine_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PowerLine'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPPowerLine_C:Cable'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPPowerLine_C'Default__BPPowerLine_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.2"
+    }
+  },
+  {
+    "Type": "BPPowerLine_C",
+    "Name": "Default__BPPowerLine_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/BPPowerLine.BPPowerLine_C'",
+    "Properties": {
+      "SplineConnector": {
+        "ObjectName": "SplineConnectorComponent'Default__BPPowerLine_C:SplineConnector'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.12"
+      },
+      "BackSocket": {
+        "ObjectName": "BuildSocketComponent'Default__BPPowerLine_C:BackSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.5"
+      },
+      "FrontSocket": {
+        "ObjectName": "BuildSocketComponent'Default__BPPowerLine_C:FrontSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.6"
+      },
+      "BuildGhostOffsetZ": 100.0,
+      "bIsBuiltOnFoundation": true,
+      "bIsConnector": true,
+      "bIsManualConnector": true,
+      "ConnectorMinLength": 10.0,
+      "ConnectorMaxLength": 2500.0,
+      "ConnectorMinWidth": 0.0,
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "CAF19C714CA9B02DA6B44DB5394C60A6",
+        "SourceString": "Conducts power between a Power Pole and another structure.",
+        "LocalizedString": "Conducts power between a Power Pole and another structure."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'PowelineIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/PowelineIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Power",
+      "BuildOrder": 2,
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "bDropsLargeMaterialsWhenDestroyed": false,
+      "CodeName": "PowerLine",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "6AC6CB4645972A3EB08D62857CF7C4D4",
+        "SourceString": "Power Line",
+        "LocalizedString": "Power Line"
+      },
+      "ProfileType": "EStructureProfileType::FieldStructure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPPowerLine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPPowerLine_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.4"
+      },
+      "Health": 0,
+      "IsVaultable": false,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPPowerLine_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPPowerLine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPPowerLine_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPPowerLine_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 25.0,
+        "Y": 25.0,
+        "Z": 25.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPPowerLine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.3"
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "BackSocket",
+    "Outer": "Default__BPPowerLine_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 1441792,
+          "SocketTypeCategory": 131072,
+          "Tag": "None",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "bDoLandscapeChecks": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPPowerLine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.3"
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "FrontSocket",
+    "Outer": "Default__BPPowerLine_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 1441792,
+          "SocketTypeCategory": 131072,
+          "Tag": "None",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "ConnectorFront"
+        }
+      ],
+      "bDoLandscapeChecks": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPPowerLine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.3"
+      },
+      "RelativeLocation": {
+        "X": 300.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "CableComponent",
+    "Name": "Cable_GEN_VARIABLE",
+    "Outer": "BPPowerLine_C",
+    "Class": "UScriptClass'CableComponent'",
+    "Properties": {
+      "EndLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NumSegments": 20,
+      "SubstepTime": 0.005,
+      "bEnableStiffness": true,
+      "CableGravityScale": 2.0,
+      "CableWidth": 5.0,
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 300.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "ConnectorFront"
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPPowerLine_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPPowerLine_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.8"
+      },
+      "VariableGuid": "47FD1ADA-442AA322-7F89C796-7BADBFAC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CableComponent'",
+        "ObjectPath": "/Script/CableComponent"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CableComponent'BPPowerLine_C:Cable_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "366750A0-467F2519-B385E4A1-8EA709F6",
+      "InternalVariableName": "Cable"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPPowerLine_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPPowerLine_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPPowerLine_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPPowerLine_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.9"
+      }
+    }
+  },
+  {
+    "Type": "SplineConnectorComponent",
+    "Name": "SplineConnector",
+    "Outer": "Default__BPPowerLine_C",
+    "Class": "UScriptClass'SplineConnectorComponent'",
+    "Properties": {
+      "MinBuffer": 10.0,
+      "MaxBuffer": 10.0,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPPowerLine_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPPowerLine.3"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPPowerLine_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

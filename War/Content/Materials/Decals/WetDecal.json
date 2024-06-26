@@ -1,0 +1,60 @@
+[
+  {
+    "Type": "Material",
+    "Name": "WetDecal",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "MaterialDomain": "MD_DeferredDecal",
+      "BlendMode": "BLEND_Translucent",
+      "DecalBlendMode": "DBM_DBuffer_Roughness",
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WetDecal:MaterialExpressionScalarParameter_1'",
+          "ObjectPath": "War/Content/Materials/Decals/WetDecal.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample'WetDecal:MaterialExpressionTextureSample_1'",
+          "ObjectPath": "War/Content/Materials/Decals/WetDecal.2"
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "21E2E48B-4FECF948-E430DD83-4BDB96D7",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_1",
+    "Outer": "WetDecal",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "ParameterName": "Roughness",
+      "ExpressionGUID": "A0DD2717-4F3BA00A-5D8330A3-D800F7CB",
+      "Material": {
+        "ObjectName": "Material'WetDecal'",
+        "ObjectPath": "War/Content/Materials/Decals/WetDecal.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_1",
+    "Outer": "WetDecal",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D'Decal512'",
+        "ObjectPath": "War/Content/Textures/Decal/Decal512.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material'WetDecal'",
+        "ObjectPath": "War/Content/Materials/Decals/WetDecal.0"
+      }
+    }
+  }
+]

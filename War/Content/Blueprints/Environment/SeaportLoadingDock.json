@@ -1,0 +1,111 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SeaportLoadingDock_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'SeaportLoadingDock_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/SeaportLoadingDock.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'PersistentProxy'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SeaportLoadingDock_C'Default__SeaportLoadingDock_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/SeaportLoadingDock.1"
+    }
+  },
+  {
+    "Type": "SeaportLoadingDock_C",
+    "Name": "Default__SeaportLoadingDock_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/SeaportLoadingDock.SeaportLoadingDock_C'",
+    "Properties": {
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__SeaportLoadingDock_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/SeaportLoadingDock.5"
+      },
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'Default__SeaportLoadingDock_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/SeaportLoadingDock.5"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SeaportLoadingDock_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SeaportLoadingDock_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/SeaportLoadingDock.2"
+      },
+      "VariableGuid": "018B2F36-4B9D2600-611A3298-6673DA55",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "SeaportLoadingDock_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'SeaportLoadingDock_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/SeaportLoadingDock.3"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__SeaportLoadingDock_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LoadingDock03'",
+        "ObjectPath": "War/Content/Meshes/Environment/LoadingDock03.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "Landscape",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Landscape",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "LandscapeAndWater",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

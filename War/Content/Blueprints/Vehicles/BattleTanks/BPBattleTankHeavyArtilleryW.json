@@ -1,0 +1,992 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBattleTankHeavyArtilleryW_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.38"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPBattleTankHeavyArtilleryW_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBattleTankHeavyArtilleryW_C'Default__BPBattleTankHeavyArtilleryW_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.1"
+    }
+  },
+  {
+    "Type": "BPBattleTankHeavyArtilleryW_C",
+    "Name": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.BPBattleTankHeavyArtilleryW_C'",
+    "Properties": {
+      "DisabledFuelTankFX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:DisabledFuelTankFX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.10"
+      },
+      "IdleLoop": {
+        "ObjectName": "AudioComponent'Default__BPBattleTankHeavyArtilleryW_C:IdleLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.5"
+      },
+      "RearLeftTireDirtLowSpeedPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:RearLeftTireDirtLowSpeedPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.21"
+      },
+      "RearLeftTireDirtHighSpeedPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:RearLeftTireDirtHighSpeedPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.20"
+      },
+      "RearRightTireDirtLowSpeedPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:RearRightTireDirtLowSpeedPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.23"
+      },
+      "RearRightTireDirtHighSpeedPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:RearRightTireDirtHighSpeedPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.22"
+      },
+      "MainDirtLowSpeedPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:MainDirtLowSpeedPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.17"
+      },
+      "MainDirtHighSpeedPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:MainDirtHighSpeedPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.16"
+      },
+      "SkiddingDirtPS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:SkiddingDirtPS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.24"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "76FEEBEE479C3D7A8839E5B220CB52ED",
+        "SourceString": "Flood Mk. IX Stain",
+        "LocalizedString": "Flood Mk. IX Stain"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "67E6082943E82F1416ED919ECF796D27",
+        "SourceString": "Built on an inverted Flood chassis, the Mk. IX Stain is a fully-featured mobile artillery platform. Once deployed, the Stain can fire a 150mm cannon over long-distances to pummel enemy positions with indirect fire.",
+        "LocalizedString": "Built on an inverted Flood chassis, the Mk. IX Stain is a fully-featured mobile artillery platform. Once deployed, the Stain can fire a 150mm cannon over long-distances to pummel enemy positions with indirect fire."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'BattleTankHeavyArtilleryWIcon'",
+        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/BattleTankHeavyArtilleryWIcon.0"
+      },
+      "TechID": "ETechID::UnlockBattleTank",
+      "ShippableInfo": {
+        "Type": "EShippableType::Large"
+      },
+      "CodeName": "BattleTankHeavyArtilleryW",
+      "ArmourDirectionBoneNamesList": [
+        {
+          "ArmourDirection": "EArmourDirection::Front",
+          "BoneNamesList": [
+            "collisionBone_front"
+          ]
+        },
+        {
+          "ArmourDirection": "EArmourDirection::Back",
+          "BoneNamesList": [
+            "collisionBone_back"
+          ]
+        },
+        {
+          "ArmourDirection": "EArmourDirection::Left",
+          "BoneNamesList": [
+            "tracks_pivot_L"
+          ]
+        },
+        {
+          "ArmourDirection": "EArmourDirection::Right",
+          "BoneNamesList": [
+            "tracks_pivot_R"
+          ]
+        },
+        {
+          "ArmourDirection": "EArmourDirection::Turret",
+          "BoneNamesList": [
+            "BattleTankHeavyArtilleryWMainGun"
+          ]
+        }
+      ],
+      "FuelTank": {
+        "FuelCapacity": 600.0
+      },
+      "CommanderIndex": -1,
+      "DestroyedMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPBattleTankHeavyArtilleryW_C:DestroyedMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.41"
+      },
+      "MinorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:MinorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.19"
+      },
+      "MajorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:MajorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.18"
+      },
+      "DisabledTurretFX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:DisabledTurretFX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.15"
+      },
+      "DisabledTurret2FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:DisabledTurret2FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.11"
+      },
+      "DisabledTurret3FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:DisabledTurret3FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.12"
+      },
+      "DisabledTurret4FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:DisabledTurret4FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.13"
+      },
+      "DisabledTurret5FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBattleTankHeavyArtilleryW_C:DisabledTurret5FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.14"
+      },
+      "DriveLoop": {
+        "ObjectName": "AudioComponent'Default__BPBattleTankHeavyArtilleryW_C:DriveLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.4"
+      },
+      "BackUpSFXLoop": {
+        "ObjectName": "AudioComponent'Default__BPBattleTankHeavyArtilleryW_C:BackUpSFXLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.3"
+      },
+      "CameraRigComponent": {
+        "ObjectName": "PlayerCameraRigComponent'Default__BPBattleTankHeavyArtilleryW_C:CameraRigVehicle'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.25"
+      },
+      "FrontAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBattleTankHeavyArtilleryW_C:FrontAxelCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.28"
+      },
+      "RearAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBattleTankHeavyArtilleryW_C:RearAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.31"
+      },
+      "FrontLeftRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBattleTankHeavyArtilleryW_C:FrontRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.29"
+      },
+      "FrontRightRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBattleTankHeavyArtilleryW_C:RearRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.32"
+      },
+      "LeftSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPBattleTankHeavyArtilleryW_C:LeftSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.30"
+      },
+      "RightSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPBattleTankHeavyArtilleryW_C:RightSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.33"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      },
+      "PassengerArea": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:PassengerBaseBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.6"
+      },
+      "AFKTimeoutComponent": {
+        "ObjectName": "AFKTimeoutComponent'Default__BPBattleTankHeavyArtilleryW_C:AFKTimeoutComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.2"
+      },
+      "LinearSpeedToTurnSpeedMapCurve": {
+        "ObjectName": "CurveFloat'LightTankTurnSpeedCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LightTankTurnSpeedCurve.0"
+      },
+      "MuzzleInfo": [
+        {
+          "GunnerIndex": 1,
+          "MuzzleIndex": 0,
+          "SocketName": "S_BattleTankHeavyArtilleryW_Muzzle"
+        }
+      ],
+      "DeploymentLogic": {
+        "bRequiresDeployment": true,
+        "DeploymentTime": 1.0
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPBattleTankHeavyArtilleryW_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.42"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPBattleTankHeavyArtilleryW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.40"
+      },
+      "CharacterMovement": {
+        "ObjectName": "RWDVehicleMovementComponent'Default__BPBattleTankHeavyArtilleryW_C:CharMoveComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.26"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "AFKTimeoutComponent",
+    "Name": "AFKTimeoutComponent",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'AFKTimeoutComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BackUpSFXLoop",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "DriveLoop",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleLoop",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PassengerBaseBox",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "VehicleCollision",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPBattleTankHeavyArtilleryW_C'Default__BPBattleTankHeavyArtilleryW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.1"
+            },
+            "FunctionName": "VehicleCollisionTouched"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'VehicleSeatComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "VehicleSeatComponent'BPBattleTankHeavyArtilleryW_C:GunnerSeat1_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.45"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "GunnerSeat1",
+            "AssociatedGuid": "8EAB330B-4D8D75B8-FC9EA2B3-2309A89E"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'VehicleSeatComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "VehicleSeatComponent'BPBattleTankHeavyArtilleryW_C:CommanderSeat2_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.43"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "CommanderSeat2",
+            "AssociatedGuid": "7DEDE3FF-425F8325-E6738CBE-704070F9"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SkeletalMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SkeletalMeshComponent'BPBattleTankHeavyArtilleryW_C:MainBody_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.39"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "MainBody",
+            "AssociatedGuid": "05AFA3DC-452320C5-7A62D0AD-12CDF28D"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'VehicleSeatComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "VehicleSeatComponent'BPBattleTankHeavyArtilleryW_C:EngineerSeat3_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.44"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "EngineerSeat3",
+            "AssociatedGuid": "C8E49B48-4A64AE1E-3DA8A0BC-64410720"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SeatExitComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SeatExitComponent'BPBattleTankHeavyArtilleryW_C:GunnerExit_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.35"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "GunnerExit",
+            "AssociatedGuid": "DCB21743-4658E3A6-10D1D5A6-B5496FA0"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SeatTriggerComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SeatTriggerComponent'BPBattleTankHeavyArtilleryW_C:DriverTrigger_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.36"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "DriverTrigger",
+            "AssociatedGuid": "B20245E2-4BE6587D-9F430AA1-3F35073A"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SeatTriggerComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SeatTriggerComponent'BPBattleTankHeavyArtilleryW_C:GunnerTrigger_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.37"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryBaseW.1"
+            },
+            "SCSVariableName": "GunnerTrigger",
+            "AssociatedGuid": "3AA1DDF7-45DB3BD1-2DF09DA0-20440393"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledFuelTankFX",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      },
+      "RelativeLocation": {
+        "X": 319.0066,
+        "Y": -0.00030517578,
+        "Z": -103.35202
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret2FX",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret3FX",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret4FX",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret5FX",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurretFX",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MainDirtHighSpeedPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MainDirtLowSpeedPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MajorDamagePS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      },
+      "RelativeLocation": {
+        "X": 139.46603,
+        "Y": 0.0,
+        "Z": 38.950104
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MinorDamagePS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "RearLeftTireDirtHighSpeedPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "RearLeftTireDirtLowSpeedPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "RearRightTireDirtHighSpeedPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "RearRightTireDirtLowSpeedPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "SkiddingDirtPS",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBattleTankHeavyArtilleryW_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.7"
+      }
+    }
+  },
+  {
+    "Type": "PlayerCameraRigComponent",
+    "Name": "CameraRigVehicle",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'PlayerCameraRigComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "RWDVehicleMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'RWDVehicleMovementComponent'",
+    "Properties": {
+      "EngineForce": 22000.0,
+      "MaxEncumbranceMass": 30000.0,
+      "MaxWalkSpeed": 730.1477
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontAxelCastLocation",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontRightAxleCastLocation",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LeftSideTrackLocation",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearAxleCastLocation",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearRightAxleCastLocation",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RightSideTrackLocation",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBattleTankHeavyArtilleryW_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.27"
+      },
+      "VariableGuid": "0FA23E29-4B5A763D-A00004A1-98258D20",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SeatExitComponent",
+    "Name": "GunnerExit_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SeatExitComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -178.0,
+        "Y": -352.80865,
+        "Z": -70.0
+      }
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "DriverTrigger_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 128.0,
+        "Y": 482.0,
+        "Z": 128.0
+      },
+      "RelativeLocation": {
+        "X": 178.0,
+        "Y": 0.0,
+        "Z": -70.00012
+      }
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "GunnerTrigger_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -178.0,
+        "Y": -352.80865,
+        "Z": -70.0
+      }
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBattleTankHeavyArtilleryW_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.34"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "MainBody_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_BattleTankHeavyArtilleryW_Chassis'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankHeavyArtilleryW_Chassis.0"
+      },
+      "OverrideMaterials": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1.4901161E-08,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_BattleTankHeavyArtilleryW_C'",
+        "ObjectPath": "War/Content/Animation/Tanks/BattleTankWar/ABP_BattleTankHeavyArtilleryW.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DestroyedMesh",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBattleTankHeavyArtilleryW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryW.8"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "CommanderSeat2_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "EnterSFX": {
+        "ObjectName": "SoundCue'DeployExplosive_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Satchel/DeployExplosive_Cue.0"
+      },
+      "MountCodeName": "ScoutVehicleDriver",
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryWCommander_C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryWCommander.0"
+      },
+      "RelativeLocation": {
+        "X": -75.49176,
+        "Y": -315.65714,
+        "Z": 237.36736
+      }
+    }
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "EngineerSeat3_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "bIsWoundable": true,
+      "EnterSFX": {
+        "ObjectName": "SoundCue'DeployExplosive_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Satchel/DeployExplosive_Cue.0"
+      },
+      "MountCodeName": "BattleTankHeavyArtilleryWEngineer",
+      "bIsExposed": true,
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryEngineerWComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryEngineerWComponent.0"
+      },
+      "RelativeLocation": {
+        "X": -74.07347,
+        "Y": -165.90114,
+        "Z": 167.35635
+      }
+    }
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "GunnerSeat1_GEN_VARIABLE",
+    "Outer": "BPBattleTankHeavyArtilleryW_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "bIsWoundable": true,
+      "EnterSFX": {
+        "ObjectName": "SoundCue'DeployExplosive_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Satchel/DeployExplosive_Cue.0"
+      },
+      "MountCodeName": "BattleTankHeavyArtilleryWGunner",
+      "bIsExposed": true,
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPBattleTankHeavyArtilleryGunnerWComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/BattleTanks/BPBattleTankHeavyArtilleryGunnerWComponent.0"
+      },
+      "RelativeLocation": {
+        "X": 74.07347,
+        "Y": -137.5851,
+        "Z": 167.35632
+      }
+    }
+  }
+]

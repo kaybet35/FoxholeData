@@ -1,0 +1,131 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SwampAmbience",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeLooping'SwampAmbience:SoundNodeLooping_0'",
+        "ObjectPath": "War/Content/Audio/Ambient/SwampAmbience.2"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 2063.1995,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 6081.788
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'AmbientForeground'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/AmbientForeground.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10000.0,
+      "MaxDistance": 22500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeAmbient'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeAmbient.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "SwampAmbience",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 50.0,
+      "DelayMax": 120.0,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'SwampAmbience:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/SwampAmbience.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeLooping",
+    "Name": "SoundNodeLooping_0",
+    "Outer": "SwampAmbience",
+    "Class": "UScriptClass'SoundNodeLooping'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'SwampAmbience:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/SwampAmbience.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "SwampAmbience",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwampAmbience:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/Ambient/SwampAmbience.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwampAmbience:SoundNodeWavePlayer_4'",
+          "ObjectPath": "War/Content/Audio/Ambient/SwampAmbience.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SwampAmbience:SoundNodeWavePlayer_5'",
+          "ObjectPath": "War/Content/Audio/Ambient/SwampAmbience.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SwampAmbience",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/SwampAmbience01.SwampAmbience01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_4",
+    "Outer": "SwampAmbience",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/SwampAmbience02.SwampAmbience02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_5",
+    "Outer": "SwampAmbience",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/Ambient/SwampAmbience03.SwampAmbience03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

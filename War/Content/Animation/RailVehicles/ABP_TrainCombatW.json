@@ -1,0 +1,2646 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "ShootingStateMachine_Front",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idel",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 12,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 13,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                14
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "ShootingStateMachine_Back",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idel",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 31,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 28,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 32,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 29,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                30
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_TrainCombatW_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_TrainCombatW_Skeleton.2"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendListByBool_E6CD8AB345ED65FFB4817AB16B19EC88'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.17"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendBackRight",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendBackRight'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_89A3E0694BC67C44F8FD4396663E1BCE'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendBackLeft",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendBackLeft'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_666CD60E4A41C2DB8092C7986063F2AC'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.23"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendFrontRight",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendFrontRight'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_26E78A464D01D77ECE86C8AB6E1AAB5D'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendFrontLeft",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendFrontLeft'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_15B5406147F062A473C5918054CEAE4D'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.19"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bRightGunnerIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'InfantryRailVehicleAnimInstance:bRightGunnerIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_5E74B3DF4293B26BEF2195A38BAD9359'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.47"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainCombatW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.13"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "LeftGunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'InfantryRailVehicleAnimInstance:LeftGunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_46CB02A24ED11AA647E98482E0F18363'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RightGunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'InfantryRailVehicleAnimInstance:RightGunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_3A35CC1A486E1326F26112A24A842F73'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "LeftGunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'InfantryRailVehicleAnimInstance:LeftGunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_F9BED02B49265470A04C3D95CF5E3F4B'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.27"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RightGunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'InfantryRailVehicleAnimInstance:RightGunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_958A3A34477056728DCC29AA0F4775C1'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RearBogieTurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:RearBogieTurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_0125A8754C5E2907745702B61D291B48'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.18"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "FrontBogieTurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:FrontBogieTurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_B06F837B485BE84ED3B518939DABA70E'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.26"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_DA27285646FEB95C62E3CEB423C0ED98'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.36"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_D6CC79A8439C1F16C6ECACA3A9DD7085'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.35"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bLeftGunnerIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'InfantryRailVehicleAnimInstance:bLeftGunnerIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_8EE9E10F49870F1CB1A614BCED065FEC'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.48"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainCombatW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.12"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.46"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'InfantryRailVehicleAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.0"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainCombatW_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.11"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainCombatW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.12"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainCombatW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.13"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_Root_853420E7484F7B1FD5FE56B98130BAA2'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_LayeredBoneBlend_EC5072764A807C5C859EB0BEB933315A'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendListByBool_2401248446002172280CE29F0E27D4CB'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_ApplyAdditive_E91547C94819EFF8477E26B9E7498EA5'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_8EE9E10F49870F1CB1A614BCED065FEC'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_E92FD6C447731A7EDD7CCAA466B06CBD'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_StateResult_EB4063064A3541957C607B939C242963'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.44"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_StateResult_FB7510E44A33AB74A24E41B6382B3EC9'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_StateMachine_34A10AAA4E09DCB294D106BE39D348C8'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.40"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_LayeredBoneBlend_9D181BA048BD9CB4B9E50C95D4B26A29'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_D6CC79A8439C1F16C6ECACA3A9DD7085'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_DA27285646FEB95C62E3CEB423C0ED98'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_B06F837B485BE84ED3B518939DABA70E'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_0125A8754C5E2907745702B61D291B48'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_958A3A34477056728DCC29AA0F4775C1'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_F9BED02B49265470A04C3D95CF5E3F4B'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_3A35CC1A486E1326F26112A24A842F73'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_46CB02A24ED11AA647E98482E0F18363'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendListByBool_6E2A65E74AF705B11174BB9A110594E9'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_TransitionResult_5E74B3DF4293B26BEF2195A38BAD9359'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_C359156E43B8DE15C5CDBC90CCD3A66D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_StateResult_096D3A9E4486CEC90A8F309F0566E508'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_StateResult_1E0ACC834DF6B3B0F7C5C8957605E834'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_StateMachine_47FA8ADF43B5A8F5DB6AA9B864730A9C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_LayeredBoneBlend_8319C1A744361C580C133598D502B09D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_471056754EA1099351FEA3A095779E8F'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_57AF9B90485112EAEA4C1B9CA15DFEB5'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_FBA2D47F416DA8F1AF99F59B9BAAD72C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.39"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_A2EA1E8847C1EC71FA5D5CB23DAE0CFE'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_15B5406147F062A473C5918054CEAE4D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_26E78A464D01D77ECE86C8AB6E1AAB5D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_666CD60E4A41C2DB8092C7986063F2AC'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendSpacePlayer_89A3E0694BC67C44F8FD4396663E1BCE'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_BlendListByBool_E6CD8AB345ED65FFB4817AB16B19EC88'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraphNode_SequencePlayer_E10F0C364D09C2AC8AADA0B492CD2027'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.37"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_TrainCombatW": {
+        "ObjectName": "Function'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C": {
+        "ObjectName": "Function'ABP_TrainCombatW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.13"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338": {
+        "ObjectName": "Function'ABP_TrainCombatW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.12"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_TrainCombatW_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.11"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_TrainCombatW_C'Default__ABP_TrainCombatW_C'",
+      "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.2"
+    }
+  },
+  {
+    "Type": "ABP_TrainCombatW_C",
+    "Name": "Default__ABP_TrainCombatW_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/RailVehicles/ABP_TrainCombatW.ABP_TrainCombatW_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_853420E7484F7B1FD5FE56B98130BAA2": {
+        "Result": {
+          "LinkID": 35
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_EC5072764A807C5C859EB0BEB933315A": {
+        "BasePose": {
+          "LinkID": 11
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 13
+          },
+          {
+            "LinkID": 14
+          },
+          {
+            "LinkID": 26
+          },
+          {
+            "LinkID": 10
+          },
+          {
+            "LinkID": 31
+          },
+          {
+            "LinkID": 32
+          },
+          {
+            "LinkID": 33
+          },
+          {
+            "LinkID": 34
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "frontAxle_PIVOT",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "bogie_Front_R",
+                "BlendDepth": -1
+              },
+              {
+                "BoneName": "bogie_Front_L",
+                "BlendDepth": -1
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "backAxle_PIVOT",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "bogie_Back_R",
+                "BlendDepth": -1
+              },
+              {
+                "BoneName": "bogie_Back_L",
+                "BlendDepth": -1
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_turretFront_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_turretBack_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "buffer_Front_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "buffer_Front_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "buffer_Back_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "buffer_Back_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "B50B8C9F-4E205C5C-FEBB74BE-23B1B404",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendListByBool_2401248446002172280CE29F0E27D4CB": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 28
+          },
+          {
+            "LinkID": 30
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_ApplyAdditive_E91547C94819EFF8477E26B9E7498EA5": {
+        "Base": {
+          "LinkID": 1
+        },
+        "Additive": {
+          "LinkID": 12
+        },
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "LODThreshold": -1,
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true
+      },
+      "AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8EE9E10F49870F1CB1A614BCED065FEC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E92FD6C447731A7EDD7CCAA466B06CBD": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_muzzle_shoot'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_muzzle_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_EB4063064A3541957C607B939C242963": {
+        "Result": {
+          "LinkID": 6
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_FB7510E44A33AB74A24E41B6382B3EC9": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_34A10AAA4E09DCB294D106BE39D348C8": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_9D181BA048BD9CB4B9E50C95D4B26A29": {
+        "BasePose": {
+          "LinkID": 16
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 18
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 2
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_gunBack_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_muzzleBack",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_hatchBack",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "B50B8C9F-4E205C5C-FEBB74BE-23B1B404",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_D6CC79A8439C1F16C6ECACA3A9DD7085": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_chassis_Movement'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_chassis_Movement.0"
+        },
+        "PlayRateBasis": 150.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_DA27285646FEB95C62E3CEB423C0ED98": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_wheels_Movement'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_wheels_Movement.0"
+        },
+        "PlayRateBasis": 284.3,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_B06F837B485BE84ED3B518939DABA70E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_wheelDirection'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_wheelDirection.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_0125A8754C5E2907745702B61D291B48": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_wheelDirection'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_wheelDirection.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_958A3A34477056728DCC29AA0F4775C1": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_turret_horizontal'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_turret_horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_F9BED02B49265470A04C3D95CF5E3F4B": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_turret_horizontal'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_turret_horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_3A35CC1A486E1326F26112A24A842F73": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_turret_vertical'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_turret_vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_46CB02A24ED11AA647E98482E0F18363": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_turret_vertical'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_turret_vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_6E2A65E74AF705B11174BB9A110594E9": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 27
+          },
+          {
+            "LinkID": 29
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_5E74B3DF4293B26BEF2195A38BAD9359": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_C359156E43B8DE15C5CDBC90CCD3A66D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_muzzle_shoot'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_muzzle_shoot.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_096D3A9E4486CEC90A8F309F0566E508": {
+        "Result": {
+          "LinkID": 22
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_1E0ACC834DF6B3B0F7C5C8957605E834": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_47FA8ADF43B5A8F5DB6AA9B864730A9C": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_8319C1A744361C580C133598D502B09D": {
+        "BasePose": {
+          "LinkID": 15
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 17
+          },
+          {
+            "LinkID": 25
+          },
+          {
+            "LinkID": 19
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_gunFront_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_muzzleFront",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "TrainCombatW_hatchFront",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "B50B8C9F-4E205C5C-FEBB74BE-23B1B404",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_471056754EA1099351FEA3A095779E8F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_POSE_hatch_open'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_POSE_hatch_open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_57AF9B90485112EAEA4C1B9CA15DFEB5": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_POSE_hatch_open'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_POSE_hatch_open.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_FBA2D47F416DA8F1AF99F59B9BAAD72C": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_POSE_hatch_close'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_POSE_hatch_close.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_A2EA1E8847C1EC71FA5D5CB23DAE0CFE": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_POSE_hatch_close'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_POSE_hatch_close.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_15B5406147F062A473C5918054CEAE4D": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_bufferMove'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_bufferMove.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_26E78A464D01D77ECE86C8AB6E1AAB5D": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_bufferMove'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_bufferMove.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_666CD60E4A41C2DB8092C7986063F2AC": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_bufferMove'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_bufferMove.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_89A3E0694BC67C44F8FD4396663E1BCE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_TrainCombatW_bufferMove'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_TrainCombatW_bufferMove.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_E6CD8AB345ED65FFB4817AB16B19EC88": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 36
+          },
+          {
+            "LinkID": 3
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_E10F0C364D09C2AC8AADA0B492CD2027": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TrainCombatW_exploding'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_TrainCombatW_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_853420E7484F7B1FD5FE56B98130BAA2",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_TrainCombatW",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_TrainCombatW",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.6"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainCombatW_C:ExecuteUbergraph_ABP_TrainCombatW.CallFunc_LessEqual_FloatFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.7"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_TrainCombatW",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_TrainCombatW",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_TrainCombatW",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_TrainCombatW",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_TrainCombatW_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainCombatW.10"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainCombatW_AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_ApplyAdditive_E91547C94819EFF8477E26B9E7498EA5",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_ApplyAdditive'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_2401248446002172280CE29F0E27D4CB",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_6E2A65E74AF705B11174BB9A110594E9",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_E6CD8AB345ED65FFB4817AB16B19EC88",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_0125A8754C5E2907745702B61D291B48",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_15B5406147F062A473C5918054CEAE4D",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_26E78A464D01D77ECE86C8AB6E1AAB5D",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_3A35CC1A486E1326F26112A24A842F73",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_46CB02A24ED11AA647E98482E0F18363",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_666CD60E4A41C2DB8092C7986063F2AC",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_89A3E0694BC67C44F8FD4396663E1BCE",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_958A3A34477056728DCC29AA0F4775C1",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_B06F837B485BE84ED3B518939DABA70E",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F9BED02B49265470A04C3D95CF5E3F4B",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_8319C1A744361C580C133598D502B09D",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_9D181BA048BD9CB4B9E50C95D4B26A29",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_EC5072764A807C5C859EB0BEB933315A",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_471056754EA1099351FEA3A095779E8F",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_57AF9B90485112EAEA4C1B9CA15DFEB5",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A2EA1E8847C1EC71FA5D5CB23DAE0CFE",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_C359156E43B8DE15C5CDBC90CCD3A66D",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D6CC79A8439C1F16C6ECACA3A9DD7085",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DA27285646FEB95C62E3CEB423C0ED98",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E10F0C364D09C2AC8AADA0B492CD2027",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E92FD6C447731A7EDD7CCAA466B06CBD",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FBA2D47F416DA8F1AF99F59B9BAAD72C",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_34A10AAA4E09DCB294D106BE39D348C8",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_47FA8ADF43B5A8F5DB6AA9B864730A9C",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_096D3A9E4486CEC90A8F309F0566E508",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_1E0ACC834DF6B3B0F7C5C8957605E834",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_EB4063064A3541957C607B939C242963",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FB7510E44A33AB74A24E41B6382B3EC9",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_284387F942C981FD6ED0BBAC729C4338",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_5E74B3DF4293B26BEF2195A38BAD9359",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8EE9E10F49870F1CB1A614BCED065FEC",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C96E12F249D664329119FC841673385C",
+    "Outer": "ABP_TrainCombatW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

@@ -1,0 +1,991 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_3",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_3",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'StickybombSmoke:ParticleModuleRequired_3'",
+        "ObjectPath": "War/Content/FX/StickybombSmoke.8"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleSpawnPerUnit'StickybombSmoke:ParticleModuleSpawnPerUnit_0'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.14"
+        },
+        {
+          "ObjectName": "ParticleModuleLifetime'StickybombSmoke:ParticleModuleLifetime_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'StickybombSmoke:ParticleModuleSize_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.11"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'StickybombSmoke:ParticleModuleVelocity_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'StickybombSmoke:ParticleModuleColor_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.4"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'StickybombSmoke:ParticleModuleRotation_2'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.9"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'StickybombSmoke:ParticleModuleRotationRate_2'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.10"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'StickybombSmoke:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.7"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'StickybombSmoke:ParticleModuleColorScaleOverLife_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.5"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'StickybombSmoke:ParticleModuleSizeMultiplyLife_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.12"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'StickybombSmoke:ParticleModuleAccelerationDrag_1'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.3"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'StickybombSmoke:ParticleModuleSpawn_3'",
+        "ObjectPath": "War/Content/FX/StickybombSmoke.13"
+      },
+      "PeakActiveParticles": 27
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_1",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.05,
+        "MaxValue": 0.05,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.05
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.78,
+        "MaxValue": 0.78,
+        "MinValueVec": {
+          "X": 0.78,
+          "Y": 0.78,
+          "Z": 0.78
+        },
+        "MaxValueVec": {
+          "X": 0.78,
+          "Y": 0.78,
+          "Z": 0.78
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.78,
+            0.78,
+            0.78
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.4,
+        "MaxValue": 2.0,
+        "MinValueVec": {
+          "X": 0.4,
+          "Y": 0.4,
+          "Z": 0.4
+        },
+        "MaxValueVec": {
+          "X": 2.0,
+          "Y": 2.0,
+          "Z": 2.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 8.235292,
+          "TimeBias": 0.15,
+          "Values": [
+            0.4,
+            0.4,
+            0.4,
+            0.77714205,
+            0.785116,
+            0.7823682,
+            1.1179085,
+            1.1289837,
+            1.1251673,
+            1.4144104,
+            1.4250429,
+            1.421379,
+            1.6587592,
+            1.6667339,
+            1.6639858,
+            1.8430666,
+            1.8474972,
+            1.8459704,
+            1.9594427,
+            1.9607722,
+            1.960314,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 0.9960265,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 127.0,
+          "Values": [
+            0.0,
+            0.16154717,
+            0.5136835,
+            0.8576513,
+            0.9960257,
+            0.99588567,
+            0.9955106,
+            0.9949081,
+            0.99408597,
+            0.9930518,
+            0.9918134,
+            0.99037826,
+            0.9887542,
+            0.9869489,
+            0.9849698,
+            0.9828249,
+            0.98052174,
+            0.978068,
+            0.9754713,
+            0.97273946,
+            0.96988,
+            0.9669007,
+            0.9638092,
+            0.96061313,
+            0.95732033,
+            0.9539383,
+            0.95047474,
+            0.9469374,
+            0.943334,
+            0.9396721,
+            0.93595946,
+            0.9322036,
+            0.92841244,
+            0.92459357,
+            0.92075455,
+            0.9169032,
+            0.91304713,
+            0.909194,
+            0.9053515,
+            0.90152735,
+            0.8977293,
+            0.8939648,
+            0.8902417,
+            0.88656765,
+            0.8829503,
+            0.8793973,
+            0.8759164,
+            0.8725153,
+            0.86920154,
+            0.8659829,
+            0.86286706,
+            0.85979974,
+            0.8561721,
+            0.85184354,
+            0.84683424,
+            0.84116423,
+            0.83485365,
+            0.8279226,
+            0.8203911,
+            0.8122794,
+            0.80360746,
+            0.7943955,
+            0.7846636,
+            0.7744319,
+            0.7637204,
+            0.7525493,
+            0.7409387,
+            0.72890866,
+            0.71647936,
+            0.70367074,
+            0.6905032,
+            0.6769965,
+            0.66317093,
+            0.6490465,
+            0.63464355,
+            0.61998206,
+            0.60508204,
+            0.5899637,
+            0.57464707,
+            0.55915236,
+            0.5434995,
+            0.5277088,
+            0.51180035,
+            0.4957941,
+            0.47971028,
+            0.46356896,
+            0.4473902,
+            0.43119416,
+            0.4150009,
+            0.39883047,
+            0.3827033,
+            0.36663923,
+            0.35065833,
+            0.3347808,
+            0.3190268,
+            0.30341628,
+            0.2879695,
+            0.27270654,
+            0.2576473,
+            0.24281222,
+            0.2282211,
+            0.21389422,
+            0.19985168,
+            0.18611361,
+            0.17269988,
+            0.15963078,
+            0.14692663,
+            0.13460727,
+            0.122692704,
+            0.111203365,
+            0.10015912,
+            0.08958013,
+            0.07948651,
+            0.06989832,
+            0.06083579,
+            0.052319128,
+            0.04436807,
+            0.037002992,
+            0.030243767,
+            0.024110785,
+            0.018623967,
+            0.0138036385,
+            0.0096696075,
+            0.0062421095,
+            0.0035413494,
+            0.0015874458,
+            0.0004001328,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 128,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 8.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            8.0,
+            5.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "ROffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "ROffset2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0,
+                0.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'SmokeGrenade01'",
+        "ObjectPath": "War/Content/FX/Materials/SmokeGrenade01.0"
+      },
+      "SortMode": "PSORTMODE_DistanceToView",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'StickybombSmoke:ParticleModuleRequired_3.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_2",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_2",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 22.0,
+        "MaxValue": 27.0,
+        "MinValueVec": {
+          "X": 22.0,
+          "Y": 22.0,
+          "Z": 22.0
+        },
+        "MaxValueVec": {
+          "X": 27.0,
+          "Y": 27.0,
+          "Z": 27.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            22.0,
+            22.0,
+            22.0,
+            27.0,
+            27.0,
+            27.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.3,
+        "MaxValue": 2.000125,
+        "MinValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "MaxValueVec": {
+          "X": 2.0000865,
+          "Y": 2.0000865,
+          "Z": 2.000125
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 62.999996,
+          "Values": [
+            0.3,
+            0.3,
+            0.3,
+            0.45843148,
+            0.45843148,
+            0.46056548,
+            0.72662264,
+            0.7266226,
+            0.7314436,
+            1.0429585,
+            1.0429584,
+            1.0505453,
+            1.3458238,
+            1.3458235,
+            1.3557814,
+            1.5736032,
+            1.5736029,
+            1.5850624,
+            1.667445,
+            1.6674447,
+            1.6790879,
+            1.6853789,
+            1.6853787,
+            1.6965063,
+            1.7026572,
+            1.702657,
+            1.7132841,
+            1.7192922,
+            1.7192919,
+            1.7294333,
+            1.7352961,
+            1.7352959,
+            1.7449661,
+            1.7506812,
+            1.7506809,
+            1.7598943,
+            1.7654594,
+            1.7654593,
+            1.7742299,
+            1.779643,
+            1.7796429,
+            1.7879848,
+            1.7932444,
+            1.7932441,
+            1.8011711,
+            1.8062756,
+            1.8062754,
+            1.8138008,
+            1.8187486,
+            1.8187485,
+            1.8258858,
+            1.830676,
+            1.8306757,
+            1.8374379,
+            1.8420695,
+            1.8420694,
+            1.8484693,
+            1.8529418,
+            1.8529415,
+            1.858992,
+            1.8633046,
+            1.8633045,
+            1.8690178,
+            1.8731703,
+            1.8731703,
+            1.8785586,
+            1.8825512,
+            1.8825512,
+            1.8876266,
+            1.8914593,
+            1.8914592,
+            1.8962338,
+            1.8999069,
+            1.8999069,
+            1.9043919,
+            1.9079062,
+            1.907906,
+            1.9121133,
+            1.9154692,
+            1.9154692,
+            1.9194095,
+            1.9226083,
+            1.922608,
+            1.9262928,
+            1.9293355,
+            1.9293352,
+            1.9327749,
+            1.9356629,
+            1.9356627,
+            1.9388678,
+            1.9416031,
+            1.941603,
+            1.9445838,
+            1.9471679,
+            1.9471678,
+            1.9499346,
+            1.9523697,
+            1.9523695,
+            1.9549322,
+            1.9572204,
+            1.9572203,
+            1.9595886,
+            1.9617325,
+            1.9617324,
+            1.9639158,
+            1.9659181,
+            1.9659181,
+            1.9679259,
+            1.9697893,
+            1.9697893,
+            1.9716305,
+            1.9733583,
+            1.9733583,
+            1.9750417,
+            1.9766374,
+            1.9766372,
+            1.9781718,
+            1.9796386,
+            1.9796386,
+            1.9810324,
+            1.9823742,
+            1.9823741,
+            1.9836357,
+            1.9848564,
+            1.9848562,
+            1.9859934,
+            1.9870971,
+            1.9870971,
+            1.9881177,
+            1.989109,
+            1.9891089,
+            1.9900206,
+            1.990904,
+            1.990904,
+            1.9917139,
+            1.9924941,
+            1.9924941,
+            1.9932096,
+            1.9938917,
+            1.9938917,
+            1.9945198,
+            1.9951091,
+            1.9951091,
+            1.9956565,
+            1.9961582,
+            1.9961582,
+            1.9966313,
+            1.9970515,
+            1.9970515,
+            1.9974567,
+            1.9978008,
+            1.9978008,
+            1.9981443,
+            1.9984187,
+            1.9984186,
+            1.9987061,
+            1.9989169,
+            1.9989169,
+            1.9991542,
+            1.999308,
+            1.999308,
+            1.9995006,
+            1.999604,
+            1.999604,
+            1.9997572,
+            1.9998171,
+            1.9998171,
+            1.9999359,
+            1.9999595,
+            1.9999595,
+            2.0000486,
+            2.0000434,
+            2.0000434,
+            2.0001075,
+            2.000081,
+            2.000081,
+            2.0001247,
+            2.0000844,
+            2.0000844,
+            2.0001118,
+            2.0000658,
+            2.0000658,
+            2.0000808,
+            2.0000374,
+            2.0000374,
+            2.0000439,
+            2.0000114,
+            2.0000114,
+            2.000013,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 64,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'StickybombSmoke:ParticleModuleSpawn_3.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawnPerUnit",
+    "Name": "ParticleModuleSpawnPerUnit_0",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleSpawnPerUnit'",
+    "Properties": {
+      "UnitScalar": 20.0,
+      "SpawnPerUnit": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -1.0,
+        "MaxValue": 40.0,
+        "MinValueVec": {
+          "X": -1.0,
+          "Y": -1.0,
+          "Z": 20.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 40.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            -1.0,
+            20.0,
+            1.0,
+            1.0,
+            40.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'StickybombSmoke:ParticleSpriteEmitter_3.ParticleLODLevel_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "StickybombSmoke",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "WarmupTime": 1.0,
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'StickybombSmoke:ParticleSpriteEmitter_3'",
+          "ObjectPath": "War/Content/FX/StickybombSmoke.16"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -8000.0,
+          "Y": -8000.0,
+          "Z": -8000.0
+        },
+        "Max": {
+          "X": 8000.0,
+          "Y": 8000.0,
+          "Z": 8000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

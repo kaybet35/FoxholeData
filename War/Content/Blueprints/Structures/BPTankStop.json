@@ -1,0 +1,618 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeCheckSocket2",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPTankStop_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPTankStop_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.23"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BarbedWire'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTankStop_C:LandscapeCheckSocket2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTankStop_C:LandscapeCheckSocket1'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTankStop_C:LandscapeCheckSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTankStop_C:CollisionBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTankStop_C:MultiplexedStaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTankStop_C:TankStopMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.14"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTankStop_C'Default__BPTankStop_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.2"
+    }
+  },
+  {
+    "Type": "BPTankStop_C",
+    "Name": "Default__BPTankStop_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPTankStop.BPTankStop_C'",
+    "Properties": {
+      "bBuildOnBridges": true,
+      "bIsBuiltOnFoundation": true,
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "BCB57CE24277EE614493D3870232C97D",
+        "SourceString": "An anti-tank obstacle that prevents vehicle access to an area. Can be dismantled with a Wrench.",
+        "LocalizedString": "An anti-tank obstacle that prevents vehicle access to an area. Can be dismantled with a Wrench."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'TankStopIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/TankStopIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Defense",
+      "BuildOrder": 9,
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "ValidBuildTools": 4,
+      "CodeName": "TankStop",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "1122285143C897768611A1B57A27BE56",
+        "SourceString": "Tank Trap",
+        "LocalizedString": "Tank Trap"
+      },
+      "ArmourType": "EArmourType::Tier2Structure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPTankStop_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPTankStop_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.5"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "TechID": "ETechID::UnlockTankStop",
+      "MaxHealth": 2000,
+      "Health": 2000,
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPTankStop_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.25"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPTankStop_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPTankStop_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionBox_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 128.0,
+        "Y": 132.5,
+        "Z": 105.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -3.0,
+        "Y": 12.5,
+        "Z": 105.0
+      },
+      "ComponentTags": [
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPTankStop_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 128.0,
+        "Y": 132.5,
+        "Z": 105.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPTankStop_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.3"
+      },
+      "RelativeLocation": {
+        "X": -3.0,
+        "Y": 12.5,
+        "Z": 105.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "LandscapeCheckSocket1_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 111.0,
+        "Y": -3.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "LandscapeCheckSocket2_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -58.0,
+        "Y": -98.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "LandscapeCheckSocket_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -79.0,
+        "Y": 75.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "MultiplexedStaticMeshComponent",
+    "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
+    "Properties": {
+      "MeshStops": [
+        {
+          "Threshold": 0,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'TankStopCritical'",
+            "ObjectPath": "War/Content/Meshes/Environment/Props/TankStopCritical.2"
+          }
+        },
+        {
+          "Threshold": 33,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'TankStopDamaged'",
+            "ObjectPath": "War/Content/Meshes/Environment/Props/TankStopDamaged.2"
+          }
+        },
+        {
+          "Threshold": 66,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'TankStop'",
+            "ObjectPath": "War/Content/Meshes/Environment/Props/TankStop.2"
+          }
+        }
+      ],
+      "InputValue": 100,
+      "SelectedMeshIndex": 2
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "CollisionBox",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeCheckSocket",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeCheckSocket1",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedStaticMesh",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "TankStopMesh",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPTankStop_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.15"
+      },
+      "VariableGuid": "14141C72-4CAFEE5D-A9D10C96-31C1C860",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MultiplexedStaticMeshComponent'BPTankStop_C:MultiplexedStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.9"
+      },
+      "VariableGuid": "F04E21D9-4CF25F40-3D4ECFA6-C3D325A5",
+      "InternalVariableName": "MultiplexedStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPTankStop_C:CollisionBox_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7163869B-4DD47AEA-6A487CA6-93565CCC",
+      "InternalVariableName": "CollisionBox"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPTankStop_C:TankStopMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.24"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "280FD47C-4B79E4CF-704ACC96-695FCDF1",
+      "InternalVariableName": "TankStopMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTankStop_C:LandscapeCheckSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.8"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3BD14EC3-4321D4D6-9DCFF7A5-DB86DFF0",
+      "InternalVariableName": "LandscapeCheckSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTankStop_C:LandscapeCheckSocket1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DABBDCE1-4C8A772B-FAB672A4-0BB621A9",
+      "InternalVariableName": "LandscapeCheckSocket1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTankStop_C:LandscapeCheckSocket2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3680D8D1-4857373E-EF1803B7-FF5F3020",
+      "InternalVariableName": "LandscapeCheckSocket2"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.22"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPTankStop_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPTankStop.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "TankStopMesh_GEN_VARIABLE",
+    "Outer": "BPTankStop_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'TankStop'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/TankStop.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "MassInKgOverride": 367.56195
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 58.304413
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPTankStop_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

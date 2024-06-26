@@ -1,0 +1,470 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedCenterMesh",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPRocketPart_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPRocketPartBottom_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.15"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPRocketPartBottom_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPRocketPart_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPRocketPartBottom_C:MultiplexedCenterMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRocketPartBottom_C:MultiplexedMainMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRocketPartBottom_C:RocketPartCenter'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.9"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPRocketPartBottom_C'Default__BPRocketPartBottom_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.2"
+    }
+  },
+  {
+    "Type": "BPRocketPartBottom_C",
+    "Name": "Default__BPRocketPartBottom_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.BPRocketPartBottom_C'",
+    "Properties": {
+      "Description": {
+        "Namespace": "",
+        "Key": "6D1768DD43D82B3F03D0EEA78D76D72C",
+        "SourceString": "The control fins, fuel lines, and propulsion engines required for launch are all housed within the A0E-9 Booster system.",
+        "LocalizedString": "The control fins, fuel lines, and propulsion engines required for launch are all housed within the A0E-9 Booster system."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'RocketPartBottomIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/RocketPartBottomIcon.0"
+      },
+      "PackagedMesh": {
+        "ObjectName": "StaticMesh'RocketPartBottomPacked'",
+        "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartBottomPacked.2"
+      },
+      "CodeName": "RocketPartBottom",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "91105C03499C3F1BE6BE4DB856E5B0F8",
+        "SourceString": "A0E-9 Rocket Booster",
+        "LocalizedString": "A0E-9 Rocket Booster"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPRocketPartBottom_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPRocketPartBottom_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.4"
+      },
+      "MaxHealth": 1000,
+      "Health": 1000,
+      "BuildSteps": [
+        {
+          "RequiredCodeName": "None",
+          "NextStructureCodeName": "None"
+        },
+        {
+          "RequiredCodeName": "RocketPartCenter",
+          "NextStructureCodeName": "None"
+        },
+        {
+          "RequiredCodeName": "RocketPartTop",
+          "NextStructureCodeName": "Rocket"
+        }
+      ],
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPRocketPartBottom_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.18"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPRocketPartBottom_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPRocketPartBottom_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPRocketPartBottom_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPRocketPartBottom_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.3"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "StaticMeshComponent'BPRocketPartBottom_C:MainMesh_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.16"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPRocketPart_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.1"
+            },
+            "SCSVariableName": "MainMesh",
+            "AssociatedGuid": "8405CA7E-41CAA4F1-5BC189AA-ACFF56F1"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "MultiplexedStaticMeshComponent",
+    "Name": "MultiplexedCenterMesh_GEN_VARIABLE",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
+    "Properties": {
+      "TargetTag": "RocketPartCenter",
+      "MeshStops": [
+        {
+          "Threshold": 0,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'RocketPartCenterCritical'",
+            "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartCenterCritical.2"
+          }
+        },
+        {
+          "Threshold": 33,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'RocketPartCenterDamage'",
+            "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartCenterDamage.2"
+          }
+        },
+        {
+          "Threshold": 66,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'RocketPartCenter'",
+            "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartCenter.2"
+          }
+        }
+      ],
+      "InputValue": 100,
+      "SelectedMeshIndex": 2
+    }
+  },
+  {
+    "Type": "MultiplexedStaticMeshComponent",
+    "Name": "MultiplexedMainMesh_GEN_VARIABLE",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
+    "Properties": {
+      "TargetTag": "MainMesh",
+      "MeshStops": [
+        {
+          "Threshold": 0,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'RocketPartBottomCritical'",
+            "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartBottomCritical.2"
+          }
+        },
+        {
+          "Threshold": 33,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'RocketPartBottomDamage'",
+            "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartBottomDamage.2"
+          }
+        },
+        {
+          "Threshold": 66,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'RocketPartBottom'",
+            "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartBottom.2"
+          }
+        }
+      ],
+      "InputValue": 100,
+      "SelectedMeshIndex": 2
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedMainMesh",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RocketPartCenter",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPRocketPartBottom_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.10"
+      },
+      "VariableGuid": "1DBAF71F-40F954A5-8BA88890-B293AB32",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPRocketPartBottom_C:RocketPartCenter_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.17"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "120AF2B6-4E83C357-BCA09FA9-EDC4A8A8",
+      "InternalVariableName": "RocketPartCenter"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MultiplexedStaticMeshComponent'BPRocketPartBottom_C:MultiplexedMainMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.7"
+      },
+      "VariableGuid": "9AD60BF5-47C48088-BDE7BFB9-4BD6C0B6",
+      "InternalVariableName": "MultiplexedMainMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MultiplexedStaticMeshComponent'BPRocketPartBottom_C:MultiplexedCenterMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.6"
+      },
+      "VariableGuid": "B86EE5AA-41C65CB8-0502BD98-9A8E67D6",
+      "InternalVariableName": "MultiplexedCenterMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPRocketPartBottom_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPartBottom.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MainMesh_GEN_VARIABLE",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RocketPartBottom'",
+        "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartBottom.2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RocketPartCenter_GEN_VARIABLE",
+    "Outer": "BPRocketPartBottom_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RocketPartCenter'",
+        "ObjectPath": "War/Content/Meshes/Structures/Rocket/RocketPartCenter.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -0.17340088,
+        "Z": 535.7964
+      },
+      "bVisible": false,
+      "ComponentTags": [
+        "RocketPartCenter"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPRocketPartBottom_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

@@ -1,0 +1,1035 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "idle_to_shoot",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Hammering",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.75,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_ConstructionVehicle_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_ConstructionVehicle_Skeleton.2"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_BlendListByBool_895BDA984428A5CC8844D3A6F2CF016F'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.7"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "CabinYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'ConstructionVehicleAnimInstance:CabinYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_RotationOffsetBlendSpace_B18F18234A495F82B86B4298BA7F1D68'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.11"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_BlendSpacePlayer_6DDE9F484AC78C700005068E8F05643E'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.8"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDoingWork",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'ConstructionVehicleAnimInstance:bIsDoingWork'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_TransitionResult_5E80AE6C4F7F9AADCC7881B1CC43F673'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDoingWork",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'ConstructionVehicleAnimInstance:bIsDoingWork'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_TransitionResult_5C8E1B14449BED91C0473EAA6301B2C8'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.19"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RightTreadPlayrate",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'ConstructionVehicleAnimInstance:RightTreadPlayrate'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_SequencePlayer_D102ED70458266A6006CA5945F8CB3CD'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.15"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "LeftTreadPlayrate",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'ConstructionVehicleAnimInstance:LeftTreadPlayrate'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_SequencePlayer_479C53C145A776E473860E83299E3D94'",
+            "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.12"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_ConstructionVehicle_C:ExecuteUbergraph_ABP_ConstructionVehicle'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ConstructionVehicleAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.0"
+      },
+      {
+        "ObjectName": "Function'ABP_ConstructionVehicle_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.4"
+      },
+      {
+        "ObjectName": "Function'ABP_ConstructionVehicle_C:ExecuteUbergraph_ABP_ConstructionVehicle'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.6"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_Root_55FF20954D2E7F4D01B62E8E4435EE61'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.10"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_SequencePlayer_479C53C145A776E473860E83299E3D94'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_SequencePlayer_D102ED70458266A6006CA5945F8CB3CD'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_LayeredBoneBlend_01C32CBC4BD9E05FEEBDA09B8CC0E38E'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_TransitionResult_5C8E1B14449BED91C0473EAA6301B2C8'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_TransitionResult_5E80AE6C4F7F9AADCC7881B1CC43F673'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_SequencePlayer_4D149B90485D5F19516A23B1D184E53F'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_StateResult_3FF70D52477CD98C1FBD57ABA304DF32'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_BlendSpacePlayer_6DDE9F484AC78C700005068E8F05643E'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.8"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_StateResult_E9CCD87448AF5083A06318B5F5C30933'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_StateMachine_7FF28EDE495271C6A3F31994E4995077'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_RotationOffsetBlendSpace_B18F18234A495F82B86B4298BA7F1D68'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_BlendListByBool_895BDA984428A5CC8844D3A6F2CF016F'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.7"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraphNode_SequencePlayer_BCEF608F44F6E8CD7C755D838868CB24'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.14"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_ConstructionVehicle": {
+        "ObjectName": "Function'ABP_ConstructionVehicle_C:ExecuteUbergraph_ABP_ConstructionVehicle'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.6"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_ConstructionVehicle_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.4"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_ConstructionVehicle_C'Default__ABP_ConstructionVehicle_C'",
+      "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.2"
+    }
+  },
+  {
+    "Type": "ABP_ConstructionVehicle_C",
+    "Name": "Default__ABP_ConstructionVehicle_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.ABP_ConstructionVehicle_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_55FF20954D2E7F4D01B62E8E4435EE61": {
+        "Result": {
+          "LinkID": 12
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_479C53C145A776E473860E83299E3D94": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ConstructionVehicle_tread_front_speed215_73'",
+          "ObjectPath": "War/Content/Animation/ConstructionVehicle/Anim_ConstructionVehicle_tread_front_speed215_73.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_D102ED70458266A6006CA5945F8CB3CD": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ConstructionVehicle_tread_front_speed215_73'",
+          "ObjectPath": "War/Content/Animation/ConstructionVehicle/Anim_ConstructionVehicle_tread_front_speed215_73.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_01C32CBC4BD9E05FEEBDA09B8CC0E38E": {
+        "BasePose": {
+          "LinkID": 10
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 1
+          },
+          {
+            "LinkID": 2
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "thread_pivot_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "thread_pivot_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "7499CC37-4BA52AA5-D11858B7-04823A81",
+        "VirtualBoneGuid": "9E5C6030-407682D4-75D3B79E-4D303840"
+      },
+      "AnimGraphNode_TransitionResult_5C8E1B14449BED91C0473EAA6301B2C8": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_5E80AE6C4F7F9AADCC7881B1CC43F673": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_4D149B90485D5F19516A23B1D184E53F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ConstructionVehicle_hammering'",
+          "ObjectPath": "War/Content/Animation/ConstructionVehicle/Anim_ConstructionVehicle_hammering.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3FF70D52477CD98C1FBD57ABA304DF32": {
+        "Result": {
+          "LinkID": 6
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_6DDE9F484AC78C700005068E8F05643E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'ConstructionVehicle_Movement'",
+          "ObjectPath": "War/Content/Animation/ConstructionVehicle/ConstructionVehicle_Movement.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_E9CCD87448AF5083A06318B5F5C30933": {
+        "Result": {
+          "LinkID": 8
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_7FF28EDE495271C6A3F31994E4995077": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_B18F18234A495F82B86B4298BA7F1D68": {
+        "BasePose": {
+          "LinkID": 3
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'ConstructionVehicle_cabin_AO'",
+          "ObjectPath": "War/Content/Animation/ConstructionVehicle/ConstructionVehicle_cabin_AO.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_895BDA984428A5CC8844D3A6F2CF016F": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 13
+          },
+          {
+            "LinkID": 11
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_BCEF608F44F6E8CD7C755D838868CB24": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ConstructionVehicle_explode'",
+          "ObjectPath": "War/Content/Animation/ConstructionVehicle/Anim_ConstructionVehicle_explode.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_ConstructionVehicle_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.3"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_ConstructionVehicle",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_ConstructionVehicle",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_ConstructionVehicle_C:ExecuteUbergraph_ABP_ConstructionVehicle.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/ConstructionVehicle/ABP_ConstructionVehicle.5"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_895BDA984428A5CC8844D3A6F2CF016F",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_6DDE9F484AC78C700005068E8F05643E",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_01C32CBC4BD9E05FEEBDA09B8CC0E38E",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_55FF20954D2E7F4D01B62E8E4435EE61",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_B18F18234A495F82B86B4298BA7F1D68",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_479C53C145A776E473860E83299E3D94",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4D149B90485D5F19516A23B1D184E53F",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_BCEF608F44F6E8CD7C755D838868CB24",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D102ED70458266A6006CA5945F8CB3CD",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_7FF28EDE495271C6A3F31994E4995077",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3FF70D52477CD98C1FBD57ABA304DF32",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_E9CCD87448AF5083A06318B5F5C30933",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_5C8E1B14449BED91C0473EAA6301B2C8",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_5E80AE6C4F7F9AADCC7881B1CC43F673",
+    "Outer": "ABP_ConstructionVehicle_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

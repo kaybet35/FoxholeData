@@ -1,0 +1,550 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "NoBuildArea",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPSulfurMineBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ResourceMineBuildSite'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPSulfurMineBuildSite_C:NoBuildArea'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSulfurMineBuildSite_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSulfurMineBuildSite_C:Box2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSulfurMineBuildSite_C:SK_SulfurMine'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.12"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPSulfurMineBuildSite_C'Default__BPSulfurMineBuildSite_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.2"
+    }
+  },
+  {
+    "Type": "BPSulfurMineBuildSite_C",
+    "Name": "Default__BPSulfurMineBuildSite_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.BPSulfurMineBuildSite_C'",
+    "Properties": {
+      "GenericStockpileComponent": {
+        "ObjectName": "GenericItemStockpileComponent'Default__BPSulfurMineBuildSite_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.9"
+      },
+      "ObstructionCheckVolume": {
+        "ObjectName": "BoxComponent'Default__BPSulfurMineBuildSite_C:ObstructionCheckVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.7"
+      },
+      "CodeName": "SulfurMineBuildSite",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPSulfurMineBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPSulfurMineBuildSite_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.8"
+      },
+      "Health": 0,
+      "MapIconType": "EMapIconType::SulfurMine",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPSulfurMineBuildSite_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.21"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPSulfurMineBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box2_GEN_VARIABLE",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 29.431,
+        "Y": 2.021942,
+        "Z": 292.63538
+      },
+      "RelativeScale3D": {
+        "X": 3.999682,
+        "Y": 8.079784,
+        "Z": 9.898417
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -204.53815,
+        "Y": -8.070442,
+        "Z": 124.16728
+      },
+      "RelativeScale3D": {
+        "X": 3.579272,
+        "Y": 6.491732,
+        "Z": 4.02622
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "NoBuildArea_GEN_VARIABLE",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 350.0,
+        "Z": 150.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "bGenerateOverlapEvents": false,
+      "BodyInstance": {
+        "CollisionProfileName": "NoBuildArea",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.0,
+        "Y": 750.0,
+        "Z": 149.99786
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -179.99997,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ObstructionCheckVolume",
+    "Outer": "Default__BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSulfurMineBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 450.0,
+        "Y": 350.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPSulfurMineBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 128.0
+      }
+    }
+  },
+  {
+    "Type": "GenericItemStockpileComponent",
+    "Name": "GenericStockpileComponent",
+    "Outer": "Default__BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'GenericItemStockpileComponent'"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box2",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SK_SulfurMine",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPSulfurMineBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.13"
+      },
+      "VariableGuid": "68C852CA-4CC697D9-422891A3-3077FE32",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPSulfurMineBuildSite_C:NoBuildArea_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FA6337F2-48A1954C-CFBEF6A1-0651D68E",
+      "InternalVariableName": "NoBuildArea"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPSulfurMineBuildSite_C:SK_SulfurMine_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.20"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0FF4F5AA-4E4E4895-6F7D52B5-468D2BD0",
+      "InternalVariableName": "SK_SulfurMine"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPSulfurMineBuildSite_C:Box2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9DB72C54-424CFC9D-D7B5ABAE-A297E692",
+      "InternalVariableName": "Box2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPSulfurMineBuildSite_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.5"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4CC2753D-457541B3-390E518D-AE7B0DD4",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPSulfurMineBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPSulfurMineBuildSite.14"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SK_SulfurMine_GEN_VARIABLE",
+    "Outer": "BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_SulfurMine'",
+        "ObjectPath": "War/Content/Meshes/Structures/SK_SulfurMine.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        }
+      ],
+      "CanCharacterStepUpOn": "ECB_No"
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPSulfurMineBuildSite_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MeleeWhoosh:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeWhoosh.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 800.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 2000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Weapons'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Weapons.0"
+      },
+      "Duration": 0.47054422,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MeleeWhoosh:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeWhoosh.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeWhoosh:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeWhoosh.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeWhoosh:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeWhoosh.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeWhoosh:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeWhoosh.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeWhoosh:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/MeleeWhoosh.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeWhoosh01.MeleeWhoosh01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeWhoosh02.MeleeWhoosh02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeWhoosh03.MeleeWhoosh03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MeleeWhoosh",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeWhoosh04.MeleeWhoosh04",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

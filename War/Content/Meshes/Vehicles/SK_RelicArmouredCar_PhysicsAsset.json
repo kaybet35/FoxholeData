@@ -1,0 +1,2302 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_4'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_8'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.11"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.8"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_6'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.9"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_7'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.10"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'SK_RelicArmouredCar_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.6"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_RelicArmouredCar_PhysicsAsset:PhysicsConstraintTemplate_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_RelicArmouredCar_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'SK_RelicArmouredCar_PhysicsAsset:PhysicsConstraintTemplate_7'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_PhysicsAsset.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_0",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "chassy",
+        "ConstraintBone1": "chassy",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 28.933853
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "turret_pivot",
+        "ConstraintBone1": "turret_pivot",
+        "ConstraintBone2": "chassy",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 30.000004,
+          "Z": 192.3583
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_7",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "treads_pivot_L",
+        "ConstraintBone1": "treads_pivot_L",
+        "ConstraintBone2": "root",
+        "Pos2": {
+          "X": 90.79693,
+          "Y": 0.0,
+          "Z": 33.167828
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": -89.99999,
+              "Roll": 0.0
+            },
+            "Radius": 0.505,
+            "Length": 0.505,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C103230B4ADD7DDE2AC55C9831136F68"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 47.179703,
+                "Y": -220.36128,
+                "Z": 73.8642
+              },
+              {
+                "X": 47.1797,
+                "Y": -220.36128,
+                "Z": 178.1557
+              },
+              {
+                "X": -46.981323,
+                "Y": -220.36131,
+                "Z": 73.86418
+              },
+              {
+                "X": -46.98133,
+                "Y": -220.36131,
+                "Z": 178.1557
+              },
+              {
+                "X": 52.17817,
+                "Y": -75.320206,
+                "Z": 198.88554
+              },
+              {
+                "X": 52.17818,
+                "Y": -75.320175,
+                "Z": 73.86419
+              },
+              {
+                "X": -51.97982,
+                "Y": -75.320206,
+                "Z": 73.864174
+              },
+              {
+                "X": -51.97984,
+                "Y": -75.3202,
+                "Z": 198.88551
+              },
+              {
+                "X": 0.099193014,
+                "Y": -220.3613,
+                "Z": 73.86419
+              },
+              {
+                "X": 0.099176206,
+                "Y": -220.3613,
+                "Z": 193.94467
+              },
+              {
+                "X": 0.09917593,
+                "Y": -75.32019,
+                "Z": 73.86418
+              },
+              {
+                "X": 0.09916004,
+                "Y": -75.320206,
+                "Z": 214.6745
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -51.97984,
+                "Y": -220.36131,
+                "Z": 73.864174
+              },
+              "Max": {
+                "X": 52.17818,
+                "Y": -75.320175,
+                "Z": 214.6745
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": -26.25293
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 65.08691,
+                "Y": -77.14415,
+                "Z": 220.58914
+              },
+              {
+                "X": 65.08693,
+                "Y": -77.144135,
+                "Z": 163.1235
+              },
+              {
+                "X": -65.0869,
+                "Y": -77.14418,
+                "Z": 163.12347
+              },
+              {
+                "X": -65.08693,
+                "Y": -77.14418,
+                "Z": 220.58914
+              },
+              {
+                "X": -70.327095,
+                "Y": 118.655426,
+                "Z": 220.58914
+              },
+              {
+                "X": -70.32706,
+                "Y": 118.655426,
+                "Z": 163.12347
+              },
+              {
+                "X": 70.09229,
+                "Y": 118.65543,
+                "Z": 163.1235
+              },
+              {
+                "X": 70.09228,
+                "Y": 118.65542,
+                "Z": 220.58914
+              },
+              {
+                "X": -98.19446,
+                "Y": -29.607094,
+                "Z": 220.58914
+              },
+              {
+                "X": -98.19443,
+                "Y": -29.607094,
+                "Z": 163.12347
+              },
+              {
+                "X": 97.49071,
+                "Y": -29.607063,
+                "Z": 163.1235
+              },
+              {
+                "X": 97.49069,
+                "Y": -29.607079,
+                "Z": 220.58914
+              },
+              {
+                "X": -98.19448,
+                "Y": 95.392395,
+                "Z": 220.58914
+              },
+              {
+                "X": -98.19444,
+                "Y": 95.392395,
+                "Z": 163.12347
+              },
+              {
+                "X": 97.49068,
+                "Y": 95.392395,
+                "Z": 163.12349
+              },
+              {
+                "X": 97.49066,
+                "Y": 95.39237,
+                "Z": 220.58914
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -98.19448,
+                "Y": -77.14418,
+                "Z": 163.12347
+              },
+              "Max": {
+                "X": 97.49071,
+                "Y": 118.65543,
+                "Z": 220.58914
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": -26.25293
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": -52.656498,
+                "Y": 124.36391,
+                "Z": 68.001465
+              },
+              {
+                "X": 52.854702,
+                "Y": 124.36394,
+                "Z": 68.001495
+              },
+              {
+                "X": 0.099105835,
+                "Y": 124.36394,
+                "Z": 68.00149
+              },
+              {
+                "X": 52.854702,
+                "Y": 124.36392,
+                "Z": 189.67404
+              },
+              {
+                "X": -52.656506,
+                "Y": 124.36392,
+                "Z": 189.674
+              },
+              {
+                "X": -46.328506,
+                "Y": 236.94261,
+                "Z": 172.36374
+              },
+              {
+                "X": -46.258926,
+                "Y": 236.94261,
+                "Z": 93.76521
+              },
+              {
+                "X": 0.09908676,
+                "Y": 236.94264,
+                "Z": 93.76523
+              },
+              {
+                "X": 46.45709,
+                "Y": 236.94264,
+                "Z": 93.76523
+              },
+              {
+                "X": 46.38751,
+                "Y": 236.94261,
+                "Z": 172.36375
+              },
+              {
+                "X": 0.099090576,
+                "Y": 124.36392,
+                "Z": 196.97464
+              },
+              {
+                "X": 0.029499047,
+                "Y": 236.94261,
+                "Z": 172.36374
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -52.656506,
+                "Y": 124.36391,
+                "Z": 68.001465
+              },
+              "Max": {
+                "X": 52.854702,
+                "Y": 236.94264,
+                "Z": 196.97464
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": -26.25293
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 80.659996,
+                "Y": -121.28513,
+                "Z": 163.1235
+              },
+              {
+                "X": 64.1953,
+                "Y": 177.18298,
+                "Z": 163.1235
+              },
+              {
+                "X": 64.1953,
+                "Y": 177.18298,
+                "Z": 73.86419
+              },
+              {
+                "X": 80.66,
+                "Y": -121.2851,
+                "Z": 73.864204
+              },
+              {
+                "X": -80.659996,
+                "Y": -121.28513,
+                "Z": 73.864174
+              },
+              {
+                "X": -64.19528,
+                "Y": 177.18298,
+                "Z": 73.86417
+              },
+              {
+                "X": -64.195305,
+                "Y": 177.18298,
+                "Z": 163.12347
+              },
+              {
+                "X": -80.66001,
+                "Y": -121.28513,
+                "Z": 163.12347
+              },
+              {
+                "X": -94.1666,
+                "Y": 124.77919,
+                "Z": 163.12347
+              },
+              {
+                "X": -94.16659,
+                "Y": 124.77919,
+                "Z": 73.86417
+              },
+              {
+                "X": 94.16659,
+                "Y": 124.779205,
+                "Z": 73.8642
+              },
+              {
+                "X": 94.16657,
+                "Y": 124.77919,
+                "Z": 163.1235
+              },
+              {
+                "X": -94.16659,
+                "Y": -68.8034,
+                "Z": 163.12347
+              },
+              {
+                "X": -94.16657,
+                "Y": -68.8034,
+                "Z": 73.864174
+              },
+              {
+                "X": 94.1666,
+                "Y": -68.80337,
+                "Z": 73.8642
+              },
+              {
+                "X": 94.166595,
+                "Y": -68.8034,
+                "Z": 163.1235
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -94.1666,
+                "Y": -121.28513,
+                "Z": 73.86417
+              },
+              "Max": {
+                "X": 94.1666,
+                "Y": 177.18298,
+                "Z": 163.1235
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": -26.25293
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 94.166565,
+                "Y": 205.2148,
+                "Z": 89.395645
+              },
+              {
+                "X": 94.166534,
+                "Y": 210.17569,
+                "Z": 89.395645
+              },
+              {
+                "X": 94.16654,
+                "Y": 222.26141,
+                "Z": 58.16017
+              },
+              {
+                "X": 94.166565,
+                "Y": 217.3005,
+                "Z": 58.160187
+              },
+              {
+                "X": -93.96835,
+                "Y": 217.30048,
+                "Z": 58.16014
+              },
+              {
+                "X": -93.96836,
+                "Y": 222.26141,
+                "Z": 58.160156
+              },
+              {
+                "X": -93.96838,
+                "Y": 210.17572,
+                "Z": 89.395676
+              },
+              {
+                "X": -93.96835,
+                "Y": 205.21478,
+                "Z": 89.39569
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -93.96838,
+                "Y": 205.21478,
+                "Z": 58.16014
+              },
+              "Max": {
+                "X": 94.166565,
+                "Y": 222.26141,
+                "Z": 89.39569
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": -26.25293
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 64.19533,
+                "Y": 176.73822,
+                "Z": 164.04001
+              },
+              {
+                "X": 64.1953,
+                "Y": 181.69913,
+                "Z": 164.04001
+              },
+              {
+                "X": 64.195305,
+                "Y": 181.69913,
+                "Z": 74.00833
+              },
+              {
+                "X": 64.19533,
+                "Y": 176.73825,
+                "Z": 74.00834
+              },
+              {
+                "X": -64.19528,
+                "Y": 176.73822,
+                "Z": 74.0083
+              },
+              {
+                "X": -64.19529,
+                "Y": 181.69913,
+                "Z": 74.00831
+              },
+              {
+                "X": -64.19531,
+                "Y": 181.69913,
+                "Z": 164.04004
+              },
+              {
+                "X": -64.19528,
+                "Y": 176.73822,
+                "Z": 164.04005
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -64.19531,
+                "Y": 176.73822,
+                "Z": 74.0083
+              },
+              "Max": {
+                "X": 64.19533,
+                "Y": 181.69913,
+                "Z": 164.04005
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": -26.25293
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "chassy",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "CE9EEB334CA0D5BD9B42D18A899B9CAA",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 6711,
+        "SizeOnDisk": 6711,
+        "OffsetInFile": "0xCD0F"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 144.52072,
+                "Y": 239.91864,
+                "Z": 52.271317
+              },
+              {
+                "X": 144.52072,
+                "Y": 212.66766,
+                "Z": 38.37915
+              },
+              {
+                "X": 93.35171,
+                "Y": 212.66766,
+                "Z": 38.37915
+              },
+              {
+                "X": 93.3517,
+                "Y": 239.91864,
+                "Z": 52.27131
+              },
+              {
+                "X": 144.52069,
+                "Y": 240.24962,
+                "Z": 138.46043
+              },
+              {
+                "X": 93.351685,
+                "Y": 240.24962,
+                "Z": 138.46042
+              },
+              {
+                "X": 93.35169,
+                "Y": 214.56555,
+                "Z": 145.57904
+              },
+              {
+                "X": 144.52069,
+                "Y": 214.56555,
+                "Z": 145.57906
+              },
+              {
+                "X": 144.52069,
+                "Y": 261.54135,
+                "Z": 84.99468
+              },
+              {
+                "X": 93.35171,
+                "Y": 261.54135,
+                "Z": 84.99468
+              },
+              {
+                "X": 93.351685,
+                "Y": 260.26477,
+                "Z": 113.44144
+              },
+              {
+                "X": 144.52069,
+                "Y": 260.26477,
+                "Z": 113.44144
+              },
+              {
+                "X": 93.351715,
+                "Y": -207.36214,
+                "Z": 34.336044
+              },
+              {
+                "X": 144.52072,
+                "Y": -207.36214,
+                "Z": 34.336044
+              },
+              {
+                "X": 144.52072,
+                "Y": -207.36214,
+                "Z": 93.72386
+              },
+              {
+                "X": 93.35171,
+                "Y": -207.36214,
+                "Z": 93.72386
+              },
+              {
+                "X": 144.52069,
+                "Y": -69.0051,
+                "Z": 1.5E-05
+              },
+              {
+                "X": 144.52069,
+                "Y": -69.00508,
+                "Z": 118.16366
+              },
+              {
+                "X": 93.351715,
+                "Y": -69.0051,
+                "Z": 0.0
+              },
+              {
+                "X": 93.35169,
+                "Y": -69.00508,
+                "Z": 118.16366
+              },
+              {
+                "X": 144.52072,
+                "Y": 128.01643,
+                "Z": 1.5E-05
+              },
+              {
+                "X": 144.52072,
+                "Y": 128.01645,
+                "Z": 138.94626
+              },
+              {
+                "X": 93.351715,
+                "Y": 128.01643,
+                "Z": -0.0
+              },
+              {
+                "X": 93.35169,
+                "Y": 128.01645,
+                "Z": 138.94624
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": 93.351685,
+                "Y": -207.36214,
+                "Z": -0.0
+              },
+              "Max": {
+                "X": 144.52072,
+                "Y": 261.54135,
+                "Z": 145.57906
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": -144.97379,
+                "Y": 0.0,
+                "Z": -33.476562
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "treads_pivot_R",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1152FC214D229EA28A5BF4BBE4064550",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1907,
+        "SizeOnDisk": 1907,
+        "OffsetInFile": "0xEB77"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 37.374092,
+                "Y": -40.833015,
+                "Z": 289.66968
+              },
+              {
+                "X": 37.37411,
+                "Y": -40.832993,
+                "Z": 223.16702
+              },
+              {
+                "X": -37.17586,
+                "Y": -40.833023,
+                "Z": 223.16699
+              },
+              {
+                "X": -37.17588,
+                "Y": -40.833023,
+                "Z": 289.66968
+              },
+              {
+                "X": -56.313854,
+                "Y": 64.95932,
+                "Z": 289.66968
+              },
+              {
+                "X": -56.31385,
+                "Y": 64.95931,
+                "Z": 223.16699
+              },
+              {
+                "X": 56.51207,
+                "Y": 64.95935,
+                "Z": 223.16702
+              },
+              {
+                "X": 56.51207,
+                "Y": 64.95932,
+                "Z": 289.66968
+              },
+              {
+                "X": -56.31385,
+                "Y": -7.65287,
+                "Z": 289.66968
+              },
+              {
+                "X": -56.313847,
+                "Y": -7.652878,
+                "Z": 223.16699
+              },
+              {
+                "X": 56.512085,
+                "Y": -7.6528397,
+                "Z": 223.16702
+              },
+              {
+                "X": 56.512074,
+                "Y": -7.6528625,
+                "Z": 289.66968
+              },
+              {
+                "X": -42.112755,
+                "Y": 88.800606,
+                "Z": 278.07965
+              },
+              {
+                "X": -42.11274,
+                "Y": 88.8006,
+                "Z": 223.16699
+              },
+              {
+                "X": 42.310955,
+                "Y": 88.80063,
+                "Z": 223.16702
+              },
+              {
+                "X": 42.310947,
+                "Y": 88.800606,
+                "Z": 278.07965
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -56.313854,
+                "Y": -40.833023,
+                "Z": 223.16699
+              },
+              "Max": {
+                "X": 56.512085,
+                "Y": 88.80063,
+                "Z": 289.66968
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -29.315857,
+                "Z": -220.10944
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "turret_pivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "ED48D6DA411FF80966EC14B599E47FB1",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1459,
+        "SizeOnDisk": 1459,
+        "OffsetInFile": "0xF6BB"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 37.374073,
+                "Y": 97.08876,
+                "Z": 274.05048
+              },
+              {
+                "X": 37.37408,
+                "Y": 97.08879,
+                "Z": 223.16702
+              },
+              {
+                "X": -37.175884,
+                "Y": 97.08876,
+                "Z": 223.16699
+              },
+              {
+                "X": -37.1759,
+                "Y": 97.08876,
+                "Z": 274.05048
+              },
+              {
+                "X": -42.112762,
+                "Y": 88.8006,
+                "Z": 278.07965
+              },
+              {
+                "X": -42.112747,
+                "Y": 88.80059,
+                "Z": 223.16699
+              },
+              {
+                "X": 42.310947,
+                "Y": 88.80062,
+                "Z": 223.16702
+              },
+              {
+                "X": 42.31094,
+                "Y": 88.8006,
+                "Z": 278.07965
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -42.112762,
+                "Y": 88.80059,
+                "Z": 223.16699
+              },
+              "Max": {
+                "X": 42.310947,
+                "Y": 97.08879,
+                "Z": 278.07965
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -95.24954,
+                "Z": -276.50226
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 42.31096,
+                "Y": 82.654175,
+                "Z": 262.99237
+              },
+              {
+                "X": 42.310925,
+                "Y": 134.29657,
+                "Z": 262.99237
+              },
+              {
+                "X": 42.31093,
+                "Y": 134.2966,
+                "Z": 236.0188
+              },
+              {
+                "X": 42.310947,
+                "Y": 82.65421,
+                "Z": 236.01881
+              },
+              {
+                "X": -42.112747,
+                "Y": 82.65415,
+                "Z": 236.0188
+              },
+              {
+                "X": -42.112766,
+                "Y": 134.29657,
+                "Z": 236.0188
+              },
+              {
+                "X": -42.112778,
+                "Y": 134.29657,
+                "Z": 262.9924
+              },
+              {
+                "X": -42.112743,
+                "Y": 82.65415,
+                "Z": 262.9924
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -42.112778,
+                "Y": 82.65415,
+                "Z": 236.0188
+              },
+              "Max": {
+                "X": 42.31096,
+                "Y": 134.2966,
+                "Z": 262.9924
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -95.24954,
+                "Z": -276.50226
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "StrongArmor_turret",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "DDFFBE464B10EE420CF23AB329BE331C",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1805,
+        "SizeOnDisk": 1805,
+        "OffsetInFile": "0x10233"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 43.816948,
+                "Y": 129.57843,
+                "Z": 220.38693
+              },
+              {
+                "X": 43.816917,
+                "Y": 151.15219,
+                "Z": 220.38693
+              },
+              {
+                "X": 43.81692,
+                "Y": 151.15222,
+                "Z": 193.41336
+              },
+              {
+                "X": 43.816944,
+                "Y": 129.57846,
+                "Z": 193.41338
+              },
+              {
+                "X": -43.811863,
+                "Y": 129.5784,
+                "Z": 193.41336
+              },
+              {
+                "X": -43.811886,
+                "Y": 151.1522,
+                "Z": 193.41336
+              },
+              {
+                "X": -43.811897,
+                "Y": 151.1522,
+                "Z": 220.38696
+              },
+              {
+                "X": -43.811867,
+                "Y": 129.5784,
+                "Z": 220.38696
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -43.811897,
+                "Y": 129.5784,
+                "Z": 193.41336
+              },
+              "Max": {
+                "X": 43.816948,
+                "Y": 151.15222,
+                "Z": 220.38696
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -298.05298,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.3500671,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 46.025005,
+                "Y": 244.54596,
+                "Z": 95.50527
+              },
+              {
+                "X": -45.826847,
+                "Y": 244.54593,
+                "Z": 95.505226
+              },
+              {
+                "X": 0.09907913,
+                "Y": 244.54596,
+                "Z": 95.50526
+              },
+              {
+                "X": 0.0990715,
+                "Y": 244.54593,
+                "Z": 178.06544
+              },
+              {
+                "X": 46.025017,
+                "Y": 244.54593,
+                "Z": 171.4391
+              },
+              {
+                "X": -45.82686,
+                "Y": 244.54593,
+                "Z": 171.43907
+              },
+              {
+                "X": -46.258926,
+                "Y": 236.94263,
+                "Z": 172.07478
+              },
+              {
+                "X": -46.258926,
+                "Y": 236.94263,
+                "Z": 93.765205
+              },
+              {
+                "X": 0.09907532,
+                "Y": 236.94264,
+                "Z": 93.76523
+              },
+              {
+                "X": 46.457096,
+                "Y": 236.94264,
+                "Z": 93.76524
+              },
+              {
+                "X": 46.457077,
+                "Y": 236.94263,
+                "Z": 172.07483
+              },
+              {
+                "X": 0.09907532,
+                "Y": 236.94263,
+                "Z": 177.79872
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -46.258926,
+                "Y": 236.94263,
+                "Z": 93.765205
+              },
+              "Max": {
+                "X": 46.457096,
+                "Y": 244.54596,
+                "Z": 178.06544
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -244.72693,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 69.97394,
+                "Y": 118.739204,
+                "Z": 220.38693
+              },
+              {
+                "X": 64.10622,
+                "Y": 123.7001,
+                "Z": 220.38693
+              },
+              {
+                "X": 64.10622,
+                "Y": 123.70012,
+                "Z": 163.12347
+              },
+              {
+                "X": 69.97394,
+                "Y": 118.73923,
+                "Z": 163.12349
+              },
+              {
+                "X": -69.958046,
+                "Y": 118.7392,
+                "Z": 163.12344
+              },
+              {
+                "X": -64.11474,
+                "Y": 123.70012,
+                "Z": 163.12346
+              },
+              {
+                "X": -64.11475,
+                "Y": 123.70012,
+                "Z": 220.38696
+              },
+              {
+                "X": -69.958046,
+                "Y": 118.7392,
+                "Z": 220.38698
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -69.958046,
+                "Y": 118.7392,
+                "Z": 163.12344
+              },
+              "Max": {
+                "X": 69.97394,
+                "Y": 123.70012,
+                "Z": 220.38698
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -244.72693,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 94.166565,
+                "Y": 205.2148,
+                "Z": 89.395645
+              },
+              {
+                "X": 94.166534,
+                "Y": 210.17569,
+                "Z": 89.395645
+              },
+              {
+                "X": 94.16654,
+                "Y": 222.26141,
+                "Z": 58.16017
+              },
+              {
+                "X": 94.166565,
+                "Y": 217.3005,
+                "Z": 58.160187
+              },
+              {
+                "X": -93.96835,
+                "Y": 217.30048,
+                "Z": 58.16014
+              },
+              {
+                "X": -93.96836,
+                "Y": 222.26141,
+                "Z": 58.160156
+              },
+              {
+                "X": -93.96838,
+                "Y": 210.17572,
+                "Z": 89.395676
+              },
+              {
+                "X": -93.96835,
+                "Y": 205.21478,
+                "Z": 89.39569
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -93.96838,
+                "Y": 205.21478,
+                "Z": 58.16014
+              },
+              "Max": {
+                "X": 94.166565,
+                "Y": 222.26141,
+                "Z": 89.39569
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -244.72693,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 64.19533,
+                "Y": 176.73822,
+                "Z": 164.04001
+              },
+              {
+                "X": 64.1953,
+                "Y": 181.69913,
+                "Z": 164.04001
+              },
+              {
+                "X": 64.195305,
+                "Y": 181.69913,
+                "Z": 74.00833
+              },
+              {
+                "X": 64.19533,
+                "Y": 176.73825,
+                "Z": 74.00834
+              },
+              {
+                "X": -64.19528,
+                "Y": 176.73822,
+                "Z": 74.0083
+              },
+              {
+                "X": -64.19529,
+                "Y": 181.69913,
+                "Z": 74.00831
+              },
+              {
+                "X": -64.19531,
+                "Y": 181.69913,
+                "Z": 164.04004
+              },
+              {
+                "X": -64.19528,
+                "Y": 176.73822,
+                "Z": 164.04005
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -64.19531,
+                "Y": 176.73822,
+                "Z": 74.0083
+              },
+              "Max": {
+                "X": 64.19533,
+                "Y": 181.69913,
+                "Z": 164.04005
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -244.72693,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": 46.025013,
+                "Y": 244.54594,
+                "Z": 180.01167
+              },
+              {
+                "X": 52.854694,
+                "Y": 123.21652,
+                "Z": 200.60757
+              },
+              {
+                "X": 0.09907532,
+                "Y": 244.54594,
+                "Z": 187.61652
+              },
+              {
+                "X": 0.09909248,
+                "Y": 123.21652,
+                "Z": 208.21243
+              },
+              {
+                "X": 52.854694,
+                "Y": 123.21652,
+                "Z": 190.0059
+              },
+              {
+                "X": 0.09909248,
+                "Y": 123.21652,
+                "Z": 196.97464
+              },
+              {
+                "X": 0.099084854,
+                "Y": 244.54594,
+                "Z": 178.10152
+              },
+              {
+                "X": 46.025013,
+                "Y": 244.54594,
+                "Z": 171.13278
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": 0.09907532,
+                "Y": 123.21652,
+                "Z": 171.13278
+              },
+              "Max": {
+                "X": 52.854694,
+                "Y": 244.54594,
+                "Z": 208.21243
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -244.72693,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": -45.826855,
+                "Y": 244.54594,
+                "Z": 180.01163
+              },
+              {
+                "X": -52.656506,
+                "Y": 123.21652,
+                "Z": 200.60753
+              },
+              {
+                "X": -52.656506,
+                "Y": 123.21653,
+                "Z": 190.00586
+              },
+              {
+                "X": -45.826843,
+                "Y": 244.54594,
+                "Z": 171.13275
+              },
+              {
+                "X": 0.09907532,
+                "Y": 244.54594,
+                "Z": 187.61652
+              },
+              {
+                "X": 0.09909248,
+                "Y": 123.21652,
+                "Z": 208.21243
+              },
+              {
+                "X": 0.09909248,
+                "Y": 123.21652,
+                "Z": 196.97464
+              },
+              {
+                "X": 0.099084854,
+                "Y": 244.54594,
+                "Z": 178.10152
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -52.656506,
+                "Y": 123.21652,
+                "Z": 171.13275
+              },
+              "Max": {
+                "X": 0.09909248,
+                "Y": 244.54594,
+                "Z": 208.21243
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": -244.72693,
+                "Z": -186.9591
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "StrongArmor_body",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "BA9470914760004799AFBA83DFF8230E",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 6667,
+        "SizeOnDisk": 6667,
+        "OffsetInFile": "0x11AD9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_7",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": -31.735357,
+                "Y": -145.23306,
+                "Z": 117.11896
+              },
+              {
+                "X": 31.735352,
+                "Y": -145.23308,
+                "Z": 117.11896
+              },
+              {
+                "X": -31.735357,
+                "Y": -238.00252,
+                "Z": 117.11896
+              },
+              {
+                "X": 31.735352,
+                "Y": -238.00253,
+                "Z": 117.118965
+              },
+              {
+                "X": -31.73537,
+                "Y": -145.23306,
+                "Z": 221.08707
+              },
+              {
+                "X": 31.735338,
+                "Y": -145.23308,
+                "Z": 221.08708
+              },
+              {
+                "X": -31.73537,
+                "Y": -238.00252,
+                "Z": 221.08707
+              },
+              {
+                "X": 31.735338,
+                "Y": -238.00253,
+                "Z": 221.08708
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -31.73537,
+                "Y": -238.00253,
+                "Z": 117.11896
+              },
+              "Max": {
+                "X": 31.735352,
+                "Y": -145.23306,
+                "Z": 221.08708
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 227.43488,
+                "Z": -203.29349
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          },
+          {
+            "VertexData": [
+              {
+                "X": -22.503475,
+                "Y": -209.71988,
+                "Z": 156.99486
+              },
+              {
+                "X": -22.503475,
+                "Y": -254.55916,
+                "Z": 156.99486
+              },
+              {
+                "X": 22.419628,
+                "Y": -254.55916,
+                "Z": 156.99486
+              },
+              {
+                "X": 22.419628,
+                "Y": -209.7199,
+                "Z": 156.99486
+              },
+              {
+                "X": -22.503485,
+                "Y": -209.71988,
+                "Z": 246.46179
+              },
+              {
+                "X": 22.419619,
+                "Y": -209.7199,
+                "Z": 246.46179
+              },
+              {
+                "X": 22.419617,
+                "Y": -254.55916,
+                "Z": 246.46179
+              },
+              {
+                "X": -22.503487,
+                "Y": -254.55916,
+                "Z": 246.46179
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": -22.503487,
+                "Y": -254.55916,
+                "Z": 156.99486
+              },
+              "Max": {
+                "X": 22.419628,
+                "Y": -209.71988,
+                "Z": 246.46179
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": 0.0,
+                "Y": 227.43488,
+                "Z": -203.29349
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "WeakArmor_body",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "3581C9894C015DFB5F0A958A05F2AD9C",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1805,
+        "SizeOnDisk": 1805,
+        "OffsetInFile": "0x13AA9"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_8",
+    "Outer": "SK_RelicArmouredCar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "ConvexElems": [
+          {
+            "VertexData": [
+              {
+                "X": 144.52072,
+                "Y": 239.91864,
+                "Z": 52.271317
+              },
+              {
+                "X": 144.52072,
+                "Y": 212.66766,
+                "Z": 38.37915
+              },
+              {
+                "X": 93.35171,
+                "Y": 212.66766,
+                "Z": 38.37915
+              },
+              {
+                "X": 93.3517,
+                "Y": 239.91864,
+                "Z": 52.27131
+              },
+              {
+                "X": 144.52069,
+                "Y": 240.24962,
+                "Z": 138.46043
+              },
+              {
+                "X": 93.351685,
+                "Y": 240.24962,
+                "Z": 138.46042
+              },
+              {
+                "X": 93.35169,
+                "Y": 214.56555,
+                "Z": 145.57904
+              },
+              {
+                "X": 144.52069,
+                "Y": 214.56555,
+                "Z": 145.57906
+              },
+              {
+                "X": 144.52069,
+                "Y": 261.54135,
+                "Z": 84.99468
+              },
+              {
+                "X": 93.35171,
+                "Y": 261.54135,
+                "Z": 84.99468
+              },
+              {
+                "X": 93.351685,
+                "Y": 260.26477,
+                "Z": 113.44144
+              },
+              {
+                "X": 144.52069,
+                "Y": 260.26477,
+                "Z": 113.44144
+              },
+              {
+                "X": 93.351715,
+                "Y": -207.36214,
+                "Z": 34.336044
+              },
+              {
+                "X": 144.52072,
+                "Y": -207.36214,
+                "Z": 34.336044
+              },
+              {
+                "X": 144.52072,
+                "Y": -207.36214,
+                "Z": 93.72386
+              },
+              {
+                "X": 93.35171,
+                "Y": -207.36214,
+                "Z": 93.72386
+              },
+              {
+                "X": 144.52069,
+                "Y": -69.0051,
+                "Z": 1.5258789E-05
+              },
+              {
+                "X": 144.52069,
+                "Y": -69.00508,
+                "Z": 118.16366
+              },
+              {
+                "X": 93.351715,
+                "Y": -69.0051,
+                "Z": 4.2253434E-15
+              },
+              {
+                "X": 93.35169,
+                "Y": -69.00508,
+                "Z": 118.16366
+              },
+              {
+                "X": 144.52072,
+                "Y": 128.01643,
+                "Z": 1.5258789E-05
+              },
+              {
+                "X": 144.52072,
+                "Y": 128.01645,
+                "Z": 138.94626
+              },
+              {
+                "X": 93.351715,
+                "Y": 128.01643,
+                "Z": -7.838746E-15
+              },
+              {
+                "X": 93.35169,
+                "Y": 128.01645,
+                "Z": 138.94624
+              }
+            ],
+            "ElemBox": {
+              "Min": {
+                "X": 93.351685,
+                "Y": -207.36214,
+                "Z": -7.838746E-15
+              },
+              "Max": {
+                "X": 144.52072,
+                "Y": 261.54135,
+                "Z": 145.57906
+              },
+              "IsValid": 1
+            },
+            "Transform": {
+              "Rotation": {
+                "X": 0.0,
+                "Y": 0.0,
+                "Z": 0.0,
+                "W": 1.0,
+                "IsNormalized": true,
+                "Size": 1.0,
+                "SizeSquared": 1.0
+              },
+              "Translation": {
+                "X": -90.38672,
+                "Y": 0.0,
+                "Z": -33.476562
+              },
+              "Scale3D": {
+                "X": 1.0,
+                "Y": 1.0,
+                "Z": 1.0
+              }
+            },
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "treads_pivot_L",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "1C37E0EC4C2E27C11382B991F36F439C",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1907,
+        "SizeOnDisk": 1907,
+        "OffsetInFile": "0x145E7"
+      }
+    }
+  }
+]

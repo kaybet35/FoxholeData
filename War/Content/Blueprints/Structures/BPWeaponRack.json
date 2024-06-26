@@ -1,0 +1,190 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPWeaponRack_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPWeaponRack_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'StorageBox'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPWeaponRack_C'Default__BPWeaponRack_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.1"
+    }
+  },
+  {
+    "Type": "BPWeaponRack_C",
+    "Name": "Default__BPWeaponRack_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPWeaponRack.BPWeaponRack_C'",
+    "Properties": {
+      "MeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPWeaponRack_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.8"
+      },
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "42490F284579F2525B717597767F805B",
+        "SourceString": "A rack used to mount multiple firearms.",
+        "LocalizedString": "A rack used to mount multiple firearms."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'StorageItemIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/StorageItemIcon.0"
+      },
+      "ValidBuildTools": 1,
+      "CodeName": "WeaponRack",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "B811505D48BE6582F67DB1AFB593784C",
+        "SourceString": "Weapon Rack",
+        "LocalizedString": "Weapon Rack"
+      },
+      "ProfileType": "EStructureProfileType::GenericWorldStructure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPWeaponRack_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.2"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPWeaponRack_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.4"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPWeaponRack_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.3"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "MaxHealth": 400,
+      "Health": 400,
+      "ScreenToUse": "ESimScreen::StorageBox",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPWeaponRack_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.9"
+      },
+      "MinNetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPWeaponRack_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.2"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPWeaponRack_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPWeaponRack_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPWeaponRack_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPWeaponRack_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 267.5,
+        "Y": 160.0,
+        "Z": 100.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPWeaponRack_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPWeaponRack_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPWeaponRack_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.5"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPWeaponRack_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPWeaponRack_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPWeaponRack_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'GunRackRelic03'",
+        "ObjectPath": "War/Content/Meshes/Environment/Relic/GunRackRelic03.2"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPWeaponRack_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeaponRack.2"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPWeaponRack_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

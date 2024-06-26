@@ -1,0 +1,1201 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "PillarFront",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBarbedWireSpline_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.21"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BarbedWire'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPBarbedWireSpline_C:PillarFront'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBarbedWireSpline_C:PillarBack'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBarbedWireSpline_C:FrontSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBarbedWireSpline_C:WireTarget'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBarbedWireSpline_C:Wire'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBarbedWireSpline_C:BackSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.7"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBarbedWireSpline_C'Default__BPBarbedWireSpline_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.2"
+    }
+  },
+  {
+    "Type": "BPBarbedWireSpline_C",
+    "Name": "Default__BPBarbedWireSpline_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPBarbedWireSpline.BPBarbedWireSpline_C'",
+    "Properties": {
+      "NoBuildPhysicalMaterials": [
+        {
+          "ObjectName": "PhysicalMaterial'WetSandPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/WetSandPhys.0"
+        }
+      ],
+      "bBuildOnBridges": true,
+      "bIsBuiltOnFoundation": true,
+      "bIsConnector": true,
+      "bIsManualConnector": true,
+      "ConnectorMinLength": 300.0,
+      "ConnectorMaxLength": 1000.0,
+      "ConnectorMinWidth": 0.0,
+      "BuildGhostClass": null,
+      "Description": {
+        "Namespace": "",
+        "Key": "292BF39646EB298A64B12AA92E865556",
+        "SourceString": "Used to slow down enemy infantry movement. Can be dismantled with a Wrench.",
+        "LocalizedString": "Used to slow down enemy infantry movement. Can be dismantled with a Wrench."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'BarbedWireCornerStructureIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/BarbedWireCornerStructureIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Defense",
+      "BuildOrder": 1,
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "ValidBuildTools": 4,
+      "CodeName": "BarbedWireSpline",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "AFE26FC442A8A44A6E07078C446F6052",
+        "SourceString": "Barbed Wire",
+        "LocalizedString": "Barbed Wire"
+      },
+      "ArmourType": "EArmourType::Tier2BStructure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPBarbedWireSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPBarbedWireSpline_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "MaxHealth": 600,
+      "Health": 600,
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPBarbedWireSpline_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.25"
+      },
+      "NetDormancy": "DORM_Awake",
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPBarbedWireSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPBarbedWireSpline_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPBarbedWireSpline_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.3"
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "BackSocket_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 4608,
+          "SocketTypeCategory": 4096,
+          "Tag": "SideBack",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 1200.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsHigherZ",
+          "ConnectorAttachmentTag": "ConnectorBack"
+        },
+        {
+          "SocketTypeMask": 1,
+          "SocketTypeCategory": 4096,
+          "Tag": "None",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 1200.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "ConnectorBack"
+        }
+      ],
+      "bAllowMultipleOverlaps": true,
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.00023,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "ConnectorRefCentreBack"
+      ]
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "FrontSocket_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 4608,
+          "SocketTypeCategory": 4096,
+          "Tag": "SideFront",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 1200.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsHigherZ",
+          "ConnectorAttachmentTag": "ConnectorFront"
+        },
+        {
+          "SocketTypeMask": 1,
+          "SocketTypeCategory": 4096,
+          "Tag": "None",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 1200.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "ConnectorBack"
+        }
+      ],
+      "bAllowMultipleOverlaps": true,
+      "RelativeLocation": {
+        "X": 359.99976,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -2.6055099E-11,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "ConnectorRefCentreFront",
+        "ManualConnectorSocket"
+      ]
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BackSocket",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FrontSocket",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PillarBack",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Wire",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SplineConnectorComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WireTarget",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "WireTarget_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 360.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "ConnectorFront",
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBarbedWireSpline_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.12"
+      },
+      "VariableGuid": "E6F52BF5-4790F189-DB8FAAA8-80F617D3",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPBarbedWireSpline_C:FrontSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2A776C0C-44ECB5AA-E5E2A9AB-06C8B171",
+      "InternalVariableName": "FrontSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBarbedWireSpline_C:WireTarget_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.13"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "26CDB4C9-459947DA-BD163E89-F8EBD35F",
+      "InternalVariableName": "WireTarget"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPBarbedWireSpline_C:BackSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.5"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "94E3C36A-408583A4-5D27B28D-E365AD83",
+      "InternalVariableName": "BackSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SplineConnectorComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SplineConnectorComponent'BPBarbedWireSpline_C:Wire_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.22"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F0AFD0A8-4E511CAA-15F69393-BFFEA3EE",
+      "InternalVariableName": "Wire"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPBarbedWireSpline_C:PillarBack_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.23"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5EE7ACE8-444DB2C4-C27C1383-59B50EFE",
+      "InternalVariableName": "PillarBack"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPBarbedWireSpline_C:PillarFront_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.24"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7DB92DDB-4EF7E99D-95E84CBD-B9C75113",
+      "InternalVariableName": "PillarFront"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.20"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.20"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBarbedWireSpline_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPBarbedWireSpline.14"
+      }
+    }
+  },
+  {
+    "Type": "SplineConnectorComponent",
+    "Name": "Wire_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'SplineConnectorComponent'",
+    "Properties": {
+      "TargetComponentName": "WireTarget",
+      "MeshConfigs": [
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'BarbedWireSpline_100'",
+            "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWireSpline_100.2"
+          },
+          "Meshes": [
+            {
+              "ObjectName": "StaticMesh'BarbedWireSpline_100'",
+              "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWireSpline_100.2"
+            }
+          ],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": {
+            "ObjectName": "MaterialInstanceConstant'BarbedWireGhost'",
+            "ObjectPath": "War/Content/Materials/Structures/BarbedWireGhost.0"
+          },
+          "BuildSiteMaterialOverride": {
+            "ObjectName": "MaterialInstanceConstant'BarbedWireBuild'",
+            "ObjectPath": "War/Content/Materials/Structures/BarbedWireBuild.0"
+          },
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 70.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 20.0,
+          "EndOffset": 50.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 30.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.05,
+              "Y": 1.05,
+              "Z": 1.05
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 10.0,
+            "Yaw": 10.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 5.0,
+            "Z": 5.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'BarbedWireSpline_100'",
+            "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWireSpline_100.2"
+          },
+          "Meshes": [
+            {
+              "ObjectName": "StaticMesh'BarbedWireSpline_100'",
+              "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWireSpline_100.2"
+            }
+          ],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": {
+            "ObjectName": "MaterialInstanceConstant'BarbedWireGhost'",
+            "ObjectPath": "War/Content/Materials/Structures/BarbedWireGhost.0"
+          },
+          "BuildSiteMaterialOverride": {
+            "ObjectName": "MaterialInstanceConstant'BarbedWireBuild'",
+            "ObjectPath": "War/Content/Materials/Structures/BarbedWireBuild.0"
+          },
+          "Mode": "ESplineConnectorMeshMode::Interval",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 70.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 20.0,
+          "EndOffset": 50.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": -30.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.05,
+              "Y": 1.05,
+              "Z": 1.05
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 10.0,
+            "Yaw": 10.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 5.0,
+            "Z": 5.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'BarbedWirePillar'",
+            "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWirePillar.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Points",
+          "ComponentTags": [],
+          "CollisionProfileName": "NoCollision",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 0.0,
+          "BoxHeight": 0.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [
+            {
+              "PointIndex": 2,
+              "MinPrevDistance": 75.0,
+              "MinNextDistance": 100.0
+            },
+            {
+              "PointIndex": 3,
+              "MinPrevDistance": 0.0,
+              "MinNextDistance": 75.0
+            }
+          ],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 5.0,
+            "Yaw": 5.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 5.0,
+            "Z": 5.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": {
+            "ObjectName": "StaticMesh'SplineCollision'",
+            "ObjectPath": "War/Content/Meshes/Environment/Splines/SplineCollision.2"
+          },
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Spline",
+          "ComponentTags": [],
+          "CollisionProfileName": "BarbedWire",
+          "bCollisionOnly": true,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 150.0,
+          "BoxHeight": 200.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::X",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": -100.0
+            },
+            "Scale3D": {
+              "X": 1.5,
+              "Y": 2.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        },
+        {
+          "Mesh": null,
+          "Meshes": [],
+          "Decals": [],
+          "bReceivesDecals": false,
+          "BuildGhostMaterialOverride": null,
+          "BuildSiteMaterialOverride": null,
+          "Mode": "ESplineConnectorMeshMode::Boxes",
+          "ComponentTags": [
+            "PreserveProfileInBuildSite"
+          ],
+          "CollisionProfileName": "BlockOnlyWork",
+          "bCollisionOnly": false,
+          "PhysMaterialOverride": null,
+          "CollisionIgnoreFlags": 0,
+          "CanCharacterStepUpOn": "ECB_Yes",
+          "StartIndex": 0,
+          "EndIndex": 4,
+          "BoxWidth": 256.0,
+          "BoxHeight": 200.0,
+          "BoxLengthPadding": 0.0,
+          "SpawnPoints": [],
+          "SplineMeshAxis": "ESplineMeshAxis::Z",
+          "SplineStartOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineEndOffset": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "SplineBoundaryMin": 0.0,
+          "SplineBoundaryMax": 0.0,
+          "MinSplineLength": 5.0,
+          "bExtendSplineToMinLength": false,
+          "MinSplineLengthForCollision": 0.0,
+          "SplineMaterialScaling": {
+            "X": 0.0,
+            "Y": 0.0
+          },
+          "Interval": 100.0,
+          "IntervalDeltaPerDegree": 0.0,
+          "bEvenlySpace": false,
+          "bLinearPlacement": false,
+          "bFillRemainder": false,
+          "bFixedPitch": false,
+          "FixedPitch": 0.0,
+          "StartOffset": 0.0,
+          "EndOffset": 0.0,
+          "bApplySlopeOffset": false,
+          "RelativeTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": -0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 100.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "RandomRotationVariance": {
+            "Pitch": 0.0,
+            "Yaw": 0.0,
+            "Roll": 0.0
+          },
+          "RandomPositionVariance": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "bDisplayOnInvalidPath": false,
+          "CopyPlacementRangeFrom": -1,
+          "bIsEndCap": false,
+          "bEndCapReactsToSockets": false,
+          "bReactToSurface": false,
+          "SurfaceSettings": {
+            "bEnableSurfaceDeltaLowerBound": false,
+            "SurfaceDeltaLowerBound": 0.0,
+            "bEnableSurfaceDeltaUpperBound": false,
+            "SurfaceDeltaUpperBound": 0.0,
+            "bRequireBothSidesWithinBounds": false,
+            "PhysMatBlockList": []
+          }
+        }
+      ],
+      "MaxBuffer": 400.0,
+      "MaxRadius": 400.0,
+      "BuildFootprintCapsuleRadius": 90.0,
+      "BuildFootprintCapsuleHalfHeight": 100.0,
+      "ComponentTags": [
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PillarBack_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BarbedWirePillar'",
+        "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWirePillar.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "SideBack",
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "PillarFront_GEN_VARIABLE",
+    "Outer": "BPBarbedWireSpline_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BarbedWirePillar'",
+        "ObjectPath": "War/Content/Meshes/Environment/Splines/BarbedWirePillar.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 360.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "ComponentTags": [
+        "SideFront",
+        "IncludeInBuildGhost",
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPBarbedWireSpline_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

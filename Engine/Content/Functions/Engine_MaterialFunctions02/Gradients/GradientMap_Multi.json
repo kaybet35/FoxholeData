@@ -1,0 +1,109 @@
+[
+  {
+    "Type": "MaterialExpressionTextureObject",
+    "Name": "MaterialExpressionTextureObject_2",
+    "Outer": "GradientMap_Multi",
+    "Class": "UScriptClass'MaterialExpressionTextureObject'",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D'Gradient'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Gradient.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction'GradientMap_Multi'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Gradients/GradientMap_Multi.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_8",
+    "Outer": "GradientMap_Multi",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Coordinates": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAppendVector_3"
+      },
+      "TextureObject": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionFunctionInput_9"
+      },
+      "SamplerSource": "SSM_Wrap_WorldGroupSettings",
+      "SamplerType": "SAMPLERTYPE_Masks",
+      "Function": {
+        "ObjectName": "MaterialFunction'GradientMap_Multi'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Gradients/GradientMap_Multi.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_9",
+    "Outer": "GradientMap_Multi",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D'Greyscale'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/ExampleContent/Greyscale.0"
+      },
+      "SamplerType": "SAMPLERTYPE_Masks",
+      "Function": {
+        "ObjectName": "MaterialFunction'GradientMap_Multi'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Gradients/GradientMap_Multi.3"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "GradientMap_Multi",
+    "Class": "UScriptClass'MaterialFunction'",
+    "Properties": {
+      "Description": "Maps a 0-1 value to a color gradient slice. See the default textures for example content.",
+      "FunctionExpressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'GradientMap_Multi:MaterialExpressionTextureSample_8'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Gradients/GradientMap_Multi.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureObject'GradientMap_Multi:MaterialExpressionTextureObject_2'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Gradients/GradientMap_Multi.0"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSample'GradientMap_Multi:MaterialExpressionTextureSample_9'",
+          "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Gradients/GradientMap_Multi.2"
+        },
+        null
+      ],
+      "bExposeToLibrary": true,
+      "StateId": "C7245B68-4C96E605-FFCF72BB-95AB5472"
+    }
+  }
+]

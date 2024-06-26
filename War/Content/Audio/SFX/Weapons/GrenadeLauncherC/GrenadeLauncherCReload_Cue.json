@@ -1,0 +1,69 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "GrenadeLauncherCReload_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'GrenadeLauncherCReload_Cue:SoundNodeModulator_10'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/GrenadeLauncherC/GrenadeLauncherCReload_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "LPFRadiusMin": 2000.0,
+        "LPFFrequencyAtMin": 2400.0,
+        "LPFFrequencyAtMax": 10000.0,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 100.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 11000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 2.716771,
+      "MaxDistance": 12500.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Rifles'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Rifles.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_10",
+    "Outer": "GrenadeLauncherCReload_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'GrenadeLauncherCReload_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/GrenadeLauncherC/GrenadeLauncherCReload_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "GrenadeLauncherCReload_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/GrenadeLauncherC/GrenadeLauncherCReload.GrenadeLauncherCReload",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'GrenadeLauncherCReload'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/GrenadeLauncherC/GrenadeLauncherCReload.0"
+    }
+  }
+]

@@ -1,0 +1,657 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'Fireflies:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/Fireflies.10"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'Fireflies:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.6"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'Fireflies:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.11"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere'Fireflies:ParticleModuleLocationPrimitiveSphere_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.8"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'Fireflies:ParticleModuleColor_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.4"
+        },
+        {
+          "ObjectName": "ParticleModuleOrbit'Fireflies:ParticleModuleOrbit_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.9"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'Fireflies:ParticleModuleColorScaleOverLife_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.5"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'Fireflies:ParticleModuleAccelerationDrag_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.3"
+        },
+        {
+          "ObjectName": "ParticleModuleLight'Fireflies:ParticleModuleLight_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.7"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'Fireflies:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/Fireflies.12"
+      },
+      "PeakActiveParticles": 27
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.017141,
+        "MaxValue": 5.0,
+        "MinValueVec": {
+          "X": 5.0,
+          "Y": 1.0,
+          "Z": 0.017141
+        },
+        "MaxValueVec": {
+          "X": 5.0,
+          "Y": 1.0,
+          "Z": 0.017141
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0,
+            1.0,
+            0.017141
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 62.999996,
+          "Values": [
+            0.0,
+            0.06777085,
+            0.23853585,
+            0.46431285,
+            0.69711983,
+            0.88897455,
+            0.99205697,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.9929188,
+            0.96530026,
+            0.9188638,
+            0.8566804,
+            0.78182036,
+            0.6973555,
+            0.6063559,
+            0.511893,
+            0.4170369,
+            0.32485932,
+            0.23843038,
+            0.16082153,
+            0.09510257,
+            0.044345874,
+            0.011621448,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 64,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 1.5,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.5,
+            5.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLight",
+    "Name": "ParticleModuleLight_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleLight'",
+    "Properties": {
+      "bUseInverseSquaredFalloff": false,
+      "SpawnFraction": 0.5,
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "BrightnessOverLife": {
+        "MaxValue": 1.6423447,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 31.0,
+          "TimeBias": -2.7939677E-09,
+          "Values": [
+            1.185604,
+            1.1579931,
+            1.0890009,
+            0.9988685,
+            0.9078369,
+            0.83614707,
+            0.8040458,
+            0.91607624,
+            1.1989504,
+            1.4943389,
+            1.6407455,
+            1.5010213,
+            1.1240534,
+            0.69742376,
+            0.40893742,
+            0.37602097,
+            0.40435424,
+            0.45388192,
+            0.5192204,
+            0.5949856,
+            0.6757934,
+            0.7562495,
+            0.8309186,
+            0.8944184,
+            0.94136477,
+            0.96637434,
+            0.93991303,
+            0.78130466,
+            0.5407573,
+            0.28552213,
+            0.082851656,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "RadiusScale": {
+        "MinValue": 30.0,
+        "MaxValue": 30.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            30.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LightExponent": {
+        "MinValue": 16.0,
+        "MaxValue": 16.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            16.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleLocationPrimitiveSphere'",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 50.0,
+        "MaxValue": 50.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrbit",
+    "Name": "ParticleModuleOrbit_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleOrbit'",
+    "Properties": {
+      "OffsetAmount": {
+        "MaxValue": 50.0,
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 50.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            50.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "RotationAmount": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "RotationRateAmount": {
+        "MaxValue": 1.0,
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Sparks02'",
+        "ObjectPath": "War/Content/FX/Materials/Sparks02.0"
+      },
+      "ScreenAlignment": "PSA_Velocity",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Fireflies:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/Fireflies.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MaxValue": 10.0,
+        "MinValueVec": {
+          "X": 5.0,
+          "Y": 10.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 10.0,
+          "Y": 5.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0,
+            10.0,
+            0.0,
+            10.0,
+            5.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Fireflies:ParticleModuleSpawn_0.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/Fireflies.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Fireflies",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'Fireflies:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Fireflies",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'Fireflies:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/Fireflies.13"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

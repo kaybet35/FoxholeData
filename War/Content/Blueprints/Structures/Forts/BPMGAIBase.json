@@ -1,0 +1,701 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "OccupyComponent",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StructureSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPMGAIBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPMGAIBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.23"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortTurretMG'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPMGAIBase_C:OccupyComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMGAIBase_C:OccupiableTriggerVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMGAIBase_C:Floor'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMGAIBase_C:FortCommonDirt'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMGAIBase_C:FortCommonMods'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMGAIBase_C:FortCommon'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.10"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPMGAIBase_C'Default__BPMGAIBase_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.2"
+    }
+  },
+  {
+    "Type": "BPMGAIBase_C",
+    "Name": "Default__BPMGAIBase_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPMGAIBase.BPMGAIBase_C'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPMGAIBase_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.24"
+      },
+      "AITurretComponent": {
+        "ObjectName": "AITurretComponent'Default__BPMGAIBase_C:AITurretComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.3"
+      },
+      "AITurretsController": {
+        "ObjectName": "AITurretsControllerComponent'Default__BPMGAIBase_C:AITurretsControllerComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.4"
+      },
+      "MuzzleFlashLocationComponent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:MuzzleFxLocationComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.5"
+      },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 40.0,
+      "FlagMesh": {
+        "ObjectName": "TeamFlagMeshComponent'Default__BPMGAIBase_C:FlagMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.28"
+      },
+      "ObstructionCheckOverrideExtents": {
+        "X": 300.0,
+        "Y": 300.0,
+        "Z": 300.0
+      },
+      "BuildGhostClass": null,
+      "BuildSiteClass": {
+        "ObjectName": "Class'FortBuildSite'",
+        "ObjectPath": "/Script/War"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "2AEC4FD94C92D931CA73709E1A0E95FE",
+        "SourceString": "An entrenched machine gun manned by stationed troops.",
+        "LocalizedString": "An entrenched machine gun manned by stationed troops."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'FortT1MGunAIIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/FortT1MGunAIIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Bunker",
+      "ValidBuildTools": 17,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPMGAIBase_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.8"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPMGAIBase_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.7"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'BunkerExplosion_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/BunkerExplosion_Cue.0"
+      },
+      "MaxHealth": 1700,
+      "Health": 1700,
+      "MapIntelligenceType": "EMapIntelligenceType::Defense",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPMGAIBase_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.26"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      }
+    }
+  },
+  {
+    "Type": "AITurretComponent",
+    "Name": "AITurretComponent",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'AITurretComponent'",
+    "Properties": {
+      "NumMuzzles": 2,
+      "MaximumRange": 2900.0,
+      "ImpactEffect": {
+        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      },
+      "WeaponFireFXClass": {
+        "ObjectName": "BlueprintGeneratedClass'TracerFireMG_C'",
+        "ObjectPath": "War/Content/Blueprints/TracerFireMG.1"
+      },
+      "ShotSoundCue": {
+        "ObjectName": "SoundCue'MGShot_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/HeavyMG/MGShot_Cue.0"
+      },
+      "MuzzleFlashPS": {
+        "ObjectName": "ParticleSystem'MachinegunMF'",
+        "ObjectPath": "War/Content/FX/MachinegunMF.41"
+      },
+      "WeaponDamage": 20.0,
+      "WeaponDamageAgainstVehicles": 50.0,
+      "BestJitterConeHalfAngle": 3.0,
+      "WorstJitterConeHalfAngle": 30.0,
+      "FiringPeriod": 0.1,
+      "TimeToFullFireRateAndAccuracy": 2.5,
+      "FiringConeAngle": 40.0,
+      "EnemyPursueDuration": 6.5,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      }
+    }
+  },
+  {
+    "Type": "AITurretsControllerComponent",
+    "Name": "AITurretsControllerComponent",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'AITurretsControllerComponent'"
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "MuzzleFxLocationComponent",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      },
+      "RelativeLocation": {
+        "X": 268.0,
+        "Y": 0.0,
+        "Z": 261.0
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 250.0,
+        "Y": 250.0,
+        "Z": 261.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.5
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 400.0,
+        "Y": 400.0,
+        "Z": 160.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      },
+      "RelativeLocation": {
+        "X": -6.1035156E-05,
+        "Y": 1.4084167,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Floor",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommon",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonDirt",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonMods",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "OccupiableTriggerVolume",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatTriggerComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPMGAIBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.14"
+      },
+      "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPMGAIBase_C:FortCommon_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.29"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FD403E12-4BD4C9C0-1A3E84AC-4B0DC6B1",
+      "InternalVariableName": "FortCommon"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPMGAIBase_C:FortCommonMods_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.31"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "733E4EC6-48F9782F-A1973180-BA6C1D7E",
+      "InternalVariableName": "FortCommonMods"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPMGAIBase_C:FortCommonDirt_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.30"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A143F0DA-494F190F-B888DE90-E5A6599E",
+      "InternalVariableName": "FortCommonDirt"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPMGAIBase_C:Floor_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.25"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5609427F-465D3BAC-CE3C6BBC-F0E2ABE9",
+      "InternalVariableName": "Floor"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPMGAIBase_C:OccupiableTriggerVolume_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.22"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DB40F7AB-4785EF5B-65505FA7-417F56BE",
+      "InternalVariableName": "OccupiableTriggerVolume"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StructureSeatComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StructureSeatComponent'BPMGAIBase_C:OccupyComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.27"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6A21FC20-4E786244-C0F6E595-6BD11133",
+      "InternalVariableName": "OccupyComponent"
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "OccupiableTriggerVolume_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 170.0,
+        "Y": 170.0,
+        "Z": 128.0
+      }
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.21"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.21"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPMGAIBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.15"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_FortMGunAI_C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/ABP_FortMGunAI.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_FortT1MGunAI'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/SK_FortT1MGunAI.0"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -160.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "RoofVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Floor_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FortT1Floor01'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Floor01.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -160.0
+      },
+      "ComponentTags": [
+        "ExcludeFromBuildGhost"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "StructureSeatComponent",
+    "Name": "OccupyComponent_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'StructureSeatComponent'",
+    "Properties": {
+      "TriggerName": "OccupiableTriggerVolume",
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 130.0
+      }
+    }
+  },
+  {
+    "Type": "TeamFlagMeshComponent",
+    "Name": "FlagMesh",
+    "Outer": "Default__BPMGAIBase_C",
+    "Class": "UScriptClass'TeamFlagMeshComponent'",
+    "Properties": {
+      "Team0Mesh": {
+        "ObjectName": "StaticMesh'FlagShortA'",
+        "ObjectPath": "War/Content/Meshes/Structures/FlagShortA.2"
+      },
+      "Team1Mesh": {
+        "ObjectName": "StaticMesh'FlagShortB'",
+        "ObjectPath": "War/Content/Meshes/Structures/FlagShortB.2"
+      },
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FlagShortA'",
+        "ObjectPath": "War/Content/Meshes/Structures/FlagShortA.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPMGAIBase_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIBase.6"
+      },
+      "RelativeLocation": {
+        "X": -230.0,
+        "Y": 230.0,
+        "Z": 310.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommon_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommon_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommon.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonDirt_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirt_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirt.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonMods_GEN_VARIABLE",
+    "Outer": "BPMGAIBase_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonMods_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonMods.1"
+      }
+    }
+  }
+]

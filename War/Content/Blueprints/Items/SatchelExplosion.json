@@ -1,0 +1,263 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SatchelExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'SatchelExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'SatchelExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'SatchelExplosion_C:ExecuteUbergraph_SatchelExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'SatchelExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.0"
+      },
+      {
+        "ObjectName": "Function'SatchelExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.6"
+      },
+      {
+        "ObjectName": "Function'SatchelExplosion_C:ExecuteUbergraph_SatchelExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'SatchelExplosion_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.3"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_SatchelExplosion": {
+        "ObjectName": "Function'SatchelExplosion_C:ExecuteUbergraph_SatchelExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'SatchelExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SatchelExplosion_C'Default__SatchelExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.2"
+    }
+  },
+  {
+    "Type": "SatchelExplosion_C",
+    "Name": "Default__SatchelExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/SatchelExplosion.SatchelExplosion_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'SatchelChargeBlast'",
+            "ObjectPath": "War/Content/FX/SatchelChargeBlast.140"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "ExplosionLightFadeOut": 0.15,
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'SatchelCharge_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Explosions/SatchelCharge_Cue.0"
+      },
+      "bDoNotOrientToImpactNormal": true,
+      "DetonationDelay": 0.5,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__SatchelExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.7"
+      },
+      "bReplicates": true,
+      "RemoteRole": "ROLE_SimulatedProxy",
+      "InitialLifeSpan": 20.0,
+      "NetCullDistanceSquared": 144000000.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__SatchelExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.7"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_SatchelExplosion",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SatchelExplosion",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'SatchelExplosion_C:ExecuteUbergraph_SatchelExplosion.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__SatchelExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 2000.0,
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 117,
+        "G": 175,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAF75"
+      }
+    }
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Properties": {
+      "Radius": 500.0,
+      "ImpulseStrength": 100000.0,
+      "DestructibleDamage": 100.0,
+      "ObjectTypesToAffect": [
+        59
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'SatchelExplosion_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.8"
+      },
+      "ParentComponentOrVariableName": "ExplosionLight",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED95043C-4BF9474F-1DC08DA0-C2DD8674",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SatchelExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.9"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "SatchelExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'SatchelExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'SatchelExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'SatchelExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.11"
+      }
+    }
+  }
+]

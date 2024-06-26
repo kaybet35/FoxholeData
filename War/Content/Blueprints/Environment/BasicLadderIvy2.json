@@ -1,0 +1,562 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh4",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BasicLadderIvy2_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.18"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Ladder'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BasicLadderIvy2_C:StaticMesh4'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BasicLadderIvy2_C:StaticMesh3'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'BasicLadderIvy2_C:StaticMesh2'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BasicLadderIvy2_C:StaticMesh1'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.7"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BasicLadderIvy2_C'Default__BasicLadderIvy2_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.2"
+    }
+  },
+  {
+    "Type": "BasicLadderIvy2_C",
+    "Name": "Default__BasicLadderIvy2_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/BasicLadderIvy2.BasicLadderIvy2_C'",
+    "Properties": {
+      "LadderComponent": {
+        "ObjectName": "LadderComponent'Default__BasicLadderIvy2_C:Ladder'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.6"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BasicLadderIvy2_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.23"
+      },
+      "ClimbVolume": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:ClimbVolume'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.4"
+      },
+      "ClimbVolumeTop": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:ClimbVolumeTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.5"
+      },
+      "EnterPositionBottom": {
+        "ObjectName": "SceneComponent'Default__BasicLadderIvy2_C:EnterPositionBottom'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.11"
+      },
+      "EnterPositionTop": {
+        "ObjectName": "SceneComponent'Default__BasicLadderIvy2_C:EnterPositionTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.12"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxCollision",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 4.431171,
+        "Y": 37.0,
+        "Z": 244.33224
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolume",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 44.86595,
+        "Z": 35.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      },
+      "RelativeLocation": {
+        "X": -23.698383,
+        "Y": 6.0196613E-05,
+        "Z": -95.66946
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 5.3342004
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolumeTop",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      },
+      "RelativeLocation": {
+        "X": 33.850937,
+        "Y": 2.9679035E-05,
+        "Z": 274.77393
+      }
+    }
+  },
+  {
+    "Type": "LadderComponent",
+    "Name": "Ladder",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'LadderComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh1",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh2",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh3",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionBottom",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      },
+      "RelativeLocation": {
+        "X": -55.0,
+        "Y": 2.9679035E-05,
+        "Z": -314.8661
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionTop",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      },
+      "RelativeLocation": {
+        "X": 55.0,
+        "Y": -0.00012329602,
+        "Z": 298.58093
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BasicLadderIvy2_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.10"
+      },
+      "VariableGuid": "B2102D72-4C08FF25-154AC592-B5E0FCE2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BasicLadderIvy2_C:StaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.19"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6F8D9142-42810ABE-46AC8EBD-3E5F026F",
+      "InternalVariableName": "StaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BasicLadderIvy2_C:StaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.20"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "76A19775-467C19B1-F1AE0B97-A51DBCC7",
+      "InternalVariableName": "StaticMesh2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BasicLadderIvy2_C:StaticMesh3_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.21"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "1567A311-4502121F-0B5BC8A0-3151FCE6",
+      "InternalVariableName": "StaticMesh3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BasicLadderIvy2_C:StaticMesh4_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.22"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "6119E1C5-4C839B64-1706F5BB-CE3521C7",
+      "InternalVariableName": "StaticMesh4"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.17"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BasicLadderIvy2_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.13"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh1_GEN_VARIABLE",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy09'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy09.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bAffectDistanceFieldLighting": false,
+      "RelativeLocation": {
+        "X": 11.210621,
+        "Y": -48.82831,
+        "Z": 241.94559
+      },
+      "RelativeRotation": {
+        "Pitch": -0.10236404,
+        "Yaw": 179.41951,
+        "Roll": -9.999846
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.5,
+        "Z": 0.6738127
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh2_GEN_VARIABLE",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy06'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy06.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bAffectDistanceFieldLighting": false,
+      "RelativeLocation": {
+        "X": 5.0000076,
+        "Y": -9.820941,
+        "Z": -176.87773
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -3.415094E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh3_GEN_VARIABLE",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy05'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy05.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bAffectDistanceFieldLighting": false,
+      "RelativeLocation": {
+        "X": 5.0000076,
+        "Y": -9.820941,
+        "Z": -101.87775
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -3.415094E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh4_GEN_VARIABLE",
+    "Outer": "BasicLadderIvy2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy05'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy05.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bAffectDistanceFieldLighting": false,
+      "RelativeLocation": {
+        "X": 5.0000076,
+        "Y": -9.820941,
+        "Z": 118.12225
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -3.415094E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BasicLadderIvy2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy06'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy06.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderIvy2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderIvy2.3"
+      },
+      "RelativeLocation": {
+        "X": -35.000015,
+        "Y": -4.99826,
+        "Z": -1.0441284
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.000015,
+        "Roll": -5.075897
+      }
+    }
+  }
+]

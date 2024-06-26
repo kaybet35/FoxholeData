@@ -1,0 +1,104 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ScoutTankWStartup_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ScoutTankWStartup_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/ScoutTank/ScoutTankWStartup_Cue.2"
+      },
+      "VolumeMultiplier": 2.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1350.8081,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 811.2747
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 4.032729,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "ScoutTankWStartup_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ScoutTankWStartup_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/ScoutTank/ScoutTankWStartup_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ScoutTankWStartup_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/ScoutTank/ScoutTankWStartup_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ScoutTankWStartup_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'ScoutTankWStartup_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/ScoutTank/ScoutTankWStartup_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ScoutTankWStartup_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/LightTanks/Colonial/LightTankColonialGunnerEntrance.LightTankColonialGunnerEntrance",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'LightTankColonialGunnerEntrance'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/LightTanks/Colonial/LightTankColonialGunnerEntrance.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ScoutTankWStartup_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/ScoutTank/ScoutTankStartupW.ScoutTankStartupW",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ScoutTankStartupW'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/ScoutTank/ScoutTankStartupW.0"
+    }
+  }
+]

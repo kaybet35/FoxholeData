@@ -1,0 +1,1328 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "SpawnPoint",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SpawnPointComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPLandingShipW_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandingShipBaseW_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipBaseW.1"
+    },
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPLandingShipW_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.51"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPLandingShipW_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.19"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandingShipBaseW_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipBaseW.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPLandingShipW_C:SpawnPoint'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPLandingShipW_C:BPWaterStencilComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.20"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPLandingShipW_C:Passenger1'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.21"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPLandingShipW_C:Passenger1Trigger'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.23"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPLandingShipW_C:Passenger1Exit'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.22"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPLandingShipW_C'Default__BPLandingShipW_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.2"
+    }
+  },
+  {
+    "Type": "BPLandingShipW_C",
+    "Name": "Default__BPLandingShipW_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.BPLandingShipW_C'",
+    "Properties": {
+      "Ramp": {
+        "Pivot": {
+          "Translation": {
+            "X": 630.0,
+            "Y": 0.0,
+            "Z": 50.0
+          }
+        },
+        "MaxExtension": 410.0,
+        "Width": 345.0,
+        "MaximumAngle": 45.0
+      },
+      "RampDriveVolume": {
+        "ObjectName": "BoxComponent'Default__BPLandingShipW_C:RampDriveVolume'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.11"
+      },
+      "WaterDriveLoop": {
+        "ObjectName": "AudioComponent'Default__BPLandingShipW_C:WaterDriveLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.6"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPLandingShipW_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.9"
+      },
+      "WorkVolume": {
+        "ObjectName": "BoxComponent'Default__BPLandingShipW_C:WorkVolume'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.13"
+      },
+      "BaseMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:BaseMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.54"
+      },
+      "RopeMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:RopeMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.56"
+      },
+      "TransferLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:TransferLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.39"
+      },
+      "DockingObstructionCheckVolume": {
+        "ObjectName": "BoxComponent'Default__BPLandingShipW_C:DockingObstructionCheck'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.8"
+      },
+      "UndockingObstructionCheckVolume": {
+        "ObjectName": "BoxComponent'Default__BPLandingShipW_C:UndockingObstructionCheck'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.12"
+      },
+      "ShipCollision": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "5C857EC14D1E949B6016BB82616D69C8",
+        "SourceString": "MacConmara Shorerunner",
+        "LocalizedString": "MacConmara Shorerunner"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "B82355164AD3C111D9BB5281DDA2D279",
+        "SourceString": "The Shorerunner is a large vessel that ferries friendly troops and light vehicles to assault distant shores.",
+        "LocalizedString": "The Shorerunner is a large vessel that ferries friendly troops and light vehicles to assault distant shores."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'LandingShipWIcon'",
+        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/LandingShipWIcon.0"
+      },
+      "TechID": "ETechID::UnlockLargeShipBaseShip",
+      "FactionVariant": "EFactionId::Wardens",
+      "CodeName": "LandingShipW",
+      "FuelTank": {
+        "FuelCapacity": 10.0
+      },
+      "bCanUseStructures": true,
+      "DestroyedMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:DestroyedMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.55"
+      },
+      "MinorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:MinorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.30"
+      },
+      "MajorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:MajorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.29"
+      },
+      "DisabledTurretFX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:DisabledTurretFX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.28"
+      },
+      "DisabledTurret2FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:DisabledTurret2FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.24"
+      },
+      "DisabledTurret3FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:DisabledTurret3FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.25"
+      },
+      "DisabledTurret4FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:DisabledTurret4FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.26"
+      },
+      "DisabledTurret5FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLandingShipW_C:DisabledTurret5FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.27"
+      },
+      "CharatcerHitSound": {
+        "ObjectName": "SoundCue'TruckFleshImpact'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Truck/TruckFleshImpact.0"
+      },
+      "DriveLoop": {
+        "ObjectName": "AudioComponent'Default__BPLandingShipW_C:DriveLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.5"
+      },
+      "BackUpSFXLoop": {
+        "ObjectName": "AudioComponent'Default__BPLandingShipW_C:BackUpSFXLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.4"
+      },
+      "CameraRigComponent": {
+        "ObjectName": "PlayerCameraRigComponent'Default__BPLandingShipW_C:CameraRigVehicle'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.31"
+      },
+      "FrontAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:FrontAxelCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.33"
+      },
+      "RearAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:RearAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.36"
+      },
+      "FrontLeftRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:FrontRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.34"
+      },
+      "FrontRightRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:RearRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.37"
+      },
+      "LeftSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:LeftSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.35"
+      },
+      "RightSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPLandingShipW_C:RightSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.38"
+      },
+      "PassengerArea": {
+        "ObjectName": "BoxComponent'Default__BPLandingShipW_C:PassengerBaseBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.10"
+      },
+      "AFKTimeoutComponent": {
+        "ObjectName": "AFKTimeoutComponent'Default__BPLandingShipW_C:AFKTimeoutComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.3"
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPLandingShipW_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.58"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPLandingShipW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.52"
+      },
+      "CharacterMovement": {
+        "ObjectName": "ShipMovementComponent'Default__BPLandingShipW_C:CharMoveComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.50"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RootComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      }
+    }
+  },
+  {
+    "Type": "AFKTimeoutComponent",
+    "Name": "AFKTimeoutComponent",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'AFKTimeoutComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BackUpSFXLoop",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "DriveLoop",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'BargeDrive_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Barge/BargeDrive_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "WaterDriveLoop",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": null,
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      },
+      "RelativeLocation": {
+        "X": 36.096436,
+        "Y": 0.0,
+        "Z": -29.328217
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "NoVehicleVolume_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -180.45361,
+        "Y": 0.0,
+        "Z": 159.09999
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "DockingObstructionCheck",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPLandingShipW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.52"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      },
+      "RelativeLocation": {
+        "X": 136.36426,
+        "Y": -0.008453369,
+        "Z": 122.1423
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PassengerBaseBox",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 1000.0,
+        "Y": 300.0,
+        "Z": 150.0
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeLocation": {
+        "X": 303.45447,
+        "Y": -0.00024414062,
+        "Z": 49.32965
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "RampDriveVolume",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPLandingShipW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.52"
+      },
+      "RelativeLocation": {
+        "X": -0.0007970035,
+        "Y": 735.8462,
+        "Z": -139.56332
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 4.439655E-10,
+        "Roll": 20.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.9777211,
+        "Z": 1.4391459
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UndockingObstructionCheck",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPLandingShipW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.52"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "WorkVolume",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      }
+    }
+  },
+  {
+    "Type": "BPEnterVehicleUseComponent_C",
+    "Name": "BPEnterVehicleUseComponent_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/Components/BPEnterVehicleUseComponent.BPEnterVehicleUseComponent_C'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -205.0,
+        "Y": 0.0,
+        "Z": 200.0
+      }
+    }
+  },
+  {
+    "Type": "BPShippableUseComponent_C",
+    "Name": "BPShippableUseComponent_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/Components/BPShippableUseComponent.BPShippableUseComponent_C'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 185.0,
+        "Y": 400.0,
+        "Z": 150.0
+      },
+      "RelativeLocation": {
+        "X": 9.0,
+        "Y": 23.0,
+        "Z": 150.0
+      }
+    }
+  },
+  {
+    "Type": "BPWaterStencilComponent_C",
+    "Name": "BPWaterStencilComponent_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/BPWaterStencilComponent.BPWaterStencilComponent_C'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.00086444616,
+        "Y": -51.5699,
+        "Z": 17.491257
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99999,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 9.5,
+        "Y": 3.8097167,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      },
+      "RelativeLocation": {
+        "X": 46.469635,
+        "Y": 0.0008544922,
+        "Z": 42.508743
+      },
+      "bShouldUpdatePhysicsVolume": false
+    }
+  },
+  {
+    "Type": "HatchComponent",
+    "Name": "Ladder1Deck_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'HatchComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -212.28517,
+        "Y": 0.0,
+        "Z": 200.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SeatTriggerComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SeatTriggerComponent'BPLandingShipW_C:DriverTrigger_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.48"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBase_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipC/BPLandingShipBase.1"
+            },
+            "SCSVariableName": "DriverTrigger",
+            "AssociatedGuid": "E27E284F-4FF07C02-56E35ABC-366CC443"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SeatExitComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SeatExitComponent'BPLandingShipW_C:DriverExit_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.46"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBase_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipC/BPLandingShipBase.1"
+            },
+            "SCSVariableName": "DriverExit",
+            "AssociatedGuid": "93F13AC9-418E1B71-654A2FA9-6E2ABF42"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'VehicleSeatComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "VehicleSeatComponent'BPLandingShipW_C:DriverSeat0_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.59"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipBaseW.1"
+            },
+            "SCSVariableName": "DriverSeat0",
+            "AssociatedGuid": "AC264084-484074A6-BE59F7BA-76CB4CAF"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass'BPEnterVehicleUseComponent_C'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Components/BPEnterVehicleUseComponent.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BPEnterVehicleUseComponent_C'BPLandingShipW_C:BPEnterVehicleUseComponent_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.14"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBase_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipC/BPLandingShipBase.1"
+            },
+            "SCSVariableName": "BPEnterVehicleUseComponent",
+            "AssociatedGuid": "55217AB4-4A6B6FA2-E294D79D-64519923"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'HatchComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "HatchComponent'BPLandingShipW_C:Ladder1Deck_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.18"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBase_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipC/BPLandingShipBase.1"
+            },
+            "SCSVariableName": "Ladder1Deck",
+            "AssociatedGuid": "E902645D-4D454AF6-ECEC798C-6F2E5472"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'BoxComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BoxComponent'BPLandingShipW_C:NoVehicleVolume_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBaseW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipBaseW.1"
+            },
+            "SCSVariableName": "NoVehicleVolume",
+            "AssociatedGuid": "F01B53A9-46D20560-FBD8FDAA-33DE2E2E"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        },
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass'BPShippableUseComponent_C'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/Components/BPShippableUseComponent.0"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BPShippableUseComponent_C'BPLandingShipW_C:BPShippableUseComponent_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.15"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPLandingShipBase_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipC/BPLandingShipBase.1"
+            },
+            "SCSVariableName": "BPShippableUseComponent",
+            "AssociatedGuid": "ACF10225-4820F38D-DA79ABBE-45C458E1"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BPWaterStencilComponent",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPWaterStencilComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/BPWaterStencilComponent.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Passenger1",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'VehicleSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Passenger1Exit",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatExitComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Passenger1Trigger",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatTriggerComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret2FX",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret3FX",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret4FX",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret5FX",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurretFX",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MajorDamagePS",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeLocation": {
+        "X": -333.31732,
+        "Y": 9.2E-05,
+        "Z": 139.52567
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MinorDamagePS",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeLocation": {
+        "X": -333.31732,
+        "Y": 9.1552734E-05,
+        "Z": 139.52567
+      }
+    }
+  },
+  {
+    "Type": "PlayerCameraRigComponent",
+    "Name": "CameraRigVehicle",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'PlayerCameraRigComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontAxelCastLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontRightAxleCastLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LeftSideTrackLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeLocation": {
+        "X": 0.00015258789,
+        "Y": -150.9089,
+        "Z": -194.35309
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearAxleCastLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearRightAxleCastLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RightSideTrackLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeLocation": {
+        "X": 0.00018310547,
+        "Y": 149.73286,
+        "Z": -194.35269
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "TransferLocation",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "StaticMeshComponent'Default__BPLandingShipW_C:ShipCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.57"
+      },
+      "RelativeLocation": {
+        "X": 227.5,
+        "Y": 0.0,
+        "Z": 71.5
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPLandingShipW_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.32"
+      },
+      "VariableGuid": "40576C2D-4C1E011E-1D4E9D94-75230915",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPWaterStencilComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/BPWaterStencilComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPWaterStencilComponent_C'BPLandingShipW_C:BPWaterStencilComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.16"
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "79B48501-4125D3D6-46B629A2-73FEB7A4",
+      "InternalVariableName": "BPWaterStencilComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VehicleSeatComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VehicleSeatComponent'BPLandingShipW_C:Passenger1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.60"
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DCECF1A9-4918BD1E-49C49E8A-277E89E7",
+      "InternalVariableName": "Passenger1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatExitComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatExitComponent'BPLandingShipW_C:Passenger1Exit_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.47"
+      },
+      "ParentComponentOrVariableName": "ShipCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "549C6012-4582F5B1-5CFF15A7-E760D396",
+      "InternalVariableName": "Passenger1Exit"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPLandingShipW_C:Passenger1Trigger_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.49"
+      },
+      "ParentComponentOrVariableName": "ShipCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "614BB512-4D6A154D-CB9F7AA1-BC7B7D68",
+      "InternalVariableName": "Passenger1Trigger"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpawnPointComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpawnPointComponent'BPLandingShipW_C:SpawnPoint_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.53"
+      },
+      "ParentComponentOrVariableName": "ShipCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E815CF0B-476F06C5-EA40A79B-8CF5A7B5",
+      "InternalVariableName": "SpawnPoint"
+    }
+  },
+  {
+    "Type": "SeatExitComponent",
+    "Name": "DriverExit_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SeatExitComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -176.73941,
+        "Y": 0.0,
+        "Z": 245.63593
+      }
+    }
+  },
+  {
+    "Type": "SeatExitComponent",
+    "Name": "Passenger1Exit_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SeatExitComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -173.5705,
+        "Y": 101.406525,
+        "Z": 244.67862
+      }
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "DriverTrigger_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -367.7565,
+        "Y": 1E-05,
+        "Z": 85.11023
+      },
+      "RelativeScale3D": {
+        "X": 0.359583,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "Passenger1Trigger_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 800.0,
+        "Y": 400.0,
+        "Z": 200.0
+      },
+      "RelativeLocation": {
+        "X": 320.16162,
+        "Y": 1.0024887E-05,
+        "Z": 85.11023
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -1.02452805E-05,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.49951172,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ShipMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'ShipMovementComponent'",
+    "Properties": {
+      "OutofWaterZ": 0.0,
+      "bUseFlatBaseForFloorChecks": true
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.45"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.41"
+        },
+        {
+          "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.45"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPLandingShipW_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.40"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeLocation": {
+        "X": 168.1897,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SpawnPointComponent",
+    "Name": "SpawnPoint_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'SpawnPointComponent'",
+    "Properties": {
+      "Priority": "ESpawnPointPriority::Low",
+      "RelativeLocation": {
+        "X": -200.0,
+        "Y": 100.0,
+        "Z": 157.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BaseMesh",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPLandingShipW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.52"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 12.9,
+        "Z": 28.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DestroyedMesh",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LandingShipW_Destroyed'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/LandingShipW_Destroyed.2"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPLandingShipW_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.17"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RopeMesh",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPLandingShipW_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.52"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 12.9,
+        "Z": 28.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ShipCollision",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPLandingShipW_C'Default__BPLandingShipW_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LandingShips/LandingShipW/BPLandingShipW.2"
+            },
+            "FunctionName": "VehicleCollisionTouched"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPLandingShipW_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "DriverSeat0_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 2.1664542E-05,
+        "Y": -587.24194,
+        "Z": 214.83281
+      }
+    }
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "Passenger1_GEN_VARIABLE",
+    "Outer": "BPLandingShipW_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "Index": 1,
+      "TriggerName": "Passenger1Trigger",
+      "ExitName": "Passenger1Exit",
+      "RelativeLocation": {
+        "X": -141.29211,
+        "Y": -578.8616,
+        "Z": 166.02051
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 9.3346625E-06
+      }
+    }
+  }
+]

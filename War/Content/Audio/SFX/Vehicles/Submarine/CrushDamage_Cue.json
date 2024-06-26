@@ -1,0 +1,91 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "CrushDamage_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeRandom'CrushDamage_Cue:SoundNodeRandom_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/CrushDamage_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'UnderwaterVehicle'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/UnderwaterVehicle.0"
+      },
+      "Duration": 5.5469165,
+      "MaxDistance": 15200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Grenades'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Grenades.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "CrushDamage_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'CrushDamage_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/CrushDamage_Cue.2"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'CrushDamage_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/CrushDamage_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'CrushDamage_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/CrushDamage_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "CrushDamage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Submarine/CrushDamage01.CrushDamage01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "CrushDamage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Submarine/CrushDamage02.CrushDamage02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "CrushDamage_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/Submarine/CrushDamage03.CrushDamage03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

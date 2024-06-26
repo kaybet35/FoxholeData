@@ -1,0 +1,74 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFacilityVehicleFactory3Arm_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "SuperStruct": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFacilityVehicleFactory3Arm_C'Default__BPFacilityVehicleFactory3Arm_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Components/BPFacilityVehicleFactory3Arm.1"
+    }
+  },
+  {
+    "Type": "BPFacilityVehicleFactory3Arm_C",
+    "Name": "Default__BPFacilityVehicleFactory3Arm_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/Components/BPFacilityVehicleFactory3Arm.BPFacilityVehicleFactory3Arm_C'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_DrydockCrane_C'",
+        "ObjectPath": "War/Content/Meshes/Structures/Prototypes/DryDock/Animation/ABP_DrydockCrane.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_DrydockCrane'",
+        "ObjectPath": "War/Content/Meshes/Structures/Prototypes/DryDock/SK_DrydockCrane.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseToChannels": {
+            "WorldStatic": "ECR_Block",
+            "WorldDynamic": "ECR_Block",
+            "Pawn": "ECR_Block",
+            "Visibility": "ECR_Block",
+            "Camera": "ECR_Block",
+            "PhysicsBody": "ECR_Block",
+            "Vehicle": "ECR_Block",
+            "Destructible": "ECR_Block",
+            "GameTraceChannel2": "ECR_Overlap",
+            "GameTraceChannel3": "ECR_Block",
+            "GameTraceChannel4": "ECR_Block",
+            "GameTraceChannel6": "ECR_Block",
+            "GameTraceChannel9": "ECR_Overlap"
+          },
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

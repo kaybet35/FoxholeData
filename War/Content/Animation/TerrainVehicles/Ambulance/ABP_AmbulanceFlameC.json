@@ -1,0 +1,973 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "reloading",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 4,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Reload",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_AmbulanceCol_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_AmbulanceCol_Skeleton.7"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerReloading",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerReloading'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_TransitionResult_2E8BDD8C43F1AE2E9A25B8B6C1A6AC2F'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.21"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameC_AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_AmbulanceFlameC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameC_AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "TurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:TurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_RotationOffsetBlendSpace_124312F9477990D7812D99B2DB920822'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.14"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_SequencePlayer_CD86B2CC452410A2C57DB4BCEFBC62B2'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.17"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_SequencePlayer_8AC8668B4060414101D3B8A42FE751DF'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.15"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_BlendSpacePlayer_99A58EA844F22BA2C80844AC8748DE37'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.12"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_BlendSpacePlayer_5A89423A461ABC784A66D1B43C82ECE4'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.11"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:ExecuteUbergraph_ABP_AmbulanceFlameC'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.0"
+      },
+      {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.9"
+      },
+      {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameC_AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.10"
+      },
+      {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:ExecuteUbergraph_ABP_AmbulanceFlameC'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_Root_1AC423634F7B9332F41DD4ABB42427C0'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_BlendSpacePlayer_5A89423A461ABC784A66D1B43C82ECE4'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_BlendSpacePlayer_99A58EA844F22BA2C80844AC8748DE37'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_LayeredBoneBlend_9D22831645FD04D719CC20A02580B9E7'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_SequencePlayer_8AC8668B4060414101D3B8A42FE751DF'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_SequencePlayer_CD86B2CC452410A2C57DB4BCEFBC62B2'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_RotationOffsetBlendSpace_124312F9477990D7812D99B2DB920822'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_TransitionResult_2E8BDD8C43F1AE2E9A25B8B6C1A6AC2F'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_SequencePlayer_CD6DC3C943E6278C738B4C873C959576'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_StateResult_C03093BF411A0E767ACC92901092E569'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_StateResult_08E0E1844922D4ED93A385B7CEAD2926'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraphNode_StateMachine_9666569148FA6DF336FE1CB2633E58A4'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.18"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_AmbulanceFlameC": {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:ExecuteUbergraph_ABP_AmbulanceFlameC'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameC_AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29": {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameC_AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.10"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_AmbulanceFlameC_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_AmbulanceFlameC_C'Default__ABP_AmbulanceFlameC_C'",
+      "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.2"
+    }
+  },
+  {
+    "Type": "ABP_AmbulanceFlameC_C",
+    "Name": "Default__ABP_AmbulanceFlameC_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.ABP_AmbulanceFlameC_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_1AC423634F7B9332F41DD4ABB42427C0": {
+        "Result": {
+          "LinkID": 3
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_5A89423A461ABC784A66D1B43C82ECE4": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FireAmbulanceC_Gunner_Up_Down'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/BS_FireAmbulanceC_Gunner_Up_Down.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_99A58EA844F22BA2C80844AC8748DE37": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FireAmbulanceC_Gunner_Side_To_Side'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/BS_FireAmbulanceC_Gunner_Side_To_Side.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_9D22831645FD04D719CC20A02580B9E7": {
+        "BasePose": {
+          "LinkID": 6
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 2
+          },
+          {
+            "LinkID": 1
+          },
+          {
+            "LinkID": 12
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "main_body",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "fire_hose_side_to_side",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "fire_hose_up_down",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "waterpump",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "F041152E-42930619-CB7C2ABB-90A05FC2",
+        "VirtualBoneGuid": "306F8F5F-4ACCA4F7-E779D2BA-07988223"
+      },
+      "AnimGraphNode_SequencePlayer_8AC8668B4060414101D3B8A42FE751DF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_AmbulanceCol_driving'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/Anim_AmbulanceCol_driving.0"
+        },
+        "PlayRateBasis": 200.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.2,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_CD86B2CC452410A2C57DB4BCEFBC62B2": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_AmbulanceCol_speed318_09'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/Anim_AmbulanceCol_speed318_09.0"
+        },
+        "PlayRateBasis": 318.09,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_124312F9477990D7812D99B2DB920822": {
+        "BasePose": {
+          "LinkID": 5
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'AO_AmbulanceCol_wheels'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/AO_AmbulanceCol_wheels.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_2E8BDD8C43F1AE2E9A25B8B6C1A6AC2F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_CD6DC3C943E6278C738B4C873C959576": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_AmbulanceFlameCol_reloading'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/Anim_AmbulanceFlameCol_reloading.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.718,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_C03093BF411A0E767ACC92901092E569": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_08E0E1844922D4ED93A385B7CEAD2926": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_9666569148FA6DF336FE1CB2633E58A4": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_1AC423634F7B9332F41DD4ABB42427C0",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_AmbulanceFlameC",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_AmbulanceFlameC",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_AmbulanceFlameC_C:ExecuteUbergraph_ABP_AmbulanceFlameC.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_AmbulanceFlameC_C:ExecuteUbergraph_ABP_AmbulanceFlameC.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_AmbulanceFlameC_C:ExecuteUbergraph_ABP_AmbulanceFlameC.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_AmbulanceFlameC",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_AmbulanceFlameC",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_AmbulanceFlameC_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/Ambulance/ABP_AmbulanceFlameC.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameC_AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_5A89423A461ABC784A66D1B43C82ECE4",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_99A58EA844F22BA2C80844AC8748DE37",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_9D22831645FD04D719CC20A02580B9E7",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_124312F9477990D7812D99B2DB920822",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8AC8668B4060414101D3B8A42FE751DF",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CD6DC3C943E6278C738B4C873C959576",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CD86B2CC452410A2C57DB4BCEFBC62B2",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_9666569148FA6DF336FE1CB2633E58A4",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_08E0E1844922D4ED93A385B7CEAD2926",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C03093BF411A0E767ACC92901092E569",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_2E8BDD8C43F1AE2E9A25B8B6C1A6AC2F",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_88AEE2C3404DD0256F4B499AD2758A29",
+    "Outer": "ABP_AmbulanceFlameC_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

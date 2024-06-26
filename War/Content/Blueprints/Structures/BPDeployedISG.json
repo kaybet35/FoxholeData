@@ -1,0 +1,406 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "OccupiableComponent",
+    "Outer": "BPDeployedISG_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StructureSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDeployedISG_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDeployedISG_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DeployedInfantrySupportGun'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDeployedISG_C:OccupiableComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDeployedISG_C:MultiplexedStaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDeployedISG_C'Default__BPDeployedISG_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.2"
+    }
+  },
+  {
+    "Type": "BPDeployedISG_C",
+    "Name": "Default__BPDeployedISG_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPDeployedISG.BPDeployedISG_C'",
+    "Properties": {
+      "PayloadMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPDeployedISG_C:PayloadMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.13"
+      },
+      "HeightConfig": {
+        "MaxHeight": 120.0
+      },
+      "TripodMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPDeployedISG_C:TripodMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.14"
+      },
+      "GunMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPDeployedISG_C:GunMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.12"
+      },
+      "bIsBuiltOnLandscape": false,
+      "BuildGhostClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPDeployedISGGhost_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISGGhost.1"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'InfantrySupportGunItemIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/InfantrySupportGunItemIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Defense",
+      "ValidBuildTools": 1,
+      "CodeName": "DeployedISG",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "B65ECBC1481C3213858453A08B6FB4DE",
+        "SourceString": "Deployed Infantry Support Gun",
+        "LocalizedString": "Deployed Infantry Support Gun"
+      },
+      "ArmourType": "EArmourType::Tier1Tank",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedISG_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDeployedISG_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'DustCloud'",
+        "ObjectPath": "War/Content/FX/DustCloud.17"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "MaxHealth": 750,
+      "Health": 750,
+      "DropLocationOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "IsVaultable": false,
+      "ScreenToUse": "ESimScreen::StorageBox",
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDeployedISG_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.15"
+      },
+      "NetCullDistanceSquared": 25000000.0,
+      "MinNetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedISG_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDeployedISG_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDeployedISG_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 48.0,
+        "Y": 48.0,
+        "Z": 210.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedISG_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.3"
+      },
+      "RelativeLocation": {
+        "X": -48.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "MultiplexedStaticMeshComponent",
+    "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
+    "Outer": "BPDeployedISG_C",
+    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
+    "Properties": {
+      "MeshStops": [
+        {
+          "Threshold": 0,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainerCritical'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerCritical.2"
+          }
+        },
+        {
+          "Threshold": 33,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainerDamaged'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerDamaged.2"
+          }
+        },
+        {
+          "Threshold": 66,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainer'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainer.2"
+          }
+        }
+      ],
+      "InputValue": 100,
+      "SelectedMeshIndex": 2
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedStaticMesh",
+    "Outer": "BPDeployedISG_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDeployedISG_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDeployedISG_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.7"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StructureSeatComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StructureSeatComponent'BPDeployedISG_C:OccupiableComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.16"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "44691D25-45FD3469-45C83CA5-591560B6",
+      "InternalVariableName": "OccupiableComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MultiplexedStaticMeshComponent'BPDeployedISG_C:MultiplexedStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.5"
+      },
+      "VariableGuid": "D667579F-46309463-6D3D0483-D468D96E",
+      "InternalVariableName": "MultiplexedStaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDeployedISG_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDeployedISG_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedISG_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDeployedISG_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedISG_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDeployedISG_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "GunMesh",
+    "Outer": "Default__BPDeployedISG_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_InfantrySupportGun'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_InfantrySupportGun.0"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPDeployedISG_C:TripodMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.14"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "PayloadMesh",
+    "Outer": "Default__BPDeployedISG_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPDeployedISG_C:GunMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.12"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "TripodMesh",
+    "Outer": "Default__BPDeployedISG_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Tripod_C'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_DeployableTripod'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_DeployableTripod.0"
+      },
+      "bGenerateOverlapEvents": true,
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedISG_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedISG.3"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDeployedISG_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "StructureSeatComponent",
+    "Name": "OccupiableComponent_GEN_VARIABLE",
+    "Outer": "BPDeployedISG_C",
+    "Class": "UScriptClass'StructureSeatComponent'",
+    "Properties": {
+      "bProvidesFullCover": false,
+      "bTeleportBack": false,
+      "bCheckForPlayersOnOccupy": true,
+      "bOccupantCrouches": false,
+      "MountCodeName": "InfantrySupportGun",
+      "bIsExposed": true,
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPInfantrySupportGunMount_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Components/BPInfantrySupportGunMount.0"
+      },
+      "RelativeLocation": {
+        "X": -100.0,
+        "Y": 0.0,
+        "Z": 105.0
+      }
+    }
+  }
+]

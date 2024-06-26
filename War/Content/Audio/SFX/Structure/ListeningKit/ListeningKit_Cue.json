@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ListeningKit_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ListeningKit_Cue:SoundNodeModulator_1'",
+        "ObjectPath": "War/Content/Audio/SFX/Structure/ListeningKit/ListeningKit_Cue.1"
+      },
+      "VolumeMultiplier": 1.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 2700.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'ListeningKit'",
+        "ObjectPath": "War/Content/Audio/Attenuations/ListeningKit.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "ListeningKit_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.99,
+      "PitchMax": 1.01,
+      "VolumeMin": 0.99,
+      "VolumeMax": 1.01,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ListeningKit_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/ListeningKit/ListeningKit_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ListeningKit_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/ListeningKit/ListeningKitIdle.ListeningKitIdle",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ListeningKitIdle'",
+      "ObjectPath": "War/Content/Audio/SFX/Structure/ListeningKit/ListeningKitIdle.0"
+    }
+  }
+]

@@ -1,0 +1,231 @@
+[
+  {
+    "Type": "Material",
+    "Name": "DefaultPostProcessMaterial",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "Normal": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "None",
+        "UseConstant": false,
+        "Constant": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        }
+      },
+      "EmissiveColor": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionFeatureLevelSwitch_0",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "MaterialDomain": "MD_PostProcess",
+      "ShadingModel": "MSM_Unlit",
+      "ShadingModels": {
+        "ShadingModelField": 1
+      },
+      "OpacityMaskClipValue": 0.33,
+      "bUsedWithSkeletalMesh": true,
+      "bUsedWithStaticLighting": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionFeatureLevelSwitch'DefaultPostProcessMaterial:MaterialExpressionFeatureLevelSwitch_0'",
+          "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.1"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'DefaultPostProcessMaterial:MaterialExpressionTextureSample0'",
+          "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.4"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'DefaultPostProcessMaterial:MaterialExpressionMaterialFunctionCall_6'",
+          "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'DefaultPostProcessMaterial:MaterialExpressionMaterialFunctionCall_7'",
+          "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.3"
+        },
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        },
+        {
+          "StateId": "2C1DDB6E-406BC9FC-1D4141A1-7C82122A",
+          "Function": {
+            "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+          }
+        }
+      ],
+      "StateId": "D9DB04D0-4C700E0C-BAD45BBD-F23171B3",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionFeatureLevelSwitch",
+    "Name": "MaterialExpressionFeatureLevelSwitch_0",
+    "Outer": "DefaultPostProcessMaterial",
+    "Class": "UScriptClass'MaterialExpressionFeatureLevelSwitch'",
+    "Properties": {
+      "Default": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      "Material": {
+        "ObjectName": "Material'DefaultPostProcessMaterial'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.0"
+      }
+    },
+    "Inputs": [
+      {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample0"
+      },
+      {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 1,
+        "MaskG": 1,
+        "MaskB": 1,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureSample0"
+      },
+      {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      null,
+      null
+    ]
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_6",
+    "Outer": "DefaultPostProcessMaterial",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+      },
+      "Material": {
+        "ObjectName": "Material'DefaultPostProcessMaterial'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_7",
+    "Outer": "DefaultPostProcessMaterial",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'BreakOutFloat2Components'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components.0"
+      },
+      "Material": {
+        "ObjectName": "Material'DefaultPostProcessMaterial'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample0",
+    "Outer": "DefaultPostProcessMaterial",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Coordinates": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionDivide_2"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D'DefaultDiffuse'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultDiffuse.0"
+      },
+      "Material": {
+        "ObjectName": "Material'DefaultPostProcessMaterial'",
+        "ObjectPath": "Engine/Content/EngineMaterials/DefaultPostProcessMaterial.0"
+      }
+    }
+  }
+]

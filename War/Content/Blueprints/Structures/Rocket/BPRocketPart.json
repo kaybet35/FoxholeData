@@ -1,0 +1,208 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "MainMesh",
+    "Outer": "BPRocketPart_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPRocketPart_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPRocketPart_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TeamStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPRocketPart_C:MainMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPRocketPart_C'Default__BPRocketPart_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.2"
+    }
+  },
+  {
+    "Type": "BPRocketPart_C",
+    "Name": "Default__BPRocketPart_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Rocket/BPRocketPart.BPRocketPart_C'",
+    "Properties": {
+      "BuildGhostClass": null,
+      "ShippableInfo": {
+        "Type": "EShippableType::Normal"
+      },
+      "BuildCategory": "EBuildCategory::Shippables",
+      "ProfileType": "EStructureProfileType::Shippable",
+      "ArmourType": "EArmourType::Tier2Structure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPRocketPart_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPRocketPart_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'BridgeExplosion1'",
+        "ObjectPath": "War/Content/FX/BridgeExplosion1.52"
+      },
+      "TechID": "ETechID::UnlockRocket",
+      "bLogWhenDestroyed": true,
+      "ScreenToUse": "ESimScreen::StorageBox",
+      "bIgnoreFriendlyFire": true,
+      "bIsStockpilable": true,
+      "bIsReserveStockpiled": true,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPRocketPart_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.10"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPRocketPart_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPRocketPart_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPRocketPart_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPRocketPart_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPRocketPart_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPRocketPart_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.5"
+      },
+      "VariableGuid": "1DBAF71F-40F954A5-8BA88890-B293AB32",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPRocketPart_C:MainMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.9"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8405CA7E-41CAA4F1-5BC189AA-ACFF56F1",
+      "InternalVariableName": "MainMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPRocketPart_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRocketPart_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPRocketPart_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPRocketPart_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Rocket/BPRocketPart.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MainMesh_GEN_VARIABLE",
+    "Outer": "BPRocketPart_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "MainMesh"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPRocketPart_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

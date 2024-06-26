@@ -1,0 +1,1323 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "FieldGun states",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "movement",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6,
+                7,
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Reloading",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_FieldATGunCol_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_FieldATGunCol_Skeleton.13"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            },
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:Y'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_RotationOffsetBlendSpace_165620824E08B7B7728BFF9E0087F21F'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_BlendListByBool_525E75E14E94C66ECC81A0ADC94027DC'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.22"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.26"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.27"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.23"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_655E13F243E03CC4980F11B9BED5DC46'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.37"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerReloading",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerReloading'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_D31C5DC9405CB969B6B0F2AAF51C79DC'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.38"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_192C3C43478B06187A336FBA5791042E'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.35"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerReloading",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerReloading'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_5351E42C4000C64B2282E88984143A7D'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.36"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.0"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldATGun_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.16"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.18"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.19"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.17"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_Root_7E8509FD453E1A9A87B5919531B8E9D6'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_5351E42C4000C64B2282E88984143A7D'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_192C3C43478B06187A336FBA5791042E'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_D31C5DC9405CB969B6B0F2AAF51C79DC'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_TransitionResult_655E13F243E03CC4980F11B9BED5DC46'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_DADB913D448BF4E84F6858AD152F94A1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_StateResult_8EB6DBBB42376D6A0681AABA9DEB8F27'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_BA06C9624E5729D536BE7D847E33DD99'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_StateResult_91628FFD41B4CA34245D3A944C51060D'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_LayeredBoneBlend_BD33A46F4C75EEEA2B036EBAF3C62B8F'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_StateResult_71A379144A782B0C5D5A7F8FBE5CE8B7'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_StateMachine_29AA58134C165944AE3A099D627376FE'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_BlendListByBool_525E75E14E94C66ECC81A0ADC94027DC'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_SequencePlayer_DF3493484491762FCBE7219874728B90'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraphNode_RotationOffsetBlendSpace_165620824E08B7B7728BFF9E0087F21F'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.25"
+      },
+      {
+        "ObjectName": "IntProperty'ABP_FieldATGun_C:WheelRotationSpeedFactor'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.21"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_FieldATGun": {
+        "ObjectName": "Function'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116": {
+        "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB": {
+        "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425": {
+        "ObjectName": "Function'ABP_FieldATGun_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.18"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_FieldATGun_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.16"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_FieldATGun_C'Default__ABP_FieldATGun_C'",
+      "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.2"
+    }
+  },
+  {
+    "Type": "ABP_FieldATGun_C",
+    "Name": "Default__ABP_FieldATGun_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.ABP_FieldATGun_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_7E8509FD453E1A9A87B5919531B8E9D6": {
+        "Result": {
+          "LinkID": 15
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_5351E42C4000C64B2282E88984143A7D": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_192C3C43478B06187A336FBA5791042E": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_D31C5DC9405CB969B6B0F2AAF51C79DC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_655E13F243E03CC4980F11B9BED5DC46": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_DADB913D448BF4E84F6858AD152F94A1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldATGunCol_reloading'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/Anim_FieldATGunCol_reloading.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.666546,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_8EB6DBBB42376D6A0681AABA9DEB8F27": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_BA06C9624E5729D536BE7D847E33DD99": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldATGunCol_shooting'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/Anim_FieldATGunCol_shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_91628FFD41B4CA34245D3A944C51060D": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FieldATGun_movement'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/BS_FieldATGun_movement.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldATGunCol_moving'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/Anim_FieldATGunCol_moving.0"
+        },
+        "PlayRateBasis": 460.44696,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldATGunCol_moving'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/Anim_FieldATGunCol_moving.0"
+        },
+        "PlayRateBasis": 460.44696,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_BD33A46F4C75EEEA2B036EBAF3C62B8F": {
+        "BasePose": {
+          "LinkID": 9
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 10
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wheel_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wheel_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "08634E87-48CB454C-E78BE79B-582FE8AB",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_StateResult_71A379144A782B0C5D5A7F8FBE5CE8B7": {
+        "Result": {
+          "LinkID": 12
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_29AA58134C165944AE3A099D627376FE": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_BlendListByBool_525E75E14E94C66ECC81A0ADC94027DC": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 16
+          },
+          {
+            "LinkID": 17
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_DF3493484491762FCBE7219874728B90": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldATGunCol_exploding'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/Anim_FieldATGunCol_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_165620824E08B7B7728BFF9E0087F21F": {
+        "BasePose": {
+          "LinkID": 14
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace'AO_FieldATGun_aiming'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/AO_FieldATGun_aiming.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "WheelRotationSpeedFactor": 230
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_7E8509FD453E1A9A87B5919531B8E9D6",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_FieldATGun",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_EqualEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_EqualEqual_FloatFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.7"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_Multiply_IntFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_Not_PreBool_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.8"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_SelectFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.13"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_Conv_BoolToFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.9"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_Multiply_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.10"
+      },
+      {
+        "ObjectName": "IntProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_Multiply_IntInt_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.20"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_Multiply_IntFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.12"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldATGun_C:ExecuteUbergraph_ABP_FieldATGun.CallFunc_SelectFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.14"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Not_PreBool_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_IntFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_FieldATGun_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldATgun/ABP_FieldATGun.15"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldATGun_AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Multiply_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldATGun",
+    "Class": "UScriptClass'IntProperty'"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "WheelRotationSpeedFactor",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_525E75E14E94C66ECC81A0ADC94027DC",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_69315BD2454E6BFDD7835782AC624116",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_BD33A46F4C75EEEA2B036EBAF3C62B8F",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_165620824E08B7B7728BFF9E0087F21F",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_5C454A2B4F8E7B9F9853ACAA23702425",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_7D29805444131161AA036CB7F6EF4AFB",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_BA06C9624E5729D536BE7D847E33DD99",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DADB913D448BF4E84F6858AD152F94A1",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_DF3493484491762FCBE7219874728B90",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_29AA58134C165944AE3A099D627376FE",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_71A379144A782B0C5D5A7F8FBE5CE8B7",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_8EB6DBBB42376D6A0681AABA9DEB8F27",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_91628FFD41B4CA34245D3A944C51060D",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_192C3C43478B06187A336FBA5791042E",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_5351E42C4000C64B2282E88984143A7D",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_655E13F243E03CC4980F11B9BED5DC46",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D31C5DC9405CB969B6B0F2AAF51C79DC",
+    "Outer": "ABP_FieldATGun_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

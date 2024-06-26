@@ -1,0 +1,1140 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "movement",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "driving",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 6,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 2.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_RelicArmouredCar_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicArmouredCar_Skeleton.3"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_BlendListByBool_DF1B1F5B44AA62E1779271BB0D5217C9'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.12"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_SequencePlayer_8C4A5B1243B0517B39FBB5BA84B585FA'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.18"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_RelicArmouredCar_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.24"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_RelicArmouredCar_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.11"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_BlendSpacePlayer_C3A92AC24AE290ADFB68B794E12E8C9E'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.14"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_BlendSpacePlayer_AE20F0ED42F0222BA974009D6F4EA8DE'",
+            "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.13"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:ExecuteUbergraph_ABP_RelicArmouredCar'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.0"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.9"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.10"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.11"
+      },
+      {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:ExecuteUbergraph_ABP_RelicArmouredCar'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_Root_7113324A485FCEEE17D487B3A09E91EB'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_BlendSpacePlayer_AE20F0ED42F0222BA974009D6F4EA8DE'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_BlendSpacePlayer_C3A92AC24AE290ADFB68B794E12E8C9E'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_LayeredBoneBlend_50D8AA9A40EADAF2118037B1B98B0F77'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_LayeredBoneBlend_1D89489E495CE320326626B2FDA100B3'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_SequencePlayer_E60828024D717C8B43AC1FAA2C23A712'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_StateResult_81E570EE4AC4F1DE6C70DA9DAB86E059'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_SequencePlayer_0BEFDE574C1D326E664427B2369EF15F'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_StateResult_FF8D2048430EF5F5BCE94389B2505F55'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_StateMachine_291860D346059213E2A575937F2493E9'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_SequencePlayer_8C4A5B1243B0517B39FBB5BA84B585FA'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_BlendListByBool_DF1B1F5B44AA62E1779271BB0D5217C9'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraphNode_SequencePlayer_CA65EAC7423AD68E714C8BA7C6FD95C4'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.19"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_RelicArmouredCar": {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:ExecuteUbergraph_ABP_RelicArmouredCar'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B": {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.11"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490": {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.10"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_RelicArmouredCar_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_RelicArmouredCar_C'Default__ABP_RelicArmouredCar_C'",
+      "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.2"
+    }
+  },
+  {
+    "Type": "ABP_RelicArmouredCar_C",
+    "Name": "Default__ABP_RelicArmouredCar_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.ABP_RelicArmouredCar_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_7113324A485FCEEE17D487B3A09E91EB": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_BlendSpacePlayer_AE20F0ED42F0222BA974009D6F4EA8DE": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_RelicArmouredCar_gun'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/BS_RelicARmouredCar_gun.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_C3A92AC24AE290ADFB68B794E12E8C9E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_RelicArmouredCar_turret'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/BS_RelicArmouredCar_turret.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_50D8AA9A40EADAF2118037B1B98B0F77": {
+        "BasePose": {
+          "LinkID": 11
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 12
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "treads_pivot_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "treads_pivot_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "A283C898-45936DB2-CCA2628F-3D52D4AC",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_LayeredBoneBlend_1D89489E495CE320326626B2FDA100B3": {
+        "BasePose": {
+          "LinkID": 2
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 1
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_gunPivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "A283C898-45936DB2-CCA2628F-3D52D4AC",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E60828024D717C8B43AC1FAA2C23A712": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicArmouredCar_chassis_driving'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicArmouredCar_chassis_driving.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_81E570EE4AC4F1DE6C70DA9DAB86E059": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_0BEFDE574C1D326E664427B2369EF15F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicArmouredCar_chassis_driving'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicArmouredCar_chassis_driving.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_FF8D2048430EF5F5BCE94389B2505F55": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_291860D346059213E2A575937F2493E9": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_SequencePlayer_8C4A5B1243B0517B39FBB5BA84B585FA": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicArmouredCar_wheels_radius_42_512_speed267_116'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicArmouredCar_wheels_radius_42_512_speed267_116.0"
+        },
+        "PlayRateBasis": 267.116,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_DF1B1F5B44AA62E1779271BB0D5217C9": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 14
+          },
+          {
+            "LinkID": 3
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_CA65EAC7423AD68E714C8BA7C6FD95C4": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_RelicArmouredCarC_Exploded'",
+          "ObjectPath": "War/Content/Animation/RelicVehicles/Anim_RelicArmouredCarC_Exploded.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_7113324A485FCEEE17D487B3A09E91EB",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_RelicArmouredCar",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_RelicArmouredCar",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_RelicArmouredCar_C:ExecuteUbergraph_ABP_RelicArmouredCar.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_RelicArmouredCar_C:ExecuteUbergraph_ABP_RelicArmouredCar.CallFunc_Less_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_RelicArmouredCar_C:ExecuteUbergraph_ABP_RelicArmouredCar.CallFunc_GreaterEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_RelicArmouredCar",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_Less_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_RelicArmouredCar",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_RelicArmouredCar_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_RelicArmouredCar.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicArmouredCar_AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_DF1B1F5B44AA62E1779271BB0D5217C9",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_AE20F0ED42F0222BA974009D6F4EA8DE",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C3A92AC24AE290ADFB68B794E12E8C9E",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_1D89489E495CE320326626B2FDA100B3",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_50D8AA9A40EADAF2118037B1B98B0F77",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_0BEFDE574C1D326E664427B2369EF15F",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_8C4A5B1243B0517B39FBB5BA84B585FA",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_CA65EAC7423AD68E714C8BA7C6FD95C4",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E60828024D717C8B43AC1FAA2C23A712",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_291860D346059213E2A575937F2493E9",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_81E570EE4AC4F1DE6C70DA9DAB86E059",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_FF8D2048430EF5F5BCE94389B2505F55",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_10D175C046076F7A2F67CAAE91279490",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_7521D7AF4A863776A863A7A57846826B",
+    "Outer": "ABP_RelicArmouredCar_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

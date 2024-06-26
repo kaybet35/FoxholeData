@@ -1,0 +1,86 @@
+[
+  {
+    "Type": "Material",
+    "Name": "Distortion",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "BlendMode": "BLEND_Translucent",
+      "ShadingModel": "MSM_Unlit",
+      "ShadingModels": {
+        "ShadingModelField": 1
+      },
+      "Refraction": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_0",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "bGenerateSphericalParticleNormals": true,
+      "bUsedWithParticleSprites": true,
+      "bUsesDistortion": true,
+      "Expressions": [
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'Distortion:MaterialExpressionTextureSample_0'",
+          "ObjectPath": "War/Content/FX/Materials/Distortion.2"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionDynamicParameter'Distortion:MaterialExpressionDynamicParameter_0'",
+          "ObjectPath": "War/Content/FX/Materials/Distortion.1"
+        },
+        null
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "7D775061-42569DF7-1273D18A-BA3B6F57",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionDynamicParameter",
+    "Name": "MaterialExpressionDynamicParameter_0",
+    "Outer": "Distortion",
+    "Class": "UScriptClass'MaterialExpressionDynamicParameter'",
+    "Properties": {
+      "ParamNames": [
+        "Distortion Amouint",
+        "Param2",
+        "Param3",
+        "Param4"
+      ],
+      "Material": {
+        "ObjectName": "Material'Distortion'",
+        "ObjectPath": "War/Content/FX/Materials/Distortion.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "Distortion",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D'SphereicalGradient02_D'",
+        "ObjectPath": "War/Content/FX/Textures/Additive/SphereicalGradient02_D.0"
+      },
+      "Material": {
+        "ObjectName": "Material'Distortion'",
+        "ObjectPath": "War/Content/FX/Materials/Distortion.0"
+      }
+    }
+  }
+]

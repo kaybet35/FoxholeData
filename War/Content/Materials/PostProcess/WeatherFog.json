@@ -1,0 +1,319 @@
+[
+  {
+    "Type": "Material",
+    "Name": "WeatherFog",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "EmissiveColor": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_1",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "MaterialDomain": "MD_PostProcess",
+      "BlendMode": "BLEND_Translucent",
+      "TranslucencyLightingMode": "TLM_SurfacePerPixelLighting",
+      "Expressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'WeatherFog:MaterialExpressionTextureSample_0'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.9"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'WeatherFog:MaterialExpressionTextureSample_2'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.10"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter'WeatherFog:MaterialExpressionCollectionParameter_6'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.1"
+        },
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter'WeatherFog:MaterialExpressionCollectionParameter_7'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WeatherFog:MaterialExpressionScalarParameter_25'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.6"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WeatherFog:MaterialExpressionScalarParameter_0'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.3"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WeatherFog:MaterialExpressionScalarParameter_1'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WeatherFog:MaterialExpressionScalarParameter_2'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.5"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WeatherFog:MaterialExpressionScalarParameter_3'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.7"
+        },
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'WeatherFog:MaterialExpressionScalarParameter_4'",
+          "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.8"
+        }
+      ],
+      "MaterialParameterCollectionInfos": [
+        {
+          "StateId": "A6884D82-4FB25C41-E5940186-C51492F9",
+          "ParameterCollection": {
+            "ObjectName": "MaterialParameterCollection'TreeAndGrass'",
+            "ObjectPath": "War/Content/Materials/Collections/TreeAndGrass.0"
+          }
+        },
+        {
+          "StateId": "55282790-4C26CE2D-E3F976B5-C0198AF3",
+          "ParameterCollection": {
+            "ObjectName": "MaterialParameterCollection'WeatherControl'",
+            "ObjectPath": "War/Content/Materials/Collections/WeatherControl.0"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "BlendableLocation": "BL_BeforeTonemapping",
+      "StateId": "E0D4A8D0-4BCC9153-43AA26B3-AAF6C3C6",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_6",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionCollectionParameter'",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection'TreeAndGrass'",
+        "ObjectPath": "War/Content/Materials/Collections/TreeAndGrass.0"
+      },
+      "ParameterName": "Player Location",
+      "ParameterId": "A5B1B3F9-4DFA7374-7D19D4AA-A2D07624",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_7",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionCollectionParameter'",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection'WeatherControl'",
+        "ObjectPath": "War/Content/Materials/Collections/WeatherControl.0"
+      },
+      "ParameterName": "Fog",
+      "ParameterId": "B6106E1F-494FA036-564837B6-36F96A6B",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 0.15,
+      "ParameterName": "Fog Texture Intensity",
+      "ExpressionGUID": "985909D4-48017A8B-593C03B8-97C5BB3B",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_1",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 0.1,
+      "ParameterName": "FogSpeed",
+      "ExpressionGUID": "183D3C3D-483FF036-3EE1989E-CA4E07A1",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_2",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 0.1,
+      "ParameterName": "FogBlend",
+      "ExpressionGUID": "DC056740-41A4580B-0C5875BD-483468B6",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_25",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 5.0,
+      "ParameterName": "WorldTiling",
+      "ExpressionGUID": "83D27414-4321A984-16A0F78E-FB4A2931",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_3",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 1.0,
+      "ParameterName": "Fog Power",
+      "ExpressionGUID": "A7AD34C7-43288004-2C370F9D-EBF57E0E",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_4",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "DefaultValue": 0.65,
+      "ParameterName": "Fog Texture Power",
+      "ExpressionGUID": "DBCCD4B7-402AB135-278709A5-47899AA3",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Coordinates": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionTextureCoordinate_0"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D'T_NoiseGeneral01'",
+        "ObjectPath": "War/Content/Captain/Effects/Textures/Particles/NoiseMasks/T_NoiseGeneral01.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_2",
+    "Outer": "WeatherFog",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Coordinates": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionAdd_4"
+      },
+      "Texture": {
+        "ObjectName": "Texture2D'TilingNoises01'",
+        "ObjectPath": "War/Content/FX/Textures/NoiseMasks/TilingNoises01.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material'WeatherFog'",
+        "ObjectPath": "War/Content/Materials/PostProcess/WeatherFog.0"
+      }
+    }
+  }
+]

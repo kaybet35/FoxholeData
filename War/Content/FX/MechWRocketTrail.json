@@ -1,0 +1,944 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_3",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_3",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_3",
+    "Outer": "ParticleSpriteEmitter_3",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'MechWRocketTrail:ParticleModuleRequired_3'",
+        "ObjectPath": "War/Content/FX/MechWRocketTrail.9"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleSpawnPerUnit'MechWRocketTrail:ParticleModuleSpawnPerUnit_0'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.15"
+        },
+        {
+          "ObjectName": "ParticleModuleLifetime'MechWRocketTrail:ParticleModuleLifetime_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'MechWRocketTrail:ParticleModuleSize_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.12"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'MechWRocketTrail:ParticleModuleVelocity_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.16"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'MechWRocketTrail:ParticleModuleColor_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.5"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'MechWRocketTrail:ParticleModuleRotation_2'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.10"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'MechWRocketTrail:ParticleModuleRotationRate_2'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.11"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'MechWRocketTrail:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.8"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'MechWRocketTrail:ParticleModuleColorScaleOverLife_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.6"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'MechWRocketTrail:ParticleModuleAccelerationConstant_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'MechWRocketTrail:ParticleModuleSizeMultiplyLife_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.13"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'MechWRocketTrail:ParticleModuleAccelerationDrag_1'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'MechWRocketTrail:ParticleModuleSpawn_3'",
+        "ObjectPath": "War/Content/FX/MechWRocketTrail.14"
+      },
+      "PeakActiveParticles": 123
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 10.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_1",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.05,
+        "MaxValue": 0.05,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.05
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.78,
+        "MaxValue": 0.78,
+        "MinValueVec": {
+          "X": 0.78,
+          "Y": 0.78,
+          "Z": 0.78
+        },
+        "MaxValueVec": {
+          "X": 0.78,
+          "Y": 0.78,
+          "Z": 0.78
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.78,
+            0.78,
+            0.78
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.03,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.03,
+          "Y": 0.03,
+          "Z": 0.03
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 17.5,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            0.9462526,
+            0.9462526,
+            0.9462526,
+            0.80768114,
+            0.80768114,
+            0.80768114,
+            0.6182152,
+            0.6182152,
+            0.6182152,
+            0.41178477,
+            0.41178477,
+            0.41178477,
+            0.22231887,
+            0.22231887,
+            0.22231887,
+            0.083747305,
+            0.083747305,
+            0.083747305,
+            0.03,
+            0.03,
+            0.03
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 62.999996,
+          "Values": [
+            0.0,
+            0.06777085,
+            0.23853585,
+            0.46431285,
+            0.69711983,
+            0.88897455,
+            0.992055,
+            0.99952453,
+            0.9973332,
+            0.99338794,
+            0.9877543,
+            0.9804982,
+            0.97168547,
+            0.9613819,
+            0.94965327,
+            0.9365655,
+            0.92218435,
+            0.9065757,
+            0.88980526,
+            0.87193894,
+            0.8530425,
+            0.83318186,
+            0.81242263,
+            0.79083085,
+            0.7684722,
+            0.7454126,
+            0.7217178,
+            0.6974536,
+            0.672686,
+            0.64748055,
+            0.62190324,
+            0.59601986,
+            0.56989616,
+            0.5435981,
+            0.51719135,
+            0.49074188,
+            0.46431524,
+            0.4379776,
+            0.41179454,
+            0.38583192,
+            0.36015567,
+            0.3348315,
+            0.30992523,
+            0.28550276,
+            0.26162967,
+            0.23837219,
+            0.21579576,
+            0.19396643,
+            0.17294984,
+            0.1528121,
+            0.13361855,
+            0.11543562,
+            0.09832853,
+            0.08236366,
+            0.067606196,
+            0.05412258,
+            0.041978303,
+            0.0312393,
+            0.021971222,
+            0.014240036,
+            0.008111268,
+            0.0036513216,
+            0.0009255952,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 64,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 2.0,
+        "MaxValue": 4.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0,
+            4.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "ROffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "ROffset2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 0.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0,
+                0.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "GOffset2",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'SmokeStacks'",
+        "ObjectPath": "War/Content/FX/Materials/SmokeStacks.0"
+      },
+      "SortMode": "PSORTMODE_Age_OldestFirst",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'MechWRocketTrail:ParticleModuleRequired_3.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_2",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_2",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 45.0,
+        "MaxValue": 30.0,
+        "MinValueVec": {
+          "X": 45.0,
+          "Y": 45.0,
+          "Z": 45.0
+        },
+        "MaxValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 30.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            45.0,
+            45.0,
+            45.0,
+            30.0,
+            30.0,
+            30.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 0.3,
+        "MaxValue": 2.1049438,
+        "MinValueVec": {
+          "X": 0.3,
+          "Y": 0.3,
+          "Z": 0.3
+        },
+        "MaxValueVec": {
+          "X": 2.1049438,
+          "Y": 2.1049438,
+          "Z": 2.1049438
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 62.999996,
+          "Values": [
+            0.3,
+            0.3,
+            0.3,
+            0.5657442,
+            0.5657442,
+            0.5657442,
+            0.9594094,
+            0.9594094,
+            0.9594094,
+            1.3710527,
+            1.3710527,
+            1.3710527,
+            1.6907312,
+            1.6907312,
+            1.6907312,
+            1.8147613,
+            1.8147613,
+            1.8147613,
+            1.8407652,
+            1.8407652,
+            1.8407652,
+            1.8652909,
+            1.8652909,
+            1.8652909,
+            1.8883742,
+            1.8883742,
+            1.8883742,
+            1.910052,
+            1.910052,
+            1.910052,
+            1.9303602,
+            1.9303602,
+            1.9303602,
+            1.9493352,
+            1.9493352,
+            1.9493352,
+            1.9670134,
+            1.9670134,
+            1.9670134,
+            1.9834312,
+            1.9834312,
+            1.9834312,
+            1.9986248,
+            1.9986248,
+            1.9986248,
+            2.0126307,
+            2.0126307,
+            2.0126307,
+            2.0254848,
+            2.0254848,
+            2.0254848,
+            2.0372238,
+            2.0372238,
+            2.0372238,
+            2.0478842,
+            2.0478842,
+            2.0478842,
+            2.0575018,
+            2.0575018,
+            2.0575018,
+            2.0661132,
+            2.0661132,
+            2.0661132,
+            2.073755,
+            2.073755,
+            2.073755,
+            2.080463,
+            2.080463,
+            2.080463,
+            2.086274,
+            2.086274,
+            2.086274,
+            2.0912237,
+            2.0912237,
+            2.0912237,
+            2.095349,
+            2.095349,
+            2.095349,
+            2.098686,
+            2.098686,
+            2.098686,
+            2.1012714,
+            2.1012714,
+            2.1012714,
+            2.103141,
+            2.103141,
+            2.103141,
+            2.104331,
+            2.104331,
+            2.104331,
+            2.1048787,
+            2.1048787,
+            2.1048787,
+            2.1048193,
+            2.1048193,
+            2.1048193,
+            2.1041899,
+            2.1041899,
+            2.1041899,
+            2.1030262,
+            2.1030262,
+            2.1030262,
+            2.101365,
+            2.101365,
+            2.101365,
+            2.0992424,
+            2.0992424,
+            2.0992424,
+            2.0966952,
+            2.0966952,
+            2.0966952,
+            2.0937588,
+            2.0937588,
+            2.0937588,
+            2.0904703,
+            2.0904703,
+            2.0904703,
+            2.086866,
+            2.086866,
+            2.086866,
+            2.0829818,
+            2.0829818,
+            2.0829818,
+            2.078854,
+            2.078854,
+            2.078854,
+            2.0745194,
+            2.0745194,
+            2.0745194,
+            2.0700142,
+            2.0700142,
+            2.0700142,
+            2.0653744,
+            2.0653744,
+            2.0653744,
+            2.0606368,
+            2.0606368,
+            2.0606368,
+            2.0558372,
+            2.0558372,
+            2.0558372,
+            2.0510125,
+            2.0510125,
+            2.0510125,
+            2.0461984,
+            2.0461984,
+            2.0461984,
+            2.0414317,
+            2.0414317,
+            2.0414317,
+            2.0367484,
+            2.0367484,
+            2.0367484,
+            2.032185,
+            2.032185,
+            2.032185,
+            2.027778,
+            2.027778,
+            2.027778,
+            2.0235636,
+            2.0235636,
+            2.0235636,
+            2.019578,
+            2.019578,
+            2.019578,
+            2.0158575,
+            2.0158575,
+            2.0158575,
+            2.0124385,
+            2.0124385,
+            2.0124385,
+            2.0093575,
+            2.0093575,
+            2.0093575,
+            2.0066504,
+            2.0066504,
+            2.0066504,
+            2.004354,
+            2.004354,
+            2.004354,
+            2.0025043,
+            2.0025043,
+            2.0025043,
+            2.001138,
+            2.001138,
+            2.001138,
+            2.000291,
+            2.000291,
+            2.000291,
+            2.0,
+            2.0,
+            2.0
+          ],
+          "Op": 1,
+          "EntryCount": 64,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 9.0,
+        "MaxValue": 9.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            9.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'MechWRocketTrail:ParticleModuleSpawn_3.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawnPerUnit",
+    "Name": "ParticleModuleSpawnPerUnit_0",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleSpawnPerUnit'",
+    "Properties": {
+      "UnitScalar": 100.0,
+      "SpawnPerUnit": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -50.0,
+        "MaxValue": 20.0,
+        "MinValueVec": {
+          "X": -50.0,
+          "Y": -10.0,
+          "Z": 10.0
+        },
+        "MaxValueVec": {
+          "X": -20.0,
+          "Y": 10.0,
+          "Z": 20.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -50.0,
+            -10.0,
+            10.0,
+            -20.0,
+            10.0,
+            20.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_3",
+    "Outer": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'MechWRocketTrail:ParticleSpriteEmitter_3.ParticleLODLevel_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "MechWRocketTrail",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'MechWRocketTrail:ParticleSpriteEmitter_3'",
+          "ObjectPath": "War/Content/FX/MechWRocketTrail.17"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -8000.0,
+          "Y": -8000.0,
+          "Z": -8000.0
+        },
+        "Max": {
+          "X": 8000.0,
+          "Y": 8000.0,
+          "Z": 8000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

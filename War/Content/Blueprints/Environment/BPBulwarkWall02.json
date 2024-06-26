@@ -1,0 +1,456 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBulwarkWall02_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.15"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPBulwarkWall02_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBulwarkWall02_C:BPStructureInteriorArea'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBulwarkWall02_C:BulwarkWallRoof'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.7"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBulwarkWall02_C:BulwarkWallBase02'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.6"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBulwarkWall02_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.8"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBulwarkWall02_C'Default__BPBulwarkWall02_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.2"
+    }
+  },
+  {
+    "Type": "BPBulwarkWall02_C",
+    "Name": "Default__BPBulwarkWall02_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/BPBulwarkWall02.BPBulwarkWall02_C'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 610.0,
+        "Y": 300.0,
+        "Z": 700.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockOnlyPawnVehicle",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -597.9662,
+        "Y": 164.51358,
+        "Z": 1782.7983
+      }
+    }
+  },
+  {
+    "Type": "BPStructureInteriorArea_C",
+    "Name": "BPStructureInteriorArea_GEN_VARIABLE",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPStructureInteriorArea.BPStructureInteriorArea_C'",
+    "Properties": {
+      "ToggleableComponentsTag": "RoofVisibility",
+      "BoxExtent": {
+        "X": 600.0,
+        "Y": 175.0,
+        "Z": 140.0
+      },
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPStructureInteriorArea_C'BPBulwarkWall02_C:BPStructureInteriorArea_GEN_VARIABLE'",
+              "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.4"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPStructureInteriorArea_C'BPBulwarkWall02_C:BPStructureInteriorArea_GEN_VARIABLE'",
+              "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.4"
+            },
+            "FunctionName": "OnEndOverlap"
+          }
+        ]
+      },
+      "RelativeLocation": {
+        "X": -600.0,
+        "Y": -7.5,
+        "Z": 610.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BPStructureInteriorArea",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPStructureInteriorArea_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPStructureInteriorArea.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BulwarkWallBase02",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BulwarkWallRoof",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBulwarkWall02_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.14"
+        }
+      ],
+      "VariableGuid": "B354AC4C-46494D0C-31EB3E99-4915FA74",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPBulwarkWall02_C:BulwarkWallBase02_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.16"
+      },
+      "VariableGuid": "8D9E3B18-44D89B44-F36E6697-47D7DFCD",
+      "InternalVariableName": "BulwarkWallBase02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPBulwarkWall02_C:BulwarkWallRoof_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.17"
+      },
+      "VariableGuid": "E91B46F6-46394195-41C1D884-06400325",
+      "InternalVariableName": "BulwarkWallRoof"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPStructureInteriorArea_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStructureInteriorArea.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPStructureInteriorArea_C'BPBulwarkWall02_C:BPStructureInteriorArea_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.4"
+      },
+      "VariableGuid": "9EC0DDA8-42E110F4-88D3C094-CBF8E7A4",
+      "InternalVariableName": "BPStructureInteriorArea"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPBulwarkWall02_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.3"
+      },
+      "VariableGuid": "B6253EB1-4C61B043-467FE4A6-3A71479A",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBulwarkWall02_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BPBulwarkWall02.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BulwarkWallBase02_GEN_VARIABLE",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BulwarkWallBase02'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/BulwarkWallBase02.2"
+      },
+      "ComponentTags": [
+        "CraneArmBlocker"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "BulwarkWallRoof_GEN_VARIABLE",
+    "Outer": "BPBulwarkWall02_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BulwarkWallRoof'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/BulwarkWallRoof.2"
+      },
+      "bCastHiddenShadow": true,
+      "BodyInstance": {
+        "CollisionProfileName": "GarrisonRoof",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "RoofVisibility",
+        "CraneArmBlocker"
+      ]
+    }
+  }
+]

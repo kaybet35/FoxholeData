@@ -1,0 +1,263 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'WaterSurfaceExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'WaterSurfaceExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WaterSurfaceExplosion_C:ExecuteUbergraph_WaterSurfaceExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'WaterSurfaceExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.0"
+      },
+      {
+        "ObjectName": "Function'WaterSurfaceExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.6"
+      },
+      {
+        "ObjectName": "Function'WaterSurfaceExplosion_C:ExecuteUbergraph_WaterSurfaceExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'WaterSurfaceExplosion_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.3"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WaterSurfaceExplosion": {
+        "ObjectName": "Function'WaterSurfaceExplosion_C:ExecuteUbergraph_WaterSurfaceExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'WaterSurfaceExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WaterSurfaceExplosion_C'Default__WaterSurfaceExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.2"
+    }
+  },
+  {
+    "Type": "WaterSurfaceExplosion_C",
+    "Name": "Default__WaterSurfaceExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/WaterSurfaceExplosion.WaterSurfaceExplosion_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'CollisionImpactSplash'",
+            "ObjectPath": "War/Content/FX/CollisionImpactSplash.102"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "LifeSpan": 0.0,
+            "FadeScreenSize": 0.0
+          }
+        }
+      ],
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'UnderwaterExplosion_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/UnderwaterExplosion_Cue.0"
+      },
+      "CameraShake": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeCameraShake_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeCameraShake.0"
+      },
+      "CameraShakeOuterRadius": 1800.0,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__WaterSurfaceExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.7"
+      },
+      "InitialLifeSpan": 30.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__WaterSurfaceExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.7"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_WaterSurfaceExplosion",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WaterSurfaceExplosion",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'WaterSurfaceExplosion_C:ExecuteUbergraph_WaterSurfaceExplosion.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 3000.0,
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 114,
+        "G": 174,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAE72"
+      },
+      "bAffectsWorld": false
+    }
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Properties": {
+      "Radius": 500.0,
+      "ImpulseStrength": 100000.0,
+      "DestructibleDamage": 100.0,
+      "ObjectTypesToAffect": [
+        59
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'WaterSurfaceExplosion_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.8"
+      },
+      "ParentComponentOrVariableName": "ExplosionLight",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED95043C-4BF9474F-1DC08DA0-C2DD8674",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'WaterSurfaceExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.9"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "WaterSurfaceExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'WaterSurfaceExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'WaterSurfaceExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'WaterSurfaceExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.11"
+      }
+    }
+  }
+]

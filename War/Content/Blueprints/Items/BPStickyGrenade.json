@@ -1,0 +1,199 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPStickyGrenade_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPStickyGrenade_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'StickyBombProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPStickyGrenade_C'Default__BPStickyGrenade_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.1"
+    }
+  },
+  {
+    "Type": "BPStickyGrenade_C",
+    "Name": "Default__BPStickyGrenade_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPStickyGrenade.BPStickyGrenade_C'",
+    "Properties": {
+      "BombMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPStickyGrenade_C:BombMesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.8"
+      },
+      "AttachCue": {
+        "ObjectName": "SoundCue'StickyGrenadeImpactCue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/StickyBomb/StickyGrenadeImpactCue.0"
+      },
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPStickyGrenade_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.4"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPStickyGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.9"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPStickyGrenade_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.3"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPStickyGrenade_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.2"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'StickybombExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/StickybombExplosion.1"
+      },
+      "ExplosiveCodeName": "StickyBomb",
+      "ProjectileDeathDelay": 3.0,
+      "bProjectImpactDownward": true,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPStickyGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.9"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPStickyGrenade_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'FuseBurn'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/StickyBomb/FuseBurn.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPStickyGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPStickyGrenade_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'StickybombSmoke'",
+        "ObjectPath": "War/Content/FX/StickybombSmoke.17"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPStickyGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.9"
+      },
+      "RelativeLocation": {
+        "X": -49.799984,
+        "Y": 9.1552734E-05,
+        "Z": 2.2867813
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPStickyGrenade_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Properties": {
+      "bInitialVelocityInLocalSpace": false,
+      "ProjectileGravityScale": 1.0,
+      "Bounciness": 0.08,
+      "Friction": 0.55,
+      "BounceVelocityStopSimulatingThreshold": 8.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPStickyGrenade_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPStickyGrenade_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.5"
+      },
+      "VariableGuid": "83ED0D95-46E308D3-5CF402B2-A776B9AF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPStickyGrenade_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPStickyGrenade_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.6"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "BombMesh",
+    "Outer": "Default__BPStickyGrenade_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'StickyBomb'",
+        "ObjectPath": "War/Content/Meshes/Weapons/StickyBomb.0"
+      },
+      "OverrideMaterials": [
+        null,
+        null
+      ],
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPStickyGrenade_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPStickyGrenade.9"
+      },
+      "RelativeLocation": {
+        "X": -28.043678,
+        "Y": 3.0517578E-05,
+        "Z": 1.2346992
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPStickyGrenade_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 10.0
+    }
+  }
+]

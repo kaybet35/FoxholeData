@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ZombieMoan2",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ZombieMoan2:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan2.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bOverrideConcurrency": true,
+      "ConcurrencyOverrides": {
+        "MaxCount": 5
+      },
+      "Duration": 3.5115192,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ZombieMoan2",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'ZombieMoan2:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan2.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "ZombieMoan2",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        0.005,
+        0.005,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ZombieMoan2:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan2.3"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'ZombieMoan2:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Zombie/ZombieMoan2.4"
+        },
+        null
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "ZombieMoan2",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Zombie/ZombieEvo2Idle01.ZombieEvo2Idle01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "ZombieMoan2",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Zombie/ZombieEvo2Idle03.ZombieEvo2Idle03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

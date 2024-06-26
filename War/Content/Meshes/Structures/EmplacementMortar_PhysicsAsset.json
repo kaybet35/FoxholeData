@@ -1,0 +1,296 @@
+[
+  {
+    "Type": "PhysicsAsset",
+    "Name": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsAsset'",
+    "Properties": {
+      "BoundsBodies": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "SkeletalBodySetups": [
+        {
+          "ObjectName": "SkeletalBodySetup'EmplacementMortar_PhysicsAsset:SkeletalBodySetup_1'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.4"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'EmplacementMortar_PhysicsAsset:SkeletalBodySetup_2'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.5"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'EmplacementMortar_PhysicsAsset:SkeletalBodySetup_4'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.6"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'EmplacementMortar_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.7"
+        },
+        {
+          "ObjectName": "SkeletalBodySetup'EmplacementMortar_PhysicsAsset:SkeletalBodySetup_6'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.8"
+        }
+      ],
+      "ConstraintSetup": [
+        {
+          "ObjectName": "PhysicsConstraintTemplate'EmplacementMortar_PhysicsAsset:PhysicsConstraintTemplate_1'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.1"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'EmplacementMortar_PhysicsAsset:PhysicsConstraintTemplate_3'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.2"
+        },
+        {
+          "ObjectName": "PhysicsConstraintTemplate'EmplacementMortar_PhysicsAsset:PhysicsConstraintTemplate_4'",
+          "ObjectPath": "War/Content/Meshes/Structures/EmplacementMortar_PhysicsAsset.3"
+        }
+      ],
+      "ThumbnailInfo": null
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_1",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "pistonBottom",
+        "ConstraintBone1": "pistonBottom",
+        "ConstraintBone2": "horizontalRotationPivot",
+        "Pos2": {
+          "X": -27.994356,
+          "Y": 85.34311,
+          "Z": 8.628088
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_3",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "verticalRotationPivot",
+        "ConstraintBone1": "verticalRotationPivot",
+        "ConstraintBone2": "horizontalRotationPivot",
+        "Pos2": {
+          "X": -27.994356,
+          "Y": -29.475697,
+          "Z": 54.02343
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "PhysicsConstraintTemplate",
+    "Name": "PhysicsConstraintTemplate_4",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Properties": {
+      "DefaultInstance": {
+        "JointName": "pistonTop",
+        "ConstraintBone1": "pistonTop",
+        "ConstraintBone2": "verticalRotationPivot",
+        "Pos2": {
+          "X": 0.0,
+          "Y": 58.100792,
+          "Z": 52.353264
+        },
+        "ProfileInstance": {
+          "ConeLimit": {
+            "Swing1Motion": "ACM_Limited",
+            "Swing2Motion": "ACM_Limited"
+          },
+          "TwistLimit": {
+            "TwistMotion": "ACM_Limited"
+          }
+        }
+      }
+    }
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_1",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 10.041927,
+              "Y": -52.96045,
+              "Z": 30.469673
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 150.0,
+            "Y": 50.0,
+            "Z": 60.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "horizontalRotationPivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "AA87F60D496EA1527EB6F68A6C843C49"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_2",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.023049831,
+              "Y": -10.833774,
+              "Z": 18.889975
+            },
+            "Rotation": {
+              "Pitch": -29.832653,
+              "Yaw": -90.00001,
+              "Roll": 0.061772183
+            },
+            "Radius": 29.526423,
+            "Length": 35.286118,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "pistonBottom",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "F7EEBD5246DF7A0E7D2DD18E56BB6D06"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_4",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": -0.0022306442,
+              "Y": 28.948997,
+              "Z": 39.274773
+            },
+            "Rotation": {
+              "Pitch": 35.0309,
+              "Yaw": -89.99968,
+              "Roll": -0.0023251297
+            },
+            "Radius": 22.798882,
+            "Length": 95.3693,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "verticalRotationPivot",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "618718EB48D783A9CDD1D5BD64B7A946"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_5",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "SphylElems": [
+          {
+            "Center": {
+              "X": 0.00091838837,
+              "Y": 14.918118,
+              "Z": -25.360054
+            },
+            "Rotation": {
+              "Pitch": -30.470592,
+              "Yaw": -89.99999,
+              "Roll": 9.113369E-05
+            },
+            "Radius": 20.61277,
+            "Length": 38.637104,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "pistonTop",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "409A558044267B00977E6DBA1A6E1D76"
+  },
+  {
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_6",
+    "Outer": "EmplacementMortar_PhysicsAsset",
+    "Class": "UScriptClass'SkeletalBodySetup'",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": -0.08703613
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 300.0,
+            "Y": 300.0,
+            "Z": 15.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "root",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "726838154FB8390E19AE37A87792695C"
+  }
+]

@@ -1,0 +1,713 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_1",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatUniform",
+    "Name": "DistributionFloatUniform_0",
+    "Outer": "ParticleModuleParameterDynamic_0",
+    "Class": "UScriptClass'DistributionFloatUniform'",
+    "Properties": {
+      "Min": -1.0,
+      "Max": 1.0,
+      "bCanBeBaked": false
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_1",
+    "Outer": "ParticleSpriteEmitter_1",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'GrenadeLauncherMF:ParticleModuleRequired_1'",
+        "ObjectPath": "War/Content/FX/GrenadeLauncherMF.9"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'GrenadeLauncherMF:ParticleModuleLifetime_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'GrenadeLauncherMF:ParticleModuleSize_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.12"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'GrenadeLauncherMF:ParticleModuleVelocity_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'GrenadeLauncherMF:ParticleModuleColor_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.5"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'GrenadeLauncherMF:ParticleModuleRotation_0'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.10"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'GrenadeLauncherMF:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.8"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'GrenadeLauncherMF:ParticleModuleRotationRate_0'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.11"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'GrenadeLauncherMF:ParticleModuleAccelerationConstant_0'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.3"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'GrenadeLauncherMF:ParticleModuleSizeMultiplyLife_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.13"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'GrenadeLauncherMF:ParticleModuleColorScaleOverLife_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.6"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'GrenadeLauncherMF:ParticleModuleAccelerationDrag_0'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.4"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'GrenadeLauncherMF:ParticleModuleSpawn_1'",
+        "ObjectPath": "War/Content/FX/GrenadeLauncherMF.14"
+      },
+      "PeakActiveParticles": 7
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_0",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": -100.0,
+        "Y": 0.0,
+        "Z": 80.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 3.0,
+        "MaxValue": 3.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            3.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.71,
+        "MaxValue": 0.71,
+        "MinValueVec": {
+          "X": 0.71,
+          "Y": 0.71,
+          "Z": 0.71
+        },
+        "MaxValueVec": {
+          "X": 0.71,
+          "Y": 0.71,
+          "Z": 0.71
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.71,
+            0.71,
+            0.71
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 0.8,
+        "MaxValue": 0.8,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.8
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MinValue": -0.059155673,
+        "MaxValue": 0.8979805,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 31.0,
+          "Values": [
+            0.0,
+            0.1405896,
+            0.28961268,
+            0.4388018,
+            0.5798896,
+            0.7046085,
+            0.8046913,
+            0.8718705,
+            0.88503313,
+            0.731719,
+            0.59064674,
+            0.46679163,
+            0.3590806,
+            0.26644796,
+            0.1878613,
+            0.122287564,
+            0.0686944,
+            0.026049111,
+            -0.0066810595,
+            -0.03052868,
+            -0.046526253,
+            -0.055695683,
+            -0.059065744,
+            -0.057695646,
+            -0.05261779,
+            -0.04486489,
+            -0.035469662,
+            -0.025464537,
+            -0.015882503,
+            -0.0077559133,
+            -0.0021174885,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 2.0,
+        "MaxValue": 1.2,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            2.0,
+            1.2
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": -1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                -1.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": -1.0,
+            "MaxValue": 1.0,
+            "Distribution": {
+              "ObjectName": "DistributionFloatUniform'GrenadeLauncherMF:ParticleModuleParameterDynamic_0.DistributionFloatUniform_0'",
+              "ObjectPath": "War/Content/FX/GrenadeLauncherMF.1"
+            },
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                -1.0,
+                1.0
+              ],
+              "Op": 0,
+              "EntryCount": 0,
+              "EntryStride": 0,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": false,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 1.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                1.0
+              ],
+              "Op": 1,
+              "EntryCount": 1,
+              "EntryStride": 1,
+              "SubEntryStride": 0,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "UpdateFlags": 12,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Steam'",
+        "ObjectPath": "War/Content/FX/Materials/Steam.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'GrenadeLauncherMF:ParticleModuleRequired_1.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "EmitterLoops": 1,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.15,
+        "MaxValue": 0.15,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.15,
+            0.15
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 20.0,
+        "MaxValue": 120.0,
+        "MinValueVec": {
+          "X": 20.0,
+          "Y": 20.0,
+          "Z": 20.0
+        },
+        "MaxValueVec": {
+          "X": 120.0,
+          "Y": 12.0,
+          "Z": 12.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0,
+            20.0,
+            20.0,
+            120.0,
+            12.0,
+            12.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.0,
+        "MaxValue": 3.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 3.0,
+          "Z": 3.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.3994073,
+            1.3994073,
+            1.3994073,
+            1.7463422,
+            1.7463422,
+            1.7463422,
+            2.0495498,
+            2.0495498,
+            2.0495498,
+            2.3177745,
+            2.3177745,
+            2.3177745,
+            2.5597615,
+            2.5597615,
+            2.5597615,
+            2.784255,
+            2.784255,
+            2.784255,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstList": [
+        {
+          "Count": 5,
+          "CountLow": -1,
+          "Time": 0.0
+        }
+      ],
+      "BurstScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -30.0,
+        "MaxValue": 150.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": -30.0,
+          "Z": -3.0
+        },
+        "MaxValueVec": {
+          "X": 150.0,
+          "Y": 30.0,
+          "Z": 3.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0,
+            -30.0,
+            -3.0,
+            150.0,
+            30.0,
+            3.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_1",
+    "Outer": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'GrenadeLauncherMF:ParticleSpriteEmitter_1.ParticleLODLevel_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "GrenadeLauncherMF",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'GrenadeLauncherMF:ParticleSpriteEmitter_1'",
+          "ObjectPath": "War/Content/FX/GrenadeLauncherMF.16"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "FixedRelativeBoundingBox": {
+        "Min": {
+          "X": -25000.0,
+          "Y": -25000.0,
+          "Z": -25000.0
+        },
+        "Max": {
+          "X": 25000.0,
+          "Y": 25000.0,
+          "Z": 25000.0
+        },
+        "IsValid": 1
+      },
+      "bUseFixedRelativeBoundingBox": true,
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPConstructionVehicleProxy_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPConstructionVehicleProxy_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BuildableStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPConstructionVehicleProxy_C'Default__BPConstructionVehicleProxy_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.1"
+    }
+  },
+  {
+    "Type": "BPConstructionVehicleProxy_C",
+    "Name": "Default__BPConstructionVehicleProxy_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPConstructionVehicleProxy.BPConstructionVehicleProxy_C'",
+    "Properties": {
+      "BuildGhostClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPConstructionVehicleProxyGhost_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxyGhost.1"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "4805B3D04DA9C8D7B0D77AB7CFE23D7D",
+        "SourceString": "A vehicle used to build large structures.",
+        "LocalizedString": "A vehicle used to build large structures."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'ConstructionVehicleIcon'",
+        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/ConstructionVehicleIcon.0"
+      },
+      "BuildOrder": 3,
+      "BuildLocationType": "EBuildLocationType::Anywhere",
+      "bIsVehicleProxy": true,
+      "ValidBuildTools": 1,
+      "CodeName": "Construction",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "6B24FD3749D698B926AB4EB742380547",
+        "SourceString": "Construction Vehicle",
+        "LocalizedString": "Construction Vehicle"
+      },
+      "ProfileType": "EStructureProfileType::VehicleProxy",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPConstructionVehicleProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.2"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPConstructionVehicleProxy_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.3"
+      },
+      "MaxHealth": 20,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPConstructionVehicleProxy_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.7"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPConstructionVehicleProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.2"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPConstructionVehicleProxy_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPConstructionVehicleProxy_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPConstructionVehicleProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPConstructionVehicleProxy_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPConstructionVehicleProxy_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.4"
+      },
+      "VariableGuid": "F1104B0B-469E1A11-A2E160A4-8EF6FEC2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPConstructionVehicleProxy_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPConstructionVehicleProxy_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPConstructionVehicleProxy.5"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPConstructionVehicleProxy_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

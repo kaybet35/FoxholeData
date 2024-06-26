@@ -1,0 +1,406 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "BuildSocket",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPDeployedTripod_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPDeployedTripod_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DeployedTripod'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPDeployedTripod_C:BuildSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDeployedTripod_C:SkeletalMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDeployedTripod_C:MultiplexedStaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.7"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPDeployedTripod_C'Default__BPDeployedTripod_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.2"
+    }
+  },
+  {
+    "Type": "BPDeployedTripod_C",
+    "Name": "Default__BPDeployedTripod_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPDeployedTripod.BPDeployedTripod_C'",
+    "Properties": {
+      "bIsBuiltOnLandscape": false,
+      "BuildGhostClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPDeployedTripodGhost_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripodGhost.1"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'DeployableTripodItemIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/DeployableTripodItemIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Defense",
+      "ValidBuildTools": 1,
+      "CodeName": "DeployedTripod",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "DA7DF8C74D9859AE0E5BE08B5C2AFD1A",
+        "SourceString": "Deployed Tripod",
+        "LocalizedString": "Deployed Tripod"
+      },
+      "ArmourType": "EArmourType::Tier1Tank",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedTripod_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPDeployedTripod_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "MaxHealth": 750,
+      "Health": 750,
+      "DropLocationOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "IsVaultable": false,
+      "ScreenToUse": "ESimScreen::StorageBox",
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPDeployedTripod_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.16"
+      },
+      "NetCullDistanceSquared": 25000000.0,
+      "MinNetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedTripod_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPDeployedTripod_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPDeployedTripod_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 48.0,
+        "Y": 48.0,
+        "Z": 210.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDeployedTripod_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.3"
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "BuildSocket_GEN_VARIABLE",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 256,
+          "SocketTypeCategory": 128,
+          "Tag": "None",
+          "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "MultiplexedStaticMeshComponent",
+    "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
+    "Properties": {
+      "MeshStops": [
+        {
+          "Threshold": 0,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainerCritical'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerCritical.2"
+          }
+        },
+        {
+          "Threshold": 33,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainerDamaged'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerDamaged.2"
+          }
+        },
+        {
+          "Threshold": 66,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainer'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainer.2"
+          }
+        }
+      ],
+      "InputValue": 100,
+      "SelectedMeshIndex": 2
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedStaticMesh",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SkeletalMesh",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPDeployedTripod_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.9"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MultiplexedStaticMeshComponent'BPDeployedTripod_C:MultiplexedStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.6"
+      },
+      "VariableGuid": "D667579F-46309463-6D3D0483-D468D96E",
+      "InternalVariableName": "MultiplexedStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPDeployedTripod_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.15"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "27352967-404B9A8B-3B66EFAA-7A92B6AA",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPDeployedTripod_C:BuildSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.5"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BD67E563-483AE286-4032AFB8-725CA3FD",
+      "InternalVariableName": "BuildSocket"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPDeployedTripod_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedTripod.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BPDeployedTripod_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Tripod_C'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_Tripod.1"
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_DeployableTripod'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_DeployableTripod.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "bGenerateOverlapEvents": true,
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPDeployedTripod_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

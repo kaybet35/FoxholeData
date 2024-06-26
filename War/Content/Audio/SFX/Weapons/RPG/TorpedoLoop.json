@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "TorpedoLoop",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeAttenuation'TorpedoLoop:SoundNodeAttenuation_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/TorpedoLoop.1"
+      },
+      "VolumeMultiplier": 2.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'RocketFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/RocketFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "TorpedoLoop",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'MuffledExplosion'",
+        "ObjectPath": "War/Content/Audio/Attenuations/MuffledExplosion.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'TorpedoLoop:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/TorpedoLoop.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "TorpedoLoop",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/RPG/RPGRocketLoop.RPGRocketLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'RPGRocketLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/RPGRocketLoop.0"
+    }
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "ParticleSystem",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.15"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ModificationTemplate'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionTargetRangeC_C:ParticleSystem'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionTargetRangeC_C:Lantern'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.6"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionTargetRangeC_C:Collision'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.4"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionTargetRangeC_C:Locker01'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.7"
+      },
+      {
+        "ObjectName": "ObjectProperty'FortGarrisionTargetRangeC_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.5"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "FortGarrisionTargetRangeC_C'Default__FortGarrisionTargetRangeC_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.2"
+    }
+  },
+  {
+    "Type": "FortGarrisionTargetRangeC_C",
+    "Name": "Default__FortGarrisionTargetRangeC_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.FortGarrisionTargetRangeC_C'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Collision_GEN_VARIABLE",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 220.0,
+        "Y": 40.0,
+        "Z": 100.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.00024414062,
+        "Y": -47.41949,
+        "Z": 123.58263
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Collision",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Lantern",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Locker01",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'StaticLight'",
+        "ObjectPath": "War/Content/FX/StaticLight.9"
+      },
+      "RelativeLocation": {
+        "X": 34.25267,
+        "Y": -44.555916,
+        "Z": 103.78388
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 179.9998,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'FortGarrisionTargetRangeC_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.14"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.12"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.11"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.13"
+        }
+      ],
+      "VariableGuid": "59F9E07F-46E8BAEA-B3D4D28E-EADB13D5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'FortGarrisionTargetRangeC_C:Lantern_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.16"
+      },
+      "VariableGuid": "43F66DBB-4FE86667-A7D2DCAD-3247E28E",
+      "InternalVariableName": "Lantern"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'FortGarrisionTargetRangeC_C:Collision_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.3"
+      },
+      "VariableGuid": "3D7654C5-4A8E9357-865FDAB3-BE52E782",
+      "InternalVariableName": "Collision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'FortGarrisionTargetRangeC_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.8"
+      },
+      "VariableGuid": "770D59CA-4CD33AB9-28AFB4A4-A0F71C57",
+      "InternalVariableName": "ParticleSystem"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'FortGarrisionTargetRangeC_C:Locker01_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.17"
+      },
+      "VariableGuid": "25C22E99-4DC0FF4B-AFA0C492-0B2D3CE3",
+      "InternalVariableName": "Locker01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.10"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.14"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.12"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.11"
+        },
+        {
+          "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'FortGarrisionTargetRangeC_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/FortGarrisionTargetRangeC.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Lantern_GEN_VARIABLE",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Lantern'",
+        "ObjectPath": "War/Content/Meshes/Structures/Lantern.2"
+      },
+      "RelativeLocation": {
+        "X": 33.78926,
+        "Y": -44.891304,
+        "Z": 82.41632
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 33.916756,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Locker01_GEN_VARIABLE",
+    "Outer": "FortGarrisionTargetRangeC_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FortIModTargetRangeC'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/InfastructureMod/FortIModTargetRangeC.2"
+      },
+      "bReceivesDecals": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -47.0645,
+        "Z": 0.0007324219
+      }
+    }
+  }
+]

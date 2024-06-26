@@ -1,0 +1,193 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MortarFLImpact_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.5"
+      },
+      "VolumeMultiplier": 0.5,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 10001.25,
+      "MaxDistance": 15200.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Grenades'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Grenades.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeBranch",
+    "Name": "SoundNodeBranch_0",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeBranch'",
+    "Properties": {
+      "BoolParameterName": "PlayImpact",
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MortarFLImpact_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.6"
+        },
+        null,
+        {
+          "ObjectName": "SoundNodeWavePlayer'MortarFLImpact_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 1.25,
+      "DelayMax": 1.25,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeEnveloper'MortarFLImpact_Cue:SoundNodeEnveloper_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeEnveloper",
+    "Name": "SoundNodeEnveloper_0",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeEnveloper'",
+    "Properties": {
+      "VolumeCurve": {
+        "EditorCurveData": {
+          "Keys": [
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 0.0,
+              "Value": 0.0,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            },
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 0.5,
+              "Value": 1.0,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            }
+          ]
+        }
+      },
+      "PitchCurve": {
+        "EditorCurveData": {
+          "Keys": [
+            {
+              "InterpMode": "RCIM_Linear",
+              "TangentMode": "RCTM_Auto",
+              "TangentWeightMode": "RCTWM_WeightedNone",
+              "Time": 0.0,
+              "Value": 1.0,
+              "ArriveTangent": 0.0,
+              "ArriveTangentWeight": 0.0,
+              "LeaveTangent": 0.0,
+              "LeaveTangentWeight": 0.0
+            }
+          ]
+        }
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MortarFLImpact_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeBranch'MortarFLImpact_Cue:SoundNodeBranch_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.1"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'MortarFLImpact_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.8,
+      "PitchMax": 1.2,
+      "VolumeMin": 0.8,
+      "VolumeMax": 1.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'MortarFLImpact_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/MortarFLImpact_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Flare/FlareExplosion.FlareExplosion",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FlareExplosion'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/FlareExplosion.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "MortarFLImpact_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Flare/FlareActiveLoop.FlareActiveLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'FlareActiveLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Flare/FlareActiveLoop.0"
+    }
+  }
+]

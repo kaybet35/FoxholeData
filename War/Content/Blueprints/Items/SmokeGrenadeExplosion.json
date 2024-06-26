@@ -1,0 +1,152 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SmokeGrenadeExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'SmokeGrenadeExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SmokeGrenadeExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SmokeGrenadeExplosion_C'Default__SmokeGrenadeExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.1"
+    }
+  },
+  {
+    "Type": "SmokeGrenadeExplosion_C",
+    "Name": "Default__SmokeGrenadeExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/SmokeGrenadeExplosion.SmokeGrenadeExplosion_C'",
+    "Properties": {
+      "ObscuringSphere": {
+        "ObjectName": "ObscuringSphereComponent'Default__SmokeGrenadeExplosion_C:ObscuringSphere'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.2"
+      },
+      "MinimumVisibilityRadius": 10.0,
+      "VisibilityRadiusCurve": {
+        "ObjectName": "CurveFloat'SmokeVisibilityRadiusCurve'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeVisibilityRadiusCurve.0"
+      },
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'SmokeGrenadeBasic'",
+            "ObjectPath": "War/Content/FX/SmokeGrenadeBasic.31"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 200.0,
+              "Y": 200.0,
+              "Z": 200.0
+            },
+            "LifeSpan": 500.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "RadialHitImpact": {
+        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      },
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'SmokeGrenadeHiss_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.0"
+      },
+      "bDoNotOrientToImpactNormal": true,
+      "bManualDestruction": true,
+      "ManualDeactivateTime": 3.0,
+      "bHasPersistentEffect": true,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__SmokeGrenadeExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.3"
+      },
+      "InitialLifeSpan": 26.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__SmokeGrenadeExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.3"
+      }
+    }
+  },
+  {
+    "Type": "ObscuringSphereComponent",
+    "Name": "ObscuringSphere",
+    "Outer": "Default__SmokeGrenadeExplosion_C",
+    "Class": "UScriptClass'ObscuringSphereComponent'",
+    "Properties": {
+      "MinimumVisibilityRadius": 200.0,
+      "SphereRadius": 200.0,
+      "AttachParent": {
+        "ObjectName": "PointLightComponent'Default__SmokeGrenadeExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.3"
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__SmokeGrenadeExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 3000.0,
+      "Intensity": 0.0,
+      "LightColor": {
+        "B": 114,
+        "G": 174,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAE72"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SmokeGrenadeExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SmokeGrenadeExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.4"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "SmokeGrenadeExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'SmokeGrenadeExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/SmokeGrenadeExplosion.5"
+      }
+    }
+  }
+]

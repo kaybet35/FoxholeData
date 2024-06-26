@@ -1,0 +1,1258 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "FieldGun states",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "movement",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6,
+                8,
+                7
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 15,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 9,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                10
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Reloading",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 16,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 11,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                12
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.02,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_FieldArtilleryCol_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_FieldArtilleryCol_Skeleton.7"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_BlendListByBool_9A95D7BF43FD91083EF6A79502AEAC75'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.18"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_RotationOffsetBlendSpace_2881E04B49C33BA60302AE9D5BA20BF3'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_BlendSpacePlayer_303B3C1A40A77D51111C15B70710FEAA'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.19"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_FieldArtilleryFactions_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.15"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.23"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_FieldArtilleryFactions_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.14"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerReloading",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerReloading'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_4CC07236408F5C3709641D8C7BB7A5BE'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.32"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_83C53CB24BBB7175D6A73FA8BFAE7CFF'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.33"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_C697CF6C4E7AA06245FA7DA3AEA1B708'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.34"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerReloading",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerReloading'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_2D2F142B4B4530B0CCD21D96B9442D96'",
+            "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.31"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'SimVehicleGunnerSupportAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.0"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.13"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.15"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.14"
+      },
+      {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_Root_6558F69F4A5085177D730495B48A92DE'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_2D2F142B4B4530B0CCD21D96B9442D96'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_C697CF6C4E7AA06245FA7DA3AEA1B708'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_83C53CB24BBB7175D6A73FA8BFAE7CFF'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_TransitionResult_4CC07236408F5C3709641D8C7BB7A5BE'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_D37C8145499ED1AD7B6E088C0FD1E2F9'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_StateResult_0119B7C040BCC80A772F6A9C0D97672F'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_FD76B3334C40DAAA2D71C3A872A05106'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_StateResult_73CD807D4CD3571EE9EB699ED30D1350'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_BlendSpacePlayer_303B3C1A40A77D51111C15B70710FEAA'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_LayeredBoneBlend_7AAAF21E466A1D31227E848B6ABF337E'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_StateResult_7C30929440C08FE9297DBBA8327E15BB'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_StateMachine_FA5FCDF5441F271B4098A7958002D2CA'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_RotationOffsetBlendSpace_2881E04B49C33BA60302AE9D5BA20BF3'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_SequencePlayer_EE767558436364A0EC70228BDBD42B9F'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraphNode_BlendListByBool_9A95D7BF43FD91083EF6A79502AEAC75'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.18"
+      },
+      {
+        "ObjectName": "IntProperty'ABP_FieldArtilleryFactions_C:WheelRotationSpeedFactor'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.17"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_FieldArtilleryFactions": {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D": {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.14"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8": {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.15"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_FieldArtilleryFactions_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.13"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_FieldArtilleryFactions_C'Default__ABP_FieldArtilleryFactions_C'",
+      "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.2"
+    }
+  },
+  {
+    "Type": "ABP_FieldArtilleryFactions_C",
+    "Name": "Default__ABP_FieldArtilleryFactions_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.ABP_FieldArtilleryFactions_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_6558F69F4A5085177D730495B48A92DE": {
+        "Result": {
+          "LinkID": 17
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_2D2F142B4B4530B0CCD21D96B9442D96": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_C697CF6C4E7AA06245FA7DA3AEA1B708": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_83C53CB24BBB7175D6A73FA8BFAE7CFF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4CC07236408F5C3709641D8C7BB7A5BE": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_D37C8145499ED1AD7B6E088C0FD1E2F9": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldArtillery_reloading'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/Anim_FieldArtillery_reloading.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_0119B7C040BCC80A772F6A9C0D97672F": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_FD76B3334C40DAAA2D71C3A872A05106": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldArtillery_shooting'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/Anim_FieldArtillery_shooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_73CD807D4CD3571EE9EB699ED30D1350": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldArtillery_movingPose_speed460_44696'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/Anim_FieldArtillery_movingPose_speed460_44696.0"
+        },
+        "PlayRateBasis": 460.44696,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldArtillery_movingPose_speed460_44696'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/Anim_FieldArtillery_movingPose_speed460_44696.0"
+        },
+        "PlayRateBasis": 460.44696,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_303B3C1A40A77D51111C15B70710FEAA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_FieldArtilleryFactions_Lean'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/BS_FieldArtilleryFactions_Lean.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_7AAAF21E466A1D31227E848B6ABF337E": {
+        "BasePose": {
+          "LinkID": 11
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 10
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wheel_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "wheel_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "C3E8BD6F-4E0CA623-E7F5FBB9-2DF218C2",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_StateResult_7C30929440C08FE9297DBBA8327E15BB": {
+        "Result": {
+          "LinkID": 12
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_FA5FCDF5441F271B4098A7958002D2CA": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_RotationOffsetBlendSpace_2881E04B49C33BA60302AE9D5BA20BF3": {
+        "BasePose": {
+          "LinkID": 14
+        },
+        "LODThreshold": -1,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": false,
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "AimOffsetBlendSpace1D'AO_FieldArtilleryFactions_pitchAim'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/AO_FieldArtilleryFactions_pitchAim.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_EE767558436364A0EC70228BDBD42B9F": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_FieldArtilleryCol_exploding'",
+          "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/Anim_FieldArtilleryCol_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendListByBool_9A95D7BF43FD91083EF6A79502AEAC75": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 16
+          },
+          {
+            "LinkID": 15
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "WheelRotationSpeedFactor": 230
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_6558F69F4A5085177D730495B48A92DE",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_EqualEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.6"
+      },
+      {
+        "ObjectName": "IntProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_Multiply_IntInt_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.16"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_Multiply_IntFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.8"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_Multiply_IntFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.9"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_EqualEqual_FloatFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.7"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_SelectFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.10"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_FieldArtilleryFactions_C:ExecuteUbergraph_ABP_FieldArtilleryFactions.CallFunc_SelectFloat_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.11"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_FloatFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_IntFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_Multiply_IntFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_SelectFloat_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'FloatProperty'"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_FieldArtilleryFactions_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Field_vehicles/FieldArtilleryFactions/ABP_FieldArtilleryFactions.12"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldArtilleryFactions_AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "CallFunc_Multiply_IntInt_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_FieldArtilleryFactions",
+    "Class": "UScriptClass'IntProperty'"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "WheelRotationSpeedFactor",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_9A95D7BF43FD91083EF6A79502AEAC75",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_303B3C1A40A77D51111C15B70710FEAA",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_7AAAF21E466A1D31227E848B6ABF337E",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_RotationOffsetBlendSpace_2881E04B49C33BA60302AE9D5BA20BF3",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_RotationOffsetBlendSpace'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_239A6E744530D72EEE12048B7C4B546D",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_5D1C03954A82E85CC0B244A7FB5BDDF8",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D37C8145499ED1AD7B6E088C0FD1E2F9",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_EE767558436364A0EC70228BDBD42B9F",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_FD76B3334C40DAAA2D71C3A872A05106",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_FA5FCDF5441F271B4098A7958002D2CA",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_0119B7C040BCC80A772F6A9C0D97672F",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_73CD807D4CD3571EE9EB699ED30D1350",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7C30929440C08FE9297DBBA8327E15BB",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_2D2F142B4B4530B0CCD21D96B9442D96",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_4CC07236408F5C3709641D8C7BB7A5BE",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_83C53CB24BBB7175D6A73FA8BFAE7CFF",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_C697CF6C4E7AA06245FA7DA3AEA1B708",
+    "Outer": "ABP_FieldArtilleryFactions_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

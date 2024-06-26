@@ -1,0 +1,339 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "BasicLadderVines_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BasicLadderVines_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BasicLadderVines_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Ladder'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BasicLadderVines_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BasicLadderVines_C'Default__BasicLadderVines_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.2"
+    }
+  },
+  {
+    "Type": "BasicLadderVines_C",
+    "Name": "Default__BasicLadderVines_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/BasicLadderVines.BasicLadderVines_C'",
+    "Properties": {
+      "LadderComponent": {
+        "ObjectName": "LadderComponent'Default__BasicLadderVines_C:Ladder'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.6"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BasicLadderVines_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.14"
+      },
+      "ClimbVolume": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:ClimbVolume'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.4"
+      },
+      "ClimbVolumeTop": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:ClimbVolumeTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.5"
+      },
+      "EnterPositionBottom": {
+        "ObjectName": "SceneComponent'Default__BasicLadderVines_C:EnterPositionBottom'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.8"
+      },
+      "EnterPositionTop": {
+        "ObjectName": "SceneComponent'Default__BasicLadderVines_C:EnterPositionTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.9"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxCollision",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 4.431171,
+        "Y": 37.0,
+        "Z": 140.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolume",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 44.86595,
+        "Z": 35.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      },
+      "RelativeLocation": {
+        "X": -23.698383,
+        "Y": 3.0517578E-05,
+        "Z": -110.50824
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolumeTop",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      },
+      "RelativeLocation": {
+        "X": 33.84996,
+        "Y": 0.0,
+        "Z": 171.78322
+      }
+    }
+  },
+  {
+    "Type": "LadderComponent",
+    "Name": "Ladder",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'LadderComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BasicLadderVines_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionBottom",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      },
+      "RelativeLocation": {
+        "X": -55.0,
+        "Y": 0.0,
+        "Z": -186.31802
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionTop",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      },
+      "RelativeLocation": {
+        "X": 55.0,
+        "Y": -8.0898855E-07,
+        "Z": 137.35289
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BasicLadderVines_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.7"
+      },
+      "VariableGuid": "B2102D72-4C08FF25-154AC592-B5E0FCE2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BasicLadderVines_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.13"
+      },
+      "ParentComponentOrVariableName": "BoxCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "52DE7A97-4B4BB7E5-1FD951A4-02ADB830",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BasicLadderVines_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BasicLadderVines_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BasicLadderVines_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BasicLadderVines_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BasicLadderVines_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy09'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy09.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "bReceivesDecals": false,
+      "bAffectDistanceFieldLighting": false,
+      "RelativeLocation": {
+        "X": 51.928345,
+        "Y": 11.236392,
+        "Z": 128.34389
+      },
+      "RelativeRotation": {
+        "Pitch": -10.000031,
+        "Yaw": 89.999985,
+        "Roll": -8.6694456E-07
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 0.5,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BasicLadderVines_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Ivy06'",
+        "ObjectPath": "War/Content/Meshes/Environment/Foliage/Ivy06.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'IvyClimbable'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/IvyClimbable.0"
+        }
+      ],
+      "bAffectDistanceFieldLighting": false,
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadderVines_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadderVines.3"
+      },
+      "RelativeLocation": {
+        "X": -1.5911393E-05,
+        "Y": 0.0017396029,
+        "Z": -100.71898
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

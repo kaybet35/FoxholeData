@@ -1,0 +1,155 @@
+[
+  {
+    "Type": "Material",
+    "Name": "BuildGhost",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "Metallic": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionConstant_1",
+        "UseConstant": false,
+        "Constant": 0.0
+      },
+      "EmissiveColor": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMultiply_34",
+        "UseConstant": false,
+        "Constant": {
+          "B": 0,
+          "G": 0,
+          "R": 0,
+          "A": 0,
+          "Hex": "000000"
+        }
+      },
+      "BlendMode": "BLEND_Masked",
+      "TwoSided": true,
+      "bUsedWithSkeletalMesh": true,
+      "bUsedWithSplineMeshes": true,
+      "bUsedWithInstancedStaticMeshes": true,
+      "Expressions": [
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter'BuildGhost:MaterialExpressionCollectionParameter_0'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildGhost.1"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionStaticSwitchParameter'BuildGhost:MaterialExpressionStaticSwitchParameter_0'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildGhost.2"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D'BuildGhost:MaterialExpressionTextureSampleParameter2D_0'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildGhost.3"
+        },
+        null,
+        null,
+        null
+      ],
+      "MaterialParameterCollectionInfos": [
+        {
+          "StateId": "F829817D-431FEBFA-6EEDDF95-15AA9E31",
+          "ParameterCollection": {
+            "ObjectName": "MaterialParameterCollection'BuildGhostParam'",
+            "ObjectPath": "War/Content/Materials/Structures/BuildGhostParam.0"
+          }
+        }
+      ],
+      "StateId": "5CBB5183-4097A134-7E76249D-C43C15B9",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_0",
+    "Outer": "BuildGhost",
+    "Class": "UScriptClass'MaterialExpressionCollectionParameter'",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection'BuildGhostParam'",
+        "ObjectPath": "War/Content/Materials/Structures/BuildGhostParam.0"
+      },
+      "ParameterName": "GhostColor",
+      "ParameterId": "AE049C2E-4974812F-9491DEB8-1EE0A5B2",
+      "Material": {
+        "ObjectName": "Material'BuildGhost'",
+        "ObjectPath": "War/Content/Materials/Structures/BuildGhost.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionStaticSwitchParameter",
+    "Name": "MaterialExpressionStaticSwitchParameter_0",
+    "Outer": "BuildGhost",
+    "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+    "Properties": {
+      "A": {
+        "Expression": null,
+        "OutputIndex": 4,
+        "InputName": "None",
+        "Mask": 1,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 1,
+        "ExpressionName": "MaterialExpressionTextureSampleParameter2D_0"
+      },
+      "B": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionConstant_0"
+      },
+      "ParameterName": "Use Mask?",
+      "ExpressionGUID": "7C7C1019-4ED4E0EE-5F20CCBC-E7C56060",
+      "Material": {
+        "ObjectName": "Material'BuildGhost'",
+        "ObjectPath": "War/Content/Materials/Structures/BuildGhost.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_0",
+    "Outer": "BuildGhost",
+    "Class": "UScriptClass'MaterialExpressionTextureSampleParameter2D'",
+    "Properties": {
+      "ParameterName": "Mask Texture (alpha)",
+      "ExpressionGUID": "7EB54FA8-4BA51F88-C59DF388-CD152A54",
+      "Texture": {
+        "ObjectName": "Texture2D'BarbedWireM'",
+        "ObjectPath": "War/Content/Textures/Props/BarbedWireM.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material'BuildGhost'",
+        "ObjectPath": "War/Content/Materials/Structures/BuildGhost.0"
+      }
+    }
+  }
+]

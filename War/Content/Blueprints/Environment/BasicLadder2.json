@@ -1,0 +1,253 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BasicLadder2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BasicLadder2_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Ladder'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BasicLadder2_C'Default__BasicLadder2_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.1"
+    }
+  },
+  {
+    "Type": "BasicLadder2_C",
+    "Name": "Default__BasicLadder2_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/BasicLadder2.BasicLadder2_C'",
+    "Properties": {
+      "LadderComponent": {
+        "ObjectName": "LadderComponent'Default__BasicLadder2_C:Ladder'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.5"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BasicLadder2_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.11"
+      },
+      "ClimbVolume": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:ClimbVolume'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.3"
+      },
+      "ClimbVolumeTop": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:ClimbVolumeTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.4"
+      },
+      "EnterPositionBottom": {
+        "ObjectName": "SceneComponent'Default__BasicLadder2_C:EnterPositionBottom'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.7"
+      },
+      "EnterPositionTop": {
+        "ObjectName": "SceneComponent'Default__BasicLadder2_C:EnterPositionTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.8"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxCollision",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 4.431171,
+        "Y": 37.0,
+        "Z": 244.33224
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolume",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 44.86595,
+        "Z": 35.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      },
+      "RelativeLocation": {
+        "X": -23.698383,
+        "Y": 6.0196613E-05,
+        "Z": -95.66946
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 5.3342004
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolumeTop",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      },
+      "RelativeLocation": {
+        "X": 33.850937,
+        "Y": 2.9679035E-05,
+        "Z": 274.77393
+      }
+    }
+  },
+  {
+    "Type": "LadderComponent",
+    "Name": "Ladder",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'LadderComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BasicLadder2_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionBottom",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      },
+      "RelativeLocation": {
+        "X": -55.0,
+        "Y": 2.9679035E-05,
+        "Z": -314.8661
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionTop",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      },
+      "RelativeLocation": {
+        "X": 55.0,
+        "Y": -0.00012329602,
+        "Z": 298.58093
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BasicLadder2_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.6"
+      },
+      "VariableGuid": "B2102D72-4C08FF25-154AC592-B5E0FCE2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BasicLadder2_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BasicLadder2_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BasicLadder2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LadderMetal03'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/LadderMetal03.2"
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BasicLadder2_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/BasicLadder2.2"
+      },
+      "RelativeLocation": {
+        "X": -1.5911393E-05,
+        "Y": 0.0017377301,
+        "Z": -286.04413
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

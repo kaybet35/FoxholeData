@@ -1,0 +1,117 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "SmokeGrenadeHiss_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'SmokeGrenadeHiss_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.3"
+      },
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::NaturalSound",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 4000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 25.103344,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_1",
+    "Outer": "SmokeGrenadeHiss_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.1,
+      "DelayMax": 0.1,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'SmokeGrenadeHiss_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "SmokeGrenadeHiss_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        0.5
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'SmokeGrenadeHiss_Cue:SoundNodeDelay_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.1"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'SmokeGrenadeHiss_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "SmokeGrenadeHiss_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeMixer'SmokeGrenadeHiss_Cue:SoundNodeMixer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "SmokeGrenadeHiss_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadePop.SmokeGrenadePop",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SmokeGrenadePop'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadePop.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "SmokeGrenadeHiss_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss.SmokeGrenadeHiss",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'SmokeGrenadeHiss'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/SmokeGrenade/SmokeGrenadeHiss.0"
+    }
+  }
+]

@@ -1,0 +1,480 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "RapidDecayPreventer",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SphereComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPOilField_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPOilField_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.17"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ResourceField'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPOilField_C:RapidDecayPreventer'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPOilField_C:WornDecal1'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPOilField_C:WornDecal'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPOilField_C:Decal'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.8"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPOilField_C'Default__BPOilField_C'",
+      "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.2"
+    }
+  },
+  {
+    "Type": "BPOilField_C",
+    "Name": "Default__BPOilField_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Resources/BPOilField.BPOilField_C'",
+    "Properties": {
+      "ResourceFieldMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPOilField_C:ResourceFieldMesh'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.20"
+      },
+      "NoBuildVolume": {
+        "ObjectName": "SphereComponent'Default__BPOilField_C:NoBuildVolume'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.19"
+      },
+      "ResourceClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPOilResource_C'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilResource.1"
+      },
+      "SpawnPeriod": 16.0,
+      "MaxConcurrentNodes": 0,
+      "MinSpawnDistance": 100.0,
+      "MaxSpawnDistance": 550.0,
+      "ResourcesPerReplenishment": 0,
+      "TimeToReplenish": 10800.0,
+      "Description": {
+        "Namespace": "",
+        "Key": "BB9C41C34BE95CF524D9A68ADB7BD364",
+        "SourceString": "An Oil Field that can produce Oil for further refinement or for power production.",
+        "LocalizedString": "An Oil Field that can produce Oil for further refinement or for power production."
+      },
+      "CodeName": "OilField",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "663CE0194E91F6C0425769AB380A7DD3",
+        "SourceString": "Oil Field",
+        "LocalizedString": "Oil Field"
+      },
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPOilField_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPOilField_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.4"
+      },
+      "MaxHealth": 2147483647,
+      "Health": 2147483647,
+      "MapIconType": "EMapIconType::OilField",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPOilField_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.21"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPOilField_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPOilField_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPOilField_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 512.0,
+        "Y": 512.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPOilField_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 128.0
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "Material'Oil'",
+        "ObjectPath": "War/Content/FX/Materials/Oil.0"
+      },
+      "DecalSize": {
+        "X": 170.66667,
+        "Y": 800.0,
+        "Z": 800.0
+      },
+      "RelativeRotation": {
+        "Pitch": 270.0,
+        "Yaw": 720.00995,
+        "Roll": -0.010022
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "WornDecal1_GEN_VARIABLE",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'WornDecal'",
+        "ObjectPath": "War/Content/Materials/Decals/WornDecal.0"
+      },
+      "DecalSize": {
+        "X": 170.66667,
+        "Y": 350.0,
+        "Z": 350.0
+      },
+      "RelativeLocation": {
+        "X": -494.49036,
+        "Y": 282.19727,
+        "Z": -0.00018305506
+      },
+      "RelativeRotation": {
+        "Pitch": 270.0,
+        "Yaw": 1081.7899,
+        "Roll": -374.9911
+      }
+    }
+  },
+  {
+    "Type": "DecalComponent",
+    "Name": "WornDecal_GEN_VARIABLE",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'WornDecal'",
+        "ObjectPath": "War/Content/Materials/Decals/WornDecal.0"
+      },
+      "DecalSize": {
+        "X": 170.66667,
+        "Y": 350.0,
+        "Z": 350.0
+      },
+      "RelativeLocation": {
+        "X": 443.54404,
+        "Y": 411.33972,
+        "Z": 6.9285948E-06
+      },
+      "RelativeRotation": {
+        "Pitch": 270.0,
+        "Yaw": 1170.0,
+        "Roll": -427.77353
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Decal",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WornDecal",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WornDecal1",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPOilField_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.11"
+      },
+      "VariableGuid": "1622212F-44C749D8-2C0E9A89-E9A4B620",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPOilField_C:WornDecal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3FF5916E-421493A7-BBBB81A9-9AA3624B",
+      "InternalVariableName": "WornDecal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPOilField_C:WornDecal1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.6"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D0872F13-46250481-59DBBE9D-8D6DEFA9",
+      "InternalVariableName": "WornDecal1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPOilField_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.5"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "441545A6-4F013914-125F108B-EA9D1C9B",
+      "InternalVariableName": "Decal"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BPOilField_C:RapidDecayPreventer_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.18"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "14989826-4EB2071E-E4B7AB8B-3DAB10A9",
+      "InternalVariableName": "RapidDecayPreventer"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.16"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPOilField_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.12"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "RapidDecayPreventer_GEN_VARIABLE",
+    "Outer": "BPOilField_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 1.0,
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -10.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "NoBuildVolume",
+    "Outer": "Default__BPOilField_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPOilField_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.3"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ResourceFieldMesh",
+    "Outer": "Default__BPOilField_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPOilField_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Resources/BPOilField.3"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPOilField_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

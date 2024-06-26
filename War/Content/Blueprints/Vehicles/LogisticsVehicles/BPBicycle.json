@@ -1,0 +1,932 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "BikeDirt",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'ParticleSystemComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBicycle_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBicycle_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.38"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Bicycle'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPBicycle_C:BikeDirt'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBicycle_C:DriverExit'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBicycle_C:DriverTrigger'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBicycle_C:DriverSeat'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBicycle_C:Camera'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.10"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBicycle_C'Default__BPBicycle_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.2"
+    }
+  },
+  {
+    "Type": "BPBicycle_C",
+    "Name": "Default__BPBicycle_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.BPBicycle_C'",
+    "Properties": {
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "A0DE543B489DD9F402EB589D921074CE",
+        "SourceString": "Blumfield LK205",
+        "LocalizedString": "Blumfield LK205"
+      },
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "13E8607E4B11E966FF383C866DBA439E",
+        "SourceString": "Bicycle",
+        "LocalizedString": "Bicycle"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "50E2CE4A4EECAC54805254885A49251D",
+        "SourceString": "A simple, old-style Blumfield bicycle. This is a smaller recreation model, designed for short-distance sprints.",
+        "LocalizedString": "A simple, old-style Blumfield bicycle. This is a smaller recreation model, designed for short-distance sprints."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'RelicBicycleVehicleIcon'",
+        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/RelicBicycleVehicleIcon.0"
+      },
+      "CodeName": "Bicycle",
+      "VehicleProfileType": "EVehicleProfileType::Bicycle",
+      "ArmourType": "EArmourType::LightVehicle",
+      "FuelTank": {
+        "FuelItemCodeName": "None"
+      },
+      "bCanUseStructures": true,
+      "bIsStockpilable": false,
+      "DepthCuttoffForSwimDamage": 200.0,
+      "DestroyedMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPBicycle_C:DestroyedMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.41"
+      },
+      "MinorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:MinorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.21"
+      },
+      "MajorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:MajorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.20"
+      },
+      "DisabledTurretFX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:DisabledTurretFX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.19"
+      },
+      "DisabledTurret2FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:DisabledTurret2FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.15"
+      },
+      "DisabledTurret3FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:DisabledTurret3FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.16"
+      },
+      "DisabledTurret4FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:DisabledTurret4FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.17"
+      },
+      "DisabledTurret5FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPBicycle_C:DisabledTurret5FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.18"
+      },
+      "FrozenEnterSound": {
+        "ObjectName": "SoundCue'BicycleStart_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Bicycle/BicycleStart_Cue.0"
+      },
+      "DriveLoop": {
+        "ObjectName": "AudioComponent'Default__BPBicycle_C:DriveLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.5"
+      },
+      "BackUpSFXLoop": {
+        "ObjectName": "AudioComponent'Default__BPBicycle_C:BackUpSFXLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.4"
+      },
+      "Horn": {
+        "Sound": {
+          "ObjectName": "SoundCue'BicycleHorn_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Bicycle/BicycleHorn_Cue.0"
+        }
+      },
+      "CameraRigComponent": {
+        "ObjectName": "PlayerCameraRigComponent'Default__BPBicycle_C:CameraRigVehicle'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.22"
+      },
+      "FrontAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBicycle_C:FrontAxelCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.24"
+      },
+      "RearAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBicycle_C:RearAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.27"
+      },
+      "FrontLeftRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBicycle_C:FrontRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.25"
+      },
+      "FrontRightRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPBicycle_C:RearRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.28"
+      },
+      "LeftSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPBicycle_C:LeftSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.26"
+      },
+      "RightSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPBicycle_C:RightSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.29"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BPBicycle_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.7"
+      },
+      "PassengerArea": {
+        "ObjectName": "BoxComponent'Default__BPBicycle_C:PassengerBaseBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.6"
+      },
+      "AFKTimeoutComponent": {
+        "ObjectName": "AFKTimeoutComponent'Default__BPBicycle_C:AFKTimeoutComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.3"
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPBicycle_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.42"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPBicycle_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.40"
+      },
+      "CharacterMovement": {
+        "ObjectName": "SimpleVehicleMovementComponent'Default__BPBicycle_C:CharMoveComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.39"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BPBicycle_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.7"
+      }
+    }
+  },
+  {
+    "Type": "AFKTimeoutComponent",
+    "Name": "AFKTimeoutComponent",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'AFKTimeoutComponent'",
+    "Properties": {
+      "TimeUntilTimeoutHours": 6.0
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BackUpSFXLoop",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "DriveLoop",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'BicycleDriveLoop_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Bicycle/BicycleDriveLoop_Cue.0"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PassengerBaseBox",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBicycle_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.7"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "VehicleCollision",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 117.5,
+        "Y": 10.0,
+        "Z": 47.5
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPBicycle_C'Default__BPBicycle_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.2"
+            },
+            "FunctionName": "VehicleCollisionTouched"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "Camera_GEN_VARIABLE",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'CameraComponent'"
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "CapsuleHalfHeight": 75.0,
+      "CapsuleRadius": 20.0,
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPBicycle_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.7"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -17.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Camera",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'CameraComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DriverExit",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatExitComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DriverSeat",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'VehicleSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DriverTrigger",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatTriggerComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "BikeDirt_GEN_VARIABLE",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'BikeDirt'",
+        "ObjectPath": "War/Content/FX/BikeDirt.35"
+      },
+      "RelativeLocation": {
+        "X": 0.0001797841,
+        "Y": 40.574905,
+        "Z": -25.14221
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret2FX",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret3FX",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret4FX",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret5FX",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurretFX",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MajorDamagePS",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MinorDamagePS",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      }
+    }
+  },
+  {
+    "Type": "PlayerCameraRigComponent",
+    "Name": "CameraRigVehicle",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'PlayerCameraRigComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeRotation": {
+        "Pitch": -60.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontAxelCastLocation",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": 75.0,
+        "Y": 0.0,
+        "Z": -20.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontRightAxleCastLocation",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": 75.0,
+        "Y": -7.5,
+        "Z": -20.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LeftSideTrackLocation",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": 75.0,
+        "Y": 0.0,
+        "Z": -60.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearAxleCastLocation",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": -75.0,
+        "Y": 0.0,
+        "Z": -20.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearRightAxleCastLocation",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": 75.0,
+        "Y": 7.5,
+        "Z": -20.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RightSideTrackLocation",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": -75.0,
+        "Y": 0.0,
+        "Z": -60.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBicycle_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.23"
+      },
+      "VariableGuid": "42D68380-45CF3DA2-46F1FC91-A67DB7B7",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CameraComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CameraComponent'BPBicycle_C:Camera_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.8"
+      },
+      "ParentComponentOrVariableName": "CameraRigVehicle",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "99AA6864-4795364C-A60107B3-5E8EC67C",
+      "InternalVariableName": "Camera"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VehicleSeatComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VehicleSeatComponent'BPBicycle_C:DriverSeat_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.43"
+      },
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "48DC59B2-4CC28F9E-ACEFAFB3-BBFC60DB",
+      "InternalVariableName": "DriverSeat"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPBicycle_C:DriverTrigger_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.37"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "01E0243A-42287296-F888A997-CCDCAFDF",
+      "InternalVariableName": "DriverTrigger"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatExitComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatExitComponent'BPBicycle_C:DriverExit_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.36"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2EF8D451-43AF9B8E-EE21AEB0-421F9A9B",
+      "InternalVariableName": "DriverExit"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'BPBicycle_C:BikeDirt_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.14"
+      },
+      "AttachToName": "wheel_back",
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "920BEF4C-4256543C-0D2A079C-868B8AA4",
+      "InternalVariableName": "BikeDirt"
+    }
+  },
+  {
+    "Type": "SeatExitComponent",
+    "Name": "DriverExit_GEN_VARIABLE",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'SeatExitComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -80.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "DriverTrigger_GEN_VARIABLE",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 40.0,
+        "Y": 100.0,
+        "Z": 80.0
+      }
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.35"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.35"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBicycle_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.30"
+      }
+    }
+  },
+  {
+    "Type": "SimpleVehicleMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SimpleVehicleMovementComponent'",
+    "Properties": {
+      "WaterDepthNormalized": 0.9,
+      "FloatVelocity": 500.0,
+      "DepthOffset": -77.5,
+      "MaxWalkSpeed": 877.5
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_Bicycle_C'",
+        "ObjectPath": "War/Content/Animation/RelicVehicles/ABP_Bicycle.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_RelicBicycle'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicBicycle.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": -6.6,
+        "Y": 0.0,
+        "Z": -60.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DestroyedMesh",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'RelicBicycleDestroyed'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/RelicBicycleDestroyed.2"
+      },
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPBicycle_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycle.9"
+      },
+      "RelativeLocation": {
+        "X": -6.6,
+        "Y": 0.0,
+        "Z": -60.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPBicycle_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "DriverSeat_GEN_VARIABLE",
+    "Outer": "BPBicycle_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "bIsSwitchable": false,
+      "bIsWoundable": true,
+      "EnterSFX": {
+        "ObjectName": "SoundCue'BicycleStart_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Bicycle/BicycleStart_Cue.0"
+      },
+      "TriggerName": "DriverTrigger",
+      "ExitName": "DriverExit",
+      "MountCodeName": "BicycleDriver",
+      "bIsExposed": true,
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPBicycleDriverComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBicycleDriverComponent.0"
+      },
+      "RelativeLocation": {
+        "X": 7.132133E-22,
+        "Y": -1.1249661E-21,
+        "Z": 88.812225
+      }
+    }
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "Type": "Material",
+    "Name": "SimpleLitParticles",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "BlendMode": "BLEND_Translucent",
+      "bUsedWithParticleSprites": true,
+      "Expressions": [
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'SimpleLitParticles:MaterialExpressionMaterialFunctionCall_0'",
+          "ObjectPath": "War/Content/FX/Materials/SimpleLitParticles.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionStaticComponentMaskParameter'SimpleLitParticles:MaterialExpressionStaticComponentMaskParameter_0'",
+          "ObjectPath": "War/Content/FX/Materials/SimpleLitParticles.2"
+        },
+        {
+          "ObjectName": "MaterialExpressionTextureSampleParameter2D'SimpleLitParticles:MaterialExpressionTextureSampleParameter2D_0'",
+          "ObjectPath": "War/Content/FX/Materials/SimpleLitParticles.3"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "E6715291-45CBD5A7-9C2DB096-ABFA19DF",
+          "Function": {
+            "ObjectName": "MaterialFunction'AppendMany'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "4A895DB5-49DFFEA4-D41A47AB-47D47DA0",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "SimpleLitParticles",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'AppendMany'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/AppendMany.0"
+      },
+      "Material": {
+        "ObjectName": "Material'SimpleLitParticles'",
+        "ObjectPath": "War/Content/FX/Materials/SimpleLitParticles.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionStaticComponentMaskParameter",
+    "Name": "MaterialExpressionStaticComponentMaskParameter_0",
+    "Outer": "SimpleLitParticles",
+    "Class": "UScriptClass'MaterialExpressionStaticComponentMaskParameter'",
+    "Properties": {
+      "Input": {
+        "Expression": null,
+        "OutputIndex": 2,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionMaterialFunctionCall_0"
+      },
+      "DefaultA": true,
+      "ParameterName": "Mask Channel",
+      "ExpressionGUID": "A3FCDAFE-45098994-F77E71A4-9E93D6E8",
+      "Material": {
+        "ObjectName": "Material'SimpleLitParticles'",
+        "ObjectPath": "War/Content/FX/Materials/SimpleLitParticles.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSampleParameter2D",
+    "Name": "MaterialExpressionTextureSampleParameter2D_0",
+    "Outer": "SimpleLitParticles",
+    "Class": "UScriptClass'MaterialExpressionTextureSampleParameter2D'",
+    "Properties": {
+      "ParameterName": "Mask",
+      "ExpressionGUID": "BF32E340-47720FC4-B38F28AD-2FB6CF70",
+      "Texture": {
+        "ObjectName": "Texture2D'LetteringPop'",
+        "ObjectPath": "War/Content/FX/Textures/LetteringPop.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material'SimpleLitParticles'",
+        "ObjectPath": "War/Content/FX/Materials/SimpleLitParticles.0"
+      }
+    }
+  }
+]

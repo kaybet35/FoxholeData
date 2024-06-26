@@ -1,0 +1,662 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "DistributionVelocityScale",
+    "Outer": "ParticleModuleLocationPrimitiveCylinder_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'Dustmotes2:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/Dustmotes2.11"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleLifetime'Dustmotes2:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'Dustmotes2:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.14"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'Dustmotes2:ParticleModuleColor_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.5"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveSphere'Dustmotes2:ParticleModuleLocationPrimitiveSphere_1'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.9"
+        },
+        {
+          "ObjectName": "ParticleModuleLocationPrimitiveCylinder'Dustmotes2:ParticleModuleLocationPrimitiveCylinder_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.8"
+        },
+        {
+          "ObjectName": "ParticleModuleOrbit'Dustmotes2:ParticleModuleOrbit_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.10"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'Dustmotes2:ParticleModuleAccelerationDrag_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.4"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'Dustmotes2:ParticleModuleRotation_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.12"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'Dustmotes2:ParticleModuleRotationRate_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.13"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'Dustmotes2:ParticleModuleColorScaleOverLife_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.6"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'Dustmotes2:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/Dustmotes2.15"
+      },
+      "PeakActiveParticles": 89
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 0.245,
+        "MaxValue": 0.245,
+        "MinValueVec": {
+          "X": 0.245,
+          "Y": 0.245,
+          "Z": 0.245
+        },
+        "MaxValueVec": {
+          "X": 0.245,
+          "Y": 0.245,
+          "Z": 0.245
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.245,
+            0.245,
+            0.245
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 31.0,
+          "Values": [
+            0.0,
+            0.06991864,
+            0.2452863,
+            0.47583517,
+            0.71129745,
+            0.9014052,
+            0.9958909,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            0.99589103,
+            0.90140533,
+            0.7112973,
+            0.4758357,
+            0.24528703,
+            0.069918804,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 20.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            20.0,
+            10.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveCylinder",
+    "Name": "ParticleModuleLocationPrimitiveCylinder_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleLocationPrimitiveCylinder'",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 350.0,
+        "MaxValue": 350.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            350.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "StartHeight": {
+        "MinValue": 1150.0,
+        "MaxValue": 1150.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1150.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "HeightAxis": "PMLPC_HEIGHTAXIS_Y",
+      "VelocityScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Dustmotes2:ParticleModuleLocationPrimitiveCylinder_0.DistributionVelocityScale'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.0"
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "b3DDrawMode": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLocationPrimitiveSphere",
+    "Name": "ParticleModuleLocationPrimitiveSphere_1",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleLocationPrimitiveSphere'",
+    "Properties": {
+      "StartRadius": {
+        "MinValue": 600.0,
+        "MaxValue": 600.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            600.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "Negative_Z": false,
+      "Velocity": true,
+      "VelocityScale": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "StartLocation": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "b3DDrawMode": true,
+      "bEnabled": false,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleOrbit",
+    "Name": "ParticleModuleOrbit_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleOrbit'",
+    "Properties": {
+      "OffsetAmount": {
+        "MinValue": -5.0,
+        "MaxValue": 5.0,
+        "MinValueVec": {
+          "X": 0.0,
+          "Y": -5.0,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.0,
+          "Y": 5.0,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            -5.0,
+            0.0,
+            0.0,
+            5.0,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "RotationAmount": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "MinValueVec": {
+          "X": -0.1,
+          "Y": -0.1,
+          "Z": 0.0
+        },
+        "MaxValueVec": {
+          "X": 0.1,
+          "Y": 0.1,
+          "Z": 0.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            -0.1,
+            0.0,
+            0.1,
+            0.1,
+            0.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "RotationRateAmount": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "MinValueVec": {
+          "X": -0.1,
+          "Y": -0.1,
+          "Z": -0.1
+        },
+        "MaxValueVec": {
+          "X": 0.1,
+          "Y": 0.1,
+          "Z": 0.1
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            -0.1,
+            -0.1,
+            0.1,
+            0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'Dustmotes'",
+        "ObjectPath": "War/Content/FX/Materials/Dustmotes.0"
+      },
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Dustmotes2:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.1"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MinValue": -1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -1.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 10.0,
+        "MaxValue": 7.0,
+        "MinValueVec": {
+          "X": 10.0,
+          "Y": 10.0,
+          "Z": 10.0
+        },
+        "MaxValueVec": {
+          "X": 7.0,
+          "Y": 7.0,
+          "Z": 7.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0,
+            10.0,
+            10.0,
+            7.0,
+            7.0,
+            7.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 5.0,
+        "MaxValue": 5.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            5.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'Dustmotes2:ParticleModuleSpawn_0.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.2"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "Dustmotes2",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'Dustmotes2:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.3"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "Dustmotes2",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "WarmupTime": 15.0,
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'Dustmotes2:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/Dustmotes2.16"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

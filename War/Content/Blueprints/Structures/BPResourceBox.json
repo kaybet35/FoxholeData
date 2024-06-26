@@ -1,0 +1,423 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "RepairBox",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPResourceBox_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPResourceBox_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.13"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'StorageBox'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPResourceBox_C:RepairBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPResourceBox_C:MultiplexedStaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.8"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPResourceBox_C'Default__BPResourceBox_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.2"
+    }
+  },
+  {
+    "Type": "BPResourceBox_C",
+    "Name": "Default__BPResourceBox_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPResourceBox.BPResourceBox_C'",
+    "Properties": {
+      "MeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BPResourceBox_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.14"
+      },
+      "ItemsToReplenish": [
+        {
+          "PickupCDO": null,
+          "ItemComponent": null,
+          "CodeName": "Cloth",
+          "StackSize": 100,
+          "Payload": 0,
+          "HolderId": 0
+        },
+        {
+          "PickupCDO": null,
+          "ItemComponent": null,
+          "CodeName": "Cloth",
+          "StackSize": 100,
+          "Payload": 0,
+          "HolderId": 0
+        },
+        {
+          "PickupCDO": null,
+          "ItemComponent": null,
+          "CodeName": "Wood",
+          "StackSize": 100,
+          "Payload": 0,
+          "HolderId": 0
+        },
+        {
+          "PickupCDO": null,
+          "ItemComponent": null,
+          "CodeName": "Explosive",
+          "StackSize": 100,
+          "Payload": 0,
+          "HolderId": 0
+        },
+        {
+          "PickupCDO": null,
+          "ItemComponent": null,
+          "CodeName": "Diesel",
+          "StackSize": 100,
+          "Payload": 0,
+          "HolderId": 0
+        }
+      ],
+      "ReplenishRate": 5.0,
+      "BuildSiteClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPStorageBoxBuildSite_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBoxBuildSite.1"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "81B26A394866F839029F09AB4976253E",
+        "SourceString": "A mysterious box with a never ending supply of resources",
+        "LocalizedString": "A mysterious box with a never ending supply of resources"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'StorageItemIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/StorageItemIcon.0"
+      },
+      "ValidBuildTools": 1,
+      "CodeName": "ResourceBox",
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "6D103E044CC5EA36B2862FAF0EBF6DBE",
+        "SourceString": "Resource Box",
+        "LocalizedString": "Resource Box"
+      },
+      "ProfileType": "EStructureProfileType::GenericWorldStructure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPResourceBox_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPResourceBox_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.6"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPResourceBox_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.5"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "MaxHealth": 400,
+      "Health": 400,
+      "ScreenToUse": "ESimScreen::StorageBox",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPResourceBox_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.15"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPResourceBox_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPResourceBox_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "RepairBox_GEN_VARIABLE",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 92.0,
+        "Y": 42.0,
+        "Z": 128.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "OverlapOnlyCamera",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 128.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPResourceBox_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPResourceBox_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPResourceBox_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 160.0,
+        "Y": 160.0,
+        "Z": 128.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPResourceBox_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.3"
+      }
+    }
+  },
+  {
+    "Type": "MultiplexedStaticMeshComponent",
+    "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
+    "Properties": {
+      "MeshStops": [
+        {
+          "Threshold": 0,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainerCritical'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerCritical.2"
+          }
+        },
+        {
+          "Threshold": 33,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainerDamaged'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerDamaged.2"
+          }
+        },
+        {
+          "Threshold": 66,
+          "StaticMesh": {
+            "ObjectName": "StaticMesh'StorageContainer'",
+            "ObjectPath": "War/Content/Meshes/Resources/StorageContainer.2"
+          }
+        }
+      ],
+      "InputValue": 100,
+      "SelectedMeshIndex": 2
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedStaticMesh",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPResourceBox_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.9"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MultiplexedStaticMeshComponent'BPResourceBox_C:MultiplexedStaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.7"
+      },
+      "VariableGuid": "B65A087D-4CA1AA4D-890F09B3-1854A5E8",
+      "InternalVariableName": "MultiplexedStaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPResourceBox_C:RepairBox_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F864EF50-4FDE33AC-6C0591AE-96002DCD",
+      "InternalVariableName": "RepairBox"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.10"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPResourceBox_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'StorageContainer'",
+        "ObjectPath": "War/Content/Meshes/Resources/StorageContainer.2"
+      },
+      "bReceivesDecals": false,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPResourceBox_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.3"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPResourceBox_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

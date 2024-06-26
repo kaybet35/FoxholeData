@@ -1,0 +1,182 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "WoodFenceSectionSnow_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "WoodFenceSectionSnow_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'WoodFenceSectionSnow_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DestructibleProp'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'WoodFenceSectionSnow_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WoodFenceSectionSnow_C'Default__WoodFenceSectionSnow_C'",
+      "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.2"
+    }
+  },
+  {
+    "Type": "WoodFenceSectionSnow_C",
+    "Name": "Default__WoodFenceSectionSnow_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.WoodFenceSectionSnow_C'",
+    "Properties": {
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'WoodFenceExplosion'",
+        "ObjectPath": "War/Content/FX/WoodFenceExplosion.35"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'WoodImpact_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/WoodImpact_Cue.0"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "WoodFenceSectionSnow_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'WoodFenceSectionSnow_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.3"
+      },
+      "VariableGuid": "39A9092A-4529FF9A-C9BE87AB-918057CD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'WoodFenceSectionSnow_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.7"
+      },
+      "VariableGuid": "B105671F-465B7C80-A5A6AC83-4B586E89",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "WoodFenceSectionSnow_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'WoodFenceSectionSnow_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.5"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'WoodFenceSectionSnow_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.5"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'WoodFenceSectionSnow_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/DestructibleProps/WoodFenceSectionSnow.4"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "WoodFenceSectionSnow_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FenceSection'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/FenceSection.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'FarmFence03'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/FarmFence03.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "DestructiblePropSeeThrough",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,229 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPWaterMine_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPWaterMine_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WaterMine'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPWaterMine_C'Default__BPWaterMine_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.1"
+    }
+  },
+  {
+    "Type": "BPWaterMine_C",
+    "Name": "Default__BPWaterMine_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPWaterMine.BPWaterMine_C'",
+    "Properties": {
+      "DetectionRadius": 450.0,
+      "ActivationDelay": 3.0,
+      "DetonationDelay": 0.1,
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPWaterMine_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.5"
+      },
+      "ItemMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPWaterMine_C:ItemMesh'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.6"
+      },
+      "ExplosiveCodeName": "WaterMine",
+      "DamageDelay": 0.0,
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'DepthChargeExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/DepthChargeExplosion.1"
+      },
+      "WaterSurfaceExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'WaterSurfaceExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.1"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPWaterMine_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.5"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPWaterMine_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPWaterMine_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.2"
+      },
+      "VariableGuid": "9559B5B1-4BCAC3E2-E5B4138A-218CDB2D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPWaterMine_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPWaterMine_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.3"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPWaterMine_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 125.0,
+      "AreaClass": null,
+      "bGenerateOverlapEvents": true,
+      "BodyInstance": {
+        "CollisionProfileName": "OverlapOnlyWork",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ItemMesh",
+    "Outer": "Default__BPWaterMine_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Seamines'",
+        "ObjectPath": "War/Content/Meshes/Weapons/Seamines.2"
+      },
+      "bReceivesDecals": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "CustomDepthStencilValue": 34,
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPWaterMine_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPWaterMine.5"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -100.0
+      },
+      "bVisible": true
+    }
+  }
+]

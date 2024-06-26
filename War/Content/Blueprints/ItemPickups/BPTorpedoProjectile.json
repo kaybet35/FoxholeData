@@ -1,0 +1,340 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Mesh",
+    "Outer": "BPTorpedoProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPTorpedoProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPTorpedoProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.9"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'TorpedoProjectile'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTorpedoProjectile_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTorpedoProjectile_C'Default__BPTorpedoProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.2"
+    }
+  },
+  {
+    "Type": "BPTorpedoProjectile_C",
+    "Name": "Default__BPTorpedoProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.BPTorpedoProjectile_C'",
+    "Properties": {
+      "WaterSurfaceDirectHitExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'WaterSurfaceExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceExplosion.1"
+      },
+      "LaunchSoundCue": {
+        "ObjectName": "SoundCue'TorpedoShot_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/TorpedoShot_Cue.0"
+      },
+      "WaterSurfacePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTorpedoProjectile_C:WaterSurfacePS'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.5"
+      },
+      "WaterSurfaceVFXOffset": 200.0,
+      "ImpactInducedVelocity": 1.0,
+      "ConeStartRadius": 500.0,
+      "ConeEndRadius": 500.0,
+      "ConeLength": 500.0,
+      "MovementComp": {
+        "ObjectName": "TorpedoMovementComponent'Default__BPTorpedoProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.12"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPTorpedoProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.10"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPTorpedoProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.4"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPTorpedoProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.3"
+      },
+      "ExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'TorpedoExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/TorpedoExplosion.1"
+      },
+      "ExplosiveCodeName": "TorpedoAmmo",
+      "ProjectileLife": 20.0,
+      "AutoDetonateTime": 20.0,
+      "UnderWaterExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'UnderwaterTorpedoExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/UnderwaterTorpedoExplosion.0"
+      },
+      "WaterSurfaceExplosionTemplate": {
+        "ObjectName": "BlueprintGeneratedClass'WaterSurfaceTorpedoHitExplosion_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/WaterSurfaceTorpedoHitExplosion.1"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPTorpedoProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.10"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPTorpedoProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "Sound": {
+        "ObjectName": "SoundCue'TorpedoLoop'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/TorpedoLoop.0"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPTorpedoProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.10"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPTorpedoProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'BubblesTrail'",
+        "ObjectPath": "War/Content/FX/BubblesTrail.54"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPTorpedoProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.10"
+      },
+      "RelativeLocation": {
+        "X": -196.65161,
+        "Y": -0.0005531311,
+        "Z": 6.3284926E-05
+      },
+      "RelativeRotation": {
+        "Pitch": -0.00012302399,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "WaterSurfacePS",
+    "Outer": "Default__BPTorpedoProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'MotorboatFrontSplash'",
+        "ObjectPath": "War/Content/FX/MotorboatFrontSplash.35"
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPTorpedoProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.10"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPTorpedoProjectile_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPTorpedoProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.6"
+      },
+      "VariableGuid": "AF3504CB-4A663998-49D95DB7-C638B653",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPTorpedoProjectile_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.11"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "555B364E-4B8B9C2C-844BD88C-A5E695D7",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPTorpedoProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTorpedoProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.8"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTorpedoProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.8"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPTorpedoProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTorpedoProjectile.7"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPTorpedoProjectile_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "SphereRadius": 240.0,
+      "bShouldUpdatePhysicsVolume": true
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "BPTorpedoProjectile_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Torpedo'",
+        "ObjectPath": "War/Content/Meshes/Weapons/Torpedo.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -24.0,
+        "Y": -5.364418E-07,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "TorpedoMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPTorpedoProjectile_C",
+    "Class": "UScriptClass'TorpedoMovementComponent'",
+    "Properties": {
+      "MaxHorizontalAccelerationCurve": {
+        "ObjectName": "CurveFloat'TorpedoMaxHorizontalAccelerationCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/TorpedoMaxHorizontalAccelerationCurve.0"
+      },
+      "PIDCurve": {
+        "ObjectName": "CurveVector'TorpedoPIDCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineW/TorpedoPIDCurve.0"
+      },
+      "InitialSpeed": 500.0,
+      "MaxSpeed": 2500.0
+    }
+  }
+]

@@ -1,0 +1,956 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Camera",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'CameraComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPSmallTrainLiquid_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.43"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'RailVehicleResourcePlatform'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPSmallTrainLiquid_C:Camera'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSmallTrainLiquid_C:PassengerSeat0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.16"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSmallTrainLiquid_C:DriverExit'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPSmallTrainLiquid_C:DriverTrigger'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.15"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPSmallTrainLiquid_C'Default__BPSmallTrainLiquid_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.2"
+    }
+  },
+  {
+    "Type": "BPSmallTrainLiquid_C",
+    "Name": "Default__BPSmallTrainLiquid_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.BPSmallTrainLiquid_C'",
+    "Properties": {
+      "GenericStockpileComponent": {
+        "ObjectName": "ReplicatedGenericStockpileComponent'Default__BPSmallTrainLiquid_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.28"
+      },
+      "WheelBase": 132.0,
+      "TrackGauge": "ETrackGauge::Small",
+      "FrontCoupler": {
+        "ObjectName": "RailCouplerUseComponent'Default__BPSmallTrainLiquid_C:FrontCoupler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.25"
+      },
+      "RearCoupler": {
+        "ObjectName": "RailCouplerUseComponent'Default__BPSmallTrainLiquid_C:RearCoupler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.26"
+      },
+      "CouplerCableMaterial": {
+        "ObjectName": "MaterialInstanceConstant'CouplerChain'",
+        "ObjectPath": "War/Content/Materials/Vehicles/CouplerChain.0"
+      },
+      "IdleLoop": {
+        "ObjectName": "AudioComponent'Default__BPSmallTrainLiquid_C:IdleLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.8"
+      },
+      "BrakeLoop": {
+        "ObjectName": "AudioComponent'Default__BPSmallTrainLiquid_C:BrakeLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.5"
+      },
+      "FrontClacks": {
+        "ObjectName": "AudioComponent'Default__BPSmallTrainLiquid_C:FrontClacks'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.7"
+      },
+      "RearClacks": {
+        "ObjectName": "AudioComponent'Default__BPSmallTrainLiquid_C:RearClacks'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.9"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "458EEC844EAA840503440AB5A3CB92F2",
+        "SourceString": "BMS Tinderbox",
+        "LocalizedString": "BMS Tinderbox"
+      },
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "781A583A4DC82C26C74B0ABB7841568C",
+        "SourceString": "Small Liquid Container Car",
+        "LocalizedString": "Small Liquid Container Car"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "61C42C5947C2AFB915981DB8BFBD3815",
+        "SourceString": "The Tinderbox is a simple car used for transporting liquids between facilities.",
+        "LocalizedString": "The Tinderbox is a simple car used for transporting liquids between facilities."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'SmallTrainFuelContainerIcon'",
+        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/SmallTrainFuelContainerIcon.0"
+      },
+      "ShippableInfo": {
+        "Type": "EShippableType::Small"
+      },
+      "CodeName": "SmallTrainLiquid",
+      "VehicleProfileType": "EVehicleProfileType::RailCar",
+      "VehicleMovementProfileType": "EVehicleMovementProfileType::Truck",
+      "ArmourType": "EArmourType::Tier1Tank",
+      "bCanUseStructures": true,
+      "bIsStockpilable": false,
+      "DestroyedMesh": {
+        "ObjectName": "StaticMeshComponent'Default__BPSmallTrainLiquid_C:DestroyedMesh'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.45"
+      },
+      "MinorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:MinorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.23"
+      },
+      "MajorDamagePS": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:MajorDamagePS'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.22"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DisabledTurretFX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:DisabledTurretFX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.21"
+      },
+      "DisabledTurret2FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:DisabledTurret2FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.17"
+      },
+      "DisabledTurret3FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:DisabledTurret3FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.18"
+      },
+      "DisabledTurret4FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:DisabledTurret4FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.19"
+      },
+      "DisabledTurret5FX": {
+        "ObjectName": "ParticleSystemComponent'Default__BPSmallTrainLiquid_C:DisabledTurret5FX'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.20"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'VehicleDeath_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/Truck/VehicleDeath_Cue.0"
+      },
+      "DriveLoop": {
+        "ObjectName": "AudioComponent'Default__BPSmallTrainLiquid_C:DriveLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.6"
+      },
+      "BackUpSFXLoop": {
+        "ObjectName": "AudioComponent'Default__BPSmallTrainLiquid_C:BackUpSFXLoop'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.4"
+      },
+      "CameraRigComponent": {
+        "ObjectName": "PlayerCameraRigComponent'Default__BPSmallTrainLiquid_C:CameraRigVehicle'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.24"
+      },
+      "FrontAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPSmallTrainLiquid_C:FrontAxelCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.30"
+      },
+      "RearAxleCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPSmallTrainLiquid_C:RearAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.33"
+      },
+      "FrontLeftRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPSmallTrainLiquid_C:FrontRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.31"
+      },
+      "FrontRightRollCastLocation": {
+        "ObjectName": "SceneComponent'Default__BPSmallTrainLiquid_C:RearRightAxleCastLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.34"
+      },
+      "LeftSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPSmallTrainLiquid_C:LeftSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.32"
+      },
+      "RightSideTrackLocation": {
+        "ObjectName": "SceneComponent'Default__BPSmallTrainLiquid_C:RightSideTrackLocation'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.35"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      },
+      "PassengerArea": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:PassengerBaseBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.10"
+      },
+      "AFKTimeoutComponent": {
+        "ObjectName": "AFKTimeoutComponent'Default__BPSmallTrainLiquid_C:AFKTimeoutComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.3"
+      },
+      "bShowOnMapIntel": false,
+      "FuelTankerInfo": {
+        "FuelLocation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": -50.0
+        },
+        "RefuelActivateSound": {
+          "ObjectName": "SoundCue'JerryCanActivate_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/JerryCanActivate_Cue.0"
+        },
+        "RefuelSoundLoop": {
+          "ObjectName": "SoundCue'JerryCanFilling_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/JerryCanFilling_Cue.0"
+        },
+        "RefuelCableMaterial": {
+          "ObjectName": "MaterialInstanceConstant'Rubber'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/Rubber.0"
+        },
+        "bEnabled": true
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPSmallTrainLiquid_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.46"
+      },
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPSmallTrainLiquid_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.44"
+      },
+      "CharacterMovement": {
+        "ObjectName": "RailVehicleMovementComponent'Default__BPSmallTrainLiquid_C:CharMoveComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.27"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "AFKTimeoutComponent",
+    "Name": "AFKTimeoutComponent",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AFKTimeoutComponent'"
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BackUpSFXLoop",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "BrakeLoop",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "DriveLoop",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "FrontClacks",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "IdleLoop",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "RearClacks",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "PassengerBaseBox",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "VehicleCollision",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 220.0,
+        "Y": 80.0,
+        "Z": 110.0
+      },
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BPSmallTrainLiquid_C'Default__BPSmallTrainLiquid_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.2"
+            },
+            "FunctionName": "VehicleCollisionTouched"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CameraComponent",
+    "Name": "Camera_GEN_VARIABLE",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'CameraComponent'",
+    "Properties": {
+      "bEditableWhenInherited": false
+    }
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Properties": {
+      "CapsuleHalfHeight": 130.0,
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DriverExit",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatExitComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DriverTrigger",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SeatTriggerComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "PassengerSeat0",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'VehicleSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret2FX",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret3FX",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret4FX",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurret5FX",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "DisabledTurretFX",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MajorDamagePS",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "MinorDamagePS",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "PlayerCameraRigComponent",
+    "Name": "CameraRigVehicle",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'PlayerCameraRigComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      },
+      "RelativeRotation": {
+        "Pitch": -60.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "RailCouplerUseComponent",
+    "Name": "FrontCoupler",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'RailCouplerUseComponent'",
+    "Properties": {
+      "ChainVisualOffset": {
+        "X": -50.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 150.0,
+        "Z": 100.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      },
+      "RelativeLocation": {
+        "X": 220.0,
+        "Y": 0.0,
+        "Z": -66.0
+      }
+    }
+  },
+  {
+    "Type": "RailCouplerUseComponent",
+    "Name": "RearCoupler",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'RailCouplerUseComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 150.0,
+        "Z": 100.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__BPSmallTrainLiquid_C:VehicleCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.11"
+      },
+      "RelativeLocation": {
+        "X": -220.0,
+        "Y": 8.5516614E-05,
+        "Z": -66.0
+      }
+    }
+  },
+  {
+    "Type": "RailVehicleMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'RailVehicleMovementComponent'",
+    "Properties": {
+      "EngineForceCurve": {
+        "ObjectName": "CurveFloat'TrainEngineEngineCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/TrainEngineEngineCurve.0"
+      },
+      "FrictionForceCurve": {
+        "ObjectName": "CurveFloat'RailFrictionCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/RailFrictionCurve.0"
+      },
+      "BrakingFrictionForceCurve": {
+        "ObjectName": "CurveFloat'TrainEngineBrakingFrictionCurve'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/TrainEngineBrakingFrictionCurve.0"
+      },
+      "Mass": 50000.0
+    }
+  },
+  {
+    "Type": "ReplicatedGenericStockpileComponent",
+    "Name": "GenericStockpileComponent",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'ReplicatedGenericStockpileComponent'",
+    "Properties": {
+      "Configs": [
+        {
+          "Type": "EStockpileEntryType::Items",
+          "QuantityLimit": 32000,
+          "TotalQuantityLimit": 50,
+          "QuantityOverrides": [],
+          "TotalQuantityOverrides": [],
+          "ValidEntriesOverride": [
+            "Water",
+            "Diesel",
+            "FacilityOil1",
+            "FacilityOil2",
+            "Oil",
+            "Petrol"
+          ],
+          "PreStockedEntries": [],
+          "RetrieveDurationModifiers": []
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontAxelCastLocation",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "FrontRightAxleCastLocation",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LeftSideTrackLocation",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearAxleCastLocation",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RearRightAxleCastLocation",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RightSideTrackLocation",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPSmallTrainLiquid_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.29"
+      },
+      "VariableGuid": "1AD4B3D3-4EB946B9-EFFFDD88-815E4D6D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPSmallTrainLiquid_C:DriverTrigger_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.42"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "056B9E80-4A3742E1-D9F69B97-212DCEBF",
+      "InternalVariableName": "DriverTrigger"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatExitComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatExitComponent'BPSmallTrainLiquid_C:DriverExit_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.41"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "384D54EE-4D89B35C-8ED299B1-B39EAC45",
+      "InternalVariableName": "DriverExit"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'VehicleSeatComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "VehicleSeatComponent'BPSmallTrainLiquid_C:PassengerSeat0_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.47"
+      },
+      "AttachToName": "root",
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "39E61EAD-47529FE7-60605EBA-2C0B7522",
+      "InternalVariableName": "PassengerSeat0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CameraComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CameraComponent'BPSmallTrainLiquid_C:Camera_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.12"
+      },
+      "ParentComponentOrVariableName": "CameraRigVehicle",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F7B99AC9-4293D4F5-7F36A88D-05361AAD",
+      "InternalVariableName": "Camera"
+    }
+  },
+  {
+    "Type": "SeatExitComponent",
+    "Name": "DriverExit_GEN_VARIABLE",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SeatExitComponent'",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -200.0,
+        "Y": 120.0,
+        "Z": -42.0
+      },
+      "bEditableWhenInherited": false
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "DriverTrigger_GEN_VARIABLE",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 256.0,
+        "Y": 150.0,
+        "Z": 128.0
+      },
+      "bEditableWhenInherited": false
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.40"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.40"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPSmallTrainLiquid_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.36"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_SmallGaugeFlatbedCar_C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_SmallGaugeFlatbedCar.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_SmallTrainFuelContainer'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_SmallTrainFuelContainer.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -127.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "DestroyedMesh",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "CapsuleComponent'Default__BPSmallTrainLiquid_C:CollisionCylinder'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPSmallTrainLiquid.13"
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "PassengerSeat0_GEN_VARIABLE",
+    "Outer": "BPSmallTrainLiquid_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "bIsSwitchable": false,
+      "bIsWoundable": true,
+      "bOverrideAsPassenger": true,
+      "TriggerName": "DriverTrigger",
+      "ExitName": "DriverExit",
+      "MountCodeName": "SmallTrainPassenger",
+      "bIsExposed": true,
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPTrainPassengerMountComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainPassengerMountComponent.0"
+      },
+      "RelativeLocation": {
+        "X": -59.571342,
+        "Y": -213.59541,
+        "Z": 147.00034
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

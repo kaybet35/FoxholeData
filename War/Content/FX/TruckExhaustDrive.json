@@ -1,0 +1,756 @@
+[
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "RequiredDistributionSpawnRate",
+    "Outer": "ParticleModuleRequired_0",
+    "Class": "UScriptClass'DistributionFloatConstant'"
+  },
+  {
+    "Type": "DistributionFloatConstant",
+    "Name": "BurstScaleDistribution",
+    "Outer": "ParticleModuleSpawn_0",
+    "Class": "UScriptClass'DistributionFloatConstant'",
+    "Properties": {
+      "Constant": 1.0
+    }
+  },
+  {
+    "Type": "ParticleLODLevel",
+    "Name": "ParticleLODLevel_0",
+    "Outer": "ParticleSpriteEmitter_0",
+    "Class": "UScriptClass'ParticleLODLevel'",
+    "Properties": {
+      "RequiredModule": {
+        "ObjectName": "ParticleModuleRequired'TruckExhaustDrive:ParticleModuleRequired_0'",
+        "ObjectPath": "War/Content/FX/TruckExhaustDrive.9"
+      },
+      "Modules": [
+        {
+          "ObjectName": "ParticleModuleSpawnPerUnit'TruckExhaustDrive:ParticleModuleSpawnPerUnit_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.15"
+        },
+        {
+          "ObjectName": "ParticleModuleColor'TruckExhaustDrive:ParticleModuleColor_2'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.5"
+        },
+        {
+          "ObjectName": "ParticleModuleLifetime'TruckExhaustDrive:ParticleModuleLifetime_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.7"
+        },
+        {
+          "ObjectName": "ParticleModuleSize'TruckExhaustDrive:ParticleModuleSize_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.12"
+        },
+        {
+          "ObjectName": "ParticleModuleVelocity'TruckExhaustDrive:ParticleModuleVelocity_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.16"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationDrag'TruckExhaustDrive:ParticleModuleAccelerationDrag_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.4"
+        },
+        {
+          "ObjectName": "ParticleModuleSizeMultiplyLife'TruckExhaustDrive:ParticleModuleSizeMultiplyLife_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.13"
+        },
+        {
+          "ObjectName": "ParticleModuleRotation'TruckExhaustDrive:ParticleModuleRotation_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.10"
+        },
+        {
+          "ObjectName": "ParticleModuleParameterDynamic'TruckExhaustDrive:ParticleModuleParameterDynamic_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.8"
+        },
+        {
+          "ObjectName": "ParticleModuleColorScaleOverLife'TruckExhaustDrive:ParticleModuleColorScaleOverLife_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.6"
+        },
+        {
+          "ObjectName": "ParticleModuleRotationRate'TruckExhaustDrive:ParticleModuleRotationRate_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.11"
+        },
+        {
+          "ObjectName": "ParticleModuleAccelerationConstant'TruckExhaustDrive:ParticleModuleAccelerationConstant_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.3"
+        }
+      ],
+      "SpawnModule": {
+        "ObjectName": "ParticleModuleSpawn'TruckExhaustDrive:ParticleModuleSpawn_0'",
+        "ObjectPath": "War/Content/FX/TruckExhaustDrive.14"
+      },
+      "PeakActiveParticles": 4
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationConstant",
+    "Name": "ParticleModuleAccelerationConstant_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleAccelerationConstant'",
+    "Properties": {
+      "Acceleration": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 15.0
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleAccelerationDrag",
+    "Name": "ParticleModuleAccelerationDrag_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleAccelerationDrag'",
+    "Properties": {
+      "DragCoefficientRaw": {
+        "MinValue": 0.5,
+        "MaxValue": 0.5,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.5
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "bAlwaysInWorldSpace": true,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColor",
+    "Name": "ParticleModuleColor_2",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleColor'",
+    "Properties": {
+      "StartColor": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 3
+        }
+      },
+      "StartAlpha": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleColorScaleOverLife",
+    "Name": "ParticleModuleColorScaleOverLife_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleColorScaleOverLife'",
+    "Properties": {
+      "ColorScaleOverLife": {
+        "MinValue": 0.05,
+        "MaxValue": 1.0,
+        "MinValueVec": {
+          "X": 0.05,
+          "Y": 0.05,
+          "Z": 0.05
+        },
+        "MaxValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 21.428572,
+          "TimeBias": 0.3,
+          "Values": [
+            0.05,
+            0.05,
+            0.05,
+            0.055699594,
+            0.055699594,
+            0.055699594,
+            0.07138837,
+            0.07138837,
+            0.07138837,
+            0.09510204,
+            0.09510204,
+            0.09510204,
+            0.12479112,
+            0.12479112,
+            0.12479112,
+            0.15845934,
+            0.15845934,
+            0.15845934,
+            0.19408162,
+            0.19408162,
+            0.19408162,
+            0.2296448,
+            0.2296448,
+            0.2296448,
+            0.26313317,
+            0.26313317,
+            0.26313317,
+            0.2925318,
+            0.2925318,
+            0.2925318,
+            0.31581914,
+            0.31581914,
+            0.31581914,
+            0.37742922,
+            0.37742922,
+            0.37742922,
+            0.47432134,
+            0.47432134,
+            0.47432134,
+            0.58397627,
+            0.58397627,
+            0.58397627,
+            0.7461507,
+            0.7461507,
+            0.7461507,
+            1.0,
+            1.0,
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 16,
+          "EntryStride": 3
+        }
+      },
+      "AlphaScaleOverLife": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 31.0,
+          "Values": [
+            0.0,
+            0.10752687,
+            0.21505374,
+            0.32258064,
+            0.43010747,
+            0.5376344,
+            0.6451613,
+            0.7526881,
+            0.86021495,
+            0.9677419,
+            0.96774197,
+            0.921659,
+            0.8755761,
+            0.8294931,
+            0.7834102,
+            0.7373272,
+            0.6912443,
+            0.6451614,
+            0.5990783,
+            0.5529953,
+            0.5069125,
+            0.46082962,
+            0.41474658,
+            0.36866358,
+            0.3225807,
+            0.2764978,
+            0.2304147,
+            0.18433172,
+            0.13824892,
+            0.09216602,
+            0.04608298,
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 32,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleLifetime",
+    "Name": "ParticleModuleLifetime_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleLifetime'",
+    "Properties": {
+      "Lifetime": {
+        "MinValue": 0.1,
+        "MaxValue": 0.2,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.1,
+            0.2
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleParameterDynamic",
+    "Name": "ParticleModuleParameterDynamic_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleParameterDynamic'",
+    "Properties": {
+      "DynamicParams": [
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        },
+        {
+          "ParamName": "None",
+          "bUseEmitterTime": false,
+          "bSpawnTimeOnly": true,
+          "ValueMethod": "EDPV_UserSet",
+          "bScaleVelocityByParamValue": false,
+          "ParamValue": {
+            "MinValue": 0.0,
+            "MaxValue": 1.0,
+            "Distribution": null,
+            "Table": {
+              "TimeScale": 0.0,
+              "TimeBias": 0.0,
+              "Values": [
+                0.0,
+                1.0
+              ],
+              "Op": 2,
+              "EntryCount": 1,
+              "EntryStride": 2,
+              "SubEntryStride": 1,
+              "LockFlag": 0
+            }
+          }
+        }
+      ],
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRequired",
+    "Name": "ParticleModuleRequired_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleRequired'",
+    "Properties": {
+      "Material": {
+        "ObjectName": "MaterialInstanceConstant'SmokeExhaust'",
+        "ObjectPath": "War/Content/FX/Materials/SmokeExhaust.0"
+      },
+      "SortMode": "PSORTMODE_Age_OldestFirst",
+      "bUseLegacyEmitterTime": false,
+      "SpawnRate": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'TruckExhaustDrive:ParticleModuleRequired_0.RequiredDistributionSpawnRate'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.0"
+        }
+      },
+      "RandomImageTime": 1.0,
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotation",
+    "Name": "ParticleModuleRotation_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleRotation'",
+    "Properties": {
+      "StartRotation": {
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0,
+            1.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleRotationRate",
+    "Name": "ParticleModuleRotationRate_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleRotationRate'",
+    "Properties": {
+      "StartRotationRate": {
+        "MinValue": -0.1,
+        "MaxValue": 0.1,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -0.1,
+            0.1
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 2,
+          "SubEntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSize",
+    "Name": "ParticleModuleSize_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleSize'",
+    "Properties": {
+      "StartSize": {
+        "MinValue": 50.0,
+        "MaxValue": 30.0,
+        "MinValueVec": {
+          "X": 50.0,
+          "Y": 50.0,
+          "Z": 50.0
+        },
+        "MaxValueVec": {
+          "X": 30.0,
+          "Y": 30.0,
+          "Z": 30.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            50.0,
+            50.0,
+            50.0,
+            30.0,
+            30.0,
+            30.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSizeMultiplyLife",
+    "Name": "ParticleModuleSizeMultiplyLife_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleSizeMultiplyLife'",
+    "Properties": {
+      "LifeMultiplier": {
+        "MinValue": 1.0,
+        "MaxValue": 3.0,
+        "MinValueVec": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        },
+        "MaxValueVec": {
+          "X": 3.0,
+          "Y": 3.0,
+          "Z": 3.0
+        },
+        "Distribution": null,
+        "Table": {
+          "TimeScale": 6.9999995,
+          "Values": [
+            1.0,
+            1.0,
+            1.0,
+            1.1108195,
+            1.1108195,
+            1.1108195,
+            1.3965338,
+            1.3965338,
+            1.3965338,
+            1.7871851,
+            1.7871851,
+            1.7871851,
+            2.212815,
+            2.212815,
+            2.212815,
+            2.6034663,
+            2.6034663,
+            2.6034663,
+            2.8891804,
+            2.8891804,
+            2.8891804,
+            3.0,
+            3.0,
+            3.0
+          ],
+          "Op": 1,
+          "EntryCount": 8,
+          "EntryStride": 3
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawn",
+    "Name": "ParticleModuleSpawn_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleSpawn'",
+    "Properties": {
+      "Rate": {
+        "MinValue": 10.0,
+        "MaxValue": 10.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            10.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "RateScale": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "BurstScale": {
+        "Distribution": {
+          "ObjectName": "DistributionFloatConstant'TruckExhaustDrive:ParticleModuleSpawn_0.BurstScaleDistribution'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.1"
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleSpawnPerUnit",
+    "Name": "ParticleModuleSpawnPerUnit_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleSpawnPerUnit'",
+    "Properties": {
+      "UnitScalar": 60.0,
+      "MovementTolerance": 0.5,
+      "SpawnPerUnit": {
+        "MinValue": 1.0,
+        "MaxValue": 1.0,
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            1.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleModuleVelocity",
+    "Name": "ParticleModuleVelocity_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleModuleVelocity'",
+    "Properties": {
+      "StartVelocity": {
+        "MinValue": -200.0,
+        "MaxValue": 20.0,
+        "MinValueVec": {
+          "X": -200.0,
+          "Y": -10.0,
+          "Z": 30.0
+        },
+        "MaxValueVec": {
+          "X": -300.0,
+          "Y": 10.0,
+          "Z": 20.0
+        },
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            -200.0,
+            -10.0,
+            30.0,
+            -300.0,
+            10.0,
+            20.0
+          ],
+          "Op": 2,
+          "EntryCount": 1,
+          "EntryStride": 6,
+          "SubEntryStride": 3
+        }
+      },
+      "StartVelocityRadial": {
+        "Distribution": null,
+        "Table": {
+          "Values": [
+            0.0
+          ],
+          "Op": 1,
+          "EntryCount": 1,
+          "EntryStride": 1
+        }
+      },
+      "LODValidity": 1
+    }
+  },
+  {
+    "Type": "ParticleSpriteEmitter",
+    "Name": "ParticleSpriteEmitter_0",
+    "Outer": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleSpriteEmitter'",
+    "Properties": {
+      "bUseLegacySpawningBehavior": true,
+      "LODLevels": [
+        {
+          "ObjectName": "ParticleLODLevel'TruckExhaustDrive:ParticleSpriteEmitter_0.ParticleLODLevel_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.2"
+        }
+      ],
+      "DetailModeBitmask": 7
+    }
+  },
+  {
+    "Type": "ParticleSystem",
+    "Name": "TruckExhaustDrive",
+    "Class": "UScriptClass'ParticleSystem'",
+    "Properties": {
+      "Emitters": [
+        {
+          "ObjectName": "ParticleSpriteEmitter'TruckExhaustDrive:ParticleSpriteEmitter_0'",
+          "ObjectPath": "War/Content/FX/TruckExhaustDrive.17"
+        }
+      ],
+      "CurveEdSetup": null,
+      "LODDistances": [
+        0.0
+      ],
+      "LODSettings": [
+        {}
+      ],
+      "bShouldResetPeakCounts": true,
+      "CustomOcclusionBounds": {
+        "Min": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Max": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "IsValid": 1
+      }
+    }
+  }
+]

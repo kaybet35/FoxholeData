@@ -1,0 +1,223 @@
+[
+  {
+    "Type": "Material",
+    "Name": "FallingSnow",
+    "Class": "UScriptClass'Material'",
+    "Properties": {
+      "Specular": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionConstant_1",
+        "UseConstant": false,
+        "Constant": 0.5
+      },
+      "BlendMode": "BLEND_Translucent",
+      "bEnableResponsiveAA": true,
+      "TranslucencyLightingMode": "TLM_Surface",
+      "bUsedWithParticleSprites": true,
+      "bUsedWithStaticLighting": true,
+      "Expressions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionTextureSample'FallingSnow:MaterialExpressionTextureSample_0'",
+          "ObjectPath": "War/Content/FX/Materials/FallingSnow.6"
+        },
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'FallingSnow:MaterialExpressionMaterialFunctionCall_0'",
+          "ObjectPath": "War/Content/FX/Materials/FallingSnow.2"
+        },
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionCollectionParameter'FallingSnow:MaterialExpressionCollectionParameter_0'",
+          "ObjectPath": "War/Content/FX/Materials/FallingSnow.1"
+        },
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'FallingSnow:MaterialExpressionMaterialFunctionCall_1'",
+          "ObjectPath": "War/Content/FX/Materials/FallingSnow.3"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionScalarParameter'FallingSnow:MaterialExpressionScalarParameter_0'",
+          "ObjectPath": "War/Content/FX/Materials/FallingSnow.4"
+        },
+        {
+          "ObjectName": "MaterialExpressionStaticSwitchParameter'FallingSnow:MaterialExpressionStaticSwitchParameter_0'",
+          "ObjectPath": "War/Content/FX/Materials/FallingSnow.5"
+        }
+      ],
+      "MaterialFunctionInfos": [
+        {
+          "StateId": "DB3E993F-4E2E98B3-05AD13B9-2D8C5DA5",
+          "Function": {
+            "ObjectName": "MaterialFunction'CameraDepthFade'",
+            "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
+          }
+        },
+        {
+          "StateId": "CE5CDB2E-4009C545-DBCF0789-11E4C0FD",
+          "Function": {
+            "ObjectName": "MaterialFunction'Step'",
+            "ObjectPath": "War/Content/Functions/Step.0"
+          }
+        }
+      ],
+      "MaterialParameterCollectionInfos": [
+        {
+          "StateId": "55282790-4C26CE2D-E3F976B5-C0198AF3",
+          "ParameterCollection": {
+            "ObjectName": "MaterialParameterCollection'WeatherControl'",
+            "ObjectPath": "War/Content/Materials/Collections/WeatherControl.0"
+          }
+        }
+      ],
+      "bCanMaskedBeAssumedOpaque": true,
+      "StateId": "0A7C05E2-43F79357-935760A1-EDDC7DFD",
+      "CachedQualityLevelsUsed": [
+        false,
+        true,
+        false
+      ],
+      "TextureStreamingData": [
+        {
+          "SamplingScale": 1.0,
+          "UVChannelIndex": 0,
+          "TextureName": "FallingSnow"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "MaterialExpressionCollectionParameter",
+    "Name": "MaterialExpressionCollectionParameter_0",
+    "Outer": "FallingSnow",
+    "Class": "UScriptClass'MaterialExpressionCollectionParameter'",
+    "Properties": {
+      "Collection": {
+        "ObjectName": "MaterialParameterCollection'WeatherControl'",
+        "ObjectPath": "War/Content/Materials/Collections/WeatherControl.0"
+      },
+      "ParameterName": "WeatherSnowControl",
+      "ParameterId": "E1B68D1D-4F1EA9E4-3BAF16B6-EC36BC11",
+      "Material": {
+        "ObjectName": "Material'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Materials/FallingSnow.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_0",
+    "Outer": "FallingSnow",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'CameraDepthFade'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade.0"
+      },
+      "Material": {
+        "ObjectName": "Material'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Materials/FallingSnow.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_1",
+    "Outer": "FallingSnow",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'Step'",
+        "ObjectPath": "War/Content/Functions/Step.0"
+      },
+      "Material": {
+        "ObjectName": "Material'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Materials/FallingSnow.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionScalarParameter",
+    "Name": "MaterialExpressionScalarParameter_0",
+    "Outer": "FallingSnow",
+    "Class": "UScriptClass'MaterialExpressionScalarParameter'",
+    "Properties": {
+      "ParameterName": "WeatherStart",
+      "ExpressionGUID": "E6B86CD4-4DE30236-4D5C7DB7-C716D28C",
+      "Material": {
+        "ObjectName": "Material'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Materials/FallingSnow.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionStaticSwitchParameter",
+    "Name": "MaterialExpressionStaticSwitchParameter_0",
+    "Outer": "FallingSnow",
+    "Class": "UScriptClass'MaterialExpressionStaticSwitchParameter'",
+    "Properties": {
+      "A": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionLinearInterpolate_0"
+      },
+      "B": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionReroute_0"
+      },
+      "ParameterName": "Weather?",
+      "ExpressionGUID": "12283E17-41E37106-5481E480-7C50E2AD",
+      "Material": {
+        "ObjectName": "Material'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Materials/FallingSnow.0"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionTextureSample",
+    "Name": "MaterialExpressionTextureSample_0",
+    "Outer": "FallingSnow",
+    "Class": "UScriptClass'MaterialExpressionTextureSample'",
+    "Properties": {
+      "Texture": {
+        "ObjectName": "Texture2D'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Textures/FallingSnow.0"
+      },
+      "SamplerType": "SAMPLERTYPE_LinearColor",
+      "Material": {
+        "ObjectName": "Material'FallingSnow'",
+        "ObjectPath": "War/Content/FX/Materials/FallingSnow.0"
+      }
+    }
+  }
+]

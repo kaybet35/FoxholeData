@@ -1,0 +1,324 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "Box",
+    "Outer": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPBargeBuildSite_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.11"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'VehicleBuildSite'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPBargeBuildSite_C:Box'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPBargeBuildSite_C:Truck'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.6"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPBargeBuildSite_C'Default__BPBargeBuildSite_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.2"
+    }
+  },
+  {
+    "Type": "BPBargeBuildSite_C",
+    "Name": "Default__BPBargeBuildSite_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.BPBargeBuildSite_C'",
+    "Properties": {
+      "BuildOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -30.0
+      },
+      "CodeName": "BargeBuildSite",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPBargeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPBargeBuildSite_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.5"
+      },
+      "Health": 0,
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPBargeBuildSite_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.13"
+      },
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPBargeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPBargeBuildSite_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 190.0,
+        "Y": 190.0,
+        "Z": 70.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "VehicleBuildSite",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 120.0
+      },
+      "RelativeScale3D": {
+        "X": 3.25,
+        "Y": 2.0,
+        "Z": 2.5
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPBargeBuildSite_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 830.0,
+        "Y": 640.0,
+        "Z": 160.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPBargeBuildSite_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.3"
+      },
+      "RelativeLocation": {
+        "X": -15.973221,
+        "Y": 0.0,
+        "Z": 232.84988
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Truck",
+    "Outer": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPBargeBuildSite_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.7"
+      },
+      "VariableGuid": "83B4B79D-431106A7-863F4193-3565B561",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPBargeBuildSite_C:Truck_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.12"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "80491679-44CFE3BE-E7AF0684-A820810F",
+      "InternalVariableName": "Truck"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPBargeBuildSite_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2C766000-4B4A4601-87F9119F-481F47CD",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBargeBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBargeBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPBargeBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPBargeBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPBargeBuildSite_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/LogisticsVehicles/BPBargeBuildSite.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Truck_GEN_VARIABLE",
+    "Outer": "BPBargeBuildSite_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Properties": {
+      "AnimationData": {
+        "AnimToPlay": {
+          "ObjectName": "AnimSequence'Anim_Barge_POSE_closedNeutral'",
+          "ObjectPath": "War/Content/Animation/WaterVehicles/Barge/Anim_Barge_POSE_closedNeutral.0"
+        },
+        "bSavedLooping": false,
+        "bSavedPlaying": false
+      },
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_Barge_03'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_Barge_03.0"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        },
+        {
+          "ObjectName": "Material'BuildSite'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildSite.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 4.969146,
+        "Y": -3E-06,
+        "Z": 30.012695
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 270.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPBargeBuildSite_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]
