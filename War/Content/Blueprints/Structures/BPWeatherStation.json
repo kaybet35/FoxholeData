@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPWeatherStation_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.57"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.59"
       },
       "UberGraphFramePointerProperty": {
         "ObjectName": "StructProperty'BPWeatherStation_C:UberGraphFrame'",
@@ -46,20 +46,24 @@
         "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.7"
       },
       {
-        "ObjectName": "ObjectProperty'BPWeatherStation_C:OccupiableComponent'",
+        "ObjectName": "ObjectProperty'BPWeatherStation_C:RoofBaseMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.5"
       },
       {
-        "ObjectName": "ObjectProperty'BPWeatherStation_C:StaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.37"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPWeatherStation_C:OccupiableTrigger'",
+        "ObjectName": "ObjectProperty'BPWeatherStation_C:OccupiableComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.34"
       },
       {
-        "ObjectName": "ObjectProperty'BPWeatherStation_C:UnderModSlot'",
+        "ObjectName": "ObjectProperty'BPWeatherStation_C:StaticMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.38"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPWeatherStation_C:OccupiableTrigger'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.35"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPWeatherStation_C:UnderModSlot'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.39"
       },
       {
         "ObjectName": "ObjectProperty'BPWeatherStation_C:BPWaterStencilComponent'",
@@ -79,7 +83,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPWeatherStation_C:RoofMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.36"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.37"
       },
       {
         "ObjectName": "ObjectProperty'BPWeatherStation_C:FloorMesh'",
@@ -91,7 +95,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPWeatherStation_C:RightFortSocket'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.36"
       },
       {
         "ObjectName": "ObjectProperty'BPWeatherStation_C:BackFortSocket'",
@@ -136,19 +140,19 @@
       "UberGraphFrame": {},
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPWeatherStation_C:SkeletalMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.59"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.61"
       },
       "BaseMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPWeatherStation_C:BaseMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.58"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.60"
       },
       "ActiveSFXLoop": {
         "ObjectName": "WarAudioComponent'Default__BPWeatherStation_C:ActiveSFXLoop'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.66"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.69"
       },
       "RotationSFXLoop": {
         "ObjectName": "WarAudioComponent'Default__BPWeatherStation_C:RotationSFXLoop'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.67"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.70"
       },
       "LightComponent": {
         "ObjectName": "FacilityLightComponent'Default__BPWeatherStation_C:LightComponent'",
@@ -163,9 +167,10 @@
         "ObjectPath": "War/Content/Audio/SFX/Structure/WeatherStation/WeatherStationDeactivate_Cue.0"
       },
       "RequiredPowerForFiring": 35.0,
-      "RequiredPowerForRotation": 1.8,
+      "RequiredPowerForRotation": 0.25,
+      "ActiveDuration": 10800.0,
       "PowerInfo": {
-        "PowerDelta": -35000
+        "PowerDelta": -30000
       },
       "Tier": "EFortTier::T3",
       "BuildGhostClass": null,
@@ -177,6 +182,7 @@
         "ObjectName": "BlueprintGeneratedClass'BPFortDestroyedT3_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT3.1"
       },
+      "bClearModificationsOnDowngrade": true,
       "Description": {
         "Namespace": "",
         "Key": "63CA92E04D0FE15E13FC298EDF912E3C",
@@ -234,7 +240,7 @@
       "StructureNetRelevancySize": "EStructureNetRelevancySize::Large",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPWeatherStation_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.64"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.67"
       },
       "NetCullDistanceSquared": 25000000.0,
       "NetUpdateFrequency": 15.0,
@@ -318,13 +324,13 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "OccupiableComponent",
+    "Name": "RoofBaseMesh",
     "Outer": "BPWeatherStation_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'StructureSeatComponent'",
-      "ObjectPath": "/Script/War"
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -947,6 +953,17 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "OccupiableComponent",
+    "Outer": "BPWeatherStation_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StructureSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "OccupiableTrigger",
     "Outer": "BPWeatherStation_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -1018,7 +1035,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPWeatherStation_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.39"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.40"
       },
       "VariableGuid": "6F9A620C-4B15380B-2CC77895-979D14F2",
       "InternalVariableName": "DefaultSceneRoot"
@@ -1114,7 +1131,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StructureSeatComponent'BPWeatherStation_C:OccupiableComponent_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.65"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.68"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1134,7 +1151,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPWeatherStation_C:FloorMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.61"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.63"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1174,7 +1191,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SeatTriggerComponent'BPWeatherStation_C:OccupiableTrigger_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.56"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.58"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1234,7 +1251,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPWeatherStation_C:RoofMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.62"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.65"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1254,7 +1271,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPWeatherStation_C:Flag_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.60"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.62"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1274,13 +1291,33 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPWeatherStation_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.63"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.66"
       },
       "AttachToName": "S_ArrowDirection",
       "ParentComponentOrVariableName": "SkeletalMesh",
       "bIsParentComponentNative": true,
       "VariableGuid": "7D53D21E-4C7237AD-51A6A2B8-98AFD8A7",
       "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPWeatherStation_C:RoofBaseMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.64"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "93D70B40-4B9D679C-71B685BC-7D283E04",
+      "InternalVariableName": "RoofBaseMesh"
     }
   },
   {
@@ -1350,130 +1387,138 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.42"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.43"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.44"
         },
         {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.45"
+        },
+        {
           "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.51"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.47"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.49"
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.52"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.54"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.53"
         },
         {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.54"
+        },
+        {
           "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.45"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.55"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.41"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.55"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.42"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_10'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.43"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.44"
         },
         {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.45"
+        },
+        {
           "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.51"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.52"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.47"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.49"
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.52"
         },
         {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.54"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.48"
-        },
-        {
-          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.53"
         },
         {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.48"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.56"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.54"
+        },
+        {
           "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.45"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.46"
+        },
+        {
+          "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.55"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPWeatherStation_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.40"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPWeatherStation.41"
       }
     }
   },
@@ -1705,6 +1750,29 @@
         "Y": 0.0,
         "Z": -160.0
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "RoofBaseMesh_GEN_VARIABLE",
+    "Outer": "BPWeatherStation_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'WeatherStationUpperBase'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/WeatherStation/WeatherStationUpperBase.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 152.0
+      },
+      "ComponentTags": [
+        "DefaultRoofVisibility"
+      ]
     }
   },
   {
