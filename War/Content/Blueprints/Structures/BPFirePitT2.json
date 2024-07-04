@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "MultiplexedStaticMesh",
+    "Name": "Decal",
     "Outer": "BPFirePitT2_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
-      "ObjectPath": "/Script/War"
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFirePitT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.33"
       }
     },
     "SuperStruct": {
@@ -26,32 +26,36 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFirePitT2_C:MultiplexedStaticMesh'",
+        "ObjectName": "ObjectProperty'BPFirePitT2_C:Decal'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPFirePitT2_C:MultiplexedStaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.18"
+      },
+      {
         "ObjectName": "ObjectProperty'BPFirePitT2_C:LandscapeCheck4'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.17"
       },
       {
         "ObjectName": "ObjectProperty'BPFirePitT2_C:LandscapeCheck3'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.16"
       },
       {
         "ObjectName": "ObjectProperty'BPFirePitT2_C:LandscapeCheck2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.15"
       },
       {
         "ObjectName": "ObjectProperty'BPFirePitT2_C:LandscapeCheck1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.14"
       },
       {
         "ObjectName": "ObjectProperty'BPFirePitT2_C:LandscapeCheck'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.13"
       },
       {
         "ObjectName": "ObjectProperty'BPFirePitT2_C:StaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.19"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -73,23 +77,23 @@
     "Properties": {
       "TemperatureModifierComponent": {
         "ObjectName": "TemperatureModifierSphereComponent'Default__BPFirePitT2_C:TemperatureModifierComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.34"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.37"
       },
       "FireMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPFirePitT2_C:FireMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.32"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.35"
       },
       "Fire1ParticleSystem": {
         "ObjectName": "ParticleSystemComponent'Default__BPFirePitT2_C:Fire1ParticleSystem'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.20"
       },
       "Fire2ParticleSystem": {
         "ObjectName": "ParticleSystemComponent'Default__BPFirePitT2_C:Fire2ParticleSystem'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.21"
       },
       "Fire3ParticleSystem": {
         "ObjectName": "ParticleSystemComponent'Default__BPFirePitT2_C:Fire3ParticleSystem'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.22"
       },
       "FireSFXLoop": {
         "ObjectName": "AudioComponent'Default__BPFirePitT2_C:FireSFXLoop'",
@@ -156,7 +160,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFirePitT2_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.33"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.36"
       },
       "RemoteRole": "ROLE_None",
       "RootComponent": {
@@ -285,6 +289,34 @@
     }
   },
   {
+    "Type": "DecalComponent",
+    "Name": "Decal_GEN_VARIABLE",
+    "Outer": "BPFirePitT2_C",
+    "Class": "UScriptClass'DecalComponent'",
+    "Properties": {
+      "DecalMaterial": {
+        "ObjectName": "MaterialInstanceConstant'AshDecal'",
+        "ObjectPath": "War/Content/Materials/Decals/AshDecal.0"
+      },
+      "SortOrder": 5,
+      "DecalSize": {
+        "X": 128.0,
+        "Y": 125.0,
+        "Z": 125.0
+      },
+      "RelativeLocation": {
+        "X": 0.0014065681,
+        "Y": -0.000594834,
+        "Z": -93.54091
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 0.0,
+        "Roll": -0.0
+      }
+    }
+  },
+  {
     "Type": "MultiplexedStaticMeshComponent",
     "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
     "Outer": "BPFirePitT2_C",
@@ -370,6 +402,17 @@
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
       "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedStaticMesh",
+    "Outer": "BPFirePitT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -474,7 +517,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFirePitT2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.23"
       },
       "VariableGuid": "7CEB993F-4317825D-D4F213A0-CE235BF6",
       "InternalVariableName": "DefaultSceneRoot"
@@ -492,10 +535,16 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFirePitT2_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.31"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.34"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.27"
+        }
+      ],
       "VariableGuid": "403F8494-4AE0AE2F-828E3ABF-2D4E3459",
       "InternalVariableName": "StaticMesh"
     }
@@ -518,6 +567,24 @@
       "bIsParentComponentNative": true,
       "VariableGuid": "7B0C2C93-40F01CD5-888B51A9-F7D40BC3",
       "InternalVariableName": "LandscapeCheck3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'DecalComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "DecalComponent'BPFirePitT2_C:Decal_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.11"
+      },
+      "VariableGuid": "93BE1FC4-49589D49-1F844F99-E4B540DB",
+      "InternalVariableName": "Decal"
     }
   },
   {
@@ -612,7 +679,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedStaticMeshComponent'BPFirePitT2_C:MultiplexedStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.12"
       },
       "VariableGuid": "0B81CA51-4380C37B-F70B1A9F-C51F5A9C",
       "InternalVariableName": "MultiplexedStaticMesh"
@@ -627,66 +694,70 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.25"
         },
         {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.28"
         },
         {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.32"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.25"
         },
         {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.28"
         },
         {
-          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.27"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFirePitT2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.24"
       }
     }
   },
@@ -703,6 +774,7 @@
       "OverrideMaterials": [
         null
       ],
+      "bReceivesDecals": false,
       "BodyInstance": {
         "CollisionProfileName": "StructureDamageableSeeThroughMesh",
         "CollisionResponses": {
@@ -766,7 +838,7 @@
           {
             "Object": {
               "ObjectName": "TemperatureModifierSphereComponent'Default__BPFirePitT2_C:TemperatureModifierComponent'",
-              "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.34"
+              "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.37"
             },
             "FunctionName": "OnBeginOverlap"
           }
@@ -777,7 +849,7 @@
           {
             "Object": {
               "ObjectName": "TemperatureModifierSphereComponent'Default__BPFirePitT2_C:TemperatureModifierComponent'",
-              "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.34"
+              "ObjectPath": "War/Content/Blueprints/Structures/BPFirePitT2.37"
             },
             "FunctionName": "OnEndOverlap"
           }

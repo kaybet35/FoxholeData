@@ -4099,6 +4099,7 @@
         "ObjectName": "SkeletalMesh'SK_RelicTruck'",
         "ObjectPath": "War/Content/Meshes/Vehicles/SK_RelicTruck.0"
       },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
       "RelativeLocation": {
         "X": 1468.1819,
         "Y": 280.51932,
@@ -5452,51 +5453,15 @@
         "ObjectName": "StaticMesh'BasicCrates'",
         "ObjectPath": "War/Content/Meshes/Environment/Props/BasicCrates.2"
       },
+      "CanCharacterStepUpOn": "ECB_No",
       "BodyInstance": {
-        "ObjectType": "ECC_GameTraceChannel8",
-        "CollisionEnabled": "ECollisionEnabled::NoCollision",
-        "CollisionProfileName": "NoCollision",
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
         "CollisionResponses": {
           "ResponseArray": [
             {
-              "Channel": "WorldStatic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "WorldDynamic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Pawn",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Visibility",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "PhysicsBody",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Destructible",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "OverlapDowncast",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Projectile",
-              "Response": "ECR_Ignore"
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
             }
           ]
         }

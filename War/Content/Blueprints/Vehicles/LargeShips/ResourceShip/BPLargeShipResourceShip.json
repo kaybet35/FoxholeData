@@ -993,6 +993,7 @@
       },
       "bIsStockpilable": false,
       "bIsReserveStockpiled": false,
+      "bAllowsDirectPackaging": true,
       "DestroyedMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPLargeShipResourceShip_C:DestroyedMesh'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/ResourceShip/BPLargeShipResourceShip.632"
@@ -1437,6 +1438,10 @@
               "Response": "ECR_Ignore"
             }
           ]
+        },
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'MetalPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/MetalPhys.0"
         }
       },
       "RelativeLocation": {
@@ -2207,6 +2212,12 @@
       ],
       "bReceivesDecals": false,
       "bCastHiddenShadow": true,
+      "BodyInstance": {
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'MetalPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/MetalPhys.0"
+        }
+      },
       "RelativeLocation": {
         "X": -2.5983887,
         "Y": -790.3081,
@@ -2793,6 +2804,27 @@
           ],
           "PreStockedEntries": [],
           "RetrieveDurationModifiers": []
+        },
+        {
+          "Type": "EStockpileEntryType::Items",
+          "QuantityLimit": 30000,
+          "TotalQuantityLimit": 30000,
+          "QuantityOverrides": [],
+          "TotalQuantityOverrides": [],
+          "ValidEntriesOverride": [
+            "Coal",
+            "FacilityCoal1",
+            "Metal",
+            "Sulfur",
+            "Components",
+            "FacilityComponents1",
+            "RareMetal",
+            "Explosive",
+            "HeavyExplosive",
+            "GroundMaterials"
+          ],
+          "PreStockedEntries": [],
+          "RetrieveDurationModifiers": []
         }
       ],
       "RetrieveDurationModifier": 0.33
@@ -2807,8 +2839,8 @@
       "Configs": [
         {
           "Type": "EStockpileEntryType::Items",
-          "QuantityLimit": 32000,
-          "TotalQuantityLimit": 32000,
+          "QuantityLimit": 32500,
+          "TotalQuantityLimit": 32500,
           "QuantityOverrides": [],
           "TotalQuantityOverrides": [],
           "ValidEntriesOverride": [
@@ -2841,8 +2873,8 @@
       "Configs": [
         {
           "Type": "EStockpileEntryType::Items",
-          "QuantityLimit": 32000,
-          "TotalQuantityLimit": 32000,
+          "QuantityLimit": 32500,
+          "TotalQuantityLimit": 32500,
           "QuantityOverrides": [],
           "TotalQuantityOverrides": [],
           "ValidEntriesOverride": [
@@ -12061,6 +12093,12 @@
         null
       ],
       "bCastHiddenShadow": true,
+      "BodyInstance": {
+        "PhysMaterialOverride": {
+          "ObjectName": "PhysicalMaterial'MetalPhys'",
+          "ObjectPath": "War/Content/PhysicalMaterials/MetalPhys.0"
+        }
+      },
       "ComponentTags": [
         "VToggle"
       ]
