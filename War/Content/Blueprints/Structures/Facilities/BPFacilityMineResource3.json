@@ -106,6 +106,41 @@
           "bConsumeResourceNodes": true
         }
       ],
+      "Modifications": [
+        {
+          "Key": "EFortModificationType::Excavator",
+          "Value": {
+            "ConversionEntries": [
+              {
+                "ItemInput": [],
+                "LiquidInput": [
+                  {
+                    "CodeName": "FacilityOil1",
+                    "Quantity": 6.0,
+                    "Limit": 200.0
+                  }
+                ],
+                "ItemOutput": [
+                  {
+                    "CodeName": "Sulfur",
+                    "Quantity": 2,
+                    "Limit": 100
+                  },
+                  {
+                    "CodeName": "Coal",
+                    "Quantity": 5,
+                    "Limit": 250
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 18,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              }
+            ]
+          }
+        }
+      ],
       "RequiredResourceFieldCodeName": "SulfurField",
       "FuelTanks": [
         {
@@ -174,7 +209,7 @@
         "ObjectName": "BoxComponent'Default__BPFacilityMineResource3_C:UseAreaBox'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource3.4"
       },
-      "TechID": "ETechID::UnlockFacilityTier3",
+      "TechID": "ETechID::UnlockFacilityTier2",
       "MaxHealth": 1850,
       "Health": 1850,
       "IsVaultable": false,
@@ -335,10 +370,16 @@
           "Key": "EFortModificationType::Default",
           "Value": {
             "DisplayName": {
-              "CultureInvariantString": null
+              "Namespace": "",
+              "Key": "B2BEA7C24561238F07A9969EB9582F95",
+              "SourceString": "Excavator",
+              "LocalizedString": "Excavator"
             },
             "Description": {
-              "CultureInvariantString": null
+              "Namespace": "",
+              "Key": "BEBB7F114EFF9D30C893DFA8A48D2F52",
+              "SourceString": "An excavator that allows for the mining of Sulfur and a small amount of coal even when a Sulfur Field is depleted",
+              "LocalizedString": "An excavator that allows for the mining of Sulfur and a small amount of coal even when a Sulfur Field is depleted"
             },
             "Icon": {
               "ImageSize": {
@@ -416,6 +457,105 @@
                   "TemplateActor": {
                     "ObjectName": "BlueprintGeneratedClass'BPFacilityMineResource3DefaultBin_C'",
                     "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityMineResource3DefaultBin.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Excavator",
+          "Value": {
+            "DisplayName": {
+              "Namespace": "",
+              "Key": "94C805FF4CC0EDB282209C93D05E6901",
+              "SourceString": "Excavator",
+              "LocalizedString": "Excavator"
+            },
+            "Description": {
+              "Namespace": "",
+              "Key": "4FA0ECDD4F644E29713105B6429A047B",
+              "SourceString": "An excavator that allows for the mining of Sulfur and a small amount of coal even when a Sulfur Field is depleted",
+              "LocalizedString": "An excavator that allows for the mining of Sulfur and a small amount of coal even when a Sulfur Field is depleted"
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 256.0,
+                "Y": 256.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilityExcavatorIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilityExcavatorIcon.0"
+              },
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": true,
+            "TechID": "ETechID::UnlockFacilityTier3",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "FacilityMaterials3",
+                      "Quantity": 20
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": null,
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityMineResource3Excavator_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityMineResource3Excavator.1"
                   },
                   "bUsePreviewMesh": false,
                   "PreviewMesh": null

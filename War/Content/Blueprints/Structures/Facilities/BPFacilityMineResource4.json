@@ -106,6 +106,36 @@
           "bConsumeResourceNodes": true
         }
       ],
+      "Modifications": [
+        {
+          "Key": "EFortModificationType::Excavator",
+          "Value": {
+            "ConversionEntries": [
+              {
+                "ItemInput": [],
+                "LiquidInput": [
+                  {
+                    "CodeName": "Petrol",
+                    "Quantity": 2.0,
+                    "Limit": 100.0
+                  }
+                ],
+                "ItemOutput": [
+                  {
+                    "CodeName": "Coal",
+                    "Quantity": 15,
+                    "Limit": 555
+                  }
+                ],
+                "LiquidOutput": [],
+                "Duration": 18,
+                "PowerDelta": 0,
+                "bConsumeResourceNodes": false
+              }
+            ]
+          }
+        }
+      ],
       "RequiredResourceFieldCodeName": "CoalField",
       "FuelTanks": [
         {
@@ -174,7 +204,6 @@
         "ObjectName": "BoxComponent'Default__BPFacilityMineResource4_C:UseAreaBox'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource4.4"
       },
-      "TechID": "ETechID::UnlockFacilityTier2",
       "MaxHealth": 1850,
       "Health": 1850,
       "IsVaultable": false,
@@ -342,8 +371,8 @@
             },
             "Icon": {
               "ImageSize": {
-                "X": 32.0,
-                "Y": 32.0
+                "X": 256.0,
+                "Y": 256.0
               },
               "Margin": {
                 "Left": 0.0,
@@ -361,7 +390,10 @@
                 },
                 "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
               },
-              "ResourceObject": null,
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilityExcavatorIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilityExcavatorIcon.0"
+              },
               "ResourceName": "None",
               "UVRegion": {
                 "Min": {
@@ -416,6 +448,105 @@
                   "TemplateActor": {
                     "ObjectName": "BlueprintGeneratedClass'BPFacilityMineResource4DefaultBin_C'",
                     "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityMineResource4DefaultBin.1"
+                  },
+                  "bUsePreviewMesh": false,
+                  "PreviewMesh": null
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EFortModificationType::Excavator",
+          "Value": {
+            "DisplayName": {
+              "Namespace": "",
+              "Key": "CDDE2AF043621F7FFE1D268AA8312A98",
+              "SourceString": "Excavator",
+              "LocalizedString": "Excavator"
+            },
+            "Description": {
+              "Namespace": "",
+              "Key": "83ADDE8E40F216F4941EA08A42058556",
+              "SourceString": "An excavator that allows for the mining of Coal even when a Coal Field is depleted",
+              "LocalizedString": "An excavator that allows for the mining of Coal even when a Coal Field is depleted"
+            },
+            "Icon": {
+              "ImageSize": {
+                "X": 256.0,
+                "Y": 256.0
+              },
+              "Margin": {
+                "Left": 0.0,
+                "Top": 0.0,
+                "Right": 0.0,
+                "Bottom": 0.0
+              },
+              "TintColor": {
+                "SpecifiedColor": {
+                  "R": 1.0,
+                  "G": 1.0,
+                  "B": 1.0,
+                  "A": 1.0,
+                  "Hex": "FFFFFF"
+                },
+                "ColorUseRule": "ESlateColorStylingMode::UseColor_Specified"
+              },
+              "ResourceObject": {
+                "ObjectName": "Texture2D'FacilityExcavatorIcon'",
+                "ObjectPath": "War/Content/Textures/UI/StructureIcons/FacilityExcavatorIcon.0"
+              },
+              "ResourceName": "None",
+              "UVRegion": {
+                "Min": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Max": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "bIsValid": 0
+              },
+              "DrawAs": "ESlateBrushDrawType::Image",
+              "Tiling": "ESlateBrushTileType::NoTile",
+              "Mirroring": "ESlateBrushMirrorType::NoMirror",
+              "ImageType": "ESlateBrushImageType::NoImage",
+              "bIsDynamicallyLoaded": false
+            },
+            "RequiredSocketConnectionMask": 0,
+            "HiddenBySocketConnectionMask": 0,
+            "bIsRemovable": false,
+            "bVehicleBlocksRemoval": false,
+            "bHiddenByDefault": false,
+            "bVisualsAreClientOnly": false,
+            "bShowInBuildSite": true,
+            "TechID": "ETechID::UnlockFacilityTier3",
+            "InfrastructureType": "EInfrastructureType::None",
+            "InfrastructureAmount": 0,
+            "Tiers": [
+              {
+                "Key": "EFortTier::T1",
+                "Value": {
+                  "ResourceAmounts": {
+                    "Resource": {
+                      "CodeName": "FacilityMaterials3",
+                      "Quantity": 10
+                    },
+                    "OtherResources": []
+                  },
+                  "RemoveCostOverride": {
+                    "Resource": {
+                      "CodeName": "None",
+                      "Quantity": 0
+                    },
+                    "OtherResources": []
+                  },
+                  "bUseTemplateActor": true,
+                  "TemplateMesh": null,
+                  "TemplateActor": {
+                    "ObjectName": "BlueprintGeneratedClass'BPFacilityMineResource4Excavator_C'",
+                    "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityMineResource4Excavator.1"
                   },
                   "bUsePreviewMesh": false,
                   "PreviewMesh": null

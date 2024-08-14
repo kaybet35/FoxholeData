@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "BPTrenchBlockerBox",
+    "Name": "SplineConnector",
     "Outer": "BPTrenchConnectorCommon_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "BlueprintGeneratedClass'BPTrenchBlockerBox_C'",
-      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPTrenchBlockerBox.0"
+      "ObjectName": "Class'SplineConnectorComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPTrenchConnectorCommon_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.37"
       }
     },
     "SuperStruct": {
@@ -26,12 +26,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:BPTrenchBlockerBox'",
+        "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:SplineConnector'",
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:BPTrenchBlockerBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.11"
+      },
+      {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:WaterStencil'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.19"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:BackSocket'",
@@ -39,23 +43,23 @@
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:FrontSocket'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.13"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:ReferenceD'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.18"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:ReferenceC'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.17"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:ReferenceB'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.16"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:ReferenceA'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.15"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:BoatHull'",
@@ -63,11 +67,11 @@
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:LandscapeOverlap'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.14"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchConnectorCommon_C:DefaultSceneRoot'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.12"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -344,6 +348,8 @@
       ],
       "Direction": "ESocketDirection::Back",
       "MaxRotation": 15.0,
+      "SlopeRotationMode": "ESlopeRotationMode::OpposingSocketsSurfaceSamples",
+      "MaxSurfaceSamplePadding": 60.0,
       "RelativeLocation": {
         "X": -180.0,
         "Y": 0.0,
@@ -383,6 +389,8 @@
       ],
       "Direction": "ESocketDirection::Front",
       "MaxRotation": 15.0,
+      "SlopeRotationMode": "ESlopeRotationMode::None",
+      "MaxSurfaceSamplePadding": 60.0,
       "RelativeLocation": {
         "X": 180.0,
         "Y": 0.0,
@@ -414,6 +422,17 @@
     "PropertyClass": {
       "ObjectName": "Class'BoatHullComponent'",
       "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BPTrenchBlockerBox",
+    "Outer": "BPTrenchConnectorCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPTrenchBlockerBox_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPTrenchBlockerBox.0"
     }
   },
   {
@@ -598,48 +617,52 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrenchConnectorCommon_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.20"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.30"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.31"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.32"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.33"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.34"
         },
         {
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.36"
+        },
+        {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.27"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.29"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.27"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.28"
         }
       ],
       "VariableGuid": "1BD41EA8-43912735-A49A4BB8-AEE5442A",
@@ -680,6 +703,24 @@
       },
       "VariableGuid": "9DDA17D7-4918EB2D-048938B5-02822E42",
       "InternalVariableName": "WaterStencil"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SplineConnectorComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SplineConnectorComponent'BPTrenchConnectorCommon_C:SplineConnector_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.38"
+      },
+      "VariableGuid": "AAFB2D49-49D92054-05720294-9E3688B4",
+      "InternalVariableName": "SplineConnector"
     }
   },
   {
@@ -748,7 +789,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrenchConnectorCommon_C:ReferenceA_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.21"
       },
       "VariableGuid": "75EDCE3D-466C43DE-9B66E5BF-6F66FAA1",
       "InternalVariableName": "ReferenceA"
@@ -766,7 +807,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrenchConnectorCommon_C:ReferenceB_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.22"
       },
       "VariableGuid": "410AC70D-4ED03E19-BC32AC80-6D98F4DC",
       "InternalVariableName": "ReferenceB"
@@ -784,7 +825,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrenchConnectorCommon_C:ReferenceC_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.23"
       },
       "VariableGuid": "FB186AEC-4B522826-211079B1-6D7A778F",
       "InternalVariableName": "ReferenceC"
@@ -802,7 +843,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrenchConnectorCommon_C:ReferenceD_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.24"
       },
       "VariableGuid": "E3AEAC5B-48775D36-F3880380-BA0B82D0",
       "InternalVariableName": "ReferenceD"
@@ -835,59 +876,97 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.24"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.25"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.24"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.25"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.30"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.31"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.32"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.33"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.34"
         },
         {
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.36"
+        },
+        {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.27"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.29"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.27"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.28"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPTrenchConnectorCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchConnectorCommon.25"
       }
+    }
+  },
+  {
+    "Type": "SplineConnectorComponent",
+    "Name": "SplineConnector_GEN_VARIABLE",
+    "Outer": "BPTrenchConnectorCommon_C",
+    "Class": "UScriptClass'SplineConnectorComponent'",
+    "Properties": {
+      "TargetComponentName": "FrontSocket",
+      "bSurfaceSamplesIgnoreHoles": true,
+      "MinBuffer": 0.0,
+      "MaxBuffer": 0.0,
+      "MinRadius": 0.0,
+      "MaxRadius": 0.0,
+      "BuildFootprintShapeType": "ESplineFootprintShapeType::Box",
+      "BuildFootprintWidth": 150.0,
+      "MaxSlopeAngle": 15.0,
+      "bMouseWheelControlsHeight": false,
+      "bAltMouseWheelControlsPitch": false,
+      "MaxFootprintDepthBelowSurface": 20.0,
+      "MaxFootprintHeightAboveSurface": 130.0,
+      "RelativeLocation": {
+        "X": -180.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 179.99976,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost"
+      ]
     }
   }
 ]
