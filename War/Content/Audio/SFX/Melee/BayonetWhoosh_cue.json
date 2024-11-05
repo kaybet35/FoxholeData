@@ -8,7 +8,7 @@
         "ObjectName": "SoundNodeModulator'BayonetWhoosh_cue:SoundNodeModulator_0'",
         "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetWhoosh_cue.2"
       },
-      "VolumeMultiplier": 0.4,
+      "VolumeMultiplier": 1.0,
       "AttenuationOverrides": {
         "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
         "AttenuationShapeExtents": {
@@ -23,7 +23,7 @@
         "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
       },
       "bHasDelayNode": true,
-      "Duration": 2.1273332,
+      "Duration": 0.5968125,
       "MaxDistance": 5800.0,
       "AttenuationSettings": {
         "ObjectName": "SoundAttenuation'WeaponFoley'",
@@ -37,11 +37,9 @@
     "Outer": "BayonetWhoosh_cue",
     "Class": "UScriptClass'SoundNodeDelay'",
     "Properties": {
-      "DelayMin": 0.5,
-      "DelayMax": 0.5,
       "ChildNodes": [
         {
-          "ObjectName": "SoundNodeWavePlayer'BayonetWhoosh_cue:SoundNodeWavePlayer_4'",
+          "ObjectName": "SoundNodeRandom'BayonetWhoosh_cue:SoundNodeRandom_0'",
           "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetWhoosh_cue.3"
         }
       ]
@@ -53,10 +51,6 @@
     "Outer": "BayonetWhoosh_cue",
     "Class": "UScriptClass'SoundNodeModulator'",
     "Properties": {
-      "PitchMin": 0.8,
-      "PitchMax": 1.2,
-      "VolumeMin": 0.8,
-      "VolumeMax": 1.2,
       "ChildNodes": [
         {
           "ObjectName": "SoundNodeDelay'BayonetWhoosh_cue:SoundNodeDelay_0'",
@@ -66,19 +60,69 @@
     }
   },
   {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "BayonetWhoosh_cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'BayonetWhoosh_cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetWhoosh_cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BayonetWhoosh_cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetWhoosh_cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'BayonetWhoosh_cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetWhoosh_cue.6"
+        }
+      ]
+    }
+  },
+  {
     "Type": "SoundNodeWavePlayer",
-    "Name": "SoundNodeWavePlayer_4",
+    "Name": "SoundNodeWavePlayer_0",
     "Outer": "BayonetWhoosh_cue",
     "Class": "UScriptClass'SoundNodeWavePlayer'",
     "Properties": {
       "SoundWaveAssetPtr": {
-        "AssetPathName": "/Game/Audio/SFX/Melee/BayonetWhoosh.BayonetWhoosh",
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeBayonetWhoosh01.MeleeBayonetWhoosh01",
         "SubPathString": ""
       }
     },
-    "SoundWave": {
-      "ObjectName": "SoundWave'BayonetWhoosh'",
-      "ObjectPath": "War/Content/Audio/SFX/Melee/BayonetWhoosh.0"
-    }
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "BayonetWhoosh_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeBayonetWhoosh02.MeleeBayonetWhoosh02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "BayonetWhoosh_cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/MeleeBayonetWhoosh03.MeleeBayonetWhoosh03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
   }
 ]

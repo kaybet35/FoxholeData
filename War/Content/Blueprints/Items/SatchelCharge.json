@@ -6,7 +6,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'SatchelCharge_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.4"
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.5"
       }
     },
     "SuperStruct": {
@@ -31,13 +31,17 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/SatchelCharge.SatchelCharge_C'",
     "Properties": {
       "DetonationDelay": 5.0,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__SatchelCharge_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.2"
+      },
       "CollisionComp": {
         "ObjectName": "SphereComponent'Default__SatchelCharge_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.5"
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.6"
       },
       "ItemMesh": {
         "ObjectName": "StaticMeshComponent'Default__SatchelCharge_C:ItemMesh'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.6"
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.7"
       },
       "ExplosiveCodeName": "SatchelChargeW",
       "ExplosionOffsetZ": 25.0,
@@ -47,10 +51,16 @@
         "ObjectPath": "War/Content/Blueprints/Items/SatchelExplosion.1"
       },
       "RootComponent": {
-        "ObjectName": "SphereComponent'Default__SatchelCharge_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.5"
+        "ObjectName": "ArrowComponent'Default__SatchelCharge_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.2"
       }
     }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Outer": "Default__SatchelCharge_C",
+    "Class": "UScriptClass'ArrowComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -70,7 +80,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'SatchelCharge_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.2"
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.3"
       },
       "VariableGuid": "0A077539-4DEDF8B1-70C97489-9A07920D",
       "InternalVariableName": "DefaultSceneRoot"
@@ -84,7 +94,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'SatchelCharge_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.3"
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.4"
       }
     }
   },
@@ -92,7 +102,13 @@
     "Type": "SphereComponent",
     "Name": "SphereComp",
     "Outer": "Default__SatchelCharge_C",
-    "Class": "UScriptClass'SphereComponent'"
+    "Class": "UScriptClass'SphereComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__SatchelCharge_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.2"
+      }
+    }
   },
   {
     "Type": "StaticMeshComponent",
@@ -105,8 +121,8 @@
         "ObjectPath": "War/Content/Meshes/Pickups/SatchelCharge.2"
       },
       "AttachParent": {
-        "ObjectName": "SphereComponent'Default__SatchelCharge_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.5"
+        "ObjectName": "ArrowComponent'Default__SatchelCharge_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/SatchelCharge.2"
       },
       "RelativeLocation": {
         "X": 0.0,

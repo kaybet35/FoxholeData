@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MeleeSwordChargeWhoosh_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordChargeWhoosh_Cue.2"
+      },
+      "VolumeMultiplier": 0.45,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 0.87415624,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.2,
+      "DelayMax": 0.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MeleeSwordChargeWhoosh_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordChargeWhoosh_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 1.0,
+      "PitchMax": 1.3,
+      "VolumeMin": 1.0,
+      "VolumeMax": 1.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'MeleeSwordChargeWhoosh_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordChargeWhoosh_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeSwordChargeWhoosh_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordChargeWhoosh_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeSwordChargeWhoosh_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordChargeWhoosh_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeSwordChargeWhoosh_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordChargeWhoosh_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/Sword/MeleeSwordWooshCharge01.MeleeSwordWooshCharge01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/Sword/MeleeSwordWooshCharge02.MeleeSwordWooshCharge02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MeleeSwordChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/Sword/MeleeSwordWooshCharge03.MeleeSwordWooshCharge03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

@@ -1,0 +1,216 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'GrenadeWaterExplosion_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.3"
+      },
+      "VolumeMultiplier": 0.9,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 3.0325,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'Grenades'",
+        "ObjectPath": "War/Content/Audio/Attenuations/Grenades.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_0",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'MuffledExplosion'",
+        "ObjectPath": "War/Content/Audio/Attenuations/MuffledExplosion.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'GrenadeWaterExplosion_Cue:SoundNodeRandom_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeAttenuation",
+    "Name": "SoundNodeAttenuation_1",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeAttenuation'",
+    "Properties": {
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'MuffledExplosion'",
+        "ObjectPath": "War/Content/Audio/Attenuations/MuffledExplosion.0"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'GrenadeWaterExplosion_Cue:SoundNodeRandom_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Properties": {
+      "InputVolume": [
+        0.75,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'GrenadeWaterExplosion_Cue:SoundNodeModulator_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeModulator'GrenadeWaterExplosion_Cue:SoundNodeModulator_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'GrenadeWaterExplosion_Cue:SoundNodeAttenuation_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_1",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.9,
+      "VolumeMax": 1.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeAttenuation'GrenadeWaterExplosion_Cue:SoundNodeAttenuation_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_1",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'GrenadeWaterExplosion_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.10"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'GrenadeWaterExplosion_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.11"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_2",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0
+      ],
+      "bRandomizeWithoutReplacement": false,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'GrenadeWaterExplosion_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.9"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'GrenadeWaterExplosion_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Water/GrenadeWaterExplosion_Cue.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Water/GrenadeSplashB.GrenadeSplashB",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Water/GrenadeSplashA.GrenadeSplashA",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/GrenadeC/GrenadeCImpact02.GrenadeCImpact02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "GrenadeWaterExplosion_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/GrenadeC/GrenadeCImpact01.GrenadeCImpact01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

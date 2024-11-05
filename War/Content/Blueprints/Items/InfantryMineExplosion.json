@@ -1,0 +1,148 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "InfantryMineExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'InfantryMineExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/InfantryMineExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "InfantryMineExplosion_C'Default__InfantryMineExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/InfantryMineExplosion.1"
+    }
+  },
+  {
+    "Type": "InfantryMineExplosion_C",
+    "Name": "Default__InfantryMineExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/InfantryMineExplosion.InfantryMineExplosion_C'",
+    "Properties": {
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'MineBlast02'",
+            "ObjectPath": "War/Content/FX/MineBlast02.63"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": {
+              "ObjectName": "MaterialInstanceConstant'ScorchMarks'",
+              "ObjectPath": "War/Content/Materials/Decals/ScorchMarks.0"
+            },
+            "DecalSize": {
+              "X": 128.0,
+              "Y": 256.0,
+              "Z": 256.0
+            },
+            "LifeSpan": 3600.0,
+            "FadeScreenSize": 0.01
+          }
+        },
+        {
+          "PhysicalSurface": "SurfaceType5",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'MineBlast02'",
+            "ObjectPath": "War/Content/FX/MineBlast02.63"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "ExplosionLightFadeOut": 0.15,
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'InfantryMineExplosion_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Mine/InfantryMineExplosion_Cue.0"
+      },
+      "CameraShake": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeCameraShake_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeCameraShake.0"
+      },
+      "bDoNotOrientToImpactNormal": true,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__InfantryMineExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/InfantryMineExplosion.2"
+      },
+      "InitialLifeSpan": 30.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__InfantryMineExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/InfantryMineExplosion.2"
+      }
+    }
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__InfantryMineExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Properties": {
+      "AttenuationRadius": 2000.0,
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 117,
+        "G": 175,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAF75"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "InfantryMineExplosion_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'InfantryMineExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/InfantryMineExplosion.3"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "InfantryMineExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'InfantryMineExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/InfantryMineExplosion.4"
+      }
+    }
+  }
+]

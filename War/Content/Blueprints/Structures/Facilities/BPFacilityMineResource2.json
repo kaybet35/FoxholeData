@@ -21,11 +21,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFacilityMineResource2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.21"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BPFacilityMineResource2_C:InheritableComponentHandler'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.11"
       }
     },
     "SuperStruct": {
@@ -39,7 +39,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityMineResource2_C:Decal'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.13"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -61,11 +61,15 @@
     "Properties": {
       "GenericStockpileComponent": {
         "ObjectName": "GenericStockpileComponent'Default__BPFacilityMineResource2_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.10"
+      },
+      "CrateGenericStockpileComponent": {
+        "ObjectName": "GenericStockpileComponent'Default__BPFacilityMineResource2_C:CrateGenericStockpileComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.9"
       },
       "UpgradeSlotComponent": {
         "ObjectName": "ModificationSlotComponent'Default__BPFacilityMineResource2_C:UpgradeSlotComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.12"
       },
       "CraneSpawnLocationComponent": {
         "ObjectName": "CraneSpawnLocationComponent'Default__BPFacilityMineResource2_C:CraneSpawnLocationComponent'",
@@ -81,11 +85,12 @@
       },
       "TransferLocation": {
         "ObjectName": "SceneComponent'Default__BPFacilityMineResource2_C:TransferLocation'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.17"
       },
       "ConversionEntries": [
         {
           "ItemInput": [],
+          "CrateInput": [],
           "LiquidInput": [
             {
               "CodeName": "FacilityOil1",
@@ -100,6 +105,7 @@
               "Limit": 300
             }
           ],
+          "CrateOutput": [],
           "LiquidOutput": [],
           "Duration": 12,
           "PowerDelta": 0,
@@ -113,10 +119,11 @@
             "ConversionEntries": [
               {
                 "ItemInput": [],
+                "CrateInput": [],
                 "LiquidInput": [
                   {
                     "CodeName": "FacilityOil1",
-                    "Quantity": 6.0,
+                    "Quantity": 3.0,
                     "Limit": 200.0
                   }
                 ],
@@ -124,9 +131,10 @@
                   {
                     "CodeName": "FacilityComponents1",
                     "Quantity": 18,
-                    "Limit": 600
+                    "Limit": 1200
                   }
                 ],
+                "CrateOutput": [],
                 "LiquidOutput": [],
                 "Duration": 12,
                 "PowerDelta": 0,
@@ -211,7 +219,7 @@
       "MapIntelligenceType": "EMapIntelligenceType::Facility",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFacilityMineResource2_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.23"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityMineResource2_C:StructureArrow'",
@@ -296,6 +304,12 @@
   },
   {
     "Type": "GenericStockpileComponent",
+    "Name": "CrateGenericStockpileComponent",
+    "Outer": "Default__BPFacilityMineResource2_C",
+    "Class": "UScriptClass'GenericStockpileComponent'"
+  },
+  {
+    "Type": "GenericStockpileComponent",
     "Name": "GenericStockpileComponent",
     "Outer": "Default__BPFacilityMineResource2_C",
     "Class": "UScriptClass'GenericStockpileComponent'"
@@ -314,7 +328,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "ParticleSystemComponent'BPFacilityMineResource2_C:Smoke_GEN_VARIABLE'",
-            "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.14"
+            "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.15"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -336,7 +350,7 @@
           },
           "ComponentTemplate": {
             "ObjectName": "SkeletalMeshComponent'BPFacilityMineResource2_C:MainMesh_GEN_VARIABLE'",
-            "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.21"
+            "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.22"
           },
           "ComponentKey": {
             "OwnerClass": {
@@ -644,7 +658,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFacilityMineResource2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.16"
       },
       "VariableGuid": "E1EC2F2B-4ED95E3F-0E631E87-D60E7D9B",
       "InternalVariableName": "DefaultSceneRoot"
@@ -682,7 +696,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPFacilityMineResource2_C:ProducingFX2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.14"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -699,26 +713,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.18"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.19"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.19"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.20"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.18"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.19"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.19"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.20"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFacilityMineResource2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource2.18"
       }
     }
   },

@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFacilityMineResource_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.28"
       }
     },
     "SuperStruct": {
@@ -31,23 +31,23 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityMineResource_C:MainMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.14"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:InputDecal0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.12"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:InputMesh0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.13"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:PipeInput0'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.15"
       },
       {
-        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:Smoke'",
+        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:InputDecal0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:InputMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:PipeInput0'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.16"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityMineResource_C:Smoke'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.17"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -69,11 +69,15 @@
     "Properties": {
       "GenericStockpileComponent": {
         "ObjectName": "GenericStockpileComponent'Default__BPFacilityMineResource_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.11"
+      },
+      "CrateGenericStockpileComponent": {
+        "ObjectName": "GenericStockpileComponent'Default__BPFacilityMineResource_C:CrateGenericStockpileComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.10"
       },
       "UpgradeSlotComponent": {
         "ObjectName": "ModificationSlotComponent'Default__BPFacilityMineResource_C:UpgradeSlotComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.12"
       },
       "CraneSpawnLocationComponent": {
         "ObjectName": "CraneSpawnLocationComponent'Default__BPFacilityMineResource_C:CraneSpawnLocationComponent'",
@@ -89,13 +93,19 @@
       },
       "TransferLocation": {
         "ObjectName": "SceneComponent'Default__BPFacilityMineResource_C:TransferLocation'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.20"
       },
       "ProceduralUseVolumeFactor": 0.5,
       "bIsBuiltOnFoundation": false,
       "BuildGhostClass": null,
       "BuildCategory": "EBuildCategory::Mining",
       "bDropsLargeMaterialsWhenDestroyed": false,
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "EF7D9BAC46972E2C03AF7EA274BAAB51",
+        "SourceString": "Resource Harvester",
+        "LocalizedString": "Resource Harvester"
+      },
       "ProfileType": "EStructureProfileType::FieldLogiStructure",
       "ArmourType": "EArmourType::Tier2Structure",
       "ArrowComponent": {
@@ -122,7 +132,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFacilityMineResource_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.31"
       },
       "NetCullDistanceSquared": 49000000.0,
       "RootComponent": {
@@ -264,6 +274,12 @@
         }
       ]
     }
+  },
+  {
+    "Type": "GenericStockpileComponent",
+    "Name": "CrateGenericStockpileComponent",
+    "Outer": "Default__BPFacilityMineResource_C",
+    "Class": "UScriptClass'GenericStockpileComponent'"
   },
   {
     "Type": "GenericStockpileComponent",
@@ -500,7 +516,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFacilityMineResource_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.19"
       },
       "VariableGuid": "E1EC2F2B-4ED95E3F-0E631E87-D60E7D9B",
       "InternalVariableName": "DefaultSceneRoot"
@@ -518,7 +534,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPFacilityMineResource_C:Smoke_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.18"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -538,7 +554,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "WarAudioComponent'BPFacilityMineResource_C:ProducingSFX_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.31"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.32"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -558,7 +574,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFacilityMineResource_C:InputMesh0_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.30"
       },
       "VariableGuid": "048FC1FB-46253DE2-4B2C0190-D9468FE6",
       "InternalVariableName": "InputMesh0"
@@ -583,11 +599,11 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.24"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.26"
         }
       ],
       "VariableGuid": "24BDEF9B-43FEB291-4F580592-7F461C2E",
@@ -624,7 +640,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPFacilityMineResource_C:MainMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.29"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -641,50 +657,50 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.22"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.24"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.25"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.27"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.23"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.22"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.25"
         },
         {
-          "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.26"
         },
         {
+          "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.27"
+        },
+        {
           "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.23"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFacilityMineResource_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineResource.21"
       }
     }
   },
@@ -707,6 +723,7 @@
         "ObjectPath": "War/Content/Meshes/Structures/SK_FacilityMineResource1.0"
       },
       "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "bReceivesDecals": false,
       "BodyInstance": {
         "ObjectType": "ECC_WorldDynamic",
         "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",

@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'MeleeMaceChargeWhoosh_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Melee/Mace/MeleeMaceChargeWhoosh_Cue.2"
+      },
+      "VolumeMultiplier": 0.8,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 0.76558334,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Properties": {
+      "DelayMin": 0.2,
+      "DelayMax": 0.2,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeRandom'MeleeMaceChargeWhoosh_Cue:SoundNodeRandom_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Mace/MeleeMaceChargeWhoosh_Cue.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeDelay'MeleeMaceChargeWhoosh_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Mace/MeleeMaceChargeWhoosh_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeRandom",
+    "Name": "SoundNodeRandom_0",
+    "Outer": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeRandom'",
+    "Properties": {
+      "Weights": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeMaceChargeWhoosh_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Mace/MeleeMaceChargeWhoosh_Cue.4"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeMaceChargeWhoosh_Cue:SoundNodeWavePlayer_2'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Mace/MeleeMaceChargeWhoosh_Cue.5"
+        },
+        {
+          "ObjectName": "SoundNodeWavePlayer'MeleeMaceChargeWhoosh_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Melee/Mace/MeleeMaceChargeWhoosh_Cue.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/Mace/MeleeMaceChargedSwing01.MeleeMaceChargedSwing01",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_2",
+    "Outer": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/Mace/MeleeMaceChargedSwing02.MeleeMaceChargedSwing02",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MeleeMaceChargeWhoosh_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Melee/Mace/MeleeMaceChargedSwing03.MeleeMaceChargedSwing03",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": null
+  }
+]

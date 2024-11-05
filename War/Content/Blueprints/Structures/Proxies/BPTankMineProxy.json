@@ -1,0 +1,282 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "AntiTankMinePickup",
+    "Outer": "BPTankMineProxy_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPTankMineProxy_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPTankMineProxy_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BuildableStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTankMineProxy_C:AntiTankMinePickup'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTankMineProxy_C'Default__BPTankMineProxy_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.2"
+    }
+  },
+  {
+    "Type": "BPTankMineProxy_C",
+    "Name": "Default__BPTankMineProxy_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.BPTankMineProxy_C'",
+    "Properties": {
+      "ProceduralUseVolumeFactor": 1.0,
+      "bIsBuiltOnLandscape": false,
+      "bBuildOnBridges": true,
+      "BuildGhostClass": null,
+      "ProxyActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPAntiTankMine_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.0"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'AntiTankMineItemIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/AntiTankMineItemIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Defense",
+      "MinDistanceToSameStructure": 200.0,
+      "ValidBuildTools": 4,
+      "CodeName": "TankMineProxy",
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "7456DE044C5F60F06C719999EF7102EC",
+        "SourceString": "Explosive Charge",
+        "LocalizedString": "Explosive Charge"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "A9BC92B34F4185B5CD7B1AB8422C5271",
+        "SourceString": "Abisme AT-99",
+        "LocalizedString": "Abisme AT-99"
+      },
+      "ProfileType": "EStructureProfileType::DeployableWeapon",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPTankMineProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPTankMineProxy_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "Health": 0,
+      "DropLocationOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bIsDeployed": true,
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPTankMineProxy_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.10"
+      },
+      "NetCullDistanceSquared": 25000000.0,
+      "MinNetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPTankMineProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPTankMineProxy_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPTankMineProxy_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 42.0,
+        "Y": 48.0,
+        "Z": 10.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPTankMineProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 10.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPTankMineProxy_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPTankMineProxy_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.5"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPTankMineProxy_C:AntiTankMinePickup_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.9"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AA5DCC1C-40806577-4DB6B481-C08F7202",
+      "InternalVariableName": "AntiTankMinePickup"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPTankMineProxy_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTankMineProxy_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTankMineProxy_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPTankMineProxy_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPTankMineProxy.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "AntiTankMinePickup_GEN_VARIABLE",
+    "Outer": "BPTankMineProxy_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'AntiTankMinePickup'",
+        "ObjectPath": "War/Content/Meshes/Pickups/AntiTankMinePickup.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPTankMineProxy_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

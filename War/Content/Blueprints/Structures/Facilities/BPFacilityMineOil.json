@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFacilityMineOil_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.33"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.34"
       }
     },
     "SuperStruct": {
@@ -31,31 +31,31 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityMineOil_C:ProducingSFX'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.19"
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityMineOil_C:ProducingFX2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.16"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFacilityMineOil_C:ProducingFX3'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.17"
       },
       {
+        "ObjectName": "ObjectProperty'BPFacilityMineOil_C:ProducingFX3'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.18"
+      },
+      {
         "ObjectName": "ObjectProperty'BPFacilityMineOil_C:ProducingFX'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.16"
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityMineOil_C:Decal'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.12"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFacilityMineOil_C:MineMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.13"
       },
       {
-        "ObjectName": "ObjectProperty'BPFacilityMineOil_C:MultiplexedSkeletalMesh'",
+        "ObjectName": "ObjectProperty'BPFacilityMineOil_C:MineMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityMineOil_C:MultiplexedSkeletalMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.15"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -77,11 +77,15 @@
     "Properties": {
       "GenericStockpileComponent": {
         "ObjectName": "GenericStockpileComponent'Default__BPFacilityMineOil_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.10"
+      },
+      "CrateGenericStockpileComponent": {
+        "ObjectName": "GenericStockpileComponent'Default__BPFacilityMineOil_C:CrateGenericStockpileComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.9"
       },
       "UpgradeSlotComponent": {
         "ObjectName": "ModificationSlotComponent'Default__BPFacilityMineOil_C:UpgradeSlotComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.11"
       },
       "CraneSpawnLocationComponent": {
         "ObjectName": "CraneSpawnLocationComponent'Default__BPFacilityMineOil_C:CraneSpawnLocationComponent'",
@@ -97,13 +101,15 @@
       },
       "TransferLocation": {
         "ObjectName": "SceneComponent'Default__BPFacilityMineOil_C:TransferLocation'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.24"
       },
       "ConversionEntries": [
         {
           "ItemInput": [],
+          "CrateInput": [],
           "LiquidInput": [],
           "ItemOutput": [],
+          "CrateOutput": [],
           "LiquidOutput": [
             {
               "CodeName": "Oil",
@@ -123,8 +129,10 @@
             "ConversionEntries": [
               {
                 "ItemInput": [],
+                "CrateInput": [],
                 "LiquidInput": [],
                 "ItemOutput": [],
+                "CrateOutput": [],
                 "LiquidOutput": [
                   {
                     "CodeName": "Oil",
@@ -145,6 +153,7 @@
             "ConversionEntries": [
               {
                 "ItemInput": [],
+                "CrateInput": [],
                 "LiquidInput": [
                   {
                     "CodeName": "Water",
@@ -153,6 +162,7 @@
                   }
                 ],
                 "ItemOutput": [],
+                "CrateOutput": [],
                 "LiquidOutput": [
                   {
                     "CodeName": "Oil",
@@ -230,6 +240,12 @@
       "bDropsLargeMaterialsWhenDestroyed": false,
       "ValidBuildTools": 24,
       "CodeName": "FacilityMineOil",
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "F6FC895F40774A018359F9BC423990D2",
+        "SourceString": "Resource Harvester",
+        "LocalizedString": "Resource Harvester"
+      },
       "DisplayName": {
         "Namespace": "",
         "Key": "2C355BC64C5D5D2FC051CC9C755B0B2F",
@@ -263,7 +279,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFacilityMineOil_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.36"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.37"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityMineOil_C:StructureArrow'",
@@ -389,6 +405,12 @@
         }
       ]
     }
+  },
+  {
+    "Type": "GenericStockpileComponent",
+    "Name": "CrateGenericStockpileComponent",
+    "Outer": "Default__BPFacilityMineOil_C",
+    "Class": "UScriptClass'GenericStockpileComponent'"
   },
   {
     "Type": "GenericStockpileComponent",
@@ -899,7 +921,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFacilityMineOil_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.23"
       },
       "VariableGuid": "8319815B-4CB10D69-9E892694-0D9E65B0",
       "InternalVariableName": "DefaultSceneRoot"
@@ -917,7 +939,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFacilityMineOil_C:PowerLineConnector_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.36"
       },
       "ParentComponentOrVariableName": "PowerSocket",
       "bIsParentComponentNative": true,
@@ -937,18 +959,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPFacilityMineOil_C:ProducingFX_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.22"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.30"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.31"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.28"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.29"
         }
       ],
       "VariableGuid": "9D98827C-419FA647-72580A8F-1B4045C0",
@@ -967,7 +989,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedSkeletalMeshComponent'BPFacilityMineOil_C:MultiplexedSkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.12"
       },
       "VariableGuid": "EC7FD61A-435B40E4-885A539A-ABC9CD82",
       "InternalVariableName": "MultiplexedSkeletalMesh"
@@ -985,7 +1007,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPFacilityMineOil_C:ProducingFX2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.20"
       },
       "VariableGuid": "0F8A5CB3-4F209BA6-BC001BBC-1D14914C",
       "InternalVariableName": "ProducingFX2"
@@ -1003,14 +1025,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPFacilityMineOil_C:MineMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.34"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.35"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.32"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.33"
         }
       ],
       "VariableGuid": "540DEA64-40B72FB6-39E21790-A82D6763",
@@ -1029,7 +1051,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "ParticleSystemComponent'BPFacilityMineOil_C:ProducingFX3_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.21"
       },
       "VariableGuid": "96C3209F-482175F8-AB1D51A3-6F414F6F",
       "InternalVariableName": "ProducingFX3"
@@ -1047,7 +1069,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "WarAudioComponent'BPFacilityMineOil_C:ProducingSFX_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.37"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.38"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1082,62 +1104,62 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_37'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.27"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.28"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.29"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.30"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.27"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.31"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.32"
         },
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.26"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_37'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.30"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.28"
         },
         {
-          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.31"
         },
         {
+          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.32"
+        },
+        {
           "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.26"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFacilityMineOil_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityMineOil.25"
       }
     }
   },

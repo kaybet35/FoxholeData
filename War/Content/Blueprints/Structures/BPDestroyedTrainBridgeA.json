@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "SuspendedBuildSurfaceB",
+    "Name": "BelowBlockingMiddle",
     "Outer": "BPDestroyedTrainBridgeA_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.25"
       }
     },
     "SuperStruct": {
@@ -26,28 +26,32 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SuspendedBuildSurfaceB'",
+        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:BelowBlockingMiddle'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SuspendedBuildSurfaceB'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.13"
+      },
+      {
         "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SideB1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.10"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SideA1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.8"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SuspendedBuildSurfaceA'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.11"
       },
       {
-        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SideB'",
+        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SideA1'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.9"
       },
       {
+        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SuspendedBuildSurfaceA'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SideB'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.10"
+      },
+      {
         "ObjectName": "ObjectProperty'BPDestroyedTrainBridgeA_C:SideA'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.8"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -69,11 +73,11 @@
     "Properties": {
       "SideAProxy": {
         "ObjectName": "PersistentProxyComponent'Default__BPDestroyedTrainBridgeA_C:SideAProxy'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.14"
       },
       "SideBProxy": {
         "ObjectName": "PersistentProxyComponent'Default__BPDestroyedTrainBridgeA_C:SideBProxy'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.15"
       },
       "bIsScorchable": false,
       "CodeName": "DestroyedTrainBridgeA",
@@ -83,14 +87,14 @@
       },
       "UseAreaBox": {
         "ObjectName": "BoxComponent'Default__BPDestroyedTrainBridgeA_C:UseAreaBox'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.7"
       },
       "MaxHealth": 100000000,
       "Health": 100000000,
       "UpgradeStructureCodeName": "TrainBridgeA",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPDestroyedTrainBridgeA_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.30"
       },
       "NetCullDistanceSquared": 225000000.0,
       "RootComponent": {
@@ -104,6 +108,72 @@
     "Name": "StructureArrow",
     "Outer": "Default__BPDestroyedTrainBridgeA_C",
     "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BelowBlockingMiddle_GEN_VARIABLE",
+    "Outer": "BPDestroyedTrainBridgeA_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 270.0,
+        "Y": 1100.0,
+        "Z": 512.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockOnlyPawnVehicle",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -0.00061,
+        "Y": -4.47467,
+        "Z": -1081.4639
+      },
+      "ComponentTags": [
+        "BridgeWaterAccess"
+      ]
+    }
   },
   {
     "Type": "BoxComponent",
@@ -321,6 +391,17 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "SuspendedBuildSurfaceB",
+    "Outer": "BPDestroyedTrainBridgeA_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "PersistentProxyComponent",
     "Name": "SideAProxy",
     "Outer": "Default__BPDestroyedTrainBridgeA_C",
@@ -362,7 +443,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDestroyedTrainBridgeA_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.16"
       },
       "VariableGuid": "36E3B063-4FF1B69F-5A0C3DB0-F528EA1F",
       "InternalVariableName": "DefaultSceneRoot"
@@ -380,7 +461,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedTrainBridgeA_C:SideA_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.27"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -400,12 +481,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedTrainBridgeA_C:SideB_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.26"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.29"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "6FD0C300-4C6FB497-6B33EFAE-0FA4FC69",
       "InternalVariableName": "SideB"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPDestroyedTrainBridgeA_C:BelowBlockingMiddle_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4FF43B6D-487EA108-CA6A299E-62CB946D",
+      "InternalVariableName": "BelowBlockingMiddle"
     }
   },
   {
@@ -420,7 +521,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPDestroyedTrainBridgeA_C:SuspendedBuildSurfaceB_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.5"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.6"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -440,7 +541,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPDestroyedTrainBridgeA_C:SuspendedBuildSurfaceA_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.4"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.5"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -460,7 +561,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedTrainBridgeA_C:SideA1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.26"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -480,7 +581,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedTrainBridgeA_C:SideB1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.25"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.28"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -497,58 +598,66 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.18"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.19"
         },
         {
+          "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.22"
+        },
+        {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.20"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.23"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.24"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.18"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.20"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.18"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.19"
         },
         {
+          "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.22"
+        },
+        {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.20"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.23"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.24"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.18"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.20"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDestroyedTrainBridgeA_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedTrainBridgeA.17"
       }
     }
   },

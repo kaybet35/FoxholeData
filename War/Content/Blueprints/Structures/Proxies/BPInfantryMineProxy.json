@@ -1,0 +1,282 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "InfantryMinePickup",
+    "Outer": "BPInfantryMineProxy_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPInfantryMineProxy_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPInfantryMineProxy_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BuildableStructure'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPInfantryMineProxy_C:InfantryMinePickup'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPInfantryMineProxy_C'Default__BPInfantryMineProxy_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.2"
+    }
+  },
+  {
+    "Type": "BPInfantryMineProxy_C",
+    "Name": "Default__BPInfantryMineProxy_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.BPInfantryMineProxy_C'",
+    "Properties": {
+      "ProceduralUseVolumeFactor": 1.0,
+      "bIsBuiltOnLandscape": false,
+      "bBuildOnBridges": true,
+      "BuildGhostClass": null,
+      "ProxyActorClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPInfantryMine_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.0"
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'InfantryMineIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/InfantryMineIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Defense",
+      "MinDistanceToSameStructure": 200.0,
+      "ValidBuildTools": 4,
+      "CodeName": "InfantryMineProxy",
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "02EDF54246BC5FB88C07CE89974E29CD",
+        "SourceString": "Explosive Charge",
+        "LocalizedString": "Explosive Charge"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "35209B664978A969849C19BFB26CC0F9",
+        "SourceString": "TBD",
+        "LocalizedString": "TBD"
+      },
+      "ProfileType": "EStructureProfileType::DeployableWeapon",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPInfantryMineProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPInfantryMineProxy_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.4"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
+      },
+      "Health": 0,
+      "DropLocationOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bIsDeployed": true,
+      "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPInfantryMineProxy_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.10"
+      },
+      "NetCullDistanceSquared": 25000000.0,
+      "MinNetUpdateFrequency": 1.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPInfantryMineProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPInfantryMineProxy_C",
+    "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPInfantryMineProxy_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 42.0,
+        "Y": 48.0,
+        "Z": 10.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPInfantryMineProxy_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 10.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPInfantryMineProxy_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPInfantryMineProxy_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.5"
+      },
+      "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPInfantryMineProxy_C:InfantryMinePickup_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.9"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AA5DCC1C-40806577-4DB6B481-C08F7202",
+      "InternalVariableName": "InfantryMinePickup"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPInfantryMineProxy_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPInfantryMineProxy_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPInfantryMineProxy_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPInfantryMineProxy_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Proxies/BPInfantryMineProxy.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "InfantryMinePickup_GEN_VARIABLE",
+    "Outer": "BPInfantryMineProxy_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'InfantryMinePickup'",
+        "ObjectPath": "War/Content/Meshes/Pickups/InfantryMinePickup.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPInfantryMineProxy_C",
+    "Class": "UScriptClass'StealthComponent'"
+  }
+]

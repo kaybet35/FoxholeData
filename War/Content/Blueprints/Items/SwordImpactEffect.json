@@ -1,0 +1,283 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "SwordImpactEffect_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'SwordImpactEffect_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'SwordImpactEffect_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'SwordImpactEffect_C:ExecuteUbergraph_SwordImpactEffect'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ImpactEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'SwordImpactEffect_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.0"
+      },
+      {
+        "ObjectName": "Function'SwordImpactEffect_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.6"
+      },
+      {
+        "ObjectName": "Function'SwordImpactEffect_C:ExecuteUbergraph_SwordImpactEffect'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'SwordImpactEffect_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.3"
+      },
+      {
+        "ObjectName": "ObjectProperty'SwordImpactEffect_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.7"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_SwordImpactEffect": {
+        "ObjectName": "Function'SwordImpactEffect_C:ExecuteUbergraph_SwordImpactEffect'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'SwordImpactEffect_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "SwordImpactEffect_C'Default__SwordImpactEffect_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.2"
+    }
+  },
+  {
+    "Type": "SwordImpactEffect_C",
+    "Name": "Default__SwordImpactEffect_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/SwordImpactEffect.SwordImpactEffect_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "EffectOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "EmitterTemplate": {
+            "ObjectName": "ParticleSystem'MeleeSTDImpact'",
+            "ObjectPath": "War/Content/FX/MeleeSTDImpact.14"
+          },
+          "HitSound": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          },
+          "bOrientToHitDirection": false,
+          "DamageThreshold": 0.0
+        },
+        {
+          "PhysicalSurface": "SurfaceType5",
+          "EmitterTemplate": {
+            "ObjectName": "ParticleSystem'BloodSplat'",
+            "ObjectPath": "War/Content/FX/BloodSplat.35"
+          },
+          "HitSound": {
+            "ObjectName": "SoundCue'MeleeSwordImpact_Cue'",
+            "ObjectPath": "War/Content/Audio/SFX/Melee/Sword/MeleeSwordImpact_Cue.0"
+          },
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          },
+          "bOrientToHitDirection": true,
+          "DamageThreshold": 1.0
+        }
+      ],
+      "FleshBloodSplatterDecal": {
+        "DecalMaterial": {
+          "ObjectName": "Material'BloodDecal01'",
+          "ObjectPath": "War/Content/FX/Materials/BloodDecal01.0"
+        },
+        "DecalSize": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 300.0
+        },
+        "LifeSpan": 500.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_SwordImpactEffect",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_SwordImpactEffect",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'SwordImpactEffect_C:ExecuteUbergraph_SwordImpactEffect.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'Function'",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Properties": {
+      "Radius": 300.0,
+      "ImpulseStrength": 12000.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'SwordImpactEffect_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'SwordImpactEffect_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.11"
+        }
+      ],
+      "VariableGuid": "04535695-47D39B74-0CF183A6-99947170",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'SwordImpactEffect_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.8"
+      },
+      "VariableGuid": "92F0834F-4952CC1F-8476219C-7443237A",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "SwordImpactEffect_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'SwordImpactEffect_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'SwordImpactEffect_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.10"
+        },
+        {
+          "ObjectName": "SCS_Node'SwordImpactEffect_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'SwordImpactEffect_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Items/SwordImpactEffect.10"
+      }
+    }
+  }
+]

@@ -473,11 +473,15 @@
       "DefaultTreadTime": 0.075,
       "Treads": {
         "TrackMaterialIndices": 1,
-        "TrackMaterialIndices": 0,
+        "TrackMaterialIndices[1]": 0,
         "TrackLength": 50000.0
       },
       "EncumbranceManager": {
-        "bEnableEncumbranceModifiers": true
+        "bEnableItemEncumbrance": true,
+        "EncumbranceModifiers": {
+          "ZeroEncMoveSpeedMod": 1.0,
+          "MaxEncEngineForceModifier": 0.7
+        }
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPHarvester_C:StealthComponent'",
@@ -1571,14 +1575,15 @@
     "Class": "UScriptClass'RWDVehicleMovementComponent'",
     "Properties": {
       "CenterOfGravityHeight": 0.2,
-      "EngineForce": 27500.0,
+      "EngineForce": 30000.0,
       "BrakeForce": 35000.0,
       "HandbrakeForce": 20000.0,
       "AirResistance": 90.0,
       "RollingResistance": 2400.0,
       "MaxEncumbranceMass": 20000.0,
+      "MassPerMuddynessOverride": 1500.0,
       "DepthOffset": -172.5,
-      "MaxWalkSpeed": 1730.302,
+      "MaxWalkSpeed": 1854.8867,
       "MaxAcceleration": 192.0,
       "BrakingFrictionFactor": 0.2,
       "BrakingFriction": 0.2,

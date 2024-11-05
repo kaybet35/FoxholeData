@@ -1,18 +1,35 @@
 [
   {
+    "Type": "ObjectProperty",
+    "Name": "AntiTankMinePickup",
+    "Outer": "BPTankMinePickup_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPTankMinePickup_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPTankMinePickup_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.5"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.7"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'GearPickup'",
       "ObjectPath": "/Script/War"
     },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTankMinePickup_C:AntiTankMinePickup'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.0"
+      }
+    ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -22,7 +39,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPTankMinePickup_C'Default__BPTankMinePickup_C'",
-      "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.1"
+      "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.2"
     }
   },
   {
@@ -32,11 +49,11 @@
     "Properties": {
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPTankMinePickup_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.7"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.10"
       },
       "ItemComponentClass": {
-        "ObjectName": "BlueprintGeneratedClass'AntiTankMineItemComponent_C'",
-        "ObjectPath": "War/Content/Blueprints/Items/AntiTankMineItemComponent.0"
+        "ObjectName": "BlueprintGeneratedClass'BPAntiTankMineItemComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMineItemComponent.0"
       },
       "Encumbrance": 40,
       "CodeName": "TankMine",
@@ -49,7 +66,7 @@
       "DisplayName": {
         "Namespace": "",
         "Key": "7AD6323C43C7AE93B64F3B86E9CBD8BD",
-        "SourceString": "Abisme AT-99",
+        "SourceString": "Abisme AT-99 Mine",
         "LocalizedString": "Abisme AT-99"
       },
       "Description": {
@@ -62,17 +79,19 @@
         "ObjectName": "Texture2D'AntiTankMineItemIcon'",
         "ObjectPath": "War/Content/Textures/UI/ItemIcons/AntiTankMineItemIcon.0"
       },
-      "EquipmentSlot": "EEquipmentSlot::Tertiary",
+      "EquipmentSlot": "EEquipmentSlot::Large",
       "ItemCategory": "EItemCategory::Utility",
       "ItemProfileType": "EItemProfileType::Tool",
+      "TechID": "ETechID::UnlockMineSpline",
+      "bIsLarge": true,
       "ItemMesh": null,
       "ItemBox": {
         "ObjectName": "BoxComponent'Default__BPTankMinePickup_C:ItemBox'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.2"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.3"
       },
       "RootComponent": {
         "ObjectName": "BoxComponent'Default__BPTankMinePickup_C:ItemBox'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.2"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.3"
       }
     }
   },
@@ -107,10 +126,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTankMinePickup_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.3"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.4"
       },
       "VariableGuid": "541BAD53-4B377223-83DFE384-33E208F3",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPTankMinePickup_C:AntiTankMinePickup_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.8"
+      },
+      "ParentComponentOrVariableName": "ItemBox",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E831C829-42850CF3-60D8FF9B-863BEAA8",
+      "InternalVariableName": "AntiTankMinePickup"
     }
   },
   {
@@ -119,10 +158,87 @@
     "Outer": "BPTankMinePickup_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTankMinePickup_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTankMinePickup_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.6"
+        }
+      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPTankMinePickup_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.4"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.5"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "AntiTankMinePickup_GEN_VARIABLE",
+    "Outer": "BPTankMinePickup_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'AntiTankMinePickup'",
+        "ObjectPath": "War/Content/Meshes/Pickups/AntiTankMinePickup.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "IncludeInBuildGhost"
+      ]
     }
   },
   {
@@ -133,7 +249,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTankMinePickup_C:ItemBox'",
-        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.2"
+        "ObjectPath": "War/Content/Blueprints/ItemPickups/BPTankMinePickup.3"
       }
     }
   },

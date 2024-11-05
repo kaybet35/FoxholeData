@@ -6,7 +6,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPExplosiveLightCDeployed_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.4"
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.5"
       }
     },
     "SuperStruct": {
@@ -31,13 +31,17 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPExplosiveLightCDeployed.BPExplosiveLightCDeployed_C'",
     "Properties": {
       "DetonationDelay": 5.0,
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPExplosiveLightCDeployed_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.2"
+      },
       "CollisionComp": {
         "ObjectName": "SphereComponent'Default__BPExplosiveLightCDeployed_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.5"
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.6"
       },
       "ItemMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPExplosiveLightCDeployed_C:ItemMesh'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.6"
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.7"
       },
       "ExplosiveCodeName": "ExplosiveLightC",
       "ExplosionOffsetZ": 25.0,
@@ -51,10 +55,16 @@
       "RemoteRole": "ROLE_None",
       "NetCullDistanceSquared": 225000000.0,
       "RootComponent": {
-        "ObjectName": "SphereComponent'Default__BPExplosiveLightCDeployed_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.5"
+        "ObjectName": "ArrowComponent'Default__BPExplosiveLightCDeployed_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.2"
       }
     }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Outer": "Default__BPExplosiveLightCDeployed_C",
+    "Class": "UScriptClass'ArrowComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -74,7 +84,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPExplosiveLightCDeployed_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.2"
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.3"
       },
       "VariableGuid": "D66974C0-4C49450C-9AA5E880-3C898246",
       "InternalVariableName": "DefaultSceneRoot"
@@ -88,7 +98,7 @@
     "Properties": {
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPExplosiveLightCDeployed_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.3"
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.4"
       }
     }
   },
@@ -98,7 +108,11 @@
     "Outer": "Default__BPExplosiveLightCDeployed_C",
     "Class": "UScriptClass'SphereComponent'",
     "Properties": {
-      "SphereRadius": 0.0
+      "SphereRadius": 0.0,
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPExplosiveLightCDeployed_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.2"
+      }
     }
   },
   {
@@ -113,8 +127,8 @@
       },
       "bReceivesDecals": false,
       "AttachParent": {
-        "ObjectName": "SphereComponent'Default__BPExplosiveLightCDeployed_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.5"
+        "ObjectName": "ArrowComponent'Default__BPExplosiveLightCDeployed_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPExplosiveLightCDeployed.2"
       },
       "RelativeLocation": {
         "X": 0.0,

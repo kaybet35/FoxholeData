@@ -17,11 +17,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDestroyedHospital_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.26"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.28"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'DestroyedStructure'",
+      "ObjectName": "Class'DestroyedHospital'",
       "ObjectPath": "/Script/War"
     },
     "Children": [
@@ -31,39 +31,39 @@
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Bed6'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.11"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Bed5'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.10"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Bed4'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.9"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Bed3'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.8"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Bed2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.7"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Bed1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.5"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.6"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:HospitalRoof'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.12"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedHospital_C:VisibilityToggleArea'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.13"
       },
       {
+        "ObjectName": "ObjectProperty'BPDestroyedHospital_C:VisibilityToggleArea'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.14"
+      },
+      {
         "ObjectName": "ObjectProperty'BPDestroyedHospital_C:Hospital'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.12"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -83,6 +83,14 @@
     "Name": "Default__BPDestroyedHospital_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPDestroyedHospital.BPDestroyedHospital_C'",
     "Properties": {
+      "GenericStockpileComponent": {
+        "ObjectName": "GenericStockpileComponent'Default__BPDestroyedHospital_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.5"
+      },
+      "RuinedComponent": {
+        "ObjectName": "RuinedComponent'Default__BPDestroyedHospital_C:RuinedComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.15"
+      },
       "CodeName": "DestroyedHospital",
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPDestroyedHospital_C:StructureArrow'",
@@ -99,7 +107,7 @@
       "StructureNetRelevancySize": "EStructureNetRelevancySize::Large",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPDestroyedHospital_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.36"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.38"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPDestroyedHospital_C:StructureArrow'",
@@ -134,6 +142,12 @@
         "Z": 225.00931
       }
     }
+  },
+  {
+    "Type": "GenericStockpileComponent",
+    "Name": "GenericStockpileComponent",
+    "Outer": "Default__BPDestroyedHospital_C",
+    "Class": "UScriptClass'GenericStockpileComponent'"
   },
   {
     "Type": "ObjectProperty",
@@ -235,6 +249,18 @@
     }
   },
   {
+    "Type": "RuinedComponent",
+    "Name": "RuinedComponent",
+    "Outer": "Default__BPDestroyedHospital_C",
+    "Class": "UScriptClass'RuinedComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPDestroyedHospital_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.3"
+      }
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPDestroyedHospital_C",
@@ -252,7 +278,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDestroyedHospital_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.16"
       },
       "VariableGuid": "AD3705C6-46664D46-6E5030A7-CFBD8B3C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -270,42 +296,42 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Hospital_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.34"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.36"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.25"
         },
         {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.27"
+        },
+        {
           "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.18"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.19"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.20"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.21"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.24"
         }
       ],
       "VariableGuid": "C824EBAD-4F6268F0-3F9D0195-0BB77029",
@@ -324,7 +350,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.30"
       },
       "VariableGuid": "045645E2-49FE0163-4144C597-D44EAE45",
       "InternalVariableName": "Bed2"
@@ -342,7 +368,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed3_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.31"
       },
       "VariableGuid": "A0C75B49-49F8B422-5E21CFA7-C926A55D",
       "InternalVariableName": "Bed3"
@@ -360,7 +386,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed4_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.32"
       },
       "VariableGuid": "DD21F1C6-4B09D5DA-AC08DDB7-447079CC",
       "InternalVariableName": "Bed4"
@@ -378,7 +404,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed5_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.31"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.33"
       },
       "VariableGuid": "E6B7E471-43354AF3-399D2FA5-8699FDB2",
       "InternalVariableName": "Bed5"
@@ -396,7 +422,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed6_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.32"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.34"
       },
       "VariableGuid": "CB91B4F4-4F3E2FB7-BADF0391-CCCA04B2",
       "InternalVariableName": "Bed6"
@@ -414,7 +440,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed7_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.33"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.35"
       },
       "VariableGuid": "8F7329D5-452A5ADD-809049BB-032E9AB7",
       "InternalVariableName": "Bed7"
@@ -432,7 +458,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:HospitalRoof_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.37"
       },
       "VariableGuid": "B5D3517C-43DF2233-064046BE-5348D63F",
       "InternalVariableName": "HospitalRoof"
@@ -450,7 +476,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VisibilityToggleAreaComponent'BPDestroyedHospital_C:VisibilityToggleArea_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.37"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.39"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -470,7 +496,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedHospital_C:Bed1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.29"
       },
       "VariableGuid": "B3C7B0D4-4A6FE67A-CA5D2C81-1478AFA5",
       "InternalVariableName": "Bed1"
@@ -485,58 +511,58 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.18"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.24"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.26"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.16"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.18"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.19"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.20"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_14'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.21"
         },
         {
-          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_15'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.24"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDestroyedHospital_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.17"
       }
     }
   },
@@ -733,7 +759,7 @@
           {
             "Object": {
               "ObjectName": "VisibilityToggleAreaComponent'BPDestroyedHospital_C:VisibilityToggleArea_GEN_VARIABLE'",
-              "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.37"
+              "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.39"
             },
             "FunctionName": "OnBeginOverlap"
           }
@@ -744,7 +770,7 @@
           {
             "Object": {
               "ObjectName": "VisibilityToggleAreaComponent'BPDestroyedHospital_C:VisibilityToggleArea_GEN_VARIABLE'",
-              "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.37"
+              "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedHospital.39"
             },
             "FunctionName": "OnEndOverlap"
           }

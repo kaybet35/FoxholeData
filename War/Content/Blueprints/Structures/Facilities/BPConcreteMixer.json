@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPConcreteMixer_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.20"
       }
     },
     "SuperStruct": {
@@ -31,11 +31,11 @@
       },
       {
         "ObjectName": "ObjectProperty'BPConcreteMixer_C:SkeletalMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.13"
       },
       {
         "ObjectName": "ObjectProperty'BPConcreteMixer_C:MultiplexedSkeletalMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.12"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -57,11 +57,15 @@
     "Properties": {
       "GenericStockpileComponent": {
         "ObjectName": "GenericStockpileComponent'Default__BPConcreteMixer_C:GenericStockpileComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.9"
+      },
+      "CrateGenericStockpileComponent": {
+        "ObjectName": "GenericStockpileComponent'Default__BPConcreteMixer_C:CrateGenericStockpileComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.8"
       },
       "UpgradeSlotComponent": {
         "ObjectName": "ModificationSlotComponent'Default__BPConcreteMixer_C:UpgradeSlotComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.10"
       },
       "CraneSpawnLocationComponent": {
         "ObjectName": "CraneSpawnLocationComponent'Default__BPConcreteMixer_C:CraneSpawnLocationComponent'",
@@ -77,7 +81,7 @@
       },
       "TransferLocation": {
         "ObjectName": "SceneComponent'Default__BPConcreteMixer_C:TransferLocation'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.15"
       },
       "ConversionEntries": [
         {
@@ -88,6 +92,7 @@
               "Limit": 32000
             }
           ],
+          "CrateInput": [],
           "LiquidInput": [],
           "ItemOutput": [
             {
@@ -96,6 +101,7 @@
               "Limit": 1600
             }
           ],
+          "CrateOutput": [],
           "LiquidOutput": [],
           "Duration": 20,
           "PowerDelta": 0,
@@ -131,6 +137,12 @@
         "ObjectPath": "War/Content/Meshes/Shippables/ConcreteMixerPacked.2"
       },
       "CodeName": "ConcreteMixer",
+      "ChassisName": {
+        "Namespace": "",
+        "Key": "445A7C634ED69D6D52C88E82EA77C058",
+        "SourceString": "Shippable Concrete Mixer",
+        "LocalizedString": "Shippable Concrete Mixer"
+      },
       "DisplayName": {
         "Namespace": "",
         "Key": "D5B404CF40D1E05BD342BEA46DF35623",
@@ -167,7 +179,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPConcreteMixer_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.22"
       },
       "NetCullDistanceSquared": 25000000.0,
       "MinNetUpdateFrequency": 1.0,
@@ -229,6 +241,12 @@
     "Name": "LightComponent",
     "Outer": "Default__BPConcreteMixer_C",
     "Class": "UScriptClass'FacilityLightComponent'"
+  },
+  {
+    "Type": "GenericStockpileComponent",
+    "Name": "CrateGenericStockpileComponent",
+    "Outer": "Default__BPConcreteMixer_C",
+    "Class": "UScriptClass'GenericStockpileComponent'"
   },
   {
     "Type": "GenericStockpileComponent",
@@ -411,7 +429,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPConcreteMixer_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.14"
       },
       "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
       "InternalVariableName": "DefaultSceneRoot"
@@ -429,7 +447,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "WarAudioComponent'BPConcreteMixer_C:ProducingSFX_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.23"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -449,7 +467,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedSkeletalMeshComponent'BPConcreteMixer_C:MultiplexedSkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.11"
       },
       "VariableGuid": "F99125E7-4951EEDE-2740A0B2-60A56B0B",
       "InternalVariableName": "MultiplexedSkeletalMesh"
@@ -467,7 +485,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPConcreteMixer_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.21"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -484,34 +502,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.18"
         },
         {
+          "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.19"
+        },
+        {
           "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.17"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.17"
-        },
-        {
-          "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.18"
         },
         {
+          "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.19"
+        },
+        {
           "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPConcreteMixer_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPConcreteMixer.16"
       }
     }
   },

@@ -1,35 +1,18 @@
 [
   {
-    "Type": "ObjectProperty",
-    "Name": "DismantleCollision",
-    "Outer": "BPAntiTankMine_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPAntiTankMine_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPAntiTankMine_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.7"
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.5"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'LandMine'",
       "ObjectPath": "/Script/War"
     },
-    "Children": [
-      {
-        "ObjectName": "ObjectProperty'BPAntiTankMine_C:DismantleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.0"
-      }
-    ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -39,7 +22,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPAntiTankMine_C'Default__BPAntiTankMine_C'",
-      "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.2"
+      "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.1"
     }
   },
   {
@@ -48,6 +31,7 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPAntiTankMine.BPAntiTankMine_C'",
     "Properties": {
       "ActivationDelay": 3.0,
+      "bTriggeredByVehicles": true,
       "RoadPhysicalMaterials": [
         {
           "ObjectName": "PhysicalMaterial'RoadPhys'",
@@ -74,101 +58,39 @@
           "ObjectPath": "War/Content/PhysicalMaterials/HighwayPhys.0"
         }
       ],
-      "DetonationDelay": 0.1,
+      "Health": 50,
+      "ArmourType": "EArmourType::Tier3BStructure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPAntiTankMine_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.2"
+      },
       "CollisionComp": {
         "ObjectName": "SphereComponent'Default__BPAntiTankMine_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.8"
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.6"
       },
       "ItemMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPAntiTankMine_C:ItemMesh'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.9"
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.7"
       },
       "ExplosiveCodeName": "TankMine",
+      "ExplosionOffsetZ": 2.0,
       "DamageDelay": 0.0,
       "ExplosionTemplate": {
         "ObjectName": "BlueprintGeneratedClass'MineExplosion_C'",
         "ObjectPath": "War/Content/Blueprints/Items/MineExplosion.0"
       },
+      "bCanBeDamaged": true,
       "RootComponent": {
-        "ObjectName": "SphereComponent'Default__BPAntiTankMine_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.8"
+        "ObjectName": "ArrowComponent'Default__BPAntiTankMine_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.2"
       }
     }
   },
   {
-    "Type": "BoxComponent",
-    "Name": "DismantleCollision_GEN_VARIABLE",
-    "Outer": "BPAntiTankMine_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Properties": {
-      "BoxExtent": {
-        "X": 80.0,
-        "Y": 80.0,
-        "Z": 45.0
-      },
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "bGenerateOverlapEvents": false,
-      "CanCharacterStepUpOn": "ECB_No",
-      "BodyInstance": {
-        "CollisionProfileName": "OverlapOnlyWork",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "WorldStatic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "WorldDynamic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Pawn",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Visibility",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "PhysicsBody",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Destructible",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "OverlapDowncast",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Projectile",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Work",
-              "Response": "ECR_Overlap"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": 10.0
-      }
-    }
+    "Type": "ArrowComponent",
+    "Name": "Arrow",
+    "Outer": "Default__BPAntiTankMine_C",
+    "Class": "UScriptClass'ArrowComponent'"
   },
   {
     "Type": "SceneComponent",
@@ -188,30 +110,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPAntiTankMine_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.4"
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.3"
       },
       "VariableGuid": "9559B5B1-4BCAC3E2-E5B4138A-218CDB2D",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'BoxComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent'BPAntiTankMine_C:DismantleCollision_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.3"
-      },
-      "ParentComponentOrVariableName": "SphereComp",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "63145B10-42B5C6C4-8B6297AB-185A07C6",
-      "InternalVariableName": "DismantleCollision"
     }
   },
   {
@@ -220,21 +122,9 @@
     "Outer": "BPAntiTankMine_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
-      "RootNodes": [
-        {
-          "ObjectName": "SCS_Node'BPAntiTankMine_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.6"
-        }
-      ],
-      "AllNodes": [
-        {
-          "ObjectName": "SCS_Node'BPAntiTankMine_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.6"
-        }
-      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPAntiTankMine_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.5"
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.4"
       }
     }
   },
@@ -244,7 +134,7 @@
     "Outer": "Default__BPAntiTankMine_C",
     "Class": "UScriptClass'SphereComponent'",
     "Properties": {
-      "SphereRadius": 118.0,
+      "SphereRadius": 50.0,
       "AreaClass": null,
       "BodyInstance": {
         "CollisionProfileName": "ExplosiveMine",
@@ -276,7 +166,7 @@
             },
             {
               "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
+              "Response": "ECR_Overlap"
             },
             {
               "Channel": "Destructible",
@@ -287,11 +177,32 @@
               "Response": "ECR_Ignore"
             },
             {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Overlap"
+            },
+            {
               "Channel": "Excavate",
               "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
             }
           ]
         }
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPAntiTankMine_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 40.0
       }
     }
   },
@@ -351,9 +262,10 @@
         }
       },
       "AttachParent": {
-        "ObjectName": "SphereComponent'Default__BPAntiTankMine_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.8"
-      }
+        "ObjectName": "ArrowComponent'Default__BPAntiTankMine_C:Arrow'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPAntiTankMine.2"
+      },
+      "bVisible": true
     }
   }
 ]

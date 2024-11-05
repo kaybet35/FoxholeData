@@ -851,7 +851,10 @@
         "ObjectName": "GenericStockpileComponent'Default__BPLargeShipDestroyerC_C:GenericStockpileComponent2'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/DestroyerC/BPLargeShipDestroyerC.94"
       },
-      "SpawnPointType": "ESpawnPointType::LargeShip",
+      "SpawnPoints": {
+        "Type": "ESpawnPointType::LargeShip",
+        "Category": "ESpawnPointCategory::ForwardBase"
+      },
       "OutgoingPingSoundCue": {
         "ObjectName": "SoundCue'SonarBlipC_Cue'",
         "ObjectPath": "War/Content/Audio/SFX/Vehicles/Submarine/SonarBlipC_Cue.0"
@@ -918,7 +921,7 @@
         "Y": -1015.25,
         "Z": -143.0
       },
-      "PropellerPositions": {
+      "PropellerPositions[1]": {
         "X": -2070.0,
         "Y": 1015.25,
         "Z": -143.0
@@ -1404,83 +1407,7 @@
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 64.0,
-        "Y": 10.0,
-        "Z": 120.0
-      },
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "BodyInstance": {
-        "ObjectType": "ECC_GameTraceChannel8",
-        "CollisionEnabled": "ECollisionEnabled::NoCollision",
-        "CollisionProfileName": "NoCollision",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "WorldStatic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "WorldDynamic",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Pawn",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Visibility",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "PhysicsBody",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Destructible",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "OverlapDowncast",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Projectile",
-              "Response": "ECR_Ignore"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": 7.551803,
-        "Y": -0.0004949402,
-        "Z": 110.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 1.3660378E-05,
-        "Roll": 0.0
-      }
-    }
-  },
-  {
-    "Type": "BoxComponent",
-    "Name": "DoorObstruction2_GEN_VARIABLE",
-    "Outer": "BPLargeShipDestroyerC_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Properties": {
-      "BoxExtent": {
-        "X": 64.0,
+        "X": 96.0,
         "Y": 10.0,
         "Z": 120.0
       },
@@ -1539,7 +1466,7 @@
       },
       "RelativeLocation": {
         "X": 0.0,
-        "Y": 0.0,
+        "Y": -0.0004949402,
         "Z": 110.0
       },
       "RelativeRotation": {
@@ -1551,12 +1478,12 @@
   },
   {
     "Type": "BoxComponent",
-    "Name": "DoorObstruction3_GEN_VARIABLE",
+    "Name": "DoorObstruction2_GEN_VARIABLE",
     "Outer": "BPLargeShipDestroyerC_C",
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 64.0,
+        "X": 96.0,
         "Y": 10.0,
         "Z": 120.0
       },
@@ -1614,7 +1541,83 @@
         }
       },
       "RelativeLocation": {
-        "X": -9.783794,
+        "X": 0.0,
+        "Y": -3.4831464E-07,
+        "Z": 110.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 1.3660378E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "DoorObstruction3_GEN_VARIABLE",
+    "Outer": "BPLargeShipDestroyerC_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 96.0,
+        "Y": 10.0,
+        "Z": 120.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
         "Y": -6.945059E-05,
         "Z": 110.00035
       },
@@ -1632,7 +1635,7 @@
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 64.0,
+        "X": 96.0,
         "Y": 10.0,
         "Z": 120.0
       },
@@ -1690,7 +1693,7 @@
         }
       },
       "RelativeLocation": {
-        "X": -7.1236258,
+        "X": 0.0,
         "Y": 1.4305115E-06,
         "Z": 110.0
       }
@@ -14631,9 +14634,9 @@
       "ExitName": "DriverExit",
       "bUsableWhenAnchored": false,
       "RelativeLocation": {
-        "X": -0.00028848648,
+        "X": -0.00034952164,
         "Y": 731.01733,
-        "Z": 548.6113
+        "Z": 110.83423
       }
     }
   },

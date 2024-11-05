@@ -432,7 +432,13 @@
         "ObjectPath": "War/Content/Blueprints/Vehicles/Curves/TruckTurnSpeedCurve.0"
       },
       "EncumbranceManager": {
-        "bEnableEncumbranceModifiers": true
+        "bEnableItemEncumbrance": true,
+        "EncumbranceModifiers": {
+          "BaselineEnc": 500,
+          "MaxEnc": 1200,
+          "ZeroEncMoveSpeedMod": 1.0,
+          "MaxEncEngineForceModifier": 0.7
+        }
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFlatbedTruck_C:StealthComponent'",
@@ -1152,13 +1158,15 @@
     "Class": "UScriptClass'RWDVehicleMovementComponent'",
     "Properties": {
       "CenterOfGravityHeight": 1.4,
-      "EngineForce": 14000.0,
+      "EngineForce": 15500.0,
       "BrakeForce": 20000.0,
       "HandbrakeForce": 20000.0,
       "AirResistance": 70.0,
       "RollingResistance": 900.0,
+      "MaxEncumbranceMass": 6000.0,
+      "MassPerMuddynessOverride": 1000.0,
       "DepthOffset": -240.0,
-      "MaxWalkSpeed": 1821.2231,
+      "MaxWalkSpeed": 1956.2302,
       "MaxAcceleration": 192.0,
       "BrakingFrictionFactor": 0.2,
       "BrakingFriction": 0.2,
