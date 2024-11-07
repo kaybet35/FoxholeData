@@ -1,18 +1,35 @@
 [
   {
+    "Type": "ObjectProperty",
+    "Name": "BPNoBuildBoxComponent",
+    "Outer": "BPInfantryMine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPNoBuildBoxComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPNoBuildBoxComponent.0"
+    }
+  },
+  {
     "Type": "BlueprintGeneratedClass",
     "Name": "BPInfantryMine_C",
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPInfantryMine_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.5"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.8"
       }
     },
     "SuperStruct": {
       "ObjectName": "Class'LandMine'",
       "ObjectPath": "/Script/War"
     },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPInfantryMine_C:BPNoBuildBoxComponent'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.0"
+      }
+    ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -22,7 +39,7 @@
     "bCooked": true,
     "ClassDefaultObject": {
       "ObjectName": "BPInfantryMine_C'Default__BPInfantryMine_C'",
-      "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.1"
+      "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.2"
     }
   },
   {
@@ -62,15 +79,15 @@
       "ArmourType": "EArmourType::Tier3BStructure",
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPInfantryMine_C:Arrow'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.2"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.3"
       },
       "CollisionComp": {
         "ObjectName": "SphereComponent'Default__BPInfantryMine_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.6"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.9"
       },
       "ItemMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPInfantryMine_C:ItemMesh'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.7"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.10"
       },
       "ExplosiveCodeName": "InfantryMine",
       "ExplosionOffsetZ": 2.0,
@@ -82,7 +99,7 @@
       "bCanBeDamaged": true,
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPInfantryMine_C:Arrow'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.2"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.3"
       }
     }
   },
@@ -91,6 +108,65 @@
     "Name": "Arrow",
     "Outer": "Default__BPInfantryMine_C",
     "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BPNoBuildBoxComponent_C",
+    "Name": "BPNoBuildBoxComponent_GEN_VARIABLE",
+    "Outer": "BPInfantryMine_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Components/BPNoBuildBoxComponent.BPNoBuildBoxComponent_C'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 40.0,
+        "Y": 40.0,
+        "Z": 40.0
+      },
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
   },
   {
     "Type": "SceneComponent",
@@ -110,10 +186,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPInfantryMine_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.3"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.5"
       },
       "VariableGuid": "9559B5B1-4BCAC3E2-E5B4138A-218CDB2D",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPNoBuildBoxComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Components/BPNoBuildBoxComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPNoBuildBoxComponent_C'BPInfantryMine_C:BPNoBuildBoxComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.4"
+      },
+      "ParentComponentOrVariableName": "Arrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E0862CCE-442CEC47-4DBA9A8A-62195E9F",
+      "InternalVariableName": "BPNoBuildBoxComponent"
     }
   },
   {
@@ -122,9 +218,21 @@
     "Outer": "BPInfantryMine_C",
     "Class": "UScriptClass'SimpleConstructionScript'",
     "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPInfantryMine_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPInfantryMine_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.7"
+        }
+      ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPInfantryMine_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.4"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.6"
       }
     }
   },
@@ -197,7 +305,7 @@
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPInfantryMine_C:Arrow'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.2"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.3"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -263,7 +371,7 @@
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPInfantryMine_C:Arrow'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.2"
+        "ObjectPath": "War/Content/Blueprints/Items/BPInfantryMine.3"
       },
       "bVisible": true
     }
