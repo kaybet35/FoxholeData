@@ -1,0 +1,2672 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Ramp",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Undeployed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 9,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 4,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 10,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Deploying",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 11,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Deployed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 12,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 5,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                },
+                {
+                  "CanTakeDelegateIndex": 13,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 2,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Undeploying",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 14,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 3,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 7,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                8
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 2,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 3,
+              "CrossfadeDuration": 1.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 3,
+              "NextState": 0,
+              "CrossfadeDuration": 0.5,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::Linear",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 0,
+              "NextState": 2,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 2,
+              "NextState": 0,
+              "CrossfadeDuration": 0.0,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        },
+        {
+          "MachineName": "idleToCranking",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 22,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 19,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Cranking",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 23,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 20,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                21
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_MedicalTrainCart_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_MedicalTrainCart_Skeleton.3"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.18"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.52"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.15"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.48"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.50"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.14"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.47"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.19"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.53"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.49"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_E450987A404C137A51ED91B89F2D1D1E'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.36"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDestroyed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_BlendListByBool:bActiveValue'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleAnimInstance:bIsDestroyed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendListByBool_9329F7A149C981C957B151B4A0BDC91A'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerWorking",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'RailVehicleHospitalAnimInstance:bIsGunnerWorking'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_4AA313B341223E7EA0EAE39F77918A7D'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.51"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerWorking",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'RailVehicleHospitalAnimInstance:bIsGunnerWorking'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_F250D8C6492DF989F00A6FA9A195C2BF'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.54"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleHospitalAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_C9F477144CD2D068A3CE7F8AC6F62CAB'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.26"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleHospitalAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_12BB654143904EC650F6A4A4035B8631'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendBackRight",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendBackRight'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_F434C78A47F4A68B6F7808AC93D1FE5E'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.28"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendFrontRight",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendFrontRight'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_AF8301804DA0491803F3BC8E1D552A57'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.25"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendBackLeft",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendBackLeft'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_ECF9C78441A7DA3483C46D9FB1F25152'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.27"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "BufferExtendFrontLeft",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:BufferExtendFrontLeft'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_1C43768C48D24852041275B6D91EB7CB'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.22"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RearBogieTurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:RearBogieTurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_42FDBFF146C6C69475100AB53A38C665'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.23"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "FrontBogieTurnAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'RailVehicleAnimInstance:FrontBogieTurnAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_89E44EFB44B7A96B4DEBAA9E8AE276AD'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.24"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Speed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_SequencePlayer:PlayRate'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleAnimInstance:Speed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_33960B2C4106C28E31C890B45745EBDF'",
+            "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.33"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'RailVehicleHospitalAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.0"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.13"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.14"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.19"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.16"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.17"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.18"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.15"
+      },
+      {
+        "ObjectName": "Function'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_Root_ACD74D884D9B4E8E5341A9AA6E323B17'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_LayeredBoneBlend_5219ED83450711D2D1EF59B238134FC7'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_33960B2C4106C28E31C890B45745EBDF'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_89E44EFB44B7A96B4DEBAA9E8AE276AD'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_42FDBFF146C6C69475100AB53A38C665'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_1C43768C48D24852041275B6D91EB7CB'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_ECF9C78441A7DA3483C46D9FB1F25152'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_AF8301804DA0491803F3BC8E1D552A57'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_F434C78A47F4A68B6F7808AC93D1FE5E'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_LayeredBoneBlend_236CECF54A3911D329100E92905D58FD'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_12BB654143904EC650F6A4A4035B8631'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendSpacePlayer_C9F477144CD2D068A3CE7F8AC6F62CAB'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_F250D8C6492DF989F00A6FA9A195C2BF'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.54"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_4AA313B341223E7EA0EAE39F77918A7D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.51"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_20E6BEE2411663018A48CEBB6430AF38'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateResult_F3EB1EC64D54B4F4E223D3937570F84E'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.46"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateResult_C610EE904B0C842951AA22B2A3640586'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.44"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateMachine_15FF9DA84C6EE88C3560C285436DB2D9'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.39"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_BlendListByBool_9329F7A149C981C957B151B4A0BDC91A'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_D6242ECF4BE15F534F44AAA47B113F69'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_E450987A404C137A51ED91B89F2D1D1E'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.49"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.53"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.47"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.50"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.48"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.52"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_E79E7B3A45009F736A14A6A9E4CE88F9'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateResult_F38A8FA64E8E73551DCC6984DAF0BBCA'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.45"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_548F632C46F3F1A05CBFE795B562E10D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateResult_3E2DDF2A4D48763D713439BB0C8A393C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.43"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_06E6B6834587FD8E994778ACD2B9F206'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateResult_3D5C0C6549ED6C50C4AB48804C1759AF'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.42"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_SequencePlayer_F1AD8A934E762EE7F159B79A064E2FF1'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateResult_2D8B2CA64AE503CC2049FC8FF04F1E1D'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.41"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraphNode_StateMachine_9AED3ABA4A6A2C71E22FD5876659A57F'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.40"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_TrainHospital": {
+        "ObjectName": "Function'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507": {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.15"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C": {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.18"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547": {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.17"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F": {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C": {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.19"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C": {
+        "ObjectName": "Function'ABP_TrainHospital_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.14"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_TrainHospital_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.13"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_TrainHospital_C'Default__ABP_TrainHospital_C'",
+      "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.2"
+    }
+  },
+  {
+    "Type": "ABP_TrainHospital_C",
+    "Name": "Default__ABP_TrainHospital_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/RailVehicles/ABP_TrainHospital.ABP_TrainHospital_C'",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_ACD74D884D9B4E8E5341A9AA6E323B17": {
+        "Result": {
+          "LinkID": 18
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_5219ED83450711D2D1EF59B238134FC7": {
+        "BasePose": {
+          "LinkID": 2
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 3
+          },
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 5
+          },
+          {
+            "LinkID": 7
+          },
+          {
+            "LinkID": 6
+          },
+          {
+            "LinkID": 8
+          },
+          {
+            "LinkID": 9
+          },
+          {
+            "LinkID": 20
+          },
+          {
+            "LinkID": 35
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "RAxis_PIVOT",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "FAxis_PIVOT",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Buffer_F_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Buffer_F_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Buffer_R_L",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Buffer_R_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Horizontal",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Wheel1_F",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Wheel2_F",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Wheel1_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Wheel2_R",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Door01_F_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door02_F_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door01_R_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door02_R_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door03_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door01_F_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door02_F_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door01_R_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door02_R_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Door03_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "GangwayRamp_F_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "GangwayRamp_R_L",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "GangwayRamp_F_R",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "GangwayRamp_R_R",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 8,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 6,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 2,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 7,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 4,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 5,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "3AD0F166-4BC23BAC-9F005E8E-E99ED254",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_SequencePlayer_33960B2C4106C28E31C890B45745EBDF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_driving'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_driving.0"
+        },
+        "PlayRateBasis": 150.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_89E44EFB44B7A96B4DEBAA9E8AE276AD": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_bogie_Horizontal'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_bogie_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_42FDBFF146C6C69475100AB53A38C665": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_bogie_Horizontal'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_bogie_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_1C43768C48D24852041275B6D91EB7CB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_buffer_move'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_buffer_move.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_ECF9C78441A7DA3483C46D9FB1F25152": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_buffer_move'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_buffer_move.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_AF8301804DA0491803F3BC8E1D552A57": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_buffer_move'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_buffer_move.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_F434C78A47F4A68B6F7808AC93D1FE5E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_buffer_move'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_buffer_move.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_236CECF54A3911D329100E92905D58FD": {
+        "BasePose": {
+          "LinkID": 10
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 11
+          },
+          {
+            "LinkID": 17
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_Vertical",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_crank",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "3AD0F166-4BC23BAC-9F005E8E-E99ED254",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_12BB654143904EC650F6A4A4035B8631": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_gun_Horizontal'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_gun_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_C9F477144CD2D068A3CE7F8AC6F62CAB": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_MedicalTrainCart_gun_Vertical'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/BS_MedicalTrainCart_gun_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_F250D8C6492DF989F00A6FA9A195C2BF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4AA313B341223E7EA0EAE39F77918A7D": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_20E6BEE2411663018A48CEBB6430AF38": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_Gun_cranking'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_Gun_cranking.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F3EB1EC64D54B4F4E223D3937570F84E": {
+        "Result": {
+          "LinkID": 14
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_C610EE904B0C842951AA22B2A3640586": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_15FF9DA84C6EE88C3560C285436DB2D9": {
+        "StateMachineIndexInClass": 1,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_BlendListByBool_9329F7A149C981C957B151B4A0BDC91A": {
+        "bActiveValue": false,
+        "BlendPose": [
+          {
+            "LinkID": 19
+          },
+          {
+            "LinkID": 1
+          }
+        ],
+        "BlendTime": [
+          0.1,
+          0.1
+        ],
+        "TransitionType": "EBlendListTransitionType::StandardBlend",
+        "BlendType": "EAlphaBlendOption::Linear",
+        "bResetChildOnActivation": false,
+        "CustomBlendCurve": null,
+        "BlendProfile": null
+      },
+      "AnimGraphNode_SequencePlayer_D6242ECF4BE15F534F44AAA47B113F69": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_exploding'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_exploding.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_SequencePlayer_E450987A404C137A51ED91B89F2D1D1E": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_driving'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_driving.0"
+        },
+        "PlayRateBasis": 150.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_E79E7B3A45009F736A14A6A9E4CE88F9": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_deploying'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_deploying.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": -1.5,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 3.333333,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_F38A8FA64E8E73551DCC6984DAF0BBCA": {
+        "Result": {
+          "LinkID": 27
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_548F632C46F3F1A05CBFE795B562E10D": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_deploying'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_deploying.0"
+        },
+        "PlayRateBasis": 0.0,
+        "PlayRate": 0.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 100.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3E2DDF2A4D48763D713439BB0C8A393C": {
+        "Result": {
+          "LinkID": 29
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_06E6B6834587FD8E994778ACD2B9F206": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_deploying'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_deploying.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_3D5C0C6549ED6C50C4AB48804C1759AF": {
+        "Result": {
+          "LinkID": 31
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_F1AD8A934E762EE7F159B79A064E2FF1": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_MedicalTrainCart_deploying'",
+          "ObjectPath": "War/Content/Animation/RailVehicles/Anim_MedicalTrainCart_deploying.0"
+        },
+        "PlayRateBasis": 0.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_2D8B2CA64AE503CC2049FC8FF04F1E1D": {
+        "Result": {
+          "LinkID": 33
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_9AED3ABA4A6A2C71E22FD5876659A57F": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_ACD74D884D9B4E8E5341A9AA6E323B17",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'IntProperty'",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_TrainHospital",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.4"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.CallFunc_NotEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.CallFunc_EqualEqual_ByteByte_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.CallFunc_NotEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.CallFunc_EqualEqual_ByteByte_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.CallFunc_EqualEqual_ByteByte_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.8"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_TrainHospital_C:ExecuteUbergraph_ABP_TrainHospital.CallFunc_EqualEqual_ByteByte_ReturnValue_3'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.9"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_EqualEqual_ByteByte_ReturnValue_3",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_NotEqual_ByteByte_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_TrainHospital",
+    "Class": "UScriptClass'BoolProperty'",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_TrainHospital_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.12"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_TrainHospital_AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'Function'",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendListByBool_9329F7A149C981C957B151B4A0BDC91A",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendListByBool'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_12BB654143904EC650F6A4A4035B8631",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_1C43768C48D24852041275B6D91EB7CB",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_42FDBFF146C6C69475100AB53A38C665",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_89E44EFB44B7A96B4DEBAA9E8AE276AD",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_AF8301804DA0491803F3BC8E1D552A57",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C9F477144CD2D068A3CE7F8AC6F62CAB",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_ECF9C78441A7DA3483C46D9FB1F25152",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_F434C78A47F4A68B6F7808AC93D1FE5E",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_236CECF54A3911D329100E92905D58FD",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_5219ED83450711D2D1EF59B238134FC7",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_06E6B6834587FD8E994778ACD2B9F206",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_20E6BEE2411663018A48CEBB6430AF38",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_33960B2C4106C28E31C890B45745EBDF",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_548F632C46F3F1A05CBFE795B562E10D",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_D6242ECF4BE15F534F44AAA47B113F69",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E450987A404C137A51ED91B89F2D1D1E",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_E79E7B3A45009F736A14A6A9E4CE88F9",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_F1AD8A934E762EE7F159B79A064E2FF1",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_15FF9DA84C6EE88C3560C285436DB2D9",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_9AED3ABA4A6A2C71E22FD5876659A57F",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_2D8B2CA64AE503CC2049FC8FF04F1E1D",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3D5C0C6549ED6C50C4AB48804C1759AF",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_3E2DDF2A4D48763D713439BB0C8A393C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_C610EE904B0C842951AA22B2A3640586",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F38A8FA64E8E73551DCC6984DAF0BBCA",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_F3EB1EC64D54B4F4E223D3937570F84E",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_1914C46146BCDD4C57785FA3D2E21D5C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_25344E9246A86223C0C497B3A51EC507",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_39B306904D409C71CEFB8A817BFBB12F",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_4A408B884990F2C78127D0A208636547",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_4AA313B341223E7EA0EAE39F77918A7D",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_9F771181409DD6FB68A2A78F989DD47C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_CEE09FE14D82AE15DD9C02A917484C1C",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_F250D8C6492DF989F00A6FA9A195C2BF",
+    "Outer": "ABP_TrainHospital_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

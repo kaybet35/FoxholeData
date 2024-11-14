@@ -1,12 +1,12 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "DeployUse",
+    "Name": "Spawn3",
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'DeployUseComponent'",
+      "ObjectName": "Class'SpawnPointComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPTrainHospital_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.55"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.61"
       }
     },
     "SuperStruct": {
@@ -26,36 +26,48 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPTrainHospital_C:DeployUse'",
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:Spawn3'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:Spawn2'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.27"
+      },
+      {
         "ObjectName": "ObjectProperty'BPTrainHospital_C:Spawn1'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.22"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.26"
       },
       {
         "ObjectName": "ObjectProperty'BPTrainHospital_C:Spawn'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.21"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.25"
       },
       {
-        "ObjectName": "ObjectProperty'BPTrainHospital_C:LeftExit'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.17"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPTrainHospital_C:RightExit'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.19"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPTrainHospital_C:LeftTrigger'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.18"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPTrainHospital_C:RightTrigger'",
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:FrontBogieCollision'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.20"
       },
       {
-        "ObjectName": "ObjectProperty'BPTrainHospital_C:UseVolume'",
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:RearBogieCollision'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.22"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:GunnerSeat'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.21"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:DeployUse'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.19"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:RightExit'",
         "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.23"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:RightTrigger'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.24"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrainHospital_C:UseVolume'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.28"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -77,24 +89,28 @@
     "Properties": {
       "HospitalComponent": {
         "ObjectName": "HospitalComponent'Default__BPTrainHospital_C:HospitalComponent'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.16"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.18"
       },
       "GenericStockpileComponent": {
         "ObjectName": "GenericStockpileComponent'Default__BPTrainHospital_C:GenericStockpileComponent'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.17"
       },
       "SpawnPoints": {
         "Type": "ESpawnPointType::MedicalBase",
         "Category": "ESpawnPointCategory::MedicalBase"
       },
-      "WheelBase": 510.0,
+      "DeployState": {
+        "OpenAnimationDuration": 3.333333,
+        "ClosedAnimationDuration": 2.222222
+      },
+      "WheelBase": 1550.0,
       "FrontCoupler": {
         "ObjectName": "RailCouplerUseComponent'Default__BPTrainHospital_C:FrontCoupler'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.32"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.37"
       },
       "RearCoupler": {
         "ObjectName": "RailCouplerUseComponent'Default__BPTrainHospital_C:RearCoupler'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.33"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.38"
       },
       "CouplerCableMaterial": {
         "ObjectName": "MaterialInstanceConstant'CouplerChain'",
@@ -135,30 +151,31 @@
         "LocalizedString": "This unique train car has been specially fitted with medical equipment and a mounted machine gun, making it ideal for transporting injured soldiers away from active battlefields to the safety of hospitals. When stationary, the BMS Bloodtender may also be used as a mobile first aid centre to treat wounded soldiers so long as supplies remain plentiful."
       },
       "Icon": {
-        "ObjectName": "Texture2D'InfantryCarVehicleIcon'",
-        "ObjectPath": "War/Content/Textures/UI/VehicleIcons/InfantryCarVehicleIcon.0"
+        "ObjectName": "Texture2D'TrainHospitalItemIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/TrainHospitalItemIcon.0"
       },
-      "TechID": "ETechID::UnlockTrainEngine",
+      "TechID": "ETechID::UnlockFacilityTier3",
       "ShippableInfo": {
         "Type": "EShippableType::ExtraLarge"
       },
       "CodeName": "TrainHospital",
       "VehicleProfileType": "EVehicleProfileType::RailCar",
       "VehicleMovementProfileType": "EVehicleMovementProfileType::Truck",
-      "ArmourType": "EArmourType::Tier1Tank",
+      "ArmourType": "EArmourType::Tier2Tank",
       "bCanUseStructures": true,
       "bIsStockpilable": false,
+      "MaxPlatformPlayers": 0,
       "DestroyedMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPTrainHospital_C:DestroyedMesh'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.59"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.67"
       },
       "MinorDamagePS": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:MinorDamagePS'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.30"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.35"
       },
       "MajorDamagePS": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:MajorDamagePS'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.29"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.34"
       },
       "DestroyedFX": {
         "ObjectName": "ParticleSystem'GrenadeBlast'",
@@ -166,23 +183,23 @@
       },
       "DisabledTurretFX": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:DisabledTurretFX'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.28"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.33"
       },
       "DisabledTurret2FX": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:DisabledTurret2FX'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.24"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.29"
       },
       "DisabledTurret3FX": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:DisabledTurret3FX'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.25"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.30"
       },
       "DisabledTurret4FX": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:DisabledTurret4FX'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.26"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.31"
       },
       "DisabledTurret5FX": {
         "ObjectName": "ParticleSystemComponent'Default__BPTrainHospital_C:DisabledTurret5FX'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.27"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.32"
       },
       "DestroyedSoundCue": {
         "ObjectName": "SoundCue'VehicleDeath_Cue'",
@@ -198,39 +215,39 @@
       },
       "CameraRigComponent": {
         "ObjectName": "PlayerCameraRigComponent'Default__BPTrainHospital_C:CameraRigVehicle'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.31"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.36"
       },
       "FrontAxleCastLocation": {
         "ObjectName": "SceneComponent'Default__BPTrainHospital_C:FrontAxelCastLocation'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.36"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.41"
       },
       "RearAxleCastLocation": {
         "ObjectName": "SceneComponent'Default__BPTrainHospital_C:RearAxleCastLocation'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.39"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.44"
       },
       "FrontLeftRollCastLocation": {
         "ObjectName": "SceneComponent'Default__BPTrainHospital_C:FrontRightAxleCastLocation'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.37"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.42"
       },
       "FrontRightRollCastLocation": {
         "ObjectName": "SceneComponent'Default__BPTrainHospital_C:RearRightAxleCastLocation'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.40"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.45"
       },
       "LeftSideTrackLocation": {
         "ObjectName": "SceneComponent'Default__BPTrainHospital_C:LeftSideTrackLocation'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.38"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.43"
       },
       "RightSideTrackLocation": {
         "ObjectName": "SceneComponent'Default__BPTrainHospital_C:RightSideTrackLocation'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.41"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.46"
       },
       "BoxCollision": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       },
       "PassengerArea": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:PassengerBaseBox'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.11"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
       },
       "AFKTimeoutComponent": {
         "ObjectName": "AFKTimeoutComponent'Default__BPTrainHospital_C:AFKTimeoutComponent'",
@@ -241,33 +258,29 @@
           "GunnerIndex": 0,
           "MuzzleIndex": 0,
           "SocketName": "S_Muzzle"
-        },
-        {
-          "GunnerIndex": 1,
-          "MuzzleIndex": 0,
-          "SocketName": "S_Muzzle"
         }
       ],
       "ServerAnimTickMode": "EServerAnimTickMode::TickWhenOccupied",
+      "bDoPenetratingShotsReduceTankArmour": false,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPTrainHospital_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.60"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.68"
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPTrainHospital_C:CharacterMesh0'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.56"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.62"
       },
       "CharacterMovement": {
         "ObjectName": "RailVehicleMovementComponent'Default__BPTrainHospital_C:CharMoveComp'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.34"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.39"
       },
       "CapsuleComponent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       },
       "RootComponent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
     }
   },
@@ -285,7 +298,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -297,7 +310,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
     }
   },
@@ -309,7 +322,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -321,7 +334,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
     }
   },
@@ -333,7 +346,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
     }
   },
@@ -345,8 +358,144 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "FrontBogieCollision_GEN_VARIABLE",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 290.0,
+        "Y": 170.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_Vehicle",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "HalfTrackRoot",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -3.5,
+        "Z": 45.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.99806,
+        "Roll": 180.0
+      },
+      "ComponentTags": [
+        "RailSweep"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "RearBogieCollision_GEN_VARIABLE",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 290.0,
+        "Y": 170.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_Vehicle",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "HalfTrackRoot",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 1.707673E-05,
+        "Y": 3.5,
+        "Z": 45.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.998184,
+        "Roll": 180.0
+      },
+      "ComponentTags": [
+        "RailSweep"
+      ]
     }
   },
   {
@@ -356,8 +505,8 @@
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 400.0,
-        "Y": 270.0,
+        "X": 500.0,
+        "Y": 400.0,
         "Z": 200.0
       },
       "AreaClass": {
@@ -427,7 +576,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
     }
   },
@@ -438,9 +587,44 @@
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 426.0,
+        "X": 900.0,
         "Y": 175.0,
         "Z": 190.0
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "HalfTrackRoot",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
       },
       "OnComponentBeginOverlap": {
         "InvocationList": [
@@ -464,7 +648,7 @@
       "CapsuleHalfHeight": 260.0,
       "AttachParent": {
         "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
       }
     }
   },
@@ -475,13 +659,13 @@
     "Class": "UScriptClass'DeployUseComponent'",
     "Properties": {
       "BoxExtent": {
-        "X": 128.0,
-        "Y": 128.0,
+        "X": 200.0,
+        "Y": 400.0,
         "Z": 128.0
       },
       "RelativeLocation": {
-        "X": -0.0036010742,
-        "Y": -284.48944,
+        "X": 709.1688,
+        "Y": -0.002319336,
         "Z": 0.0
       }
     }
@@ -495,7 +679,7 @@
       "Configs": [
         {
           "Type": "EStockpileEntryType::Items",
-          "QuantityLimit": 32000,
+          "QuantityLimit": 3000,
           "TotalQuantityLimit": 0,
           "QuantityOverrides": [],
           "TotalQuantityOverrides": [],
@@ -517,28 +701,54 @@
     "Type": "HospitalComponent",
     "Name": "HospitalComponent",
     "Outer": "Default__BPTrainHospital_C",
-    "Class": "UScriptClass'HospitalComponent'"
+    "Class": "UScriptClass'HospitalComponent'",
+    "Properties": {
+      "NumBeds": 35,
+      "SpawnChargesPerPatient": 8
+    }
   },
   {
     "Type": "ObjectProperty",
-    "Name": "LeftExit",
+    "Name": "DeployUse",
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'SeatExitComponent'",
+      "ObjectName": "Class'DeployUseComponent'",
       "ObjectPath": "/Script/War"
     }
   },
   {
     "Type": "ObjectProperty",
-    "Name": "LeftTrigger",
+    "Name": "FrontBogieCollision",
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'SeatTriggerComponent'",
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "GunnerSeat",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'VehicleSeatComponent'",
       "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RearBogieCollision",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -587,6 +797,17 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "Spawn2",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SpawnPointComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "UseVolume",
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -604,7 +825,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -616,7 +837,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -628,7 +849,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -640,7 +861,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -652,7 +873,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -664,7 +885,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -676,7 +897,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -688,7 +909,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       },
       "RelativeRotation": {
         "Pitch": -60.0,
@@ -704,13 +925,18 @@
     "Class": "UScriptClass'RailCouplerUseComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectName": "SkeletalMeshComponent'Default__BPTrainHospital_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.62"
       },
       "RelativeLocation": {
-        "X": 426.0,
-        "Y": 0.0,
-        "Z": -155.0
+        "X": 5.1934272E-05,
+        "Y": -293.49942,
+        "Z": -25.45
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
       }
     }
   },
@@ -721,13 +947,18 @@
     "Class": "UScriptClass'RailCouplerUseComponent'",
     "Properties": {
       "AttachParent": {
-        "ObjectName": "BoxComponent'Default__BPTrainHospital_C:VehicleCollision'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
+        "ObjectName": "SkeletalMeshComponent'Default__BPTrainHospital_C:CharacterMesh0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.62"
       },
       "RelativeLocation": {
-        "X": -426.0,
-        "Y": 0.0,
-        "Z": -155.0
+        "X": -6.084144E-05,
+        "Y": 293.54453,
+        "Z": -25.45
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
       }
     }
   },
@@ -762,7 +993,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -774,7 +1005,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -786,7 +1017,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -798,7 +1029,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -810,7 +1041,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -822,7 +1053,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       }
     }
   },
@@ -838,7 +1069,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrainHospital_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.35"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.40"
       },
       "VariableGuid": "1AD4B3D3-4EB946B9-EFFFDD88-815E4D6D",
       "InternalVariableName": "DefaultSceneRoot"
@@ -856,7 +1087,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPTrainHospital_C:UseVolume_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.10"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.12"
       },
       "ParentComponentOrVariableName": "VehicleCollision",
       "bIsParentComponentNative": true,
@@ -866,22 +1097,83 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_16",
+    "Name": "SCS_Node_10",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'SeatExitComponent'",
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPTrainHospital_C:FrontBogieCollision_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.10"
+      },
+      "AttachToName": "Front_Axis_Socket",
+      "ParentComponentOrVariableName": "CharacterMesh0",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C9E9A9A8-4A3F0F76-D234F987-C311D857",
+      "InternalVariableName": "FrontBogieCollision"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpawnPointComponent'",
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "SeatExitComponent'BPTrainHospital_C:LeftExit_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.51"
+        "ObjectName": "SpawnPointComponent'BPTrainHospital_C:Spawn1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.63"
       },
       "ParentComponentOrVariableName": "VehicleCollision",
       "bIsParentComponentNative": true,
-      "VariableGuid": "8CD6E030-4B4B7CD8-49C261A7-6AF82F5C",
-      "InternalVariableName": "LeftExit"
+      "VariableGuid": "69534A21-447375E4-5C87228E-45F83156",
+      "InternalVariableName": "Spawn1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_18",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpawnPointComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpawnPointComponent'BPTrainHospital_C:Spawn2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.64"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A9AEC3BC-48144720-6F619282-06F6FC1A",
+      "InternalVariableName": "Spawn2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpawnPointComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpawnPointComponent'BPTrainHospital_C:Spawn3_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.65"
+      },
+      "ParentComponentOrVariableName": "VehicleCollision",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "F31A7BF2-4433B516-87EA3999-A076806B",
+      "InternalVariableName": "Spawn3"
     }
   },
   {
@@ -896,7 +1188,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DeployUseComponent'BPTrainHospital_C:DeployUse_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.14"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.16"
       },
       "ParentComponentOrVariableName": "VehicleCollision",
       "bIsParentComponentNative": true,
@@ -916,7 +1208,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SpawnPointComponent'BPTrainHospital_C:Spawn_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.58"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.66"
       },
       "ParentComponentOrVariableName": "VehicleCollision",
       "bIsParentComponentNative": true,
@@ -926,22 +1218,23 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
+    "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'SpawnPointComponent'",
+        "ObjectName": "Class'VehicleSeatComponent'",
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "SpawnPointComponent'BPTrainHospital_C:Spawn1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.57"
+        "ObjectName": "VehicleSeatComponent'BPTrainHospital_C:GunnerSeat_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.69"
       },
-      "ParentComponentOrVariableName": "VehicleCollision",
+      "AttachToName": "Gun_Horizontal",
+      "ParentComponentOrVariableName": "CharacterMesh0",
       "bIsParentComponentNative": true,
-      "VariableGuid": "D66D9CD0-451AB58B-1C2ED1AE-730EE20C",
-      "InternalVariableName": "Spawn1"
+      "VariableGuid": "27FC24ED-4FE2314C-293605AB-BE529639",
+      "InternalVariableName": "GunnerSeat"
     }
   },
   {
@@ -956,7 +1249,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SeatTriggerComponent'BPTrainHospital_C:RightTrigger_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.54"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.60"
       },
       "ParentComponentOrVariableName": "VehicleCollision",
       "bIsParentComponentNative": true,
@@ -966,22 +1259,23 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
+    "Name": "SCS_Node_8",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'SeatTriggerComponent'",
-        "ObjectPath": "/Script/War"
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "SeatTriggerComponent'BPTrainHospital_C:LeftTrigger_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.53"
+        "ObjectName": "BoxComponent'BPTrainHospital_C:RearBogieCollision_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.11"
       },
-      "ParentComponentOrVariableName": "VehicleCollision",
+      "AttachToName": "Rear_Axis_Socket",
+      "ParentComponentOrVariableName": "CharacterMesh0",
       "bIsParentComponentNative": true,
-      "VariableGuid": "10166ADF-4CA07743-4D8224AC-4E5E01E3",
-      "InternalVariableName": "LeftTrigger"
+      "VariableGuid": "7C059865-4387311C-156D1B9D-BAEF99CA",
+      "InternalVariableName": "RearBogieCollision"
     }
   },
   {
@@ -996,7 +1290,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SeatExitComponent'BPTrainHospital_C:RightExit_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.52"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.59"
       },
       "ParentComponentOrVariableName": "VehicleCollision",
       "bIsParentComponentNative": true,
@@ -1006,41 +1300,13 @@
   },
   {
     "Type": "SeatExitComponent",
-    "Name": "LeftExit_GEN_VARIABLE",
-    "Outer": "BPTrainHospital_C",
-    "Class": "UScriptClass'SeatExitComponent'",
-    "Properties": {
-      "RelativeLocation": {
-        "X": 280.0,
-        "Y": -270.0,
-        "Z": -85.0
-      },
-      "bEditableWhenInherited": false
-    }
-  },
-  {
-    "Type": "SeatExitComponent",
     "Name": "RightExit_GEN_VARIABLE",
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'SeatExitComponent'",
     "Properties": {
       "RelativeLocation": {
-        "X": 280.0,
+        "X": -717.58344,
         "Y": 270.0,
-        "Z": -85.0
-      },
-      "bEditableWhenInherited": false
-    }
-  },
-  {
-    "Type": "SeatTriggerComponent",
-    "Name": "LeftTrigger_GEN_VARIABLE",
-    "Outer": "BPTrainHospital_C",
-    "Class": "UScriptClass'SeatTriggerComponent'",
-    "Properties": {
-      "RelativeLocation": {
-        "X": 280.0,
-        "Y": -270.0,
         "Z": -85.0
       },
       "bEditableWhenInherited": false
@@ -1052,10 +1318,15 @@
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'SeatTriggerComponent'",
     "Properties": {
+      "BoxExtent": {
+        "X": 128.0,
+        "Y": 400.0,
+        "Z": 128.0
+      },
       "RelativeLocation": {
-        "X": 280.0,
-        "Y": 270.0,
-        "Z": -85.0
+        "X": -722.7517,
+        "Y": 0.0,
+        "Z": -84.99994
       },
       "bEditableWhenInherited": false
     }
@@ -1069,74 +1340,98 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.48"
         },
         {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.49"
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.56"
         },
         {
           "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.47"
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.58"
         },
         {
           "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.45"
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.52"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.48"
         },
         {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.49"
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.56"
         },
         {
           "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.50"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.44"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.47"
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.58"
         },
         {
           "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.45"
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.53"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.55"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.49"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.54"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.50"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.51"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.52"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPTrainHospital_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.42"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.47"
       }
     }
   },
@@ -1147,21 +1442,55 @@
     "Class": "UScriptClass'SkeletalMeshComponent'",
     "Properties": {
       "AnimClass": {
-        "ObjectName": "AnimBlueprintGeneratedClass'ABP_TrainInfantry_C'",
-        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainInfantry.1"
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_TrainHospital_C'",
+        "ObjectPath": "War/Content/Animation/RailVehicles/ABP_TrainHospital.1"
       },
       "SkeletalMesh": {
-        "ObjectName": "SkeletalMesh'SK_TrainInfantry'",
-        "ObjectPath": "War/Content/Meshes/Vehicles/SK_TrainInfantry.0"
+        "ObjectName": "SkeletalMesh'SK_MedicalTrainCart'",
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_MedicalTrainCart.0"
       },
-      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::AlwaysTickPoseAndRefreshBones",
       "OverrideMaterials": [
         null,
-        null
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialInstanceConstant'TrainKioskTrimSheet'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/TrainKioskTrimSheet.0"
+        }
       ],
+      "BodyInstance": {
+        "ObjectType": "ECC_Vehicle",
+        "CollisionProfileName": "HalfTrackMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "IceBlocker",
+              "Response": "ECR_Block"
+            }
+          ]
+        }
+      },
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -1181,11 +1510,38 @@
     "Outer": "BPTrainHospital_C",
     "Class": "UScriptClass'SpawnPointComponent'",
     "Properties": {
+      "RelativeLocation": {
+        "X": 330.0,
+        "Y": 250.0,
+        "Z": 30.0
+      }
+    }
+  },
+  {
+    "Type": "SpawnPointComponent",
+    "Name": "Spawn2_GEN_VARIABLE",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'SpawnPointComponent'",
+    "Properties": {
       "Priority": "ESpawnPointPriority::Low",
       "RelativeLocation": {
-        "X": 100.0,
-        "Y": 0.0,
-        "Z": 345.0
+        "X": -330.0,
+        "Y": -250.0,
+        "Z": 30.0
+      }
+    }
+  },
+  {
+    "Type": "SpawnPointComponent",
+    "Name": "Spawn3_GEN_VARIABLE",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'SpawnPointComponent'",
+    "Properties": {
+      "Priority": "ESpawnPointPriority::Low",
+      "RelativeLocation": {
+        "X": -330.0,
+        "Y": 250.0,
+        "Z": 30.0
       }
     }
   },
@@ -1196,9 +1552,9 @@
     "Class": "UScriptClass'SpawnPointComponent'",
     "Properties": {
       "RelativeLocation": {
-        "X": 273.89035,
-        "Y": 26.878494,
-        "Z": 345.0
+        "X": 330.0,
+        "Y": -250.0,
+        "Z": 30.0
       }
     }
   },
@@ -1210,7 +1566,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "CapsuleComponent'Default__BPTrainHospital_C:CollisionCylinder'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.13"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospital.15"
       },
       "RelativeLocation": {
         "X": 0.0,
@@ -1224,5 +1580,35 @@
     "Name": "StealthComponent",
     "Outer": "Default__BPTrainHospital_C",
     "Class": "UScriptClass'StealthComponent'"
+  },
+  {
+    "Type": "VehicleSeatComponent",
+    "Name": "GunnerSeat_GEN_VARIABLE",
+    "Outer": "BPTrainHospital_C",
+    "Class": "UScriptClass'VehicleSeatComponent'",
+    "Properties": {
+      "Direction": "ESeatDirection::Rear",
+      "bCanFireWeapon": true,
+      "bOverrideAsPassenger": true,
+      "TriggerName": "RightTrigger",
+      "ExitName": "RightExit",
+      "MountCodeName": "TrainHospitalGunner",
+      "bIsExposed": true,
+      "bExposedSeatRequiresLoS": true,
+      "MountComponent": {
+        "ObjectName": "BlueprintGeneratedClass'BPTrainHospitalMountComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/Rail/BPTrainHospitalMountComponent.0"
+      },
+      "RelativeLocation": {
+        "X": 52.374744,
+        "Y": -11.68626,
+        "Z": -7.3218455
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
   }
 ]

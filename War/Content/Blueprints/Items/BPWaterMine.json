@@ -112,7 +112,7 @@
       "SphereRadius": 450.0,
       "AreaClass": null,
       "BodyInstance": {
-        "CollisionProfileName": "OverlapOnlyWork",
+        "CollisionProfileName": "ExplosiveMine",
         "CollisionResponses": {
           "ResponseArray": [
             {
@@ -125,7 +125,7 @@
             },
             {
               "Channel": "Pawn",
-              "Response": "ECR_Ignore"
+              "Response": "ECR_Overlap"
             },
             {
               "Channel": "Visibility",
@@ -141,7 +141,7 @@
             },
             {
               "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
+              "Response": "ECR_Overlap"
             },
             {
               "Channel": "Destructible",
@@ -157,6 +157,14 @@
             },
             {
               "Channel": "Work",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
               "Response": "ECR_Overlap"
             }
           ]
