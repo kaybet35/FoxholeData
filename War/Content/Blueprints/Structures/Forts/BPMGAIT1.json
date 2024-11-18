@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "MultiplexedSkeletalMesh",
+    "Name": "BlockBuildSiteMovement",
     "Outer": "BPMGAIT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'MultiplexedSkeletalMeshComponent'",
-      "ObjectPath": "/Script/War"
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -21,11 +21,11 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPMGAIT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.17"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BPMGAIT1_C:InheritableComponentHandler'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.10"
       }
     },
     "SuperStruct": {
@@ -34,8 +34,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPMGAIT1_C:MultiplexedSkeletalMesh'",
+        "ObjectName": "ObjectProperty'BPMGAIT1_C:BlockBuildSiteMovement'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPMGAIT1_C:MultiplexedSkeletalMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.12"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -57,7 +61,7 @@
     "Properties": {
       "SkeletalMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPMGAIT1_C:Mesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.18"
       },
       "AITurretComponent": {
         "ObjectName": "AITurretComponent'Default__BPMGAIT1_C:AITurretComponent'",
@@ -74,7 +78,7 @@
       "MaxOccupantFiringArcDeviation": 45.0,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPMGAIT1_C:FlagMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.20"
       },
       "Tier": "EFortTier::T1",
       "BaseStructureClass": {
@@ -95,11 +99,11 @@
       },
       "UseAreaBox": {
         "ObjectName": "BoxComponent'Default__BPMGAIT1_C:UseAreaBox'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.9"
       },
       "KillVolume": {
         "ObjectName": "BoxComponent'Default__BPMGAIT1_C:KillVolume'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.8"
       },
       "TechComponentIDs": [
         "ETechComponentID::RifleGarrison"
@@ -112,7 +116,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPMGAIT1_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.19"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPMGAIT1_C:StructureArrow'",
@@ -131,6 +135,7 @@
       "WeaponDamage": 55.0,
       "FiringPeriod": 0.15,
       "FiringConeAngle": 45.0,
+      "TargetStabilityReductionPerShot": 0.5,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPMGAIT1_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.6"
@@ -165,6 +170,80 @@
     "Name": "StructureArrow",
     "Outer": "Default__BPMGAIT1_C",
     "Class": "UScriptClass'ArrowComponent'"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BlockBuildSiteMovement_GEN_VARIABLE",
+    "Outer": "BPMGAIT1_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 300.0,
+        "Y": 300.0,
+        "Z": 110.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -65.0
+      },
+      "ComponentTags": [
+        "IncludeInBuildSite"
+      ]
+    }
   },
   {
     "Type": "BoxComponent",
@@ -230,6 +309,17 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "MultiplexedSkeletalMesh",
+    "Outer": "BPMGAIT1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'MultiplexedSkeletalMeshComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPMGAIT1_C",
@@ -247,10 +337,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPMGAIT1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.13"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPMGAIT1_C:BlockBuildSiteMovement_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "EB162809-4329847D-48C4A194-B78ABB87",
+      "InternalVariableName": "BlockBuildSiteMovement"
     }
   },
   {
@@ -265,7 +375,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedSkeletalMeshComponent'BPMGAIT1_C:MultiplexedSkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.11"
       },
       "VariableGuid": "B7CE4494-480EBC66-F401FE89-7A1EDCC1",
       "InternalVariableName": "MultiplexedSkeletalMesh"
@@ -280,18 +390,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.13"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.13"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.14"
       }
     }
   },
