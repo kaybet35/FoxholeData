@@ -1,12 +1,12 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "StaticMesh",
+    "Name": "ParticleSystem",
     "Outer": "TracerFireATFX_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectName": "Class'ParticleSystemComponent'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'TracerFireATFX_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.7"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.10"
       }
     },
     "SuperStruct": {
@@ -26,8 +26,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'TracerFireATFX_C:StaticMesh'",
+        "ObjectName": "ObjectProperty'TracerFireATFX_C:ParticleSystem'",
         "ObjectPath": "War/Content/Blueprints/TracerFireATFX.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'TracerFireATFX_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.3"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -49,15 +53,47 @@
     "Properties": {
       "MovementComp": {
         "ObjectName": "ProjectileMovementComponent'Default__TracerFireATFX_C:ProjectileComp'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.3"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.5"
       },
       "CollisionComp": {
         "ObjectName": "SphereComponent'Default__TracerFireATFX_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.8"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.11"
       },
       "RootComponent": {
         "ObjectName": "SphereComponent'Default__TracerFireATFX_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.8"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.11"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
+    "Outer": "TracerFireATFX_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleSystem_GEN_VARIABLE",
+    "Outer": "TracerFireATFX_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'WaterProjectileTrail'",
+        "ObjectPath": "War/Content/FX/WaterProjectileTrail.13"
+      },
+      "RelativeLocation": {
+        "X": -31.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "bVisible": false,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
       }
     }
   },
@@ -88,7 +124,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'TracerFireATFX_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.4"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.6"
       },
       "VariableGuid": "80D70E92-4980AF29-7903AC84-0DEE5D6F",
       "InternalVariableName": "DefaultSceneRoot"
@@ -106,12 +142,32 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'TracerFireATFX_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.9"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.12"
       },
       "ParentComponentOrVariableName": "SphereComp",
       "bIsParentComponentNative": true,
       "VariableGuid": "1CC32C2E-4CF94781-EB9729B6-384BD7AA",
       "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'ParticleSystemComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "ParticleSystemComponent'TracerFireATFX_C:ParticleSystem_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.4"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E608D3BB-43A38429-5517CB8F-5FE22684",
+      "InternalVariableName": "ParticleSystem"
     }
   },
   {
@@ -123,18 +179,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'TracerFireATFX_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/TracerFireATFX.6"
+          "ObjectPath": "War/Content/Blueprints/TracerFireATFX.8"
+        },
+        {
+          "ObjectName": "SCS_Node'TracerFireATFX_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/TracerFireATFX.9"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'TracerFireATFX_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/TracerFireATFX.6"
+          "ObjectPath": "War/Content/Blueprints/TracerFireATFX.8"
+        },
+        {
+          "ObjectName": "SCS_Node'TracerFireATFX_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/TracerFireATFX.9"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'TracerFireATFX_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.5"
+        "ObjectPath": "War/Content/Blueprints/TracerFireATFX.7"
       }
     }
   },
@@ -206,11 +270,17 @@
         "ObjectPath": "War/Content/FX/Mesh/TracerAT.2"
       },
       "OverrideMaterials": [
-        null,
-        null,
         {
           "ObjectName": "MaterialInstanceConstant'TracerFire2FX'",
           "ObjectPath": "War/Content/Materials/TracerFire2FX.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'TracerFireMechFX'",
+          "ObjectPath": "War/Content/Materials/TracerFireMechFX.0"
+        },
+        {
+          "ObjectName": "MaterialInstanceConstant'TracerFireMechFX'",
+          "ObjectPath": "War/Content/Materials/TracerFireMechFX.0"
         }
       ],
       "bGenerateOverlapEvents": false,
@@ -268,14 +338,19 @@
         },
         "MassInKgOverride": 0.0
       },
+      "RelativeLocation": {
+        "X": -19.999998,
+        "Y": 8.34465E-05,
+        "Z": 0.0
+      },
       "RelativeRotation": {
         "Pitch": 0.0,
         "Yaw": -90.00023,
         "Roll": 0.0
       },
       "RelativeScale3D": {
-        "X": 1.7278309,
-        "Y": 1.4960035,
+        "X": 2.6,
+        "Y": 1.6375608,
         "Z": 0.71297723
       },
       "bCanEverAffectNavigation": false
