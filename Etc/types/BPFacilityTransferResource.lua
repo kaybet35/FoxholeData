@@ -1,0 +1,56 @@
+---@meta
+
+---@class ABPFacilityTransferResource_C : AResourceTransferStation
+---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
+---@field BPLoadingAreaBox UBPLoadingAreaBox_C
+---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
+---@field Node42 UStaticMeshComponent
+---@field Node41 UStaticMeshComponent
+---@field Node40 UStaticMeshComponent
+---@field Node39 UStaticMeshComponent
+---@field Node38 UStaticMeshComponent
+---@field Node37 UStaticMeshComponent
+---@field Node36 UStaticMeshComponent
+---@field Node35 UStaticMeshComponent
+---@field Node34 UStaticMeshComponent
+---@field Node33 UStaticMeshComponent
+---@field Node32 UStaticMeshComponent
+---@field Node31 UStaticMeshComponent
+---@field Node30 UStaticMeshComponent
+---@field Node29 UStaticMeshComponent
+---@field Node28 UStaticMeshComponent
+---@field Node27 UStaticMeshComponent
+---@field Node26 UStaticMeshComponent
+---@field Node25 UStaticMeshComponent
+---@field Node24 UStaticMeshComponent
+---@field Node23 UStaticMeshComponent
+---@field Node22 UStaticMeshComponent
+---@field Node21 UStaticMeshComponent
+---@field Node20 UStaticMeshComponent
+---@field Node19 UStaticMeshComponent
+---@field Node18 UStaticMeshComponent
+---@field Node17 UStaticMeshComponent
+---@field Node16 UStaticMeshComponent
+---@field Node15 UStaticMeshComponent
+---@field Node14 UStaticMeshComponent
+---@field Node13 UStaticMeshComponent
+---@field Node12 UStaticMeshComponent
+---@field Node11 UStaticMeshComponent
+---@field Node10 UStaticMeshComponent
+---@field Node09 UStaticMeshComponent
+---@field Node08 UStaticMeshComponent
+---@field Node07 UStaticMeshComponent
+---@field Node06 UStaticMeshComponent
+---@field Node05 UStaticMeshComponent
+---@field Node04 UStaticMeshComponent
+---@field FoundationDecal UDecalComponent
+---@field FacilityResourceTransferStation UStaticMeshComponent
+---@field Node03 UStaticMeshComponent
+---@field Node02 UStaticMeshComponent
+---@field Node01 UStaticMeshComponent
+---@field Node00 UStaticMeshComponent
+---@field BPResourceGroupRenderComponent UBPResourceGroupRenderComponent_C
+ABPFacilityTransferResource_C = {}
+
+
+

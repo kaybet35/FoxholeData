@@ -1,0 +1,24 @@
+---@meta
+
+---@class UABP_MechWarden_C : USpiderMechAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_4AF667934B86F6CFC998F4A628F64324 FAnimNode_Root
+---@field AnimGraphNode_SequencePlayer_11A9F2E547F7D8EBBB2FA79CCD90130F FAnimNode_SequencePlayer
+---@field AnimGraphNode_LayeredBoneBlend_8112D34C4A7B47620D8A09A5037126D1 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_LayeredBoneBlend_931F111E4662E1453A5876AA3B9A0BED FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_F13DE3C24A78B4BE2EDB2889C4434579 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_3C63958C4B3E4886F6C6418A4458727F FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_351C15734CB12CB95665A38729DFCD6A FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_B61BBD01461570B1B1F477A7CEEB3340 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendListByBool_792D43714D458E8A13AB95AE1D0FBF3F FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_5E5B47D544764EBB0B7B3DB789550F5D FAnimNode_SequencePlayer
+UABP_MechWarden_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_MechWarden_C:AnimGraph(AnimGraph) end
+function UABP_MechWarden_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MechWarden_AnimGraphNode_SequencePlayer_11A9F2E547F7D8EBBB2FA79CCD90130F() end
+function UABP_MechWarden_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_MechWarden_AnimGraphNode_RotationOffsetBlendSpace_B61BBD01461570B1B1F477A7CEEB3340() end
+---@param EntryPoint int32
+function UABP_MechWarden_C:ExecuteUbergraph_ABP_MechWarden(EntryPoint) end
+
+

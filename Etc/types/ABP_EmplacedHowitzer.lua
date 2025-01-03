@@ -1,0 +1,30 @@
+---@meta
+
+---@class UABP_EmplacedHowitzer_C : UEmplacedWeaponAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_63C7018D4D78557535F12BA1A640BDF0 FAnimNode_Root
+---@field AnimGraphNode_BlendSpacePlayer_E4C113A542B016E05E5004A65D1BDF68 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_3A00884349443CEA49738B8F02AEDA78 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_LayeredBoneBlend_F3E31EB04DB7FD6EBFDFE2AF7C230188 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_ApplyAdditive_D03232314FC233477E8F019CF4B7A18C FAnimNode_ApplyAdditive
+---@field AnimGraphNode_TransitionResult_7DDAEEDC48F7DF6260A921BE42078851 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_456E6E8E4F19B11A18DC51A8966B1919 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_B6A3EE3B45E8948D1FB86EA9611F30D1 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_565DE87E4AD0F697C767938AC8BCB22A FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_7D7BAEDC4A71D1875C517EAEC202E526 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_CBDE496248A1A8347A09C89CE18638B4 FAnimNode_StateMachine
+---@field AnimGraphNode_TransitionResult_6435249F4FB489ECEC2D6DAE1A7E2DB1 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_4E75DD1549EC1BAD1A8BC392DB13E971 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_A223898949DD7F59F521C9847CD62A21 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_8D27232145B4CC2CD955AF8FB4905735 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_D06C988D40FE21AD4ABF96A9AE0A0574 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_1D8A256F44FD5DC293D04A9D17708DEA FAnimNode_StateMachine
+UABP_EmplacedHowitzer_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_EmplacedHowitzer_C:AnimGraph(AnimGraph) end
+function UABP_EmplacedHowitzer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_EmplacedHowitzer_AnimGraphNode_TransitionResult_7DDAEEDC48F7DF6260A921BE42078851() end
+---@param EntryPoint int32
+function UABP_EmplacedHowitzer_C:ExecuteUbergraph_ABP_EmplacedHowitzer(EntryPoint) end
+
+

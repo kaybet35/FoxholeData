@@ -1,0 +1,57 @@
+---@meta
+
+---@class ABPGarrisonBarn2_C : AGarrisonHouse
+---@field PropsCollison08 UBoxComponent
+---@field PropsCollison07 UBoxComponent
+---@field PropsCollison06 UBoxComponent
+---@field PropsCollison05 UBoxComponent
+---@field PropsCollison04 UBoxComponent
+---@field PropsCollison03 UBoxComponent
+---@field PropsCollison02 UBoxComponent
+---@field PropsCollison01 UBoxComponent
+---@field TrenchWoodPlank1 UStaticMeshComponent
+---@field AITurretMarker03 UDecalComponent
+---@field AITurretMarker02 UDecalComponent
+---@field AITurretMarker00 UDecalComponent
+---@field StaticMesh UStaticMeshComponent
+---@field StaticMesh19 UStaticMeshComponent
+---@field StaticMesh18 UStaticMeshComponent
+---@field StaticMesh17 UStaticMeshComponent
+---@field StaticMesh16 UStaticMeshComponent
+---@field StaticMesh15 UStaticMeshComponent
+---@field StaticMesh14 UStaticMeshComponent
+---@field StaticMesh13 UStaticMeshComponent
+---@field StaticMesh12 UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field StaticMesh10 UStaticMeshComponent
+---@field StaticMesh9 UStaticMeshComponent
+---@field StaticMesh8 UStaticMeshComponent
+---@field StaticMesh7 UStaticMeshComponent
+---@field StaticMesh6 UStaticMeshComponent
+---@field StaticMesh5 UStaticMeshComponent
+---@field StaticMesh4 UStaticMeshComponent
+---@field StaticMesh3 UStaticMeshComponent
+---@field StaticMesh2 UStaticMeshComponent
+---@field StaticMesh11 UStaticMeshComponent
+---@field StaticMeshProps UBoxComponent
+---@field BPStructureInteriorArea UBPStructureInteriorArea_C
+---@field window04 UStaticMeshComponent
+---@field window03 UStaticMeshComponent
+---@field window01 UStaticMeshComponent
+---@field BPAIGarrisonTurret3 UBPAIGarrisonTurret_C
+---@field BPAIGarrisonTurret2 UBPAIGarrisonTurret_C
+---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
+---@field NoBuildZone UBoxComponent
+---@field SpotLight5 USpotLightComponent
+---@field SpotLight4 USpotLightComponent
+---@field SpotLight3 USpotLightComponent
+---@field SpotLight1 USpotLightComponent
+---@field SpotLight USpotLightComponent
+---@field HouseMesh UStaticMeshComponent
+---@field MultiplexedRoof UMultiplexedStaticMeshComponent
+---@field MultiplexedHouse UMultiplexedStaticMeshComponent
+---@field Roof UStaticMeshComponent
+ABPGarrisonBarn2_C = {}
+
+
+

@@ -1,0 +1,30 @@
+---@meta
+
+---@class UABP_HeavyArtilleryC_C : UEmplacedWeaponAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_453069344B9024DCD49B6BA18F5BAD3F FAnimNode_Root
+---@field AnimGraphNode_BlendSpacePlayer_E155E44A47BD7EF821177F9640C8280A FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_LayeredBoneBlend_D693470243A714CC674E289A535CCEFA FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_TransitionResult_556FA1DF4FA1D85CAB4A17B4D649A1C4 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_AB40B22A4D88F1F3B6A59F8CD6E21F70 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_FACBB31744357CA2C9A023B57EF18197 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_C09850FC4C687F70711C50A6892DB154 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_FF2F30CE4D03D5F4F50338915DD3C34F FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_A9EA233145B109086391D6808A10807B FAnimNode_StateMachine
+---@field AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_2EB8C5E44753D3F6DBD173B20C78173D FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_E2919B324E748A6A22C96D8DAEC8354D FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_E1ED040549A03A8093E78997B538BC0B FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer_20841D194DBC2EDC885C8EA3C118EEBD FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_DE557BD545FED33BC4C3D7B4E4A6B7B0 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_AED157D7476EC512644CD088809A9CF9 FAnimNode_StateMachine
+---@field AnimGraphNode_RotationOffsetBlendSpace_2DDE83D246B2EBE215714A89F1E0001A FAnimNode_RotationOffsetBlendSpace
+UABP_HeavyArtilleryC_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_HeavyArtilleryC_C:AnimGraph(AnimGraph) end
+function UABP_HeavyArtilleryC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_HeavyArtilleryC_AnimGraphNode_TransitionResult_EE973AF8412549951FE25DA27CCFDCEC() end
+---@param EntryPoint int32
+function UABP_HeavyArtilleryC_C:ExecuteUbergraph_ABP_HeavyArtilleryC(EntryPoint) end
+
+

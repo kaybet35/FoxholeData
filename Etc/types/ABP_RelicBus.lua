@@ -1,0 +1,24 @@
+---@meta
+
+---@class UABP_RelicBus_C : USimVehicleAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_9738F4CF415CB1CBF7EC5FB77938A7A5 FAnimNode_Root
+---@field AnimGraphNode_LayeredBoneBlend_76C141A34EEDB9BA2B1593B5194EA2EA FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_SequencePlayer_1A129DC0487E91E468205EBF7F7E49E3 FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_C1FC3A0C4FEE30221741CDA8CF23872E FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_TransitionResult_EC8029C24F6D542A852F3A96408585CD FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_E56AB829476EC47D5AC652B0DE2A6427 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_37ABC53A4468B1DCC45912A6ECFAD49B FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_33CC778C47EDF3A37F6776BF1B880687 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_935AE37544C38C9A42B667B0E698A93F FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_F7837433429B53833331BE9F18A6D67B FAnimNode_StateMachine
+UABP_RelicBus_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_RelicBus_C:AnimGraph(AnimGraph) end
+function UABP_RelicBus_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicBus_AnimGraphNode_TransitionResult_EC8029C24F6D542A852F3A96408585CD() end
+function UABP_RelicBus_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_RelicBus_AnimGraphNode_TransitionResult_E56AB829476EC47D5AC652B0DE2A6427() end
+---@param EntryPoint int32
+function UABP_RelicBus_C:ExecuteUbergraph_ABP_RelicBus(EntryPoint) end
+
+

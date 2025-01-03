@@ -1,0 +1,62 @@
+---@meta
+
+---@class AVillageWLargeG1Destroyed_C : ADestroyedGarrisonHouse
+---@field RuinedMesh46 URuinedMeshComponent
+---@field RuinedMesh45 URuinedMeshComponent
+---@field RuinedMesh44 URuinedMeshComponent
+---@field RuinedMesh43 URuinedMeshComponent
+---@field RuinedMesh42 URuinedMeshComponent
+---@field RuinedMesh41 URuinedMeshComponent
+---@field RuinedMesh40 URuinedMeshComponent
+---@field RuinedMesh39 URuinedMeshComponent
+---@field RuinedMesh38 URuinedMeshComponent
+---@field RuinedMesh30 URuinedMeshComponent
+---@field RuinedMesh28 URuinedMeshComponent
+---@field RuinedMesh27 URuinedMeshComponent
+---@field RuinedMesh26 URuinedMeshComponent
+---@field RuinedMesh25 URuinedMeshComponent
+---@field RuinedMesh24 URuinedMeshComponent
+---@field RuinedMesh22 URuinedMeshComponent
+---@field RuinedMesh21 URuinedMeshComponent
+---@field RuinedMesh20 URuinedMeshComponent
+---@field RuinedMesh19 URuinedMeshComponent
+---@field RuinedMesh18 URuinedMeshComponent
+---@field RuinedMesh17 URuinedMeshComponent
+---@field RuinedMesh16 URuinedMeshComponent
+---@field RuinedMesh15 URuinedMeshComponent
+---@field RuinedMesh14 URuinedMeshComponent
+---@field RuinedMesh37 URuinedMeshComponent
+---@field RuinedMesh36 URuinedMeshComponent
+---@field RuinedMesh35 URuinedMeshComponent
+---@field RuinedMesh34 URuinedMeshComponent
+---@field RuinedMesh33 URuinedMeshComponent
+---@field RuinedMesh32 URuinedMeshComponent
+---@field RuinedMesh12 URuinedMeshComponent
+---@field RuinedMesh URuinedMeshComponent
+---@field RuinedMesh29 URuinedMeshComponent
+---@field RuinedMesh23 URuinedMeshComponent
+---@field RuinedMesh13 URuinedMeshComponent
+---@field RuinedMesh31 URuinedMeshComponent
+---@field StaticMeshCollision02 UBoxComponent
+---@field StaticMeshCollision01 UBoxComponent
+---@field StaticMesh2 UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field Rug09 UStaticMeshComponent
+---@field PhotoFrame1 UStaticMeshComponent
+---@field StaticMesh UStaticMeshComponent
+---@field Cabinet3 UStaticMeshComponent
+---@field CoverHalfBath1d UStaticMeshComponent
+---@field Decal4 UDecalComponent
+---@field Decal3 UDecalComponent
+---@field Decal2 UDecalComponent
+---@field Decal1 UDecalComponent
+---@field Decal UDecalComponent
+---@field BPStructureInteriorArea1 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea UBPStructureInteriorArea_C
+---@field WoodBarrel_01 UStaticMeshComponent
+---@field Roof UStaticMeshComponent
+---@field HouseMesh UStaticMeshComponent
+AVillageWLargeG1Destroyed_C = {}
+
+
+

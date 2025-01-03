@@ -1,0 +1,54 @@
+---@meta
+
+---@class AUniqueWWaterMillG1Destroyed_C : ADestroyedGarrisonHouse
+---@field RuinedMesh5 URuinedMeshComponent
+---@field RuinedMesh4 URuinedMeshComponent
+---@field RuinedMesh3 URuinedMeshComponent
+---@field RuinedMesh2 URuinedMeshComponent
+---@field RuinedMesh1 URuinedMeshComponent
+---@field RuinedMesh URuinedMeshComponent
+---@field Decal17 UDecalComponent
+---@field Decal16 UDecalComponent
+---@field Decal15 UDecalComponent
+---@field Decal9 UDecalComponent
+---@field Decal8 UDecalComponent
+---@field Decal7 UDecalComponent
+---@field WoodBarrel_01 UStaticMeshComponent
+---@field Decal5 UDecalComponent
+---@field Decal4 UDecalComponent
+---@field Decal3 UDecalComponent
+---@field Decal2 UDecalComponent
+---@field Decal1 UDecalComponent
+---@field Decal UDecalComponent
+---@field Decal6 UDecalComponent
+---@field BPStructureInteriorArea2 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea1 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea UBPStructureInteriorArea_C
+---@field Decal10 UDecalComponent
+---@field Ivy10 UStaticMeshComponent
+---@field Ivy11 UStaticMeshComponent
+---@field StaticMesh13 UStaticMeshComponent
+---@field StaticMesh14 UStaticMeshComponent
+---@field StaticMesh11 UStaticMeshComponent
+---@field StaticMesh10 UStaticMeshComponent
+---@field Ivy061 UStaticMeshComponent
+---@field StaticMesh12 UStaticMeshComponent
+---@field Ivy15 UStaticMeshComponent
+---@field StaticMesh5 UStaticMeshComponent
+---@field StaticMesh4 UStaticMeshComponent
+---@field StaticMesh3 UStaticMeshComponent
+---@field StaticMesh6 UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field Ivy06 UStaticMeshComponent
+---@field Ivy14Corner1 UStaticMeshComponent
+---@field StaticMesh UStaticMeshComponent
+---@field StaticMesh2 UStaticMeshComponent
+---@field Decal14 UDecalComponent
+---@field Decal13 UDecalComponent
+---@field Decal12 UDecalComponent
+---@field Roof UStaticMeshComponent
+---@field HouseMesh UStaticMeshComponent
+AUniqueWWaterMillG1Destroyed_C = {}
+
+
+

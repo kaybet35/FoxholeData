@@ -1,0 +1,21 @@
+---@meta
+
+---@class UABP_PrototypeTruckCol_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_E42BBE0A400F12CD38451C9FBA296F52 FAnimNode_Root
+---@field AnimGraphNode_SequencePlayer_0C3DDB3B46D5A49AEDD83FB04CDC44CA FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_F8617C61434ED1E5A90EC9A25BDA820B FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendSpacePlayer_73AA42B5412AB768FFCF92A07009029C FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_F3C89D5A4C88CC55FA54BC98F08C9DB7 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendSpacePlayer_401E0F2A439BA45EB481D79B50CF54C0 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_LayeredBoneBlend_88CCCB16444B62DADD5548AE037BE469 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_SequencePlayer_5A05C33F4F5CA9274DF9E896CE81DEDD FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_8C056DA344988443F05581B1B7C44806 FAnimNode_BlendListByBool
+UABP_PrototypeTruckCol_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_PrototypeTruckCol_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_PrototypeTruckCol_C:ExecuteUbergraph_ABP_PrototypeTruckCol(EntryPoint) end
+
+

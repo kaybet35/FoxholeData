@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BPFacilityOil2Component_HPP
+#define UE4SS_SDK_BPFacilityOil2Component_HPP
+
+class UBPFacilityOil2Component_C : public UFuelItemComponent
+{
+}; // Size: 0x8F8
+
+#endif

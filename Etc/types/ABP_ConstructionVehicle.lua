@@ -1,0 +1,26 @@
+---@meta
+
+---@class UABP_ConstructionVehicle_C : UConstructionVehicleAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_55FF20954D2E7F4D01B62E8E4435EE61 FAnimNode_Root
+---@field AnimGraphNode_SequencePlayer_479C53C145A776E473860E83299E3D94 FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_D102ED70458266A6006CA5945F8CB3CD FAnimNode_SequencePlayer
+---@field AnimGraphNode_LayeredBoneBlend_01C32CBC4BD9E05FEEBDA09B8CC0E38E FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_TransitionResult_5C8E1B14449BED91C0473EAA6301B2C8 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_5E80AE6C4F7F9AADCC7881B1CC43F673 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_4D149B90485D5F19516A23B1D184E53F FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_3FF70D52477CD98C1FBD57ABA304DF32 FAnimNode_StateResult
+---@field AnimGraphNode_BlendSpacePlayer_6DDE9F484AC78C700005068E8F05643E FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_StateResult_E9CCD87448AF5083A06318B5F5C30933 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_7FF28EDE495271C6A3F31994E4995077 FAnimNode_StateMachine
+---@field AnimGraphNode_RotationOffsetBlendSpace_B18F18234A495F82B86B4298BA7F1D68 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendListByBool_895BDA984428A5CC8844D3A6F2CF016F FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_BCEF608F44F6E8CD7C755D838868CB24 FAnimNode_SequencePlayer
+UABP_ConstructionVehicle_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_ConstructionVehicle_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_ConstructionVehicle_C:ExecuteUbergraph_ABP_ConstructionVehicle(EntryPoint) end
+
+

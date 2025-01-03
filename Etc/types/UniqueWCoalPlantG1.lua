@@ -1,0 +1,59 @@
+---@meta
+
+---@class AUniqueWCoalPlantG1_C : AGarrisonHouse
+---@field BPBicycleSpawnLocationComponent UBPBicycleSpawnLocationComponent_C
+---@field AITurretMarker03 UDecalComponent
+---@field AITurretMarker02 UDecalComponent
+---@field AITurretMarker01 UDecalComponent
+---@field AITurretMarker00 UDecalComponent
+---@field TownRubbleWall01 UStaticMeshComponent
+---@field StaticMesh6 UStaticMeshComponent
+---@field TownRubbleStraight01 UStaticMeshComponent
+---@field StaticMesh5 UStaticMeshComponent
+---@field MachineryVarious01 UStaticMeshComponent
+---@field StaticMesh7 UStaticMeshComponent
+---@field Decal8 UDecalComponent
+---@field Decal7 UDecalComponent
+---@field Decal6 UDecalComponent
+---@field Decal5 UDecalComponent
+---@field StaticMesh3 UStaticMeshComponent
+---@field Decal9 UDecalComponent
+---@field Table04 UStaticMeshComponent
+---@field StaticMesh2 UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field TownRubbleFloor02 UStaticMeshComponent
+---@field Decal4 UDecalComponent
+---@field Decal UDecalComponent
+---@field TownRubbleCornerIn01 UStaticMeshComponent
+---@field StaticMesh UStaticMeshComponent
+---@field StaticMesh4 UStaticMeshComponent
+---@field RubbleDecal UDecalComponent
+---@field Decal3 UDecalComponent
+---@field Decal2 UDecalComponent
+---@field Decal1 UDecalComponent
+---@field StaticMesh12 UStaticMeshComponent
+---@field StaticMesh17 UStaticMeshComponent
+---@field StaticMesh20 UStaticMeshComponent
+---@field StaticMesh11 UStaticMeshComponent
+---@field StaticMeshProps UBoxComponent
+---@field window04 UStaticMeshComponent
+---@field BPAIGarrisonTurret3 UBPAIGarrisonTurret_C
+---@field window03 UStaticMeshComponent
+---@field window02 UStaticMeshComponent
+---@field window01 UStaticMeshComponent
+---@field BPAIGarrisonTurret2 UBPAIGarrisonTurret_C
+---@field BPAIGarrisonTurret1 UBPAIGarrisonTurret_C
+---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
+---@field BPStructureInteriorArea UBPStructureInteriorArea_C
+---@field ParticleSystem6 UParticleSystemComponent
+---@field ParticleSystem5 UParticleSystemComponent
+---@field ParticleSystem3 UParticleSystemComponent
+---@field ParticleSystem1 UParticleSystemComponent
+---@field MultiplexedRoof UMultiplexedStaticMeshComponent
+---@field MultiplexedHouse UMultiplexedStaticMeshComponent
+---@field Roof UStaticMeshComponent
+---@field HouseMesh UStaticMeshComponent
+AUniqueWCoalPlantG1_C = {}
+
+
+

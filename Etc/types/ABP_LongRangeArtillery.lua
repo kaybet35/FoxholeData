@@ -1,0 +1,29 @@
+---@meta
+
+---@class UABP_LongRangeArtillery_C : UStaticArtilleryAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_2940262941992FDFA3E425846AA44E54 FAnimNode_Root
+---@field AnimGraphNode_BlendSpacePlayer_2619846B431BD0E77AC1DA862FEAEAE0 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_7ABF2AA746EF7D4E976C4598147F6CDD FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_TransitionResult_67B0C5F6430CFDB3B55814A7D0DAD565 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_A399A43A4A707459A72A9B85CC407E06 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_BD7548DA4F81CC659515D5BB7DC6A837 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_65E378694B874D76AD2D5F9B41FCDAC2 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_92A0B2AC4D29347DF4E2B98B1A08C780 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_CD2CFFC84476E1AAC1F486A67592B4D4 FAnimNode_StateMachine
+---@field AnimGraphNode_LayeredBoneBlend_FE08547742D5CA689C3AA79CA9855039 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_TransitionResult_D5705FB24A3805C21DA592BACF8FDE76 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_2A2F49B64F88D28182D7E19758E6DBCF FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_C1C394AE4DE8E5031EFA28A7A74FA25F FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_5C72A4F345C089D87A301A990975A566 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_ED5444E140F31C96EB5514BECB9D28B0 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_CE4AF7304CE22E6353795B9D36AABD2E FAnimNode_StateMachine
+UABP_LongRangeArtillery_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_LongRangeArtillery_C:AnimGraph(AnimGraph) end
+function UABP_LongRangeArtillery_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_LongRangeArtillery_AnimGraphNode_TransitionResult_67B0C5F6430CFDB3B55814A7D0DAD565() end
+---@param EntryPoint int32
+function UABP_LongRangeArtillery_C:ExecuteUbergraph_ABP_LongRangeArtillery(EntryPoint) end
+
+

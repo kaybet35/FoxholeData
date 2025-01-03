@@ -1,0 +1,21 @@
+---@meta
+
+---@class UABP_PrototypeScoutVehicleWar_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_4A8216FD42F9BC1DE96235B21B4BF8C4 FAnimNode_Root
+---@field AnimGraphNode_LayeredBoneBlend_B3F0823C4CE57E05DA140D84B432D408 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_4D141A764F721F63859072A9F4B07DF5 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_9BC15D6E471FBF80B059FEA051E1A79D FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_RotationOffsetBlendSpace_1E45B20140935521C9147CBCA83A2370 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_SequencePlayer_5B16527041B39FEB0E94E090C6E5924C FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendSpacePlayer_B41A47D74669E14799B6A98FE3B2BF83 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendListByBool_3AF95B294F50427D851A0CB435007C92 FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_49B953A2410101C9ED13FD94CA70D15A FAnimNode_SequencePlayer
+UABP_PrototypeScoutVehicleWar_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_PrototypeScoutVehicleWar_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_PrototypeScoutVehicleWar_C:ExecuteUbergraph_ABP_PrototypeScoutVehicleWar(EntryPoint) end
+
+

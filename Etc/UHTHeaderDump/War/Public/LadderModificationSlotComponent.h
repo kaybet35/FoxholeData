@@ -1,0 +1,22 @@
+#pragma once
+#include "CoreMinimal.h"
+#include "ModificationSlotComponent.h"
+#include "Templates/SubclassOf.h"
+#include "LadderModificationSlotComponent.generated.h"
+
+class ALadder;
+
+UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
+class WAR_API ULadderModificationSlotComponent : public UModificationSlotComponent {
+    GENERATED_BODY()
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ALadder> LadderType;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    ALadder* Ladder;
+    
+    ULadderModificationSlotComponent(const FObjectInitializer& ObjectInitializer);
+
+};
+

@@ -1,0 +1,23 @@
+---@meta
+
+---@class UABP_EmplacedIndirectC_C : UEmplacedWeaponAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_3FB6CF8A48DE169CACADC79F07CA1384 FAnimNode_Root
+---@field AnimGraphNode_LayeredBoneBlend_86F20E5C49711FEAA38A0A91E0307CCF FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_704DD34E47B4AF237C9E458962DCA77C FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_B416A5AA467255DF05B63AAED092C40B FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_TransitionResult_08504D17491EC4D8BF6170B20C1FF167 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_41D25B0D4E14E501B8A0CAA8A9DE321A FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_10EFA39049AE7FF71C2198947AF96259 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_1D8B18F04F8E4A182D718A98B08B67F9 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_6757259942549ECD5E7BD7AF623EF1DB FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_C6113066481064FF58DFB09A3200595C FAnimNode_StateMachine
+---@field EmplacedIndirectC float
+UABP_EmplacedIndirectC_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_EmplacedIndirectC_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_EmplacedIndirectC_C:ExecuteUbergraph_ABP_EmplacedIndirectC(EntryPoint) end
+
+

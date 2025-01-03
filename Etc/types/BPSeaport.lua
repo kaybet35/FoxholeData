@@ -1,0 +1,71 @@
+---@meta
+
+---@class ABPSeaport_C : ASeaport
+---@field BPLoadingAreaBoxWater1 UBPLoadingAreaBox_C
+---@field BPLoadingAreaBoxWater0 UBPLoadingAreaBox_C
+---@field BPLoadingAreaBoxLand1 UBPLoadingAreaBox_C
+---@field BPLoadingAreaBoxLand0 UBPLoadingAreaBox_C
+---@field Audio UAudioComponent
+---@field TemperatureModifierBox UTemperatureModifierBoxComponent
+---@field SpotLight USpotLightComponent
+---@field Cylinder1 UStaticMeshComponent
+---@field Cylinder UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field Searchlight UStaticMeshComponent
+---@field BPSeaportAITurret2 UBPSeaportAITurret_C
+---@field BPSeaportAITurret UBPSeaportAITurret_C
+---@field BPSeaportAITurret1 UBPSeaportAITurret_C
+---@field TransferAreaMesh2 UStaticMeshComponent
+---@field TransferAreaMesh1 UStaticMeshComponent
+---@field Box21 UStaticMeshComponent
+---@field Box20 UStaticMeshComponent
+---@field Box19 UStaticMeshComponent
+---@field Box16 UStaticMeshComponent
+---@field Box15 UStaticMeshComponent
+---@field Box14 UStaticMeshComponent
+---@field Box13 UStaticMeshComponent
+---@field Box12 UStaticMeshComponent
+---@field Box11 UStaticMeshComponent
+---@field Box10 UStaticMeshComponent
+---@field Box8 UStaticMeshComponent
+---@field Box7 UStaticMeshComponent
+---@field Box6 UStaticMeshComponent
+---@field Box5 UStaticMeshComponent
+---@field Box4 UStaticMeshComponent
+---@field Box3 UStaticMeshComponent
+---@field Box2 UStaticMeshComponent
+---@field Box1 UStaticMeshComponent
+---@field Box UStaticMeshComponent
+---@field FishermanNetHanging030 UStaticMeshComponent
+---@field FishermanNetHanging029 UStaticMeshComponent
+---@field FishermanNetHanging028 UStaticMeshComponent
+---@field FishermanNetHanging027 UStaticMeshComponent
+---@field FishermanNetHanging026 UStaticMeshComponent
+---@field FishermanNetHanging025 UStaticMeshComponent
+---@field FishermanNetHanging024 UStaticMeshComponent
+---@field FishermanNetHanging023 UStaticMeshComponent
+---@field FishermanNetHanging022 UStaticMeshComponent
+---@field FishermanNetHanging021 UStaticMeshComponent
+---@field FishermanNetHanging020 UStaticMeshComponent
+---@field FishermanNetHanging019 UStaticMeshComponent
+---@field FishermanNetHanging018 UStaticMeshComponent
+---@field FishermanNetHanging017 UStaticMeshComponent
+---@field FishermanNetHanging016 UStaticMeshComponent
+---@field FishermanNetHanging013 UStaticMeshComponent
+---@field FishermanNetHanging011 UStaticMeshComponent
+---@field FishermanNetHanging015 UStaticMeshComponent
+---@field FishermanNetHanging014 UStaticMeshComponent
+---@field FishermanNetHanging04 UStaticMeshComponent
+---@field FishermanNetHanging010 UStaticMeshComponent
+---@field FishermanNetHanging09 UStaticMeshComponent
+---@field FishermanNetHanging07 UStaticMeshComponent
+---@field FishermanNetHanging06 UStaticMeshComponent
+---@field FishermanNetHanging05 UStaticMeshComponent
+---@field FishermanNetHanging012 UStaticMeshComponent
+---@field SeaportSideway UStaticMeshComponent
+---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
+---@field Seaport UStaticMeshComponent
+ABPSeaport_C = {}
+
+
+

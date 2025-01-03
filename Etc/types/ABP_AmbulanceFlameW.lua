@@ -1,0 +1,26 @@
+---@meta
+
+---@class UABP_AmbulanceFlameW_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_FE97B32C4842AB47380F3D8E13E63913 FAnimNode_Root
+---@field AnimGraphNode_BlendSpacePlayer_6B4CECAD423B05E7B530E6AF370BDADB FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_707724254CB6CF0FDA9821A30A55B86F FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_LayeredBoneBlend_8DD944F243035311EA640D9C04F9BE33 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_SequencePlayer_3FECA0D04F64825D9D1C8ABF626546DA FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_D38F3E344B3615BA521BF580A006C081 FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_7F0DF13B4A17D654B2A37D80E688D2A3 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_TransitionResult_647E1865427D94A128817AAF9B597114 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_A2DE153C4709505296D846B50D5AFC86 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_365C8B07495E97928B95CFAEFF9CDF2C FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_4AEAD9884EE7387A59A6D19FF6FD084D FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_75E42CE647C248ACD026439D8348A736 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_40209A28440DA3591B60A68AED29A1C7 FAnimNode_StateMachine
+UABP_AmbulanceFlameW_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_AmbulanceFlameW_C:AnimGraph(AnimGraph) end
+function UABP_AmbulanceFlameW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_AmbulanceFlameW_AnimGraphNode_TransitionResult_647E1865427D94A128817AAF9B597114() end
+---@param EntryPoint int32
+function UABP_AmbulanceFlameW_C:ExecuteUbergraph_ABP_AmbulanceFlameW(EntryPoint) end
+
+

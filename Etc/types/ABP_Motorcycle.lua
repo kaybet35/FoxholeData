@@ -1,0 +1,20 @@
+---@meta
+
+---@class UABP_Motorcycle_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_E8C680E442F1A07CF8331AB9E4758E4C FAnimNode_Root
+---@field AnimGraphNode_SequencePlayer_992B2AFD4EA22F359FFCC1AE4196F04D FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_96B4A81449CB5371A85DD29817A22536 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_RotationOffsetBlendSpace_51EAE36443B975E35E79008D1B406ECC FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendSpacePlayer_75764F4F4C1D0AE2CEE1C9A5DB0C2EB2 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_LayeredBoneBlend_721EDF93462D25CBD4B585A015A63989 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_SequencePlayer_824C4AE041A1B780C1A9FB97B2CD2C73 FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_9FF7A19F447EE0C3BBDB6C980395B287 FAnimNode_BlendListByBool
+UABP_Motorcycle_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_Motorcycle_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_Motorcycle_C:ExecuteUbergraph_ABP_Motorcycle(EntryPoint) end
+
+

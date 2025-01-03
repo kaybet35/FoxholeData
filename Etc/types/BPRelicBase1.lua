@@ -1,0 +1,68 @@
+---@meta
+
+---@class ABPRelicBase1_C : ABPRelicBase_C
+---@field SpawnPoint7 USpawnPointComponent
+---@field SpawnPoint6 USpawnPointComponent
+---@field SpawnPoint5 USpawnPointComponent
+---@field SpawnPoint4 USpawnPointComponent
+---@field SpawnPoint3 USpawnPointComponent
+---@field SpawnPoint USpawnPointComponent
+---@field Decal1 UDecalComponent
+---@field MultiplexedStaticMeshGun UMultiplexedStaticMeshComponent
+---@field MultiplexedStaticMeshRoof UMultiplexedStaticMeshComponent
+---@field PointLight2 UPointLightComponent
+---@field PointLight3 UPointLightComponent
+---@field PointLight4 UPointLightComponent
+---@field PointLight5 UPointLightComponent
+---@field PointLight1 UPointLightComponent
+---@field PointLight UPointLightComponent
+---@field Decal9 UDecalComponent
+---@field StaticMesh10 UStaticMeshComponent
+---@field StaticMesh9 UStaticMeshComponent
+---@field StaticMesh8 UStaticMeshComponent
+---@field StaticMesh7 UStaticMeshComponent
+---@field StaticMesh6 UStaticMeshComponent
+---@field StaticMesh5 UStaticMeshComponent
+---@field Decal7 UDecalComponent
+---@field Decal8 UDecalComponent
+---@field InteriorDrip UParticleSystemComponent
+---@field ParticleSystem UParticleSystemComponent
+---@field HangingWires07 UStaticMeshComponent
+---@field ParticleSystem2 UParticleSystemComponent
+---@field ParticleSystem1 UParticleSystemComponent
+---@field HangingWires08 UStaticMeshComponent
+---@field Decal6 UDecalComponent
+---@field Decal5 UDecalComponent
+---@field Decal4 UDecalComponent
+---@field Decal3 UDecalComponent
+---@field Radio UStaticMeshComponent
+---@field Chair_02 UStaticMeshComponent
+---@field RelicSandBagWall01 UStaticMeshComponent
+---@field StaticMesh4 UStaticMeshComponent
+---@field Crates UChildActorComponent
+---@field StaticMesh3 UStaticMeshComponent
+---@field StaticMesh2 UStaticMeshComponent
+---@field StaticMesh1 UStaticMeshComponent
+---@field StaticMesh_0 UStaticMeshComponent
+---@field RelicComputerStation01 UStaticMeshComponent
+---@field Decal2 UDecalComponent
+---@field Decal UDecalComponent
+---@field BPRelicAIGarrisonTurret2 UBPRelicAIGarrisonTurret_C
+---@field BPRelicAIGarrisonTurret1 UBPRelicAIGarrisonTurret_C
+---@field BPRelicAIGarrisonTurret UBPRelicAIGarrisonTurret_C
+---@field Stairs UStaticMeshComponent
+---@field Stairs1 UStaticMeshComponent
+---@field Stairs3 UStaticMeshComponent
+---@field Stairs2 UStaticMeshComponent
+---@field TurretMesh UStaticMeshComponent
+---@field TurretMesh2 UStaticMeshComponent
+---@field TurretMesh1 UStaticMeshComponent
+---@field BPStructureInteriorArea2 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea1 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea UBPStructureInteriorArea_C
+---@field RoofMesh UStaticMeshComponent
+---@field RelicBaseMesh UStaticMeshComponent
+ABPRelicBase1_C = {}
+
+
+

@@ -1,0 +1,8 @@
+#ifndef UE4SS_SDK_BPLargeShipBattleshipWHeavyArtilleryAftGunnerComponent_HPP
+#define UE4SS_SDK_BPLargeShipBattleshipWHeavyArtilleryAftGunnerComponent_HPP
+
+class UBPLargeShipBattleshipWHeavyArtilleryAftGunnerComponent_C : public UArtilleryGunnerMountComponent
+{
+}; // Size: 0x908
+
+#endif

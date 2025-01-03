@@ -1,0 +1,66 @@
+---@meta
+
+---@class ABPFacilityVehicleFactory3_C : AAssemblyStation
+---@field LadderComponent2 ULadderComponent
+---@field LadderMesh2 UStaticMeshComponent
+---@field LadderComponent1 ULadderComponent
+---@field LadderMesh1 UStaticMeshComponent
+---@field BPIceBlockerBoxComponent1 UBPIceBlockerBoxComponent_C
+---@field BPIceBlockerBoxComponent UBPIceBlockerBoxComponent_C
+---@field GeneralAnimationSFX UWarAudioComponent
+---@field GateStopSFX UWarAudioComponent
+---@field TealPaintLine3 UDecalComponent
+---@field TealPaintLine2 UDecalComponent
+---@field TealPaintLine1 UDecalComponent
+---@field TealPaintLine UDecalComponent
+---@field WarAudio1 UWarAudioComponent
+---@field WarAudio UWarAudioComponent
+---@field ParticleSystem1 UParticleSystemComponent
+---@field ParticleSystem UParticleSystemComponent
+---@field GateMovingSFX UWarAudioComponent
+---@field WaterLowerSFX UWarAudioComponent
+---@field WaterRaiseSFX UWarAudioComponent
+---@field DrydockBuildArmProps01 UStaticMeshComponent
+---@field DrydockBuildArmProps02 UStaticMeshComponent
+---@field WaterRaiseVFX3 UParticleSystemComponent
+---@field WaterRaiseVFX2 UParticleSystemComponent
+---@field WaterRaiseVFX1 UParticleSystemComponent
+---@field WaterRaiseVFX0 UParticleSystemComponent
+---@field WaterLowerVFX3 UParticleSystemComponent
+---@field WaterLowerVFX2 UParticleSystemComponent
+---@field WaterLowerVFX1 UParticleSystemComponent
+---@field WaterLowerVFX0 UParticleSystemComponent
+---@field WaterMesh UStaticMeshComponent
+---@field Rope02 UStaticMeshComponent
+---@field Rope01 UStaticMeshComponent
+---@field WoodenCrateBottom05 UStaticMeshComponent
+---@field WoodenCrateBottom02 UStaticMeshComponent
+---@field WarTableMap UStaticMeshComponent
+---@field WoodenCrateBottom04 UStaticMeshComponent
+---@field WoodenCrateBottom03 UStaticMeshComponent
+---@field FVFBoxWithTools UStaticMeshComponent
+---@field BPBuildFootprintBoxComponent5 UBPBuildFootprintBoxComponent_C
+---@field BPBuildFootprintBoxComponent4 UBPBuildFootprintBoxComponent_C
+---@field BPFacilityVehicleFactory3Arm1 UBPFacilityVehicleFactory3Arm_C
+---@field BPFacilityVehicleFactory3Arm UBPFacilityVehicleFactory3Arm_C
+---@field BoatHull UBoatHullComponent
+---@field DoorBox5 UBoxComponent
+---@field DoorBox4 UBoxComponent
+---@field DoorBox3 UBoxComponent
+---@field BPBuildFootprintBoxComponent3 UBPBuildFootprintBoxComponent_C
+---@field BPBuildFootprintBoxComponent2 UBPBuildFootprintBoxComponent_C
+---@field BPBuildFootprintBoxComponent1 UBPBuildFootprintBoxComponent_C
+---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
+---@field DoorBox2 UBoxComponent
+---@field BPLoadingAreaBox1 UBPLoadingAreaBox_C
+---@field BPLoadingAreaBox UBPLoadingAreaBox_C
+---@field MainMesh USkeletalMeshComponent
+---@field DoorBox1 UBoxComponent
+---@field DoorBox0 UBoxComponent
+---@field BPWaterStencilComponent UBPWaterStencilComponent_C
+---@field AssemblyArea UAssemblyAreaComponent
+---@field PowerLineConnector UStaticMeshComponent
+ABPFacilityVehicleFactory3_C = {}
+
+
+

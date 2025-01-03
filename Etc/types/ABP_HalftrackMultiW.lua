@@ -1,0 +1,30 @@
+---@meta
+
+---@class UABP_HalftrackMultiW_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_EBA27E65490C3D4604E214A350DA253D FAnimNode_Root
+---@field AnimGraphNode_LayeredBoneBlend_69E9E517434C0515E80889B603DF17BE FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_00C075FD483480F129F6B2BFCB8944DD FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_6269C11145F747566FF040BE50032D80 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendListByBool_B8F3B4554FFAF9EC4681F79B501518E0 FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_82EB9C6043345C49ADB4628C2D3C5B27 FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_796430DB4568695320DA2CAB036B97F7 FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_0776DCA54C2EC622F4F2E5938AA74333 FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_029E29CD454A3ECB627592B3F30337FA FAnimNode_SequencePlayer
+---@field AnimGraphNode_LayeredBoneBlend_D79F6B2F4BCF64277438E9AD5801A1D9 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_SequencePlayer_14EE95C443D15282D5528ABF82F6B767 FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_D7D6CD824A1AF4D06C48EDACDAA512C6 FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_9B7D4A57441A8927124646B502F2CC85 FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_9EA1635D4CE4A60F78209BBFD1B0A5E4 FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_79F8227C457A060D11E043A187931854 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_RotationOffsetBlendSpace_A2D7DFB1464F113ED1905CAF6D55D98A FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_SequencePlayer_F7588CA04EAE0A86541EEFBD6A1E1321 FAnimNode_SequencePlayer
+---@field AnimGraphNode_ApplyAdditive_ED7482A94B2C4976DFAB57B7967007EA FAnimNode_ApplyAdditive
+UABP_HalftrackMultiW_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_HalftrackMultiW_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_HalftrackMultiW_C:ExecuteUbergraph_ABP_HalftrackMultiW(EntryPoint) end
+
+

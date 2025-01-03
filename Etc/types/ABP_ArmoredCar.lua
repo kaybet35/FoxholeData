@@ -1,0 +1,20 @@
+---@meta
+
+---@class UABP_ArmoredCar_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_3B64C1EC48607C431CE963B40DE61D5B FAnimNode_Root
+---@field AnimGraphNode_SequencePlayer_DFB636B8421FB0D3EA7145B340C3D429 FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_F52AFE044934EB526AD94C9C8D8C3C83 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_RotationOffsetBlendSpace_EAB0C6B94AB81FE01A5934904FCAD25C FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_RotationOffsetBlendSpace_A0903B6A43C4715631F691AB3DC9ADEE FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendListByBool_A1EBE9C14379E1D4118862B554BE47DA FAnimNode_BlendListByBool
+---@field AnimGraphNode_SequencePlayer_BDFE916C4BFD6891484BB583A4AF6176 FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_61C451BB48160AFA4974F39B9CE78602 FAnimNode_RotationOffsetBlendSpace
+UABP_ArmoredCar_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_ArmoredCar_C:AnimGraph(AnimGraph) end
+---@param EntryPoint int32
+function UABP_ArmoredCar_C:ExecuteUbergraph_ABP_ArmoredCar(EntryPoint) end
+
+

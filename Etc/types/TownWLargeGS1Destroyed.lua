@@ -1,0 +1,11 @@
+---@meta
+
+---@class ATownWLargeGS1Destroyed_C : ADestroyedGarrisonStation
+---@field BPStructureInteriorArea1 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea UBPStructureInteriorArea_C
+---@field RoofMesh UStaticMeshComponent
+---@field HouseMesh UStaticMeshComponent
+ATownWLargeGS1Destroyed_C = {}
+
+
+

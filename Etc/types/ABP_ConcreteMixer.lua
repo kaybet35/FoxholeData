@@ -1,0 +1,23 @@
+---@meta
+
+---@class UABP_ConcreteMixer_C : UFacilityRefineryAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_49956EDF4CF68AC6841AAC80ED187CB9 FAnimNode_Root
+---@field AnimGraphNode_TransitionResult_5BB0231840BA64B9EE3DFF84A1F66713 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_990417D84BBB1CC2BE7AD2B793BE5DA7 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_C830C5B149245A788C6EC9941EC66B14 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_C3C1A7B64AAD3188B71F2FA05766321B FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_A0CC9656444074F2DD1ED88083AF7FEA FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer_1CB3B69741570C2693F500B266D9E784 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_1E11F8D545354C4600FC49A96592FCE2 FAnimNode_StateResult
+---@field AnimGraphNode_StateResult_F51EF88A4ACD58BE4DBE9B803E2C69A9 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_2410090F4D8048BD945D5996BD67F625 FAnimNode_StateMachine
+UABP_ConcreteMixer_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_ConcreteMixer_C:AnimGraph(AnimGraph) end
+function UABP_ConcreteMixer_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ConcreteMixer_AnimGraphNode_TransitionResult_5BB0231840BA64B9EE3DFF84A1F66713() end
+---@param EntryPoint int32
+function UABP_ConcreteMixer_C:ExecuteUbergraph_ABP_ConcreteMixer(EntryPoint) end
+
+

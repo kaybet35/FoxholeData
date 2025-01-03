@@ -1,0 +1,26 @@
+---@meta
+
+---@class UABP_ArmoredCarOffensiveW_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A FAnimNode_Root
+---@field AnimGraphNode_LayeredBoneBlend_5C1D4C7C408740D0A9171995D6EC704F FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_002F77A84BA84212F68D2995F5CDBCCE FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_987AA41043520A24C586399ADCD2E979 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_SequencePlayer_D5099E2A4B1BC394F1F22EA2CC0B3845 FAnimNode_SequencePlayer
+---@field AnimGraphNode_RotationOffsetBlendSpace_7A7D6A6A461A0996320E95BB5F151B6A FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_SequencePlayer_017B02E54EDAE7861EC379B18C1FF22D FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_157089624761BFC723A5DD861089E740 FAnimNode_BlendListByBool
+---@field AnimGraphNode_LayeredBoneBlend_59DB113940BFA9983B710EAE8E65A965 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_RotationOffsetBlendSpace_5CDF01174D34F2A9B94DCDA184053FB3 FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendSpacePlayer_08BD0713456E19F2EAF510BB5CF8C39B FAnimNode_BlendSpacePlayer
+---@field TurretElevation float
+UABP_ArmoredCarOffensiveW_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_ArmoredCarOffensiveW_C:AnimGraph(AnimGraph) end
+function UABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0() end
+---@param EntryPoint int32
+function UABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW(EntryPoint) end
+
+
