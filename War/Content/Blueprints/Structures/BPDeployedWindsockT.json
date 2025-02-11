@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "Pole",
+    "Name": "BannerSandBags",
     "Outer": "BPDeployedWindsockT_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDeployedWindsockT_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.10"
       }
     },
     "SuperStruct": {
@@ -26,8 +26,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPDeployedWindsockT_C:Pole'",
+        "ObjectName": "ObjectProperty'BPDeployedWindsockT_C:BannerSandBags'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDeployedWindsockT_C:Pole'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.5"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -49,15 +53,15 @@
     "Properties": {
       "PayloadMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedWindsockT_C:PayloadMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.12"
       },
       "TripodMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedWindsockT_C:TripodMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.13"
       },
       "GunMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedWindsockT_C:GunMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.11"
       },
       "bIsBuiltOnLandscape": false,
       "BuildGhostClass": {
@@ -100,8 +104,8 @@
         "ObjectName": "SoundCue'StructureExplosionSmall_Cue'",
         "ObjectPath": "War/Content/Audio/SFX/StructureExplosionSmall_Cue.0"
       },
-      "MaxHealth": 750,
-      "Health": 750,
+      "MaxHealth": 1200,
+      "Health": 1200,
       "DropLocationOffset": {
         "X": 0.0,
         "Y": 0.0,
@@ -112,7 +116,7 @@
       "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPDeployedWindsockT_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.16"
       },
       "NetCullDistanceSquared": 25000000.0,
       "MinNetUpdateFrequency": 1.0,
@@ -151,6 +155,17 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "Pole",
+    "Outer": "BPDeployedWindsockT_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPDeployedWindsockT_C",
@@ -168,10 +183,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDeployedWindsockT_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.5"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.6"
       },
       "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDeployedWindsockT_C:BannerSandBags_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.14"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "62270944-40A850FD-215A7C9F-A4A926A4",
+      "InternalVariableName": "BannerSandBags"
     }
   },
   {
@@ -186,7 +221,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDeployedWindsockT_C:Pole_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.15"
       },
       "ParentComponentOrVariableName": "TripodMesh",
       "bIsParentComponentNative": true,
@@ -203,18 +238,26 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockT_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.7"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedWindsockT_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.8"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockT_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.7"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedWindsockT_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.8"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDeployedWindsockT_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.7"
       }
     }
   },
@@ -235,7 +278,7 @@
       "bReceivesDecals": false,
       "AttachParent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedWindsockT_C:TripodMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.13"
       },
       "RelativeLocation": {
         "X": -0.00016533208,
@@ -252,7 +295,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedWindsockT_C:GunMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockT.11"
       }
     }
   },
@@ -270,7 +313,6 @@
         "ObjectName": "SkeletalMesh'SK_DeployableTripod'",
         "ObjectPath": "War/Content/Meshes/Weapons/SK_DeployableTripod.0"
       },
-      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
       "bGenerateOverlapEvents": true,
       "bReceivesDecals": false,
       "BodyInstance": {
@@ -298,6 +340,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -315,6 +361,84 @@
   },
   {
     "Type": "StaticMeshComponent",
+    "Name": "BannerSandBags_GEN_VARIABLE",
+    "Outer": "BPDeployedWindsockT_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BannerSandBags'",
+        "ObjectPath": "War/Content/Meshes/Weapons/BannerSandBags.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 3.646352,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 319.4021,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.8
+      },
+      "Mobility": "EComponentMobility::Stationary"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
     "Name": "Pole_GEN_VARIABLE",
     "Outer": "BPDeployedWindsockT_C",
     "Class": "UScriptClass'StaticMeshComponent'",
@@ -322,6 +446,37 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'Windsock'",
         "ObjectPath": "War/Content/Meshes/Weapons/Windsock.2"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableSeeThroughMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
       },
       "RelativeLocation": {
         "X": 1.0782019E-06,

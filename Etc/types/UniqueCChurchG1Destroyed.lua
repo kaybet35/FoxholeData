@@ -1,0 +1,70 @@
+---@meta
+
+---@class AUniqueCChurchG1Destroyed_C : ADestroyedGarrisonHouse
+---@field StaticMesh63 UStaticMeshComponent
+---@field StaticMesh58 UStaticMeshComponent
+---@field Decal26 UDecalComponent
+---@field Decal25 UDecalComponent
+---@field Decal3 UDecalComponent
+---@field Decal2 UDecalComponent
+---@field Decal1 UDecalComponent
+---@field Decal UDecalComponent
+---@field StaticMesh UStaticMeshComponent
+---@field RuinedProps USceneComponent
+---@field StaticMesh60 UStaticMeshComponent
+---@field StaticMesh62 UStaticMeshComponent
+---@field StaticMesh61 UStaticMeshComponent
+---@field Decal24 UDecalComponent
+---@field HuskProps USceneComponent
+---@field StaticMesh59 UStaticMeshComponent
+---@field Decal23 UDecalComponent
+---@field Decal22 UDecalComponent
+---@field Decal21 UDecalComponent
+---@field Decal20 UDecalComponent
+---@field Decal19 UDecalComponent
+---@field Decal18 UDecalComponent
+---@field Decal17 UDecalComponent
+---@field Decal16 UDecalComponent
+---@field Decal15 UDecalComponent
+---@field Decal14 UDecalComponent
+---@field Decal13 UDecalComponent
+---@field Decal12 UDecalComponent
+---@field StaticMesh57 UStaticMeshComponent
+---@field StaticMesh56 UStaticMeshComponent
+---@field StaticMesh55 UStaticMeshComponent
+---@field StaticMesh54 UStaticMeshComponent
+---@field StaticMesh53 UStaticMeshComponent
+---@field StaticMesh52 UStaticMeshComponent
+---@field StaticMesh50 UStaticMeshComponent
+---@field StaticMesh49 UStaticMeshComponent
+---@field StaticMesh48 UStaticMeshComponent
+---@field StaticMesh47 UStaticMeshComponent
+---@field StaticMesh46 UStaticMeshComponent
+---@field StaticMesh45 UStaticMeshComponent
+---@field StaticMesh44 UStaticMeshComponent
+---@field StaticMesh43 UStaticMeshComponent
+---@field StaticMesh42 UStaticMeshComponent
+---@field StaticMesh41 UStaticMeshComponent
+---@field StaticMesh40 UStaticMeshComponent
+---@field StaticMesh39 UStaticMeshComponent
+---@field StaticMesh38 UStaticMeshComponent
+---@field StaticMesh37 UStaticMeshComponent
+---@field StaticMesh36 UStaticMeshComponent
+---@field StaticMesh35 UStaticMeshComponent
+---@field StaticMesh34 UStaticMeshComponent
+---@field StaticMesh33 UStaticMeshComponent
+---@field StaticMesh32 UStaticMeshComponent
+---@field StaticMesh30 UStaticMeshComponent
+---@field HouseMesh UStaticMeshComponent
+---@field BPStructureInteriorArea3 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea2 UBPStructureInteriorArea_C
+---@field BPStructureInteriorArea1 UBPStructureInteriorArea_C
+---@field UniqueCChurchG1Ruin UStaticMeshComponent
+---@field Roof UStaticMeshComponent
+AUniqueCChurchG1Destroyed_C = {}
+
+---@param Enter boolean
+---@param Actor AActor
+function AUniqueCChurchG1Destroyed_C:OnEnterExit(Enter, Actor) end
+
+

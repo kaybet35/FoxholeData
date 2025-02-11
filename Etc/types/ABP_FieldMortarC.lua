@@ -1,0 +1,24 @@
+---@meta
+
+---@class UABP_FieldMortarC_C : USimVehicleGunnerSupportAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_2ACBC1FA4385665502F10689130D448A FAnimNode_Root
+---@field AnimGraphNode_SequencePlayer_3ADD8F014173079A9380968EACA1DA75 FAnimNode_SequencePlayer
+---@field AnimGraphNode_LayeredBoneBlend_771E87EF440968E3725476804889685C FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_9E1EB5FC49B517F326C7D6B3A7971A30 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_SequencePlayer_01FDC4974E1986B7B3F9799D3501F70E FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_DD791DCB4BD5416608D2FD8230102239 FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_4E5EE9E0492717F0AE433C8A979A7C15 FAnimNode_BlendListByBool
+---@field AnimGraphNode_RotationOffsetBlendSpace_6A3322294C91CBA4435C1AB6CEFA1C9C FAnimNode_RotationOffsetBlendSpace
+---@field WheelRotationSpeedFactor int32
+UABP_FieldMortarC_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_FieldMortarC_C:AnimGraph(AnimGraph) end
+function UABP_FieldMortarC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldMortarC_AnimGraphNode_BlendSpacePlayer_9E1EB5FC49B517F326C7D6B3A7971A30() end
+function UABP_FieldMortarC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldMortarC_AnimGraphNode_SequencePlayer_3ADD8F014173079A9380968EACA1DA75() end
+function UABP_FieldMortarC_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldMortarC_AnimGraphNode_SequencePlayer_01FDC4974E1986B7B3F9799D3501F70E() end
+---@param EntryPoint int32
+function UABP_FieldMortarC_C:ExecuteUbergraph_ABP_FieldMortarC(EntryPoint) end
+
+

@@ -5,7 +5,7 @@
 ---@field DriverExit USeatExitComponent
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field Camera UCameraComponent
 ABPMotorcycleBase_C = {}
 

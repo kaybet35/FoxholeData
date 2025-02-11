@@ -3,6 +3,6 @@
 
 class UBPForwardBaseTechTree_C : public UTechTreeComponentData
 {
-}; // Size: 0xC0
+}; // Size: 0xC8
 
 #endif

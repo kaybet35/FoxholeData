@@ -15,7 +15,7 @@ class ABPMotorboat_C : public AMotorboat
     class USeatTriggerComponent* CenterTrigger;                                       // 0x1148 (size: 0x8)
     class USeatTriggerComponent* DriverTrigger;                                       // 0x1150 (size: 0x8)
     class UBoxComponent* WorkVolume;                                                  // 0x1158 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x1160 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x1160 (size: 0x8)
     class UCameraComponent* Camera;                                                   // 0x1168 (size: 0x8)
 
     void BPOnVehicleOn(bool IsOn);

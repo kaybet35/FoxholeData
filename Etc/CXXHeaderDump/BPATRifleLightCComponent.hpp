@@ -3,6 +3,6 @@
 
 class UBPATRifleLightCComponent_C : public UATRifleComponent
 {
-}; // Size: 0x998
+}; // Size: 0x9A0
 
 #endif

@@ -370,7 +370,8 @@
         "X": 3.1816201,
         "Y": 1.848595,
         "Z": 5.24178
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -445,7 +446,8 @@
         "X": 0.96293586,
         "Y": 1.8850725,
         "Z": 5.067338
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -520,7 +522,8 @@
         "X": 1.2946277,
         "Y": 1.2458999,
         "Z": 1.3736072
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -590,7 +593,8 @@
         "X": 0.29799846,
         "Y": 2.5550802,
         "Z": 5.24178
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -665,7 +669,8 @@
         "X": 2.461511,
         "Y": 0.83863735,
         "Z": 5.572635
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -764,11 +769,19 @@
     "Outer": "VillageWMedAttachedG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -166.68066,
         "Y": 0.0,
         "Z": -340.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 563.9766,
         "Y": -33.45492,
@@ -787,11 +800,19 @@
     "Outer": "VillageWMedAttachedG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -180.0,
         "Y": 110.0,
         "Z": -400.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": -27.319103,
         "Y": 635.1902,
@@ -2946,10 +2967,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]
@@ -3137,6 +3163,7 @@
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedRoof",
         "VToggle"

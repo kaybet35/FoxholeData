@@ -3,6 +3,6 @@
 
 class UPistolWComponent_C : public UHitScanWeaponComponent
 {
-}; // Size: 0x990
+}; // Size: 0x998
 
 #endif

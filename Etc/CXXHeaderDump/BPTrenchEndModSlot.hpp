@@ -3,6 +3,6 @@
 
 class UBPTrenchEndModSlot_C : public UModificationSlotComponent
 {
-}; // Size: 0x390
+}; // Size: 0x3E0
 
 #endif

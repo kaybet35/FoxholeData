@@ -214,6 +214,9 @@ public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush FactionIcons[2];
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSlateBrush PlayerOnlineStatusIcons[4];
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FGeneralPurposeIcons GeneralPurposeIcons;
     

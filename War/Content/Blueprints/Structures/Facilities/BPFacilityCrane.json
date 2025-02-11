@@ -158,8 +158,8 @@
       "ValidBuildTools": 24,
       "CodeName": "FacilityCrane",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "717A5EA64E6D3DDBA2898790B4D2E437",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisFacility",
         "SourceString": "Facility Structure",
         "LocalizedString": "Facility Structure"
       },
@@ -681,6 +681,7 @@
       "CastShadows": false,
       "CastStaticShadows": false,
       "bAffectTranslucentLighting": false,
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "HasEmissiveLight"
       ]
@@ -960,7 +961,8 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": 300.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -1082,6 +1084,10 @@
             },
             {
               "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
               "Response": "ECR_Overlap"
             }
           ]
@@ -1385,6 +1391,7 @@
         "Yaw": 0.00016116393,
         "Roll": 89.99959
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "HasEmissiveLight"
       ]

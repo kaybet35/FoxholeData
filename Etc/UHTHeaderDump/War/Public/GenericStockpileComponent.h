@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ActorComponent -FallbackName=ActorComponent
 #include "GenericStockpileConfig.h"
 #include "StockpileEntry.h"
+#include "StockpileEvents.h"
 #include "GenericStockpileComponent.generated.h"
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -65,6 +66,9 @@ private:
     TArray<FStockpileEntry> StructureCrates;
     
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FStockpileEvents Events;
+    
     UGenericStockpileComponent(const FObjectInitializer& ObjectInitializer);
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;

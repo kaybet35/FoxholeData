@@ -64,6 +64,7 @@
         "ObjectName": "BoxComponent'Default__BPLandingDockBuildSite_C:UseAreaBox'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPLandingDockBuildSite.6"
       },
+      "Health": 0,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPLandingDockBuildSite_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPLandingDockBuildSite.14"
@@ -121,6 +122,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -129,7 +134,8 @@
         "X": -400.0,
         "Y": -120.0,
         "Z": 190.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -150,6 +156,11 @@
     "Outer": "Default__BPLandingDockBuildSite_C",
     "Class": "UScriptClass'BoxComponent'",
     "Properties": {
+      "BoxExtent": {
+        "X": 1344.0,
+        "Y": 1216.0,
+        "Z": 480.0
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPLandingDockBuildSite_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPLandingDockBuildSite.3"
@@ -158,11 +169,6 @@
         "X": -670.0,
         "Y": 0.0,
         "Z": 170.0
-      },
-      "RelativeScale3D": {
-        "X": 5.25,
-        "Y": 4.75,
-        "Z": 3.75
       }
     }
   },
@@ -357,10 +363,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

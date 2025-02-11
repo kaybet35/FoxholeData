@@ -148,6 +148,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float FoundationHitsThreshold;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsFastBuild;
+    
     WAR_API FWarReplicatedTweakables();
 };
 

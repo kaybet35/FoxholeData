@@ -187,11 +187,19 @@
     "Outer": "TownCSmallG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 125.0,
         "Y": 0.0,
         "Z": -315.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 16.967667,
         "Y": 344.90814,
@@ -210,11 +218,19 @@
     "Outer": "TownCSmallG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 125.0,
         "Y": 0.0,
         "Z": -210.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 481.4921,
         "Y": 174.98457,
@@ -316,7 +332,8 @@
         "X": 1.2850417,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -348,7 +365,8 @@
         "X": 1.5454806,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -380,7 +398,8 @@
         "X": 1.2333925,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -412,7 +431,8 @@
         "X": 1.4176646,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -963,10 +983,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]

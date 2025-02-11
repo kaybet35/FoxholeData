@@ -9,6 +9,9 @@ class WAR_API UTechTreeComponentData : public UActorComponent {
     GENERATED_BODY()
 public:
 private:
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    int8 UniqueId;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTechTreeComponentItem> Items;
     

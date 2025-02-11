@@ -35,6 +35,7 @@ enum class EFortModificationType : uint8 {
     PipeFabricator,
     SpecialWeapons,
     InfantryAmmo,
+    HeavyAmmo,
     Petrol,
     Coal,
     Fracker,

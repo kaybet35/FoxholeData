@@ -5,5 +5,6 @@ FGlobalShardConfig::FGlobalShardConfig() {
     this->bEnableOverpopMode = false;
     this->bRedirectToShardSelector = false;
     this->OverpopShardId = 0;
+    this->OverpopTextType = EOverpopText::None;
 }
 

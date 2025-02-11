@@ -92,7 +92,7 @@
 ---@field WakeAft UParticleSystemComponent
 ---@field ExhaustAft UParticleSystemComponent
 ---@field ExhaustFore UParticleSystemComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field SonarExit9 USeatExitComponent
 ---@field SonarTrigger9 USeatTriggerComponent
 ---@field SonarSeat8 UVehicleSeatComponent

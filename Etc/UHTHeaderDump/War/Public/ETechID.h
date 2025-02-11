@@ -16,6 +16,7 @@ enum class ETechID : uint16 {
     UnlockATRPG,
     UnlockATRPGHeavy,
     UnlockATRPGLight,
+    UnlockATRPGT,
     UnlockFlameTorch,
     UnlockGrenadeLauncher,
     UnlockGrenadeLauncherT,

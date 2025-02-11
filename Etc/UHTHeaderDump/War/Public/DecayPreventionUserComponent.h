@@ -15,7 +15,6 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-private:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerUpdateStructureCount();
     

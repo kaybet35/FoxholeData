@@ -274,6 +274,11 @@
     "Outer": "UniqueWBellTowerG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 34.4136,
         "Y": -175.07191,
@@ -284,6 +289,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 18.0,
       "RelativeLocation": {
         "X": 302.56976,
         "Y": 142.88756,
@@ -302,6 +310,11 @@
     "Outer": "UniqueWBellTowerG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 28.892082,
         "Y": -181.65797,
@@ -312,6 +325,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 18.0,
       "RelativeLocation": {
         "X": 305.2809,
         "Y": 444.25726,
@@ -403,7 +419,8 @@
         "X": 298.61935,
         "Y": 301.15674,
         "Z": 236.25513
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -490,7 +507,8 @@
         "X": 0.241085,
         "Y": 1.2483491,
         "Z": 1.1772546
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -1395,10 +1413,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]
@@ -1435,10 +1458,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedRoof",
         "VToggle"

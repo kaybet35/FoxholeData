@@ -159,7 +159,7 @@
 ---@field WakeAft UParticleSystemComponent
 ---@field ExhaustStern0 UParticleSystemComponent
 ---@field SideRight UParticleSystemComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field BPShipEngineUseComponentStbd UBPShipEngineUseComponent_C
 ---@field BPShipEngineUseComponentPort UBPShipEngineUseComponent_C
 ---@field TeamFlagMesh1 UTeamFlagMeshComponent

@@ -3,6 +3,6 @@
 
 class UBPFlameBackpackC_C : public UAmmoBackpackItemComponent
 {
-}; // Size: 0x8D0
+}; // Size: 0x8D8
 
 #endif

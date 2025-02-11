@@ -9,9 +9,6 @@
 ---@field Light UParticleSystemComponent
 ---@field PointLight1 UPointLightComponent
 ---@field ProducingSFX UAudioComponent
----@field Collision03 UBoxComponent
----@field Collision02 UBoxComponent
----@field Collision01 UBoxComponent
 ---@field Decal3 UDecalComponent
 ---@field SulfurResource02 UStaticMeshComponent
 ---@field StaticMesh10 UStaticMeshComponent
@@ -46,7 +43,7 @@ function ABPSulfurMine_C:UpdateVisuals_SlowTick() end
 function ABPSulfurMine_C:ExecuteUbergraph_BPSulfurMine(EntryPoint) end
 
 
----@class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482248
-UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482248 = {}
+---@class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482252
+UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482252 = {}
 
 

@@ -1,0 +1,53 @@
+#ifndef UE4SS_SDK_BPFacilityFactorySmallArmsHeavyAmmo_HPP
+#define UE4SS_SDK_BPFacilityFactorySmallArmsHeavyAmmo_HPP
+
+class ABPFacilityFactorySmallArmsHeavyAmmo_C : public AModificationTemplate
+{
+    class UBoxComponent* Box7;                                                        // 0x0218 (size: 0x8)
+    class UBoxComponent* Box6;                                                        // 0x0220 (size: 0x8)
+    class UBoxComponent* Box5;                                                        // 0x0228 (size: 0x8)
+    class UBoxComponent* Box4;                                                        // 0x0230 (size: 0x8)
+    class UBoxComponent* Box3;                                                        // 0x0238 (size: 0x8)
+    class UStaticMeshComponent* front32;                                              // 0x0240 (size: 0x8)
+    class UStaticMeshComponent* front31;                                              // 0x0248 (size: 0x8)
+    class UStaticMeshComponent* front30;                                              // 0x0250 (size: 0x8)
+    class UStaticMeshComponent* front29;                                              // 0x0258 (size: 0x8)
+    class UStaticMeshComponent* front27;                                              // 0x0260 (size: 0x8)
+    class UStaticMeshComponent* front28;                                              // 0x0268 (size: 0x8)
+    class UStaticMeshComponent* front25;                                              // 0x0270 (size: 0x8)
+    class UStaticMeshComponent* front26;                                              // 0x0278 (size: 0x8)
+    class UStaticMeshComponent* front24;                                              // 0x0280 (size: 0x8)
+    class UStaticMeshComponent* front23;                                              // 0x0288 (size: 0x8)
+    class UStaticMeshComponent* front22;                                              // 0x0290 (size: 0x8)
+    class UStaticMeshComponent* front21;                                              // 0x0298 (size: 0x8)
+    class UStaticMeshComponent* front20;                                              // 0x02A0 (size: 0x8)
+    class UStaticMeshComponent* front19;                                              // 0x02A8 (size: 0x8)
+    class UStaticMeshComponent* front18;                                              // 0x02B0 (size: 0x8)
+    class UStaticMeshComponent* front17;                                              // 0x02B8 (size: 0x8)
+    class UStaticMeshComponent* front14;                                              // 0x02C0 (size: 0x8)
+    class UStaticMeshComponent* front16;                                              // 0x02C8 (size: 0x8)
+    class UStaticMeshComponent* front13;                                              // 0x02D0 (size: 0x8)
+    class UStaticMeshComponent* front15;                                              // 0x02D8 (size: 0x8)
+    class UStaticMeshComponent* front12;                                              // 0x02E0 (size: 0x8)
+    class UStaticMeshComponent* front11;                                              // 0x02E8 (size: 0x8)
+    class UStaticMeshComponent* front10;                                              // 0x02F0 (size: 0x8)
+    class UStaticMeshComponent* front9;                                               // 0x02F8 (size: 0x8)
+    class UStaticMeshComponent* front8;                                               // 0x0300 (size: 0x8)
+    class UStaticMeshComponent* front7;                                               // 0x0308 (size: 0x8)
+    class UStaticMeshComponent* front6;                                               // 0x0310 (size: 0x8)
+    class UStaticMeshComponent* front4;                                               // 0x0318 (size: 0x8)
+    class UStaticMeshComponent* front3;                                               // 0x0320 (size: 0x8)
+    class UStaticMeshComponent* front2;                                               // 0x0328 (size: 0x8)
+    class UStaticMeshComponent* front1;                                               // 0x0330 (size: 0x8)
+    class UStaticMeshComponent* Front;                                                // 0x0338 (size: 0x8)
+    class UParticleSystemComponent* BaseSmoke2;                                       // 0x0340 (size: 0x8)
+    class UParticleSystemComponent* BaseSmoke1;                                       // 0x0348 (size: 0x8)
+    class UBoxComponent* Box2;                                                        // 0x0350 (size: 0x8)
+    class UBoxComponent* Box1;                                                        // 0x0358 (size: 0x8)
+    class USceneComponent* Props;                                                     // 0x0360 (size: 0x8)
+    class UStaticMeshComponent* FacilityAmmoFactoryBaseRoof;                          // 0x0368 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x0370 (size: 0x8)
+
+}; // Size: 0x378
+
+#endif

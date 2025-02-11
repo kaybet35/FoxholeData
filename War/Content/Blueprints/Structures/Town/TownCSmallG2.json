@@ -195,11 +195,19 @@
     "Outer": "TownCSmallG2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 125.0,
         "Y": 0.0,
         "Z": -210.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 29.0,
         "Y": 188.0,
@@ -218,11 +226,19 @@
     "Outer": "TownCSmallG2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 125.0,
         "Y": 0.0,
         "Z": -210.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 775.0,
         "Y": 225.0,
@@ -319,7 +335,8 @@
         "X": 1.4137694,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -351,7 +368,8 @@
         "X": 1.425624,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -383,7 +401,8 @@
         "X": 1.1050988,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -415,7 +434,8 @@
         "X": 1.5678406,
         "Y": 1.0,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -447,7 +467,8 @@
         "X": 1.0,
         "Y": 1.0,
         "Z": 1.005712
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -479,7 +500,8 @@
         "X": 1.0,
         "Y": 1.0,
         "Z": 1.005712
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -1104,10 +1126,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]

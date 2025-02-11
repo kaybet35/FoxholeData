@@ -72,6 +72,7 @@
         "ObjectName": "BoxComponent'Default__BPFactoryBuildSite_C:UseAreaBox'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFactoryBuildSite.5"
       },
+      "Health": 0,
       "MapIconType": "EMapIconType::Factory",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFactoryBuildSite_C:StealthComponent'",
@@ -299,6 +300,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -307,7 +312,8 @@
         "X": 15.0,
         "Y": 5.0,
         "Z": 0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -389,7 +395,8 @@
         "X": 1.446153,
         "Y": 1.446153,
         "Z": 1.446153
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -457,10 +464,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

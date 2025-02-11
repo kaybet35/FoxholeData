@@ -94,11 +94,11 @@
         "ObjectName": "AITurretsControllerComponent'Default__BPATGunAIT3_C:AITurretsControllerComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT3.4"
       },
-      "ShouldAggroOnDamage": true,
       "MuzzleFlashLocationComponent": {
         "ObjectName": "ArrowComponent'Default__BPATGunAIT3_C:MuzzleFxLocationComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT3.5"
       },
+      "ShouldAggroOnDamage": true,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPATGunAIT3_C:FlagMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT3.35"
@@ -130,6 +130,16 @@
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/FortT3ATGunAIIcon.0"
       },
       "BuildCategory": "EBuildCategory::Bunker",
+      "DestroyedDamageExtent": {
+        "X": 250.0,
+        "Y": 250.0,
+        "Z": 275.0
+      },
+      "DestroyedDamageOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 114.0
+      },
       "bDropsLargeMaterialsWhenDestroyed": false,
       "ValidBuildTools": 20,
       "ConcreteSettler": {
@@ -137,8 +147,8 @@
       },
       "CodeName": "ATGunAIT3",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "5465039A4173C4622162C8918B7D435B",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisEntrenchment",
         "SourceString": "Entrenchment",
         "LocalizedString": "Entrenchment"
       },
@@ -335,6 +345,7 @@
         "Y": 0.0,
         "Z": -65.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "IncludeInBuildSite"
       ]
@@ -801,6 +812,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -851,6 +866,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -860,6 +879,7 @@
         "Y": 0.0,
         "Z": -160.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedFloor"
       ]
@@ -893,6 +913,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -902,6 +926,7 @@
         "Y": 0.0,
         "Z": -160.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "RoofVisibility"
       ]

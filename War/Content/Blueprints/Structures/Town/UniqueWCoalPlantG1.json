@@ -410,6 +410,11 @@
     "Outer": "UniqueWCoalPlantG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -321.64468,
         "Y": 3.693085,
@@ -420,6 +425,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 1520.3232,
         "Y": 763.7526,
@@ -438,6 +446,11 @@
     "Outer": "UniqueWCoalPlantG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -14.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -206.155,
         "Y": 139.68896,
@@ -448,6 +461,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 22.0,
       "RelativeLocation": {
         "X": 1035.0835,
         "Y": -82.08621,
@@ -466,6 +482,11 @@
     "Outer": "UniqueWCoalPlantG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -760.32477,
         "Y": -44.60585,
@@ -476,6 +497,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": -98.05198,
         "Y": 513.6121,
@@ -494,6 +518,11 @@
     "Outer": "UniqueWCoalPlantG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -20.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -160.53955,
         "Y": 140.34573,
@@ -504,6 +533,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 22.0,
       "RelativeLocation": {
         "X": 906.919,
         "Y": 1509.019,
@@ -3244,10 +3276,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]
@@ -3317,6 +3354,7 @@
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedRoof",
         "VToggle"

@@ -3,6 +3,6 @@
 
 class ABPMotorboatVehicleProxy_C : public ABuildableStructure
 {
-}; // Size: 0x7D0
+}; // Size: 0x7C0
 
 #endif

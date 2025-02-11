@@ -14,6 +14,7 @@ enum class ERegionLogEntryType : uint8 {
     DestroyedBuildSite,
     Demolished,
     DemolishedBuildSite,
+    VehicleRestored,
     MAX,
 };
 

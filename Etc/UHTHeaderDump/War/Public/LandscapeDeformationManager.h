@@ -30,6 +30,9 @@ public:
     ULandscapeDeformationManager();
 
     UFUNCTION(BlueprintCallable, Exec)
+    void VerifyLandscapeZ(float X, float Y, float Extent);
+    
+    UFUNCTION(BlueprintCallable, Exec)
     void DebugDrawModifiedLandscapes(float Duration, bool bPersistent, bool bDrawOriginal, bool bDrawAll);
     
     UFUNCTION(BlueprintCallable, Exec)

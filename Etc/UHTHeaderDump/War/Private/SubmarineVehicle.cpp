@@ -58,6 +58,9 @@ void ASubmarineVehicle::OnRep_TorpedoTubeStates() {
 void ASubmarineVehicle::OnRep_ReplicatedElectricity(uint8 PrevReplicatedElectricity) {
 }
 
+void ASubmarineVehicle::OnRep_Ballasts(const TArray<FBallastInfo>& PrevBallastsInfo) {
+}
+
 void ASubmarineVehicle::MulticastPlayCrushFX_Implementation(FVector Location) {
 }
 

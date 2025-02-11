@@ -438,7 +438,8 @@
         "X": 3.888576,
         "Y": 2.6315172,
         "Z": 5.24178
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -513,7 +514,8 @@
         "X": 2.1767874,
         "Y": 0.9983679,
         "Z": 5.067338
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -588,7 +590,8 @@
         "X": 3.0047247,
         "Y": 1.2458999,
         "Z": 5.283316
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -658,7 +661,8 @@
         "X": 3.80825,
         "Y": 2.1471925,
         "Z": 5.24178
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -733,7 +737,8 @@
         "X": 6.307238,
         "Y": 0.9475171,
         "Z": 5.572635
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -803,7 +808,8 @@
         "X": 1.1935006,
         "Y": 1.2458999,
         "Z": 5.283316
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -902,11 +908,19 @@
     "Outer": "VillageWMedAttachedG2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -138.05534,
         "Y": -151.326,
         "Z": -340.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 678.9112,
         "Y": -7.537915,
@@ -925,11 +939,19 @@
     "Outer": "VillageWMedAttachedG2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": -150.83755,
         "Y": 241.95454,
         "Z": -400.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 10.134762,
         "Y": 753.70233,
@@ -3775,10 +3797,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]
@@ -3966,6 +3993,7 @@
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedRoof",
         "VToggle"

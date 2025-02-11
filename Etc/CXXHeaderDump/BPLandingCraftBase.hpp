@@ -12,7 +12,7 @@ class ABPLandingCraftBase_C : public ALandingCraft
     class USeatTriggerComponent* PassengerTrigger;                                    // 0x1310 (size: 0x8)
     class USeatTriggerComponent* DriverTrigger;                                       // 0x1318 (size: 0x8)
     class UBPWaterStencilComponent_C* BPWaterStencilComponent;                        // 0x1320 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x1328 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x1328 (size: 0x8)
     class UCameraComponent* Camera;                                                   // 0x1330 (size: 0x8)
 
     void BPOnVehicleOn(bool IsOn);

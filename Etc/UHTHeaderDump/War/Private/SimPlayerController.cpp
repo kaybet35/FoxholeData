@@ -213,10 +213,7 @@ bool ASimPlayerController::ServerSubmitStructureToStockpile_Validate(ABuildableS
     return true;
 }
 
-void ASimPlayerController::ServerSubmitStarterKit_Implementation(AActor* Actor) {
-}
-bool ASimPlayerController::ServerSubmitStarterKit_Validate(AActor* Actor) {
-    return true;
+void ASimPlayerController::ServerSubmitStarterKit_Implementation(AActor* Actor, const uint16 Bitmask) {
 }
 
 void ASimPlayerController::ServerSubmitResourceConverterOrder_Implementation(AActor* TargetActor, const int32 RefinableItemIndex, const bool bTransferAll) {
@@ -480,10 +477,7 @@ bool ASimPlayerController::ServerRequestStructureInfo_Validate(AStructure* Struc
     return true;
 }
 
-void ASimPlayerController::ServerRequestStockpileAccessEvents_Implementation(UGenericStockpileComponent* GenericStockpileComponent, const uint8 Index) {
-}
-bool ASimPlayerController::ServerRequestStockpileAccessEvents_Validate(UGenericStockpileComponent* GenericStockpileComponent, const uint8 Index) {
-    return true;
+void ASimPlayerController::ServerRequestStockpileAccessEvents_Implementation(UGenericStockpileComponent* GenericStockpileComponent, const EStockpileCategoryType CategoryType) {
 }
 
 void ASimPlayerController::ServerRequestReserveStockpileLog_Implementation(const AStructure* Structure, const FString& StockpileName, const uint32 PageIndex) {
@@ -513,6 +507,12 @@ bool ASimPlayerController::ServerRequestOfflineActivityLog_Validate(const FStrin
 void ASimPlayerController::ServerRequestNetworkTechStatus_Implementation(const AStructure* Structure) {
 }
 bool ASimPlayerController::ServerRequestNetworkTechStatus_Validate(const AStructure* Structure) {
+    return true;
+}
+
+void ASimPlayerController::ServerRequestMapPostDetails_Implementation(const int32 MapPostID) {
+}
+bool ASimPlayerController::ServerRequestMapPostDetails_Validate(const int32 MapPostID) {
     return true;
 }
 
@@ -1170,7 +1170,7 @@ void ASimPlayerController::ClientReceiveTransactionResponse_Implementation(const
 void ASimPlayerController::ClientReceiveTechResponse_Implementation(const uint8 TechResponse) {
 }
 
-void ASimPlayerController::ClientReceiveStockpileAccessEvents_Implementation(UGenericStockpileComponent* GenericStockpileComponent, const uint8 Index, const FStockpileEventsResponse& EventsResponse) {
+void ASimPlayerController::ClientReceiveStockpileAccessEvents_Implementation(UGenericStockpileComponent* GenericStockpileComponent, const EStockpileCategoryType CategoryType, const TArray<FStockpileAccessEvent>& Events) {
 }
 
 void ASimPlayerController::ClientReceiveRocketUpdateAlert_Implementation(const FRPCRocketPreLaunchUpdateAlert& LaunchUpdateAlert) {
@@ -1188,6 +1188,9 @@ void ASimPlayerController::ClientReceiveOnlineIDInfo_Implementation(const FStrin
 void ASimPlayerController::ClientReceiveNetworkTechStatus_Implementation(const AStructure* Structure, const FTechTreeComponentNetworkStatus NetworkStatus) {
 }
 
+void ASimPlayerController::ClientReceiveMapPostDetails_Implementation(const int32 MapPostID, const FMapPostDetails MapPostDetails) {
+}
+
 void ASimPlayerController::ClientReceiveMapItemDetails_Implementation(const EWorldConquestMapId MapId, const uint32 Index, const int32 SerialNumber, const FMapItemDetails& MapItemDetails) {
 }
 
@@ -1195,6 +1198,9 @@ void ASimPlayerController::ClientReceiveListeningAreaDetails_Implementation(cons
 }
 
 void ASimPlayerController::ClientReceiveInfo_Implementation() {
+}
+
+void ASimPlayerController::ClientReceiveEmptyMapPostDetails_Implementation(const int32 MapPostID) {
 }
 
 void ASimPlayerController::ClientReceiveEmptyMapItemDetails_Implementation(const EWorldConquestMapId MapId, const uint32 Index, const int32 SerialNumber) {

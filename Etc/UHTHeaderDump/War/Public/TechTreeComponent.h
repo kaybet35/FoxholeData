@@ -31,6 +31,15 @@ private:
     UPROPERTY(EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
     uint8 InfrastructureModCount[5];
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    int32 TechStateID;
+    
+    UPROPERTY(EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    TArray<int64> CompletedTimes;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    TArray<float> ActivityWeights;
+    
     UPROPERTY(BlueprintAssignable, BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDynamicOnResearched DynamicOnResearched;
     

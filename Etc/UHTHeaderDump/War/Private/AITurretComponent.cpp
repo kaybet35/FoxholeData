@@ -21,9 +21,12 @@ UAITurretComponent::UAITurretComponent(const FObjectInitializer& ObjectInitializ
     this->bFlaresNegateNightRangeReduction = false;
     this->bIs360ViewWhenMounted = false;
     this->SuppressionPercentage = 0;
-    this->bIsSuppressible = false;
     this->AttackDelayAgainstVehicles = 1.00f;
+    this->bIsSuppressible = false;
     this->bShowExtraTracers = false;
+    this->bLimitOccupantFiringArc = false;
+    this->MaxOccupantFiringArcDeviation = 0.00f;
+    this->OccupantFiringConeAngle = 0.00f;
     this->bUsesLegacyFoxholeTurretDamageSelection = false;
     this->bUseATDamageForVehicle = false;
     this->ImpactEffect = NULL;

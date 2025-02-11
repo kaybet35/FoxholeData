@@ -3,6 +3,6 @@
 
 class ABPExplosiveLightCDeployed_C : public AExplosive
 {
-}; // Size: 0x2C8
+}; // Size: 0x2D0
 
 #endif

@@ -10,7 +10,7 @@
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field BPWaterStencilComponent UBPWaterStencilComponent_C
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field Camera UCameraComponent
 ABPLandingCraftBase_C = {}
 

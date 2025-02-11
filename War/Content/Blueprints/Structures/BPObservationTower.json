@@ -635,7 +635,8 @@
         "X": 0.0,
         "Y": 355.0,
         "Z": 128.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -744,6 +745,7 @@
         "ObjectName": "SkeletalMesh'SK_ObservationTowerRadar'",
         "ObjectPath": "War/Content/Meshes/Structures/SK_ObservationTowerRadar.0"
       },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
@@ -779,11 +781,16 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         },
         "MassInKgOverride": 2000.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Multiplexed"
       ]

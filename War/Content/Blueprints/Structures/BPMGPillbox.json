@@ -95,13 +95,13 @@
         "ObjectName": "AITurretsControllerComponent'Default__BPMGPillbox_C:AITurretsControllerComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPMGPillbox.4"
       },
-      "ShouldAggroOnDamage": true,
       "MuzzleFlashLocationComponent": {
         "ObjectName": "ArrowComponent'Default__BPMGPillbox_C:MuzzleFxLocationComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPMGPillbox.5"
       },
+      "ShouldAggroOnDamage": true,
       "bLimitOccupantFiringArc": true,
-      "MaxOccupantFiringArcDeviation": 45.0,
+      "MaxOccupantFiringArcDeviation": 30.0,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPMGPillbox_C:FlagMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPMGPillbox.43"
@@ -156,8 +156,8 @@
       "ValidBuildTools": 17,
       "CodeName": "MGPillbox",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "9603C072473469BC0CCAD296B5464727",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisFortification",
         "SourceString": "Field Fortification",
         "LocalizedString": "Field Fortification"
       },
@@ -235,7 +235,7 @@
       "WorstJitterConeHalfAngle": 30.0,
       "FiringPeriod": 0.15,
       "TimeToFullFireRateAndAccuracy": 2.5,
-      "FiringConeAngle": 45.0,
+      "FiringConeAngle": 35.0,
       "EnemyPursueDuration": 6.5,
       "TargetStabilityReductionPerShot": 0.5,
       "AttachParent": {
@@ -261,7 +261,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/BPMGPillbox.6"
       },
       "RelativeLocation": {
-        "X": 298.76627,
+        "X": 200.0,
         "Y": 0.00030517578,
         "Z": 110.0
       }
@@ -343,7 +343,8 @@
         "X": 160.0,
         "Y": 0.0,
         "Z": 110.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -975,6 +976,10 @@
             },
             {
               "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
               "Response": "ECR_Overlap"
             }
           ]

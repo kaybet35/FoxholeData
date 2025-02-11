@@ -1059,6 +1059,7 @@ AEnvironmentVFX = {}
 ---@field ItemMesh UStaticMeshComponent
 ---@field ExplosiveCodeName FName
 ---@field ExplosionOffsetZ float
+---@field ExplosionFXOffsetZ float
 ---@field DamageDelay float
 ---@field ExplosionTemplate TSubclassOf<AWarExplosionEffect>
 ---@field WaterSurfaceExplosionTemplate TSubclassOf<AWarExplosionEffect>
@@ -1411,12 +1412,12 @@ AFoxhole = {}
 ---@class AFoxholeTurret : ATunnelNode
 ---@field AITurretComponent UAITurretComponent
 ---@field AITurretsController UAITurretsControllerComponent
----@field ShouldAggroOnDamage boolean
 ---@field MuzzleFlashLocationComponent UArrowComponent
----@field bLimitOccupantFiringArc boolean
----@field MaxOccupantFiringArcDeviation float
+---@field ShouldAggroOnDamage boolean
 ---@field bUseSquareMuzzleBounds boolean
 ---@field bIsTutorialTurret boolean
+---@field bLimitOccupantFiringArc boolean
+---@field MaxOccupantFiringArcDeviation float
 ---@field FlagMesh UTeamFlagMeshComponent
 AFoxholeTurret = {}
 
@@ -2990,6 +2991,7 @@ ASignPostBuildSite = {}
 
 
 ---@class ASimCharacter : AWarCharacter
+---@field RepPlayerMovement FRepPlayerMovement
 ---@field StanceYawModifiers float
 ---@field bGiveStarterKit boolean
 ---@field BaseTurnRate float
@@ -3025,8 +3027,8 @@ ASignPostBuildSite = {}
 ---@field TeamId uint8
 ---@field VisualCustomizationMask uint8
 ---@field bIsWearingGasMask boolean
----@field bIgnoreStanceInput boolean
 ---@field bUsesDynamicMaterials boolean
+---@field UniformType EUniformType
 ---@field CurrentSurfaceType EPhysicalSurface
 ---@field SurfaceMovementModifiers TArray<FSurfaceMovementData>
 ---@field Head USkeletalMeshComponent
@@ -3050,7 +3052,6 @@ ASignPostBuildSite = {}
 ---@field EnterWaterPS UParticleSystemComponent
 ---@field SwimmingSFX UAudioComponent
 ---@field EnterWaterSFX UAudioComponent
----@field CharacterStance ESimCharacterStance
 ---@field CharacterActivityStateInternal ECharacterActivityState
 ---@field Health float
 ---@field ReplicatedItemEncumbrance uint8
@@ -3105,8 +3106,6 @@ ASignPostBuildSite = {}
 ---@field BlockingMaxSpeedModifier float
 ---@field ChargingMaxSpeedModifier float
 ---@field AimingMaxSpeedModifier float
----@field MouseAimScale float
----@field NoAimYawScale float
 ---@field bDisablePlayerFogOfWar boolean
 ---@field AlwaysVisibleRadius float
 ---@field AimRadius int32
@@ -3158,10 +3157,6 @@ function ASimCharacter:ServerSyncLastWeaponInvoke(ClientWeaponInvoke) end
 function ASimCharacter:ServerSwitchSeats(Vehicle, ActivityStateChange, NewSeatIndex) end
 ---@param ActivityStateChange FActivityStateChange
 function ASimCharacter:ServerSimulateMeleeAttack(ActivityStateChange) end
----@param bIsSprinting boolean
-function ASimCharacter:ServerSetSprinting(bIsSprinting) end
----@param bIsProne boolean
-function ASimCharacter:ServerSetIsProne(bIsProne) end
 ---@param InIsInScopeMode boolean
 function ASimCharacter:ServerSetIsInScopeMode(InIsInScopeMode) end
 ---@param RequestedSource EWaterSourceType
@@ -3214,7 +3209,10 @@ function ASimCharacter:ServerChangeItemEquipState(Index, bEquip, ActivityStateCh
 function ASimCharacter:ServerCarryWounded(WoundedCharacter) end
 function ASimCharacter:OnRep_ZombieType() end
 function ASimCharacter:OnRep_VisualCustomizationMaskNotify() end
+function ASimCharacter:OnRep_UniformType() end
 function ASimCharacter:OnRep_TeamIdNotify() end
+---@param PrevSnapshot FRepPlayerMovement
+function ASimCharacter:OnRep_RepPlayerMovement(PrevSnapshot) end
 function ASimCharacter:OnRep_MountComponent() end
 function ASimCharacter:OnRep_IsWearingGasMask() end
 function ASimCharacter:OnRep_IsInScopeMode() end
@@ -3225,7 +3223,6 @@ function ASimCharacter:OnRep_Encumbrance() end
 ---@param PreviousVehicle ASimVehicle
 function ASimCharacter:OnRep_CurrentVehicle(PreviousVehicle) end
 function ASimCharacter:OnRep_CurrentOccupiedStructure() end
-function ASimCharacter:OnRep_CharacterStance() end
 function ASimCharacter:OnRep_CharacterActivityState() end
 ---@param SimulatedHitNotify FHitNotify
 function ASimCharacter:MulticastSpawnMeleeHitEffects(SimulatedHitNotify) end
@@ -3256,12 +3253,8 @@ function ASimCharacter:ClientSetGainingHeatFromHits(bIsGaining) end
 ---@param FlyHeight float
 ---@param FlySpeed float
 function ASimCharacter:ClientSetFlyMode(bInIsFlyMode, FlyHeight, FlySpeed) end
----@param Stance ESimCharacterStance
----@param bLocked boolean
-function ASimCharacter:ClientLockStance(Stance, bLocked) end
 ---@param SequenceNumber uint8
 function ASimCharacter:ClientInterruptActivityState(SequenceNumber) end
-function ASimCharacter:ClientEndWoundedState() end
 ---@param LastSuccessfulSequenceNumber uint8
 ---@param HeldItemIndex int8
 ---@param NewState ECharacterActivityState
@@ -3478,7 +3471,8 @@ function ASimPlayerController:ServerSubmitTech(TechStructure, CategoryIndex, Lev
 ---@param TargetStockpileName FString
 function ASimPlayerController:ServerSubmitStructureToStockpile(Structure, TargetStockpile, TargetStockpileName) end
 ---@param Actor AActor
-function ASimPlayerController:ServerSubmitStarterKit(Actor) end
+---@param Bitmask uint16
+function ASimPlayerController:ServerSubmitStarterKit(Actor, Bitmask) end
 ---@param TargetActor AActor
 ---@param RefinableItemIndex int32
 ---@param bTransferAll boolean
@@ -3601,8 +3595,8 @@ function ASimPlayerController:ServerResetInventorySourceOverride() end
 ---@param bIsInitialRequest boolean
 function ASimPlayerController:ServerRequestStructureInfo(Structure, bIsInitialRequest) end
 ---@param GenericStockpileComponent UGenericStockpileComponent
----@param Index uint8
-function ASimPlayerController:ServerRequestStockpileAccessEvents(GenericStockpileComponent, Index) end
+---@param CategoryType EStockpileCategoryType
+function ASimPlayerController:ServerRequestStockpileAccessEvents(GenericStockpileComponent, CategoryType) end
 ---@param Structure AStructure
 ---@param StockpileName FString
 ---@param PageIndex uint32
@@ -3615,6 +3609,8 @@ function ASimPlayerController:ServerRequestRegionLog(LogPageIndex) end
 function ASimPlayerController:ServerRequestOfflineActivityLog(OnlineID) end
 ---@param Structure AStructure
 function ASimPlayerController:ServerRequestNetworkTechStatus(Structure) end
+---@param MapPostID int32
+function ASimPlayerController:ServerRequestMapPostDetails(MapPostID) end
 ---@param MapId EWorldConquestMapId
 ---@param Index int32
 ---@param SerialNumber int32
@@ -4016,9 +4012,9 @@ function ASimPlayerController:ClientReceiveTransactionResponse(Response) end
 ---@param TechResponse uint8
 function ASimPlayerController:ClientReceiveTechResponse(TechResponse) end
 ---@param GenericStockpileComponent UGenericStockpileComponent
----@param Index uint8
----@param EventsResponse FStockpileEventsResponse
-function ASimPlayerController:ClientReceiveStockpileAccessEvents(GenericStockpileComponent, Index, EventsResponse) end
+---@param CategoryType EStockpileCategoryType
+---@param Events TArray<FStockpileAccessEvent>
+function ASimPlayerController:ClientReceiveStockpileAccessEvents(GenericStockpileComponent, CategoryType, Events) end
 ---@param LaunchUpdateAlert FRPCRocketPreLaunchUpdateAlert
 function ASimPlayerController:ClientReceiveRocketUpdateAlert(LaunchUpdateAlert) end
 ---@param LaunchAlert FRPCRocketPreLaunchAlert
@@ -4031,6 +4027,9 @@ function ASimPlayerController:ClientReceiveOnlineIDInfo(OnlineID) end
 ---@param Structure AStructure
 ---@param NetworkStatus FTechTreeComponentNetworkStatus
 function ASimPlayerController:ClientReceiveNetworkTechStatus(Structure, NetworkStatus) end
+---@param MapPostID int32
+---@param MapPostDetails FMapPostDetails
+function ASimPlayerController:ClientReceiveMapPostDetails(MapPostID, MapPostDetails) end
 ---@param MapId EWorldConquestMapId
 ---@param Index uint32
 ---@param SerialNumber int32
@@ -4039,6 +4038,8 @@ function ASimPlayerController:ClientReceiveMapItemDetails(MapId, Index, SerialNu
 ---@param InListeningAreaDetails TArray<FListeningAreaDebugData>
 function ASimPlayerController:ClientReceiveListeningAreaDetails(InListeningAreaDetails) end
 function ASimPlayerController:ClientReceiveInfo() end
+---@param MapPostID int32
+function ASimPlayerController:ClientReceiveEmptyMapPostDetails(MapPostID) end
 ---@param MapId EWorldConquestMapId
 ---@param Index uint32
 ---@param SerialNumber int32
@@ -4538,6 +4539,7 @@ AStorageFacilityBuildSite = {}
 ---@field DestroyedSoundCue USoundCue
 ---@field ItemHolder UItemHolderComponent
 ---@field ItemHolderItems TArray<FItemInstance>
+---@field ActorLog FActorLog
 ---@field TechID ETechID
 ---@field TechComponentIDs TArray<ETechComponentID>
 ---@field GarrisonComponent UGarrisonComponent
@@ -4727,6 +4729,8 @@ function ASubmarineVehicle:ShowDamageDepthWarning() end
 function ASubmarineVehicle:OnRep_TorpedoTubeStates() end
 ---@param PrevReplicatedElectricity uint8
 function ASubmarineVehicle:OnRep_ReplicatedElectricity(PrevReplicatedElectricity) end
+---@param PrevBallastsInfo TArray<FBallastInfo>
+function ASubmarineVehicle:OnRep_Ballasts(PrevBallastsInfo) end
 ---@param Location FVector
 function ASubmarineVehicle:MulticastPlayCrushFX(Location) end
 function ASubmarineVehicle:CheckDamageDepthWarning() end
@@ -5394,6 +5398,12 @@ FActivityStateInfo = {}
 
 
 
+---@class FActorLog
+---@field Entries TArray<FActorLogEntry>
+FActorLog = {}
+
+
+
 ---@class FActorLogEntry
 ---@field OnlineID FString
 ---@field PlayerName FString
@@ -5409,6 +5419,18 @@ FActorLogEntry = {}
 ---@class FActorLogPage
 ---@field EntryList TArray<FActorLogEntry>
 FActorLogPage = {}
+
+
+
+---@class FAddGlobalLogEntryRequest
+---@field OnlineID FString
+---@field PlayerName FString
+---@field Type EGlobalLogEntryType
+---@field MapId int8
+---@field FactionId EFactionId
+---@field Value int32
+---@field Timestamp int64
+FAddGlobalLogEntryRequest = {}
 
 
 
@@ -5665,6 +5687,13 @@ FAssemblyModification = {}
 
 
 
+---@class FAssignSquadOfficerToLeaderWarMessage
+---@field SquadId int32
+---@field OfficerOnlineId FString
+FAssignSquadOfficerToLeaderWarMessage = {}
+
+
+
 ---@class FBallastInfo
 ---@field Type EBallastType
 ---@field Offset FVector
@@ -5741,6 +5770,7 @@ FBanReasonInfo = {}
 ---@field ReserveStockpileStyle FReserveStockpileStyle
 ---@field WarAchievementsStyle FWarAchievementsStyle
 ---@field FactionIcons FSlateBrush
+---@field PlayerOnlineStatusIcons FSlateBrush
 ---@field GeneralPurposeIcons FGeneralPurposeIcons
 ---@field WeatherStyle FWeatherStyle
 ---@field ListeningAreaStyle FListeningAreaStyle
@@ -5770,6 +5800,22 @@ FBatchRegimentIdRequest = {}
 ---@field RequestID int32
 ---@field RegimentIds TArray<int32>
 FBatchRegimentIdResponse = {}
+
+
+
+---@class FBenchmarkReplay
+---@field StartPosition FVector
+---@field StartRotation FRotator
+---@field Frames TArray<FBenchmarkReplayFrame>
+FBenchmarkReplay = {}
+
+
+
+---@class FBenchmarkReplayFrame
+---@field Frame int32
+---@field Input FVector
+---@field bWantsToSprint boolean
+FBenchmarkReplayFrame = {}
 
 
 
@@ -6346,14 +6392,19 @@ FCraterMeshStop = {}
 
 
 ---@class FCreateDebugMapPostRequest
----@field NewMapPost FMapPost
+---@field Request FCreateMapPostRequest
 FCreateDebugMapPostRequest = {}
 
 
 
 ---@class FCreateMapPostRequest
----@field NewMapPost FMapPost
+---@field Text FString
+---@field NormalizedMapCoords FVector2D
+---@field MapId int8
+---@field MapPostType EMapPostType
+---@field FacilityMapPostType EFacilityMapPostType
 ---@field bIsModModeOn boolean
+---@field GroupId int32
 FCreateMapPostRequest = {}
 
 
@@ -6477,6 +6528,12 @@ FDeleteMapPostRequest = {}
 ---@field bSuccess boolean
 ---@field DeletedPostOwnerOnlineID FString
 FDeleteMapPostResponse = {}
+
+
+
+---@class FDenySquadOfficerToLeaderWarMessage
+---@field SquadId int32
+FDenySquadOfficerToLeaderWarMessage = {}
 
 
 
@@ -6647,6 +6704,7 @@ FFacilityRefineryOrder = {}
 ---@field DisabledButtonStyle FButtonStyle
 ---@field PausedButtonStyle FButtonStyle
 ---@field EnabledButtonStyle FButtonStyle
+---@field ConversionInfoStyle FButtonStyle
 FFacilityStyle = {}
 
 
@@ -6947,7 +7005,7 @@ FGetMapPostsRequest = {}
 
 
 ---@class FGetMapPostsResponse
----@field PostList TArray<FMapPost>
+---@field MapPosts TArray<FRepMapPost>
 FGetMapPostsResponse = {}
 
 
@@ -7017,6 +7075,36 @@ FGlobalAdminCommandRequest = {}
 
 
 
+---@class FGlobalLogEntry
+---@field OnlineID FString
+---@field PlayerName FString
+---@field Type EGlobalLogEntryType
+---@field Value int32
+---@field Timestamp FDateTime
+---@field MapId int8
+FGlobalLogEntry = {}
+
+
+
+---@class FGlobalLogPage
+---@field Entries TArray<FGlobalLogEntry>
+FGlobalLogPage = {}
+
+
+
+---@class FGlobalLogPageRequest
+---@field LogPageIndex int32
+FGlobalLogPageRequest = {}
+
+
+
+---@class FGlobalLogPageResponse
+---@field LogPage FGlobalLogPage
+---@field PageCount int32
+FGlobalLogPageResponse = {}
+
+
+
 ---@class FGlobalResourceState
 ---@field Colonials FFactionResourceState
 ---@field Wardens FFactionResourceState
@@ -7029,7 +7117,7 @@ FGlobalResourceState = {}
 ---@field bEnableOverpopMode boolean
 ---@field bRedirectToShardSelector boolean
 ---@field OverpopShardId int32
----@field OverpopText FString
+---@field OverpopTextType EOverpopText
 ---@field OverpopYesButton FString
 ---@field OverpopNoButton FString
 FGlobalShardConfig = {}
@@ -7401,6 +7489,7 @@ FItemProfileData = {}
 
 ---@class FItemSlotFilter
 ---@field CodeName FName
+---@field ExtraCodeNames TSet<FName>
 ---@field StackLimit int32
 FItemSlotFilter = {}
 
@@ -7415,6 +7504,7 @@ FItemSlotFilter = {}
 ---@field CornerWidgetHeight float
 ---@field CornerWidgetPadding float
 ---@field SlotFilterBrush FSlateBrush
+---@field MultiSlotFilterBrush FSlateBrush
 FItemStyle = {}
 
 
@@ -7441,6 +7531,10 @@ FJoinSquadRequestMessage = {}
 ---@field NewMemberRegimentTag FString
 FJoinSquadWarMessage = {}
 
+
+
+---@class FLandscapeDeformationTickFunction : FTickFunction
+FLandscapeDeformationTickFunction = {}
 
 
 ---@class FLargeShipGunnerInfo
@@ -7508,6 +7602,7 @@ FLoadoutBackpackItem = {}
 ---@field NumBackpackSlots uint8
 ---@field bHasUniform boolean
 ---@field bAllowPartialAssembly boolean
+---@field bAutoSubmitStarterItems boolean
 FLoadoutData = {}
 
 
@@ -7751,6 +7846,7 @@ FMapGridConfig = {}
 ---@field bUseTeamSpecificIcon boolean
 ---@field IntelDetectionRadius float
 ---@field HalfDetectionAngle float
+---@field SortOrder uint32
 ---@field FactionIconBrushes FSlateBrush
 FMapIconStyle = {}
 
@@ -7842,6 +7938,13 @@ FMapItemDetails = {}
 
 
 
+---@class FMapItemInfo
+---@field CodeName FName
+---@field DetailValue int16
+FMapItemInfo = {}
+
+
+
 ---@class FMapLegendFactionStyle
 ---@field InfantryBrush FSlateBrush
 ---@field VehicleBrush FSlateBrush
@@ -7873,17 +7976,11 @@ FMapLegendStyle = {}
 
 
 
----@class FMapPost
----@field OriginalEntry FMapPostEntry
----@field ReplyList TArray<FMapPostEntry>
----@field MapId int8
----@field NormalizedMapCoords FVector2D
----@field MapPostType EMapPostType
----@field GroupId int32
----@field VoteList TArray<FMapPostVote>
----@field Rank int32
----@field CommsRating float
-FMapPost = {}
+---@class FMapPostDetails
+---@field Flags uint16
+---@field SummedItems TArray<FMapPostItemEntry>
+---@field MapItemInfos TArray<FMapItemInfo>
+FMapPostDetails = {}
 
 
 
@@ -7892,6 +7989,13 @@ FMapPost = {}
 ---@field Text FString
 ---@field UnixTimeStamp int64
 FMapPostEntry = {}
+
+
+
+---@class FMapPostItemEntry
+---@field CodeName FName
+---@field Quantity int32
+FMapPostItemEntry = {}
 
 
 
@@ -7906,6 +8010,15 @@ FMapPostMember = {}
 
 
 
+---@class FMapPostQueryData
+---@field MapPostID int32
+---@field MapId int8
+---@field FacilityMapPostType int8
+---@field NormalizedMapCoords FVector2D
+FMapPostQueryData = {}
+
+
+
 ---@class FMapPostReplyRequest
 ---@field OriginalPosterOnlineId FString
 ---@field ReplyText FString
@@ -7916,6 +8029,26 @@ FMapPostReplyRequest = {}
 ---@class FMapPostReplyResponse
 ---@field bSuccess boolean
 FMapPostReplyResponse = {}
+
+
+
+---@class FMapPostRequest
+---@field MapPostID int32
+---@field OriginMapID int8
+---@field RequesterFactionID EFactionId
+---@field RequesterOnlineID FString
+---@field Requester FUObjectHandle
+FMapPostRequest = {}
+
+
+
+---@class FMapPostResponse
+---@field QueryData FMapPostQueryData
+---@field OriginMapID int8
+---@field RequesterFactionID EFactionId
+---@field RequesterOnlineID FString
+---@field Requester FUObjectHandle
+FMapPostResponse = {}
 
 
 
@@ -7935,14 +8068,8 @@ FMapPostReplyResponse = {}
 ---@field TextInputBoxStyle FEditableTextBoxStyle
 ---@field BackgroundImage FSlateBrush
 ---@field ContentBackgroundImage FSlateBrush
+---@field FacilityPostMapIcons FSlateBrush
 FMapPostStyle = {}
-
-
-
----@class FMapPostVote
----@field VoterOnlineID FString
----@field VoteType EMapPostVoteType
-FMapPostVote = {}
 
 
 
@@ -8631,6 +8758,15 @@ FRPCMapItemResponse = {}
 
 
 
+---@class FRPCMapPostMessage
+---@field bFoundMapPostDetails boolean
+---@field MapPostID int32
+---@field MapPostDetails FMapPostDetails
+---@field Requester FUObjectHandle
+FRPCMapPostMessage = {}
+
+
+
 ---@class FRPCRegionZoneRequest
 ---@field Origin EWorldConquestMapId
 ---@field Requester FUObjectHandle
@@ -8878,7 +9014,7 @@ FRay_NetQuantize = {}
 
 ---@class FReassignSquadLeaderWarMessage
 ---@field SquadId int32
----@field NewLeaderOnlineID FString
+---@field NewLeaderOnlineId FString
 FReassignSquadLeaderWarMessage = {}
 
 
@@ -9081,6 +9217,14 @@ FRegionConnectionInfo = {}
 
 
 
+---@class FRegionLog
+---@field Entries TArray<FRegionLogEntry>
+---@field NextEntryIndex int32
+---@field NextRegionLogID uint32
+FRegionLog = {}
+
+
+
 ---@class FRegionLogEntry
 ---@field OnlineID FString
 ---@field PlayerName FString
@@ -9089,15 +9233,22 @@ FRegionConnectionInfo = {}
 ---@field EventTime FDateTime
 ---@field LocationX float
 ---@field LocationY float
----@field RegionLogId uint32
+---@field RegionLogID uint32
 ---@field CodeName FName
 FRegionLogEntry = {}
 
 
 
 ---@class FRegionLogPage
----@field EntryList TArray<FRegionLogEntry>
+---@field Entries TArray<FRegionLogEntry>
 FRegionLogPage = {}
+
+
+
+---@class FRegionLogs
+---@field Colonial FRegionLog
+---@field Warden FRegionLog
+FRegionLogs = {}
 
 
 
@@ -9143,6 +9294,38 @@ FRemoveMemberFromRegimentMessage = {}
 ---@field SquadId int32
 ---@field NewName FString
 FRenameSquadWarMessage = {}
+
+
+
+---@class FRepMapPost
+---@field ID int32
+---@field OriginalEntry FMapPostEntry
+---@field ReplyList TArray<FMapPostEntry>
+---@field NormalizedMapCoords FVector2D
+---@field MapId int8
+---@field MapPostType EMapPostType
+---@field FacilityMapPostType EFacilityMapPostType
+---@field LocalVoteType EMapPostVoteType
+---@field GroupId int32
+---@field TotalVotes int32
+---@field Rank int32
+FRepMapPost = {}
+
+
+
+---@class FRepPlayerMovement
+---@field LinearVelocity FVector
+---@field Location FVector
+---@field Rotation FRotator
+---@field MovementBase UPrimitiveComponent
+---@field BoneName FName
+---@field LastUpdateClientTimeStamp float
+---@field bServerHasBaseComponent boolean
+---@field MovementMode uint8
+---@field LocationQuantizationLevel EVectorQuantization
+---@field VelocityQuantizationLevel EVectorQuantization
+---@field RotationQuantizationLevel ERotatorQuantization
+FRepPlayerMovement = {}
 
 
 
@@ -9234,6 +9417,13 @@ FRepTrainMovement = {}
 ---@field Temperature uint8
 ---@field Items TArray<FStockpileEntry>
 FReplicatedShippableData = {}
+
+
+
+---@class FRequestSquadOfficerToLeaderMessage
+---@field SquadId int32
+---@field OfficerOnlineId FString
+FRequestSquadOfficerToLeaderMessage = {}
 
 
 
@@ -9729,14 +9919,6 @@ FSplineConnectorComponentConfig = {}
 
 
 
----@class FSplineConnectorMeshComponentInfo
----@field MeshComponent UMeshComponent
----@field BuildGhostMaterialOverride UMaterialInterface
----@field BuildSiteMaterialOverride UMaterialInterface
-FSplineConnectorMeshComponentInfo = {}
-
-
-
 ---@class FSplineConnectorMeshConfig
 ---@field Mesh UStaticMesh
 ---@field Meshes TArray<UStaticMesh>
@@ -9802,6 +9984,10 @@ FSplineConnectorMeshConfigPoint = {}
 
 ---@class FSplineConnectorMeshConfigTransient
 FSplineConnectorMeshConfigTransient = {}
+
+
+---@class FSplineConnectorTickFunction : FTickFunction
+FSplineConnectorTickFunction = {}
 
 
 ---@class FSquad
@@ -9878,6 +10064,7 @@ FSquadManager = {}
 ---@class FSquadMember
 ---@field OnlineID FString
 ---@field Name FString
+---@field bIsOfficer boolean
 FSquadMember = {}
 
 
@@ -9888,6 +10075,7 @@ FSquadMember = {}
 ---@field Name FString
 ---@field bIsAdd boolean
 ---@field bIsActive boolean
+---@field bIsOfficer boolean
 FSquadMemberDeltaMessage = {}
 
 
@@ -9906,6 +10094,29 @@ FSquadMessageMessage = {}
 ---@field Message FString
 ---@field Language int8
 FSquadMessageWarMessage = {}
+
+
+
+---@class FSquadOfficerDeltaMessage
+---@field SquadId int32
+---@field OnlineID FString
+---@field bNewOfficerState boolean
+FSquadOfficerDeltaMessage = {}
+
+
+
+---@class FSquadOfficerDeltaWarMessage
+---@field SquadId int32
+---@field OnlineID FString
+---@field bNewOfficerState boolean
+FSquadOfficerDeltaWarMessage = {}
+
+
+
+---@class FSquadOfficerToLeaderResponseMessage
+---@field SquadId int32
+---@field bRequestSuccessful boolean
+FSquadOfficerToLeaderResponseMessage = {}
 
 
 
@@ -9952,6 +10163,7 @@ FSquadReplicatedState = {}
 ---@field PrivacyCheckBox FCheckBoxStyle
 ---@field PrivateIcon FSlateBrush
 ---@field LeaderIcon FSlateBrush
+---@field OfficerIcon FSlateBrush
 ---@field SquadNameColour FSlateColor
 ---@field LeaderNameColour FSlateColor
 ---@field InactiveLeaderNameColour FSlateColor
@@ -10015,6 +10227,16 @@ FStatusStyle = {}
 FStealthChecker = {}
 
 
+---@class FStockpileAccessEvent
+---@field CodeName FName
+---@field Quantity int16
+---@field bIsCrate boolean
+---@field OnlineID FString
+---@field Name FString
+FStockpileAccessEvent = {}
+
+
+
 ---@class FStockpileBroadcastAlertInfo
 ---@field StockpilerOnlineID FString
 ---@field StockpilerPlayerName FString
@@ -10038,8 +10260,12 @@ FStockpileEntry = {}
 
 
 
----@class FStockpileEventsResponse
-FStockpileEventsResponse = {}
+---@class FStockpileEvents
+---@field ItemEvents TArray<FStockpileAccessEvent>
+---@field VehicleEvents TArray<FStockpileAccessEvent>
+---@field StructureEvents TArray<FStockpileAccessEvent>
+FStockpileEvents = {}
+
 
 
 ---@class FStockpileItemFilter
@@ -10131,6 +10357,48 @@ FSurfaceMovementData = {}
 ---@field ID ETechResourceID
 ---@field Amount int16
 FTechResource = {}
+
+
+
+---@class FTechStateDataFormat
+---@field Name FString
+---@field UniqueId int32
+---@field TechIndexToItemIndex TArray<int32>
+FTechStateDataFormat = {}
+
+
+
+---@class FTechStateEndMessage
+---@field TechStateID int32
+---@field CompletedTimes TArray<int64>
+---@field ActivityWeights TArray<float>
+FTechStateEndMessage = {}
+
+
+
+---@class FTechStateStartMessage
+---@field TechStateID int32
+---@field DataUniqueID int8
+---@field TeamId int8
+---@field Territory int8
+---@field bIsContested boolean
+FTechStateStartMessage = {}
+
+
+
+---@class FTechStateToolData
+---@field MapNames TArray<FString>
+---@field TechNames TArray<FString>
+---@field Formats TArray<FTechStateDataFormat>
+FTechStateToolData = {}
+
+
+
+---@class FTechStateUpdateMessage
+---@field TechStateID int32
+---@field CompletedTimes TArray<int64>
+---@field ActivityWeights TArray<float>
+FTechStateUpdateMessage = {}
 
 
 
@@ -10664,6 +10932,10 @@ FWarBenchmarkAlgorithmBase = {}
 
 
 
+---@class FWarBenchmarkMovementRecorderTickFunction : FTickFunction
+FWarBenchmarkMovementRecorderTickFunction = {}
+
+
 ---@class FWarBlueprints
 ---@field Characters UObjectLibrary
 ---@field ItemPickups UObjectLibrary
@@ -10986,6 +11258,7 @@ FWarRecordList = {}
 ---@field SubmarineIceHideDepth float
 ---@field FoundationMaxHitHeight float
 ---@field FoundationHitsThreshold float
+---@field bIsFastBuild boolean
 FWarReplicatedTweakables = {}
 
 
@@ -11053,7 +11326,7 @@ FWarServiceReplicatedState = {}
 ---@field EventMapName FString
 ---@field EventServerPassword FString
 ---@field NormalizedGlobalPopulation float
----@field Description FString
+---@field DescriptionType EShardDescription
 FWarShardInfo = {}
 
 
@@ -11400,10 +11673,17 @@ FWarTimeDiscrepancy = {}
 ---@field AuthFailureDurationRequiredSeconds float
 ---@field AuthReEnableSeconds float
 ---@field BorderDecayFactor float
----@field bAllowStockpileExternalUser boolean
 ---@field WarBalancerMaxPopulationChangePerTick int32
----@field bGateLongRangeArtilleryFiringOnTech boolean
 ---@field RareMetalWeightAdjustment int32
+---@field CommendHistoryExpirySecs float
+---@field GlobalRefineSpeedModifer float
+---@field FacilityMapPostItemRadius float
+---@field bAllowStockpileExternalUser boolean
+---@field bGateLongRangeArtilleryFiringOnTech boolean
+---@field bAllowSquadMissingMembers boolean
+---@field bUseDevVotesRequiredCount boolean
+---@field bUseDevRestrictionDuration boolean
+---@field bFactionLock boolean
 FWarTweakables = {}
 
 
@@ -11840,13 +12120,17 @@ function UAIGunTurretComponent:MulticastPlayFiringFX(HitResult) end
 ---@field bReduceRangeAtNight boolean
 ---@field bIgnoreLineOfSight boolean
 ---@field bFlaresNegateNightRangeReduction boolean
+---@field SeatOffset FVector
 ---@field TriggerBoxOffset FVector
 ---@field TriggerBoxExtents FVector
 ---@field bIs360ViewWhenMounted boolean
 ---@field SuppressionPercentage uint8
----@field bIsSuppressible boolean
 ---@field AttackDelayAgainstVehicles float
+---@field bIsSuppressible boolean
 ---@field bShowExtraTracers boolean
+---@field bLimitOccupantFiringArc boolean
+---@field MaxOccupantFiringArcDeviation float
+---@field OccupantFiringConeAngle float
 ---@field bUsesLegacyFoxholeTurretDamageSelection boolean
 ---@field bUseATDamageForVehicle boolean
 ---@field ImpactEffect TSubclassOf<AImpactEffect>
@@ -12036,6 +12320,12 @@ function UBandagesComponent:ServerUseBandages(ActivityStateChange) end
 function UBandagesComponent:OnRep_IsEquipped() end
 
 
+---@class UBannerAnimInstance : UAnimInstance
+---@field WindSpeedNormalized float
+UBannerAnimInstance = {}
+
+
+
 ---@class UBarbedWireComponent : UBoxComponent
 UBarbedWireComponent = {}
 
@@ -12194,6 +12484,7 @@ UCalloutComponent = {}
 ---@field AimOffsetYaw float
 ---@field AimOffsetPitch float
 ---@field PlayRateNative float
+---@field CrankingPlayRateNative float
 ---@field CharacterStance ESimCharacterStance
 ---@field ActivityState ECharacterActivityState
 ---@field EquippedWeaponGripType EEquippedWeaponGripType
@@ -12790,6 +13081,7 @@ UGenericItemStockpileComponent = {}
 ---@field VehicleCrates TArray<FStockpileEntry>
 ---@field Structures TArray<FStockpileEntry>
 ---@field StructureCrates TArray<FStockpileEntry>
+---@field Events FStockpileEvents
 UGenericStockpileComponent = {}
 
 function UGenericStockpileComponent:OnRep_Items() end
@@ -13161,6 +13453,10 @@ ULandingCraftAnimInstance = {}
 ---@field InProgressTreeRebuilds TArray<UFoliageInstancedStaticMeshComponent>
 ULandscapeDeformationManager = {}
 
+---@param X float
+---@param Y float
+---@param Extent float
+function ULandscapeDeformationManager:VerifyLandscapeZ(X, Y, Extent) end
 ---@param Duration float
 ---@param bPersistent boolean
 ---@param bDrawOriginal boolean
@@ -13453,6 +13749,7 @@ function UMiscItemComponent:OnRep_IsEquipped() end
 ---@field NumMaskBits int32
 ---@field MaskStartBit int32
 ---@field LinkedSockets TArray<TWeakObjectPtr<UBuildSocketComponent>>
+---@field SpawnedActorComponents TMap<FName, TWeakObjectPtr<UActorComponent>>
 UModificationSlotComponent = {}
 
 
@@ -13539,6 +13836,12 @@ UMultiAmmoVehicleMountComponent = {}
 function UMultiAmmoVehicleMountComponent:ServerSetDesiredAmmoType(InDesiredAmmoType) end
 
 
+---@class UMultiFloorVisibilityToggleComponent : UVisibilityToggleAreaComponent
+---@field FloorVisibilityBitmask uint8
+UMultiFloorVisibilityToggleComponent = {}
+
+
+
 ---@class UMultiplexedSkeletalMeshComponent : UActorComponent
 ---@field TargetTag FName
 ---@field MeshStops TArray<FSkeletalMeshStop>
@@ -13595,10 +13898,6 @@ UObscuringSphereComponent = {}
 
 ---@class UObstructionCheckBoxComponent : UBoxComponent
 UObstructionCheckBoxComponent = {}
-
-
----@class UOccupiableDefensibleComponent : UStructureSeatComponent
-UOccupiableDefensibleComponent = {}
 
 
 ---@class UParkingSpotComponent : USceneComponent
@@ -13668,7 +13967,6 @@ UPlayerCameraRigComponent = {}
 
 ---@class UPlayerCharacterMovementComponent : UCharacterMovementComponent
 ---@field MaxWalkSpeedProne float
----@field ProneHalfHeight float
 ---@field MaxLadderClimbingSpeed float
 ---@field ImmersionDepthHeightBias float
 ---@field WaterFrictionCoefficient float
@@ -14103,6 +14401,9 @@ UScoutVehicleAnimInstance = {}
 ---@field MountComponent TSubclassOf<UMountComponent>
 ---@field ModularMounts FModularMounts
 ---@field ItemHolderIndex int32
+---@field bOverrideHandIK boolean
+---@field LeftHandIKSocketName FName
+---@field RightHandIKSocketName FName
 ---@field bUsableWhenAnchored boolean
 ---@field bUsableWhenSubmerged boolean
 ---@field bIsEnabled boolean
@@ -14130,8 +14431,6 @@ function USensorOperatorMountComponent:ServerStartInvoke(ActivityStateChange, bI
 ---@class UServerSettings : USaveGame
 ---@field bFriendlyFire boolean
 ---@field bLoginRestrictions boolean
----@field bDevBranchMode boolean
----@field bFactionLock boolean
 ---@field bAllowMods boolean
 ---@field AddedTimePerHomeSpawn float
 ---@field ConquestIteration int32
@@ -14142,7 +14441,6 @@ function USensorOperatorMountComponent:ServerStartInvoke(ActivityStateChange, bI
 ---@field IsCommunityServer boolean
 ---@field GameplayFlags FGameplayFlags
 ---@field ServerRegion ERegionType
----@field GlobalRefineSpeedModifer float
 ---@field RefinableItemModifierList TArray<FRefinableItemModifier>
 ---@field GlobalRefineYieldModifier float
 ---@field ShardId int32
@@ -14439,8 +14737,6 @@ USpiderMechAnimInstance = {}
 ---@field ZFightingCompensation float
 ---@field BuildGhostZFightingCompensation float
 ---@field MeshConfigTransient TArray<FSplineConnectorMeshConfigTransient>
----@field InstancedMeshes TArray<FSplineConnectorMeshComponentInfo>
----@field SplineMeshes TArray<FSplineConnectorMeshComponentInfo>
 ---@field BoxComponents TArray<UBoxComponent>
 ---@field Decals TArray<UDecalComponent>
 USplineConnectorComponent = {}
@@ -14520,6 +14816,9 @@ UStructureSeatComponent = {}
 ---@field LeftTorpedoTubeState EDynamicState
 ---@field RightTorpedoTubeState EDynamicState
 ---@field DivePlaneAngle float
+---@field MainBallastPlayRate float
+---@field NegativeBallastPlayRate float
+---@field SafteyBallastPlayRate float
 USubmarineAnimInstance = {}
 
 
@@ -14642,6 +14941,9 @@ UTeamFlagMeshComponent = {}
 ---@field ItemProgress TArray<FTechTreeComponentItemProgress>
 ---@field ItemUnlockBits int32
 ---@field InfrastructureModCount uint8
+---@field TechStateID int32
+---@field CompletedTimes TArray<int64>
+---@field ActivityWeights TArray<float>
 ---@field DynamicOnResearched FTechTreeComponentDynamicOnResearched
 UTechTreeComponent = {}
 
@@ -14650,6 +14952,7 @@ function UTechTreeComponent:OnRep_ItemUnlockBits(PreviousItemUnlockBits) end
 
 
 ---@class UTechTreeComponentData : UActorComponent
+---@field UniqueId int8
 ---@field Items TArray<FTechTreeComponentItem>
 UTechTreeComponentData = {}
 
@@ -14747,6 +15050,7 @@ UTrackSwitchAnimInstance = {}
 
 
 ---@class UTrainPassengerMountComponent : UMountComponent
+---@field bAllowItemSubmission boolean
 UTrainPassengerMountComponent = {}
 
 ---@param TargetActor AActor
@@ -14797,13 +15101,6 @@ UTurretLightComponent = {}
 
 ---@class UUnexplodedOrdnanceDamageType : USimDamageType
 UUnexplodedOrdnanceDamageType = {}
-
-
----@class UUniformItemComponent : UItemComponent
----@field UniformType EUniformType
-UUniformItemComponent = {}
-
-function UUniformItemComponent:OnRep_UniformType() end
 
 
 ---@class UUniforms : UObject
@@ -15043,6 +15340,7 @@ UWarReplicationGraphNode_RailVehicleNode = {}
 ---@field SavedCharacterMap TMap<FString, FSavedCharacter>
 ---@field WarReporter FWarReporter
 ---@field WarBalancer FWarBalancer
+---@field RegionLogs FRegionLogs
 ---@field ResourceMineTransforms TArray<FTransform>
 ---@field ResourceFieldTransforms TArray<FTransform>
 ---@field OilRigTransforms TArray<FTransform>
@@ -15056,6 +15354,7 @@ UWarReplicationGraphNode_RailVehicleNode = {}
 ---@field Timestamp FDateTime
 ---@field bIsAutoSave boolean
 ---@field DestroyedDestructibleProps TSet<FName>
+---@field NextTechStateID int32
 UWarSaveGame = {}
 
 

@@ -282,6 +282,11 @@
     "Outer": "VillageWSmallG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -12.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 78.03238,
         "Y": -0.693723,
@@ -292,6 +297,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 18.0,
       "RelativeLocation": {
         "X": -2.1594858,
         "Y": 350.34735,
@@ -310,6 +318,11 @@
     "Outer": "VillageWSmallG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -15.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 92.76013,
         "Y": 170.97412,
@@ -320,6 +333,9 @@
         "Y": 65.0,
         "Z": 268.11786
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 30.0,
       "RelativeLocation": {
         "X": 409.94452,
         "Y": 11.06649,
@@ -338,11 +354,19 @@
     "Outer": "VillageWSmallG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -12.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 112.07021,
         "Y": 416.74554,
         "Z": -200.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 20.0,
       "RelativeLocation": {
         "X": 627.8298,
         "Y": 678.5553,
@@ -361,6 +385,11 @@
     "Outer": "VillageWSmallG1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -12.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 91.473366,
         "Y": 1.369835,
@@ -371,6 +400,9 @@
         "Y": 65.0,
         "Z": 300.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 20.0,
       "RelativeLocation": {
         "X": 815.83,
         "Y": 349.7328,
@@ -1453,10 +1485,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]

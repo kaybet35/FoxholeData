@@ -11,11 +11,11 @@ ABPCraterLarge_C = {}
 
 
 
----@class UPLACEHOLDER-CLASS__BPStructurePuddleMesh_C_2147482207
-UPLACEHOLDER-CLASS__BPStructurePuddleMesh_C_2147482207 = {}
+---@class UPLACEHOLDER-CLASS__BPStructurePuddleMesh_C_2147482213
+UPLACEHOLDER-CLASS__BPStructurePuddleMesh_C_2147482213 = {}
 
 
----@class UPLACEHOLDER-CLASS__BPTrenchBlockerCapsule_C_2147482206
-UPLACEHOLDER-CLASS__BPTrenchBlockerCapsule_C_2147482206 = {}
+---@class UPLACEHOLDER-CLASS__BPTrenchBlockerCapsule_C_2147482212
+UPLACEHOLDER-CLASS__BPTrenchBlockerCapsule_C_2147482212 = {}
 
 

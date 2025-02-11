@@ -3,7 +3,6 @@
 ---@class ABPComponentMine_C : AResourceMine
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field NoBuildArea UBoxComponent
----@field Collision05 UBoxComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field ScrapPiece_06 UStaticMeshComponent
@@ -15,10 +14,6 @@
 ---@field Level2Smoke UParticleSystemComponent
 ---@field Level2 USkeletalMeshComponent
 ---@field Wheelbarrow UStaticMeshComponent
----@field Collision04 UBoxComponent
----@field Collision03 UBoxComponent
----@field Collision02 UBoxComponent
----@field Collision01 UBoxComponent
 ---@field Decal UDecalComponent
 ---@field PointLight UPointLightComponent
 ---@field Level1Smoke UParticleSystemComponent

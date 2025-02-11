@@ -55,6 +55,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush ContentBackgroundImage;
     
+private:
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSlateBrush FacilityPostMapIcons[7];
+    
+public:
     WAR_API FMapPostStyle();
 };
 

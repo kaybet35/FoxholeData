@@ -3,8 +3,8 @@
 
 class ABPLiquidContainer_C : public AFuelContainer
 {
-    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x08A0 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0890 (size: 0x8)
 
-}; // Size: 0x8A8
+}; // Size: 0x898
 
 #endif

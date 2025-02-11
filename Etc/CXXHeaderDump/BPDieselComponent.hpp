@@ -3,6 +3,6 @@
 
 class UBPDieselComponent_C : public UFuelItemComponent
 {
-}; // Size: 0x8F8
+}; // Size: 0x900
 
 #endif

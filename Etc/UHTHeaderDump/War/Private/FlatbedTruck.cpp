@@ -12,9 +12,9 @@ AFlatbedTruck::AFlatbedTruck(const FObjectInitializer& ObjectInitializer) : Supe
     this->DynamicMeshComponent = NULL;
     this->TransferLocation = CreateDefaultSubobject<USceneComponent>(TEXT("TransferLocation"));
     this->GlobalShippableInfo = NULL;
+    this->BaseMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->RopeMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->TransferLocation->SetupAttachment(RootComponent);
-    this->BaseMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void AFlatbedTruck::OnRep_ShippableData() {

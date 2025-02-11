@@ -113,7 +113,7 @@ public:
     
 private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FMapIconStyle MapIconStyles[86];
+    FMapIconStyle MapIconStyles[87];
     
 public:
     FMapStyle();

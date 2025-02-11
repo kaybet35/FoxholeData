@@ -53,6 +53,7 @@ enum class ESimScreen : int32 {
     ReportPlayer,
     ActivityLog,
     RegionLog,
+    GlobalLog,
     FuelSilo,
     OilRefinery,
     AssemblyStation,

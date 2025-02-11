@@ -4,7 +4,6 @@
 ---@field CollisionBox UBoxComponent
 ---@field BuildSocket UBuildSocketComponent
 ---@field SkeletalMesh USkeletalMeshComponent
----@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ABPDeployedExplosiveTripod_C = {}
 
 

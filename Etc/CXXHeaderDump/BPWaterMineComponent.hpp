@@ -3,6 +3,6 @@
 
 class UBPWaterMineComponent_C : public UWaterMineItemComponent
 {
-}; // Size: 0x918
+}; // Size: 0x920
 
 #endif

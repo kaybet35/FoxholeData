@@ -3,8 +3,8 @@
 
 class ABPDrawbridgeA_C : public ADrawbridge
 {
-    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08B0 (size: 0x8)
+    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08A0 (size: 0x8)
 
-}; // Size: 0x8B8
+}; // Size: 0x8A8
 
 #endif

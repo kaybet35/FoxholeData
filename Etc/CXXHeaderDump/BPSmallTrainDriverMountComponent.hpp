@@ -3,6 +3,6 @@
 
 class UBPSmallTrainDriverMountComponent_C : public UTrainPassengerMountComponent
 {
-}; // Size: 0x848
+}; // Size: 0x850
 
 #endif

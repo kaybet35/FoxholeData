@@ -3,6 +3,6 @@
 
 class ABPTankMineSpline_C : public ABPMineSpline_C
 {
-}; // Size: 0x890
+}; // Size: 0x880
 
 #endif

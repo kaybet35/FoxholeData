@@ -53,8 +53,8 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->TeamId = 255;
     this->VisualCustomizationMask = 255;
     this->bIsWearingGasMask = false;
-    this->bIgnoreStanceInput = false;
     this->bUsesDynamicMaterials = true;
+    this->UniformType = EUniformType::Default;
     this->CurrentSurfaceType = SurfaceType_Default;
     this->Head = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Head"));
     const FProperty* p_Mesh_Parent = GetClass()->FindPropertyByName("Mesh");
@@ -77,7 +77,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->EnterWaterPS = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("EnterWaterPS"));
     this->SwimmingSFX = CreateDefaultSubobject<UAudioComponent>(TEXT("SwimmingSFX"));
     this->EnterWaterSFX = CreateDefaultSubobject<UAudioComponent>(TEXT("EnterWaterSFX"));
-    this->CharacterStance = ESimCharacterStance::Standing;
     this->CharacterActivityStateInternal = ECharacterActivityState::Idle;
     this->Health = 0.00f;
     this->ReplicatedItemEncumbrance = 0;
@@ -134,8 +133,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->BlockingMaxSpeedModifier = 0.50f;
     this->ChargingMaxSpeedModifier = 0.60f;
     this->AimingMaxSpeedModifier = 0.50f;
-    this->MouseAimScale = 4.00f;
-    this->NoAimYawScale = 0.20f;
     this->bDisablePlayerFogOfWar = false;
     this->AlwaysVisibleRadius = 700.00f;
     this->AimRadius = 400;
@@ -161,6 +158,12 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Grip_Standing->SetupAttachment(RootComponent);
     this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Grip_Prone->SetupAttachment(RootComponent);
+    this->Head->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Hands->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Legs->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Back->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->Helmet->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->EquippedItemMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->GasMaskMesh->SetupAttachment(RootComponent);
     this->Muzzle_Standing->SetupAttachment(RootComponent);
     this->Muzzle_Crouched->SetupAttachment(RootComponent);
@@ -171,12 +174,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->EnterWaterPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->SwimmingSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EnterWaterSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Head->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Hands->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Legs->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Back->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->Helmet->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->EquippedItemMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void ASimCharacter::SlowTick() {
@@ -245,18 +242,6 @@ bool ASimCharacter::ServerSwitchSeats_Validate(ASimVehicle* Vehicle, FActivitySt
 void ASimCharacter::ServerSimulateMeleeAttack_Implementation(FActivityStateChange ActivityStateChange) {
 }
 bool ASimCharacter::ServerSimulateMeleeAttack_Validate(FActivityStateChange ActivityStateChange) {
-    return true;
-}
-
-void ASimCharacter::ServerSetSprinting_Implementation(bool bIsSprinting) {
-}
-bool ASimCharacter::ServerSetSprinting_Validate(bool bIsSprinting) {
-    return true;
-}
-
-void ASimCharacter::ServerSetIsProne_Implementation(bool bIsProne) {
-}
-bool ASimCharacter::ServerSetIsProne_Validate(bool bIsProne) {
     return true;
 }
 
@@ -362,7 +347,13 @@ void ASimCharacter::OnRep_ZombieType() {
 void ASimCharacter::OnRep_VisualCustomizationMaskNotify() {
 }
 
+void ASimCharacter::OnRep_UniformType() {
+}
+
 void ASimCharacter::OnRep_TeamIdNotify() {
+}
+
+void ASimCharacter::OnRep_RepPlayerMovement(const FRepPlayerMovement& PrevSnapshot) {
 }
 
 void ASimCharacter::OnRep_MountComponent() {
@@ -390,9 +381,6 @@ void ASimCharacter::OnRep_CurrentVehicle(ASimVehicle* PreviousVehicle) {
 }
 
 void ASimCharacter::OnRep_CurrentOccupiedStructure() {
-}
-
-void ASimCharacter::OnRep_CharacterStance() {
 }
 
 void ASimCharacter::OnRep_CharacterActivityState() {
@@ -434,13 +422,7 @@ void ASimCharacter::ClientSetGainingHeatFromHits_Implementation(bool bIsGaining)
 void ASimCharacter::ClientSetFlyMode_Implementation(const bool bInIsFlyMode, const float FlyHeight, const float FlySpeed) {
 }
 
-void ASimCharacter::ClientLockStance_Implementation(ESimCharacterStance Stance, bool bLocked) {
-}
-
 void ASimCharacter::ClientInterruptActivityState_Implementation(uint8 SequenceNumber) {
-}
-
-void ASimCharacter::ClientEndWoundedState_Implementation() {
 }
 
 void ASimCharacter::ClientCorrectActivityState_Implementation(uint8 LastSuccessfulSequenceNumber, int8 HeldItemIndex, ECharacterActivityState NewState) {
@@ -477,15 +459,16 @@ void ASimCharacter::CheckForCover() {
 void ASimCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
+    DOREPLIFETIME(ASimCharacter, RepPlayerMovement);
     DOREPLIFETIME(ASimCharacter, MountComponent);
     DOREPLIFETIME(ASimCharacter, CurrentOccupiedStructure);
     DOREPLIFETIME(ASimCharacter, CurrentVehicle);
     DOREPLIFETIME(ASimCharacter, TeamId);
     DOREPLIFETIME(ASimCharacter, VisualCustomizationMask);
     DOREPLIFETIME(ASimCharacter, bIsWearingGasMask);
+    DOREPLIFETIME(ASimCharacter, UniformType);
     DOREPLIFETIME(ASimCharacter, ItemHolderItems);
     DOREPLIFETIME(ASimCharacter, EquipmentItemHolderItems);
-    DOREPLIFETIME(ASimCharacter, CharacterStance);
     DOREPLIFETIME(ASimCharacter, CharacterActivityStateInternal);
     DOREPLIFETIME(ASimCharacter, Health);
     DOREPLIFETIME(ASimCharacter, ReplicatedItemEncumbrance);

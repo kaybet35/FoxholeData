@@ -996,6 +996,7 @@
       },
       "bIsStockpilable": false,
       "bIsReserveStockpiled": false,
+      "bIsUsableFromVehicle": true,
       "bAllowsDirectPackaging": true,
       "DestroyedMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPLargeShipResourceShip_C:DestroyedMesh'",
@@ -2102,12 +2103,12 @@
       "BoxExtent": {
         "X": 700.0,
         "Y": 300.0,
-        "Z": 32.0
+        "Z": 128.0
       },
       "RelativeLocation": {
-        "X": -619.92694,
-        "Y": 9.501038,
-        "Z": 86.862625
+        "X": -620.0,
+        "Y": 0.0,
+        "Z": 180.0
       }
     }
   },
@@ -6503,6 +6504,12 @@
           "RelativeEndX": -1385.0,
           "Offset": 170.0,
           "Side": "ELeakOffsetRangeSide::Both"
+        },
+        {
+          "RelativeStartX": -1800.0,
+          "RelativeEndX": -1938.5,
+          "Offset": 120.0,
+          "Side": "ELeakOffsetRangeSide::Both"
         }
       ],
       "RoomVolumeNames": [
@@ -6511,7 +6518,7 @@
       "WaterVolumeNames": [
         "EngineRoomWater"
       ],
-      "BoundMinExtension": 300.0,
+      "BoundMinExtension": 130.0,
       "CollisionBoneLeft": "Room02",
       "CollisionBoneRight": "Room02",
       "DeckCollisionBones": [
@@ -6555,7 +6562,6 @@
       "WaterVolumeNames": [
         "HallwayRoomWater"
       ],
-      "BoundMaxExtension": -400.0,
       "CollisionBoneLeft": "Room01",
       "CollisionBoneRight": "Room01",
       "DeckCollisionBones": [
@@ -12630,6 +12636,10 @@
             {
               "Channel": "LandscapeAndWater",
               "Response": "ECR_Block"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -12789,6 +12799,10 @@
             {
               "Channel": "LandscapeAndWater",
               "Response": "ECR_Block"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }

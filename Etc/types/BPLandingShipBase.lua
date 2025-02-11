@@ -12,7 +12,7 @@
 ---@field Ladder1Right UHatchComponent
 ---@field Ladder1Left UHatchComponent
 ---@field Ladder1Deck UHatchComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field DriverExit USeatExitComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Scene USceneComponent

@@ -6,7 +6,6 @@
 #include "ESplineFootprintShapeType.h"
 #include "ESplineWaterPlacementRequirement.h"
 #include "SplineConnectorComponentConfig.h"
-#include "SplineConnectorMeshComponentInfo.h"
 #include "SplineConnectorMeshConfig.h"
 #include "SplineConnectorMeshConfigTransient.h"
 #include "SplineConnectorComponent.generated.h"
@@ -172,12 +171,6 @@ public:
     TArray<FSplineConnectorMeshConfigTransient> MeshConfigTransient;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<FSplineConnectorMeshComponentInfo> InstancedMeshes;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    TArray<FSplineConnectorMeshComponentInfo> SplineMeshes;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UBoxComponent*> BoxComponents;
     

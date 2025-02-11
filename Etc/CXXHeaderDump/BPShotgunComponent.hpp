@@ -3,6 +3,6 @@
 
 class UBPShotgunComponent_C : public UShotgunComponent
 {
-}; // Size: 0x9A8
+}; // Size: 0x9B0
 
 #endif

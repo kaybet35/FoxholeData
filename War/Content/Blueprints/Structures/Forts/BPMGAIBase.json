@@ -112,8 +112,8 @@
       "BuildCategory": "EBuildCategory::Bunker",
       "ValidBuildTools": 17,
       "ChassisName": {
-        "Namespace": "",
-        "Key": "86E524C64E8B5BC2621BB78D58A71FA6",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisEntrenchment",
         "SourceString": "Entrenchment",
         "LocalizedString": "Entrenchment"
       },
@@ -471,7 +471,8 @@
         "X": 170.0,
         "Y": 170.0,
         "Z": 128.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -570,6 +571,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -610,6 +615,7 @@
         "Y": 0.0,
         "Z": -160.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "ExcludeFromBuildGhost"
       ]

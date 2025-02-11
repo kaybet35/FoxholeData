@@ -53,5 +53,8 @@ enum class EEquippedWeaponGripType : uint8 {
     DedicatedMelee,
     DedicatedMeleeAlt,
     Shotgun,
+    Periscope,
+    StandingFrontCrank,
+    TwoHandItem,
 };
 

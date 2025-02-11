@@ -51,7 +51,7 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<ULadderComponent*> LadderComponents;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Ballasts, meta=(AllowPrivateAccess=true))
     TArray<FBallastInfo> Ballasts;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
@@ -155,6 +155,9 @@ public:
     
     UFUNCTION(BlueprintCallable)
     void OnRep_ReplicatedElectricity(uint8 PrevReplicatedElectricity);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_Ballasts(const TArray<FBallastInfo>& PrevBallastsInfo);
     
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void MulticastPlayCrushFX(FVector Location);

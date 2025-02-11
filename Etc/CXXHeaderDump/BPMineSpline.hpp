@@ -3,6 +3,6 @@
 
 class ABPMineSpline_C : public AMineSpline
 {
-}; // Size: 0x890
+}; // Size: 0x880
 
 #endif

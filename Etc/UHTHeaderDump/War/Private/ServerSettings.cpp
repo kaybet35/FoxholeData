@@ -3,8 +3,6 @@
 UServerSettings::UServerSettings() {
     this->bFriendlyFire = true;
     this->bLoginRestrictions = true;
-    this->bDevBranchMode = false;
-    this->bFactionLock = true;
     this->bAllowMods = true;
     this->AddedTimePerHomeSpawn = 20.00f;
     this->ConquestIteration = 0;
@@ -12,7 +10,6 @@ UServerSettings::UServerSettings() {
     this->MaxPlayers = 0;
     this->IsCommunityServer = false;
     this->ServerRegion = ERegionType::Global;
-    this->GlobalRefineSpeedModifer = 1.00f;
     this->GlobalRefineYieldModifier = 1.00f;
     this->ShardId = 0;
     this->SpawnInvulnerabilityTime = 3.00f;

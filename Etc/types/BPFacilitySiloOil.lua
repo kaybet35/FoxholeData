@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFacilitySiloOil_C : AFuelSilo
+---@field BPBuildFootprintBoxComponent1 UBPBuildFootprintBoxComponent_C
 ---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field BPFuelLightTemplate UTemplateComponent

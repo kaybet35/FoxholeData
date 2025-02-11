@@ -3,6 +3,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=AIModule -ObjectName=GenericTeamAgentInterface -FallbackName=GenericTeamAgentInterface
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Actor -FallbackName=Actor
+#include "ActorLog.h"
 #include "ClaimStatus.h"
 #include "DamageableActor.h"
 #include "EArmourType.h"
@@ -88,6 +89,11 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<FItemInstance> ItemHolderItems;
     
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FActorLog ActorLog;
+    
+protected:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ETechID TechID;
     

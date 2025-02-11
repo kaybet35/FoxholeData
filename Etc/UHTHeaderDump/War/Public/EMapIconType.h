@@ -90,6 +90,7 @@ enum class EMapIconType : uint8 {
     WeatherStation,
     MortarHouse,
     ResourceTransfer4,
+    FacilitySmallArmsFactory,
     MAX,
 };
 

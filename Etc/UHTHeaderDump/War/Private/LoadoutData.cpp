@@ -4,5 +4,6 @@ FLoadoutData::FLoadoutData() {
     this->NumBackpackSlots = 0;
     this->bHasUniform = false;
     this->bAllowPartialAssembly = false;
+    this->bAutoSubmitStarterItems = false;
 }
 

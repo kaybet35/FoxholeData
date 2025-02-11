@@ -3,6 +3,6 @@
 
 class UATRifleSniperCComponent_C : public USniperRifleComponent_C
 {
-}; // Size: 0x998
+}; // Size: 0x9A0
 
 #endif

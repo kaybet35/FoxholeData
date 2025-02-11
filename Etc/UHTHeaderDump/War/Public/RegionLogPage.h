@@ -8,7 +8,7 @@ struct FRegionLogPage {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    TArray<FRegionLogEntry> EntryList;
+    TArray<FRegionLogEntry> Entries;
     
     WAR_API FRegionLogPage();
 };

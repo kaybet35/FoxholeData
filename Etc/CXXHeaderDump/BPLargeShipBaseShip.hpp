@@ -78,7 +78,7 @@ class ABPLargeShipBaseShip_C : public ALargeShip
     class UParticleSystemComponent* WakeAft;                                          // 0x18D0 (size: 0x8)
     class UParticleSystemComponent* ExhaustBow0;                                      // 0x18D8 (size: 0x8)
     class UParticleSystemComponent* SideRight;                                        // 0x18E0 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x18E8 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x18E8 (size: 0x8)
     class UBPShipEngineUseComponent_C* BPShipEngineUseComponentStbd;                  // 0x18F0 (size: 0x8)
     class UBPShipEngineUseComponent_C* BPShipEngineUseComponentPort;                  // 0x18F8 (size: 0x8)
     class UTeamFlagMeshComponent* TeamFlagMesh1;                                      // 0x1900 (size: 0x8)

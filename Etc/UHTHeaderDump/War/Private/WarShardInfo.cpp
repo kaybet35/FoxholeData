@@ -12,5 +12,6 @@ FWarShardInfo::FWarShardInfo() {
     this->EnableJoinEventsQueueThreshold = 0;
     this->UprisingChanceType = EUprisingChanceType::None;
     this->NormalizedGlobalPopulation = 0.00f;
+    this->DescriptionType = EShardDescription::None;
 }
 

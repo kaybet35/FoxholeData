@@ -6,6 +6,7 @@
 #include "EWarPhase.h"
 #include "GameplayFlags.h"
 #include "PlayerWarState.h"
+#include "RegionLogs.h"
 #include "SavedActor.h"
 #include "SavedCharacter.h"
 #include "ScheduledWeatherState.h"
@@ -50,6 +51,9 @@ private:
     FWarBalancer WarBalancer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FRegionLogs RegionLogs;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FTransform> ResourceMineTransforms;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -87,6 +91,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSet<FName> DestroyedDestructibleProps;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NextTechStateID;
     
 public:
     UWarSaveGame();

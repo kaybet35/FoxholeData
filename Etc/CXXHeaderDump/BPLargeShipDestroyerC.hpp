@@ -94,7 +94,7 @@ class ABPLargeShipDestroyerC_C : public ALargeShip
     class UParticleSystemComponent* WakeAft;                                          // 0x1950 (size: 0x8)
     class UParticleSystemComponent* ExhaustAft;                                       // 0x1958 (size: 0x8)
     class UParticleSystemComponent* ExhaustFore;                                      // 0x1960 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x1968 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x1968 (size: 0x8)
     class USeatExitComponent* SonarExit9;                                             // 0x1970 (size: 0x8)
     class USeatTriggerComponent* SonarTrigger9;                                       // 0x1978 (size: 0x8)
     class UVehicleSeatComponent* SonarSeat8;                                          // 0x1980 (size: 0x8)

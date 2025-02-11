@@ -3,9 +3,9 @@
 
 class ABPEmplacedATLargeW_C : public AEmplacedWeapon
 {
-    class UStructureSeatComponent* OccupiableComponent;                               // 0x08B0 (size: 0x8)
-    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08B8 (size: 0x8)
+    class UStructureSeatComponent* OccupiableComponent;                               // 0x08A0 (size: 0x8)
+    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08A8 (size: 0x8)
 
-}; // Size: 0x8C0
+}; // Size: 0x8B0
 
 #endif

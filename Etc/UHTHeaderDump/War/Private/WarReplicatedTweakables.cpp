@@ -48,5 +48,6 @@ FWarReplicatedTweakables::FWarReplicatedTweakables() {
     this->SubmarineIceHideDepth = 0.00f;
     this->FoundationMaxHitHeight = 0.00f;
     this->FoundationHitsThreshold = 0.00f;
+    this->bIsFastBuild = false;
 }
 

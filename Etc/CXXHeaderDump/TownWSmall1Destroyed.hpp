@@ -3,9 +3,9 @@
 
 class ATownWSmall1Destroyed_C : public ADestroyedEmplacementHouse
 {
-    class UBPBicycleSpawnLocationComponent_C* BPBicycleSpawnLocationComponent;        // 0x0600 (size: 0x8)
-    class UStaticMeshComponent* TownWSmall1Destroyed;                                 // 0x0608 (size: 0x8)
+    class UBPBicycleSpawnLocationComponent_C* BPBicycleSpawnLocationComponent;        // 0x05F0 (size: 0x8)
+    class UStaticMeshComponent* TownWSmall1Destroyed;                                 // 0x05F8 (size: 0x8)
 
-}; // Size: 0x610
+}; // Size: 0x600
 
 #endif

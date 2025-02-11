@@ -3,7 +3,6 @@
 UPlayerCharacterMovementComponent::UPlayerCharacterMovementComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bShouldApplyFluidZBraking = false;
     this->MaxWalkSpeedProne = 80.00f;
-    this->ProneHalfHeight = 55.00f;
     this->MaxLadderClimbingSpeed = 0.00f;
     this->ImmersionDepthHeightBias = 25.00f;
     this->WaterFrictionCoefficient = 0.10f;

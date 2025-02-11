@@ -30,7 +30,7 @@ public:
     float LocationY;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 RegionLogId;
+    uint32 RegionLogID;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName CodeName;

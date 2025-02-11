@@ -37,7 +37,7 @@ class ABPGunboatW_C : public AGunboat
     class USeatTriggerComponent* DriverTrigger;                                       // 0x1358 (size: 0x8)
     class UStaticMeshComponent* Light;                                                // 0x1360 (size: 0x8)
     class USpotLightComponent* SpotLight;                                             // 0x1368 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x1370 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x1370 (size: 0x8)
     class UCameraComponent* Camera;                                                   // 0x1378 (size: 0x8)
 
     void BPOnVehicleOn(bool IsOn);

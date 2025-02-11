@@ -44,6 +44,7 @@
 #include "ERocketConsoleActionResult.h"
 #include "ERocketLaunchResponse.h"
 #include "ESimScreen.h"
+#include "EStockpileCategoryType.h"
 #include "EStockpileEntryType.h"
 #include "ETestEnum.h"
 #include "ETransactionResponse.h"
@@ -55,6 +56,7 @@
 #include "GameplayParams.h"
 #include "ListeningAreaDebugData.h"
 #include "MapItemDetails.h"
+#include "MapPostDetails.h"
 #include "PlayerActivity.h"
 #include "PlayerSpawnPointsInfo.h"
 #include "RPCRocketPreLaunchAlert.h"
@@ -70,10 +72,10 @@
 #include "SignedPayload.h"
 #include "SpawnPoint.h"
 #include "SpecializedFactoryOrderItem.h"
+#include "StockpileAccessEvent.h"
 #include "StockpileBroadcastAlertInfo.h"
 #include "StockpileEffects.h"
 #include "StockpileEntry.h"
-#include "StockpileEventsResponse.h"
 #include "StockpileItemFilter.h"
 #include "StructureStats.h"
 #include "TechTreeComponentNetworkStatus.h"
@@ -304,8 +306,8 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSubmitStructureToStockpile(ABuildableStructure* Structure, UActorComponent* TargetStockpile, const FString& TargetStockpileName);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerSubmitStarterKit(AActor* Actor);
+    UFUNCTION(Reliable, Server)
+    void ServerSubmitStarterKit(AActor* Actor, const uint16 Bitmask);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSubmitResourceConverterOrder(AActor* TargetActor, const int32 RefinableItemIndex, const bool bTransferAll);
@@ -458,8 +460,8 @@ private:
     void ServerRequestStructureInfo(AStructure* Structure, const bool bIsInitialRequest);
     
 public:
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerRequestStockpileAccessEvents(UGenericStockpileComponent* GenericStockpileComponent, const uint8 Index);
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void ServerRequestStockpileAccessEvents(UGenericStockpileComponent* GenericStockpileComponent, const EStockpileCategoryType CategoryType);
     
     UFUNCTION(Reliable, Server, WithValidation)
     void ServerRequestReserveStockpileLog(const AStructure* Structure, const FString& StockpileName, const uint32 PageIndex);
@@ -475,6 +477,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerRequestNetworkTechStatus(const AStructure* Structure);
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    void ServerRequestMapPostDetails(const int32 MapPostID);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerRequestMapItemDetails(const EWorldConquestMapId MapId, const int32 Index, const int32 SerialNumber);
@@ -982,7 +987,7 @@ public:
     void ClientReceiveTechResponse(const uint8 TechResponse);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientReceiveStockpileAccessEvents(UGenericStockpileComponent* GenericStockpileComponent, const uint8 Index, const FStockpileEventsResponse& EventsResponse);
+    void ClientReceiveStockpileAccessEvents(UGenericStockpileComponent* GenericStockpileComponent, const EStockpileCategoryType CategoryType, const TArray<FStockpileAccessEvent>& Events);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientReceiveRocketUpdateAlert(const FRPCRocketPreLaunchUpdateAlert& LaunchUpdateAlert);
@@ -999,6 +1004,9 @@ public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientReceiveNetworkTechStatus(const AStructure* Structure, const FTechTreeComponentNetworkStatus NetworkStatus);
     
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void ClientReceiveMapPostDetails(const int32 MapPostID, const FMapPostDetails MapPostDetails);
+    
     UFUNCTION(Client, Reliable)
     void ClientReceiveMapItemDetails(const EWorldConquestMapId MapId, const uint32 Index, const int32 SerialNumber, const FMapItemDetails& MapItemDetails);
     
@@ -1007,6 +1015,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientReceiveInfo();
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void ClientReceiveEmptyMapPostDetails(const int32 MapPostID);
     
     UFUNCTION(Client, Reliable)
     void ClientReceiveEmptyMapItemDetails(const EWorldConquestMapId MapId, const uint32 Index, const int32 SerialNumber);

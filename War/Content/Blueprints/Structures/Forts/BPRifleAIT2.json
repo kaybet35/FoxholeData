@@ -126,11 +126,21 @@
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/FortT2GunAIIcon.0"
       },
       "BuildCategory": "EBuildCategory::Bunker",
+      "DestroyedDamageExtent": {
+        "X": 250.0,
+        "Y": 250.0,
+        "Z": 261.0
+      },
+      "DestroyedDamageOffset": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 100.5
+      },
       "ValidBuildTools": 17,
       "CodeName": "RifleAIT2",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "71BC46154BF227E7DE80B49784A1DA9D",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisEntrenchment",
         "SourceString": "Entrenchment",
         "LocalizedString": "Entrenchment"
       },
@@ -316,6 +326,7 @@
         "Y": 0.0,
         "Z": -65.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "IncludeInBuildSite"
       ]
@@ -667,7 +678,8 @@
         "X": 170.0,
         "Y": 170.0,
         "Z": 128.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -775,6 +787,7 @@
         "Y": 0.0,
         "Z": -160.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "ExcludeFromBuildGhost"
       ]
@@ -807,6 +820,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -816,6 +833,7 @@
         "Y": 0.0,
         "Z": -160.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "RoofVisibility"
       ]

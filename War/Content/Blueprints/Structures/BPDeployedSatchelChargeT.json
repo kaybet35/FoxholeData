@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.12"
       }
     },
     "SuperStruct": {
@@ -31,11 +31,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPDeployedSatchelChargeT_C:CollisionBox'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.8"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDeployedSatchelChargeT_C:MultiplexedStaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.7"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -57,7 +53,7 @@
     "Properties": {
       "PayloadMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedSatchelChargeT_C:PayloadMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.14"
       },
       "HeightConfig": {
         "MaxHeight": 120.0
@@ -65,11 +61,11 @@
       "bIgnoresRadialDamage": true,
       "TripodMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedSatchelChargeT_C:TripodMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.15"
       },
       "GunMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedSatchelChargeT_C:GunMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.13"
       },
       "BaseItemCodeName": "ExplosiveTripod",
       "bEnableFriendlyFireTrackingOverride": false,
@@ -125,7 +121,7 @@
       "StructureNetRelevancySize": "EStructureNetRelevancySize::Small",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPDeployedSatchelChargeT_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.16"
       },
       "NetCullDistanceSquared": 25000000.0,
       "MinNetUpdateFrequency": 1.0,
@@ -181,6 +177,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -189,7 +189,8 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": 75.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -228,39 +229,6 @@
     }
   },
   {
-    "Type": "MultiplexedStaticMeshComponent",
-    "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
-    "Outer": "BPDeployedSatchelChargeT_C",
-    "Class": "UScriptClass'MultiplexedStaticMeshComponent'",
-    "Properties": {
-      "MeshStops": [
-        {
-          "Threshold": 0,
-          "StaticMesh": {
-            "ObjectName": "StaticMesh'StorageContainerCritical'",
-            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerCritical.2"
-          }
-        },
-        {
-          "Threshold": 33,
-          "StaticMesh": {
-            "ObjectName": "StaticMesh'StorageContainerDamaged'",
-            "ObjectPath": "War/Content/Meshes/Resources/StorageContainerDamaged.2"
-          }
-        },
-        {
-          "Threshold": 66,
-          "StaticMesh": {
-            "ObjectName": "StaticMesh'StorageContainer'",
-            "ObjectPath": "War/Content/Meshes/Resources/StorageContainer.2"
-          }
-        }
-      ],
-      "InputValue": 100,
-      "SelectedMeshIndex": 2
-    }
-  },
-  {
     "Type": "ObjectProperty",
     "Name": "CollisionBox",
     "Outer": "BPDeployedSatchelChargeT_C",
@@ -269,17 +237,6 @@
     "PropertyClass": {
       "ObjectName": "Class'BoxComponent'",
       "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "MultiplexedStaticMesh",
-    "Outer": "BPDeployedSatchelChargeT_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'MultiplexedStaticMeshComponent'",
-      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -300,28 +257,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDeployedSatchelChargeT_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.8"
       },
       "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_2",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'MultiplexedStaticMeshComponent'",
-        "ObjectPath": "/Script/War"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "MultiplexedStaticMeshComponent'BPDeployedSatchelChargeT_C:MultiplexedStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.7"
-      },
-      "VariableGuid": "D667579F-46309463-6D3D0483-D468D96E",
-      "InternalVariableName": "MultiplexedStaticMesh"
     }
   },
   {
@@ -370,35 +309,27 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.12"
-        },
-        {
           "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.13"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.10"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.14"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.11"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.12"
-        },
-        {
           "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.13"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.10"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.14"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.11"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDeployedSatchelChargeT_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.9"
       }
     }
   },
@@ -415,7 +346,7 @@
       "bReceivesDecals": false,
       "AttachParent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedSatchelChargeT_C:TripodMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.15"
       },
       "RelativeLocation": {
         "X": 4.5474736E-14,
@@ -437,7 +368,7 @@
     "Properties": {
       "AttachParent": {
         "ObjectName": "SkeletalMeshComponent'Default__BPDeployedSatchelChargeT_C:GunMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedSatchelChargeT.13"
       },
       "bVisible": true,
       "bHiddenInGame": true

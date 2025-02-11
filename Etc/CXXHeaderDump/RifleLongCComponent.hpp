@@ -3,6 +3,6 @@
 
 class URifleLongCComponent_C : public UGrenadeAdapterComponent
 {
-}; // Size: 0xA28
+}; // Size: 0xA30
 
 #endif

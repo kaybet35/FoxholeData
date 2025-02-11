@@ -1,0 +1,308 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'StlicanShelfShipLadder02_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.10"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Ladder'",
+      "ObjectPath": "/Script/War"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "StlicanShelfShipLadder02_C'Default__StlicanShelfShipLadder02_C'",
+      "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.1"
+    }
+  },
+  {
+    "Type": "StlicanShelfShipLadder02_C",
+    "Name": "Default__StlicanShelfShipLadder02_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Environment/StlicanShelfShipLadder02.StlicanShelfShipLadder02_C'",
+    "Properties": {
+      "LadderComponent": {
+        "ObjectName": "LadderComponent'Default__StlicanShelfShipLadder02_C:Ladder'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.5"
+      },
+      "BoxCollision": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      },
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__StlicanShelfShipLadder02_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.11"
+      },
+      "ClimbVolume": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:ClimbVolume'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.3"
+      },
+      "ClimbVolumeTop": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:ClimbVolumeTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.4"
+      },
+      "EnterPositionBottom": {
+        "ObjectName": "SceneComponent'Default__StlicanShelfShipLadder02_C:EnterPositionBottom'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.6"
+      },
+      "EnterPositionTop": {
+        "ObjectName": "SceneComponent'Default__StlicanShelfShipLadder02_C:EnterPositionTop'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.7"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BoxCollision",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 4.431171,
+        "Y": 37.0,
+        "Z": 225.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "BlockAllDynamic",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolume",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 44.86595,
+        "Z": 150.0
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      },
+      "RelativeLocation": {
+        "X": -23.7,
+        "Y": 6.1035156E-05,
+        "Z": -75.73053
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "ClimbVolumeTop",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      },
+      "RelativeLocation": {
+        "X": 33.84996,
+        "Y": 0.0027770996,
+        "Z": 255.62607
+      }
+    }
+  },
+  {
+    "Type": "LadderComponent",
+    "Name": "Ladder",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'LadderComponent'",
+    "Properties": {
+      "UpwardsExitZ": -40.0,
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionBottom",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      },
+      "RelativeLocation": {
+        "X": -54.99997,
+        "Y": 0.0,
+        "Z": -239.70595
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "EnterPositionTop",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      },
+      "RelativeLocation": {
+        "X": 55.0,
+        "Y": 9.034509E-05,
+        "Z": 256.2539
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'SceneComponent'"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'StlicanShelfShipLadder02_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.8"
+      },
+      "VariableGuid": "B2102D72-4C08FF25-154AC592-B5E0FCE2",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'StlicanShelfShipLadder02_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__StlicanShelfShipLadder02_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'LadderMetal09'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/LadderMetal09.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'LadderMetalSnow'",
+          "ObjectPath": "War/Content/Materials/Environment/Props/LadderMetalSnow.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "BoxComponent'Default__StlicanShelfShipLadder02_C:BoxCollision'",
+        "ObjectPath": "War/Content/Blueprints/Environment/StlicanShelfShipLadder02.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -229.07416
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00001,
+        "Roll": 0.0
+      }
+    }
+  }
+]

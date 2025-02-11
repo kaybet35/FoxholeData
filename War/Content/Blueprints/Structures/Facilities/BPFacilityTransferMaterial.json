@@ -121,8 +121,8 @@
       "ValidBuildTools": 24,
       "CodeName": "FacilityTransferMaterial",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "DE8ECCDD4D9806B8CE698F8977263B34",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisFacility",
         "SourceString": "Facility Structure",
         "LocalizedString": "Facility Structure"
       },
@@ -725,12 +725,19 @@
             "DepthChargeAmmo",
             "TorpedoAmmo",
             "TankMine",
-            "InfantryMine"
+            "InfantryMine",
+            "ExplosiveTripod",
+            "WindsockT",
+            "ListeningKit",
+            "ExplosiveLightC",
+            "SatchelChargeT"
           ],
           "PreStockedEntries": [],
           "RetrieveDurationModifiers": []
         }
       ],
+      "RetrieveDurationModifier": 0.1,
+      "CustomRetrieveDurationModifiers": [],
       "bIsRestrictedByClaimStatus": true
     }
   },
@@ -1096,6 +1103,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -1105,6 +1116,7 @@
         "Y": 0.0,
         "Z": 0.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Multiplexed"
       ]

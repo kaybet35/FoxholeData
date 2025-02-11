@@ -61,6 +61,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/BPDestroyedLandingDock.5"
       },
       "MaxHealth": 100000000,
+      "Health": 100000000,
       "UpgradeStructureCodeName": "LandingDock",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPDestroyedLandingDock_C:StealthComponent'",
@@ -107,6 +108,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -115,7 +120,8 @@
         "X": -400.0,
         "Y": -120.0,
         "Z": 190.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -256,7 +262,8 @@
       "StaticMesh": {
         "ObjectName": "StaticMesh'LandingDockDestroyed'",
         "ObjectPath": "War/Content/Meshes/Structures/LandingDockDestroyed.2"
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

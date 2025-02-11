@@ -1,12 +1,12 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "NoBuildArea",
+    "Name": "StaticMesh2",
     "Outer": "BPDestroyedScrapMine_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
+      "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDestroyedScrapMine_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.19"
       }
     },
     "SuperStruct": {
@@ -26,32 +26,24 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:NoBuildArea'",
+        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:StaticMesh2'",
         "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:StaticMesh1'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:NoBuildArea'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.9"
+      },
+      {
         "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:Decal'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.16"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:Box3'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.15"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:Box2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.14"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:Box1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.13"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:Box'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.8"
       },
       {
         "ObjectName": "ObjectProperty'BPDestroyedScrapMine_C:StaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.10"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -73,7 +65,7 @@
     "Properties": {
       "GenericStockpileComponent": {
         "ObjectName": "GenericItemStockpileComponent'Default__BPDestroyedScrapMine_C:GenericStockpileComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.7"
       },
       "CodeName": "DestroyedScrapMine",
       "ArrowComponent": {
@@ -82,7 +74,7 @@
       },
       "UseAreaBox": {
         "ObjectName": "BoxComponent'Default__BPDestroyedScrapMine_C:UseAreaBox'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.5"
       },
       "MaxHealth": 100000000,
       "Health": 100000000,
@@ -90,7 +82,7 @@
       "MapIconType": "EMapIconType::SalvageMine",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPDestroyedScrapMine_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.23"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPDestroyedScrapMine_C:StructureArrow'",
@@ -103,166 +95,6 @@
     "Name": "StructureArrow",
     "Outer": "Default__BPDestroyedScrapMine_C",
     "Class": "UScriptClass'ArrowComponent'"
-  },
-  {
-    "Type": "BoxComponent",
-    "Name": "Box1_GEN_VARIABLE",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Properties": {
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "bGenerateOverlapEvents": false,
-      "CanCharacterStepUpOn": "ECB_No",
-      "BodyInstance": {
-        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAllDynamic",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Work",
-              "Response": "ECR_Block"
-            },
-            {
-              "Channel": "Damage",
-              "Response": "ECR_Overlap"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": 155.5834,
-        "Y": 96.67031,
-        "Z": 53.687973
-      },
-      "RelativeScale3D": {
-        "X": 5.574639,
-        "Y": 1.826777,
-        "Z": 1.428935
-      }
-    }
-  },
-  {
-    "Type": "BoxComponent",
-    "Name": "Box2_GEN_VARIABLE",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Properties": {
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "bGenerateOverlapEvents": false,
-      "CanCharacterStepUpOn": "ECB_No",
-      "BodyInstance": {
-        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAllDynamic",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Work",
-              "Response": "ECR_Block"
-            },
-            {
-              "Channel": "Damage",
-              "Response": "ECR_Overlap"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": 49.55729,
-        "Y": -74.1564,
-        "Z": 214.28496
-      },
-      "RelativeScale3D": {
-        "X": 7.68535,
-        "Y": 3.227373,
-        "Z": 6.114025
-      }
-    }
-  },
-  {
-    "Type": "BoxComponent",
-    "Name": "Box3_GEN_VARIABLE",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Properties": {
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "bGenerateOverlapEvents": false,
-      "CanCharacterStepUpOn": "ECB_No",
-      "BodyInstance": {
-        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAllDynamic",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Work",
-              "Response": "ECR_Block"
-            },
-            {
-              "Channel": "Damage",
-              "Response": "ECR_Overlap"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": -124.28289,
-        "Y": 59.00965,
-        "Z": 355.79526
-      },
-      "RelativeScale3D": {
-        "X": 1.5,
-        "Y": 1.5,
-        "Z": 5.344438
-      }
-    }
-  },
-  {
-    "Type": "BoxComponent",
-    "Name": "Box_GEN_VARIABLE",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Properties": {
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "bGenerateOverlapEvents": false,
-      "CanCharacterStepUpOn": "ECB_No",
-      "BodyInstance": {
-        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "BlockAllDynamic",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Work",
-              "Response": "ECR_Block"
-            },
-            {
-              "Channel": "Damage",
-              "Response": "ECR_Overlap"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": -109.00613,
-        "Y": 78.06296,
-        "Z": 129.44693
-      },
-      "RelativeScale3D": {
-        "X": 5.574639,
-        "Y": 3.227373,
-        "Z": 3.243156
-      }
-    }
   },
   {
     "Type": "BoxComponent",
@@ -336,7 +168,8 @@
         "Pitch": 0.0,
         "Yaw": -179.99997,
         "Roll": 0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -380,7 +213,8 @@
         "Pitch": -90.0,
         "Yaw": 0.0,
         "Roll": 0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -388,50 +222,6 @@
     "Name": "GenericStockpileComponent",
     "Outer": "Default__BPDestroyedScrapMine_C",
     "Class": "UScriptClass'GenericItemStockpileComponent'"
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "Box",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "Box1",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "Box2",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "Box3",
-    "Outer": "BPDestroyedScrapMine_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
   },
   {
     "Type": "ObjectProperty",
@@ -446,7 +236,29 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "NoBuildArea",
+    "Outer": "BPDestroyedScrapMine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "StaticMesh",
+    "Outer": "BPDestroyedScrapMine_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh1",
     "Outer": "BPDestroyedScrapMine_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -473,7 +285,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDestroyedScrapMine_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.12"
       },
       "VariableGuid": "A3AB8F13-4593822F-7B49EE97-2C8ECB5C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -491,7 +303,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDestroyedScrapMine_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.22"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -511,7 +323,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPDestroyedScrapMine_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.6"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -531,7 +343,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPDestroyedScrapMine_C:NoBuildArea_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.4"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -541,82 +353,42 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
+    "Name": "SCS_Node_4",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'BoxComponent'",
+        "ObjectName": "Class'StaticMeshComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "BoxComponent'BPDestroyedScrapMine_C:Box_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.7"
+        "ObjectName": "StaticMeshComponent'BPDestroyedScrapMine_C:StaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.20"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
-      "VariableGuid": "2F8FA95C-48CA8671-56D2CD8E-64CA030D",
-      "InternalVariableName": "Box"
+      "VariableGuid": "5AF35092-4310AE5C-BB31DD80-7E16320B",
+      "InternalVariableName": "StaticMesh1"
     }
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
+    "Name": "SCS_Node_5",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'BoxComponent'",
+        "ObjectName": "Class'StaticMeshComponent'",
         "ObjectPath": "/Script/Engine"
       },
       "ComponentTemplate": {
-        "ObjectName": "BoxComponent'BPDestroyedScrapMine_C:Box1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.4"
+        "ObjectName": "StaticMeshComponent'BPDestroyedScrapMine_C:StaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.21"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
-      "VariableGuid": "461572B9-4182AF4B-C9F26B91-70B36EFB",
-      "InternalVariableName": "Box1"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'BoxComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent'BPDestroyedScrapMine_C:Box2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.5"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "B854DC3F-45D5440A-FC44EE9D-7959FAAA",
-      "InternalVariableName": "Box2"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_9",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'BoxComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent'BPDestroyedScrapMine_C:Box3_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.6"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "321BEBBC-4D32D29D-8B20B0B8-F4C55356",
-      "InternalVariableName": "Box3"
+      "VariableGuid": "8F0BABC1-44C3FE72-CF983DB0-A79D55F0",
+      "InternalVariableName": "StaticMesh2"
     }
   },
   {
@@ -628,67 +400,156 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.14"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.15"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.18"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.14"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.15"
         },
         {
           "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.18"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDestroyedScrapMine_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Mines/BPDestroyedScrapMine.13"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh1_GEN_VARIABLE",
+    "Outer": "BPDestroyedScrapMine_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BulwarkDressing_stoneSlab_1'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/BulwarkDressing_stoneSlab_1.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -142.0,
+        "Y": 0.0,
+        "Z": -17.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.000186,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      },
+      "Mobility": "EComponentMobility::Stationary"
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh2_GEN_VARIABLE",
+    "Outer": "BPDestroyedScrapMine_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BulwarkDressing_stoneSlab_1'",
+        "ObjectPath": "War/Content/Meshes/Environment/Props/BulwarkDressing_stoneSlab_1.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "bAutoWeld": false,
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 158.0,
+        "Y": 0.0,
+        "Z": -18.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -179.99992,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.5,
+        "Y": 0.5,
+        "Z": 0.5
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -706,56 +567,30 @@
       ],
       "bGenerateOverlapEvents": false,
       "bReceivesDecals": false,
-      "CanCharacterStepUpOn": "ECB_No",
       "BodyInstance": {
-        "ObjectType": "ECC_GameTraceChannel8",
-        "CollisionEnabled": "ECollisionEnabled::NoCollision",
-        "CollisionProfileName": "NoCollision",
+        "CollisionProfileName": "StructureDamageableMesh",
         "CollisionResponses": {
           "ResponseArray": [
             {
-              "Channel": "WorldStatic",
-              "Response": "ECR_Ignore"
+              "Channel": "Work",
+              "Response": "ECR_Block"
             },
             {
-              "Channel": "WorldDynamic",
-              "Response": "ECR_Ignore"
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
             },
             {
-              "Channel": "Pawn",
-              "Response": "ECR_Ignore"
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
             },
             {
-              "Channel": "Visibility",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Camera",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "PhysicsBody",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Vehicle",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Destructible",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "OverlapDowncast",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Projectile",
-              "Response": "ECR_Ignore"
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

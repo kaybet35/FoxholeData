@@ -15,9 +15,6 @@ public:
     float MaxWalkSpeedProne;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float ProneHalfHeight;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxLadderClimbingSpeed;
     
 protected:

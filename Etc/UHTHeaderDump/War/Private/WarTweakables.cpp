@@ -310,9 +310,16 @@ FWarTweakables::FWarTweakables() {
     this->AuthFailureDurationRequiredSeconds = 0.00f;
     this->AuthReEnableSeconds = 0.00f;
     this->BorderDecayFactor = 0.00f;
-    this->bAllowStockpileExternalUser = false;
     this->WarBalancerMaxPopulationChangePerTick = 0;
-    this->bGateLongRangeArtilleryFiringOnTech = false;
     this->RareMetalWeightAdjustment = 0;
+    this->CommendHistoryExpirySecs = 0.00f;
+    this->GlobalRefineSpeedModifer = 0.00f;
+    this->FacilityMapPostItemRadius = 0.00f;
+    this->bAllowStockpileExternalUser = false;
+    this->bGateLongRangeArtilleryFiringOnTech = false;
+    this->bAllowSquadMissingMembers = false;
+    this->bUseDevVotesRequiredCount = false;
+    this->bUseDevRestrictionDuration = false;
+    this->bFactionLock = false;
 }
 

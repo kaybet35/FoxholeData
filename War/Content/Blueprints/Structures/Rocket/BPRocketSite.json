@@ -121,8 +121,8 @@
       "ValidBuildTools": 24,
       "CodeName": "RocketSite",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "CFC2FBE0409938AD627B21BEE18FFE7B",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisFacility",
         "SourceString": "Facility Structure",
         "LocalizedString": "Facility Structure"
       },
@@ -214,6 +214,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -222,7 +226,8 @@
         "X": 0.0,
         "Y": 0.0,
         "Z": 8.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -332,6 +337,7 @@
         "Y": 0.0,
         "Z": 765.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "IncludeInBuildSite",
         "PreserveProfileInBuildSite"
@@ -989,10 +995,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Multiplexed"
       ]

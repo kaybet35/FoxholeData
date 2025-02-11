@@ -67,6 +67,8 @@ enum class EActionType : uint8 {
     SaveLoadout,
     AssembleLoadout,
     DeleteLoadout,
+    EditLoadout,
+    ViewGlobalLog,
     MAX,
 };
 

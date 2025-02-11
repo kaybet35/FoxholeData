@@ -8,6 +8,7 @@ UWarSaveGame::UWarSaveGame() {
     this->DryingDuration = 0.00f;
     this->bIsWeatherManual = false;
     this->bIsAutoSave = false;
+    this->NextTechStateID = 0;
 }
 
 

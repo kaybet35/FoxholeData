@@ -71,11 +71,11 @@
         "ObjectName": "AITurretsControllerComponent'Default__BPCoastalGun_C:AITurretsControllerComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPCoastalGun.4"
       },
-      "ShouldAggroOnDamage": true,
       "MuzzleFlashLocationComponent": {
         "ObjectName": "ArrowComponent'Default__BPCoastalGun_C:MuzzleFxLocationComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPCoastalGun.5"
       },
+      "ShouldAggroOnDamage": true,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPCoastalGun_C:FlagMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPCoastalGun.23"
@@ -266,6 +266,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -279,7 +283,8 @@
         "X": 0.99999994,
         "Y": 0.99999994,
         "Z": 1.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -301,6 +306,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -314,7 +323,8 @@
         "X": 3.0927935,
         "Y": 3.0927935,
         "Z": 9.680174
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -532,6 +542,10 @@
             },
             {
               "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
               "Response": "ECR_Overlap"
             }
           ]

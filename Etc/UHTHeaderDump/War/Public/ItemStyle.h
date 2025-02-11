@@ -32,6 +32,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FSlateBrush SlotFilterBrush;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSlateBrush MultiSlotFilterBrush;
+    
     WAR_API FItemStyle();
 };
 

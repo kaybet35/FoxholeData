@@ -105,11 +105,60 @@
     }
   },
   {
+    "Type": "SkeletalMeshSocket",
+    "Name": "SkeletalMeshSocket_6",
+    "Outer": "SK_SubmarineCBody_Skeleton",
+    "Class": "UScriptClass'SkeletalMeshSocket'",
+    "Properties": {
+      "SocketName": "S_LeftHandIK_8",
+      "BoneName": "ControlRoom",
+      "RelativeLocation": {
+        "X": 41.998276,
+        "Y": -21.099691,
+        "Z": -145.50307
+      },
+      "RelativeRotation": {
+        "Pitch": -9.546876,
+        "Yaw": 112.9905,
+        "Roll": -86.224525
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshSocket",
+    "Name": "SkeletalMeshSocket_7",
+    "Outer": "SK_SubmarineCBody_Skeleton",
+    "Class": "UScriptClass'SkeletalMeshSocket'",
+    "Properties": {
+      "SocketName": "S_RightHandIK_8",
+      "BoneName": "ControlRoom",
+      "RelativeLocation": {
+        "X": -45.27793,
+        "Y": -21.395163,
+        "Z": -146.20181
+      },
+      "RelativeRotation": {
+        "Pitch": -1.6236862,
+        "Yaw": -109.09357,
+        "Roll": 95.979836
+      }
+    }
+  },
+  {
     "Type": "Skeleton",
     "Name": "SK_SubmarineCBody_Skeleton",
     "Class": "UScriptClass'Skeleton'",
     "Properties": {
       "BoneTree": [
+        {
+          "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
+        },
+        {
+          "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
+        },
+        {
+          "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
+        },
         {
           "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
         },
@@ -244,6 +293,14 @@
         {
           "ObjectName": "SkeletalMeshSocket'SK_SubmarineCBody_Skeleton:SkeletalMeshSocket_5'",
           "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineC/SK_SubmarineCBody_Skeleton.5"
+        },
+        {
+          "ObjectName": "SkeletalMeshSocket'SK_SubmarineCBody_Skeleton:SkeletalMeshSocket_6'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineC/SK_SubmarineCBody_Skeleton.6"
+        },
+        {
+          "ObjectName": "SkeletalMeshSocket'SK_SubmarineCBody_Skeleton:SkeletalMeshSocket_7'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/SubmarineC/SK_SubmarineCBody_Skeleton.7"
         }
       ]
     },
@@ -391,6 +448,18 @@
         },
         {
           "Name": "Turret",
+          "ParentIndex": 2
+        },
+        {
+          "Name": "MainBallastCrank",
+          "ParentIndex": 2
+        },
+        {
+          "Name": "SafetyBallastCrank",
+          "ParentIndex": 2
+        },
+        {
+          "Name": "NegativeBallastCrank",
           "ParentIndex": 2
         }
       ],
@@ -1186,6 +1255,72 @@
             "Z": 1.0
           },
           "IsRotationNormalized": true
+        },
+        {
+          "Rotation": {
+            "X": -1.323489E-23,
+            "Y": 2.938736E-39,
+            "Z": 9.893325E-37,
+            "W": -1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 205.56322,
+            "Y": -836.26184,
+            "Z": -270.9185
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "IsRotationNormalized": true
+        },
+        {
+          "Rotation": {
+            "X": -1.323489E-23,
+            "Y": 2.938736E-39,
+            "Z": 9.893325E-37,
+            "W": -1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.5205036,
+            "Y": -1826.5406,
+            "Z": -270.9185
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "IsRotationNormalized": true
+        },
+        {
+          "Rotation": {
+            "X": -1.323489E-23,
+            "Y": 2.938736E-39,
+            "Z": 9.893325E-37,
+            "W": -1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": -3.948804E-06,
+            "Y": 2013.8083,
+            "Z": -270.9185
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "IsRotationNormalized": true
         }
       ],
       "FinalNameToIndexMap": {
@@ -1224,10 +1359,13 @@
         "Torpedo_R": 32,
         "TorpedoHatch_L": 33,
         "TorpedoHatch_R": 34,
-        "Turret": 35
+        "Turret": 35,
+        "MainBallastCrank": 36,
+        "SafetyBallastCrank": 37,
+        "NegativeBallastCrank": 38
       }
     },
-    "Guid": "FD1114C3-4EC9F48E-1085F0BB-D9A82EEA",
+    "Guid": "442BF9E7-4393EE6D-D4AEE489-09AA2927",
     "AnimRetargetSources": {},
     "NameMappings": {
       "AnimationCurves": {

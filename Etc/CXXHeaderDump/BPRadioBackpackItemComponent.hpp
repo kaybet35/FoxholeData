@@ -3,6 +3,6 @@
 
 class UBPRadioBackpackItemComponent_C : public URadioBackpackItemComponent
 {
-}; // Size: 0x8E0
+}; // Size: 0x8E8
 
 #endif

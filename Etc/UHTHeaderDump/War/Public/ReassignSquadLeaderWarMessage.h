@@ -10,7 +10,7 @@ public:
     int32 SquadId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString NewLeaderOnlineID;
+    FString NewLeaderOnlineId;
     
     WAR_API FReassignSquadLeaderWarMessage();
 };

@@ -33,7 +33,7 @@ class ABPGunboatC_C : public AGunboat
     class USpotLightComponent* SpotLightRight;                                        // 0x1338 (size: 0x8)
     class UStaticMeshComponent* LightLeft;                                            // 0x1340 (size: 0x8)
     class USpotLightComponent* SpotLightLeft;                                         // 0x1348 (size: 0x8)
-    class UAudioComponent* Idle;                                                      // 0x1350 (size: 0x8)
+    class UAudioComponent* idle;                                                      // 0x1350 (size: 0x8)
     class UCameraComponent* Camera;                                                   // 0x1358 (size: 0x8)
 
     void BPOnVehicleOn(bool IsOn);

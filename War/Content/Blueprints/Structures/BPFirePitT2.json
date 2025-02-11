@@ -123,8 +123,8 @@
       "ValidBuildTools": 4,
       "CodeName": "FirePitT2",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "B35E360A4D35E84C8D9450B693C38940",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisUtility",
         "SourceString": "Utility Structure",
         "LocalizedString": "Utility Structure"
       },
@@ -319,7 +319,8 @@
         "Pitch": -90.0,
         "Yaw": 0.0,
         "Roll": -0.0
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {
@@ -804,10 +805,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Multiplexed"
       ]

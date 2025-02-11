@@ -3,6 +3,6 @@
 
 class UBPSeaportAITurret_C : public UBPAIGarrisonTurret_C
 {
-}; // Size: 0x3B0
+}; // Size: 0x3C0
 
 #endif

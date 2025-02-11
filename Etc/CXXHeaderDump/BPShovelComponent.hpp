@@ -3,6 +3,6 @@
 
 class UBPShovelComponent_C : public UShovelComponent
 {
-}; // Size: 0x970
+}; // Size: 0x978
 
 #endif

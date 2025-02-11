@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "EQueueWarningState.h"
+#include "EShardDescription.h"
 #include "EUprisingChanceType.h"
 #include "WarShardInfo.generated.h"
 
@@ -57,7 +58,7 @@ public:
     float NormalizedGlobalPopulation;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString Description;
+    EShardDescription DescriptionType;
     
     WAR_API FWarShardInfo();
 };

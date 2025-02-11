@@ -19,6 +19,7 @@ UCharacterAnimInstance::UCharacterAnimInstance() {
     this->AimOffsetYaw = 0.00f;
     this->AimOffsetPitch = 0.00f;
     this->PlayRateNative = 0.00f;
+    this->CrankingPlayRateNative = 0.00f;
     this->CharacterStance = ESimCharacterStance::Standing;
     this->ActivityState = ECharacterActivityState::Idle;
     this->EquippedWeaponGripType = EEquippedWeaponGripType::None;

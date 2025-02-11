@@ -3,6 +3,6 @@
 
 class UBPStickyBombComponent_C : public UGrenadeItemComponent
 {
-}; // Size: 0x918
+}; // Size: 0x920
 
 #endif

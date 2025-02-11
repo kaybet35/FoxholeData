@@ -15,6 +15,7 @@ AExplosive::AExplosive(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->CollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
     this->ItemMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("ItemMesh"));
     this->ExplosionOffsetZ = 0.00f;
+    this->ExplosionFXOffsetZ = 50.00f;
     this->DamageDelay = 0.50f;
     this->ExplosionTemplate = NULL;
     this->WaterSurfaceExplosionTemplate = NULL;

@@ -10,6 +10,9 @@ public:
     FName CodeName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSet<FName> ExtraCodeNames;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 StackLimit;
     
     WAR_API FItemSlotFilter();

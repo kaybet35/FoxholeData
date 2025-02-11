@@ -12,6 +12,7 @@ UTechTreeComponent::UTechTreeComponent(const FObjectInitializer& ObjectInitializ
     this->InfrastructureModCount[2] = 0;
     this->InfrastructureModCount[3] = 0;
     this->InfrastructureModCount[4] = 0;
+    this->TechStateID = 0;
 }
 
 void UTechTreeComponent::OnRep_ItemUnlockBits(const int32 PreviousItemUnlockBits) {

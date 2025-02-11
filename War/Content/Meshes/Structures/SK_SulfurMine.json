@@ -12,8 +12,8 @@
         {
           "ScreenSize": {
             "bCooked": true,
-            "Default": 0.0,
-            "Value": 0.0
+            "Default": 1.0,
+            "Value": 1.0
           },
           "LODHysteresis": 0.02,
           "LODMaterialMap": [],
@@ -33,11 +33,11 @@
           "ReductionSettings": {
             "TerminationCriterion": "SMTC_NumOfTriangles",
             "NumOfTrianglesPercentage": 1.0,
-            "NumOfVertPercentage": 0.5,
+            "NumOfVertPercentage": 1.0,
             "MaxNumOfTriangles": 4,
             "MaxNumOfVerts": 6,
             "MaxDeviationPercentage": 0.0,
-            "ReductionMethod": "SMOT_MaxDeviation",
+            "ReductionMethod": "SMOT_NumOfTriangles",
             "SilhouetteImportance": "SMOI_Normal",
             "TextureImportance": "SMOI_Normal",
             "ShadingImportance": "SMOI_Normal",
@@ -64,6 +64,11 @@
           "bSupportUniformlyDistributedSampling": false
         }
       ],
+      "bHasVertexColors": true,
+      "PhysicsAsset": {
+        "ObjectName": "PhysicsAsset'SK_SulfurMine_Physics'",
+        "ObjectPath": "War/Content/Meshes/Structures/SK_SulfurMine_Physics.0"
+      },
       "SamplingInfo": {
         "BuiltData": {
           "WholeMeshBuiltData": [
@@ -80,20 +85,20 @@
     },
     "ImportedBounds": {
       "Origin": {
-        "X": -71.11044,
-        "Y": 1.451477,
-        "Z": 444.21347
+        "X": -71.11041,
+        "Y": 1.451416,
+        "Z": 300.80823
       },
       "BoxExtent": {
-        "X": 482.69583,
-        "Y": 549.29755,
-        "Z": 493.95126
+        "X": 241.34787,
+        "Y": 274.64874,
+        "Z": 318.67816
       },
-      "SphereRadius": 882.446
+      "SphereRadius": 485.01184
     },
     "SkeletalMaterials": [
       {
-        "MaterialSlotName": "SulfurMine",
+        "MaterialSlotName": "SulfurMine_001",
         "Material": {
           "ObjectName": "MaterialInstanceConstant'SulfurMine'",
           "ObjectPath": "War/Content/Materials/Structures/SulfurMine.0"
@@ -103,7 +108,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            1124.3273,
+            1124.3187,
             0.0,
             0.0,
             0.0
@@ -111,7 +116,7 @@
         }
       },
       {
-        "MaterialSlotName": "Chainlink",
+        "MaterialSlotName": "Chainlink_001",
         "Material": {
           "ObjectName": "MaterialInstanceConstant'Chainlink'",
           "ObjectPath": "War/Content/Materials/Environment/Props/Chainlink.0"
@@ -121,7 +126,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            109.65027,
+            109.65023,
             0.0,
             0.0,
             0.0
@@ -129,7 +134,7 @@
         }
       },
       {
-        "MaterialSlotName": "lanturn",
+        "MaterialSlotName": "LanternEmissive_001",
         "Material": {
           "ObjectName": "Material'LanternEmissive'",
           "ObjectPath": "War/Content/Materials/LanternEmissive.0"
@@ -139,7 +144,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            320.27597,
+            320.27603,
             0.0,
             0.0,
             0.0
@@ -147,7 +152,7 @@
         }
       },
       {
-        "MaterialSlotName": "WoodBarnPlanksPainted",
+        "MaterialSlotName": "WoodBarnPlanksPainted_001",
         "Material": {
           "ObjectName": "MaterialInstanceConstant'WoodBarnPlanksPainted'",
           "ObjectPath": "War/Content/Materials/Environment/Props/WoodBarnPlanksPainted.0"
@@ -157,7 +162,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            279.47278,
+            279.47263,
             0.0,
             0.0,
             0.0
@@ -165,7 +170,7 @@
         }
       },
       {
-        "MaterialSlotName": "WoodBarnTilePainted",
+        "MaterialSlotName": "WoodBarnTile_001",
         "Material": {
           "ObjectName": "MaterialInstanceConstant'WoodBarnTile'",
           "ObjectPath": "War/Content/Materials/Environment/Props/WoodBarnTile.0"
@@ -175,7 +180,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            378.3753,
+            378.37512,
             0.0,
             0.0,
             0.0
@@ -183,7 +188,7 @@
         }
       },
       {
-        "MaterialSlotName": "WoodBarnPlanks",
+        "MaterialSlotName": "WoodBarnPlanks_001",
         "Material": {
           "ObjectName": "MaterialInstanceConstant'WoodBarnPlanks'",
           "ObjectPath": "War/Content/Materials/Environment/Props/WoodBarnPlanks.0"
@@ -193,7 +198,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            196.58537,
+            196.58528,
             0.0,
             0.0,
             0.0
@@ -207,7 +212,7 @@
           {
             "MaterialIndex": 0,
             "BaseIndex": 0,
-            "NumTriangles": 6959,
+            "NumTriangles": 6953,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
             "bCastShadow": true,
@@ -215,7 +220,7 @@
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
             "BaseVertexIndex": 0,
-            "NumVertices": 5872,
+            "NumVertices": 5898,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
             "CorrespondClothAssetIndex": -1,
@@ -226,7 +231,7 @@
           },
           {
             "MaterialIndex": 1,
-            "BaseIndex": 20877,
+            "BaseIndex": 20859,
             "NumTriangles": 12,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
@@ -234,7 +239,7 @@
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 5872,
+            "BaseVertexIndex": 5898,
             "NumVertices": 16,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
@@ -246,7 +251,7 @@
           },
           {
             "MaterialIndex": 2,
-            "BaseIndex": 20913,
+            "BaseIndex": 20895,
             "NumTriangles": 44,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
@@ -254,7 +259,7 @@
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 5888,
+            "BaseVertexIndex": 5914,
             "NumVertices": 72,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
@@ -266,7 +271,7 @@
           },
           {
             "MaterialIndex": 3,
-            "BaseIndex": 21045,
+            "BaseIndex": 21027,
             "NumTriangles": 2320,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
@@ -274,7 +279,7 @@
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 5960,
+            "BaseVertexIndex": 5986,
             "NumVertices": 2624,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
@@ -286,7 +291,7 @@
           },
           {
             "MaterialIndex": 4,
-            "BaseIndex": 28005,
+            "BaseIndex": 27987,
             "NumTriangles": 70,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
@@ -294,7 +299,7 @@
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 8584,
+            "BaseVertexIndex": 8610,
             "NumVertices": 102,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
@@ -306,7 +311,7 @@
           },
           {
             "MaterialIndex": 5,
-            "BaseIndex": 28215,
+            "BaseIndex": 28197,
             "NumTriangles": 680,
             "bRecomputeTangent": false,
             "RecomputeTangentsVertexMaskChannel": "Alpha",
@@ -314,7 +319,7 @@
             "bVisibleInRayTracing": true,
             "bLegacyClothingSection": false,
             "CorrespondClothSectionIndex": -1,
-            "BaseVertexIndex": 8686,
+            "BaseVertexIndex": 8712,
             "NumVertices": 896,
             "MaxBoneInfluences": 1,
             "bUse16BitBoneIndex": false,
@@ -325,7 +330,7 @@
             "ChunkedParentSectionIndex": -1
           }
         ],
-        "NumVertices": 9582,
+        "NumVertices": 9608,
         "NumTexCoords": 1,
         "VertexBufferGPUSkin": {
           "NumTexCoords": 0,

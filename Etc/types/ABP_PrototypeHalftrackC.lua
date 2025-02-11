@@ -2,7 +2,6 @@
 
 ---@class UABP_PrototypeHalftrackC_C : USimVehicleGunnerSupportAnimInstance
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field AnimGraphNode_Root_3A0F14A64E68A99F29D714BABEC45121 FAnimNode_Root
 ---@field AnimGraphNode_BlendListByBool_57C19C564ABB37015E3B3883BCB585EC FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_C12710BC4E266DC0D7FF5BA9B7B8D9F4 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_5224C27B478CA0E92978A08470F2CB9F FAnimNode_RotationOffsetBlendSpace
@@ -26,6 +25,7 @@
 ---@field AnimGraphNode_BlendListByBool_5EC2333F47863D4C841FB498D796436C FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_17ACB5764C59AA94AE13AD80B41275A8 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_B396A39F47675A941C65DA91E7F2968C FAnimNode_SequencePlayer
+---@field AnimGraphNode_Root_3A0F14A64E68A99F29D714BABEC45121 FAnimNode_Root
 UABP_PrototypeHalftrackC_C = {}
 
 ---@param AnimGraph FPoseLink

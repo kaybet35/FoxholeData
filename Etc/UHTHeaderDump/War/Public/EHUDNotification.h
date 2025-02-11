@@ -61,6 +61,7 @@ enum class EHUDNotification : uint8 {
     CantDemolishStandingOn,
     CantDemolishUnclaimed,
     CantDemolishMustBeBuilder,
+    CantDemolishHasCargo,
     EnemiesNearby,
     IslandMustBeRepaired,
     IslandRequirementsMissing,
@@ -139,6 +140,7 @@ enum class EHUDNotification : uint8 {
     TrainMoving,
     TrainCoupled,
     TrainOffRails,
+    VehicleRestored,
     MAX,
 };
 

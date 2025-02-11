@@ -186,6 +186,11 @@
     "Outer": "BPGarrisonHouseFishHut2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -11.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 100.0,
         "Y": -28.505045,
@@ -196,6 +201,9 @@
         "Y": 100.0,
         "Z": 100.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 22.0,
       "RelativeLocation": {
         "X": -195.31024,
         "Y": 117.764114,
@@ -214,6 +222,11 @@
     "Outer": "BPGarrisonHouseFishHut2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPAIGarrisonTurret.BPAIGarrisonTurret_C'",
     "Properties": {
+      "SeatOffset": {
+        "X": -75.0,
+        "Y": -25.0,
+        "Z": 0.0
+      },
       "TriggerBoxOffset": {
         "X": 100.0,
         "Y": 34.869034,
@@ -224,6 +237,9 @@
         "Y": 100.0,
         "Z": 100.0
       },
+      "bLimitOccupantFiringArc": true,
+      "MaxOccupantFiringArcDeviation": 80.0,
+      "OccupantFiringConeAngle": 22.0,
       "RelativeLocation": {
         "X": 195.42314,
         "Y": 111.31771,
@@ -261,6 +277,7 @@
         "Y": 0.2,
         "Z": 0.2
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "AITurretMarker"
       ]
@@ -291,6 +308,7 @@
         "Y": 0.2,
         "Z": 0.2
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "AITurretMarker"
       ]
@@ -804,10 +822,15 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedHouse"
       ]
@@ -838,6 +861,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -846,7 +873,8 @@
         "X": 0.172115,
         "Y": 1066.5947,
         "Z": -410.72394
-      }
+      },
+      "Mobility": "EComponentMobility::Stationary"
     }
   },
   {

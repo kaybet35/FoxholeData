@@ -8,6 +8,7 @@ USeatComponent::USeatComponent(const FObjectInitializer& ObjectInitializer) : Su
     this->bExposedSeatRequiresLoS = false;
     this->MountComponent = NULL;
     this->ItemHolderIndex = 0;
+    this->bOverrideHandIK = false;
     this->bUsableWhenAnchored = true;
     this->bUsableWhenSubmerged = true;
     this->bIsEnabled = true;

@@ -142,6 +142,16 @@
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/FortT3HowitzerAIIcon.0"
       },
       "BuildCategory": "EBuildCategory::Bunker",
+      "DestroyedDamageExtent": {
+        "X": 233.5,
+        "Y": 250.0,
+        "Z": 316.0
+      },
+      "DestroyedDamageOffset": {
+        "X": -25.0,
+        "Y": 0.0,
+        "Z": 159.5
+      },
       "bDropsLargeMaterialsWhenDestroyed": false,
       "ValidBuildTools": 20,
       "ConcreteSettler": {
@@ -149,8 +159,8 @@
       },
       "CodeName": "ArtilleryAIT3",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "CF40BCCE4A2882A10077E4A09A942EEB",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisEntrenchment",
         "SourceString": "Entrenchment",
         "LocalizedString": "Entrenchment"
       },
@@ -279,6 +289,7 @@
         "Y": 0.0,
         "Z": -65.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "IncludeInBuildSite"
       ]
@@ -708,6 +719,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -757,6 +772,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -766,6 +785,7 @@
         "Y": 0.0,
         "Z": -160.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "MultiplexedFloor"
       ]

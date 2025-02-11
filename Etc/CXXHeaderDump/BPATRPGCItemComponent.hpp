@@ -3,6 +3,6 @@
 
 class UBPATRPGCItemComponent_C : public UProjectileItemComponent
 {
-}; // Size: 0x958
+}; // Size: 0x960
 
 #endif

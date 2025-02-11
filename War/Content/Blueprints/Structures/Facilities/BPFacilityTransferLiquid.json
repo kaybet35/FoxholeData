@@ -121,8 +121,8 @@
       "ValidBuildTools": 24,
       "CodeName": "FacilityTransferLiquid",
       "ChassisName": {
-        "Namespace": "",
-        "Key": "6DF778E34AF979435C98AFA4CAB3FEB9",
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisFacility",
         "SourceString": "Facility Structure",
         "LocalizedString": "Facility Structure"
       },
@@ -511,7 +511,9 @@
           "PreStockedEntries": [],
           "RetrieveDurationModifiers": []
         }
-      ]
+      ],
+      "RetrieveDurationModifier": 0.1,
+      "CustomRetrieveDurationModifiers": []
     }
   },
   {
@@ -874,6 +876,10 @@
             {
               "Channel": "Damage",
               "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
             }
           ]
         }
@@ -883,6 +889,7 @@
         "Y": 6.5336914,
         "Z": 0.0
       },
+      "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "Multiplexed"
       ]

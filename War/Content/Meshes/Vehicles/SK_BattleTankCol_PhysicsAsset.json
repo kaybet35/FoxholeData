@@ -31,26 +31,22 @@
           "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.6"
         },
         {
-          "ObjectName": "SkeletalBodySetup'SK_BattleTankCol_PhysicsAsset:SkeletalBodySetup_5'",
+          "ObjectName": "SkeletalBodySetup'SK_BattleTankCol_PhysicsAsset:SkeletalBodySetup_7'",
           "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.7"
         },
         {
-          "ObjectName": "SkeletalBodySetup'SK_BattleTankCol_PhysicsAsset:SkeletalBodySetup_7'",
+          "ObjectName": "SkeletalBodySetup'SK_BattleTankCol_PhysicsAsset:SkeletalBodySetup_8'",
           "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.8"
         },
         {
-          "ObjectName": "SkeletalBodySetup'SK_BattleTankCol_PhysicsAsset:SkeletalBodySetup_8'",
-          "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.9"
+          "ObjectName": "SkeletalBodySetup'SK_BattleTankCol_PhysicsAsset:SkeletalBodySetup_0'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.2"
         }
       ],
       "ConstraintSetup": [
         {
           "ObjectName": "PhysicsConstraintTemplate'SK_BattleTankCol_PhysicsAsset:PhysicsConstraintTemplate_1'",
           "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.1"
-        },
-        {
-          "ObjectName": "PhysicsConstraintTemplate'SK_BattleTankCol_PhysicsAsset:PhysicsConstraintTemplate_2'",
-          "ObjectPath": "War/Content/Meshes/Vehicles/SK_BattleTankCol_PhysicsAsset.2"
         }
       ],
       "ThumbnailInfo": null
@@ -75,22 +71,38 @@
     }
   },
   {
-    "Type": "PhysicsConstraintTemplate",
-    "Name": "PhysicsConstraintTemplate_2",
+    "Type": "SkeletalBodySetup",
+    "Name": "SkeletalBodySetup_0",
     "Outer": "SK_BattleTankCol_PhysicsAsset",
-    "Class": "UScriptClass'PhysicsConstraintTemplate'",
+    "Class": "UScriptClass'SkeletalBodySetup'",
     "Properties": {
-      "DefaultInstance": {
-        "JointName": "gun_pivot",
-        "ConstraintBone1": "gun_pivot",
-        "ConstraintBone2": "turret_pivot",
-        "Pos2": {
-          "X": 0.0,
-          "Y": 145.5211,
-          "Z": 54.4657
-        }
-      }
-    }
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.00018310547,
+              "Y": 76.01581,
+              "Z": -2.466858
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 15.0,
+            "Y": 310.0,
+            "Z": 15.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true
+          }
+        ]
+      },
+      "BoneName": "gun_muzzle",
+      "CollisionReponse": "EBodyCollisionResponse::BodyCollision_Disabled",
+      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
+    },
+    "BodySetupGuid": "C4FE097347473B94B86B139036CE3F62"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -591,13 +603,13 @@
       "BoneName": "body_pivot",
       "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "59CD6C7043D7F09D2EBE7DB72EE0240D",
+    "BodySetupGuid": "7569A7EF43F81C7194AAAC9E4F1E0FE9",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 5365,
         "SizeOnDisk": 5365,
-        "OffsetInFile": "0x8A22"
+        "OffsetInFile": "0x8682"
       }
     }
   },
@@ -755,13 +767,13 @@
       "BoneName": "tracks_pivot_R",
       "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "C89093DE4A2A72768B7B2DB43BF55119",
+    "BodySetupGuid": "8653F05D48D293B535A54A92F48D0E33",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1411,
         "SizeOnDisk": 1411,
-        "OffsetInFile": "0xA318"
+        "OffsetInFile": "0x9F78"
       }
     }
   },
@@ -919,13 +931,13 @@
       "BoneName": "tracks_pivot_L",
       "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "B6D355D5436785C4AD5F1486A0F21CC7",
+    "BodySetupGuid": "DF832B624057BF73AF19889A3D51E6A0",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 1411,
         "SizeOnDisk": 1411,
-        "OffsetInFile": "0xAC9C"
+        "OffsetInFile": "0xA8FC"
       }
     }
   },
@@ -1285,117 +1297,13 @@
       "BoneName": "turret_pivot",
       "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "00C228B9404EBED71BBECCA57A7C60D8",
+    "BodySetupGuid": "A548698A42E4C80A74D1818996809107",
     "CookedFormatData": {
       "PhysXPC": {
         "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
         "ElementCount": 3811,
         "SizeOnDisk": 3811,
-        "OffsetInFile": "0xBB28"
-      }
-    }
-  },
-  {
-    "Type": "SkeletalBodySetup",
-    "Name": "SkeletalBodySetup_5",
-    "Outer": "SK_BattleTankCol_PhysicsAsset",
-    "Class": "UScriptClass'SkeletalBodySetup'",
-    "Properties": {
-      "AggGeom": {
-        "ConvexElems": [
-          {
-            "VertexData": [
-              {
-                "X": -144.45477,
-                "Y": -14.660021,
-                "Z": 312.15564
-              },
-              {
-                "X": -144.45477,
-                "Y": 13.385412,
-                "Z": 312.15564
-              },
-              {
-                "X": -144.45477,
-                "Y": -14.660021,
-                "Z": 340.20105
-              },
-              {
-                "X": -144.45477,
-                "Y": 13.385412,
-                "Z": 340.20105
-              },
-              {
-                "X": -200.58612,
-                "Y": -14.660067,
-                "Z": 312.1556
-              },
-              {
-                "X": -200.58612,
-                "Y": 13.385366,
-                "Z": 312.1556
-              },
-              {
-                "X": -200.58612,
-                "Y": -14.660067,
-                "Z": 340.20105
-              },
-              {
-                "X": -200.58612,
-                "Y": 13.385366,
-                "Z": 340.20105
-              }
-            ],
-            "ElemBox": {
-              "Min": {
-                "X": -200.58612,
-                "Y": -14.660067,
-                "Z": 312.1556
-              },
-              "Max": {
-                "X": -144.45477,
-                "Y": 13.385412,
-                "Z": 340.20105
-              },
-              "IsValid": 1
-            },
-            "Transform": {
-              "Rotation": {
-                "X": 0.0,
-                "Y": 0.0,
-                "Z": -0.7071075,
-                "W": 0.70710576,
-                "IsNormalized": true,
-                "Size": 0.99999976,
-                "SizeSquared": 0.9999995
-              },
-              "Translation": {
-                "X": -0.00023007393,
-                "Y": -116.16332,
-                "Z": -325.68616
-              },
-              "Scale3D": {
-                "X": 1.0,
-                "Y": 1.0,
-                "Z": 1.0
-              }
-            },
-            "RestOffset": 0.0,
-            "Name": "None",
-            "bContributeToMass": true
-          }
-        ]
-      },
-      "BoneName": "gun_pivot",
-      "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
-    },
-    "BodySetupGuid": "FF5233154A8A9079C09CA6B9BAAB6374",
-    "CookedFormatData": {
-      "PhysXPC": {
-        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
-        "ElementCount": 915,
-        "SizeOnDisk": 915,
-        "OffsetInFile": "0xCD7C"
+        "OffsetInFile": "0xB788"
       }
     }
   },
@@ -1466,7 +1374,7 @@
       "BoneName": "collisionBone_front",
       "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "4C74801F4F772072044C90A014FB8BB6"
+    "BodySetupGuid": "75FD5BDA42653F17F8E52DA565A592EE"
   },
   {
     "Type": "SkeletalBodySetup",
@@ -1553,6 +1461,6 @@
       "BoneName": "collisionBone_back",
       "CollisionTraceFlag": "CTF_UseSimpleAsComplex"
     },
-    "BodySetupGuid": "D8FD7A6A4260F4FD599E5BBEAEB23406"
+    "BodySetupGuid": "4A59285040EC318AD26D86A303FB2E4D"
   }
 ]

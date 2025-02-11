@@ -3,6 +3,6 @@
 
 class ABPFacilityRoad_C : public ABuiltRoad
 {
-}; // Size: 0x7F0
+}; // Size: 0x7E0
 
 #endif

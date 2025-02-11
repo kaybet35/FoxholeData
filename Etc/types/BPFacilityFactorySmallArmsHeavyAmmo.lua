@@ -1,0 +1,51 @@
+---@meta
+
+---@class ABPFacilityFactorySmallArmsHeavyAmmo_C : AModificationTemplate
+---@field Box7 UBoxComponent
+---@field Box6 UBoxComponent
+---@field Box5 UBoxComponent
+---@field Box4 UBoxComponent
+---@field Box3 UBoxComponent
+---@field front32 UStaticMeshComponent
+---@field front31 UStaticMeshComponent
+---@field front30 UStaticMeshComponent
+---@field front29 UStaticMeshComponent
+---@field front27 UStaticMeshComponent
+---@field front28 UStaticMeshComponent
+---@field front25 UStaticMeshComponent
+---@field front26 UStaticMeshComponent
+---@field front24 UStaticMeshComponent
+---@field front23 UStaticMeshComponent
+---@field front22 UStaticMeshComponent
+---@field front21 UStaticMeshComponent
+---@field front20 UStaticMeshComponent
+---@field front19 UStaticMeshComponent
+---@field front18 UStaticMeshComponent
+---@field front17 UStaticMeshComponent
+---@field front14 UStaticMeshComponent
+---@field front16 UStaticMeshComponent
+---@field front13 UStaticMeshComponent
+---@field front15 UStaticMeshComponent
+---@field front12 UStaticMeshComponent
+---@field front11 UStaticMeshComponent
+---@field front10 UStaticMeshComponent
+---@field front9 UStaticMeshComponent
+---@field front8 UStaticMeshComponent
+---@field front7 UStaticMeshComponent
+---@field front6 UStaticMeshComponent
+---@field front4 UStaticMeshComponent
+---@field front3 UStaticMeshComponent
+---@field front2 UStaticMeshComponent
+---@field front1 UStaticMeshComponent
+---@field Front UStaticMeshComponent
+---@field BaseSmoke2 UParticleSystemComponent
+---@field BaseSmoke1 UParticleSystemComponent
+---@field Box2 UBoxComponent
+---@field Box1 UBoxComponent
+---@field Props USceneComponent
+---@field FacilityAmmoFactoryBaseRoof UStaticMeshComponent
+---@field DefaultSceneRoot USceneComponent
+ABPFacilityFactorySmallArmsHeavyAmmo_C = {}
+
+
+

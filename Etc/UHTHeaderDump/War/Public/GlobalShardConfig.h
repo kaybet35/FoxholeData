@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EOverpopText.h"
 #include "GlobalShardConfig.generated.h"
 
 USTRUCT(BlueprintType)
@@ -19,7 +20,7 @@ public:
     int32 OverpopShardId;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString OverpopText;
+    EOverpopText OverpopTextType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FString OverpopYesButton;

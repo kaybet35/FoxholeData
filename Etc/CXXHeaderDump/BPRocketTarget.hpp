@@ -3,6 +3,6 @@
 
 class ABPRocketTarget_C : public ARocketTarget
 {
-}; // Size: 0x810
+}; // Size: 0x800
 
 #endif

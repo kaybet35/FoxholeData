@@ -24,16 +24,16 @@ AHarvester::AHarvester(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->SplittingSFXLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("SplittingSFXLoop"));
     this->RotatingSFXLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("RotatingSFXLoop"));
     this->Action = 0;
+    this->SplitParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->GrindingSFXLoop->SetupAttachment(RootComponent);
+    this->SplittingSFXLoop->SetupAttachment(RootComponent);
+    this->RotatingSFXLoop->SetupAttachment(RootComponent);
     this->GrindingCapsule->SetupAttachment(RootComponent);
     this->NoTargetParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->ComponentsParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->DefensesParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->SalvageParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->SulfurParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->SplitParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->GrindingSFXLoop->SetupAttachment(RootComponent);
-    this->SplittingSFXLoop->SetupAttachment(RootComponent);
-    this->RotatingSFXLoop->SetupAttachment(RootComponent);
 }
 
 void AHarvester::ServerStopAction_Implementation() {

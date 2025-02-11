@@ -7,5 +7,6 @@ enum class ECustomMovementMode : uint8 {
     MOVE_Custom_None,
     MOVE_Custom_LadderClimbing,
     MOVE_Custom_WoundedCarried,
+    MOVE_Custom_StationaryPassenger,
 };
 

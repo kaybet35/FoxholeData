@@ -3,6 +3,6 @@
 
 class ABPWaterMine_C : public AWaterMine
 {
-}; // Size: 0x308
+}; // Size: 0x310
 
 #endif

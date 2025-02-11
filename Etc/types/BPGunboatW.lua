@@ -35,7 +35,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Light UStaticMeshComponent
 ---@field SpotLight USpotLightComponent
----@field Idle UAudioComponent
+---@field idle UAudioComponent
 ---@field Camera UCameraComponent
 ABPGunboatW_C = {}
 

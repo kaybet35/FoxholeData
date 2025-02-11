@@ -9,6 +9,7 @@ ARailVehicle::ARailVehicle(const FObjectInitializer& ObjectInitializer) : Super(
     this->bNetUseOwnerRelevancy = true;
     this->bUseControllerRotationYaw = false;
     this->bSimGravityDisabled = true;
+    this->bUsesTraces = false;
     this->bIncludeInRecoverySaves = false;
     this->bNeedsSkelmeshTickForMovement = false;
     this->WheelBase = 0.00f;
@@ -26,12 +27,12 @@ ARailVehicle::ARailVehicle(const FObjectInitializer& ObjectInitializer) : Super(
     this->LastRearBogieTrack = NULL;
     this->bIsBoosting = false;
     this->BorderTravelOverrideExtent = 0.00f;
+    this->FrontCoupler->SetupAttachment(RootComponent);
+    this->RearCoupler->SetupAttachment(RootComponent);
     this->IdleLoop->SetupAttachment(RootComponent);
     this->BrakeLoop->SetupAttachment(RootComponent);
     this->FrontClacks->SetupAttachment(RootComponent);
     this->RearClacks->SetupAttachment(RootComponent);
-    this->FrontCoupler->SetupAttachment(RootComponent);
-    this->RearCoupler->SetupAttachment(RootComponent);
 }
 
 void ARailVehicle::ServerRequestTrainInfo_Implementation() {

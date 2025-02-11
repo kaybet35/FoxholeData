@@ -6,6 +6,7 @@
 #include "ModificationTier.h"
 #include "ModificationSlotComponent.generated.h"
 
+class UActorComponent;
 class UBuildSocketComponent;
 class UMaterialInterface;
 
@@ -73,6 +74,9 @@ public:
 private:
     UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
     TArray<TWeakObjectPtr<UBuildSocketComponent>> LinkedSockets;
+    
+    UPROPERTY(EditAnywhere, Export, Transient, meta=(AllowPrivateAccess=true))
+    TMap<FName, TWeakObjectPtr<UActorComponent>> SpawnedActorComponents;
     
 public:
     UModificationSlotComponent(const FObjectInitializer& ObjectInitializer);

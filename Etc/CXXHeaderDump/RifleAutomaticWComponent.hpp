@@ -3,6 +3,6 @@
 
 class URifleAutomaticWComponent_C : public UAssaultRifleComponent
 {
-}; // Size: 0xB00
+}; // Size: 0xB08
 
 #endif

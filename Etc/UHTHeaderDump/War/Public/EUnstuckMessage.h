@@ -4,18 +4,19 @@
 
 UENUM(BlueprintType)
 enum class EUnstuckMessage : uint8 {
-    UnstuckZeroCount,
-    UnstuckCount,
-    UnstuckExecute,
-    UnstuckFail,
-    UnstuckFailAnchor,
-    UnstuckFailDeployed,
-    UnstuckFailDisabled,
-    UnstuckFailEnemy,
-    UnstuckFailHitched,
-    UnstuckFailNotOnFoot,
-    UnstuckFailMovement,
-    UnstuckFailUnsupported,
-    UnstuckFailNotInDriverSeat,
+    ZeroCount,
+    Count,
+    Execute,
+    Fail,
+    FailAnchor,
+    FailDeployed,
+    FailDisabled,
+    FailEnemy,
+    FailHitched,
+    FailNotOnFoot,
+    FailMovement,
+    FailUnsupported,
+    FailNotInDriverSeat,
+    FailUnstableBase,
 };
 

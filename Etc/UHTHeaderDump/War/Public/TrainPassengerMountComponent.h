@@ -9,6 +9,11 @@ UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
 class WAR_API UTrainPassengerMountComponent : public UMountComponent {
     GENERATED_BODY()
 public:
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bAllowItemSubmission;
+    
+public:
     UTrainPassengerMountComponent(const FObjectInitializer& ObjectInitializer);
 
 private:

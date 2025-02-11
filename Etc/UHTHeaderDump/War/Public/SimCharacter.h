@@ -14,13 +14,14 @@
 #include "ECharacterActivityState.h"
 #include "EDamageType.h"
 #include "EFortModificationType.h"
-#include "ESimCharacterStance.h"
+#include "EUniformType.h"
 #include "EWaterSourceType.h"
 #include "EZombieType.h"
 #include "EmoteActivityOptions.h"
 #include "HitNotify.h"
 #include "ItemInstance.h"
 #include "MapIntelligenceInterface.h"
+#include "RepPlayerMovement.h"
 #include "SurfaceMovementData.h"
 #include "Templates/SubclassOf.h"
 #include "UITargetingInfo.h"
@@ -66,6 +67,11 @@ class UStaticMeshComponent;
 UCLASS(Blueprintable)
 class WAR_API ASimCharacter : public AWarCharacter, public ICharacterInvokableInterface, public IDamageableActor, public IMapIntelligenceInterface {
     GENERATED_BODY()
+public:
+private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_RepPlayerMovement, meta=(AllowPrivateAccess=true))
+    FRepPlayerMovement RepPlayerMovement;
+    
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float StanceYawModifiers[4];
@@ -173,10 +179,10 @@ public:
     uint8 bIsWearingGasMask: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint8 bIgnoreStanceInput: 1;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bUsesDynamicMaterials: 1;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_UniformType, meta=(AllowPrivateAccess=true))
+    EUniformType UniformType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TEnumAsByte<EPhysicalSurface> CurrentSurfaceType;
@@ -247,9 +253,6 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UAudioComponent* EnterWaterSFX;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CharacterStance, meta=(AllowPrivateAccess=true))
-    ESimCharacterStance CharacterStance;
     
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CharacterActivityState, meta=(AllowPrivateAccess=true))
@@ -424,12 +427,6 @@ public:
     float AimingMaxSpeedModifier;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float MouseAimScale;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float NoAimYawScale;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bDisablePlayerFogOfWar;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -538,12 +535,6 @@ protected:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSimulateMeleeAttack(FActivityStateChange ActivityStateChange);
     
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerSetSprinting(bool bIsSprinting);
-    
-    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerSetIsProne(bool bIsProne);
-    
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetIsInScopeMode(bool InIsInScopeMode);
@@ -610,8 +601,16 @@ public:
     void OnRep_VisualCustomizationMaskNotify();
     
     UFUNCTION(BlueprintCallable)
+    void OnRep_UniformType();
+    
+    UFUNCTION(BlueprintCallable)
     void OnRep_TeamIdNotify();
     
+private:
+    UFUNCTION(BlueprintCallable)
+    void OnRep_RepPlayerMovement(const FRepPlayerMovement& PrevSnapshot);
+    
+public:
     UFUNCTION(BlueprintCallable)
     void OnRep_MountComponent();
     
@@ -644,9 +643,6 @@ public:
     void OnRep_CurrentOccupiedStructure();
     
 private:
-    UFUNCTION(BlueprintCallable)
-    void OnRep_CharacterStance();
-    
     UFUNCTION(BlueprintCallable)
     void OnRep_CharacterActivityState();
     
@@ -697,16 +693,8 @@ public:
     
 private:
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientLockStance(ESimCharacterStance Stance, bool bLocked);
-    
-    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientInterruptActivityState(uint8 SequenceNumber);
     
-protected:
-    UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientEndWoundedState();
-    
-private:
     UFUNCTION(Client, Reliable)
     void ClientCorrectActivityState(uint8 LastSuccessfulSequenceNumber, int8 HeldItemIndex, ECharacterActivityState NewState);
     

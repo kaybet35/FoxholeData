@@ -3,6 +3,6 @@
 
 class UBPATRPGTWComponent_C : public UDeployableItemComponent
 {
-}; // Size: 0x8D0
+}; // Size: 0x8D8
 
 #endif
