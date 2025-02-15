@@ -24,15 +24,15 @@ AFreighter::AFreighter(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MaxShippableCount = 5;
     this->State = 0;
     this->DynamicMeshComponent = NULL;
-    this->TransferLocation->SetupAttachment(RootComponent);
-    this->FrontLeftWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->FrontRightWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->BackRightWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->BackLeftWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->WakeWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->DeployingSFXLoop->SetupAttachment(RootComponent);
     this->BaseMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->RopeMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->TransferLocation->SetupAttachment(RootComponent);
+    this->FrontLeftWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->FrontRightWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void AFreighter::ServerToggleMode_Implementation(const bool bIsDeploy) {

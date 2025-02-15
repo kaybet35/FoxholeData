@@ -15,6 +15,7 @@ AMineSpline::AMineSpline(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->ExplosionTemplate = NULL;
     this->DamageDelay = 0.00f;
     this->ArmingDelay = 3.00f;
+    this->ExplosionFXOffsetZ = 50.00f;
     this->MineMask = 0;
     this->MaxMineCount = 16;
     this->bTriggeredByInfantry = false;

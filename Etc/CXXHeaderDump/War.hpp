@@ -8669,10 +8669,11 @@ class AMineSpline : public ATeamStructure
     TSubclassOf<class AWarExplosionEffect> ExplosionTemplate;                         // 0x0848 (size: 0x8)
     float DamageDelay;                                                                // 0x0850 (size: 0x4)
     float ArmingDelay;                                                                // 0x0854 (size: 0x4)
-    uint32 MineMask;                                                                  // 0x0858 (size: 0x4)
-    uint8 MaxMineCount;                                                               // 0x0869 (size: 0x1)
-    uint8 bTriggeredByInfantry;                                                       // 0x086A (size: 0x1)
-    uint8 bTriggeredByVehicles;                                                       // 0x086A (size: 0x1)
+    float ExplosionFXOffsetZ;                                                         // 0x0858 (size: 0x4)
+    uint32 MineMask;                                                                  // 0x085C (size: 0x4)
+    uint8 MaxMineCount;                                                               // 0x086D (size: 0x1)
+    uint8 bTriggeredByInfantry;                                                       // 0x086E (size: 0x1)
+    uint8 bTriggeredByVehicles;                                                       // 0x086E (size: 0x1)
 
     void OnRep_MineMask(uint32 PrevMask);
     void OnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
@@ -9987,7 +9988,7 @@ class ASimPlayerController : public AWarPlayerController
     void ClientOnRocketGroundZeroEvent(const FVector_NetQuantize Location);
     void ClientOnProfileDownloadComplete(const bool bIsRegionTravelling);
     void ClientOnOutgoingSensorPing();
-    void ClientOnOccupySuccess(bool OccupantCrouches);
+    void ClientOnOccupySuccess();
     void ClientOnOccupyError();
     void ClientOnLongRangeArtilleryFireShellEvent(class AActor* LongRangeArtillery, const FVector_NetQuantize Location, ELongRangeArtilleryType LongRangeArtilleryType);
     void ClientOnIntelCenterFireListeningAreaEvent(class AActor* IntelCenter, const FVector_NetQuantize Location);

@@ -41,9 +41,6 @@ ADrawbridge::ADrawbridge(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->LinkedTrack = NULL;
     this->State = Closed;
     this->StartTime = 0.00f;
-    this->SideBUseArea->SetupAttachment(SideBMesh);
-    this->SideAProxy->SetupAttachment(RootComponent);
-    this->SideBProxy->SetupAttachment(RootComponent);
     this->SideBottomUseArea->SetupAttachment(RootComponent);
     this->AboveBlockingArea->SetupAttachment(RootComponent);
     this->AboveBlockingVolumeA->SetupAttachment(RootComponent);
@@ -58,6 +55,9 @@ ADrawbridge::ADrawbridge(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->SideALeverMesh->SetupAttachment(RootComponent);
     this->SideBLeverMesh->SetupAttachment(RootComponent);
     this->SideAUseArea->SetupAttachment(SideAMesh);
+    this->SideBUseArea->SetupAttachment(SideBMesh);
+    this->SideAProxy->SetupAttachment(RootComponent);
+    this->SideBProxy->SetupAttachment(RootComponent);
 }
 
 void ADrawbridge::OnRep_State() {

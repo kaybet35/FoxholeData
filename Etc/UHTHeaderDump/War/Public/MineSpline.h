@@ -37,6 +37,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ArmingDelay;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float ExplosionFXOffsetZ;
+    
     UPROPERTY(EditAnywhere, SaveGame, ReplicatedUsing=OnRep_MineMask, meta=(AllowPrivateAccess=true))
     uint32 MineMask;
     

@@ -1061,7 +1061,7 @@ public:
     void ClientOnOutgoingSensorPing();
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientOnOccupySuccess(bool OccupantCrouches);
+    void ClientOnOccupySuccess();
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientOnOccupyError();

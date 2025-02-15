@@ -46,13 +46,13 @@ ALargeShip::ALargeShip(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->PostProcessMaterial = NULL;
     this->PostProcessMaterialInstance = NULL;
     this->bRainStormsCauseFlooding = true;
-    this->DockComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->VeryMajorDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->MediumDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->VeryMinorDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->CargoCheckVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->DockingObstructionCheckVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->UndockingObstructionCheckVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->DockComponent->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->KillVolume->SetupAttachment(RootComponent);
     this->AnchorVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }

@@ -1242,7 +1242,7 @@ void ASimPlayerController::ClientOnProfileDownloadComplete_Implementation(const 
 void ASimPlayerController::ClientOnOutgoingSensorPing_Implementation() {
 }
 
-void ASimPlayerController::ClientOnOccupySuccess_Implementation(bool OccupantCrouches) {
+void ASimPlayerController::ClientOnOccupySuccess_Implementation() {
 }
 
 void ASimPlayerController::ClientOnOccupyError_Implementation() {

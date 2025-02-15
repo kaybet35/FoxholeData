@@ -2104,6 +2104,7 @@ function AMine:OnBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherB
 ---@field ExplosionTemplate TSubclassOf<AWarExplosionEffect>
 ---@field DamageDelay float
 ---@field ArmingDelay float
+---@field ExplosionFXOffsetZ float
 ---@field MineMask uint32
 ---@field MaxMineCount uint8
 ---@field bTriggeredByInfantry boolean
@@ -4065,8 +4066,7 @@ function ASimPlayerController:ClientOnRocketGroundZeroEvent(Location) end
 ---@param bIsRegionTravelling boolean
 function ASimPlayerController:ClientOnProfileDownloadComplete(bIsRegionTravelling) end
 function ASimPlayerController:ClientOnOutgoingSensorPing() end
----@param OccupantCrouches boolean
-function ASimPlayerController:ClientOnOccupySuccess(OccupantCrouches) end
+function ASimPlayerController:ClientOnOccupySuccess() end
 function ASimPlayerController:ClientOnOccupyError() end
 ---@param LongRangeArtillery AActor
 ---@param Location FVector_NetQuantize
