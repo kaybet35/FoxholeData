@@ -12913,8 +12913,8 @@ class UPlayerCharacterMovementComponent : public UCharacterMovementComponent
 {
     float MaxWalkSpeedProne;                                                          // 0x06D0 (size: 0x4)
     float MaxLadderClimbingSpeed;                                                     // 0x06D4 (size: 0x4)
-    float ImmersionDepthHeightBias;                                                   // 0x06E8 (size: 0x4)
-    float WaterFrictionCoefficient;                                                   // 0x06EC (size: 0x4)
+    float ImmersionDepthHeightBias;                                                   // 0x06EC (size: 0x4)
+    float WaterFrictionCoefficient;                                                   // 0x06F0 (size: 0x4)
 
     void CapsuleEndOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     void CapsuleBeginOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

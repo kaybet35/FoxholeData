@@ -11,14 +11,14 @@ class UABP_FieldMortarC_C : public USimVehicleGunnerSupportAnimInstance
     FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_01FDC4974E1986B7B3F9799D3501F70E; // 0x0550 (size: 0x78)
     FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_DD791DCB4BD5416608D2FD8230102239; // 0x05C8 (size: 0x78)
     FAnimNode_BlendListByBool AnimGraphNode_BlendListByBool_4E5EE9E0492717F0AE433C8A979A7C15; // 0x0640 (size: 0xA0)
-    FAnimNode_RotationOffsetBlendSpace AnimGraphNode_RotationOffsetBlendSpace_6A3322294C91CBA4435C1AB6CEFA1C9C; // 0x06E0 (size: 0x188)
-    int32 WheelRotationSpeedFactor;                                                   // 0x0868 (size: 0x4)
+    FAnimNode_BlendSpacePlayer AnimGraphNode_BlendSpacePlayer_B97B38CA4384FF0AA0B5EA949C8F9814; // 0x06E0 (size: 0xE0)
+    int32 WheelRotationSpeedFactor;                                                   // 0x07C0 (size: 0x4)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldMortarC_AnimGraphNode_BlendSpacePlayer_9E1EB5FC49B517F326C7D6B3A7971A30();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldMortarC_AnimGraphNode_SequencePlayer_3ADD8F014173079A9380968EACA1DA75();
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_FieldMortarC_AnimGraphNode_SequencePlayer_01FDC4974E1986B7B3F9799D3501F70E();
     void ExecuteUbergraph_ABP_FieldMortarC(int32 EntryPoint);
-}; // Size: 0x86C
+}; // Size: 0x7C4
 
 #endif

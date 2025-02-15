@@ -9,7 +9,7 @@
 ---@field AnimGraphNode_SequencePlayer_01FDC4974E1986B7B3F9799D3501F70E FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_DD791DCB4BD5416608D2FD8230102239 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_4E5EE9E0492717F0AE433C8A979A7C15 FAnimNode_BlendListByBool
----@field AnimGraphNode_RotationOffsetBlendSpace_6A3322294C91CBA4435C1AB6CEFA1C9C FAnimNode_RotationOffsetBlendSpace
+---@field AnimGraphNode_BlendSpacePlayer_B97B38CA4384FF0AA0B5EA949C8F9814 FAnimNode_BlendSpacePlayer
 ---@field WheelRotationSpeedFactor int32
 UABP_FieldMortarC_C = {}
 
