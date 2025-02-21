@@ -555,6 +555,9 @@ protected:
     void ServerOnUseFromVehicle(ASimVehicle* Vehicle, FActivityStateChange ActivityStateChange);
     
 public:
+    UFUNCTION(Server, Unreliable, WithValidation)
+    void ServerMoveMinimal(float Timestamp, uint8 ClientRoll, uint32 View, uint8 ClientMovementMode);
+    
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerMountStructure(AStructure* Structure, FActivityStateChange ActivityStateChange);
     

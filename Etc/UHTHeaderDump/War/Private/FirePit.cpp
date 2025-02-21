@@ -17,12 +17,12 @@ AFirePit::AFirePit(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->Fire3ParticleSystem = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("Fire3ParticleSystem"));
     this->FireSFXLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("FireSFXLoop"));
     this->DieselConsumptionRate = 0.00f;
-    this->Fire1ParticleSystem->SetupAttachment(RootComponent);
     this->Fire2ParticleSystem->SetupAttachment(RootComponent);
     this->Fire3ParticleSystem->SetupAttachment(RootComponent);
     this->FireSFXLoop->SetupAttachment(RootComponent);
     this->TemperatureModifierComponent->SetupAttachment(RootComponent);
     this->FireMesh->SetupAttachment(RootComponent);
+    this->Fire1ParticleSystem->SetupAttachment(RootComponent);
 }
 
 void AFirePit::OnRep_FuelTankDiesel() {

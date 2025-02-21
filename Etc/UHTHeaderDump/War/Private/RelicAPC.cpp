@@ -9,8 +9,8 @@ ARelicAPC::ARelicAPC(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->RightGunMuzzleLocation = CreateDefaultSubobject<USceneComponent>(TEXT("RightGunMuzzleLocation"));
     this->StashedLeftGunAmmo = 0;
     this->StashedRightGunAmmo = 0;
-    this->RightGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->LeftGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->RightGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void ARelicAPC::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

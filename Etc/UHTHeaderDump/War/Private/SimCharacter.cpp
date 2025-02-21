@@ -275,6 +275,12 @@ bool ASimCharacter::ServerOnUseFromVehicle_Validate(ASimVehicle* Vehicle, FActiv
     return true;
 }
 
+void ASimCharacter::ServerMoveMinimal_Implementation(float Timestamp, uint8 ClientRoll, uint32 View, uint8 ClientMovementMode) {
+}
+bool ASimCharacter::ServerMoveMinimal_Validate(float Timestamp, uint8 ClientRoll, uint32 View, uint8 ClientMovementMode) {
+    return true;
+}
+
 void ASimCharacter::ServerMountStructure_Implementation(AStructure* Structure, FActivityStateChange ActivityStateChange) {
 }
 bool ASimCharacter::ServerMountStructure_Validate(AStructure* Structure, FActivityStateChange ActivityStateChange) {

@@ -28,8 +28,8 @@ AResourceField::AResourceField(const FObjectInitializer& ObjectInitializer) : Su
     this->bCheckTechForSecondaryResource = false;
     this->ChanceToSpawnSecondaryNormalized = 0.05f;
     this->SecondaryResourceToSpawn = NULL;
-    this->NoBuildVolume->SetupAttachment(RootComponent);
     this->ResourceFieldMeshComponent->SetupAttachment(RootComponent);
+    this->NoBuildVolume->SetupAttachment(RootComponent);
 }
 
 void AResourceField::OnRep_ResourcesLeftToSpawn() {

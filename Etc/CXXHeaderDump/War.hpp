@@ -9578,6 +9578,7 @@ class ASimCharacter : public AWarCharacter
     void ServerReload(int32 AmmoIx, class UItemHolderComponent* InHolder, FActivityStateChange ActivityStateChange);
     void ServerPlayEmote(const ECharacterActivityState EmoteActivityState);
     void ServerOnUseFromVehicle(class ASimVehicle* Vehicle, FActivityStateChange ActivityStateChange);
+    void ServerMoveMinimal(float Timestamp, uint8 ClientRoll, uint32 View, uint8 ClientMovementMode);
     void ServerMountStructure(class AStructure* Structure, FActivityStateChange ActivityStateChange);
     void ServerModifyStructure(FActivityStateChange ActivityStateChange, class UModificationSlotComponent* Slot, const EFortModificationType Type, int32 CurrentModificationMask);
     void ServerLinkRWDSimVehicles(class ARWDSimVehicle* VehicleA, class ARWDSimVehicle* VehicleB);

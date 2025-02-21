@@ -3172,6 +3172,11 @@ function ASimCharacter:ServerPlayEmote(EmoteActivityState) end
 ---@param Vehicle ASimVehicle
 ---@param ActivityStateChange FActivityStateChange
 function ASimCharacter:ServerOnUseFromVehicle(Vehicle, ActivityStateChange) end
+---@param Timestamp float
+---@param ClientRoll uint8
+---@param View uint32
+---@param ClientMovementMode uint8
+function ASimCharacter:ServerMoveMinimal(Timestamp, ClientRoll, View, ClientMovementMode) end
 ---@param Structure AStructure
 ---@param ActivityStateChange FActivityStateChange
 function ASimCharacter:ServerMountStructure(Structure, ActivityStateChange) end
