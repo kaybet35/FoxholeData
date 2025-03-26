@@ -195,6 +195,17 @@ struct FAlertTownUnderAttackRPCInfo
 
 }; // Size: 0x18
 
+struct FAlertWarOpsMessageRPCInfo
+{
+    EWarOpsAlertMessage MessageType;                                                  // 0x0000 (size: 0x1)
+    bool bVar1Set;                                                                    // 0x0001 (size: 0x1)
+    bool bVar2Set;                                                                    // 0x0002 (size: 0x1)
+    int32 Var1;                                                                       // 0x0004 (size: 0x4)
+    int32 Var2;                                                                       // 0x0008 (size: 0x4)
+    float DurationSecs;                                                               // 0x000C (size: 0x4)
+
+}; // Size: 0x10
+
 struct FAmmoDynamicData : public FTableRowBase
 {
     float Damage;                                                                     // 0x0008 (size: 0x4)
@@ -1799,10 +1810,10 @@ struct FGlobalShardConfig
     bool bRedirectToShardSelector;                                                    // 0x0005 (size: 0x1)
     int32 OverpopShardId;                                                             // 0x0008 (size: 0x4)
     EOverpopText OverpopTextType;                                                     // 0x000C (size: 0x1)
-    FString OverpopYesButton;                                                         // 0x0010 (size: 0x10)
-    FString OverpopNoButton;                                                          // 0x0020 (size: 0x10)
+    EOverpopButtonText OverpopYesButtonType;                                          // 0x000D (size: 0x1)
+    EOverpopButtonText OverpopNoButtonType;                                           // 0x000E (size: 0x1)
 
-}; // Size: 0x30
+}; // Size: 0x10
 
 struct FGlobalShardProfile
 {
@@ -5629,11 +5640,11 @@ struct FWarBlueprints
 struct FWarClientConfig
 {
     bool bDisableOneWorld;                                                            // 0x0000 (size: 0x1)
-    FGlobalShardConfig GlobalShardConfig;                                             // 0x0008 (size: 0x30)
-    TArray<FWarShardInfo> AvailableShardList;                                         // 0x0038 (size: 0x10)
-    TArray<FString> ConquestNews;                                                     // 0x0048 (size: 0x10)
+    FGlobalShardConfig GlobalShardConfig;                                             // 0x0004 (size: 0x10)
+    TArray<FWarShardInfo> AvailableShardList;                                         // 0x0018 (size: 0x10)
+    TArray<FString> ConquestNews;                                                     // 0x0028 (size: 0x10)
 
-}; // Size: 0x58
+}; // Size: 0x38
 
 struct FWarDebugVariables
 {
@@ -10018,6 +10029,7 @@ class ASimPlayerController : public AWarPlayerController
     void ClientChatMessage(const EChatChannel Channel, const class APlayerState* SenderPlayerState, FString MsgString, EChatLanguage BroadcastLanguage, const bool ReportingWhisperToSelf, const bool bIsEnabled);
     void ClientBeaconLoadTest(FRegionConnectionInfo RegionConnectionInfo, FString MapCodename, uint32 NumBeacons, uint32 Interval, uint32 Duration);
     void ClientAllowHammerToBuildAll(const bool bAllowHammerToBuildAll);
+    void ClientAlertWarOpsMessage(const FAlertWarOpsMessageRPCInfo AlertInfo);
     void ClientAlertTownUnderAttack(const FAlertTownUnderAttackRPCInfo AlertInfo);
     void ClientAlertTownDestroyed(const FAlertTownDestroyedRPCInfo AlertInfo);
     void ClientAlertTownBuilt(const FAlertTownBuiltRPCInfo AlertInfo);
@@ -11598,7 +11610,7 @@ class UCharacterAnimInstance : public UAnimInstance
 
 class UClientConfigManager : public UObject
 {
-}; // Size: 0x108
+}; // Size: 0xE8
 
 class UClientStreamingManager : public UObject
 {

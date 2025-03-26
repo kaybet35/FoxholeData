@@ -158,6 +158,12 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Grip_Standing->SetupAttachment(RootComponent);
     this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Grip_Prone->SetupAttachment(RootComponent);
+    this->GroundEquippedItemMesh->SetupAttachment(RootComponent);
+    this->SuppressionSphere->SetupAttachment(RootComponent);
+    this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->EnterWaterPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->SwimmingSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->EnterWaterSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Head->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Hands->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Legs->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -168,12 +174,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Muzzle_Standing->SetupAttachment(RootComponent);
     this->Muzzle_Crouched->SetupAttachment(RootComponent);
     this->Muzzle_Prone->SetupAttachment(RootComponent);
-    this->GroundEquippedItemMesh->SetupAttachment(RootComponent);
-    this->SuppressionSphere->SetupAttachment(RootComponent);
-    this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->EnterWaterPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->SwimmingSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->EnterWaterSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void ASimCharacter::SlowTick() {

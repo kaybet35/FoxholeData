@@ -1329,6 +1329,9 @@ void ASimPlayerController::ClientBeaconLoadTest_Implementation(FRegionConnection
 void ASimPlayerController::ClientAllowHammerToBuildAll_Implementation(const bool bAllowHammerToBuildAll) {
 }
 
+void ASimPlayerController::ClientAlertWarOpsMessage_Implementation(const FAlertWarOpsMessageRPCInfo AlertInfo) {
+}
+
 void ASimPlayerController::ClientAlertTownUnderAttack_Implementation(const FAlertTownUnderAttackRPCInfo AlertInfo) {
 }
 

@@ -14,6 +14,7 @@
 #include "AlertTownBuiltRPCInfo.h"
 #include "AlertTownDestroyedRPCInfo.h"
 #include "AlertTownUnderAttackRPCInfo.h"
+#include "AlertWarOpsMessageRPCInfo.h"
 #include "BuildResponse.h"
 #include "CharacterCustomizationInfo.h"
 #include "ClientShardConfig.h"
@@ -1154,6 +1155,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientAllowHammerToBuildAll(const bool bAllowHammerToBuildAll);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void ClientAlertWarOpsMessage(const FAlertWarOpsMessageRPCInfo AlertInfo);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientAlertTownUnderAttack(const FAlertTownUnderAttackRPCInfo AlertInfo);

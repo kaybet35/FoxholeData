@@ -4157,6 +4157,8 @@ function ASimPlayerController:ClientChatMessage(Channel, SenderPlayerState, MsgS
 function ASimPlayerController:ClientBeaconLoadTest(RegionConnectionInfo, MapCodename, NumBeacons, Interval, Duration) end
 ---@param bAllowHammerToBuildAll boolean
 function ASimPlayerController:ClientAllowHammerToBuildAll(bAllowHammerToBuildAll) end
+---@param AlertInfo FAlertWarOpsMessageRPCInfo
+function ASimPlayerController:ClientAlertWarOpsMessage(AlertInfo) end
 ---@param AlertInfo FAlertTownUnderAttackRPCInfo
 function ASimPlayerController:ClientAlertTownUnderAttack(AlertInfo) end
 ---@param AlertInfo FAlertTownDestroyedRPCInfo
@@ -5517,6 +5519,17 @@ FAlertTownDestroyedRPCInfo = {}
 ---@field MapId EWorldConquestMapId
 ---@field TeamId uint8
 FAlertTownUnderAttackRPCInfo = {}
+
+
+
+---@class FAlertWarOpsMessageRPCInfo
+---@field MessageType EWarOpsAlertMessage
+---@field bVar1Set boolean
+---@field bVar2Set boolean
+---@field Var1 int32
+---@field Var2 int32
+---@field DurationSecs float
+FAlertWarOpsMessageRPCInfo = {}
 
 
 
@@ -7123,8 +7136,8 @@ FGlobalResourceState = {}
 ---@field bRedirectToShardSelector boolean
 ---@field OverpopShardId int32
 ---@field OverpopTextType EOverpopText
----@field OverpopYesButton FString
----@field OverpopNoButton FString
+---@field OverpopYesButtonType EOverpopButtonText
+---@field OverpopNoButtonType EOverpopButtonText
 FGlobalShardConfig = {}
 
 

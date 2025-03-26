@@ -1846,13 +1846,19 @@ EOutfitType = {
     EOutfitType_MAX = 5,
 }
 
+---@enum EOverpopButtonText
+EOverpopButtonText = {
+    None = 0,
+    ChangeShard = 1,
+    WaitInQueue = 2,
+    EOverpopButtonText_MAX = 3,
+}
+
 ---@enum EOverpopText
 EOverpopText = {
     None = 0,
     ShardAtCapacity = 1,
-    JoinAnotherShard = 2,
-    ChangeShardAnytime = 3,
-    EOverpopText_MAX = 4,
+    EOverpopText_MAX = 2,
 }
 
 ---@enum EPackUpResponse
@@ -3453,12 +3459,16 @@ EWarCollisionIgnoreFlags = {
 
 ---@enum EWarOpsAlertMessage
 EWarOpsAlertMessage = {
-    DeployUpdate = 0,
-    UpcomingServerPatch = 1,
-    DeployingServerPatch = 2,
-    UpcomingFoxholeServicesPatch = 3,
-    DeployingFoxholeServicesPatch = 4,
-    EWarOpsAlertMessage_MAX = 5,
+    Invalid = 0,
+    DeployUpdate = 1,
+    UpcomingServerPatch = 2,
+    DeployingServerPatch = 3,
+    UpcomingFoxholeServicesPatch = 4,
+    DeployingFoxholeServicesPatch = 5,
+    DevBranchUpdateWorldSave = 6,
+    DevBranchUpdateWorldReset = 7,
+    RegionServerRestart = 8,
+    EWarOpsAlertMessage_MAX = 9,
 }
 
 ---@enum EWarPhase

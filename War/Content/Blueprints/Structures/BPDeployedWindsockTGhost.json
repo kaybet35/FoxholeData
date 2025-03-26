@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "Pole",
+    "Name": "StaticMesh",
     "Outer": "BPDeployedWindsockTGhost_C",
     "Class": "UScriptClass'ObjectProperty'",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
@@ -17,7 +17,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.17"
       }
     },
     "SuperStruct": {
@@ -26,8 +26,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPDeployedWindsockTGhost_C:Pole'",
+        "ObjectName": "ObjectProperty'BPDeployedWindsockTGhost_C:StaticMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPDeployedWindsockTGhost_C:Pole'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.7"
       },
       {
         "ObjectName": "ObjectProperty'BPDeployedWindsockTGhost_C:BuildSocket'",
@@ -35,11 +39,11 @@
       },
       {
         "ObjectName": "ObjectProperty'BPDeployedWindsockTGhost_C:SkeletalMesh1'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.9"
       },
       {
         "ObjectName": "ObjectProperty'BPDeployedWindsockTGhost_C:SkeletalMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.8"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -137,6 +141,17 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "Pole",
+    "Outer": "BPDeployedWindsockTGhost_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "SkeletalMesh",
     "Outer": "BPDeployedWindsockTGhost_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -195,18 +210,18 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPDeployedWindsockTGhost_C:SkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.19"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.13"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.14"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.14"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.15"
         }
       ],
       "VariableGuid": "511CDDFB-4A75BECE-31275CAA-EF6D9A8F",
@@ -225,7 +240,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDeployedWindsockTGhost_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.10"
       },
       "VariableGuid": "84B6860D-401B2CB6-24C2729A-8BE9E30E",
       "InternalVariableName": "DefaultSceneRoot"
@@ -243,7 +258,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPDeployedWindsockTGhost_C:SkeletalMesh1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.18"
       },
       "AttachToName": "S_Attachment",
       "VariableGuid": "02FCF437-42D1F924-B7F6D1A8-6465AC17",
@@ -262,10 +277,30 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDeployedWindsockTGhost_C:Pole_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.20"
       },
       "VariableGuid": "564D0691-4A10A3F6-92262D92-613B061C",
       "InternalVariableName": "Pole"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_2",
+    "Class": "UScriptClass'SCS_Node'",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPDeployedWindsockTGhost_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.21"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "70224D67-4D5E4228-0821EEB7-D0A2D06C",
+      "InternalVariableName": "StaticMesh"
     }
   },
   {
@@ -277,34 +312,42 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.12"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.10"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.16"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.12"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.13"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.14"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.10"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.11"
         },
         {
           "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.14"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.16"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDeployedWindsockTGhost_C:SimpleConstructionScript_2.SCS_Node_2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPDeployedWindsockTGhost.13"
       }
     }
   },
@@ -412,6 +455,39 @@
         "Pitch": 0.0,
         "Yaw": 89.99999,
         "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BPDeployedWindsockTGhost_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'BannerSandBags'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Banners/BannerSandBags.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BuildGhost'",
+          "ObjectPath": "War/Content/Materials/Structures/BuildGhost.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 3.646352,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 319.4021,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.8
       }
     }
   }

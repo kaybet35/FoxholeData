@@ -19,9 +19,9 @@ AEmplacementHouse::AEmplacementHouse(const FObjectInitializer& ObjectInitializer
     this->AnimationHysteresisTime = 0.00f;
     this->StashedAmmo = 0;
     this->Ladder = NULL;
-    this->LadderLocation->SetupAttachment(RootComponent);
     this->EmplacementGunMesh->SetupAttachment(RootComponent);
     this->EmplacementGunMuzzleLocation->SetupAttachment(EmplacementGunMesh);
+    this->LadderLocation->SetupAttachment(RootComponent);
 }
 
 void AEmplacementHouse::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

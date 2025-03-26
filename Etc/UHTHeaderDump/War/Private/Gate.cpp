@@ -15,10 +15,10 @@ AGate::AGate(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
     this->GateCollisionProfileName = TEXT("StructureDamageableMesh");
     this->GateState = EGateState::Closed;
     this->AutomaticCloseTime = 10.00f;
-    this->NoBuildCollider->SetupAttachment(RootComponent);
     this->GateObstructionCollider->SetupAttachment(RootComponent);
     this->GateCollider->SetupAttachment(RootComponent);
     this->GateDoorMesh->SetupAttachment(RootComponent);
+    this->NoBuildCollider->SetupAttachment(RootComponent);
 }
 
 void AGate::OnRep_GateState() {

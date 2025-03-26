@@ -6,7 +6,5 @@ UENUM(BlueprintType)
 enum class EOverpopText : uint8 {
     None,
     ShardAtCapacity,
-    JoinAnotherShard,
-    ChangeShardAnytime,
 };
 

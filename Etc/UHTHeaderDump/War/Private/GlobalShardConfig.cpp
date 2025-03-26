@@ -6,5 +6,7 @@ FGlobalShardConfig::FGlobalShardConfig() {
     this->bRedirectToShardSelector = false;
     this->OverpopShardId = 0;
     this->OverpopTextType = EOverpopText::None;
+    this->OverpopYesButtonType = EOverpopButtonText::None;
+    this->OverpopNoButtonType = EOverpopButtonText::None;
 }
 

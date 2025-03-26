@@ -10,8 +10,8 @@ AGunTurret::AGunTurret(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->StructureNetRelevancySize = EStructureNetRelevancySize::Large;
     this->SkelMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkelMesh"));
     this->GunnerYaw = 0.00f;
-    this->AITurretComponent->SetupAttachment(RootComponent);
     this->SkelMesh->SetupAttachment(RootComponent);
+    this->AITurretComponent->SetupAttachment(RootComponent);
 }
 
 void AGunTurret::OnRep_GunnerYaw() {

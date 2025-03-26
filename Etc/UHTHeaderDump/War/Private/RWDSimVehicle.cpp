@@ -25,14 +25,14 @@ ARWDSimVehicle::ARWDSimVehicle(const FObjectInitializer& ObjectInitializer) : Su
     this->GearShiftUpSoundCue = NULL;
     this->GearShiftDownSoundCue = NULL;
     this->TowHitch = NULL;
+    this->IdleLoop->SetupAttachment(RootComponent);
+    this->RearLeftTireDirtLowSpeedPS->SetupAttachment(RootComponent);
+    this->RearLeftTireDirtHighSpeedPS->SetupAttachment(RootComponent);
     this->RearRightTireDirtLowSpeedPS->SetupAttachment(RootComponent);
     this->RearRightTireDirtHighSpeedPS->SetupAttachment(RootComponent);
     this->MainDirtLowSpeedPS->SetupAttachment(RootComponent);
     this->MainDirtHighSpeedPS->SetupAttachment(RootComponent);
     this->SkiddingDirtPS->SetupAttachment(RootComponent);
-    this->IdleLoop->SetupAttachment(RootComponent);
-    this->RearLeftTireDirtLowSpeedPS->SetupAttachment(RootComponent);
-    this->RearLeftTireDirtHighSpeedPS->SetupAttachment(RootComponent);
 }
 
 void ARWDSimVehicle::ServerMoveRwdTowing_Implementation(const FRWDMove& Move, const FRWDMoveBase& Base, const FRWDMoveTrailer& TrailerMove) {

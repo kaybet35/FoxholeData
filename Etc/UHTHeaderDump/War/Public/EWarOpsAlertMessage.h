@@ -4,10 +4,14 @@
 
 UENUM(BlueprintType)
 enum class EWarOpsAlertMessage : uint8 {
+    Invalid,
     DeployUpdate,
     UpcomingServerPatch,
     DeployingServerPatch,
     UpcomingFoxholeServicesPatch,
     DeployingFoxholeServicesPatch,
+    DevBranchUpdateWorldSave,
+    DevBranchUpdateWorldReset,
+    RegionServerRestart,
 };
 

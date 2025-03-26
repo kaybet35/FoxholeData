@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EOverpopButtonText.h"
 #include "EOverpopText.h"
 #include "GlobalShardConfig.generated.h"
 
@@ -23,10 +24,10 @@ public:
     EOverpopText OverpopTextType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString OverpopYesButton;
+    EOverpopButtonText OverpopYesButtonType;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    FString OverpopNoButton;
+    EOverpopButtonText OverpopNoButtonType;
     
     WAR_API FGlobalShardConfig();
 };

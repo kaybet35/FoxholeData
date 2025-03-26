@@ -5,7 +5,7 @@ UGeneralProjectSettings::UGeneralProjectSettings() {
     this->CompanyDistinguishedName = TEXT("CN=Clapfoot, O=Clapfoot, L=Toronto, S=Ontario, C=CA");
     this->CopyrightNotice = TEXT("Copyright Clapfoot Inc");
     this->ProjectName = TEXT("Foxhole Prototype");
-    this->ProjectVersion = TEXT("1.60.10.0");
+    this->ProjectVersion = TEXT("1.60.16.0");
     this->ProjectDisplayedTitle = FText::FromString(TEXT("{GameName}"));
     this->bShouldWindowPreserveAspectRatio = true;
     this->bUseBorderlessWindow = false;
