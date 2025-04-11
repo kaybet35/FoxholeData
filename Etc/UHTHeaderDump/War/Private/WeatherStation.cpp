@@ -35,11 +35,11 @@ AWeatherStation::AWeatherStation(const FObjectInitializer& ObjectInitializer) : 
     this->Yaw = 0.00f;
     this->Power = 0.00f;
     this->RemainingActiveTime = 0.00f;
-    this->RotationSFXLoop->SetupAttachment(RootComponent);
+    this->KillVolume->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
     this->BaseMesh->SetupAttachment(RootComponent);
     this->ActiveSFXLoop->SetupAttachment(RootComponent);
-    this->KillVolume->SetupAttachment(RootComponent);
+    this->RotationSFXLoop->SetupAttachment(RootComponent);
 }
 
 void AWeatherStation::OnRep_Yaw(const float PreviousYaw) {

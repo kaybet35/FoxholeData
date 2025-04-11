@@ -40,13 +40,13 @@ ASubmarineVehicle::ASubmarineVehicle(const FObjectInitializer& ObjectInitializer
     this->MinorDamageUnderWaterPS = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("MinorDamageUnderWaterPS"));
     this->VeryMinorDamageUnderWaterPS = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("VeryMinorDamageUnderWaterPS"));
     this->UnderWaterDamagePSDepth = 1000.00f;
-    this->SeaFloorMesh->SetupAttachment(RootComponent);
     this->VeryMajorDamageUnderWaterPS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->MajorDamageUnderWaterPS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->MediumDamageUnderWaterPS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->MinorDamageUnderWaterPS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->VeryMinorDamageUnderWaterPS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->SubmarineVisibilityToggleComponent->SetupAttachment(RootComponent);
+    this->SeaFloorMesh->SetupAttachment(RootComponent);
 }
 
 void ASubmarineVehicle::ShowDamageDepthWarning() {

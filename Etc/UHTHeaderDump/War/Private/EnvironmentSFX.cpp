@@ -7,8 +7,8 @@ AEnvironmentSFX::AEnvironmentSFX(const FObjectInitializer& ObjectInitializer) : 
     this->ArrowComponent = (UArrowComponent*)RootComponent;
     this->DayTimeSFX = CreateDefaultSubobject<UAudioComponent>(TEXT("DayTimeSFX"));
     this->NightTimeSFX = CreateDefaultSubobject<UAudioComponent>(TEXT("NightTimeSFX"));
-    this->NightTimeSFX->SetupAttachment(RootComponent);
     this->DayTimeSFX->SetupAttachment(RootComponent);
+    this->NightTimeSFX->SetupAttachment(RootComponent);
 }
 
 

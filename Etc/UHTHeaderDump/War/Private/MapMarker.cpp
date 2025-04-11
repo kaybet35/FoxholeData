@@ -10,9 +10,9 @@ AMapMarker::AMapMarker(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MajorTextRender = CreateDefaultSubobject<UTextRenderComponent>(TEXT("MajorTextRender"));
     this->MinorTextRender = CreateDefaultSubobject<UTextRenderComponent>(TEXT("MinorTextRender"));
     this->MapMarkerType = EMapMarkerType::Minor;
-    this->MinorTextRender->SetupAttachment(RootComponent);
     this->MarkerArea->SetupAttachment(RootComponent);
     this->MajorTextRender->SetupAttachment(RootComponent);
+    this->MinorTextRender->SetupAttachment(RootComponent);
 }
 
 void AMapMarker::BeginMarkerOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {
