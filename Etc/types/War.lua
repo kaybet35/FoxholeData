@@ -11580,6 +11580,7 @@ FWarTimeDiscrepancy = {}
 ---@field AutoSaveSeconds float
 ---@field RecoverySaveSeconds float
 ---@field WarBalancerEnabled boolean
+---@field WarBalancerTickRate float
 ---@field WarBalancerDryRunMode boolean
 ---@field WarBalancerMaxPlayers int32
 ---@field WarBalancerMinPlayersBasedOnTick int32

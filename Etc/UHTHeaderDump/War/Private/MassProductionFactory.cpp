@@ -9,9 +9,9 @@ AMassProductionFactory::AMassProductionFactory(const FObjectInitializer& ObjectI
     this->TransferLocationFootprint = CreateDefaultSubobject<UBoxComponent>(TEXT("TransferLocationFootprint"));
     this->ShippableCrateSound = NULL;
     this->ShippableCratePS = NULL;
-    this->CraneSpawnLocationComponent->SetupAttachment(RootComponent);
     this->TransferLocation->SetupAttachment(RootComponent);
     this->TransferLocationFootprint->SetupAttachment(RootComponent);
+    this->CraneSpawnLocationComponent->SetupAttachment(RootComponent);
 }
 
 void AMassProductionFactory::MulticastPlayShippableCrateFX_Implementation() {

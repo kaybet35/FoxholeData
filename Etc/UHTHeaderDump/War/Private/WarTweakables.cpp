@@ -202,6 +202,7 @@ FWarTweakables::FWarTweakables() {
     this->AutoSaveSeconds = 0.00f;
     this->RecoverySaveSeconds = 0.00f;
     this->WarBalancerEnabled = false;
+    this->WarBalancerTickRate = 0.00f;
     this->WarBalancerDryRunMode = false;
     this->WarBalancerMaxPlayers = 0;
     this->WarBalancerMinPlayersBasedOnTick = 0;
