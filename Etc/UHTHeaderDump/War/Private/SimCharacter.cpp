@@ -150,7 +150,9 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Grip_Prone = CreateDefaultSubobject<USceneComponent>(TEXT("Grip_Prone"));
     this->RegionBoundaryParamCollection = NULL;
     this->bIsInScopeMode = false;
+    this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Grip_Prone->SetupAttachment(RootComponent);
+    this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EnterWaterPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->SwimmingSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EnterWaterSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -160,7 +162,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->LOSRasterComponent->SetupAttachment(LOSPostProcess);
     this->GrenadeAimMesh->SetupAttachment(RootComponent);
     this->Grip_Standing->SetupAttachment(RootComponent);
-    this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Head->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Hands->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Legs->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -173,7 +174,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Muzzle_Prone->SetupAttachment(RootComponent);
     this->GroundEquippedItemMesh->SetupAttachment(RootComponent);
     this->SuppressionSphere->SetupAttachment(RootComponent);
-    this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void ASimCharacter::SlowTick() {
