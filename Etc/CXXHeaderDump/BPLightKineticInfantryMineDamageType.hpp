@@ -3,6 +3,6 @@
 
 class UBPLightKineticInfantryMineDamageType_C : public USimDamageType
 {
-}; // Size: 0x138
+}; // Size: 0x140
 
 #endif

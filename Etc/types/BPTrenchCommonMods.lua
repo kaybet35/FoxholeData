@@ -8,7 +8,6 @@
 ---@field BackDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field BridgeModSlot UBPTrenchBridgeModSlot_C
 ---@field LeftFrontDefenseModSlot UBPTrenchDefenseModSlot_C
----@field UnderModSlot UBPTrenchUnderModSlot_C
 ---@field FrontEndModSlot UBPTrenchEndModSlot_C
 ---@field LeftMiddleDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field BackEndModSlot UBPTrenchEndModSlot_C

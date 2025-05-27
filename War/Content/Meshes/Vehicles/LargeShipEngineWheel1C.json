@@ -3,7 +3,7 @@
     "Type": "SkeletalMesh",
     "Name": "LargeShipEngineWheel1C",
     "Class": "UScriptClass'SkeletalMesh'",
-    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Skeleton": {
         "ObjectName": "Skeleton'SK_LargeShipNeutralEngine_Wheel_Skeleton'",
@@ -17,7 +17,10 @@
             "Value": 1.0
           },
           "LODHysteresis": 0.02,
-          "LODMaterialMap": [],
+          "LODMaterialMap": [
+            0,
+            1
+          ],
           "BuildSettings": {
             "bRecomputeNormals": true,
             "bRecomputeTangents": true,
@@ -98,24 +101,6 @@
     },
     "SkeletalMaterials": [
       {
-        "MaterialSlotName": "LargeShipEngineC",
-        "Material": {
-          "ObjectName": "MaterialInstanceConstant'LargeShipEngineC'",
-          "ObjectPath": "War/Content/Blueprints/Vehicles/LargeShips/BattleShipC/Material/LargeShipEngineC.0"
-        },
-        "ImportedMaterialSlotName": null,
-        "UVChannelData": {
-          "bInitialized": true,
-          "bOverrideDensities": false,
-          "LocalUVDensities": [
-            0.0,
-            0.0,
-            0.0,
-            0.0
-          ]
-        }
-      },
-      {
         "MaterialSlotName": "NeutralEngineWheel",
         "Material": {
           "ObjectName": "MaterialInstanceConstant'LargeShipEngineWheelC'",
@@ -126,7 +111,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            475.3863,
+            0.0,
             0.0,
             0.0,
             0.0
@@ -144,7 +129,7 @@
           "bInitialized": true,
           "bOverrideDensities": false,
           "LocalUVDensities": [
-            186.27179,
+            475.3863,
             0.0,
             0.0,
             0.0
@@ -156,7 +141,7 @@
       {
         "Sections": [
           {
-            "MaterialIndex": 1,
+            "MaterialIndex": 0,
             "BaseIndex": 0,
             "NumTriangles": 7896,
             "bRecomputeTangent": false,
@@ -176,7 +161,7 @@
             "ChunkedParentSectionIndex": -1
           },
           {
-            "MaterialIndex": 2,
+            "MaterialIndex": 1,
             "BaseIndex": 23688,
             "NumTriangles": 640,
             "bRecomputeTangent": false,

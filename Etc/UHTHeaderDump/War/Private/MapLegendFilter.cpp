@@ -15,5 +15,6 @@ FMapLegendFilter::FMapLegendFilter() {
     this->VisibleIcons[8] = 0;
     this->VisibleIcons[9] = 0;
     this->VisibleIcons[10] = 0;
+    this->VisibleIcons[11] = 0;
 }
 

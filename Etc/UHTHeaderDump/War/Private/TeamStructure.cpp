@@ -5,6 +5,7 @@ ATeamStructure::ATeamStructure(const FObjectInitializer& ObjectInitializer) : Su
     this->TeamId = 255;
     this->bAllowUseByEnemy = false;
     this->bCanBeFlaggedForDisruptivePlacement = false;
+    this->bCanBlockAIUpgrade = false;
     this->DisruptivePlacementVoteMultiplier = 1.00f;
 }
 

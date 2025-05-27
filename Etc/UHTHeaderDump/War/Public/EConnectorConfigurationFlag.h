@@ -6,5 +6,6 @@ UENUM(BlueprintType)
 enum class EConnectorConfigurationFlag : uint8 {
     None,
     OverridePathModeToBiarc,
+    UnderRoad,
 };
 

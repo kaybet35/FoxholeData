@@ -3,6 +3,6 @@
 
 class ABPCraterMediumFill_C : public ABPCraterMedium_C
 {
-}; // Size: 0x808
+}; // Size: 0x840
 
 #endif

@@ -3,6 +3,6 @@
 
 class UBPEmplacedArtilleryWRotator_C : public URotatorMountComponent
 {
-}; // Size: 0x850
+}; // Size: 0x858
 
 #endif

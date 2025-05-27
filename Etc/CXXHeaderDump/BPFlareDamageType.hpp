@@ -3,6 +3,6 @@
 
 class UBPFlareDamageType_C : public UNonDamagingDamageType
 {
-}; // Size: 0x138
+}; // Size: 0x140
 
 #endif

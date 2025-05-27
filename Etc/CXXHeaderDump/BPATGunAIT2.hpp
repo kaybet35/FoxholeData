@@ -3,14 +3,16 @@
 
 class ABPATGunAIT2_C : public AFortTurretAT
 {
-    class UBoxComponent* BlockBuildSiteMovement;                                      // 0x08B0 (size: 0x8)
-    class UTemplateComponent* FortSpotLight;                                          // 0x08B8 (size: 0x8)
-    class UStaticMeshComponent* Roof;                                                 // 0x08C0 (size: 0x8)
-    class UStaticMeshComponent* Floor;                                                // 0x08C8 (size: 0x8)
-    class UTemplateComponent* FortCommonDirt;                                         // 0x08D0 (size: 0x8)
-    class UTemplateComponent* FortCommon;                                             // 0x08D8 (size: 0x8)
-    class UTemplateComponent* FortCommonMods;                                         // 0x08E0 (size: 0x8)
+    class UPowerConsumerComponent* PowerConsumer;                                     // 0x08C0 (size: 0x8)
+    class UTemplateComponent* FortCommonT2BreachedWalls;                              // 0x08C8 (size: 0x8)
+    class UBoxComponent* BlockBuildSiteMovement;                                      // 0x08D0 (size: 0x8)
+    class UTemplateComponent* FortSpotLight;                                          // 0x08D8 (size: 0x8)
+    class UStaticMeshComponent* Roof;                                                 // 0x08E0 (size: 0x8)
+    class UStaticMeshComponent* Floor;                                                // 0x08E8 (size: 0x8)
+    class UTemplateComponent* FortCommonDirtT2;                                       // 0x08F0 (size: 0x8)
+    class UTemplateComponent* FortCommon;                                             // 0x08F8 (size: 0x8)
+    class UTemplateComponent* FortCommonMods;                                         // 0x0900 (size: 0x8)
 
-}; // Size: 0x8E8
+}; // Size: 0x908
 
 #endif

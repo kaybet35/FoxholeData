@@ -2,6 +2,8 @@
 
 ---@class ABPArmoredCar2TwinW_C : ABPArmoredCarBaseW_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field SpotLight_Turret USpotLightComponent
+---@field Light_Turret UStaticMeshComponent
 ---@field LightRear UStaticMeshComponent
 ---@field LightRearEmitter UPointLightComponent
 ---@field chassis USkeletalMeshComponent

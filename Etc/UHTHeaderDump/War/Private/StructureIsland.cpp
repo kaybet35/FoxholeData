@@ -10,6 +10,10 @@ AStructureIsland::AStructureIsland(const FObjectInitializer& ObjectInitializer) 
     this->NetDormancy = DORM_DormantAll;
     this->RootComponent = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
     this->StructuralIntegrity = 0.00f;
+    this->CachedStructuralIntegrityBonus = 0.00f;
+    this->CachedFortConnections = 0;
+    this->CachedNonFortConnections = 0;
+    this->CachedUnconnectedSockets = 0;
     this->TeamId = 0;
     this->HealthPool = 0.00f;
     this->HealthPoolMax = 0.00f;
@@ -24,7 +28,12 @@ void AStructureIsland::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
     
     DOREPLIFETIME(AStructureIsland, Structures);
     DOREPLIFETIME(AStructureIsland, StructuralIntegrity);
+    DOREPLIFETIME(AStructureIsland, CachedStructuralIntegrityBonus);
+    DOREPLIFETIME(AStructureIsland, CachedFortConnections);
+    DOREPLIFETIME(AStructureIsland, CachedNonFortConnections);
+    DOREPLIFETIME(AStructureIsland, CachedUnconnectedSockets);
     DOREPLIFETIME(AStructureIsland, TeamId);
+    DOREPLIFETIME(AStructureIsland, HealthPoolMax);
     DOREPLIFETIME(AStructureIsland, FireIntensity);
 }
 

@@ -1,6 +1,7 @@
 #include "FireInfo.h"
 
 AFireInfo::AFireInfo(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->BurningFromSuppressionThreshold = 8.00f;
     this->MaxPreMitigationFireDamagePerTick = 0.00f;
     this->TickPeriodSeconds = 0.00f;
     this->WeatherIntensityEffectMultiplier = 0.00f;

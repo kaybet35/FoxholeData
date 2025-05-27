@@ -3,6 +3,7 @@
 #include "DestroyedTeamStructure.h"
 #include "FacilityRefineryOrder.h"
 #include "FuelTank.h"
+#include "ReservePower.h"
 #include "DestroyedFacilityRefinery.generated.h"
 
 class UCraneSpawnLocationComponent;
@@ -36,6 +37,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 ItemInputBuffer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FReservePower ReservePower;
     
 public:
     UPROPERTY(EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))

@@ -3,6 +3,6 @@
 
 class ABPCratePickup_C : public AItemCratePickup
 {
-}; // Size: 0x3E8
+}; // Size: 0x3F0
 
 #endif

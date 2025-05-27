@@ -58,7 +58,6 @@ FWarTweakables::FWarTweakables() {
     this->HomeRegionPlayersPerBase = 0;
     this->UnexplodedOrdnanceChance = 0.00f;
     this->FortBaseNetworkDistance = 0;
-    this->LRAMaxPowerPerMin = 0.00f;
     this->LRADamage = 0.00f;
     this->LRADamageInnerRadius = 0.00f;
     this->LRAAccuracyRadiusMultiplier = 0.00f;
@@ -68,8 +67,6 @@ FWarTweakables::FWarTweakables() {
     this->LRALaunchVelocityZDistanceFactor = 0.00f;
     this->IntelCenterListeningRadiusMin = 0.00f;
     this->IntelCenterListeningRadiusMax = 0.00f;
-    this->IntelCenterMaxPowerPerMin = 0.00f;
-    this->WeatherStationMaxPowerPerMin = 0.00f;
     this->bPreventSaveWithZeroActors = false;
     this->bLogIncompleteValidations = false;
     this->ValidationThreshold = 0.00f;
@@ -120,6 +117,8 @@ FWarTweakables::FWarTweakables() {
     this->TeamStructureActivityModifier = 0.00f;
     this->MaxTeamStructureActivityPerHour = 0.00f;
     this->FriendlyTerritoryActivityModifier = 0.00f;
+    this->EarlyWarActivityModifier = 0.00f;
+    this->EarlyWarActivityMaxAmount = 0.00f;
     this->MaxActivityPerHour = 0.00f;
     this->ProvisionalGarrisonSpawnsRequired = 0;
     this->MinTankArmourMultiplier = 0.00f;
@@ -167,6 +166,7 @@ FWarTweakables::FWarTweakables() {
     this->PlayerInStructureTemperatureGain = 0.00f;
     this->PlayerNoWeatherTemperatureGain = 0.00f;
     this->VehicleNoWeatherTemperatureGain = 0.00f;
+    this->FrozenPipePenalty = 0.00f;
     this->PlayerFirePitTemperatureGain = 0.00f;
     this->VehicleFirePitTemperatureGain = 0.00f;
     this->VehicleEngineOnTemperatureGain = 0.00f;
@@ -193,6 +193,7 @@ FWarTweakables::FWarTweakables() {
     this->StructureDamageDevastationFactor = 0.00f;
     this->StructureDamageDevastationMultiplierMax = 0.00f;
     this->StructureDamageDevastationMinThreshold = 0.00f;
+    this->StructureBreachingDevastationMultiplierMax = 0.00f;
     this->RuinedStructureDevstationSize = 0.00f;
     this->RuinedStructureDevstationThreshold = 0.00f;
     this->MinFortArtilleryShots = 0;
@@ -242,7 +243,6 @@ FWarTweakables::FWarTweakables() {
     this->PreAutoRestartAlertInterval = 0.00f;
     this->SameStructureRadius = 0.00f;
     this->SameStructureMaxOverlapCount = 0;
-    this->SameStructureMaxDenseStructures = 0;
     this->NetStatsInterval = 0.00f;
     this->AbandonedBaseTickRate = 0.00f;
     this->AbandonedBaseNormalizedDamage = 0.00f;
@@ -314,8 +314,11 @@ FWarTweakables::FWarTweakables() {
     this->WarBalancerMaxPopulationChangePerTick = 0;
     this->RareMetalWeightAdjustment = 0;
     this->CommendHistoryExpirySecs = 0.00f;
-    this->GlobalRefineSpeedModifer = 0.00f;
+    this->GlobalRefineSpeedModifier = 0.00f;
     this->FacilityMapPostItemRadius = 0.00f;
+    this->MaxBreachChance = 0.00f;
+    this->MinBreachChance = 0.00f;
+    this->MultipleShelterModifier = 0.00f;
     this->bAllowStockpileExternalUser = false;
     this->bGateLongRangeArtilleryFiringOnTech = false;
     this->bAllowSquadMissingMembers = false;

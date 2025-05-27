@@ -32,13 +32,13 @@ ARailwayTrack::ARailwayTrack(const FObjectInitializer& ObjectInitializer) : Supe
     this->bIsShownOnMap = false;
     this->RoadCheckPhysMaterials.AddDefaulted(3);
     this->bHasIncomingTravel = false;
-    this->FrontSwitch->SetupAttachment(RootComponent);
-    this->BackSwitchMesh->SetupAttachment(RootComponent);
-    this->FrontSwitchMesh->SetupAttachment(RootComponent);
     this->SplineConnector->SetupAttachment(RootComponent);
     this->BackSocket->SetupAttachment(RootComponent);
     this->FrontSocket->SetupAttachment(RootComponent);
     this->BackSwitch->SetupAttachment(RootComponent);
+    this->FrontSwitch->SetupAttachment(RootComponent);
+    this->BackSwitchMesh->SetupAttachment(RootComponent);
+    this->FrontSwitchMesh->SetupAttachment(RootComponent);
 }
 
 void ARailwayTrack::OnRep_SwitchStates() {

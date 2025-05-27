@@ -5,7 +5,7 @@
     "Class": "UScriptClass'BlueprintGeneratedClass'",
     "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "SuperStruct": {
-      "ObjectName": "Class'ArtilleryGunnerMountComponent'",
+      "ObjectName": "Class'ProjectileGunnerMountComponent'",
       "ObjectPath": "/Script/War"
     },
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
@@ -26,47 +26,40 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/ScoutTank/BPScoutTankMultiWGunnerComponent.BPScoutTankMultiWGunnerComponent_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "DummyProjectileActorType": {
-        "AssetPathName": "/Game/Blueprints/Items/BPHERocketLauncherProjectileDummyPlaceholder.BPHERocketLauncherProjectileDummyPlaceholder_C",
-        "SubPathString": ""
-      },
       "MuzzleFlashPS": {
         "ObjectName": "ParticleSystem'RocketMultiSpoolSmall'",
         "ObjectPath": "War/Content/FX/RocketMultiSpoolSmall.17"
       },
-      "TelegraphOffset": 2.0,
-      "DamageDelay": 3.0,
-      "FireDelay": 0.0,
-      "SpoolupDelay": 1.8,
-      "FiringAngleOverride": 30.0,
-      "bUseCustomDelayScaling": true,
-      "bIsAutomaticFire": true,
-      "bHighArc": false,
-      "FlightObstructionCheckDistance": 5000.0,
-      "MultiAmmo": {
-        "CompatibleAmmoNames": [
-          "HERocketAmmo"
-        ]
+      "MinSpeed": 1000.0,
+      "MaxSpeed": 4500.0,
+      "ProjectileClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPDemolitionRocketProjectile_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.1"
       },
+      "bIsArtilleryMode": true,
+      "bIsAutomaticFire": true,
       "DisplayName": {
         "Namespace": "",
         "Key": "ED50F32049DEDC3A83266B901A9D8C18",
         "SourceString": "Gunner",
         "LocalizedString": "Gunner"
       },
-      "AmmoName": "HERocketAmmo",
+      "AmmoName": "DemolitionRocketAmmo",
       "AmmoSlotFilterAmount": 1,
       "ReloadSoundCue": {
         "ObjectName": "SoundCue'RPGReload_Cue'",
         "ObjectPath": "War/Content/Audio/SFX/Weapons/RPG/RPGReload_Cue.0"
       },
       "Icon": {
-        "ObjectName": "Texture2D'RpgAmmoItemIcon'",
-        "ObjectPath": "War/Content/Textures/UI/ItemIcons/RpgAmmoItemIcon.0"
+        "ObjectName": "Texture2D'DemolitionRocketAmmoIcon'",
+        "ObjectPath": "War/Content/Textures/UI/ItemIcons/DemolitionRocketAmmoIcon.0"
       },
       "EquippedGripType": "EEquippedWeaponGripType::VehicleGunboatCannonGunner",
       "bMustBeStoppedToInvoke": true,
-      "bIsDeployedGunner": true
+      "LinkedVehicleSubsystem": "EVehicleSubsystem::None",
+      "bIsMultiWeapon": true,
+      "bIsDeployedGunner": true,
+      "bTriggerDriverFiringState": true
     }
   }
 ]

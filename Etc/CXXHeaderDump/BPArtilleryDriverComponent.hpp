@@ -3,6 +3,6 @@
 
 class UBPArtilleryDriverComponent_C : public UMountComponent
 {
-}; // Size: 0x848
+}; // Size: 0x850
 
 #endif

@@ -60,6 +60,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EShardDescription DescriptionType;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bFactionLock;
+    
     WAR_API FWarShardInfo();
 };
 

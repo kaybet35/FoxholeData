@@ -3,8 +3,8 @@
 
 class ABPMortarAmmoPickup_C : public AMortarAmmoPickup
 {
-    class UStaticMeshComponent* MortarShellPickup;                                    // 0x0440 (size: 0x8)
+    class UStaticMeshComponent* MortarShellPickup;                                    // 0x0450 (size: 0x8)
 
-}; // Size: 0x448
+}; // Size: 0x458
 
 #endif

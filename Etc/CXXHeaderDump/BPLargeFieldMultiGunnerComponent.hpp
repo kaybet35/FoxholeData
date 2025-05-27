@@ -3,6 +3,6 @@
 
 class UBPLargeFieldMultiGunnerComponent_C : public UBPHalfTrackMultiWGunnerComponent_C
 {
-}; // Size: 0x908
+}; // Size: 0x910
 
 #endif

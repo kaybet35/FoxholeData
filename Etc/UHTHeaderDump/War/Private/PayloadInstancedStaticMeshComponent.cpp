@@ -6,6 +6,7 @@ UPayloadInstancedStaticMeshComponent::UPayloadInstancedStaticMeshComponent(const
     this->RowSpacing = 0.00f;
     this->ColumnSpacing = 0.00f;
     this->GroupIndex = 0;
+    this->MeshInstanceRemovalDelay = 0.00f;
 }
 
 

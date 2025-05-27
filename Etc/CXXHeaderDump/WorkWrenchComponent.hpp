@@ -3,6 +3,6 @@
 
 class UWorkWrenchComponent_C : public UWorkItemComponent
 {
-}; // Size: 0x8F0
+}; // Size: 0x8F8
 
 #endif

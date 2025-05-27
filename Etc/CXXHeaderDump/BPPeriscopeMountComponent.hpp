@@ -3,6 +3,6 @@
 
 class UBPPeriscopeMountComponent_C : public USubmarinePeriscopeMountComponent
 {
-}; // Size: 0x878
+}; // Size: 0x880
 
 #endif

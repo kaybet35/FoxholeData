@@ -68,7 +68,7 @@
     "Type": "BPFacilityPipeOverhead_C",
     "Name": "Default__BPFacilityPipeOverhead_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/BPFacilityPipeOverhead.BPFacilityPipeOverhead_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "SplineConnector": {
         "ObjectName": "SplineConnectorComponent'Default__BPFacilityPipeOverhead_C:SplineConnector'",
@@ -94,9 +94,7 @@
         "ObjectName": "BuildSocketComponent'Default__BPFacilityPipeOverhead_C:RightSocket'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeOverhead.10"
       },
-      "LiquidTank": {
-        "MaxAmount": 100.0
-      },
+      "MaxLiquidAmount": 100.0,
       "Tier": "EFortTier::T1",
       "ProceduralUseVolumeFactor": 0.0,
       "bIsBuiltOnLandscape": false,
@@ -116,7 +114,7 @@
         "ObjectName": "Texture2D'OverheadPowelineIcon'",
         "ObjectPath": "War/Content/Textures/UI/ItemIcons/OverheadPowelineIcon.0"
       },
-      "BuildCategory": "EBuildCategory::Facility",
+      "BuildCategory": "EBuildCategory::Liquids",
       "BuildOrder": 70,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bDropsLargeMaterialsWhenDestroyed": false,
@@ -151,7 +149,7 @@
       "MaxHealth": 350,
       "Health": 350,
       "IsVaultable": false,
-      "ScreenToUse": "ESimScreen::FuelSilo",
+      "ScreenToUse": "ESimScreen::Pipeline",
       "ClaimStatus": {
         "bIsEnabled": true,
         "bCanBeDemolished": true,
@@ -161,9 +159,6 @@
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFacilityPipeOverhead_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeOverhead.31"
-      },
-      "PrimaryActorTick": {
-        "TickInterval": 2.0
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityPipeOverhead_C:StructureArrow'",
@@ -543,9 +538,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": []
           }
         },
@@ -614,9 +611,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1105,8 +1104,10 @@
       "MaxArcAngle": -1.0,
       "BuildFootprintShapeType": "ESplineFootprintShapeType::CapsuleWithBoxEnds",
       "BuildFootprintCapsuleRadius": 45.0,
-      "BuildFootprintCapsuleHalfHeight": 60.0,
+      "BuildFootprintCapsuleHalfHeight": 75.0,
       "BuildFootprintVerticalOffset": 880.0,
+      "BuildFootprintStartOffset": 225.0,
+      "BuildFootprintEndOffset": 225.0,
       "BuildFootprintBoxEndVerticalOffset": 480.0,
       "BuildFootprintBoxEndLengthOverride": 220.0,
       "BuildFootprintBoxEndHeightOverride": 960.0,

@@ -3,8 +3,8 @@
 
 class ABPATRPGWPickup_C : public AItemPickup
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x03E8 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x03F0 (size: 0x8)
 
-}; // Size: 0x3F0
+}; // Size: 0x3F8
 
 #endif

@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "LocationMultiplexedMesh",
+    "Name": "FortDestroyedT1Meshes",
     "Outer": "BPFortDestroyedT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'LocationMultiplexedMeshComponent'",
+      "ObjectName": "Class'TemplateComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -19,61 +19,33 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFortDestroyedT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.33"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.20"
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'Fort'",
+      "ObjectName": "Class'DestroyedFort'",
       "ObjectPath": "/Script/War"
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:LocationMultiplexedMesh'",
+        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortDestroyedT1Meshes'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01FrontLeft'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.15"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01BackRight'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.13"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01BackLeft'",
+        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:LocationMultiplexedMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.12"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01FrontRight'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.16"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01Left'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.17"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01Front'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.14"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01Back'",
+        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortCommonDirt'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.11"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortT1Destroyed01Right'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.18"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortCommonDirt'",
+        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortCommon'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.10"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:FortCommon'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.9"
-      },
-      {
         "ObjectName": "ObjectProperty'BPFortDestroyedT1_C:Floor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.9"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -103,10 +75,6 @@
       "bDisableModificationSlotValidation": true,
       "bReadOnlyModifications": true,
       "BuildGhostClass": null,
-      "BuildSiteClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortBuildSite_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortBuildSite.1"
-      },
       "Icon": {
         "ObjectName": "Texture2D'FortT1Icon'",
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/FortT1Icon.0"
@@ -129,7 +97,7 @@
         "LocalizedString": "Bunker (Tier 1)"
       },
       "ProfileType": "EStructureProfileType::DestroyedFort",
-      "ArmourType": "EArmourType::Tier1Structure",
+      "ArmourType": "EArmourType::Trench",
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPFortDestroyedT1_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.3"
@@ -146,15 +114,19 @@
         "ObjectName": "SoundCue'BunkerExplosion_Cue'",
         "ObjectPath": "War/Content/Audio/SFX/BunkerExplosion_Cue.0"
       },
-      "MaxHealth": 1500,
-      "Health": 1500,
+      "ModularMountsComponent": {
+        "ObjectName": "ModularMountsComponent'Default__BPFortDestroyedT1_C:ModularMountsComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.8"
+      },
+      "MaxHealth": 750,
+      "Health": 750,
       "UpgradeStructureCodeName": "FortT1",
       "ClaimStatus": {
         "bIsEnabled": false
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortDestroyedT1_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.43"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.22"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFortDestroyedT1_C:StructureArrow'",
@@ -239,14 +211,14 @@
       "MeshStops": [
         {
           "StaticMesh": {
-            "ObjectName": "StaticMesh'FortT1Destroyed01'",
-            "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01.2"
+            "ObjectName": "StaticMesh'FortT1Destroyed02'",
+            "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed02.2"
           }
         },
         {
           "StaticMesh": {
-            "ObjectName": "StaticMesh'FortT1Destroyed02'",
-            "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed02.2"
+            "ObjectName": "StaticMesh'FortT1Destroyed01'",
+            "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01.2"
           }
         },
         {
@@ -257,6 +229,13 @@
         }
       ]
     }
+  },
+  {
+    "Type": "ModularMountsComponent",
+    "Name": "ModularMountsComponent",
+    "Outer": "Default__BPFortDestroyedT1_C",
+    "Class": "UScriptClass'ModularMountsComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "ObjectProperty",
@@ -296,98 +275,14 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01Back",
+    "Name": "LocationMultiplexedMesh",
     "Outer": "BPFortDestroyedT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01BackLeft",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01BackRight",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01Front",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01FrontLeft",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01FrontRight",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01Left",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FortT1Destroyed01Right",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'LocationMultiplexedMeshComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -410,7 +305,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFortDestroyedT1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.13"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -429,33 +324,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortDestroyedT1_C:FortCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.44"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.23"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "F44F4FE2-41BACCC4-AD268C87-1881E12B",
       "InternalVariableName": "FortCommon"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_10",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01BackRight_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.37"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "9520C59C-4A2982BA-5626ECAE-A1F3E23A",
-      "InternalVariableName": "FortT1Destroyed01BackRight"
     }
   },
   {
@@ -479,6 +353,27 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPFortDestroyedT1_C:FortDestroyedT1Meshes_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.25"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C429F141-4B71F9B7-EB7ABEA2-11546746",
+      "InternalVariableName": "FortDestroyedT1Meshes"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -490,7 +385,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortDestroyedT1_C:FortCommonDirt_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.45"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.24"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -511,159 +406,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:Floor_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.34"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.21"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "A6D3BCC4-4FA86390-1D7220B7-3123A75D",
       "InternalVariableName": "Floor"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_3",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01Left_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.41"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "5855147E-411EDD2C-265D06B5-9BD69437",
-      "InternalVariableName": "FortT1Destroyed01Left"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_4",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01Right_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.42"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "447FA09C-41DF7635-6B622EB4-CE21DD70",
-      "InternalVariableName": "FortT1Destroyed01Right"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_5",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01Back_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.35"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "1512D4E1-48E16697-1DE67EAF-FCD63B0B",
-      "InternalVariableName": "FortT1Destroyed01Back"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01Front_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.38"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "2D6156EE-4AE65EE7-83C12989-FA21315F",
-      "InternalVariableName": "FortT1Destroyed01Front"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01FrontLeft_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.39"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "3F981482-4A9A1740-B0C30890-9117594F",
-      "InternalVariableName": "FortT1Destroyed01FrontLeft"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01FrontRight_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.40"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "34F160AD-4298E5C6-F4661B96-C60835C6",
-      "InternalVariableName": "FortT1Destroyed01FrontRight"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_9",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'StaticMeshComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "StaticMeshComponent'BPFortDestroyedT1_C:FortT1Destroyed01BackLeft_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.36"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "328AD495-43FA5CE8-E991C2A4-9D39C6F2",
-      "InternalVariableName": "FortT1Destroyed01BackLeft"
     }
   },
   {
@@ -676,106 +424,50 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.19"
         },
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.15"
         },
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.30"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.18"
         },
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.17"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.19"
         },
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.15"
         },
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.29"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.22"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.30"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.18"
         },
         {
           "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.17"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFortDestroyedT1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortDestroyedT1.14"
       }
     }
   },
@@ -804,210 +496,6 @@
     }
   },
   {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01Back_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01Left'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01Left.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "DirtBack",
-        "SideBack",
-        "ConnectorBack"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01BackLeft_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01BackLeft'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01BackLeft.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "SideLeft",
-        "SideBack"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01BackRight_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01BackRight'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01BackRight.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "SideRight",
-        "SideBack"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01Front_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01Right'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01Right.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "DirtFront",
-        "SideFront",
-        "ConnectorFront"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01FrontLeft_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01FrontLeft'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01FrontLeft.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "SideFront",
-        "SideLeft"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01FrontRight_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01FrontRight'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01FrontRight.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "SideFront",
-        "SideRight"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01Left_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01Back'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01Back.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "DirtLeft",
-        "SideLeft",
-        "ConnectorLeft"
-      ]
-    }
-  },
-  {
-    "Type": "StaticMeshComponent",
-    "Name": "FortT1Destroyed01Right_GEN_VARIABLE",
-    "Outer": "BPFortDestroyedT1_C",
-    "Class": "UScriptClass'StaticMeshComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "StaticMesh": {
-        "ObjectName": "StaticMesh'FortT1Destroyed01Front'",
-        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT1Destroyed01Front.2"
-      },
-      "bGenerateOverlapEvents": false,
-      "bReceivesDecals": false,
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -160.0
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "DirtRight",
-        "SideRight",
-        "ConnectorRight"
-      ]
-    }
-  },
-  {
     "Type": "StealthComponent",
     "Name": "StealthComponent",
     "Outer": "Default__BPFortDestroyedT1_C",
@@ -1022,8 +510,8 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommon_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommon.1"
+        "ObjectName": "BlueprintGeneratedClass'BPFortBreachedCommon_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortBreachedCommon.1"
       }
     }
   },
@@ -1035,8 +523,21 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirt_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirt.1"
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirtT1T2_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirtT1T2.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortDestroyedT1Meshes_GEN_VARIABLE",
+    "Outer": "BPFortDestroyedT1_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortDestroyedT1Meshes_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortDestroyedT1Meshes.1"
       }
     }
   }

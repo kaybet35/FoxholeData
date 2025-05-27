@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "AssignableSpawnPoint.h"
-#include "PowerNode.h"
 #include "SpawnPoints.h"
 #include "TeamStructure.h"
 #include "Hospital.generated.h"
@@ -10,7 +9,7 @@ class UGenericStockpileComponent;
 class UHospitalComponent;
 
 UCLASS(Blueprintable)
-class WAR_API AHospital : public ATeamStructure, public IAssignableSpawnPoint, public IPowerNode {
+class WAR_API AHospital : public ATeamStructure, public IAssignableSpawnPoint {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, SaveGame, meta=(AllowPrivateAccess=true))

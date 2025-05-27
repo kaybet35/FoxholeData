@@ -24,8 +24,10 @@ class UCrossRegionActorManager;
 class UDiscordRichPresence;
 class ULandscapeDeformationManager;
 class UMonumentManager;
+class UPipelineManager;
 class UPlayerProfileManager;
 class UServerSettings;
+class USnapshotManager;
 class USoundMix;
 class UTravelManager;
 class UWarSaveGame;
@@ -47,6 +49,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UBorderBaseManager* BorderBaseManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    UPipelineManager* PipelineManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UWeatherManager* WeatherManager;
@@ -74,6 +79,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UCrossRegionActorManager* CrossRegionActorManager;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    USnapshotManager* SnapshotManager;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     AMapList* MapList;

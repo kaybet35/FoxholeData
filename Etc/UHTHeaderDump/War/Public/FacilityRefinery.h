@@ -7,6 +7,7 @@
 #include "MultiConversionInfo.h"
 #include "PowerGridInfo.h"
 #include "PowerGridNode.h"
+#include "ReservePower.h"
 #include "TeamStructure.h"
 #include "FacilityRefinery.generated.h"
 
@@ -58,6 +59,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, ReplicatedUsing=OnRep_PowerGridInfo, meta=(AllowPrivateAccess=true))
     FPowerGridInfo PowerGridInfo;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
+    FReservePower ReservePower;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bAlwaysSetOrdersToBlocked;
+    
     UPROPERTY(EditAnywhere, ReplicatedUsing=OnRep_ReplicatedIndex, meta=(AllowPrivateAccess=true))
     int8 ReplicatedIndex;
     
@@ -84,10 +91,11 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
-private:
+protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_ReplicatedIsActive();
     
+private:
     UFUNCTION(BlueprintCallable)
     void OnRep_ReplicatedIndex();
     

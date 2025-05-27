@@ -1,6 +1,7 @@
 ---@meta
 
----@class ABPFortCornerBuildSite_C : AFortBuildSite
+---@class ABPFortCornerBuildSite_C : AFortCornerBuildSite
+---@field FortCornerCommonDirtT1 UTemplateComponent
 ---@field WorkBoxAngle UBoxComponent
 ---@field WorkBoxLeft UBoxComponent
 ---@field WorkBoxBack UBoxComponent

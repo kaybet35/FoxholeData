@@ -1,17 +1,15 @@
 ---@meta
 
----@class ABPFortDestroyedT3_C : AConcreteFort
+---@class ABPFortDestroyedT3_C : ADestroyedFort
+---@field FortGSFloorFront UStaticMeshComponent
+---@field FortGSFloorLeft UStaticMeshComponent
+---@field FortGSFloorBack UStaticMeshComponent
+---@field FortGSFloorRight UStaticMeshComponent
+---@field ConnectionRules UConnectionRulesComponent
+---@field FortCommonDestroyedDirtT3 UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommon UTemplateComponent
----@field DirtRight UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field CornerFrontRight UStaticMeshComponent
----@field CornerFrontLeft UStaticMeshComponent
----@field CornerBackLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
----@field CornerBackRight UStaticMeshComponent
 ABPFortDestroyedT3_C = {}
 
 

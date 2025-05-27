@@ -2,7 +2,6 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BoxComponent -FallbackName=BoxComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
 #include "EStructureProfileType.h"
-#include "Net/UnrealNetwork.h"
 
 AEngineRoom::AEngineRoom(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ProfileType = EStructureProfileType::FortRotatableUpgrade;
@@ -14,15 +13,6 @@ AEngineRoom::AEngineRoom(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->AnimMontage = NULL;
     this->KillVolume->SetupAttachment(RootComponent);
     this->SkeletalMesh->SetupAttachment(RootComponent);
-}
-
-void AEngineRoom::OnRep_FuelInfo() {
-}
-
-void AEngineRoom::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
-    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
-    
-    DOREPLIFETIME(AEngineRoom, FuelInfo);
 }
 
 

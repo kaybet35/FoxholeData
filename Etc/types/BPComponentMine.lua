@@ -31,7 +31,7 @@ function ABPComponentMine_C:UpdateVisuals_SlowTick() end
 function ABPComponentMine_C:ExecuteUbergraph_BPComponentMine(EntryPoint) end
 
 
----@class UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482257
-UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482257 = {}
+---@class UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482259
+UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482259 = {}
 
 

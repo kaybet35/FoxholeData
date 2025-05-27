@@ -1,6 +1,7 @@
 ---@meta
 
----@class ABPTrenchEmpDestroyedT1_C : AFort
+---@class ABPTrenchEmpDestroyedT1_C : ADestroyedFort
+---@field BPTrenchEmpCommonDirtT1T2 UTemplateComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field FloorDecal UDecalComponent
 ---@field TrenchEmplacementT1Destroyed01Right UStaticMeshComponent
@@ -14,22 +15,6 @@
 ---@field TrenchEmpCommon UTemplateComponent
 ---@field TrenchT1Destroyed01 UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
----@field DirtFrontLeft UStaticMeshComponent
----@field DirtBackCornerL UStaticMeshComponent
----@field DirtRightCornerR UStaticMeshComponent
----@field DirtRightCornerL UStaticMeshComponent
----@field DirtFrontCornerR UStaticMeshComponent
----@field DirtFrontCornerL UStaticMeshComponent
----@field DirtLeftCornerR UStaticMeshComponent
----@field DirtLeftCornerL UStaticMeshComponent
----@field DirtBackCornerR UStaticMeshComponent
----@field DirtRight UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
----@field DirtBackRight UStaticMeshComponent
----@field DirtFrontRight UStaticMeshComponent
----@field DirtBackLeft UStaticMeshComponent
 ABPTrenchEmpDestroyedT1_C = {}
 
 

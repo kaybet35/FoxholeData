@@ -1,0 +1,147 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "UnitCircleCullPlane",
+    "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "22A439C64A39109DEE230AB5C7912A91"
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_0",
+    "Outer": "UnitCircleCullPlane",
+    "Class": "UScriptClass'NavCollision'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "CookedFormatData": {
+      "NavCollision_X": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x1C8F"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "UnitCircleCullPlane",
+    "Class": "UScriptClass'StaticMesh'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'WorldGridMaterial'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WorldGridMaterial.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 868.2843,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 868.2843,
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "BoxExtent": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 0.0
+        },
+        "SphereRadius": 100.0
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'UnitCircleCullPlane:BodySetup_0'",
+      "ObjectPath": "War/Content/Blueprints/Culling/UnitCircleCullPlane.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'UnitCircleCullPlane:NavCollision_0'",
+      "ObjectPath": "War/Content/Blueprints/Culling/UnitCircleCullPlane.1"
+    },
+    "LightingGuid": "B9DB1CD1-4C8A749F-B8A23EA3-FBE258B9",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 14,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 15,
+              "bEnableCollision": false,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 16
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 16,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 100.0,
+          "Y": 100.0,
+          "Z": 0.0
+        },
+        "SphereRadius": 100.0
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

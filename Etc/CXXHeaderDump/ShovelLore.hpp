@@ -3,8 +3,8 @@
 
 class AShovelLore_C : public ALorePickup
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x03F0 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x03F8 (size: 0x8)
 
-}; // Size: 0x3F8
+}; // Size: 0x400
 
 #endif

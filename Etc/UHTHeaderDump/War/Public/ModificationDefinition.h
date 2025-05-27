@@ -5,7 +5,10 @@
 #include "EInfrastructureType.h"
 #include "ETechID.h"
 #include "ModificationTier.h"
+#include "Templates/SubclassOf.h"
 #include "ModificationDefinition.generated.h"
+
+class AModificationTemplate;
 
 USTRUCT(BlueprintType)
 struct FModificationDefinition {
@@ -41,6 +44,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bShowInBuildSite;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bBuildFootprintIgnoresConnectedActors;
+    
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     ETechID TechID;
     
@@ -49,6 +55,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 InfrastructureAmount;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AModificationTemplate> BuildFootprintTemplate;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<EFortTier, FModificationTier> Tiers;

@@ -373,6 +373,7 @@ function ABuildSite:OnRep_DefaultResourceRequirements() end
 ---@field BuildGhostClass TSubclassOf<ABuildGhost>
 ---@field BuildSiteClass TSubclassOf<ABuildSite>
 ---@field BaseStructureClass TSubclassOf<AStructure>
+---@field BreachedStructureClass TSubclassOf<AStructure>
 ---@field ProxyActorClass TSubclassOf<AActor>
 ---@field bClearModificationsOnDowngrade boolean
 ---@field Description FText
@@ -471,40 +472,35 @@ function AClientFoliageReplacement:OnStateChanged(State) end
 ACoastalGun = {}
 
 
----@class AConcreteFort : AFort
-AConcreteFort = {}
-
-
----@class AConcreteFortConnector : AFortConnector
-AConcreteFortConnector = {}
-
-
----@class AConcreteFortCorner : AFortCorner
-AConcreteFortCorner = {}
-
-
----@class AConcreteFortForwardBase : AFortForwardBase
-AConcreteFortForwardBase = {}
-
-
----@class AConcreteFortObservation : AFortObservation
-AConcreteFortObservation = {}
-
-
----@class AConcreteFortTurret : AFortTurret
-AConcreteFortTurret = {}
-
-
----@class AConcreteFortTurretAT : AFortTurretAT
-AConcreteFortTurretAT = {}
-
-
----@class AConcreteFortTurretMG : AFortTurretMG
-AConcreteFortTurretMG = {}
-
-
 ---@class AConcreteWall : AWall
 AConcreteWall = {}
+
+
+---@class AConquestConfig : AInfo
+---@field ItemsC TArray<FCodeNameQuantity>
+---@field ItemsW TArray<FCodeNameQuantity>
+AConquestConfig = {}
+
+
+
+---@class AConstructionEquipment : ATeamStructure
+---@field SkeletalMesh USkeletalMeshComponent
+---@field ScoopMaterialMesh UStaticMeshComponent
+---@field FuelGenericStockpileComponent UGenericStockpileComponent
+---@field MaterialGenericStockpileComponent UGenericStockpileComponent
+---@field CollisionQueryLocation USceneComponent
+---@field ImpactEffectClass TSubclassOf<AImpactEffect>
+---@field BuildCycleCompleteSoundCue USoundCue
+---@field FuelName FName
+---@field Config FConstructionEquipmentConfig
+---@field MaterialSubmissionDistance float
+---@field RecheckBlockedSiteTime float
+---@field FuelConsumptionPerCycle int32
+---@field ServerState FConstructionEquipmentServerState
+AConstructionEquipment = {}
+
+function AConstructionEquipment:OnRep_ConstructionEquipmentServerState() end
+function AConstructionEquipment:MulticastPlayMaterialDropFX() end
 
 
 ---@class AConstructionSite : ATeamStructure
@@ -630,10 +626,6 @@ ADeadlyGasGrenadeProjectile = {}
 
 
 
----@class ADeployedInfantrySupportGun : ADeployedWeapon
-ADeployedInfantrySupportGun = {}
-
-
 ---@class ADeployedListeningKit : ATripodMountedStructure
 ---@field ListeningAreaComponent UListeningAreaComponent
 ADeployedListeningKit = {}
@@ -729,9 +721,14 @@ ADestroyedEngineeringCenter = {}
 ---@field Orders TArray<FFacilityRefineryOrder>
 ---@field CompletedOrders TArray<FFacilityRefineryOrder>
 ---@field ItemInputBuffer int32
+---@field ReservePower FReservePower
 ---@field ModificationMask uint32
 ADestroyedFacilityRefinery = {}
 
+
+
+---@class ADestroyedFort : AFort
+ADestroyedFort = {}
 
 
 ---@class ADestroyedFortForwardBase : ADestroyedBase
@@ -764,7 +761,8 @@ ADestroyedKeep = {}
 
 
 ---@class ADestroyedLiquidTransferStation : ADestroyedResourceTransferStation
----@field FuelBuffers TArray<FFuelQuantity>
+---@field FuelInputBuffers TArray<FFuelQuantity>
+---@field FuelOutputBuffer FFuelQuantity
 ADestroyedLiquidTransferStation = {}
 
 
@@ -986,20 +984,15 @@ function AEngineRailVehicle:OnRep_HornActivated() end
 function AEngineRailVehicle:ClientSetBoosting(InBoosting) end
 
 
----@class AEngineRoom : ATeamStructure
+---@class AEngineRoom : AFacilityRefinery
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field AnimMontage UAnimMontage
----@field FuelInfo FFuelInfo
----@field PowerInfo FPowerInfo
 AEngineRoom = {}
 
-function AEngineRoom:OnRep_FuelInfo() end
 
 
----@class AEngineRoomBuildSite : AFortBuildSite
----@field FuelTank FFuelTank
+---@class AEngineRoomBuildSite : AFacilityRefineryBuildSite
 AEngineRoomBuildSite = {}
-
 
 
 ---@class AEngineeringCenter : ATeamStructure
@@ -1095,6 +1088,8 @@ AExplosiveAmmoPickup = {}
 ---@field RequiredResourceFieldCodeName FName
 ---@field FuelTanks TArray<FFuelTank>
 ---@field PowerGridInfo FPowerGridInfo
+---@field ReservePower FReservePower
+---@field bAlwaysSetOrdersToBlocked boolean
 ---@field ReplicatedIndex int8
 ---@field bReplicatedIsActive boolean
 ---@field MaxOrders uint8
@@ -1122,6 +1117,7 @@ function AFacilityRefinery:BPOnStateActive() end
 ---@field Orders TArray<FFacilityRefineryOrder>
 ---@field CompletedOrders TArray<FFacilityRefineryOrder>
 ---@field ItemInputBuffer int32
+---@field ReservePower FReservePower
 AFacilityRefineryBuildSite = {}
 
 
@@ -1203,6 +1199,7 @@ function AFireBarrel:OnRep_bIsIgnited() end
 
 
 ---@class AFireInfo : AInfo
+---@field BurningFromSuppressionThreshold float
 ---@field FireIntensityThresholds TArray<FFireIntensityThreshold>
 ---@field MaxPreMitigationFireDamagePerTick float
 ---@field TickPeriodSeconds float
@@ -1303,17 +1300,25 @@ AFort = {}
 
 
 
----@class AFortBuildSite : AStructureBuildSite
----@field bCanPassThroughPower boolean
+---@class AFortArtilleryShelter : AFort
+---@field BaseShelterBonus float
+AFortArtilleryShelter = {}
+
+
+
+---@class AFortBuildSite : AFortBuildSiteBase
 AFortBuildSite = {}
 
+
+---@class AFortBuildSiteBase : AStructureBuildSite
+AFortBuildSiteBase = {}
 
 
 ---@class AFortConnector : AFort
 AFortConnector = {}
 
 
----@class AFortConnectorBuildSite : AFortBuildSite
+---@class AFortConnectorBuildSite : AFortBuildSiteBase
 AFortConnectorBuildSite = {}
 
 
@@ -1323,11 +1328,51 @@ AFortCorner = {}
 
 
 
+---@class AFortCornerBuildSite : AFortBuildSiteBase
+AFortCornerBuildSite = {}
+
+
+---@class AFortEmp : ATeamStructure
+---@field FirstSegmentMesh UStaticMeshComponent
+---@field SecondSegmentMesh UStaticMeshComponent
+---@field BuildLocation UBoxComponent
+---@field LRArtilleryObstructionShape UBoxComponent
+---@field IntelCenterObstructionShape UBoxComponent
+---@field WeatherStationObstructionShape UBoxComponent
+---@field FortGarrisonStationObstructionShape UBoxComponent
+---@field FortEmpConfig FFortEmpConfig
+---@field FortEmpSelectedStructure EFortEmpStructure
+---@field RequiredSquadMembers uint8
+---@field SquadId int32
+AFortEmp = {}
+
+
+
 ---@class AFortFirePit : AFort
 ---@field FuelTankDiesel FFuelTank
 AFortFirePit = {}
 
 function AFortFirePit:OnRep_FuelTankDiesel() end
+
+
+---@class AFortFireSuppression : ATeamStructure
+---@field PowerConsumerComponent UPowerConsumerComponent
+---@field WaterTank FFuelTank
+---@field bIsDispensingWater boolean
+---@field SprinklerVFXComponent UParticleSystemComponent
+---@field PumpingLoopComponent UAudioComponent
+---@field SteamVFXComponent UParticleSystemComponent
+---@field PipeInputAssociatedSocketName FName
+---@field DispenseAmountPerSec float
+AFortFireSuppression = {}
+
+function AFortFireSuppression:OnRep_IsDispensingWater() end
+
+
+---@class AFortFireSuppressionBuildSite : AStructureBuildSite
+---@field WaterTank FFuelTank
+AFortFireSuppressionBuildSite = {}
+
 
 
 ---@class AFortForwardBase : AForwardBase
@@ -1342,11 +1387,23 @@ AFortForwardBase = {}
 AFortForwardBaseBuildSite = {}
 
 
+---@class AFortGarrisonStation : ATeamStructure
+---@field RoofMesh UStaticMeshComponent
+---@field BasementMesh UStaticMeshComponent
+---@field GroundStaircaseMesh UStaticMeshComponent
+---@field BoatHullComponent UBoatHullComponent
+---@field VisibilityToggleComponent USafeHouseVisibilityToggleComponent
+---@field GenericStockpileComponent UGenericStockpileComponent
+---@field SpawnPoints FSpawnPoints
+AFortGarrisonStation = {}
+
+
+
 ---@class AFortObservation : ATeamStructure
 ---@field ObstructionCheckOverrideExtents FVector
 ---@field MapIntelligenceSource UMapIntelligenceSourceComponent
+---@field PowerConsumerComponent UPowerConsumerComponent
 ---@field TeamFlagMeshComponent UTeamFlagMeshComponent
----@field PowerInfo FPowerInfo
 AFortObservation = {}
 
 
@@ -1364,7 +1421,6 @@ AFortObservation = {}
 ---@field DamageParams FStaticArtilleryDamageParams
 ---@field InitialDelay float
 ---@field ExplosionDelay float
----@field PowerInfo FPowerInfo
 ---@field HorizontalAngle float
 ---@field VerticalAngle float
 ---@field bIsFiring boolean
@@ -1374,15 +1430,11 @@ function AFortStaticArtillery:OnRep_IsFiring() end
 
 
 ---@class AFortTurret : AFoxholeTurret
----@field PowerInfo FPowerInfo
 AFortTurret = {}
 
 
-
 ---@class AFortTurretAT : AGunTurret
----@field PowerInfo FPowerInfo
 AFortTurretAT = {}
-
 
 
 ---@class AFortTurretMG : AFortTurret
@@ -1416,6 +1468,7 @@ AFoxhole = {}
 ---@field ShouldAggroOnDamage boolean
 ---@field bUseSquareMuzzleBounds boolean
 ---@field bIsTutorialTurret boolean
+---@field bDisallowForwardUpgradeInIsland boolean
 ---@field bLimitOccupantFiringArc boolean
 ---@field MaxOccupantFiringArcDeviation float
 ---@field FlagMesh UTeamFlagMeshComponent
@@ -1455,15 +1508,6 @@ function AFreighter:OnRep_CurrentShippables() end
 AFuelContainer = {}
 
 function AFuelContainer:OnRep_FuelTankerInfo() end
-
-
----@class AFuelSilo : ATeamStructure
----@field PipeInput0 UBuildSocketComponent
----@field PipeOutput0 UBuildSocketComponent
----@field LiquidTank FLiquidTank
-AFuelSilo = {}
-
-function AFuelSilo:OnRep_LiquidTank() end
 
 
 ---@class AGarrisonHouse : ATunnelNode
@@ -1662,14 +1706,11 @@ function AInfantryRailVehicle:OnRep_GunnerYawAndPitch() end
 ---@field ListeningSFXLoop UAudioComponent
 ---@field StartListeningSound USoundBase
 ---@field EndListeningSound USoundBase
----@field MaxPower float
 ---@field RequiredPowerForFiring float
 ---@field RequiredPowerForRotation float
----@field PowerInfo FPowerInfo
 ---@field RequiredSquadMembers uint8
 ---@field SquadId int32
 ---@field GunnerYawAndPitch FVector2D
----@field Power float
 ---@field LastListenEndTime float
 ---@field ListenTimeRemaining float
 ---@field LaunchCodeInfo FRocketLaunchCodeInfo
@@ -1886,15 +1927,17 @@ ALineOfSightVisualizationActor = {}
 
 
 ---@class ALiquidTransferStation : AResourceTransferStation
----@field FuelBuffers TArray<FFuelQuantity>
----@field InputSockets TArray<UBuildSocketComponent>
+---@field FuelInputBuffers TArray<FFuelQuantity>
+---@field FuelOutputBuffer FFuelQuantity
+---@field InputSocket UBuildSocketComponent
 ---@field OutputSocket UBuildSocketComponent
 ALiquidTransferStation = {}
 
 
 
 ---@class ALiquidTransferStationBuildSite : AStructureBuildSite
----@field FuelBuffers TArray<FFuelQuantity>
+---@field FuelInputBuffers TArray<FFuelQuantity>
+---@field FuelOutputBuffer FFuelQuantity
 ALiquidTransferStationBuildSite = {}
 
 
@@ -1917,11 +1960,9 @@ AListeningArea = {}
 ---@field MaxPower float
 ---@field RequiredPowerForFiring float
 ---@field RequiredPowerForRotation float
----@field PowerInfo FPowerInfo
 ---@field RequiredSquadMembers uint8
 ---@field SquadId int32
 ---@field GunnerYawAndPitch FVector2D
----@field Power float
 ---@field StashedAmmo int32
 ALongRangeArtillery = {}
 
@@ -2237,12 +2278,21 @@ APersistentProxy = {}
 ---@field FrontSocket UBuildSocketComponent
 ---@field LeftSocket UBuildSocketComponent
 ---@field RightSocket UBuildSocketComponent
----@field LiquidTank FLiquidTank
+---@field MaxLiquidAmount float
+---@field SystemIndex int32
 APipeline = {}
 
 
 
+---@class APipelineSilo : APipeline
+---@field VisibleMeshes uint8
+APipelineSilo = {}
+
+function APipelineSilo:OnRep_VisibleMeshes() end
+
+
 ---@class APipelineValve : ATeamStructure
+---@field UpgradeSlotComponent UModificationSlotComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
 ---@field ThroughputNormalized float
@@ -3373,6 +3423,8 @@ ASimPlayerCameraManager = {}
 ---@field RailHUDTarget TWeakObjectPtr<ARailVehicle>
 ---@field RailHUDTargetDismountTime float
 ---@field CalloutMarkerGhost ACalloutMarkerGhost
+---@field LandscapeCullRVTVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
+---@field LandscapeCullRVTVolume ARuntimeVirtualTextureVolume
 ASimPlayerController = {}
 
 ---@param TestInt int32
@@ -3569,6 +3621,9 @@ function ASimPlayerController:ServerSetInventorySourceOverride(InventorySourceOv
 ---@param RailVehicleHospital ARailVehicleHospital
 ---@param bWantsItDeployed boolean
 function ASimPlayerController:ServerSetHospitalDeployState(RailVehicleHospital, bWantsItDeployed) end
+---@param FortEmp AFortEmp
+---@param StructureType uint8
+function ASimPlayerController:ServerSetFortEmpStructure(FortEmp, StructureType) end
 ---@param CustomizationInfo FCharacterCustomizationInfo
 function ASimPlayerController:ServerSetCharacterCustomizationInfo(CustomizationInfo) end
 ---@param Flags int32
@@ -3688,6 +3743,7 @@ function ASimPlayerController:ServerFullRepair(VehicleFactory) end
 function ASimPlayerController:ServerFlagDisruptivePlacement(TeamStructure) end
 ---@param Request FRocketLaunchCodeRequest
 function ASimPlayerController:ServerEnterRocketLaunchCode(Request) end
+function ASimPlayerController:ServerEjectDriver() end
 ---@param Text FText
 ---@param TargetSignPost ASignPost
 function ASimPlayerController:ServerEditSignPost(Text, TargetSignPost) end
@@ -3698,7 +3754,7 @@ function ASimPlayerController:ServerDropItem(ItemHolder, ItemIndex) end
 ---@param Structure AStructure
 function ASimPlayerController:ServerDrainPipes(Structure) end
 function ASimPlayerController:ServerDetachUserComponents() end
----@param DetachTarget ASimVehicle
+---@param DetachTarget AActor
 ---@param Index uint8
 function ASimPlayerController:ServerDetachLargeItem(DetachTarget, Index) end
 ---@param TargetSignPost ASignPost
@@ -4101,6 +4157,9 @@ function ASimPlayerController:ClientJoinWarResponse(ResponseType, GameplayParams
 function ASimPlayerController:ClientGotoScreen(SimScreen) end
 ---@param SquadName FString
 function ASimPlayerController:ClientGetSquadIdFromSquadName(SquadName) end
+---@param ImageWidth float
+---@param MapPositionOffset FVector2D
+function ASimPlayerController:ClientGenerateWarStartImage(ImageWidth, MapPositionOffset) end
 ---@param Response EFullRepairResponse
 function ASimPlayerController:ClientFullRepairResponse(Response) end
 ---@param PlayerName FString
@@ -4327,7 +4386,7 @@ function ASimPlayerState:ClientSetIsGodMode(bIsGodMode) end
 ---@field OriginatorBuildSiteName FName
 ---@field bDoPenetratingShotsReduceTankArmour boolean
 ---@field SeatComponents TArray<UVehicleSeatComponent>
----@field ModularSeatComponents TArray<UVehicleSeatComponent>
+---@field ModularSeatComponents TArray<USeatComponent>
 ---@field StockpileComponents TArray<UGenericStockpileComponent>
 ---@field LockingPlayerId FString
 ---@field TimeOfLastUseCoalition FDateTime
@@ -4461,6 +4520,17 @@ ASpiderMech = {}
 
 
 
+---@class ASpoolProjectile : AWarProjectile
+---@field AccuracyModifiedVelocity FVector
+---@field InitialVelocity FVector
+---@field SpoolDuration float
+---@field LerpStartDistance float
+---@field LerpDuration float
+ASpoolProjectile = {}
+
+function ASpoolProjectile:OnRep_InitialVelocity() end
+
+
 ---@class AStaticBase : ATownHall
 ---@field AITurretsController UAITurretsControllerComponent
 ---@field DynamicTierInfo FDynamicTierInfo
@@ -4550,6 +4620,7 @@ AStorageFacilityBuildSite = {}
 ---@field TechID ETechID
 ---@field TechComponentIDs TArray<ETechComponentID>
 ---@field GarrisonComponent UGarrisonComponent
+---@field ModularMountsComponent UModularMountsComponent
 ---@field InfrastructureComponent UInfrastructureComponent
 ---@field MeshVisibilityComponent UMeshVisibilityComponent
 ---@field MaxHealth int32
@@ -4580,6 +4651,7 @@ AStorageFacilityBuildSite = {}
 ---@field bIsBuiltNearBorder boolean
 ---@field bIgnoresRapidDecay boolean
 ---@field bIsPrototype boolean
+---@field bIsPowered boolean
 ---@field InteractionDistanceOverride float
 ---@field BuilderPlayerOnlineID FString
 ---@field BuilderName FString
@@ -4587,6 +4659,7 @@ AStorageFacilityBuildSite = {}
 ---@field BuildStepProgress uint8
 ---@field BuildSteps TArray<FStructureBuildStep>
 ---@field bHasMeshVisibilityComponent boolean
+---@field bIsBlankFortPiece boolean
 ---@field bAddLandscapeHolesOnBeginPlay boolean
 ---@field bRemoveLandscapeHolesOnDestroy boolean
 ---@field bHasLandscapeHoles boolean
@@ -4608,6 +4681,7 @@ AStorageFacilityBuildSite = {}
 ---@field FlameActors TArray<AFlameActor>
 ---@field bRecentExtinguishingHit boolean
 ---@field SeatComponents TArray<UStructureSeatComponent>
+---@field ModularSeatComponents TArray<USeatComponent>
 ---@field ParkingSpotComponent UParkingSpotComponent
 ---@field FirePitComponent UFirePitComponent
 AStructure = {}
@@ -4641,9 +4715,9 @@ function AStructure:BPOnFireIntensityIncreased(OldIntensity, NewIntensity) end
 ---@field StructureBeingBuiltCodeName FName
 ---@field ModificationSlots TArray<UModificationSlotComponent>
 ---@field ModificationMask uint32
----@field bBaseStructureHadPipes boolean
 ---@field ModificationSlotMigrations TArray<FModificationSlotMigration>
 ---@field DisabledSockets TArray<FName>
+---@field MigratedModificationMask uint32
 ---@field ObstructionCheckVolume UBoxComponent
 ---@field bIsUpgrade boolean
 ---@field BaseStructureClassToRespawn TSubclassOf<AStructure>
@@ -4659,6 +4733,7 @@ function AStructure:BPOnFireIntensityIncreased(OldIntensity, NewIntensity) end
 ---@field ConnectorConfiguration FConnectorConfiguration
 AStructureBuildSite = {}
 
+function AStructureBuildSite:OnRep_MigratedModificationMask() end
 function AStructureBuildSite:OnRep_IsUpgrade() end
 
 
@@ -4669,7 +4744,12 @@ AStructureCrate = {}
 ---@class AStructureIsland : AActor
 ---@field Structures TArray<AStructure>
 ---@field StructuralIntegrity float
+---@field CachedStructuralIntegrityBonus float
+---@field CachedFortConnections uint8
+---@field CachedNonFortConnections uint8
+---@field CachedUnconnectedSockets uint8
 ---@field TeamId uint8
+---@field SafeHouses TArray<AFortGarrisonStation>
 ---@field HealthPool float
 ---@field HealthPoolMax float
 ---@field FireIntensity EFireIntensity
@@ -4770,6 +4850,7 @@ function ATargetingWall:OnRep_DamageEvents() end
 ---@field TeamId uint8
 ---@field bAllowUseByEnemy boolean
 ---@field bCanBeFlaggedForDisruptivePlacement boolean
+---@field bCanBlockAIUpgrade boolean
 ---@field DisruptivePlacementVoteMultiplier float
 ATeamStructure = {}
 
@@ -4790,7 +4871,9 @@ function ATechTree:OnRep_TechUnlockBits(PreviousTechUnlockBits) end
 
 
 ---@class ATemplate : AActor
+---@field bInitiallyDisableCollisions boolean
 ATemplate = {}
+
 
 
 ---@class ATimedProjectile : AWarProjectile
@@ -5220,6 +5303,13 @@ AWaterMeshActor = {}
 AWaterMine = {}
 
 
+---@class AWaterProjectile : AWarProjectile
+---@field InstigatorRoom URoomComponent
+---@field LastRoom URoomComponent
+AWaterProjectile = {}
+
+
+
 ---@class AWeaponFireFX : AActor
 ---@field MovementComp UProjectileMovementComponent
 ---@field CollisionComp USphereComponent
@@ -5295,14 +5385,12 @@ AWeatherIceMapData = {}
 ---@field ActiveDuration float
 ---@field MaxTargetAngle float
 ---@field ConnectionDistance float
----@field PowerInfo FPowerInfo
 ---@field State EWeatherStationState
 ---@field NetworkedStations uint8
 ---@field PredictionOffset int8
 ---@field RequiredSquadMembers uint8
 ---@field SquadId int32
 ---@field Yaw float
----@field Power float
 ---@field GlobalID FWeatherStationID
 ---@field ConnectionTo FWeatherStationID
 ---@field CoordConnectionTo FWarGridCoordinate
@@ -5374,6 +5462,13 @@ FActivateSquadWarMessage = {}
 ---@field AlphaCurve UCurveFloat
 ---@field ScaleCurve UCurveFloat
 FActivityIndicatorStyle = {}
+
+
+
+---@class FActivityResource
+---@field AmountC float
+---@field AmountW float
+FActivityResource = {}
 
 
 
@@ -5544,6 +5639,7 @@ FAlertWarOpsMessageRPCInfo = {}
 ---@field EnvironmentImpactAmount int16
 ---@field AddedBurning float
 ---@field AddedHeat float
+---@field BreachingModifier float
 FAmmoDynamicData = {}
 
 
@@ -5744,6 +5840,7 @@ FBanReasonInfo = {}
 ---@field EquipmentSilhouetteFemale FSlateBrush
 ---@field BasicScrollBarStyle FScrollBarStyle
 ---@field BasicIconButtonStyle FButtonStyle
+---@field InvariantBasicIconButtonStyle FButtonStyle
 ---@field ExpandButtonStyle FButtonStyle
 ---@field CollapseButtonStyle FButtonStyle
 ---@field NextButtonStyle FButtonStyle
@@ -5963,8 +6060,8 @@ FCharacterCustomizationInfo = {}
 
 ---@class FCharacterInvokeInfo
 ---@field ImpactPoint FVector_NetQuantize
----@field RandomSeed uint32
 ---@field MuzzleOffset FMuzzleOffsetVector_NetQuantize
+---@field RenderTimestamp float
 FCharacterInvokeInfo = {}
 
 
@@ -6231,11 +6328,19 @@ FConcreteSettler = {}
 
 
 
+---@class FConnectionRule
+---@field bDirectional boolean
+---@field Direction ESocketDirection
+---@field SocketTypeMask int64
+---@field ShowsTags TArray<FName>
+FConnectionRule = {}
+
+
+
 ---@class FConnectorConfiguration
 ---@field SocketIndex int8
 ---@field TargetLocation FVector
 ---@field TargetRotation FQuat
----@field bIsUnderRoad boolean
 ---@field CustomData uint8
 ---@field Flags EConnectorConfigurationFlag
 FConnectorConfiguration = {}
@@ -6247,6 +6352,50 @@ FConnectorConfiguration = {}
 ---@field NumColonialAchievements int8
 ---@field NumWardenAchievements int8
 FConquestOverNotificationInfo = {}
+
+
+
+---@class FConstructionEquipmentConfig
+---@field MaxDeltaAngleToIgnoreRotation float
+---@field ScoopingAnimHalfwayDuration float
+---@field ScoopingAnimCompletionDuration float
+---@field MinAnimDuration float
+---@field MaxAnimDuration float
+---@field ScoopDoorOpenDuration float
+---@field MaterialDropDuration float
+---@field MinScoopRotation float
+---@field MaxScoopRotation float
+---@field MinScoopDoorRotation float
+---@field MaxScoopDoorRotation float
+---@field MinDistance float
+---@field MaxDistance float
+---@field MinHeight float
+---@field MaxHeight float
+---@field StartingScoopDoorRotation float
+---@field StartingScoopRotation float
+---@field StartingHeight float
+---@field StartingDistance float
+---@field StartingRotation float
+---@field ScoopingAnimStartHeight float
+---@field ScoopingAnimMidHeight float
+---@field ScoopingAnimStartDistance float
+---@field ScoopingAnimEndDistance float
+---@field ScoopingAnimStartScoopRotation float
+---@field ScoopingAnimEndScoopRotation float
+---@field DumpMaterialHeight float
+---@field GhostMaterialIndices int32
+---@field GhostMaterial UMaterial
+---@field ScoopMaterialMesh UStaticMesh
+---@field ArmHalfDimensions FVector2D
+---@field ScoopRadius float
+FConstructionEquipmentConfig = {}
+
+
+
+---@class FConstructionEquipmentServerState
+---@field TargetBuildSite TWeakObjectPtr<ABuildSite>
+---@field ServerTimestamp float
+FConstructionEquipmentServerState = {}
 
 
 
@@ -6463,6 +6612,24 @@ FCrossRegionSerializedActor = {}
 ---@field Brush FSlateBrush
 ---@field Offset FVector2D
 FCursorStyle = {}
+
+
+
+---@class FDamageAttributes
+---@field WeaponFireFXClass TSubclassOf<AWeaponFireFX>
+---@field ImpactEffect TSubclassOf<AImpactEffect>
+---@field DamageType TSubclassOf<USimDamageType>
+---@field ShotSoundCue USoundCue
+---@field MuzzleFlashPS UParticleSystem
+---@field WeaponDamage float
+---@field BestJitterConeHalfAngle float
+---@field WorstJitterConeHalfAngle float
+---@field FiringPeriod float
+---@field TimeToFullFireRateAndAccuracy float
+---@field EnemyPursueDuration float
+---@field ArmourDamageModifier float
+---@field TargetStabilityReductionPerShot float
+FDamageAttributes = {}
 
 
 
@@ -6736,6 +6903,7 @@ FFacilityStyle = {}
 ---@field TargetIronAmount int32
 ---@field RareMetalAmount int32
 ---@field TargetRareMetalAmount int32
+---@field ActivityAmount double
 FFactionResourceState = {}
 
 
@@ -6812,6 +6980,23 @@ FFoliageModificationInfo = {}
 ---@field FootPrintActorLeft TSubclassOf<ADecalActor>
 ---@field FootPrintActorRight TSubclassOf<ADecalActor>
 FFootPrintActorInfo = {}
+
+
+
+---@class FFortEmpConfig
+---@field FirstLRArtillerySegmentMesh UStaticMesh
+---@field SecondLRArtillerySegmentMesh UStaticMesh
+---@field FirstIntelCenterSegmentMesh UStaticMesh
+---@field SecondIntelCenterSegmentMesh UStaticMesh
+---@field FirstWeatherStationSegmentMesh UStaticMesh
+---@field SecondWeatherStationSegmentMesh UStaticMesh
+---@field FirstFortGarrisonSegmentMesh UStaticMesh
+---@field SecondFortGarrisonSegmentMesh UStaticMesh
+---@field LRArtilleryPartCodeName FName
+---@field WeatherStationPartCodeName FName
+---@field IntelCenterPartCodeName FName
+---@field FortGarrisonPartCodeName FName
+FFortEmpConfig = {}
 
 
 
@@ -7178,6 +7363,15 @@ FGrenadeDynamicData = {}
 
 
 
+---@class FGunnerInfo
+---@field AmmoName FName
+---@field AmmoAmount int32
+---@field YawAndPitch FVector2D
+---@field bIsFiring boolean
+FGunnerInfo = {}
+
+
+
 ---@class FHUDInfo
 FHUDInfo = {}
 
@@ -7370,6 +7564,7 @@ FInfrastructureStyle = {}
 ---@field Entries FInfrastructureStyle
 ---@field Items FTechTreeComponentUIItem
 ---@field VoteBrush FSlateBrush
+---@field ActivityBonusButton FButtonStyle
 FInfrastructuresStyle = {}
 
 
@@ -8267,9 +8462,11 @@ FModerationHelper = {}
 ---@field bHiddenByDefault boolean
 ---@field bVisualsAreClientOnly boolean
 ---@field bShowInBuildSite boolean
+---@field bBuildFootprintIgnoresConnectedActors boolean
 ---@field TechID ETechID
 ---@field InfrastructureType EInfrastructureType
 ---@field InfrastructureAmount int32
+---@field BuildFootprintTemplate TSubclassOf<AModificationTemplate>
 ---@field Tiers TMap<EFortTier, FModificationTier>
 FModificationDefinition = {}
 
@@ -8384,6 +8581,7 @@ FModularMounts = {}
 ---@field FiringImpulse float
 ---@field ArmourDamageModifier float
 ---@field TargetStabilityReductionPerShot float
+---@field BreachingModifier float
 FMountDynamicData = {}
 
 
@@ -8464,6 +8662,15 @@ FOutpostInfo = {}
 
 
 
+---@class FPIDController
+---@field PID FVector
+---@field IntegralSaturation float
+---@field OutputSaturation float
+---@field bUseValueRate boolean
+FPIDController = {}
+
+
+
 ---@class FPathSocket
 ---@field ID uint8
 ---@field PackedAlpha float
@@ -8485,6 +8692,21 @@ FPayloadMeshes = {}
 ---@field ImpactedMaterial UPhysicalMaterial
 ---@field SnowMaterial UPhysicalMaterial
 FPhysicalMaterialResolver = {}
+
+
+
+---@class FPipelineSocket
+---@field Type EPipeType
+---@field Index uint8
+FPipelineSocket = {}
+
+
+
+---@class FPipelineSystem
+---@field CodeName FName
+---@field Amount float
+---@field MaxAmount float
+FPipelineSystem = {}
 
 
 
@@ -8602,14 +8824,6 @@ FPlayerWarState = {}
 ---@field Connections TWeakObjectPtr<AActor>
 ---@field ConnectionNames FName
 FPowerGridInfo = {}
-
-
-
----@class FPowerInfo
----@field PowerDelta int32
----@field PowerLength int16
----@field CurrentPower int32
-FPowerInfo = {}
 
 
 
@@ -9129,6 +9343,12 @@ FRegimentEditMessage = {}
 
 
 
+---@class FRegimentFullMessage
+---@field RegimentID int32
+FRegimentFullMessage = {}
+
+
+
 ---@class FRegimentIdChangedMessage
 ---@field OnlineID FString
 ---@field RegimentID int32
@@ -9331,13 +9551,23 @@ FRepMapPost = {}
 
 
 
+---@class FRepPipelineSystem
+---@field Index int32
+---@field CodeName FName
+---@field Amount float
+---@field MaxAmount float
+---@field ThroughputNormalized float
+FRepPipelineSystem = {}
+
+
+
 ---@class FRepPlayerMovement
 ---@field LinearVelocity FVector
 ---@field Location FVector
 ---@field Rotation FRotator
 ---@field MovementBase UPrimitiveComponent
 ---@field BoneName FName
----@field LastUpdateClientTimeStamp float
+---@field Timestamp float
 ---@field bServerHasBaseComponent boolean
 ---@field MovementMode uint8
 ---@field LocationQuantizationLevel EVectorQuantization
@@ -9445,6 +9675,13 @@ FRequestSquadOfficerToLeaderMessage = {}
 
 
 
+---@class FReservePower
+---@field MaxAmount float
+---@field Amount float
+FReservePower = {}
+
+
+
 ---@class FReserveStockpileActionStyle
 ---@field ButtonStyle FButtonStyle
 ---@field ToolTipText FText
@@ -9515,6 +9752,10 @@ FResourceConverter = {}
 ---@field StaticMesh UStaticMesh
 FResourceRenderInfo = {}
 
+
+
+---@class FRewindContext
+FRewindContext = {}
 
 
 ---@class FRichTextFieldColor
@@ -9870,6 +10111,10 @@ FSignedPayload = {}
 ---@field SkeletalMesh USkeletalMesh
 FSkeletalMeshStop = {}
 
+
+
+---@class FSnapshotManagerTickFunction : FTickFunction
+FSnapshotManagerTickFunction = {}
 
 
 ---@class FSoundClassVolume
@@ -10320,7 +10565,6 @@ FStructureDynamicData = {}
 ---@class FStructureProfileData
 ---@field bHasDynamicStartingCondition boolean
 ---@field bIsRepairable boolean
----@field bIsOnlyMountableByFriendly boolean
 ---@field bIsUpgradeRotationAllowed boolean
 ---@field bIsUsableFromVehicle boolean
 ---@field bAllowUpgradeWhenDamaged boolean
@@ -10350,7 +10594,9 @@ FStructureProfileData = {}
 ---@field ResourceRequirements FResourceAmounts
 ---@field ConcreteProgress float
 ---@field IslandHealth float
+---@field IslandIntegrityBonus float
 ---@field Suppression float
+---@field ShelterBonus float
 FStructureStats = {}
 
 
@@ -10659,6 +10905,7 @@ FUObjectHandle = {}
 ---@field StackSize int8
 ---@field EncumbranceFilter uint32
 ---@field EncumbranceModifier float
+---@field DeepWaterSpeedModifier float
 ---@field DetectionChance float
 ---@field SnowStormMitigation float
 ---@field RainStormMitigation float
@@ -11276,7 +11523,10 @@ FWarRecordList = {}
 ---@field SubmarineIceHideDepth float
 ---@field FoundationMaxHitHeight float
 ---@field FoundationHitsThreshold float
+---@field StructuralIntegrityBonus float
 ---@field bIsFastBuild boolean
+---@field AirCameraMode int32
+---@field AirAssistMode int32
 FWarReplicatedTweakables = {}
 
 
@@ -11345,6 +11595,7 @@ FWarServiceReplicatedState = {}
 ---@field EventServerPassword FString
 ---@field NormalizedGlobalPopulation float
 ---@field DescriptionType EShardDescription
+---@field bFactionLock boolean
 FWarShardInfo = {}
 
 
@@ -11434,7 +11685,6 @@ FWarTimeDiscrepancy = {}
 ---@field HomeRegionPlayersPerBase int32
 ---@field UnexplodedOrdnanceChance float
 ---@field FortBaseNetworkDistance int32
----@field LRAMaxPowerPerMin float
 ---@field LRADamage float
 ---@field LRADamageInnerRadius float
 ---@field LRAAccuracyRadiusMultiplier float
@@ -11444,8 +11694,6 @@ FWarTimeDiscrepancy = {}
 ---@field LRALaunchVelocityZDistanceFactor float
 ---@field IntelCenterListeningRadiusMin float
 ---@field IntelCenterListeningRadiusMax float
----@field IntelCenterMaxPowerPerMin float
----@field WeatherStationMaxPowerPerMin float
 ---@field bPreventSaveWithZeroActors boolean
 ---@field bLogIncompleteValidations boolean
 ---@field ValidationThreshold float
@@ -11496,6 +11744,8 @@ FWarTimeDiscrepancy = {}
 ---@field TeamStructureActivityModifier float
 ---@field MaxTeamStructureActivityPerHour float
 ---@field FriendlyTerritoryActivityModifier float
+---@field EarlyWarActivityModifier float
+---@field EarlyWarActivityMaxAmount float
 ---@field MaxActivityPerHour float
 ---@field ProvisionalGarrisonSpawnsRequired int32
 ---@field MinTankArmourMultiplier float
@@ -11543,6 +11793,7 @@ FWarTimeDiscrepancy = {}
 ---@field PlayerInStructureTemperatureGain float
 ---@field PlayerNoWeatherTemperatureGain float
 ---@field VehicleNoWeatherTemperatureGain float
+---@field FrozenPipePenalty float
 ---@field PlayerFirePitTemperatureGain float
 ---@field VehicleFirePitTemperatureGain float
 ---@field VehicleEngineOnTemperatureGain float
@@ -11569,6 +11820,7 @@ FWarTimeDiscrepancy = {}
 ---@field StructureDamageDevastationFactor float
 ---@field StructureDamageDevastationMultiplierMax float
 ---@field StructureDamageDevastationMinThreshold float
+---@field StructureBreachingDevastationMultiplierMax float
 ---@field RuinedStructureDevstationSize float
 ---@field RuinedStructureDevstationThreshold float
 ---@field MinFortArtilleryShots int32
@@ -11622,7 +11874,6 @@ FWarTimeDiscrepancy = {}
 ---@field PreAutoRestartAlertInterval float
 ---@field SameStructureRadius float
 ---@field SameStructureMaxOverlapCount int32
----@field SameStructureMaxDenseStructures int32
 ---@field NetStatsInterval float
 ---@field AbandonedBaseTickRate float
 ---@field AbandonedBaseNormalizedDamage float
@@ -11695,8 +11946,11 @@ FWarTimeDiscrepancy = {}
 ---@field WarBalancerMaxPopulationChangePerTick int32
 ---@field RareMetalWeightAdjustment int32
 ---@field CommendHistoryExpirySecs float
----@field GlobalRefineSpeedModifer float
+---@field GlobalRefineSpeedModifier float
 ---@field FacilityMapPostItemRadius float
+---@field MaxBreachChance float
+---@field MinBreachChance float
+---@field MultipleShelterModifier float
 ---@field bAllowStockpileExternalUser boolean
 ---@field bGateLongRangeArtilleryFiringOnTech boolean
 ---@field bAllowSquadMissingMembers boolean
@@ -11731,6 +11985,7 @@ FWarTweakables = {}
 ---@field AddedBurningMultiplier float
 ---@field ArmourDamageModifier float
 ---@field TargetStabilityReductionPerShot float
+---@field BreachingModifier float
 FWeaponDynamicData = {}
 
 
@@ -11757,7 +12012,6 @@ FWeaponShotSFX = {}
 ---@class FWeatherEffects
 ---@field EffectsActors TArray<FWeatherEffectsActorTrigger>
 ---@field MaterialParameter FNamedParameterRange
----@field IntensityThreshold float
 ---@field OffroadPenalty float
 ---@field MinVisibility float
 ---@field MaxVisibility float
@@ -12018,12 +12272,12 @@ function IGunnerSupport:SetGunnerWorking(GunnerIndex, IsWorking) end
 ---@return boolean
 function IGunnerSupport:IsGunnerWorking(GunnerIndex) end
 ---@param GunnerIndex int32
----@return boolean
-function IGunnerSupport:IsFiring(GunnerIndex) end
----@param GunnerIndex int32
 ---@param bTestFullDeploy boolean
 ---@return boolean
-function IGunnerSupport:IsDeployed(GunnerIndex, bTestFullDeploy) end
+function IGunnerSupport:IsGunnerDeployed(GunnerIndex, bTestFullDeploy) end
+---@param GunnerIndex int32
+---@return boolean
+function IGunnerSupport:IsFiring(GunnerIndex) end
 ---@param GunnerIndex int32
 ---@return float
 function IGunnerSupport:GetTrackingSpeedModifier(GunnerIndex) end
@@ -12083,10 +12337,6 @@ IPersistentActor = {}
 IPowerGridNode = {}
 
 
----@class IPowerNode : IInterface
-IPowerNode = {}
-
-
 ---@class ISeatSupport : IInterface
 ISeatSupport = {}
 
@@ -12144,7 +12394,6 @@ function UAIGunTurretComponent:MulticastPlayFiringFX(HitResult) end
 ---@field TriggerBoxExtents FVector
 ---@field bIs360ViewWhenMounted boolean
 ---@field SuppressionPercentage uint8
----@field AttackDelayAgainstVehicles float
 ---@field bIsSuppressible boolean
 ---@field bShowExtraTracers boolean
 ---@field bLimitOccupantFiringArc boolean
@@ -12152,30 +12401,15 @@ function UAIGunTurretComponent:MulticastPlayFiringFX(HitResult) end
 ---@field OccupantFiringConeAngle float
 ---@field bUsesLegacyFoxholeTurretDamageSelection boolean
 ---@field bUseATDamageForVehicle boolean
----@field ImpactEffect TSubclassOf<AImpactEffect>
----@field ImpactEffectAlternate TSubclassOf<AImpactEffect>
----@field WeaponFireFXClass TSubclassOf<AWeaponFireFX>
----@field WeaponFireFXClassAlternate TSubclassOf<AWeaponFireFX>
----@field DamageType TSubclassOf<USimDamageType>
----@field DamageTypeAlternate TSubclassOf<USimDamageType>
----@field ShotSoundCue USoundCue
----@field ShotAgainstVehicleSoundCue USoundCue
----@field MuzzleFlashPS UParticleSystem
----@field WeaponDamage float
----@field WeaponDamageAgainstVehicles float
----@field BestJitterConeHalfAngle float
----@field WorstJitterConeHalfAngle float
----@field FiringPeriod float
----@field TimeToFullFireRateAndAccuracy float
+---@field DamageAttributes FDamageAttributes
+---@field DamageAttributesAlternate FDamageAttributes
 ---@field FiringConeAngle float
----@field EnemyPursueDuration float
----@field ArmourDamageModifier float
----@field TargetStabilityReductionPerShot float
 ---@field EnemyType ECollisionChannel
 ---@field CurrentEnemy TWeakObjectPtr<AActor>
 ---@field CurrentEnemyTargetYaw float
 ---@field SimulatedHitNotify FHitNotify
 ---@field bIsEnemyObscured boolean
+---@field bIsSuppressedOverride boolean
 ---@field NearbyFlares TSet<TWeakObjectPtr<AFlareExplosionEffect>>
 ---@field AITurretBlueprintCDO UAITurretComponent
 UAITurretComponent = {}
@@ -12426,6 +12660,7 @@ UBuildFootprintBoxComponent = {}
 ---@field ConnectedSocket TWeakObjectPtr<UBuildSocketComponent>
 ---@field ConnectedTag FBuildSocketTag
 ---@field SocketTags TArray<FBuildSocketTag>
+---@field PipeInfo FPipelineSocket
 ---@field bDisabled boolean
 ---@field bIsUnidirectional boolean
 ---@field bIgnoreUnidirectionalityForModifications boolean
@@ -12445,6 +12680,7 @@ UBuildFootprintBoxComponent = {}
 ---@field MinimumPathSeparation float
 ---@field bOnlyTestMinimumPathSeparationOnUnconnected boolean
 ---@field bAllowRotatedPlacement boolean
+---@field bIgnoreOwnerConnectedActorsWhenSnapped boolean
 UBuildSocketComponent = {}
 
 
@@ -12561,6 +12797,23 @@ function UClientStreamingManager:OnLevelHidden(LevelStreaming) end
 ---@class UCoastalGunAnimInstance : UAnimInstance
 ---@field TrackingAngle float
 UCoastalGunAnimInstance = {}
+
+
+
+---@class UConnectionRulesComponent : UActorComponent
+---@field Rules TArray<FConnectionRule>
+---@field DefaultRule FConnectionRule
+UConnectionRulesComponent = {}
+
+
+
+---@class UConstructionEquipmentAnimInstance : UAnimInstance
+---@field Angle float
+---@field Pitch float
+---@field Yaw float
+---@field HorizontalDistance float
+---@field VerticalDistance float
+UConstructionEquipmentAnimInstance = {}
 
 
 
@@ -12998,6 +13251,12 @@ UFloodableComponent = {}
 
 
 
+---@class UFortFireSuppressionAnimInstance : UAnimInstance
+---@field bIsDispensingWater boolean
+UFortFireSuppressionAnimInstance = {}
+
+
+
 ---@class UFortStaticArtilleryAnimInstance : UAnimInstance
 ---@field HorizontalAngle float
 ---@field VerticalAngle float
@@ -13248,8 +13507,9 @@ UHeadlessLocalPlayer = {}
 UHeavyMachineGunItemComponent = {}
 
 function UHeavyMachineGunItemComponent:ServerStopInvoke() end
+---@param InvokeInfo FCharacterInvokeInfo
 ---@param ActivityStateChange FActivityStateChange
-function UHeavyMachineGunItemComponent:ServerStartInvoke(ActivityStateChange) end
+function UHeavyMachineGunItemComponent:ServerStartInvoke(InvokeInfo, ActivityStateChange) end
 function UHeavyMachineGunItemComponent:OnRep_SimulatedHitNotify() end
 function UHeavyMachineGunItemComponent:OnRep_IsEquipped() end
 
@@ -13735,7 +13995,9 @@ function UMeleeWeaponComponent:ClientSetIsBlocking(bInIsblocking) end
 
 ---@class UMeshVisibilityComponent : UActorComponent
 ---@field AnimatedMeshes TArray<UMeshComponent>
+---@field AnimatedFloorMeshes TArray<UMeshComponent>
 ---@field Meshes TArray<UMeshComponent>
+---@field FloorMeshes TArray<UMeshComponent>
 UMeshVisibilityComponent = {}
 
 
@@ -13773,6 +14035,18 @@ UModificationSlotComponent = {}
 
 
 
+---@class UModularMountAnimInstance : UDeployedTripodAnimInstance
+UModularMountAnimInstance = {}
+
+
+---@class UModularMountsComponent : UActorComponent
+---@field ActiveModularMounts uint8
+---@field GunnerInfo TArray<FGunnerInfo>
+UModularMountsComponent = {}
+
+function UModularMountsComponent:OnRep_ActiveModularMounts() end
+
+
 ---@class UMonumentManager : UObject
 UMonumentManager = {}
 
@@ -13805,6 +14079,7 @@ function UMortarItemComponent:ClientDrawDamageDebug(HitLocation, Radius) end
 ---@field EquippedGripType EEquippedWeaponGripType
 ---@field ActivityStateInfos FActivityStateInfo
 ---@field RotationBaseSocketName FName
+---@field bUseSingleItemSlotFilter boolean
 ---@field bMustBeStoppedToInvoke boolean
 ---@field bUseCharacterRotationForAim boolean
 ---@field bIsStationary boolean
@@ -13930,6 +14205,7 @@ UParkingSpotComponent = {}
 ---@field RowSpacing float
 ---@field ColumnSpacing float
 ---@field GroupIndex uint8
+---@field MeshInstanceRemovalDelay float
 UPayloadInstancedStaticMeshComponent = {}
 
 
@@ -13958,15 +14234,17 @@ UPersistentProxyComponent = {}
 
 
 
+---@class UPipelineManager : UObject
+UPipelineManager = {}
+
+
 ---@class UPipelineUserComponent : UUserComponent
----@field CodeName FName
----@field Amount float
+---@field RepPipelineSystem FRepPipelineSystem
 UPipelineUserComponent = {}
 
 ---@param DesiredCodeName FName
 function UPipelineUserComponent:ServerSetLiquidType(DesiredCodeName) end
-function UPipelineUserComponent:OnRep_CodeName() end
-function UPipelineUserComponent:OnRep_Amount() end
+function UPipelineUserComponent:OnRep_System() end
 
 
 ---@class UPlayerAnimInstance2 : UCharacterAnimInstance
@@ -14065,6 +14343,15 @@ UPlayerSaveGame = {}
 
 
 
+---@class UPowerConsumerComponent : UActorComponent
+---@field TickRate float
+---@field PowerConsumed float
+---@field bAutoStart boolean
+---@field bConsumeWhenVisibilityLimited boolean
+UPowerConsumerComponent = {}
+
+
+
 ---@class UPowerPoleUserComponent : UUserComponent
 ---@field bIsDisabled boolean
 UPowerPoleUserComponent = {}
@@ -14127,6 +14414,13 @@ function UProjectileItemComponent:AllSpawnFiringEffects() end
 
 ---@class UPuddleComponent : USphereComponent
 UPuddleComponent = {}
+
+
+---@class UQuadrilateralCoverComponent : UInstancedStaticMeshComponent
+---@field EndOffset float
+---@field SideOffset float
+UQuadrilateralCoverComponent = {}
+
 
 
 ---@class URWDVehicleMovementComponent : USimpleVehicleMovementComponent
@@ -14375,6 +14669,7 @@ UResourceMapping = {}
 ---@field RoomVolumes TArray<UPrimitiveComponent>
 ---@field WaterVolumes TArray<UPrimitiveComponent>
 ---@field Floodable UFloodableComponent
+---@field RoomBounds FBox
 ---@field WaterLevel float
 ---@field WaterLevelTickHandle FTimerHandle
 ---@field UsableVolumes TArray<UPrimitiveComponent>
@@ -14402,6 +14697,10 @@ URuinedComponent = {}
 URuinedMeshComponent = {}
 
 
+---@class USafeHouseVisibilityToggleComponent : UVisibilityToggleAreaComponent
+USafeHouseVisibilityToggleComponent = {}
+
+
 ---@class UScoutVehicleAnimInstance : USimVehicleAnimInstance
 ---@field bIsTransmitting boolean
 UScoutVehicleAnimInstance = {}
@@ -14426,6 +14725,8 @@ UScoutVehicleAnimInstance = {}
 ---@field bUsableWhenAnchored boolean
 ---@field bUsableWhenSubmerged boolean
 ---@field bIsEnabled boolean
+---@field PC APlayerController
+---@field Character ASimCharacter
 USeatComponent = {}
 
 
@@ -14451,8 +14752,6 @@ function USensorOperatorMountComponent:ServerStartInvoke(ActivityStateChange, bI
 ---@field bFriendlyFire boolean
 ---@field bLoginRestrictions boolean
 ---@field bAllowMods boolean
----@field AddedTimePerHomeSpawn float
----@field ConquestIteration int32
 ---@field ExcludedCodeNames TArray<FName>
 ---@field WelcomeMessage FText
 ---@field MaxPlayers int32
@@ -14462,15 +14761,12 @@ function USensorOperatorMountComponent:ServerStartInvoke(ActivityStateChange, bI
 ---@field ServerRegion ERegionType
 ---@field RefinableItemModifierList TArray<FRefinableItemModifier>
 ---@field GlobalRefineYieldModifier float
----@field ShardId int32
 ---@field SpawnInvulnerabilityTime float
----@field MinLobbyPlayers int32
 ---@field bEnableVehicleAFKTimeout boolean
 ---@field bEnableTravelPortalSearchFallback boolean
 ---@field bAdvertiseToSteam boolean
 ---@field MinClientVersion TArray<int32>
 ---@field bSelfServeFactionUnlockEnabled boolean
----@field AutoRestartServerTimeSecs float
 ---@field WarTweakables FWarTweakables
 ---@field WarRepTweakables FWarReplicatedTweakables
 ---@field WarTimeDiscrepancy FWarTimeDiscrepancy
@@ -14515,6 +14811,7 @@ UShippableUseComponent = {}
 ---@class UShotgunComponent : UHitScanWeaponComponent
 ---@field SimulatedHitNotifies TArray<FHitNotify>
 ---@field ShotRadius float
+---@field MaxHitsPerShot uint32
 UShotgunComponent = {}
 
 function UShotgunComponent:OnRep_SimulatedHitNotifies() end
@@ -14555,6 +14852,9 @@ USignPostDownVoteDamageType = {}
 ---@field bApplyTankArmourMechanics boolean
 ---@field bApplyTankArmourAngleRangeBonuses boolean
 ---@field bExposeInUI boolean
+---@field bBreachesBunkers boolean
+---@field bAffectedByShelterBonus boolean
+---@field bIgnoreBreachesBunkersThreshold boolean
 ---@field Icon FSlateBrush
 ---@field DisplayName FText
 ---@field DescriptionDetails TArray<FTooltipDetailText>
@@ -14638,6 +14938,10 @@ function USimVehicleGunnerSupportAnimInstance:AnimNotify_OnAlt02FiringOver(Notif
 ---@field MaxDepth float
 USimpleVehicleMovementComponent = {}
 
+
+
+---@class USnapshotManager : UObject
+USnapshotManager = {}
 
 
 ---@class USniperRifleComponent : UHitScanWeaponComponent
@@ -14828,6 +15132,7 @@ UStructureLayerComponent = {}
 ---@field CurrentOccupant TWeakObjectPtr<ASimCharacter>
 UStructureSeatComponent = {}
 
+function UStructureSeatComponent:OnRep_CurrentOccupant() end
 
 
 ---@class USubmarineAnimInstance : ULargeShipAnimInstance
@@ -14980,11 +15285,13 @@ UTechTreeComponentData = {}
 ---@class UTechTreeUserComponent : UUserComponent
 ---@field TechTreeVotes FTechTreeComponentVotes
 ---@field bIsSpawnPointSetHere boolean
+---@field ActivityBonusState EActivityBonusState
 UTechTreeUserComponent = {}
 
 ---@param SpawnPointCategory ESpawnPointCategory
 ---@param Vote EInfrastructureType
 function UTechTreeUserComponent:ServerSetVote(SpawnPointCategory, Vote) end
+function UTechTreeUserComponent:OnRep_IsActivityBonusActive() end
 
 
 ---@class UTemperatureModifierBoxComponent : UBoxComponent
@@ -15023,6 +15330,10 @@ function UTemperatureModifierSphereComponent:OnBeginOverlap(OverlappedComponent,
 
 ---@class UTemplateComponent : USceneComponent
 ---@field TemplateActor TSubclassOf<ATemplate>
+---@field bOnlyCollisions boolean
+---@field OverrideCollisionProfile FName
+---@field bOverrideInitiallyDisableCollisions boolean
+---@field bInitiallyDisableCollisions boolean
 ---@field SpawnedComponents TArray<UActorComponent>
 UTemplateComponent = {}
 
@@ -15169,8 +15480,6 @@ UVehicleBuildTriggerComponent = {}
 ---@field bIsWoundable boolean
 ---@field bOverrideAsPassenger boolean
 ---@field EnterSFX USoundCue
----@field PC APlayerController
----@field Character ASimCharacter
 UVehicleSeatComponent = {}
 
 
@@ -15230,6 +15539,7 @@ UWarCapsuleComponent = {}
 ---@field BaseSoundMix USoundMix
 ---@field Blueprints FWarBlueprints
 ---@field BorderBaseManager UBorderBaseManager
+---@field PipelineManager UPipelineManager
 ---@field WeatherManager UWeatherManager
 ---@field WorldResourceSpawner UWorldResourceSpawner
 ---@field CurrentWarSave UWarSaveGame
@@ -15239,6 +15549,7 @@ UWarCapsuleComponent = {}
 ---@field TravelManager UTravelManager
 ---@field LandscapeDeformationManager ULandscapeDeformationManager
 ---@field CrossRegionActorManager UCrossRegionActorManager
+---@field SnapshotManager USnapshotManager
 ---@field MapList AMapList
 ---@field WarSessionSettings UWarSessionSettings
 ---@field LoreList ALoreList
@@ -15374,6 +15685,7 @@ UWarReplicationGraphNode_RailVehicleNode = {}
 ---@field bIsAutoSave boolean
 ---@field DestroyedDestructibleProps TSet<FName>
 ---@field NextTechStateID int32
+---@field PipelineSystems TArray<FPipelineSystem>
 UWarSaveGame = {}
 
 
@@ -15430,6 +15742,10 @@ UWaterMineItemComponent = {}
 ---@param MouseTraceEnd FVector
 ---@param InDetonationDepth float
 function UWaterMineItemComponent:ServerStartInvoke(ActivityStateChange, MouseTraceStart, MouseTraceEnd, InDetonationDepth) end
+
+
+---@class UWaterProjectileMovementComponent : UProjectileMovementComponent
+UWaterProjectileMovementComponent = {}
 
 
 ---@class UWaterReloadSourceComponent : UActorComponent

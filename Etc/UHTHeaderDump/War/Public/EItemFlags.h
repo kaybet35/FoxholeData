@@ -20,5 +20,6 @@ enum class EItemFlags {
     LightKineticAmmo = 4096,
     PistolAmmo = 8192,
     LightExplosiveAmmo = 16384,
+    Water = 32768,
 };
 

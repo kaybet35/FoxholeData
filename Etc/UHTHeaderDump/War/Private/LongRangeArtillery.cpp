@@ -26,7 +26,6 @@ ALongRangeArtillery::ALongRangeArtillery(const FObjectInitializer& ObjectInitial
     this->RequiredPowerForRotation = 1.00f;
     this->RequiredSquadMembers = 5;
     this->SquadId = 0;
-    this->Power = 0.00f;
     this->StashedAmmo = 0;
     this->KillVolume->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
@@ -42,11 +41,9 @@ void ALongRangeArtillery::OnRep_GunnerYawAndPitch(const FVector2D PreviousGunner
 void ALongRangeArtillery::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(ALongRangeArtillery, PowerInfo);
     DOREPLIFETIME(ALongRangeArtillery, RequiredSquadMembers);
     DOREPLIFETIME(ALongRangeArtillery, SquadId);
     DOREPLIFETIME(ALongRangeArtillery, GunnerYawAndPitch);
-    DOREPLIFETIME(ALongRangeArtillery, Power);
 }
 
 

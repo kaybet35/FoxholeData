@@ -1,8 +1,12 @@
 ---@meta
 
 ---@class ABPFortRampT2_C : AFort
+---@field FortCommonT2Corners UTemplateComponent
+---@field BreachedLeft UStaticMeshComponent
+---@field BreachedRight UStaticMeshComponent
+---@field BreachedBack UStaticMeshComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT2 UTemplateComponent
 ---@field FortRampCommonT2T3Mods UTemplateComponent
 ---@field FortRampCommonDefenseMods UTemplateComponent
 ---@field FortRampCommon UTemplateComponent
@@ -12,11 +16,7 @@
 ---@field LocationMultiplexedMeshFloor ULocationMultiplexedMeshComponent
 ---@field RoofDirt UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
----@field CornerFrontRight UStaticMeshComponent
----@field CornerFrontLeft UStaticMeshComponent
----@field CornerBackLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
----@field CornerBackRight UStaticMeshComponent
 ABPFortRampT2_C = {}
 
 

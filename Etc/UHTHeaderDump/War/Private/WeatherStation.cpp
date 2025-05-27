@@ -33,7 +33,6 @@ AWeatherStation::AWeatherStation(const FObjectInitializer& ObjectInitializer) : 
     this->RequiredSquadMembers = 5;
     this->SquadId = 0;
     this->Yaw = 0.00f;
-    this->Power = 0.00f;
     this->RemainingActiveTime = 0.00f;
     this->KillVolume->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
@@ -51,14 +50,12 @@ void AWeatherStation::OnRep_State() {
 void AWeatherStation::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AWeatherStation, PowerInfo);
     DOREPLIFETIME(AWeatherStation, State);
     DOREPLIFETIME(AWeatherStation, NetworkedStations);
     DOREPLIFETIME(AWeatherStation, PredictionOffset);
     DOREPLIFETIME(AWeatherStation, RequiredSquadMembers);
     DOREPLIFETIME(AWeatherStation, SquadId);
     DOREPLIFETIME(AWeatherStation, Yaw);
-    DOREPLIFETIME(AWeatherStation, Power);
     DOREPLIFETIME(AWeatherStation, GlobalID);
     DOREPLIFETIME(AWeatherStation, ConnectionTo);
     DOREPLIFETIME(AWeatherStation, CoordConnectionTo);

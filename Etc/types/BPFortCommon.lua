@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortCommon_C : ATemplate
+---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field DecalFront UDecalComponent
 ---@field DecalRight UDecalComponent
 ---@field DecalBack UDecalComponent

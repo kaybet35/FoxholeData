@@ -3,6 +3,6 @@
 
 class UBPLightTank2InfantryC_Turret_L_GunnerComponent_C : public UBPColVehicleMachineGunnerComponent_C
 {
-}; // Size: 0x908
+}; // Size: 0x918
 
 #endif

@@ -1,13 +1,14 @@
 ---@meta
 
 ---@class ABPDestroyedFortForwardBaseT1_C : ADestroyedFortForwardBase
+---@field FortBaseCommon UTemplateComponent
+---@field FortBaseCommonDirtT1T2 UTemplateComponent
 ---@field WaterStencil1 UBPWaterStencilComponent_C
 ---@field Ramp UStaticMeshComponent
 ---@field Decal6 UDecalComponent
 ---@field Decal5 UDecalComponent
 ---@field Decal4 UDecalComponent
 ---@field Decal UDecalComponent
----@field LandscapeHoleFront UBoxComponent
 ---@field FloorDoor UStaticMeshComponent
 ---@field SideFrontStatic UStaticMeshComponent
 ---@field SideLeftStatic UStaticMeshComponent
@@ -16,15 +17,8 @@
 ---@field SideBack UStaticMeshComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field SideFront UStaticMeshComponent
----@field DirtCornerBackRight UStaticMeshComponent
 ---@field CornerFrontLeft UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field DirtCornerFrontRight UStaticMeshComponent
----@field DirtCornerFrontLeft UStaticMeshComponent
----@field DirtCornerBackLeft UStaticMeshComponent
 ---@field CornerBackLeft UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
 ---@field CornerFrontRight UStaticMeshComponent
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
@@ -36,7 +30,6 @@
 ---@field BackSocket UBuildSocketComponent
 ---@field LeftSocket UBuildSocketComponent
 ---@field Floor UStaticMeshComponent
----@field LandscapeHole UBoxComponent
 ---@field BoatHull UBoatHullComponent
 ---@field NoBuildZone UBoxComponent
 ABPDestroyedFortForwardBaseT1_C = {}

@@ -14,6 +14,9 @@ UCLASS(Blueprintable)
 class WAR_API AFireInfo : public AInfo {
     GENERATED_BODY()
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float BurningFromSuppressionThreshold;
+    
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FFireIntensityThreshold> FireIntensityThresholds;

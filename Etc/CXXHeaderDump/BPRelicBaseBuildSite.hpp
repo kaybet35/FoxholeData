@@ -3,8 +3,8 @@
 
 class ABPRelicBaseBuildSite_C : public ATownHallBuildSite
 {
-    class UCameraComponent* ViewTargetCamera;                                         // 0x0810 (size: 0x8)
+    class UCameraComponent* ViewTargetCamera;                                         // 0x0840 (size: 0x8)
 
-}; // Size: 0x818
+}; // Size: 0x848
 
 #endif

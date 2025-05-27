@@ -3,6 +3,6 @@
 
 class ABPFortT2Fill_C : public ABPFortT2_C
 {
-}; // Size: 0x850
+}; // Size: 0x870
 
 #endif

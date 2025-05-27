@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFoxhole_C : AFoxhole
+---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field LandscapeCheckSocket7 UBuildSocketComponent
 ---@field LandscapeCheckSocket6 UBuildSocketComponent

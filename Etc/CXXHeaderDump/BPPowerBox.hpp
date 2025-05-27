@@ -3,8 +3,8 @@
 
 class ABPPowerBox_C : public APowerPole
 {
-    class UStaticMeshComponent* MainMesh;                                             // 0x08B0 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x08F0 (size: 0x8)
 
-}; // Size: 0x8B8
+}; // Size: 0x8F8
 
 #endif

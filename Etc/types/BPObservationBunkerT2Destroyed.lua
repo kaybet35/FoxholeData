@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPObservationBunkerT2Destroyed_C : AFort
+---@class ABPObservationBunkerT2Destroyed_C : ADestroyedFort
 ---@field insidefloor UStaticMeshComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortT1Destroyed01FrontLeft UStaticMeshComponent

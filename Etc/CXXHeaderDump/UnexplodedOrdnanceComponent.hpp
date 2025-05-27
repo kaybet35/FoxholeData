@@ -3,6 +3,6 @@
 
 class UUnexplodedOrdnanceComponent_C : public UExplosiveItemComponent
 {
-}; // Size: 0x908
+}; // Size: 0x910
 
 #endif

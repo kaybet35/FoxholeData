@@ -11,5 +11,6 @@ FAmmoDynamicData::FAmmoDynamicData() {
     this->EnvironmentImpactAmount = 0;
     this->AddedBurning = 0.00f;
     this->AddedHeat = 0.00f;
+    this->BreachingModifier = 0.00f;
 }
 

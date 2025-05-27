@@ -6,6 +6,7 @@ FUniform::FUniform() {
     this->StackSize = 0;
     this->EncumbranceFilter = 0;
     this->EncumbranceModifier = 0.00f;
+    this->DeepWaterSpeedModifier = 0.00f;
     this->DetectionChance = 0.00f;
     this->SnowStormMitigation = 0.00f;
     this->RainStormMitigation = 0.00f;

@@ -30,6 +30,9 @@ USimDamageType::USimDamageType() {
     this->bApplyTankArmourMechanics = false;
     this->bApplyTankArmourAngleRangeBonuses = true;
     this->bExposeInUI = false;
+    this->bBreachesBunkers = false;
+    this->bAffectedByShelterBonus = false;
+    this->bIgnoreBreachesBunkersThreshold = false;
 }
 
 

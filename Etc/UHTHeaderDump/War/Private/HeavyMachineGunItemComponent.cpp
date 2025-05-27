@@ -28,9 +28,9 @@ bool UHeavyMachineGunItemComponent::ServerStopInvoke_Validate() {
     return true;
 }
 
-void UHeavyMachineGunItemComponent::ServerStartInvoke_Implementation(FActivityStateChange ActivityStateChange) {
+void UHeavyMachineGunItemComponent::ServerStartInvoke_Implementation(const FCharacterInvokeInfo& InvokeInfo, FActivityStateChange ActivityStateChange) {
 }
-bool UHeavyMachineGunItemComponent::ServerStartInvoke_Validate(FActivityStateChange ActivityStateChange) {
+bool UHeavyMachineGunItemComponent::ServerStartInvoke_Validate(const FCharacterInvokeInfo& InvokeInfo, FActivityStateChange ActivityStateChange) {
     return true;
 }
 

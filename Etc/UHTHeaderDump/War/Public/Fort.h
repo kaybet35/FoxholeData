@@ -2,14 +2,13 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 #include "BuildableStructure.h"
-#include "PowerNode.h"
 #include "Fort.generated.h"
 
 class AEmplacedStructure;
 class UBoxComponent;
 
 UCLASS(Blueprintable)
-class WAR_API AFort : public ABuildableStructure, public IPowerNode {
+class WAR_API AFort : public ABuildableStructure {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -29,7 +28,5 @@ public:
     
     AFort(const FObjectInitializer& ObjectInitializer);
 
-
-    // Fix for true pure virtual functions not being implemented
 };
 

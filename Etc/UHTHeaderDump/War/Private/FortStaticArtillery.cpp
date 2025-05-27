@@ -4,15 +4,18 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
 #include "EStructureProfileType.h"
 #include "InfrastructureComponent.h"
+#include "ModularMountsComponent.h"
 #include "Net/UnrealNetwork.h"
 #include "TeamFlagMeshComponent.h"
 
 AFortStaticArtillery::AFortStaticArtillery(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
-    this->ProfileType = EStructureProfileType::FortRotatableUpgrade;
+    this->ProfileType = EStructureProfileType::FortRotatableUpgradeRestricted;
     this->KillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("KillVolume"));
+    this->ModularMountsComponent = CreateDefaultSubobject<UModularMountsComponent>(TEXT("ModularMountsComponent"));
     this->InfrastructureComponent = CreateDefaultSubobject<UInfrastructureComponent>(TEXT("InfrastructureComponent"));
     this->bProvidesBasedShelter = true;
     this->bHasMeshVisibilityComponent = true;
+    this->bCanBlockAIUpgrade = true;
     this->bAggroSingleStructureOnDamage = true;
     this->SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     this->FlagMesh = CreateDefaultSubobject<UTeamFlagMeshComponent>(TEXT("FlagMesh"));
@@ -40,7 +43,6 @@ void AFortStaticArtillery::OnRep_IsFiring() {
 void AFortStaticArtillery::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AFortStaticArtillery, PowerInfo);
     DOREPLIFETIME(AFortStaticArtillery, HorizontalAngle);
     DOREPLIFETIME(AFortStaticArtillery, VerticalAngle);
     DOREPLIFETIME(AFortStaticArtillery, bIsFiring);

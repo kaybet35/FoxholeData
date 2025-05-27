@@ -3,6 +3,6 @@
 
 class ABPATRPGLightCProjectile_C : public ABPATRPGCProjectile_C
 {
-}; // Size: 0x328
+}; // Size: 0x330
 
 #endif

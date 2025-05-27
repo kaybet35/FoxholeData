@@ -3,10 +3,10 @@
 
 class ALetter02_C : public ALorePickup
 {
-    class UDecalComponent* Decal2;                                                    // 0x03F0 (size: 0x8)
-    class UDecalComponent* Decal1;                                                    // 0x03F8 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x0400 (size: 0x8)
+    class UDecalComponent* Decal2;                                                    // 0x03F8 (size: 0x8)
+    class UDecalComponent* Decal1;                                                    // 0x0400 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0408 (size: 0x8)
 
-}; // Size: 0x408
+}; // Size: 0x410
 
 #endif

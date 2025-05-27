@@ -40,6 +40,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float AddedHeat;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float BreachingModifier;
+    
     WAR_API FAmmoDynamicData();
 };
 

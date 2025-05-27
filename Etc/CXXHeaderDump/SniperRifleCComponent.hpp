@@ -3,6 +3,6 @@
 
 class USniperRifleCComponent_C : public USniperRifleComponent_C
 {
-}; // Size: 0x9A0
+}; // Size: 0x9A8
 
 #endif

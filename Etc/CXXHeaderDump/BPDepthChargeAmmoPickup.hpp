@@ -3,8 +3,8 @@
 
 class ABPDepthChargeAmmoPickup_C : public AAmmoPickup
 {
-    class USkeletalMeshComponent* DepthChargeMesh;                                    // 0x0420 (size: 0x8)
+    class USkeletalMeshComponent* DepthChargeMesh;                                    // 0x0430 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x438
 
 #endif

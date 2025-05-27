@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchDestroyedT1_C : AFort
+---@field TrenchCommonDirtT1T2 UTemplateComponent
 ---@field LocationMultiplexedMesh1 ULocationMultiplexedMeshComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field TrenchT1Destroyed01Back UStaticMeshComponent
@@ -11,17 +12,7 @@
 ---@field TrenchT1Destroyed01OpenRight UStaticMeshComponent
 ---@field TrenchT1Destroyed01OpenLeft UStaticMeshComponent
 ---@field TrenchCommon UTemplateComponent
----@field DirtOpenRight UStaticMeshComponent
----@field DirtOpenLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
----@field DirtFrontRight UStaticMeshComponent
----@field DirtFrontLeft UStaticMeshComponent
----@field DirtBackLeft UStaticMeshComponent
----@field DirtBackRight UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
----@field DirtRight UStaticMeshComponent
 ---@field Decal UDecalComponent
 ---@field Decal3 UDecalComponent
 ---@field Decal2 UDecalComponent

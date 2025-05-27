@@ -74,7 +74,7 @@
     "Type": "WaterExplosion_C",
     "Name": "Default__WaterExplosion_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/WaterExplosion.WaterExplosion_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
       "ParticleSystemOverrides": [
@@ -84,7 +84,10 @@
             "ObjectName": "ParticleSystem'WaterBucketImpact'",
             "ObjectPath": "War/Content/FX/WaterBucketImpact.60"
           },
-          "ExplosionSFX": null,
+          "ExplosionSFX": {
+            "ObjectName": "SoundCue'WaterBucketImpact_Cue'",
+            "ObjectPath": "War/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.0"
+          },
           "Decal": {
             "DecalMaterial": null,
             "DecalSize": {
@@ -93,6 +96,27 @@
               "Z": 0.0
             },
             "LifeSpan": 500.0,
+            "FadeScreenSize": 0.01
+          }
+        },
+        {
+          "PhysicalSurface": "SurfaceType2",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'WaterBucketImpact'",
+            "ObjectPath": "War/Content/FX/WaterBucketImpact.60"
+          },
+          "ExplosionSFX": {
+            "ObjectName": "SoundCue'WaterBucketImpact_Cue'",
+            "ObjectPath": "War/Content/Audio/SFX/Weapons/WaterBucket/WaterBucketImpact_Cue.0"
+          },
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
             "FadeScreenSize": 0.01
           }
         }

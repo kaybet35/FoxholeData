@@ -3,6 +3,6 @@
 
 class UBPSpotterMountComponent_C : public USpotterMountComponent
 {
-}; // Size: 0x858
+}; // Size: 0x860
 
 #endif

@@ -17,7 +17,7 @@ private:
     uint16 VisibleIntelW;
     
     UPROPERTY(EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
-    uint8 VisibleIcons[11];
+    uint8 VisibleIcons[12];
     
 public:
     WAR_API FMapLegendFilter();

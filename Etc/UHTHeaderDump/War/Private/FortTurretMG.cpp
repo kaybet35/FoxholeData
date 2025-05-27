@@ -4,6 +4,7 @@
 
 AFortTurretMG::AFortTurretMG(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ProfileType = EStructureProfileType::FortRotatableUpgrade;
+    this->bDisallowForwardUpgradeInIsland = true;
     this->SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh"));
     this->SkeletalMesh->SetupAttachment(RootComponent);
 }

@@ -1,0 +1,152 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "FortCornerCullPlane",
+    "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "E44CAB22414D2D1761A5968106125697"
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_2",
+    "Outer": "FortCornerCullPlane",
+    "Class": "UScriptClass'NavCollision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "CookedFormatData": {
+      "NavCollision_X": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x19D2"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "FortCornerCullPlane",
+    "Class": "UScriptClass'StaticMesh'",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'WorldGridMaterial'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WorldGridMaterial.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 97.15033,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 97.15033,
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": -0.20000076,
+          "Y": 2.1999931,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 50.000015,
+          "Y": 50.000008,
+          "Z": 0.0
+        },
+        "SphereRadius": 70.710686
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'FortCornerCullPlane:BodySetup_0'",
+      "ObjectPath": "War/Content/Blueprints/Culling/FortCornerCullPlane.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'FortCornerCullPlane:NavCollision_2'",
+      "ObjectPath": "War/Content/Blueprints/Culling/FortCornerCullPlane.1"
+    },
+    "LightingGuid": "121E7286-485B7C72-B5C41CA9-DEBD5F4D",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 3,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 4,
+              "bEnableCollision": false,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 5
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 5,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": -0.20000076,
+          "Y": 2.1999931,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 50.000015,
+          "Y": 50.000008,
+          "Z": 0.0
+        },
+        "SphereRadius": 70.710686
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

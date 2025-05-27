@@ -3,6 +3,6 @@
 
 class ABPSmallRailTrackSpline_C : public ARailwayTrack
 {
-}; // Size: 0x890
+}; // Size: 0x8C0
 
 #endif

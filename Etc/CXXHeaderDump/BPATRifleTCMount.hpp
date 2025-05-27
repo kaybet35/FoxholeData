@@ -3,6 +3,6 @@
 
 class UBPATRifleTCMount_C : public UHitScanMountComponent
 {
-}; // Size: 0x908
+}; // Size: 0x918
 
 #endif

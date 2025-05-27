@@ -60,7 +60,7 @@
     "Type": "BPFacilityPipe_C",
     "Name": "Default__BPFacilityPipe_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/BPFacilityPipe.BPFacilityPipe_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "SplineConnector": {
         "ObjectName": "SplineConnectorComponent'Default__BPFacilityPipe_C:SplineConnector'",
@@ -86,9 +86,7 @@
         "ObjectName": "BuildSocketComponent'Default__BPFacilityPipe_C:RightSocket'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipe.9"
       },
-      "LiquidTank": {
-        "MaxAmount": 100.0
-      },
+      "MaxLiquidAmount": 100.0,
       "Tier": "EFortTier::T1",
       "ProceduralUseVolumeFactor": 0.0,
       "NoBuildPhysicalMaterials": [
@@ -123,7 +121,7 @@
         "ObjectName": "Texture2D'PipelineSegmentIcon'",
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/PipelineSegmentIcon.0"
       },
-      "BuildCategory": "EBuildCategory::Facility",
+      "BuildCategory": "EBuildCategory::Liquids",
       "BuildOrder": 60,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bDropsLargeMaterialsWhenDestroyed": false,
@@ -157,7 +155,7 @@
       "TechID": "ETechID::UnlockFacilityTier2",
       "MaxHealth": 350,
       "Health": 350,
-      "ScreenToUse": "ESimScreen::FuelSilo",
+      "ScreenToUse": "ESimScreen::Pipeline",
       "ClaimStatus": {
         "bIsEnabled": true,
         "bCanBeDemolished": true,
@@ -167,9 +165,6 @@
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFacilityPipe_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipe.25"
-      },
-      "PrimaryActorTick": {
-        "TickInterval": 2.0
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityPipe_C:StructureArrow'",
@@ -502,9 +497,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": []
           }
         },
@@ -573,9 +570,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",

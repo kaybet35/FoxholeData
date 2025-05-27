@@ -3,6 +3,6 @@
 
 class UBPWoundedCarriedPlayerItemComponent_C : public UWoundedCarriedItemComponent
 {
-}; // Size: 0x8F0
+}; // Size: 0x8F8
 
 #endif

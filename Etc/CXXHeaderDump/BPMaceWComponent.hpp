@@ -3,6 +3,6 @@
 
 class UBPMaceWComponent_C : public UMeleeWeaponComponent
 {
-}; // Size: 0x930
+}; // Size: 0x938
 
 #endif

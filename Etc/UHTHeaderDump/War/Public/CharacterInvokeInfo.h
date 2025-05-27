@@ -11,11 +11,11 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FVector_NetQuantize ImpactPoint;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 RandomSeed;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FMuzzleOffsetVector_NetQuantize MuzzleOffset;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float RenderTimestamp;
     
     WAR_API FCharacterInvokeInfo();
 };

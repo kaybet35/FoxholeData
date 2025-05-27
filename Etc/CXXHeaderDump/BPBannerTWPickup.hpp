@@ -3,6 +3,6 @@
 
 class ABPBannerTWPickup_C : public ABPBannerTCPickup_C
 {
-}; // Size: 0x3F0
+}; // Size: 0x3F8
 
 #endif

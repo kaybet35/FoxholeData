@@ -1,8 +1,8 @@
 #ifndef UE4SS_SDK_BPScoutTankMultiWGunnerComponent_HPP
 #define UE4SS_SDK_BPScoutTankMultiWGunnerComponent_HPP
 
-class UBPScoutTankMultiWGunnerComponent_C : public UArtilleryGunnerMountComponent
+class UBPScoutTankMultiWGunnerComponent_C : public UProjectileGunnerMountComponent
 {
-}; // Size: 0x908
+}; // Size: 0x8B0
 
 #endif

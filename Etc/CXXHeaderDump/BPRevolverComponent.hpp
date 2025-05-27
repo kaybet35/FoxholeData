@@ -3,6 +3,6 @@
 
 class UBPRevolverComponent_C : public UHitScanWeaponComponent
 {
-}; // Size: 0x998
+}; // Size: 0x9A0
 
 #endif

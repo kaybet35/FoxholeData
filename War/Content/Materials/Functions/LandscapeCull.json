@@ -1,0 +1,76 @@
+[
+  {
+    "Type": "MaterialExpressionMaterialFunctionCall",
+    "Name": "MaterialExpressionMaterialFunctionCall_4",
+    "Outer": "LandscapeCull",
+    "Class": "UScriptClass'MaterialExpressionMaterialFunctionCall'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaterialFunction": {
+        "ObjectName": "MaterialFunction'BreakOutFloat3Components'",
+        "ObjectPath": "Engine/Content/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat3Components.0"
+      },
+      "Function": {
+        "ObjectName": "MaterialFunction'LandscapeCull'",
+        "ObjectPath": "War/Content/Materials/Functions/LandscapeCull.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialExpressionRuntimeVirtualTextureSample",
+    "Name": "MaterialExpressionRuntimeVirtualTextureSample_0",
+    "Outer": "LandscapeCull",
+    "Class": "UScriptClass'MaterialExpressionRuntimeVirtualTextureSample'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MipValue": {
+        "Expression": null,
+        "OutputIndex": 0,
+        "InputName": "None",
+        "Mask": 0,
+        "MaskR": 0,
+        "MaskG": 0,
+        "MaskB": 0,
+        "MaskA": 0,
+        "ExpressionName": "MaterialExpressionConstant_9"
+      },
+      "VirtualTexture": {
+        "ObjectName": "RuntimeVirtualTexture'RVT_LandscapeCulling'",
+        "ObjectPath": "War/Content/Blueprints/Culling/RVT_LandscapeCulling.0"
+      },
+      "MaterialType": "ERuntimeVirtualTextureMaterialType::WorldHeight",
+      "MipValueMode": "RVTMVM_MipLevel",
+      "Function": {
+        "ObjectName": "MaterialFunction'LandscapeCull'",
+        "ObjectPath": "War/Content/Materials/Functions/LandscapeCull.2"
+      }
+    }
+  },
+  {
+    "Type": "MaterialFunction",
+    "Name": "LandscapeCull",
+    "Class": "UScriptClass'MaterialFunction'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Description": "RVT-based landscape culling",
+      "FunctionExpressions": [
+        null,
+        {
+          "ObjectName": "MaterialExpressionRuntimeVirtualTextureSample'LandscapeCull:MaterialExpressionRuntimeVirtualTextureSample_0'",
+          "ObjectPath": "War/Content/Materials/Functions/LandscapeCull.1"
+        },
+        null,
+        null,
+        null,
+        {
+          "ObjectName": "MaterialExpressionMaterialFunctionCall'LandscapeCull:MaterialExpressionMaterialFunctionCall_4'",
+          "ObjectPath": "War/Content/Materials/Functions/LandscapeCull.0"
+        },
+        null,
+        null
+      ],
+      "bExposeToLibrary": true,
+      "StateId": "19E4D322-4ED6DFD9-8A0D9B9E-B64DDE84"
+    }
+  }
+]

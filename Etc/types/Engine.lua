@@ -23565,6 +23565,8 @@ URuntimeVirtualTexture = {}
 ---@field BoundsSourceActor AActor
 URuntimeVirtualTextureComponent = {}
 
+---@param WorldBounds FBoxSphereBounds
+function URuntimeVirtualTextureComponent:Invalidate(WorldBounds) end
 
 
 ---@class URuntimeVirtualTextureStreamingProxy : UTexture2D

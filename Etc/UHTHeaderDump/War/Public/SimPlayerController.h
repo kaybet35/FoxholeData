@@ -5,6 +5,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Timespan -FallbackName=Timespan
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
+//CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector2D -FallbackName=Vector2D
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=BasedMovementInfo -FallbackName=BasedMovementInfo
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ECollisionResponse -FallbackName=ECollisionResponse
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Vector_NetQuantize -FallbackName=Vector_NetQuantize
@@ -80,6 +81,7 @@
 #include "StockpileItemFilter.h"
 #include "StructureStats.h"
 #include "TechTreeComponentNetworkStatus.h"
+#include "Templates/SubclassOf.h"
 #include "VoiceLoginInfo.h"
 #include "WarAchievementCompletedInfo.h"
 #include "WarGridCoordinate.h"
@@ -95,12 +97,14 @@ class ABuildableStructure;
 class ACalloutMarkerGhost;
 class AConstructionSite;
 class AContainer;
+class AFortEmp;
 class ALargeShip;
 class APlayerState;
 class ARailVehicle;
 class ARailVehicleHospital;
 class ARefinery;
 class ARocketFacility;
+class ARuntimeVirtualTextureVolume;
 class AShippableCrate;
 class ASignPost;
 class ASimCharacter;
@@ -178,6 +182,12 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     ACalloutMarkerGhost* CalloutMarkerGhost;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ARuntimeVirtualTextureVolume> LandscapeCullRVTVolumeClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    ARuntimeVirtualTextureVolume* LandscapeCullRVTVolume;
     
 public:
     ASimPlayerController(const FObjectInitializer& ObjectInitializer);
@@ -413,6 +423,9 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server)
     void ServerSetHospitalDeployState(ARailVehicleHospital* RailVehicleHospital, const bool bWantsItDeployed);
     
+    UFUNCTION(BlueprintCallable, Reliable, Server)
+    void ServerSetFortEmpStructure(AFortEmp* FortEmp, const uint8 StructureType);
+    
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetCharacterCustomizationInfo(const FCharacterCustomizationInfo CustomizationInfo);
     
@@ -567,6 +580,9 @@ public:
     void ServerEnterRocketLaunchCode(const FRocketLaunchCodeRequest& Request);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
+    void ServerEjectDriver();
+    
+    UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerEditSignPost(const FText& Text, ASignPost* TargetSignPost);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
@@ -582,7 +598,7 @@ public:
     void ServerDetachUserComponents();
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerDetachLargeItem(ASimVehicle* DetachTarget, const uint8 Index);
+    void ServerDetachLargeItem(AActor* DetachTarget, const uint8 Index);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerDestroySignPost(ASignPost* TargetSignPost);
@@ -1097,6 +1113,9 @@ public:
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientGetSquadIdFromSquadName(const FString& SquadName);
+    
+    UFUNCTION(BlueprintCallable, Client, Reliable)
+    void ClientGenerateWarStartImage(const float ImageWidth, const FVector2D MapPositionOffset);
     
 private:
     UFUNCTION(BlueprintCallable, Client, Unreliable)

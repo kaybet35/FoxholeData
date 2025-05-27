@@ -1,11 +1,9 @@
 ---@meta
 
 ---@class ABPFortFirePitT1_C : AFortFirePit
+---@field FortCommonThreeWallsMods UTemplateComponent
+---@field FortCommonT1BreachedWalls UTemplateComponent
 ---@field RearWall UStaticMeshComponent
----@field FrontModSlot UBPFortWallModSlotMinimal_C
----@field RightModSlot UBPFortWallModSlotMinimal_C
----@field BackModSlot UBPFortWallModSlotMinimal_C
----@field UnderModSlot UBPFortUnderModSlot_C
 ---@field Roof UStaticMeshComponent
 ---@field CornerFrontLeft UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent

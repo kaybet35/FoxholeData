@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "RepPipelineSystem.h"
 #include "UserComponent.h"
 #include "PipelineUserComponent.generated.h"
 
@@ -8,11 +9,8 @@ class WAR_API UPipelineUserComponent : public UUserComponent {
     GENERATED_BODY()
 public:
 private:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CodeName, meta=(AllowPrivateAccess=true))
-    FName CodeName;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_Amount, meta=(AllowPrivateAccess=true))
-    float Amount;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_System, meta=(AllowPrivateAccess=true))
+    FRepPipelineSystem RepPipelineSystem;
     
 public:
     UPipelineUserComponent(const FObjectInitializer& ObjectInitializer);
@@ -24,10 +22,7 @@ private:
     void ServerSetLiquidType(const FName DesiredCodeName);
     
     UFUNCTION(BlueprintCallable)
-    void OnRep_CodeName();
-    
-    UFUNCTION(BlueprintCallable)
-    void OnRep_Amount();
+    void OnRep_System();
     
 };
 

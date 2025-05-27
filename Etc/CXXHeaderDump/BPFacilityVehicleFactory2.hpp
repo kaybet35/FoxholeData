@@ -3,13 +3,13 @@
 
 class ABPFacilityVehicleFactory2_C : public AAssemblyStation
 {
-    class UWarAudioComponent* WarAudio;                                               // 0x0980 (size: 0x8)
-    class UParkingSpotComponent* ParkingSpot;                                         // 0x0988 (size: 0x8)
-    class UParticleSystemComponent* ParticleSystem;                                   // 0x0990 (size: 0x8)
-    class USkeletalMeshComponent* MainMesh;                                           // 0x0998 (size: 0x8)
-    class UDecalComponent* FoundationDecal;                                           // 0x09A0 (size: 0x8)
-    class UStaticMeshComponent* PowerLineConnector;                                   // 0x09A8 (size: 0x8)
+    class UWarAudioComponent* WarAudio;                                               // 0x09C0 (size: 0x8)
+    class UParkingSpotComponent* ParkingSpot;                                         // 0x09C8 (size: 0x8)
+    class UParticleSystemComponent* ParticleSystem;                                   // 0x09D0 (size: 0x8)
+    class USkeletalMeshComponent* MainMesh;                                           // 0x09D8 (size: 0x8)
+    class UDecalComponent* FoundationDecal;                                           // 0x09E0 (size: 0x8)
+    class UStaticMeshComponent* PowerLineConnector;                                   // 0x09E8 (size: 0x8)
 
-}; // Size: 0x9B0
+}; // Size: 0x9F0
 
 #endif

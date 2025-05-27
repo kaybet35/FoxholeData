@@ -21,7 +21,6 @@ UAITurretComponent::UAITurretComponent(const FObjectInitializer& ObjectInitializ
     this->bFlaresNegateNightRangeReduction = false;
     this->bIs360ViewWhenMounted = false;
     this->SuppressionPercentage = 0;
-    this->AttackDelayAgainstVehicles = 1.00f;
     this->bIsSuppressible = false;
     this->bShowExtraTracers = false;
     this->bLimitOccupantFiringArc = false;
@@ -29,26 +28,11 @@ UAITurretComponent::UAITurretComponent(const FObjectInitializer& ObjectInitializ
     this->OccupantFiringConeAngle = 0.00f;
     this->bUsesLegacyFoxholeTurretDamageSelection = false;
     this->bUseATDamageForVehicle = false;
-    this->ImpactEffect = NULL;
-    this->ImpactEffectAlternate = NULL;
-    this->WeaponFireFXClass = NULL;
-    this->WeaponFireFXClassAlternate = NULL;
-    this->ShotSoundCue = NULL;
-    this->ShotAgainstVehicleSoundCue = NULL;
-    this->MuzzleFlashPS = NULL;
-    this->WeaponDamage = 0.00f;
-    this->WeaponDamageAgainstVehicles = 75.00f;
-    this->BestJitterConeHalfAngle = 0.00f;
-    this->WorstJitterConeHalfAngle = 0.00f;
-    this->FiringPeriod = 0.00f;
-    this->TimeToFullFireRateAndAccuracy = 0.00f;
     this->FiringConeAngle = 0.00f;
-    this->EnemyPursueDuration = 0.00f;
-    this->ArmourDamageModifier = 1.00f;
-    this->TargetStabilityReductionPerShot = 0.00f;
     this->EnemyType = ECC_Pawn;
     this->CurrentEnemyTargetYaw = 0.00f;
     this->bIsEnemyObscured = false;
+    this->bIsSuppressedOverride = false;
     this->AITurretBlueprintCDO = NULL;
 }
 
@@ -69,6 +53,7 @@ void UAITurretComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& O
     DOREPLIFETIME(UAITurretComponent, CurrentEnemyTargetYaw);
     DOREPLIFETIME(UAITurretComponent, SimulatedHitNotify);
     DOREPLIFETIME(UAITurretComponent, bIsEnemyObscured);
+    DOREPLIFETIME(UAITurretComponent, bIsSuppressedOverride);
 }
 
 

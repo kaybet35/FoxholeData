@@ -16917,6 +16917,7 @@ class URuntimeVirtualTextureComponent : public USceneComponent
     bool bUseStreamingLowMipsInEditor;                                                // 0x01F8 (size: 0x1)
     class AActor* BoundsSourceActor;                                                  // 0x0200 (size: 0x8)
 
+    void Invalidate(const FBoxSphereBounds& WorldBounds);
 }; // Size: 0x210
 
 class URuntimeVirtualTextureStreamingProxy : public UTexture2D

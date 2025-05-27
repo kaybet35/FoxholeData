@@ -3,6 +3,6 @@
 
 class ABPHELaunchedGrenade_C : public AGrenade_C
 {
-}; // Size: 0x3B8
+}; // Size: 0x3C0
 
 #endif

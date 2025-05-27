@@ -17,9 +17,93 @@
     "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
     "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "shooting",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
       "TargetSkeleton": {
         "ObjectName": "Skeleton'SK_ArmoredCarOffensiveW_Skeleton'",
-        "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.5"
+        "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.6"
       },
       "OrderedSavedPoseIndicesMap": [
         {
@@ -30,6 +114,86 @@
         }
       ],
       "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.16"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.37"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.17"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.38"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerPitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerPitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_1673EED04AB7B52F7E7B5A8D8716F6DD'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.21"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "GunnerYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'SimVehicleGunnerSupportAnimInstance:GunnerYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_EF84A6104B057DD536BFE5BD2518C690'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.24"
+          }
+        },
         {
           "BoundFunction": "None",
           "CopyRecords": [
@@ -47,7 +211,7 @@
               "Size": 4,
               "CachedSourceProperty": {
                 "ObjectName": "FloatProperty'ABP_ArmoredCarOffensiveW_C:TurretElevation'",
-                "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.7"
+                "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.12"
               },
               "CachedSourceStructSubProperty": null
             }
@@ -55,7 +219,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_08BD0713456E19F2EAF510BB5CF8C39B'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.13"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.20"
           }
         },
         {
@@ -83,7 +247,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_RotationOffsetBlendSpace_5CDF01174D34F2A9B94DCDA184053FB3'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.18"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.28"
           }
         },
         {
@@ -111,7 +275,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendListByBool_157089624761BFC723A5DD861089E740'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.11"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.18"
           }
         },
         {
@@ -157,7 +321,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_RotationOffsetBlendSpace_7A7D6A6A461A0996320E95BB5F151B6A'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.19"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.29"
           }
         },
         {
@@ -185,7 +349,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_SequencePlayer_D5099E2A4B1BC394F1F22EA2CC0B3845'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.21"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.33"
           }
         },
         {
@@ -193,11 +357,11 @@
           "CopyRecords": [],
           "Function": {
             "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.10"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.15"
           },
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.14"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.22"
           }
         },
         {
@@ -225,7 +389,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_987AA41043520A24C586399ADCD2E979'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.15"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.23"
           }
         },
         {
@@ -253,7 +417,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_002F77A84BA84212F68D2995F5CDBCCE'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.12"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.19"
           }
         }
       ],
@@ -277,67 +441,115 @@
       },
       {
         "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:AnimGraph'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.9"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.14"
+      },
+      {
+        "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.17"
+      },
+      {
+        "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.16"
       },
       {
         "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.10"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.15"
       },
       {
         "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.5"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A'",
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_LayeredBoneBlend_5C1D4C7C408740D0A9171995D6EC704F'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.3"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_LayeredBoneBlend_5C1D4C7C408740D0A9171995D6EC704F'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.17"
-      },
-      {
         "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_002F77A84BA84212F68D2995F5CDBCCE'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.12"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_987AA41043520A24C586399ADCD2E979'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.15"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.14"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_SequencePlayer_D5099E2A4B1BC394F1F22EA2CC0B3845'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.21"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_RotationOffsetBlendSpace_7A7D6A6A461A0996320E95BB5F151B6A'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.19"
       },
       {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_987AA41043520A24C586399ADCD2E979'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_SequencePlayer_D5099E2A4B1BC394F1F22EA2CC0B3845'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_RotationOffsetBlendSpace_7A7D6A6A461A0996320E95BB5F151B6A'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.29"
+      },
+      {
         "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_SequencePlayer_017B02E54EDAE7861EC379B18C1FF22D'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.20"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.30"
       },
       {
         "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendListByBool_157089624761BFC723A5DD861089E740'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.11"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_LayeredBoneBlend_59DB113940BFA9983B710EAE8E65A965'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.16"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_RotationOffsetBlendSpace_5CDF01174D34F2A9B94DCDA184053FB3'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.18"
       },
       {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_LayeredBoneBlend_59DB113940BFA9983B710EAE8E65A965'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.26"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_RotationOffsetBlendSpace_5CDF01174D34F2A9B94DCDA184053FB3'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.28"
+      },
+      {
         "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_08BD0713456E19F2EAF510BB5CF8C39B'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.13"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_LayeredBoneBlend_104BC20A41EFF9815E1D4CA5D7FB0532'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_EF84A6104B057DD536BFE5BD2518C690'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_BlendSpacePlayer_1673EED04AB7B52F7E7B5A8D8716F6DD'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.38"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.37"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_SequencePlayer_A2AC20114651C2812BC85AA044FE9CDF'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_StateResult_7B14E94F44535CB111807A9CD7F92E2B'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.36"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_SequencePlayer_379FE99F448AAE3073BB52A06BB2442C'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_StateResult_5072E6DC4897619D1B01B8B3E236FB3D'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.35"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_StateMachine_D8242D4B4B1C090EF30F73AEBA479648'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.34"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.27"
       },
       {
         "ObjectName": "FloatProperty'ABP_ArmoredCarOffensiveW_C:TurretElevation'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.7"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.12"
       }
     ],
     "FuncMap": {
@@ -347,11 +559,19 @@
       },
       "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0": {
         "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.10"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.15"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0": {
+        "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.16"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894": {
+        "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.17"
       },
       "AnimGraph": {
         "ObjectName": "Function'ABP_ArmoredCarOffensiveW_C:AnimGraph'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.9"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.14"
       }
     },
     "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -373,33 +593,29 @@
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
-      "AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A": {
-        "Result": {
-          "LinkID": 8
-        },
-        "Name": "AnimGraph",
-        "Group": "None"
-      },
       "AnimGraphNode_LayeredBoneBlend_5C1D4C7C408740D0A9171995D6EC704F": {
         "BasePose": {
-          "LinkID": 2
+          "LinkID": 1
         },
         "BlendPoses": [
+          {
+            "LinkID": 2
+          },
           {
             "LinkID": 3
           },
           {
-            "LinkID": 4
+            "LinkID": 10
           },
           {
-            "LinkID": 11
+            "LinkID": 20
           }
         ],
         "LayerSetup": [
           {
             "BranchFilters": [
               {
-                "BoneName": "turret_verticalPivot",
+                "BoneName": "turret_barrel",
                 "BlendDepth": 0
               }
             ]
@@ -419,9 +635,18 @@
                 "BlendDepth": 0
               }
             ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "turret_barrel",
+                "BlendDepth": 0
+              }
+            ]
           }
         ],
         "BlendWeights": [
+          1.0,
           1.0,
           1.0,
           1.0
@@ -450,7 +675,7 @@
           },
           {
             "SourceIndex": 0,
-            "BlendWeight": 1.0
+            "BlendWeight": 0.0
           },
           {
             "SourceIndex": 0,
@@ -499,9 +724,21 @@
           {
             "SourceIndex": 2,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 3,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "1DC49A56-4334D5A1-8FCD18BC-785A9806",
+        "SkeletonGuid": "E6BE9F6B-41E826A1-1E4E11BF-83F1F978",
         "VirtualBoneGuid": "B9070617-430F44B4-827E73A4-E2A1F932"
       },
       "AnimGraphNode_BlendSpacePlayer_002F77A84BA84212F68D2995F5CDBCCE": {
@@ -597,7 +834,7 @@
       },
       "AnimGraphNode_RotationOffsetBlendSpace_7A7D6A6A461A0996320E95BB5F151B6A": {
         "BasePose": {
-          "LinkID": 10
+          "LinkID": 9
         },
         "LODThreshold": -1,
         "Alpha": 1.0,
@@ -695,10 +932,10 @@
         "bActiveValue": false,
         "BlendPose": [
           {
-            "LinkID": 7
+            "LinkID": 6
           },
           {
-            "LinkID": 9
+            "LinkID": 8
           }
         ],
         "BlendTime": [
@@ -713,11 +950,14 @@
       },
       "AnimGraphNode_LayeredBoneBlend_59DB113940BFA9983B710EAE8E65A965": {
         "BasePose": {
-          "LinkID": 6
+          "LinkID": 5
         },
         "BlendPoses": [
           {
-            "LinkID": 1
+            "LinkID": 0
+          },
+          {
+            "LinkID": 11
           }
         ],
         "LayerSetup": [
@@ -728,9 +968,18 @@
                 "BlendDepth": 0
               }
             ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Roket_horizontalPivot",
+                "BlendDepth": 0
+              }
+            ]
           }
         ],
         "BlendWeights": [
+          1.0,
           1.0
         ],
         "bMeshSpaceRotationBlend": false,
@@ -806,14 +1055,26 @@
           {
             "SourceIndex": 0,
             "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
           }
         ],
-        "SkeletonGuid": "1DC49A56-4334D5A1-8FCD18BC-785A9806",
+        "SkeletonGuid": "E6BE9F6B-41E826A1-1E4E11BF-83F1F978",
         "VirtualBoneGuid": "B9070617-430F44B4-827E73A4-E2A1F932"
       },
       "AnimGraphNode_RotationOffsetBlendSpace_5CDF01174D34F2A9B94DCDA184053FB3": {
         "BasePose": {
-          "LinkID": 5
+          "LinkID": 4
         },
         "LODThreshold": -1,
         "Alpha": 1.0,
@@ -892,18 +1153,293 @@
         "BlendWeight": 0.0,
         "InternalTimeAccumulator": 0.0
       },
+      "AnimGraphNode_LayeredBoneBlend_104BC20A41EFF9815E1D4CA5D7FB0532": {
+        "BasePose": {
+          "LinkID": 12
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 13
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Rocket_GunPivot",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rocket_Vertical_mid",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rocket_Vertical_back",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rocket_Rack",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rocket_Rack_end",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rocket_Piston_top",
+                "BlendDepth": 0
+              },
+              {
+                "BoneName": "Rocket_Piston_end",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "E6BE9F6B-41E826A1-1E4E11BF-83F1F978",
+        "VirtualBoneGuid": "B9070617-430F44B4-827E73A4-E2A1F932"
+      },
+      "AnimGraphNode_BlendSpacePlayer_EF84A6104B057DD536BFE5BD2518C690": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_ArmoredCar2MultiW_Horizontal'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/BS_ArmoredCar2MultiW_Horizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_1673EED04AB7B52F7E7B5A8D8716F6DD": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_ArmoredCar2MultiW_Vertical'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/BS_ArmoredCar2MultiW_Vertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_A2AC20114651C2812BC85AA044FE9CDF": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ArmoredCarOffensiveW_turret_firing'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/Anim_ArmoredCarOffensiveW_turret_firing.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_7B14E94F44535CB111807A9CD7F92E2B": {
+        "Result": {
+          "LinkID": 16
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_379FE99F448AAE3073BB52A06BB2442C": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ArmoredCarOffensiveW_POSE_turret_front'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/Anim_ArmoredCarOffensiveW_POSE_turret_front.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_5072E6DC4897619D1B01B8B3E236FB3D": {
+        "Result": {
+          "LinkID": 18
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_D8242D4B4B1C090EF30F73AEBA479648": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A": {
+        "Result": {
+          "LinkID": 7
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
       "TurretElevation": 25.0
     }
   },
   {
     "Type": "StructProperty",
-    "Name": "AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A",
+    "Name": "AnimGraphNode_LayeredBoneBlend_5C1D4C7C408740D0A9171995D6EC704F",
     "Outer": "ABP_ArmoredCarOffensiveW_C",
     "Class": "UScriptClass'StructProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Struct": {
-      "ObjectName": "ScriptStruct'AnimNode_Root'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
     }
   },
   {
@@ -926,15 +1462,78 @@
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.4"
       },
       {
+        "ObjectName": "FloatProperty'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.11"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.9"
+      },
+      {
         "ObjectName": "FloatProperty'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW.CallFunc_Conv_BoolToFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.10"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW.CallFunc_BooleanOR_ReturnValue'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.6"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW.CallFunc_BooleanOR_ReturnValue_1'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ArmoredCarOffensiveW_C:ExecuteUbergraph_ABP_ArmoredCarOffensiveW.CallFunc_BooleanOR_ReturnValue_2'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.8"
       }
     ],
     "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
   },
   {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanOR_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarOffensiveW",
+    "Class": "UScriptClass'BoolProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanOR_ReturnValue_1",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarOffensiveW",
+    "Class": "UScriptClass'BoolProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_BooleanOR_ReturnValue_2",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarOffensiveW",
+    "Class": "UScriptClass'BoolProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarOffensiveW",
+    "Class": "UScriptClass'BoolProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
     "Type": "FloatProperty",
     "Name": "CallFunc_Conv_BoolToFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarOffensiveW",
+    "Class": "UScriptClass'FloatProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
     "Outer": "ExecuteUbergraph_ABP_ArmoredCarOffensiveW",
     "Class": "UScriptClass'FloatProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted"
@@ -968,7 +1567,7 @@
     "Children": [
       {
         "ObjectName": "StructProperty'ABP_ArmoredCarOffensiveW_C:AnimGraph.AnimGraph'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.8"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarOffensiveW.13"
       }
     ],
     "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
@@ -976,6 +1575,22 @@
   {
     "Type": "Function",
     "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarOffensiveW_AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894",
     "Outer": "ABP_ArmoredCarOffensiveW_C",
     "Class": "UScriptClass'Function'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -1016,6 +1631,17 @@
   },
   {
     "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_1673EED04AB7B52F7E7B5A8D8716F6DD",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
     "Name": "AnimGraphNode_BlendSpacePlayer_4BECBB7A480BF05356E1D6A1BADFB9E0",
     "Outer": "ABP_ArmoredCarOffensiveW_C",
     "Class": "UScriptClass'StructProperty'",
@@ -1038,6 +1664,28 @@
   },
   {
     "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_EF84A6104B057DD536BFE5BD2518C690",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_104BC20A41EFF9815E1D4CA5D7FB0532",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
     "Name": "AnimGraphNode_LayeredBoneBlend_59DB113940BFA9983B710EAE8E65A965",
     "Outer": "ABP_ArmoredCarOffensiveW_C",
     "Class": "UScriptClass'StructProperty'",
@@ -1049,13 +1697,13 @@
   },
   {
     "Type": "StructProperty",
-    "Name": "AnimGraphNode_LayeredBoneBlend_5C1D4C7C408740D0A9171995D6EC704F",
+    "Name": "AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A",
     "Outer": "ABP_ArmoredCarOffensiveW_C",
     "Class": "UScriptClass'StructProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Struct": {
-      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
-      "ObjectPath": "/Script/AnimGraphRuntime"
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -1093,12 +1741,89 @@
   },
   {
     "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_379FE99F448AAE3073BB52A06BB2442C",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_A2AC20114651C2812BC85AA044FE9CDF",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
     "Name": "AnimGraphNode_SequencePlayer_D5099E2A4B1BC394F1F22EA2CC0B3845",
     "Outer": "ABP_ArmoredCarOffensiveW_C",
     "Class": "UScriptClass'StructProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Struct": {
       "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_D8242D4B4B1C090EF30F73AEBA479648",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_5072E6DC4897619D1B01B8B3E236FB3D",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_7B14E94F44535CB111807A9CD7F92E2B",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_4874711F4C5F2F4821E04083FD5818B0",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_81E5302F4F3760FA5C3A2CA9D6E81894",
+    "Outer": "ABP_ArmoredCarOffensiveW_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
       "ObjectPath": "/Script/Engine"
     }
   }

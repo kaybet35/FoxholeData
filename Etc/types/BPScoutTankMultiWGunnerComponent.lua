@@ -1,6 +1,6 @@
 ---@meta
 
----@class UBPScoutTankMultiWGunnerComponent_C : UArtilleryGunnerMountComponent
+---@class UBPScoutTankMultiWGunnerComponent_C : UProjectileGunnerMountComponent
 UBPScoutTankMultiWGunnerComponent_C = {}
 
 

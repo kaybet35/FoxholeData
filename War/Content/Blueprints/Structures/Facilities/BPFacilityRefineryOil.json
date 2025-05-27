@@ -112,7 +112,7 @@
     "Type": "BPFacilityRefineryOil_C",
     "Name": "Default__BPFacilityRefineryOil_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/BPFacilityRefineryOil.BPFacilityRefineryOil_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "GenericStockpileComponent": {
         "ObjectName": "GenericStockpileComponent'Default__BPFacilityRefineryOil_C:GenericStockpileComponent'",
@@ -149,7 +149,7 @@
           "LiquidInput": [
             {
               "CodeName": "Oil",
-              "Quantity": 150.0,
+              "Quantity": 50.0,
               "Limit": 32000.0
             }
           ],
@@ -158,11 +158,11 @@
           "LiquidOutput": [
             {
               "CodeName": "Petrol",
-              "Quantity": 150.0,
+              "Quantity": 50.0,
               "Limit": 32000.0
             }
           ],
-          "Duration": 150,
+          "Duration": 50,
           "PowerDelta": 0,
           "bConsumeResourceNodes": false
         }
@@ -178,12 +178,12 @@
                 "LiquidInput": [
                   {
                     "CodeName": "Oil",
-                    "Quantity": 120.0,
+                    "Quantity": 40.0,
                     "Limit": 32000.0
                   },
                   {
                     "CodeName": "Water",
-                    "Quantity": 30.0,
+                    "Quantity": 10.0,
                     "Limit": 32000.0
                   }
                 ],
@@ -192,11 +192,11 @@
                 "LiquidOutput": [
                   {
                     "CodeName": "Petrol",
-                    "Quantity": 150.0,
+                    "Quantity": 50.0,
                     "Limit": 32000.0
                   }
                 ],
-                "Duration": 150,
+                "Duration": 50,
                 "PowerDelta": 0,
                 "bConsumeResourceNodes": false
               }
@@ -213,7 +213,7 @@
                 "LiquidInput": [
                   {
                     "CodeName": "Oil",
-                    "Quantity": 150.0,
+                    "Quantity": 50.0,
                     "Limit": 32000.0
                   }
                 ],
@@ -222,11 +222,11 @@
                 "LiquidOutput": [
                   {
                     "CodeName": "FacilityOil1",
-                    "Quantity": 90.0,
+                    "Quantity": 30.0,
                     "Limit": 19200.0
                   }
                 ],
-                "Duration": 160,
+                "Duration": 55,
                 "PowerDelta": -1500,
                 "bConsumeResourceNodes": false
               }
@@ -318,7 +318,7 @@
       "BuildOrder": 35,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bDropsLargeMaterialsWhenDestroyed": false,
-      "ValidBuildTools": 24,
+      "ValidBuildTools": 56,
       "CodeName": "FacilityRefineryOil",
       "ChassisName": {
         "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
@@ -446,6 +446,9 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/Components/BPStructurePipelineInput.BPStructurePipelineInput_C'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "PipeInfo": {
+        "Type": "EPipeType::Input"
+      },
       "RelativeLocation": {
         "X": -192.1309,
         "Y": 511.84982,
@@ -465,6 +468,9 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Facilities/Components/BPStructurePipelineOutput.BPStructurePipelineOutput_C'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "PipeInfo": {
+        "Type": "EPipeType::Output"
+      },
       "RelativeLocation": {
         "X": -2.765942,
         "Y": -566.9172,
@@ -726,9 +732,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": false,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -828,9 +836,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": false,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -930,9 +940,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": false,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityTier2",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1029,9 +1041,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": false,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityTier3",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",

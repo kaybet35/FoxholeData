@@ -2,6 +2,8 @@
 
 ---@class ABPArmoredCarATW_C : ABPArmoredCarBaseW_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field Light_Turret UStaticMeshComponent
+---@field SpotLight_Turret USpotLightComponent
 ---@field chassis USkeletalMeshComponent
 ABPArmoredCarATW_C = {}
 

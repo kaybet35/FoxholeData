@@ -16,6 +16,7 @@ ASimPlayerController::ASimPlayerController(const FObjectInitializer& ObjectIniti
     this->PlaceInDeploymentQueue = -1;
     this->RailHUDTargetDismountTime = 0.00f;
     this->CalloutMarkerGhost = NULL;
+    this->LandscapeCullRVTVolume = NULL;
 }
 
 void ASimPlayerController::WarMessageTest(const int32 TestInt, const float TestFloat, const bool TestBool, const FString& TestStr, const ETestEnum TestEnum) {
@@ -399,6 +400,9 @@ bool ASimPlayerController::ServerSetInventorySourceOverride_Validate(UActorCompo
 void ASimPlayerController::ServerSetHospitalDeployState_Implementation(ARailVehicleHospital* RailVehicleHospital, const bool bWantsItDeployed) {
 }
 
+void ASimPlayerController::ServerSetFortEmpStructure_Implementation(AFortEmp* FortEmp, const uint8 StructureType) {
+}
+
 void ASimPlayerController::ServerSetCharacterCustomizationInfo_Implementation(const FCharacterCustomizationInfo CustomizationInfo) {
 }
 bool ASimPlayerController::ServerSetCharacterCustomizationInfo_Validate(const FCharacterCustomizationInfo CustomizationInfo) {
@@ -672,6 +676,12 @@ bool ASimPlayerController::ServerEnterRocketLaunchCode_Validate(const FRocketLau
     return true;
 }
 
+void ASimPlayerController::ServerEjectDriver_Implementation() {
+}
+bool ASimPlayerController::ServerEjectDriver_Validate() {
+    return true;
+}
+
 void ASimPlayerController::ServerEditSignPost_Implementation(const FText& Text, ASignPost* TargetSignPost) {
 }
 bool ASimPlayerController::ServerEditSignPost_Validate(const FText& Text, ASignPost* TargetSignPost) {
@@ -702,9 +712,9 @@ bool ASimPlayerController::ServerDetachUserComponents_Validate() {
     return true;
 }
 
-void ASimPlayerController::ServerDetachLargeItem_Implementation(ASimVehicle* DetachTarget, const uint8 Index) {
+void ASimPlayerController::ServerDetachLargeItem_Implementation(AActor* DetachTarget, const uint8 Index) {
 }
-bool ASimPlayerController::ServerDetachLargeItem_Validate(ASimVehicle* DetachTarget, const uint8 Index) {
+bool ASimPlayerController::ServerDetachLargeItem_Validate(AActor* DetachTarget, const uint8 Index) {
     return true;
 }
 
@@ -1273,6 +1283,9 @@ void ASimPlayerController::ClientGotoScreen_Implementation(const ESimScreen SimS
 }
 
 void ASimPlayerController::ClientGetSquadIdFromSquadName_Implementation(const FString& SquadName) {
+}
+
+void ASimPlayerController::ClientGenerateWarStartImage_Implementation(const float ImageWidth, const FVector2D MapPositionOffset) {
 }
 
 void ASimPlayerController::ClientFullRepairResponse_Implementation(const EFullRepairResponse Response) {

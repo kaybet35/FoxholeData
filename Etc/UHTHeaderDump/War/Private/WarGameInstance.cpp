@@ -3,6 +3,7 @@
 UWarGameInstance::UWarGameInstance() {
     this->BaseSoundMix = NULL;
     this->BorderBaseManager = NULL;
+    this->PipelineManager = NULL;
     this->WeatherManager = NULL;
     this->WorldResourceSpawner = NULL;
     this->CurrentWarSave = NULL;
@@ -12,6 +13,7 @@ UWarGameInstance::UWarGameInstance() {
     this->TravelManager = NULL;
     this->LandscapeDeformationManager = NULL;
     this->CrossRegionActorManager = NULL;
+    this->SnapshotManager = NULL;
     this->WarSessionSettings = NULL;
     this->LoreList = NULL;
     this->LastColonialCount = 0;

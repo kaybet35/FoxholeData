@@ -3,6 +3,6 @@
 
 class UBPArmoredCar2LargeWGunnerComponent_C : public UTankGunnerMountComponent
 {
-}; // Size: 0x8D8
+}; // Size: 0x8D0
 
 #endif

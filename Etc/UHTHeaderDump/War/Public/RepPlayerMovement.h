@@ -28,7 +28,7 @@ public:
     FName BoneName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float LastUpdateClientTimeStamp;
+    float Timestamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bServerHasBaseComponent;

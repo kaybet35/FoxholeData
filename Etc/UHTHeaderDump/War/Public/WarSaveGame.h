@@ -5,6 +5,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SaveGame -FallbackName=SaveGame
 #include "EWarPhase.h"
 #include "GameplayFlags.h"
+#include "PipelineSystem.h"
 #include "PlayerWarState.h"
 #include "RegionLogs.h"
 #include "SavedActor.h"
@@ -94,6 +95,9 @@ private:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 NextTechStateID;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<FPipelineSystem> PipelineSystems;
     
 public:
     UWarSaveGame();

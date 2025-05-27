@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPMGAIT2Destroyed_C : AFort
+---@class ABPMGAIT2Destroyed_C : ADestroyedFort
 ---@field insidefloor UStaticMeshComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortT1Destroyed01FrontLeft UStaticMeshComponent

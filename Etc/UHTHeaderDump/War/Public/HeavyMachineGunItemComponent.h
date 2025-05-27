@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ActivityStateChange.h"
+#include "CharacterInvokeInfo.h"
 #include "ECoverMitigationType.h"
 #include "HitNotify.h"
 #include "ItemComponent.h"
@@ -78,7 +79,7 @@ protected:
     void ServerStopInvoke();
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
-    void ServerStartInvoke(FActivityStateChange ActivityStateChange);
+    void ServerStartInvoke(const FCharacterInvokeInfo& InvokeInfo, FActivityStateChange ActivityStateChange);
     
     UFUNCTION(BlueprintCallable)
     void OnRep_SimulatedHitNotify();

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchConnectorDestroyedT3_C : AFortConnector
----@field TrenchConnectorDestroyedCommonT3 UTemplateComponent
+---@field TrenchConnectorCommonT3 UTemplateComponent
 ---@field TrenchConnectorCommon UTemplateComponent
 ---@field GravelBack UDecalComponent
 ---@field GravelFront UDecalComponent

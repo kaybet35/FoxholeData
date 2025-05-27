@@ -3,6 +3,6 @@
 
 class ABPFlameBackpackCPickup_C : public ABackpackItemPickup
 {
-}; // Size: 0x3F8
+}; // Size: 0x400
 
 #endif

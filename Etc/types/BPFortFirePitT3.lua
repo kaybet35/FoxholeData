@@ -1,18 +1,9 @@
 ---@meta
 
 ---@class ABPFortFirePitT3_C : AFortFirePit
----@field DirtFront UStaticMeshComponent
----@field DirtCornerFrontLeft UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
----@field DirtCornerBackLeft UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtCornerFrontRight UStaticMeshComponent
----@field DirtCornerBackRight UStaticMeshComponent
----@field DirtRight UStaticMeshComponent
----@field BackModSlot UBPFortWallModSlotMinimal_C
----@field FrontModSlot UBPFortWallModSlotMinimal_C
----@field UnderModSlot UBPFortUnderModSlot_C
----@field RightModSlot UBPFortWallModSlotMinimal_C
+---@field FortCommonThreeWallsMods UTemplateComponent
+---@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonDirtT3 UTemplateComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field FortCommonT2T3ModsMinimal UTemplateComponent

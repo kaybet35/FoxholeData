@@ -1,16 +1,15 @@
 #pragma once
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
-#include "PowerInfo.h"
-#include "PowerNode.h"
 #include "TeamStructure.h"
 #include "FortObservation.generated.h"
 
 class UMapIntelligenceSourceComponent;
+class UPowerConsumerComponent;
 class UTeamFlagMeshComponent;
 
 UCLASS(Blueprintable)
-class WAR_API AFortObservation : public ATeamStructure, public IPowerNode {
+class WAR_API AFortObservation : public ATeamStructure {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
@@ -21,17 +20,13 @@ private:
     UMapIntelligenceSourceComponent* MapIntelligenceSource;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    UTeamFlagMeshComponent* TeamFlagMeshComponent;
+    UPowerConsumerComponent* PowerConsumerComponent;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-    FPowerInfo PowerInfo;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UTeamFlagMeshComponent* TeamFlagMeshComponent;
     
 public:
     AFortObservation(const FObjectInitializer& ObjectInitializer);
 
-    virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
-
-
-    // Fix for true pure virtual functions not being implemented
 };
 

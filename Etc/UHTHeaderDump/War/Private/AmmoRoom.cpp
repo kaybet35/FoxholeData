@@ -11,6 +11,7 @@ AAmmoRoom::AAmmoRoom(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->ScreenToUse = ESimScreen::SimpleStockpile;
     this->bProvidesBasedShelter = true;
     this->bHasMeshVisibilityComponent = true;
+    this->bIsBlankFortPiece = true;
     this->GenericStockpileComponent = CreateDefaultSubobject<UReplicatedGenericStockpileComponent>(TEXT("GenericStockpileComponent"));
     this->KillVolume->SetupAttachment(RootComponent);
 }

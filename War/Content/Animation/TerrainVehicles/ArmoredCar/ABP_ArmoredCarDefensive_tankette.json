@@ -17,6 +17,90 @@
     "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
     "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "shooting",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 4,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                5
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
       "TargetSkeleton": {
         "ObjectName": "Skeleton'SK_ArmoredCarDefensiveC_tankette_Skeleton'",
         "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarDefensiveC_tankette_Skeleton.4"
@@ -30,6 +114,46 @@
         }
       ],
       "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsGunnerFiring",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'SimVehicleGunnerSupportAnimInstance:bIsGunnerFiring'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_TransitionResult_0A29B8264385A747D828B58A43152FB2'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.32"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF'",
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.33"
+          }
+        },
         {
           "BoundFunction": "None",
           "CopyRecords": [
@@ -55,7 +179,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendListByBool_FBEB48BD4ACF04C6F66991A24AE1753C'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.9"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.13"
           }
         },
         {
@@ -83,7 +207,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_ApplyAdditive_D60A232342ABEEA54B12339894F42700'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.7"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.11"
           }
         },
         {
@@ -111,7 +235,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendListByBool_DEA628FF42426460F407B78470B3D247'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.8"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.12"
           }
         },
         {
@@ -139,7 +263,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_18726BCE45FA79A322E04AA5F36A9EA0'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.15"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.19"
           }
         },
         {
@@ -167,7 +291,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_F35DA447430CC17737DBB3BEB4DE1C62'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.22"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.28"
           }
         },
         {
@@ -195,7 +319,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_6198400846455148BE430E9EBF96DEB7'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.17"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.22"
           }
         },
         {
@@ -223,7 +347,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_EDAC411F4E9B185C5D9DC0BC33131E05'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.21"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.27"
           }
         },
         {
@@ -251,7 +375,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendSpacePlayer_A2B70DB641EC45011C70469778650349'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.10"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.14"
           }
         },
         {
@@ -297,7 +421,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendSpacePlayer_A87A95314833727D907FEB89CC3970DF'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.11"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.15"
           }
         },
         {
@@ -343,7 +467,7 @@
           "Function": null,
           "ValueHandlerNodeProperty": {
             "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_RotationOffsetBlendSpace_0448AE98482A5858B2996ABDE4B02160'",
-            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.14"
+            "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.18"
           }
         }
       ],
@@ -353,7 +477,7 @@
       },
       "UberGraphFunction": {
         "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.6"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.5"
       }
     },
     "SuperStruct": {
@@ -367,85 +491,125 @@
       },
       {
         "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:AnimGraph'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.4"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.9"
       },
       {
-        "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.6"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_Root_82047ACB41C738CD34E78F8279D6967E'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.13"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_RotationOffsetBlendSpace_0448AE98482A5858B2996ABDE4B02160'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.14"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendSpacePlayer_A87A95314833727D907FEB89CC3970DF'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.11"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendSpacePlayer_A2B70DB641EC45011C70469778650349'",
+        "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.10"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_EDAC411F4E9B185C5D9DC0BC33131E05'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.21"
+        "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.5"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_LayeredBoneBlend_59DB987D44037015B6568B86EBCC84D2'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.12"
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_Root_82047ACB41C738CD34E78F8279D6967E'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.3"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_6198400846455148BE430E9EBF96DEB7'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.17"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_F35DA447430CC17737DBB3BEB4DE1C62'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.22"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_18726BCE45FA79A322E04AA5F36A9EA0'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.15"
-      },
-      {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_821217864522D313AFFFE9B5A2E6DB65'",
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_RotationOffsetBlendSpace_0448AE98482A5858B2996ABDE4B02160'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.18"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendListByBool_DEA628FF42426460F407B78470B3D247'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.8"
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendSpacePlayer_A87A95314833727D907FEB89CC3970DF'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.15"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_ApplyAdditive_D60A232342ABEEA54B12339894F42700'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.7"
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendSpacePlayer_A2B70DB641EC45011C70469778650349'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.14"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_225C356D45E5A21B426921BC82B66D30'",
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_EDAC411F4E9B185C5D9DC0BC33131E05'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.27"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_LayeredBoneBlend_59DB987D44037015B6568B86EBCC84D2'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.16"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_CA66859145589A1A7696DDB0F498643A'",
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_6198400846455148BE430E9EBF96DEB7'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.22"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_F35DA447430CC17737DBB3BEB4DE1C62'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.28"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_18726BCE45FA79A322E04AA5F36A9EA0'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.19"
       },
       {
-        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_D77FB98C4C64912EBE915B8B73853E4D'",
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_821217864522D313AFFFE9B5A2E6DB65'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.24"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendListByBool_DEA628FF42426460F407B78470B3D247'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_ApplyAdditive_D60A232342ABEEA54B12339894F42700'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_225C356D45E5A21B426921BC82B66D30'",
         "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.20"
       },
       {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_CA66859145589A1A7696DDB0F498643A'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.25"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_D77FB98C4C64912EBE915B8B73853E4D'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.26"
+      },
+      {
         "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_BlendListByBool_FBEB48BD4ACF04C6F66991A24AE1753C'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.9"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.33"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_TransitionResult_0A29B8264385A747D828B58A43152FB2'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.32"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_4FA604654643C493AAA46E8F5C895C54'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.21"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_StateResult_05C8BE664C81839477B18988F3650581'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.30"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_SequencePlayer_7215186F4BEE04FF5D64799F980D277E'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.23"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_StateResult_061E00924F4CB10A278E87860828CB8F'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.31"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_StateMachine_A4E537154DD7C635E13831895FEDF5E8'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.29"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraphNode_LayeredBoneBlend_CDCD30384111DE71FE9C80A3578BAB9B'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.17"
       }
     ],
     "FuncMap": {
       "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette": {
         "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.6"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF": {
+        "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.10"
       },
       "AnimGraph": {
         "ObjectName": "Function'ABP_ArmoredCarDefensive_tankette_C:AnimGraph'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.4"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.9"
       }
     },
     "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -623,7 +787,7 @@
             "LinkID": 8
           },
           {
-            "LinkID": 2
+            "LinkID": 23
           },
           {
             "LinkID": 3
@@ -1189,8 +1353,307 @@
         "bResetChildOnActivation": false,
         "CustomBlendCurve": null,
         "BlendProfile": null
+      },
+      "AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0A29B8264385A747D828B58A43152FB2": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_4FA604654643C493AAA46E8F5C895C54": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_TanketteOffensiveC_firing'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/Anim_TanketteOffensiveC_firing.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": false,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_05C8BE664C81839477B18988F3650581": {
+        "Result": {
+          "LinkID": 18
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_7215186F4BEE04FF5D64799F980D277E": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_ArmoredCarOffensiveC_POSE_OpenHatch'",
+          "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/Anim_ArmoredCarOffensiveC_POSE_OpenHatch.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_061E00924F4CB10A278E87860828CB8F": {
+        "Result": {
+          "LinkID": 20
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_A4E537154DD7C635E13831895FEDF5E8": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      },
+      "AnimGraphNode_LayeredBoneBlend_CDCD30384111DE71FE9C80A3578BAB9B": {
+        "BasePose": {
+          "LinkID": 2
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 22
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "Gun_barrel",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "20421DAE-4C038B54-EB262F83-F4E47D6F",
+        "VirtualBoneGuid": "1578B5F8-42493626-CEDA0183-3E07583C"
       }
     }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_82047ACB41C738CD34E78F8279D6967E",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette",
+    "Class": "UScriptClass'IntProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette",
+    "Class": "UScriptClass'BoolProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette",
+    "Class": "UScriptClass'FloatProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted"
   },
   {
     "Type": "StructProperty",
@@ -1213,32 +1676,18 @@
     "Children": [
       {
         "ObjectName": "StructProperty'ABP_ArmoredCarDefensive_tankette_C:AnimGraph.AnimGraph'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.3"
+        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.8"
       }
     ],
     "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
   },
   {
-    "Type": "IntProperty",
-    "Name": "EntryPoint",
-    "Outer": "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette",
-    "Class": "UScriptClass'IntProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-  },
-  {
     "Type": "Function",
-    "Name": "ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF",
     "Outer": "ABP_ArmoredCarDefensive_tankette_C",
     "Class": "UScriptClass'Function'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "Children": [
-      {
-        "ObjectName": "IntProperty'ABP_ArmoredCarDefensive_tankette_C:ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette.EntryPoint'",
-        "ObjectPath": "War/Content/Animation/TerrainVehicles/ArmoredCar/ABP_ArmoredCarDefensive_tankette.5"
-      }
-    ],
-    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+    "FunctionFlags": "FUNC_BlueprintEvent"
   },
   {
     "Type": "StructProperty",
@@ -1308,13 +1757,13 @@
   },
   {
     "Type": "StructProperty",
-    "Name": "AnimGraphNode_Root_82047ACB41C738CD34E78F8279D6967E",
+    "Name": "AnimGraphNode_LayeredBoneBlend_CDCD30384111DE71FE9C80A3578BAB9B",
     "Outer": "ABP_ArmoredCarDefensive_tankette_C",
     "Class": "UScriptClass'StructProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Struct": {
-      "ObjectName": "ScriptStruct'AnimNode_Root'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
     }
   },
   {
@@ -1352,7 +1801,29 @@
   },
   {
     "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_4FA604654643C493AAA46E8F5C895C54",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
     "Name": "AnimGraphNode_SequencePlayer_6198400846455148BE430E9EBF96DEB7",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_7215186F4BEE04FF5D64799F980D277E",
     "Outer": "ABP_ArmoredCarDefensive_tankette_C",
     "Class": "UScriptClass'StructProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -1413,6 +1884,61 @@
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "Struct": {
       "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_A4E537154DD7C635E13831895FEDF5E8",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_05C8BE664C81839477B18988F3650581",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_061E00924F4CB10A278E87860828CB8F",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0A29B8264385A747D828B58A43152FB2",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF",
+    "Outer": "ABP_ArmoredCarDefensive_tankette_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
       "ObjectPath": "/Script/Engine"
     }
   }

@@ -2,14 +2,11 @@
 
 ---@class ABPWeatherStation_C : AWeatherStation
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field LargeFortCommon UTemplateComponent
 ---@field RoofBaseMesh UStaticMeshComponent
 ---@field OccupiableComponent UStructureSeatComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field OccupiableTrigger USeatTriggerComponent
----@field UnderModSlot UBPFortUnderModSlot_C
----@field BPWaterStencilComponent UBPWaterStencilComponent_C
----@field LandscapeHole UBoxComponent
----@field BoatHull UBoatHullComponent
 ---@field Flag UStaticMeshComponent
 ---@field RoofMesh UStaticMeshComponent
 ---@field FloorMesh UStaticMeshComponent

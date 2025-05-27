@@ -2,6 +2,8 @@
 
 ---@class ABPArmoredCarW_C : ABPArmoredCarBaseW_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field SpotLight_Turret USpotLightComponent
+---@field Light_Turret UStaticMeshComponent
 ABPArmoredCarW_C = {}
 
 ---@param IsOn boolean

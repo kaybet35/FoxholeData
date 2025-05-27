@@ -7,5 +7,6 @@ enum class EPlacementModificationInteraction : uint8 {
     NoInteraction,
     HidesModification,
     BlocksPlacement,
+    WeaponBlocksPlacement,
 };
 

@@ -3,6 +3,6 @@
 
 class ABPAssaultRifleAmmoPickup_C : public AAmmoPickup
 {
-}; // Size: 0x420
+}; // Size: 0x430
 
 #endif

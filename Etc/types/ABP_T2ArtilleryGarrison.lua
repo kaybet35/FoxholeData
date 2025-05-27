@@ -1,0 +1,24 @@
+---@meta
+
+---@class UABP_T2ArtilleryGarrison_C : UFortStaticArtilleryAnimInstance
+---@field UberGraphFrame FPointerToUberGraphFrame
+---@field AnimGraphNode_Root_B1A4243F400A0FF2E73244B63F232E5C FAnimNode_Root
+---@field AnimGraphNode_LayeredBoneBlend_9ED8149E4CDAAB598926E9904FBD5D11 FAnimNode_LayeredBoneBlend
+---@field AnimGraphNode_BlendSpacePlayer_C494EE1A4E1F7218F9581788CE38CCC7 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_BlendSpacePlayer_B81FCDD64EFEC2C23AB87FB0EB70917E FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6 FAnimNode_TransitionResult
+---@field AnimGraphNode_TransitionResult_8F5A3C0A4D59F13D186916BDA024E142 FAnimNode_TransitionResult
+---@field AnimGraphNode_SequencePlayer_00F3A823420DEDE4922DDDAB7D23E778 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_4BBBE3E940D7E83391990BA1DAC2CF39 FAnimNode_StateResult
+---@field AnimGraphNode_SequencePlayer_319998A84C4B5844D2C21AB1C3188D28 FAnimNode_SequencePlayer
+---@field AnimGraphNode_StateResult_12E417B142E6451E5DEC429CB921CD67 FAnimNode_StateResult
+---@field AnimGraphNode_StateMachine_A01DA6FF42CEBB5EA0ED22881BDC909A FAnimNode_StateMachine
+UABP_T2ArtilleryGarrison_C = {}
+
+---@param AnimGraph FPoseLink
+function UABP_T2ArtilleryGarrison_C:AnimGraph(AnimGraph) end
+function UABP_T2ArtilleryGarrison_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6() end
+---@param EntryPoint int32
+function UABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison(EntryPoint) end
+
+

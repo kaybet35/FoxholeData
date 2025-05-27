@@ -5,6 +5,7 @@
 #include "EFireIntensity.h"
 #include "StructureIsland.generated.h"
 
+class AFortGarrisonStation;
 class AStructure;
 
 UCLASS(Blueprintable)
@@ -18,12 +19,27 @@ public:
     float StructuralIntegrity;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    float CachedStructuralIntegrityBonus;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    uint8 CachedFortConnections;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    uint8 CachedNonFortConnections;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    uint8 CachedUnconnectedSockets;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     uint8 TeamId;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TArray<AFortGarrisonStation*> SafeHouses;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     float HealthPool;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, Transient, meta=(AllowPrivateAccess=true))
     float HealthPoolMax;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))

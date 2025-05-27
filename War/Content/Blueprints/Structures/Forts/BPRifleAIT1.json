@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "BlockBuildSiteMovement",
+    "Name": "OccupyComponent",
     "Outer": "BPRifleAIT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'StructureSeatComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPRifleAIT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.31"
       }
     },
     "SuperStruct": {
@@ -28,36 +28,40 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:BlockBuildSiteMovement'",
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:OccupyComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:OccupiableTriggerVolume'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.15"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:OccupyComponent'",
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommonT1BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.16"
       },
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommonMods'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.13"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:Floor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.10"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommonDirt'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.12"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommon'",
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:BlockBuildSiteMovement'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.11"
       },
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortT1GunAI'",
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:OccupiableTriggerVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.18"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommonMods'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.15"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:Floor'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommonDirt'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortCommon'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRifleAIT1_C:FortT1GunAI'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.17"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -76,7 +80,7 @@
     "Type": "BPRifleAIT1_C",
     "Name": "Default__BPRifleAIT1_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPRifleAIT1.BPRifleAIT1_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AITurretComponent": {
         "ObjectName": "AITurretComponent'Default__BPRifleAIT1_C:AITurretComponent'",
@@ -93,7 +97,7 @@
       "bUseSquareMuzzleBounds": true,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPRifleAIT1_C:FlagMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.33"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.36"
       },
       "ObstructionCheckOverrideExtents": {
         "X": 300.0,
@@ -109,6 +113,10 @@
       "BaseStructureClass": {
         "ObjectName": "BlueprintGeneratedClass'BPRifleAIT1Destroyed_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1Destroyed.1"
+      },
+      "BreachedStructureClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPRifleAIT1Breached_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1Breached.1"
       },
       "Description": {
         "Namespace": "",
@@ -131,7 +139,7 @@
         "Y": 0.0,
         "Z": 100.5
       },
-      "ValidBuildTools": 17,
+      "ValidBuildTools": 49,
       "CodeName": "RifleAIT1",
       "ChassisName": {
         "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
@@ -167,10 +175,14 @@
         "ObjectPath": "War/Content/Audio/SFX/BunkerExplosion_Cue.0"
       },
       "TechComponentIDs": [
-        "ETechComponentID::RifleGarrison"
+        "ETechComponentID::T1Garrison"
       ],
-      "MaxHealth": 1500,
-      "Health": 1500,
+      "ModularMountsComponent": {
+        "ObjectName": "ModularMountsComponent'Default__BPRifleAIT1_C:ModularMountsComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.10"
+      },
+      "MaxHealth": 750,
+      "Health": 750,
       "UpgradeStructureCodeName": "RifleAIT2",
       "MapIntelligenceType": "EMapIntelligenceType::Defense",
       "ClaimStatus": {
@@ -178,7 +190,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPRifleAIT1_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.31"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.34"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPRifleAIT1_C:StructureArrow'",
@@ -193,31 +205,36 @@
     "Class": "UScriptClass'AITurretComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "GunnerIndex": 9,
       "MaximumRange": 2900.0,
-      "ImpactEffect": {
-        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
-        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      "DamageAttributes": {
+        "WeaponFireFXClass": {
+          "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
+          "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
+        },
+        "ImpactEffect": {
+          "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+          "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+        },
+        "ShotSoundCue": {
+          "ObjectName": "SoundCue'RifleShot_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RifleShot_Cue.0"
+        },
+        "MuzzleFlashPS": {
+          "ObjectName": "ParticleSystem'RifleMF'",
+          "ObjectPath": "War/Content/FX/RifleMF.58"
+        },
+        "WeaponDamage": 40.0,
+        "BestJitterConeHalfAngle": 4.0,
+        "WorstJitterConeHalfAngle": 20.0,
+        "FiringPeriod": 0.5,
+        "TimeToFullFireRateAndAccuracy": 3.5,
+        "EnemyPursueDuration": 5.5
       },
-      "WeaponFireFXClass": {
-        "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
+      "DamageAttributesAlternate": {
+        "WeaponDamage": 50.0
       },
-      "ShotSoundCue": {
-        "ObjectName": "SoundCue'RifleShot_Cue'",
-        "ObjectPath": "War/Content/Audio/SFX/Weapons/RifleShot_Cue.0"
-      },
-      "MuzzleFlashPS": {
-        "ObjectName": "ParticleSystem'RifleMF'",
-        "ObjectPath": "War/Content/FX/RifleMF.58"
-      },
-      "WeaponDamage": 40.0,
-      "WeaponDamageAgainstVehicles": 50.0,
-      "BestJitterConeHalfAngle": 4.0,
-      "WorstJitterConeHalfAngle": 20.0,
-      "FiringPeriod": 0.5,
-      "TimeToFullFireRateAndAccuracy": 3.5,
       "FiringConeAngle": 180.0,
-      "EnemyPursueDuration": 5.5,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPRifleAIT1_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.6"
@@ -379,6 +396,28 @@
     }
   },
   {
+    "Type": "ModularMountsComponent",
+    "Name": "ModularMountsComponent",
+    "Outer": "Default__BPRifleAIT1_C",
+    "Class": "UScriptClass'ModularMountsComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BlockBuildSiteMovement",
+    "Outer": "BPRifleAIT1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "ObjectProperty",
     "Name": "Floor",
     "Outer": "BPRifleAIT1_C",
@@ -428,6 +467,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "FortCommonT1BreachedWalls",
+    "Outer": "BPRifleAIT1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "FortT1GunAI",
     "Outer": "BPRifleAIT1_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -451,18 +502,6 @@
     }
   },
   {
-    "Type": "ObjectProperty",
-    "Name": "OccupyComponent",
-    "Outer": "BPRifleAIT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StructureSeatComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPRifleAIT1_C",
@@ -482,7 +521,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPRifleAIT1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.19"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -501,12 +540,33 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPRifleAIT1_C:FortCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.34"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.37"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "13E59D83-40418E82-78F347A2-244EFB42",
       "InternalVariableName": "FortCommon"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPRifleAIT1_C:FortCommonT1BreachedWalls_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.40"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A3C59531-4046D989-579EF6B4-CA07285A",
+      "InternalVariableName": "FortCommonT1BreachedWalls"
     }
   },
   {
@@ -522,7 +582,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPRifleAIT1_C:FortCommonDirt_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.38"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -543,7 +603,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPRifleAIT1_C:FortT1GunAI_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.33"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -564,7 +624,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPRifleAIT1_C:FortCommonMods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.36"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.39"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -585,7 +645,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPRifleAIT1_C:Floor_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.32"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -606,9 +666,9 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StructureSeatComponent'BPRifleAIT1_C:OccupyComponent_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.32"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.35"
       },
-      "ParentComponentOrVariableName": "StructureArrow",
+      "ParentComponentOrVariableName": "AITurretComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "552305EB-49DC2C07-05913E88-1078A2AA",
       "InternalVariableName": "OccupyComponent"
@@ -627,7 +687,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SeatTriggerComponent'BPRifleAIT1_C:OccupiableTriggerVolume_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.30"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -681,74 +741,82 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.24"
         },
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.19"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.21"
         },
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.23"
         },
         {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.26"
+        },
+        {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.22"
         },
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.27"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.24"
         },
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.19"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.21"
         },
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.23"
         },
         {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.26"
+        },
+        {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.22"
         },
         {
           "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.24"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.27"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPRifleAIT1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT1.20"
       }
     }
   },
@@ -901,8 +969,8 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirt_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirt.1"
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirtT1T2_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirtT1T2.1"
       }
     }
   },
@@ -916,6 +984,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortCommonMods_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonMods.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonT1BreachedWalls_GEN_VARIABLE",
+    "Outer": "BPRifleAIT1_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonT1BreachedWalls_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortCommonT1BreachedWalls.1"
       }
     }
   }

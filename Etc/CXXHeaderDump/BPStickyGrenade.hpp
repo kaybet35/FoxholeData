@@ -3,6 +3,6 @@
 
 class ABPStickyGrenade_C : public AStickyBombProjectile
 {
-}; // Size: 0x3C8
+}; // Size: 0x3D0
 
 #endif

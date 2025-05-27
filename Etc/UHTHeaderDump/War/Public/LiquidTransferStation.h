@@ -12,10 +12,13 @@ class WAR_API ALiquidTransferStation : public AResourceTransferStation {
 public:
 private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
-    TArray<FFuelQuantity> FuelBuffers;
+    TArray<FFuelQuantity> FuelInputBuffers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FFuelQuantity FuelOutputBuffer;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    TArray<UBuildSocketComponent*> InputSockets;
+    UBuildSocketComponent* InputSocket;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBuildSocketComponent* OutputSocket;

@@ -4,6 +4,7 @@
 #include "BuildSocketTag.h"
 #include "ESlopeRotationMode.h"
 #include "ESocketDirection.h"
+#include "PipelineSocket.h"
 #include "BuildSocketComponent.generated.h"
 
 class AActor;
@@ -24,6 +25,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FBuildSocketTag> SocketTags;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FPipelineSocket PipeInfo;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bDisabled;
@@ -81,6 +85,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bAllowRotatedPlacement;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIgnoreOwnerConnectedActorsWhenSnapped;
     
     UBuildSocketComponent(const FObjectInitializer& ObjectInitializer);
 

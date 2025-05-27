@@ -1,6 +1,7 @@
 ---@meta
 
----@class ABPTrenchBuildSite_C : AFortBuildSite
+---@class ABPTrenchBuildSite_C : AFortBuildSiteBase
+---@field TrenchCommonDirtT1T2 UTemplateComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
 ---@field SideRope01 UStaticMeshComponent
 ---@field SideRope04 UStaticMeshComponent

@@ -1,19 +1,12 @@
 ---@meta
 
----@class ABPObservationBunkerT3Destroyed_C : AConcreteFort
+---@class ABPObservationBunkerT3Destroyed_C : ADestroyedFort
+---@field FortCommonDestroyedDirtT3 UTemplateComponent
 ---@field corners UTemplateComponent
 ---@field insidefloor UStaticMeshComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommon UTemplateComponent
----@field DirtRight UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field CornerFrontRight UStaticMeshComponent
----@field CornerFrontLeft UStaticMeshComponent
----@field CornerBackLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
----@field CornerBackRight UStaticMeshComponent
 ABPObservationBunkerT3Destroyed_C = {}
 
 

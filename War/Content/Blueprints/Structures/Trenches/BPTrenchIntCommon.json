@@ -1,0 +1,1096 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "LeftCull",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPTrenchIntCommon_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.41"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Template'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:LeftCull'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:BackCull'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.15"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:RightCull'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.24"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:FrontCull'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.20"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:BPLandscapeCullStaticMeshComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.18"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:BackSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.16"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:WaterStencil'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.26"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:RightSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.25"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:FrontSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.21"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:LeftSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.23"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:LandscapeOverlap'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.22"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:BoatHull'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.17"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchIntCommon_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.19"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPTrenchIntCommon_C'Default__BPTrenchIntCommon_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.2"
+    }
+  },
+  {
+    "Type": "BPTrenchIntCommon_C",
+    "Name": "Default__BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.BPTrenchIntCommon_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BoatHullComponent",
+    "Name": "BoatHull_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BoatHullComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 200.0
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "BoatHullCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -155.0
+      },
+      "ComponentTags": [
+        "IncludeInBuildSite",
+        "PreserveProfileInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "LandscapeOverlap_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 200.0,
+        "Z": 200.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "LandscapeHole",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Landscape",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "ComponentTags": [
+        "LandscapeOverlap",
+        "IncludeInBuildSite",
+        "PreserveProfileInBuildSite"
+      ],
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "BackCull_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": -200.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 3.5,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "DirtBackConnect"
+      ]
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "BPLandscapeCullStaticMeshComponent_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 4.5,
+        "Y": 4.5,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "FrontCull_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 200.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 3.5,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "DirtFrontConnect"
+      ]
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "LeftCull_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -200.0,
+        "Z": 50.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 3.5,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "DirtLeftConnect"
+      ]
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "RightCull_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 200.0,
+        "Z": 50.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 3.5,
+        "Z": 1.0
+      },
+      "ComponentTags": [
+        "DirtRightConnect"
+      ]
+    }
+  },
+  {
+    "Type": "BPWaterStencilComponent_C",
+    "Name": "WaterStencil_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/BPWaterStencilComponent.BPWaterStencilComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bGenerateOverlapEvents": false,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -210.0
+      },
+      "RelativeScale3D": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      },
+      "ComponentTags": [
+        "IncludeInBuildSite",
+        "PreserveProfileInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "BackSocket_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 1026,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtBack",
+          "ShowsTag": "DirtBackConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 103079215108,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtFortBack",
+          "ShowsTag": "DirtFortBackConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "Direction": "ESocketDirection::Back",
+      "MaxRotation": 15.0,
+      "RelativeLocation": {
+        "X": -250.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 179.99976,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "FrontSocket_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 1026,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtFront",
+          "ShowsTag": "DirtFrontConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 103079215108,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtFortFront",
+          "ShowsTag": "DirtFortFrontConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "Direction": "ESocketDirection::Front",
+      "MaxRotation": 15.0,
+      "RelativeLocation": {
+        "X": 250.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "LeftSocket_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 1026,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtLeft",
+          "ShowsTag": "DirtLeftConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 103079215108,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtFortLeft",
+          "ShowsTag": "DirtFortLeftConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "Direction": "ESocketDirection::Left",
+      "MaxRotation": 15.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -250.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.000114,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BuildSocketComponent",
+    "Name": "RightSocket_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'BuildSocketComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SocketTags": [
+        {
+          "SocketTypeMask": 1026,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtRight",
+          "ShowsTag": "DirtRightConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 103079215108,
+          "SocketTypeCategory": 34359738368,
+          "Tag": "DirtFortRight",
+          "ShowsTag": "DirtFortRightConnect",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "None",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 50.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        }
+      ],
+      "Direction": "ESocketDirection::Right",
+      "MaxRotation": 15.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 250.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.999985,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BackCull",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BackSocket",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BoatHull",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoatHullComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BPLandscapeCullStaticMeshComponent",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FrontCull",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FrontSocket",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeOverlap",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LeftSocket",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RightCull",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RightSocket",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "WaterStencil",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPWaterStencilComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/BPWaterStencilComponent.0"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPTrenchIntCommon_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.27"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.31"
+        }
+      ],
+      "VariableGuid": "D597D6C7-40A8A910-7F249EA8-8271BCB4",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPTrenchIntCommon_C:BPLandscapeCullStaticMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.6"
+      },
+      "VariableGuid": "5E56BF15-4CB7FA4C-EB2AEBA2-9C735F96",
+      "InternalVariableName": "BPLandscapeCullStaticMeshComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPTrenchIntCommon_C:BackCull_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.5"
+      },
+      "VariableGuid": "29245DD7-46138610-C4BC9995-7205F481",
+      "InternalVariableName": "BackCull"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPTrenchIntCommon_C:LeftCull_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.8"
+      },
+      "VariableGuid": "58E2A95B-4950F528-742F719F-E93B7EB8",
+      "InternalVariableName": "LeftCull"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoatHullComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoatHullComponent'BPTrenchIntCommon_C:BoatHull_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.3"
+      },
+      "VariableGuid": "449D1A01-49FF91F0-8FE403B0-B819BAE7",
+      "InternalVariableName": "BoatHull"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTrenchIntCommon_C:BackSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.11"
+      },
+      "VariableGuid": "96863471-48072390-C58F2480-94E3356D",
+      "InternalVariableName": "BackSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPTrenchIntCommon_C:LandscapeOverlap_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.4"
+      },
+      "VariableGuid": "CE23FE83-45D7FFB2-5DBA53AD-9AD492D6",
+      "InternalVariableName": "LandscapeOverlap"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTrenchIntCommon_C:LeftSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.13"
+      },
+      "VariableGuid": "6C17F502-423A9DF7-EE7C7496-8AC8ED2E",
+      "InternalVariableName": "LeftSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTrenchIntCommon_C:FrontSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.12"
+      },
+      "VariableGuid": "9593D3A1-4AEC204E-B8F163AB-826685E3",
+      "InternalVariableName": "FrontSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BuildSocketComponent'BPTrenchIntCommon_C:RightSocket_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.14"
+      },
+      "VariableGuid": "DEF49FEB-4BE22384-569F4CB6-15E3B143",
+      "InternalVariableName": "RightSocket"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPTrenchIntCommon_C:FrontCull_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.7"
+      },
+      "VariableGuid": "48D90EE0-4BC77D67-79BA13A8-60303F55",
+      "InternalVariableName": "FrontCull"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPTrenchIntCommon_C:RightCull_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.9"
+      },
+      "VariableGuid": "B77E6D07-427F2877-16243EA5-EFEE69A6",
+      "InternalVariableName": "RightCull"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPWaterStencilComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/BPWaterStencilComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPWaterStencilComponent_C'BPTrenchIntCommon_C:WaterStencil_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.10"
+      },
+      "VariableGuid": "90F27D2A-4D39E48B-46142F91-D33F5D4A",
+      "InternalVariableName": "WaterStencil"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPTrenchIntCommon_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.28"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.32"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.38"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.31"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPTrenchIntCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchIntCommon.28"
+      }
+    }
+  }
+]

@@ -3,8 +3,8 @@
 
 class ABPATLargeAmmoPickup_C : public ATankAmmoPickup
 {
-    class USkeletalMeshComponent* ItemMeshSK;                                         // 0x0440 (size: 0x8)
+    class USkeletalMeshComponent* ItemMeshSK;                                         // 0x0450 (size: 0x8)
 
-}; // Size: 0x448
+}; // Size: 0x458
 
 #endif

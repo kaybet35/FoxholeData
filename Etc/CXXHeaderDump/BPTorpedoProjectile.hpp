@@ -3,8 +3,8 @@
 
 class ABPTorpedoProjectile_C : public ATorpedoProjectile
 {
-    class UStaticMeshComponent* Mesh;                                                 // 0x0370 (size: 0x8)
+    class UStaticMeshComponent* Mesh;                                                 // 0x0378 (size: 0x8)
 
-}; // Size: 0x378
+}; // Size: 0x380
 
 #endif

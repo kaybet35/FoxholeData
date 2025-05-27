@@ -23,6 +23,7 @@ AFacilityRefinery::AFacilityRefinery(const FObjectInitializer& ObjectInitializer
     this->PowerSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("PowerSocket"));
     this->LightComponent = CreateDefaultSubobject<UFacilityLightComponent>(TEXT("LightComponent"));
     this->TransferLocation = CreateDefaultSubobject<USceneComponent>(TEXT("TransferLocation"));
+    this->bAlwaysSetOrdersToBlocked = false;
     this->ReplicatedIndex = -1;
     this->bReplicatedIsActive = false;
     this->MaxOrders = 5;
@@ -52,6 +53,7 @@ void AFacilityRefinery::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
     
     DOREPLIFETIME(AFacilityRefinery, FuelTanks);
     DOREPLIFETIME(AFacilityRefinery, PowerGridInfo);
+    DOREPLIFETIME(AFacilityRefinery, ReservePower);
     DOREPLIFETIME(AFacilityRefinery, ReplicatedIndex);
     DOREPLIFETIME(AFacilityRefinery, bReplicatedIsActive);
 }

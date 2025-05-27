@@ -3,8 +3,8 @@
 
 class ABPWaterPickup_C : public AAmmoPickup
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x0420 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0430 (size: 0x8)
 
-}; // Size: 0x428
+}; // Size: 0x438
 
 #endif

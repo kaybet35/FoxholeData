@@ -1,0 +1,310 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'DemolitionRocketAmmoExplosion_C:SimpleConstructionScript_1'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.12"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'DemolitionRocketAmmoExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'DemolitionRocketAmmoExplosion_C:ExecuteUbergraph_DemolitionRocketAmmoExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WarExplosionEffect'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'DemolitionRocketAmmoExplosion_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.0"
+      },
+      {
+        "ObjectName": "Function'DemolitionRocketAmmoExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.6"
+      },
+      {
+        "ObjectName": "Function'DemolitionRocketAmmoExplosion_C:ExecuteUbergraph_DemolitionRocketAmmoExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'DemolitionRocketAmmoExplosion_C:RadialForce'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.3"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_DemolitionRocketAmmoExplosion": {
+        "ObjectName": "Function'DemolitionRocketAmmoExplosion_C:ExecuteUbergraph_DemolitionRocketAmmoExplosion'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.5"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'DemolitionRocketAmmoExplosion_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "DemolitionRocketAmmoExplosion_C'Default__DemolitionRocketAmmoExplosion_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.2"
+    }
+  },
+  {
+    "Type": "DemolitionRocketAmmoExplosion_C",
+    "Name": "Default__DemolitionRocketAmmoExplosion_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.DemolitionRocketAmmoExplosion_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ParticleSystemOverrides": [
+        {
+          "PhysicalSurface": "SurfaceType_Default",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'RPGDirtImpact'",
+            "ObjectPath": "War/Content/FX/RPGDirtImpact.143"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 200.0,
+              "Y": 200.0,
+              "Z": 200.0
+            },
+            "LifeSpan": 500.0,
+            "FadeScreenSize": 0.01
+          }
+        },
+        {
+          "PhysicalSurface": "SurfaceType8",
+          "ExplosionFX": {
+            "ObjectName": "ParticleSystem'RPGBlast'",
+            "ObjectPath": "War/Content/FX/RPGBlast.117"
+          },
+          "ExplosionSFX": null,
+          "Decal": {
+            "DecalMaterial": null,
+            "DecalSize": {
+              "X": 32.0,
+              "Y": 32.0,
+              "Z": 32.0
+            },
+            "LifeSpan": 10.0,
+            "FadeScreenSize": 0.01
+          }
+        }
+      ],
+      "RadialHitImpact": {
+        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      },
+      "ExplosionLightFadeOut": 0.15,
+      "ExplosionSound": {
+        "ObjectName": "SoundCue'DemolitionRocketExplosion_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Rockets/DemolitionRocketExplosion_Cue.0"
+      },
+      "CameraShake": {
+        "ObjectName": "BlueprintGeneratedClass'GrenadeCameraShake_C'",
+        "ObjectPath": "War/Content/Blueprints/Items/GrenadeCameraShake.0"
+      },
+      "CameraShakeOuterRadius": 1800.0,
+      "ExplosionLight": {
+        "ObjectName": "PointLightComponent'Default__DemolitionRocketAmmoExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.7"
+      },
+      "InitialLifeSpan": 30.0,
+      "RootComponent": {
+        "ObjectName": "PointLightComponent'Default__DemolitionRocketAmmoExplosion_C:ExplosionLight'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.7"
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "RadialForce",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'RadialForceComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_DemolitionRocketAmmoExplosion",
+    "Class": "UScriptClass'IntProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_DemolitionRocketAmmoExplosion",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'DemolitionRocketAmmoExplosion_C:ExecuteUbergraph_DemolitionRocketAmmoExplosion.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.4"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "PointLightComponent",
+    "Name": "ExplosionLight",
+    "Outer": "Default__DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'PointLightComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttenuationRadius": 3000.0,
+      "Intensity": 50.0,
+      "LightColor": {
+        "B": 114,
+        "G": 174,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFAE72"
+      }
+    },
+    "RelativeRotation": {
+      "Pitch": -90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+    },
+    "RelativeLocation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "IntensityNits": 800.0,
+    "bUseInverseSquaredFalloff": true
+  },
+  {
+    "Type": "RadialForceComponent",
+    "Name": "RadialForce_GEN_VARIABLE",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'RadialForceComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 500.0,
+      "ImpulseStrength": 100000.0,
+      "DestructibleDamage": 100.0,
+      "ObjectTypesToAffect": [
+        "ObjectTypeQuery4"
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'RadialForceComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "RadialForceComponent'DemolitionRocketAmmoExplosion_C:RadialForce_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.8"
+      },
+      "ParentComponentOrVariableName": "ExplosionLight",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "ED95043C-4BF9474F-1DC08DA0-C2DD8674",
+      "InternalVariableName": "RadialForce"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_1",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'DemolitionRocketAmmoExplosion_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.9"
+      },
+      "VariableGuid": "7087B329-46E22DDE-4D14E59F-86318DAD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_1",
+    "Outer": "DemolitionRocketAmmoExplosion_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'DemolitionRocketAmmoExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'DemolitionRocketAmmoExplosion_C:SimpleConstructionScript_1.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'DemolitionRocketAmmoExplosion_C:SimpleConstructionScript_1.SCS_Node_4'",
+        "ObjectPath": "War/Content/Blueprints/Items/DemolitionRocketAmmoExplosion.11"
+      }
+    }
+  }
+]

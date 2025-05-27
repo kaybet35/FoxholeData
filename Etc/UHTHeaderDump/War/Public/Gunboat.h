@@ -48,10 +48,10 @@ public:
     bool IsGunnerWorking(int32 GunnerIndex) const override PURE_VIRTUAL(IsGunnerWorking, return false;);
     
     UFUNCTION(BlueprintCallable)
-    bool IsFiring(int32 GunnerIndex) const override PURE_VIRTUAL(IsFiring, return false;);
+    bool IsGunnerDeployed(int32 GunnerIndex, bool bTestFullDeploy) const override PURE_VIRTUAL(IsGunnerDeployed, return false;);
     
     UFUNCTION(BlueprintCallable)
-    bool IsDeployed(int32 GunnerIndex, bool bTestFullDeploy) const override PURE_VIRTUAL(IsDeployed, return false;);
+    bool IsFiring(int32 GunnerIndex) const override PURE_VIRTUAL(IsFiring, return false;);
     
     UFUNCTION(BlueprintCallable)
     float GetTrackingSpeedModifier(int32 GunnerIndex) const override PURE_VIRTUAL(GetTrackingSpeedModifier, return 0.0f;);

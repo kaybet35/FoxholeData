@@ -54,7 +54,7 @@ enum class ESimScreen : int32 {
     ActivityLog,
     RegionLog,
     GlobalLog,
-    FuelSilo,
+    Pipeline,
     OilRefinery,
     AssemblyStation,
     Facility,
@@ -63,5 +63,8 @@ enum class ESimScreen : int32 {
     WarStart,
     WeatherStation,
     AlertsLog,
+    ConstructionEquipment,
+    FireSuppression,
+    FortEmp,
 };
 

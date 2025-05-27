@@ -21,6 +21,7 @@ UBuildSocketComponent::UBuildSocketComponent(const FObjectInitializer& ObjectIni
     this->MinimumPathSeparation = 0.00f;
     this->bOnlyTestMinimumPathSeparationOnUnconnected = false;
     this->bAllowRotatedPlacement = false;
+    this->bIgnoreOwnerConnectedActorsWhenSnapped = true;
 }
 
 

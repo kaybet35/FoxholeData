@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPTrenchConnectorT3_C : AConcreteFortConnector
+---@class ABPTrenchConnectorT3_C : AFortConnector
 ---@field RoofModSplineTarget USceneComponent
 ---@field TrenchConnectorCommonT3 UTemplateComponent
 ---@field CornerBackRight UStaticMeshComponent

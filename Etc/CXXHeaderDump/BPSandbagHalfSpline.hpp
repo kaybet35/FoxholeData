@@ -3,11 +3,11 @@
 
 class ABPSandbagHalfSpline_C : public AWall
 {
-    class USceneComponent* SandbagTarget;                                             // 0x07D0 (size: 0x8)
-    class USplineConnectorComponent* Sandbag;                                         // 0x07D8 (size: 0x8)
-    class UBuildSocketComponent* BackSocket;                                          // 0x07E0 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x07E8 (size: 0x8)
+    class USceneComponent* SandbagTarget;                                             // 0x0800 (size: 0x8)
+    class USplineConnectorComponent* Sandbag;                                         // 0x0808 (size: 0x8)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0810 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0818 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x820
 
 #endif

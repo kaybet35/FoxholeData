@@ -3,6 +3,6 @@
 
 class ABPShippable_C : public AShippable
 {
-}; // Size: 0x8E0
+}; // Size: 0x910
 
 #endif

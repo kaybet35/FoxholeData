@@ -3,9 +3,9 @@
 
 class ABPFacilityMineResource3Destroyed_C : public ADestroyedFacilityRefinery
 {
-    class UStaticMeshComponent* FacilityMineResource1BinDestroyed;                    // 0x0650 (size: 0x8)
-    class UStaticMeshComponent* MainMesh;                                             // 0x0658 (size: 0x8)
+    class UStaticMeshComponent* FacilityMineResource1BinDestroyed;                    // 0x0680 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x0688 (size: 0x8)
 
-}; // Size: 0x660
+}; // Size: 0x690
 
 #endif

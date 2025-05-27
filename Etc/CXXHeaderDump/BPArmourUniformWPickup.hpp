@@ -3,6 +3,6 @@
 
 class ABPArmourUniformWPickup_C : public ABPUniformPickup_C
 {
-}; // Size: 0x3F0
+}; // Size: 0x3F8
 
 #endif

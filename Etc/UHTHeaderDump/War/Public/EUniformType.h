@@ -25,6 +25,8 @@ enum class EUniformType : uint8 {
     SoldierW,
     TankC,
     TankW,
+    NavalC,
+    NavalW,
     MAX,
 };
 

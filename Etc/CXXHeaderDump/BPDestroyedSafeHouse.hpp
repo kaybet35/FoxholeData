@@ -3,9 +3,9 @@
 
 class ABPDestroyedSafeHouse_C : public ADestroyedStructure
 {
-    class UStaticMeshComponent* Roof;                                                 // 0x05D8 (size: 0x8)
-    class UStaticMeshComponent* StaticMesh;                                           // 0x05E0 (size: 0x8)
+    class UStaticMeshComponent* Roof;                                                 // 0x0600 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0608 (size: 0x8)
 
-}; // Size: 0x5E8
+}; // Size: 0x610
 
 #endif

@@ -3,6 +3,6 @@
 
 class UBPSubmarineDivingOfficer_C : public USubmarineDivingMountComponent
 {
-}; // Size: 0x870
+}; // Size: 0x878
 
 #endif

@@ -3,6 +3,6 @@
 
 class ABPBayonetPickup_C : public AAccessoryPickup
 {
-}; // Size: 0x3F8
+}; // Size: 0x400
 
 #endif

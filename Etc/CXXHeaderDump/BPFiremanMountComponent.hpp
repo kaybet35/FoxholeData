@@ -3,6 +3,6 @@
 
 class UBPFiremanMountComponent_C : public UFiremanMountComponent
 {
-}; // Size: 0x850
+}; // Size: 0x858
 
 #endif

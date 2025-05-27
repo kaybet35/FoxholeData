@@ -9,5 +9,6 @@ FFactionResourceState::FFactionResourceState() {
     this->TargetIronAmount = 0;
     this->RareMetalAmount = 0;
     this->TargetRareMetalAmount = 0;
+    this->ActivityAmount = 0.00f;
 }
 

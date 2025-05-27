@@ -3,6 +3,6 @@
 
 class ABPATAmmoPickup_C : public ATankAmmoPickup
 {
-}; // Size: 0x440
+}; // Size: 0x450
 
 #endif

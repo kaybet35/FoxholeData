@@ -1,16 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "FortBuildSite.h"
-#include "FuelTank.h"
+#include "FacilityRefineryBuildSite.h"
 #include "EngineRoomBuildSite.generated.h"
 
 UCLASS(Blueprintable)
-class WAR_API AEngineRoomBuildSite : public AFortBuildSite {
+class WAR_API AEngineRoomBuildSite : public AFacilityRefineryBuildSite {
     GENERATED_BODY()
 public:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
-    FFuelTank FuelTank;
-    
     AEngineRoomBuildSite(const FObjectInitializer& ObjectInitializer);
 
 };

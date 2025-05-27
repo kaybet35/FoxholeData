@@ -3,6 +3,6 @@
 
 class UBPATRPGLightCItemComponent_C : public UBPATRPGCItemComponent_C
 {
-}; // Size: 0x960
+}; // Size: 0x968
 
 #endif

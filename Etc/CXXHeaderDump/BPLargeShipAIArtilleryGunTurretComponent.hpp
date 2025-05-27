@@ -3,6 +3,6 @@
 
 class UBPLargeShipAIArtilleryGunTurretComponent_C : public UAIArtilleryGunTurretComponent
 {
-}; // Size: 0x400
+}; // Size: 0x420
 
 #endif

@@ -5,6 +5,8 @@
 #include "Templates/SubclassOf.h"
 #include "SeatComponent.generated.h"
 
+class APlayerController;
+class ASimCharacter;
 class UBoxComponent;
 class UMountComponent;
 
@@ -65,6 +67,12 @@ protected:
     bool bIsEnabled;
     
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    APlayerController* PC;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    ASimCharacter* Character;
+    
     USeatComponent(const FObjectInitializer& ObjectInitializer);
 
 };

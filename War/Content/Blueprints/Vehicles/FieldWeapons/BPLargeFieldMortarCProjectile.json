@@ -1,0 +1,234 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "SK_MortarTankAmmo_0",
+    "Outer": "BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BPMortarTankProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPLargeFieldMortarCProjectile_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPLargeFieldMortarCProjectile_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BPMortarTankProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Items/BPMortarTankProjectile.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPLargeFieldMortarCProjectile_C:SK_MortarTankAmmo_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.0"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPLargeFieldMortarCProjectile_C'Default__BPLargeFieldMortarCProjectile_C'",
+      "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.2"
+    }
+  },
+  {
+    "Type": "BPLargeFieldMortarCProjectile_C",
+    "Name": "Default__BPLargeFieldMortarCProjectile_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.BPLargeFieldMortarCProjectile_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MovementComp": {
+        "ObjectName": "ProjectileMovementComponent'Default__BPLargeFieldMortarCProjectile_C:ProjectileComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.6"
+      },
+      "CollisionComp": {
+        "ObjectName": "SphereComponent'Default__BPLargeFieldMortarCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.12"
+      },
+      "ParticleComp": {
+        "ObjectName": "ParticleSystemComponent'Default__BPLargeFieldMortarCProjectile_C:ParticleComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.5"
+      },
+      "LoopingAudio": {
+        "ObjectName": "AudioComponent'Default__BPLargeFieldMortarCProjectile_C:LoopingAudio'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.3"
+      },
+      "ExplosiveCodeName": "MortarTankAmmoBR",
+      "AutoDetonateTime": 2.75,
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__BPLargeFieldMortarCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.12"
+      }
+    }
+  },
+  {
+    "Type": "AudioComponent",
+    "Name": "LoopingAudio",
+    "Outer": "Default__BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'AudioComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPLargeFieldMortarCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.12"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "ParticleComp",
+    "Outer": "Default__BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPLargeFieldMortarCProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.12"
+      }
+    }
+  },
+  {
+    "Type": "ProjectileMovementComponent",
+    "Name": "ProjectileComp",
+    "Outer": "Default__BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'ProjectileMovementComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ProjectileGravityScale": 4.0
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPLargeFieldMortarCProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.7"
+      },
+      "VariableGuid": "AF3504CB-4A663998-49D95DB7-C638B653",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPLargeFieldMortarCProjectile_C:SK_MortarTankAmmo_0_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.11"
+      },
+      "ParentComponentOrVariableName": "SphereComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "0A0D054D-4EF9AD19-87638E97-B17614AA",
+      "InternalVariableName": "SK_MortarTankAmmo_0"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPLargeFieldMortarCProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPLargeFieldMortarCProjectile_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPLargeFieldMortarCProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Vehicles/FieldWeapons/BPLargeFieldMortarCProjectile.8"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SK_MortarTankAmmo_0_GEN_VARIABLE",
+    "Outer": "BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_MortarTankAmmo'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_MortarTankAmmo.0"
+      },
+      "RelativeLocation": {
+        "X": -34.00737,
+        "Y": -7.663915E-06,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComp",
+    "Outer": "Default__BPLargeFieldMortarCProjectile_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

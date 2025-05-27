@@ -3,9 +3,9 @@
 
 class ABPFacilityCatwalkStairs_C : public ACatWalk
 {
-    class UStaticMeshComponent* FacilityCatwalkRamp;                                  // 0x07E0 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x07E8 (size: 0x8)
+    class UStaticMeshComponent* FacilityCatwalkRamp;                                  // 0x0810 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0818 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x820
 
 #endif

@@ -3,8 +3,8 @@
 
 class ABPLRArtilleryAmmoPickup_C : public AExplosiveAmmoPickup
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0440 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0450 (size: 0x8)
 
-}; // Size: 0x448
+}; // Size: 0x458
 
 #endif

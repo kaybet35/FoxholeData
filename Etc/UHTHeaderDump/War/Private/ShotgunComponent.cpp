@@ -3,6 +3,7 @@
 
 UShotgunComponent::UShotgunComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->ShotRadius = 15.00f;
+    this->MaxHitsPerShot = 8;
 }
 
 void UShotgunComponent::OnRep_SimulatedHitNotifies() {

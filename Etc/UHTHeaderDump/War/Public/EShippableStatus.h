@@ -12,6 +12,7 @@ enum class EShippableStatus : uint8 {
     ArmourNeeded,
     MustRemoveMud,
     CargoInside,
+    CargoOnTop,
     OccupantsInside,
     MustBePackaged,
     MustBeStanding,
@@ -59,5 +60,6 @@ enum class EShippableStatus : uint8 {
     MustSurface,
     MustUndeploy,
     MustRetrievePatients,
+    MustSelectStructure,
 };
 

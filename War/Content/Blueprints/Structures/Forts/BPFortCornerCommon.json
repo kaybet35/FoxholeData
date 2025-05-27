@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "DecalRight",
+    "Name": "BPLandscapeCullStaticMeshComponent",
     "Outer": "BPFortCornerCommon_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'DecalComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
     }
   },
   {
@@ -28,7 +28,7 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortCornerCommon_C:DecalRight'",
+        "ObjectName": "ObjectProperty'BPFortCornerCommon_C:BPLandscapeCullStaticMeshComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.0"
       },
       {
@@ -233,9 +233,33 @@
       "ComponentTags": [
         "LandscapeOverlap",
         "IncludeInBuildSite",
-        "PreserveProfileInBuildSite"
+        "PreserveProfileInBuildSite",
+        "LandscapeHoleFortCorner"
       ],
       "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "BPLandscapeCullStaticMeshComponent_GEN_VARIABLE",
+    "Outer": "BPFortCornerCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FortCornerCullPlane'",
+        "ObjectPath": "War/Content/Blueprints/Culling/FortCornerCullPlane.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 5.9,
+        "Y": 5.9,
+        "Z": 1.0
+      }
     }
   },
   {
@@ -277,13 +301,13 @@
     "Properties": {
       "SocketTags": [
         {
-          "SocketTypeMask": 2,
+          "SocketTypeMask": 34359738370,
           "SocketTypeCategory": 4,
-          "Tag": "DirtAngle",
-          "ShowsTag": "DirtAngleConnected",
+          "Tag": "DirtAngleFort",
+          "ShowsTag": "None",
           "ShowsTagBoth": "None",
           "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
+          "HidesTagBoth": "BreachAngle",
           "HidesTagHigher": "None",
           "MaxZOffset": 0.0,
           "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
@@ -292,9 +316,22 @@
         {
           "SocketTypeMask": 4,
           "SocketTypeCategory": 4,
-          "Tag": "DirtAngle",
-          "ShowsTag": "DirtAngleConnected",
+          "Tag": "DirtAngleTrench",
+          "ShowsTag": "DirtAngleFortSides",
           "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "BreachAngle",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 68719476736,
+          "SocketTypeCategory": 4,
+          "Tag": "DirtAngleTrench",
+          "ShowsTag": "DirtAngleFortSides",
+          "ShowsTagBoth": "BreachAngle",
           "ShowsTagHigher": "None",
           "HidesTagBoth": "None",
           "HidesTagHigher": "None",
@@ -325,13 +362,13 @@
     "Properties": {
       "SocketTags": [
         {
-          "SocketTypeMask": 2,
+          "SocketTypeMask": 34359738370,
           "SocketTypeCategory": 4,
           "Tag": "DirtBack",
           "ShowsTag": "None",
           "ShowsTagBoth": "None",
           "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
+          "HidesTagBoth": "BreachBack",
           "HidesTagHigher": "None",
           "MaxZOffset": 0.0,
           "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
@@ -342,6 +379,19 @@
           "SocketTypeCategory": 4,
           "Tag": "SideBack",
           "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "BreachBack",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 68719476736,
+          "SocketTypeCategory": 4,
+          "Tag": "SideBack",
+          "ShowsTag": "BreachBack",
           "ShowsTagBoth": "None",
           "ShowsTagHigher": "None",
           "HidesTagBoth": "None",
@@ -408,13 +458,13 @@
     "Properties": {
       "SocketTags": [
         {
-          "SocketTypeMask": 2,
+          "SocketTypeMask": 34359738370,
           "SocketTypeCategory": 4,
           "Tag": "DirtLeft",
           "ShowsTag": "None",
           "ShowsTagBoth": "None",
           "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
+          "HidesTagBoth": "BreachLeft",
           "HidesTagHigher": "None",
           "MaxZOffset": 0.0,
           "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
@@ -425,6 +475,19 @@
           "SocketTypeCategory": 4,
           "Tag": "SideLeft",
           "ShowsTag": "None",
+          "ShowsTagBoth": "None",
+          "ShowsTagHigher": "None",
+          "HidesTagBoth": "BreachLeft",
+          "HidesTagHigher": "None",
+          "MaxZOffset": 0.0,
+          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
+          "ConnectorAttachmentTag": "None"
+        },
+        {
+          "SocketTypeMask": 68719476736,
+          "SocketTypeCategory": 4,
+          "Tag": "SideLeft",
+          "ShowsTag": "BreachLeft",
           "ShowsTagBoth": "None",
           "ShowsTagHigher": "None",
           "HidesTagBoth": "None",
@@ -459,8 +522,8 @@
         "ObjectPath": "War/Content/Materials/Decals/FortDirtDecal04.0"
       },
       "RelativeLocation": {
-        "X": -410.0,
-        "Y": -0.000671,
+        "X": -340.74225,
+        "Y": -0.0007261354,
         "Z": -35.0
       },
       "RelativeRotation": {
@@ -470,7 +533,7 @@
       },
       "RelativeScale3D": {
         "X": 0.4,
-        "Y": 1.0,
+        "Y": 0.7,
         "Z": 1.65
       },
       "Mobility": "EComponentMobility::Stationary",
@@ -493,19 +556,19 @@
         "ObjectPath": "War/Content/Materials/Decals/FortDirtDecal01.0"
       },
       "RelativeLocation": {
-        "X": 410.0,
-        "Y": 0.002487,
-        "Z": -35.0
+        "X": 143.70465,
+        "Y": 154.9467,
+        "Z": -34.999744
       },
       "RelativeRotation": {
         "Pitch": -90.0,
-        "Yaw": -26.565033,
-        "Roll": -63.43405
+        "Yaw": 1106.5651,
+        "Roll": -72.963104
       },
       "RelativeScale3D": {
         "X": 0.4,
-        "Y": 1.0,
-        "Z": 1.65
+        "Y": 0.8,
+        "Z": 1.75
       },
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
@@ -527,9 +590,9 @@
         "ObjectPath": "War/Content/Materials/Decals/FortDirtDecal03.0"
       },
       "RelativeLocation": {
-        "X": 0.001373,
-        "Y": -409.99994,
-        "Z": -35.0
+        "X": 0.0009705308,
+        "Y": -340.74225,
+        "Z": -34.99994
       },
       "RelativeRotation": {
         "Pitch": -90.0,
@@ -538,46 +601,12 @@
       },
       "RelativeScale3D": {
         "X": 0.4,
-        "Y": 1.0,
+        "Y": 0.7,
         "Z": 1.65
       },
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "SideLeft",
-        "ShowWeatherFX",
-        "DontHideWeatherFX"
-      ]
-    }
-  },
-  {
-    "Type": "DecalComponent",
-    "Name": "DecalRight_GEN_VARIABLE",
-    "Outer": "BPFortCornerCommon_C",
-    "Class": "UScriptClass'DecalComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "DecalMaterial": {
-        "ObjectName": "MaterialInstanceConstant'FortDirtDecal02'",
-        "ObjectPath": "War/Content/Materials/Decals/FortDirtDecal02.0"
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 410.0,
-        "Z": -35.0
-      },
-      "RelativeRotation": {
-        "Pitch": -90.0,
-        "Yaw": 0.0,
-        "Roll": -0.0
-      },
-      "RelativeScale3D": {
-        "X": 0.4,
-        "Y": 1.0,
-        "Z": 1.65
-      },
-      "Mobility": "EComponentMobility::Stationary",
-      "ComponentTags": [
-        "SideRight",
         "ShowWeatherFX",
         "DontHideWeatherFX"
       ]
@@ -775,19 +804,38 @@
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.28"
         },
         {
-          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.27"
         }
       ],
       "VariableGuid": "3456C512-46BD5A51-B2C965AB-743BC8CC",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPFortCornerCommon_C:BPLandscapeCullStaticMeshComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.5"
+      },
+      "VariableGuid": "932726BD-496740E9-4CDA2EAA-621BBDD3",
+      "InternalVariableName": "BPLandscapeCullStaticMeshComponent"
     }
   },
   {
@@ -803,7 +851,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPFortCornerCommon_C:DecalFront_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.12"
       },
       "VariableGuid": "2D43D2AA-4D0CFCAA-F9FFC887-AA804515",
       "InternalVariableName": "DecalFront"
@@ -822,29 +870,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BPWaterStencilComponent_C'BPFortCornerCommon_C:WaterStencil_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.5"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.6"
       },
       "VariableGuid": "FCCDEDB0-4E7D3BD0-F63A21A5-0862A557",
       "InternalVariableName": "WaterStencil"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_12",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'DecalComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "DecalComponent'BPFortCornerCommon_C:DecalRight_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.13"
-      },
-      "VariableGuid": "9234C12E-4742F3D6-F82F8492-3B82FC05",
-      "InternalVariableName": "DecalRight"
     }
   },
   {
@@ -860,7 +889,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPFortCornerCommon_C:FoundationSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.9"
       },
       "VariableGuid": "B9E3D210-48DDB019-1FA3B68C-A8072FE2",
       "InternalVariableName": "FoundationSocket"
@@ -879,7 +908,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPFortCornerCommon_C:LeftFortSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.10"
       },
       "VariableGuid": "1AF5167D-45A0974D-CEF13685-B818BD79",
       "InternalVariableName": "LeftFortSocket"
@@ -898,7 +927,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPFortCornerCommon_C:BackFortSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.8"
       },
       "VariableGuid": "CBD3FADB-4878A2F0-436A37A7-425FF818",
       "InternalVariableName": "BackFortSocket"
@@ -936,7 +965,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPFortCornerCommon_C:AngleFortSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.7"
       },
       "VariableGuid": "E5FB9A5C-4ECE7CDF-C8B8B692-0BA04D62",
       "InternalVariableName": "AngleFortSocket"
@@ -974,7 +1003,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPFortCornerCommon_C:DecalLeft_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.13"
       },
       "VariableGuid": "F76917CB-4AD46FC0-318DFD9D-C02084AF",
       "InternalVariableName": "DecalLeft"
@@ -993,7 +1022,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPFortCornerCommon_C:DecalBack_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.11"
       },
       "VariableGuid": "CDB6C7ED-4F4B799D-190A00AB-17A0DB6D",
       "InternalVariableName": "DecalBack"
@@ -1051,15 +1080,15 @@
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.28"
         },
         {
-          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortCornerCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommon.27"
         }
       ],
       "DefaultSceneRootNode": {

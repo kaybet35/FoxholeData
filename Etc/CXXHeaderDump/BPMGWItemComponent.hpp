@@ -3,6 +3,6 @@
 
 class UBPMGWItemComponent_C : public UBPMGCItemComponent_C
 {
-}; // Size: 0x9A0
+}; // Size: 0x9A8
 
 #endif

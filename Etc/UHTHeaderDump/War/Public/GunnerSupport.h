@@ -30,10 +30,10 @@ public:
     virtual bool IsGunnerWorking(int32 GunnerIndex) const PURE_VIRTUAL(IsGunnerWorking, return false;);
     
     UFUNCTION(BlueprintCallable)
-    virtual bool IsFiring(int32 GunnerIndex) const PURE_VIRTUAL(IsFiring, return false;);
+    virtual bool IsGunnerDeployed(int32 GunnerIndex, bool bTestFullDeploy) const PURE_VIRTUAL(IsGunnerDeployed, return false;);
     
     UFUNCTION(BlueprintCallable)
-    virtual bool IsDeployed(int32 GunnerIndex, bool bTestFullDeploy) const PURE_VIRTUAL(IsDeployed, return false;);
+    virtual bool IsFiring(int32 GunnerIndex) const PURE_VIRTUAL(IsFiring, return false;);
     
     UFUNCTION(BlueprintCallable)
     virtual float GetTrackingSpeedModifier(int32 GunnerIndex) const PURE_VIRTUAL(GetTrackingSpeedModifier, return 0.0f;);

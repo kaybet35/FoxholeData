@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchConnectorBuildSite_C : AFortConnectorBuildSite
+---@field TrenchConnectorCommonT1T2 UTemplateComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
 ---@field ReferenceB USceneComponent
 ---@field ReferenceD USceneComponent

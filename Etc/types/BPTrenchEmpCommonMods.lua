@@ -2,7 +2,6 @@
 
 ---@class ABPTrenchEmpCommonMods_C : ATemplate
 ---@field BackRightDefenseModSlot UBPTrenchDefenseModSlot_C
----@field UnderModSlot UBPTrenchUnderModSlot_C
 ---@field FrontRightDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field RightDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field LeftDefenseModSlot UBPTrenchDefenseModSlot_C

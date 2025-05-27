@@ -10,6 +10,9 @@ UStructureSeatComponent::UStructureSeatComponent(const FObjectInitializer& Objec
     this->bOccupantCrouches = true;
 }
 
+void UStructureSeatComponent::OnRep_CurrentOccupant() {
+}
+
 void UStructureSeatComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     

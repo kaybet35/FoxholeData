@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchCommon_C : ATemplate
+---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field BackSocket UBuildSocketComponent
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field RightSocket UBuildSocketComponent

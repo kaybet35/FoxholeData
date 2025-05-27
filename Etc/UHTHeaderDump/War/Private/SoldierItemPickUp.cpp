@@ -7,11 +7,11 @@ ASoldierItemPickUp::ASoldierItemPickUp(const FObjectInitializer& ObjectInitializ
     this->Head = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Head"));
     this->Hands = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Hands"));
     this->Helmet = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Helmet"));
-    this->Torso->SetupAttachment(RootComponent);
     this->Legs->SetupAttachment(Torso);
     this->Head->SetupAttachment(Torso);
     this->Hands->SetupAttachment(Torso);
     this->Helmet->SetupAttachment(Torso);
+    this->Torso->SetupAttachment(RootComponent);
 }
 
 

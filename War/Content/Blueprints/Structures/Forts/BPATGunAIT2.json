@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "BlockBuildSiteMovement",
+    "Name": "PowerConsumer",
     "Outer": "BPATGunAIT2_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'PowerConsumerComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPATGunAIT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.26"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.32"
       }
     },
     "SuperStruct": {
@@ -28,32 +28,40 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:BlockBuildSiteMovement'",
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:PowerConsumer'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortSpotLight'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.15"
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommonT2BreachedWalls'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.17"
       },
       {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:Roof'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.16"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:Floor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.11"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommonDirt'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.13"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommon'",
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:BlockBuildSiteMovement'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.12"
       },
       {
-        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommonMods'",
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortSpotLight'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.18"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:Roof'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.19"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:Floor'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommonDirtT2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.15"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommon'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.14"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATGunAIT2_C:FortCommonMods'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.16"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -74,12 +82,9 @@
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPATGunAIT2.BPATGunAIT2_C'",
     "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "PowerInfo": {
-        "PowerDelta": -600
-      },
       "SkelMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPATGunAIT2_C:SkelMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.33"
       },
       "AITurretComponent": {
         "ObjectName": "AIGunTurretComponent'Default__BPATGunAIT2_C:AITurretComponent'",
@@ -96,7 +101,7 @@
       "ShouldAggroOnDamage": true,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPATGunAIT2_C:FlagMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.31"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.37"
       },
       "ObstructionCheckOverrideExtents": {
         "X": 250.0,
@@ -113,7 +118,10 @@
         "ObjectName": "BlueprintGeneratedClass'BPATGunAIT2Destroyed_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2Destroyed.1"
       },
-      "bClearModificationsOnDowngrade": true,
+      "BreachedStructureClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPATGunAIT2Breached_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2Breached.1"
+      },
       "Description": {
         "Namespace": "",
         "Key": "30F9241E45E138237EF27388086D76A0",
@@ -135,7 +143,7 @@
         "Y": 0.0,
         "Z": 114.0
       },
-      "ValidBuildTools": 17,
+      "ValidBuildTools": 49,
       "CodeName": "ATGunAIT2",
       "ChassisName": {
         "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
@@ -171,14 +179,18 @@
         "ObjectPath": "War/Content/Audio/SFX/BunkerExplosion_Cue.0"
       },
       "TechComponentIDs": [
-        "ETechComponentID::ATGarrison"
+        "ETechComponentID::T2Garrison"
       ],
+      "ModularMountsComponent": {
+        "ObjectName": "ModularMountsComponent'Default__BPATGunAIT2_C:ModularMountsComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.11"
+      },
       "InfrastructureComponent": {
         "ObjectName": "InfrastructureComponent'Default__BPATGunAIT2_C:InfrastructureComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.10"
       },
-      "MaxHealth": 1650,
-      "Health": 1650,
+      "MaxHealth": 1600,
+      "Health": 1600,
       "UpgradeStructureCodeName": "ATGunAIT3",
       "MapIntelligenceType": "EMapIntelligenceType::Defense",
       "ClaimStatus": {
@@ -186,7 +198,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPATGunAIT2_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.36"
       },
       "PrimaryActorTick": {
         "TickGroup": "TG_DuringPhysics"
@@ -213,30 +225,35 @@
         "ObjectPath": "War/Content/Blueprints/Items/GunTurretExplosion.1"
       },
       "AllowedTargetTypes": 30,
+      "GunnerIndex": 8,
       "TrackingSpeed": 37.24,
       "TrackingThreshold": 0.57,
       "MaximumRange": 3000.0,
       "MaximumReachability": 5000.0,
-      "DamageType": {
-        "ObjectName": "BlueprintGeneratedClass'BPArmourPiercingDamageType_C'",
-        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPArmourPiercingDamageType.0"
+      "DamageAttributes": {
+        "DamageType": {
+          "ObjectName": "BlueprintGeneratedClass'BPArmourPiercingDamageType_C'",
+          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPArmourPiercingDamageType.0"
+        },
+        "ShotSoundCue": {
+          "ObjectName": "SoundCue'GunTurretShot_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/GunTurret/GunTurretShot_Cue.0"
+        },
+        "MuzzleFlashPS": {
+          "ObjectName": "ParticleSystem'FieldGunMF'",
+          "ObjectPath": "War/Content/FX/FieldGunMF.82"
+        },
+        "WeaponDamage": 600.0,
+        "BestJitterConeHalfAngle": 2.0,
+        "WorstJitterConeHalfAngle": 5.0,
+        "FiringPeriod": 6.0,
+        "TimeToFullFireRateAndAccuracy": 2.0,
+        "EnemyPursueDuration": 15.0
       },
-      "ShotSoundCue": {
-        "ObjectName": "SoundCue'GunTurretShot_Cue'",
-        "ObjectPath": "War/Content/Audio/SFX/Weapons/GunTurret/GunTurretShot_Cue.0"
+      "DamageAttributesAlternate": {
+        "WeaponDamage": 600.0
       },
-      "MuzzleFlashPS": {
-        "ObjectName": "ParticleSystem'FieldGunMF'",
-        "ObjectPath": "War/Content/FX/FieldGunMF.82"
-      },
-      "WeaponDamage": 600.0,
-      "WeaponDamageAgainstVehicles": 600.0,
-      "BestJitterConeHalfAngle": 2.0,
-      "WorstJitterConeHalfAngle": 5.0,
-      "FiringPeriod": 3.0,
-      "TimeToFullFireRateAndAccuracy": 2.0,
       "FiringConeAngle": 90.0,
-      "EnemyPursueDuration": 15.0,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPATGunAIT2_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.6"
@@ -405,6 +422,28 @@
     }
   },
   {
+    "Type": "ModularMountsComponent",
+    "Name": "ModularMountsComponent",
+    "Outer": "Default__BPATGunAIT2_C",
+    "Class": "UScriptClass'ModularMountsComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BlockBuildSiteMovement",
+    "Outer": "BPATGunAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "ObjectProperty",
     "Name": "Floor",
     "Outer": "BPATGunAIT2_C",
@@ -430,7 +469,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonDirt",
+    "Name": "FortCommonDirtT2",
     "Outer": "BPATGunAIT2_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -443,6 +482,18 @@
   {
     "Type": "ObjectProperty",
     "Name": "FortCommonMods",
+    "Outer": "BPATGunAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonT2BreachedWalls",
     "Outer": "BPATGunAIT2_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -477,6 +528,17 @@
     }
   },
   {
+    "Type": "PowerConsumerComponent",
+    "Name": "PowerConsumer_GEN_VARIABLE",
+    "Outer": "BPATGunAIT2_C",
+    "Class": "UScriptClass'PowerConsumerComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PowerConsumed": 0.001,
+      "bConsumeWhenVisibilityLimited": true
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPATGunAIT2_C",
@@ -496,7 +558,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPATGunAIT2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.21"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -515,7 +577,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPATGunAIT2_C:Roof_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.35"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -535,13 +597,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPATGunAIT2_C:FortCommonDirt_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.33"
+        "ObjectName": "TemplateComponent'BPATGunAIT2_C:FortCommonDirtT2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.39"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "54866AEE-45B04CC7-D8CFB785-E5B6BD2C",
-      "InternalVariableName": "FortCommonDirt"
+      "InternalVariableName": "FortCommonDirtT2"
     }
   },
   {
@@ -557,7 +619,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPATGunAIT2_C:FortCommonMods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.34"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.40"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -578,7 +640,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPATGunAIT2_C:FortCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.32"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.38"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -599,7 +661,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPATGunAIT2_C:Floor_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.34"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -620,7 +682,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPATGunAIT2_C:FortSpotLight_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.42"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -650,6 +712,46 @@
     }
   },
   {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'PowerConsumerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "PowerConsumerComponent'BPATGunAIT2_C:PowerConsumer_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.20"
+      },
+      "VariableGuid": "86ADA351-4B603028-D46E2782-3F0621AE",
+      "InternalVariableName": "PowerConsumer"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPATGunAIT2_C:FortCommonT2BreachedWalls_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.41"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "AD838F96-452BED4C-F992BFAA-92AECDF1",
+      "InternalVariableName": "FortCommonT2BreachedWalls"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPATGunAIT2_C",
@@ -659,66 +761,82 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.25"
         },
         {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.26"
         },
         {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.24"
         },
         {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.28"
+        },
+        {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.30"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.25"
         },
         {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.26"
         },
         {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.20"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.23"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.19"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.24"
         },
         {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.28"
+        },
+        {
           "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.25"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.29"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.30"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPATGunAIT2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPATGunAIT2.22"
       }
     }
   },
@@ -933,14 +1051,14 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonDirt_GEN_VARIABLE",
+    "Name": "FortCommonDirtT2_GEN_VARIABLE",
     "Outer": "BPATGunAIT2_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirt_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirt.1"
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirtT2_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirtT2.1"
       }
     }
   },
@@ -954,6 +1072,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortCommonMods_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonMods.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonT2BreachedWalls_GEN_VARIABLE",
+    "Outer": "BPATGunAIT2_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonT2BreachedWalls_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortCommonT2BreachedWalls.1"
       }
     }
   },

@@ -22,6 +22,7 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UTexture2D* LocalMapImage;
     
+public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFont* OtherPlayerNamesFont;
     
@@ -34,7 +35,6 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     UFont* MapGridFont;
     
-public:
     AWarHUD(const FObjectInitializer& ObjectInitializer);
 
 };

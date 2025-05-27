@@ -3,6 +3,6 @@
 
 class ABPCriticalSoldierPickUp_C : public ASoldierItemPickUp
 {
-}; // Size: 0x410
+}; // Size: 0x418
 
 #endif

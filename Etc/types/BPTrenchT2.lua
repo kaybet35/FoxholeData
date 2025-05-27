@@ -1,22 +1,10 @@
 ---@meta
 
 ---@class ABPTrenchT2_C : AFort
+---@field TrenchDirtDecals UTemplateComponent
+---@field TrenchCommonDirtT1T2 UTemplateComponent
 ---@field TrenchCommonMods UTemplateComponent
 ---@field TrenchCommon UTemplateComponent
----@field DirtOpenWallRight UStaticMeshComponent
----@field DirtOpenWallLeft UStaticMeshComponent
----@field DirtFrontRight UStaticMeshComponent
----@field DirtFrontLeft UStaticMeshComponent
----@field DirtBackLeft UStaticMeshComponent
----@field DirtBackRight UStaticMeshComponent
----@field DirtRight UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field DecalRight UDecalComponent
----@field DecalLeft UDecalComponent
----@field DecalBack UDecalComponent
----@field DecalFront UDecalComponent
 ---@field OpenWallRight UStaticMeshComponent
 ---@field OpenWallLeft UStaticMeshComponent
 ---@field CornerFrontRight UStaticMeshComponent

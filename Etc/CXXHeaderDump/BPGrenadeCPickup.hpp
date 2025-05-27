@@ -3,6 +3,6 @@
 
 class ABPGrenadeCPickup_C : public ABPGrenadeWPickup_C
 {
-}; // Size: 0x3E8
+}; // Size: 0x3F0
 
 #endif

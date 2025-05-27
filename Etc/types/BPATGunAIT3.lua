@@ -1,6 +1,8 @@
 ---@meta
 
----@class ABPATGunAIT3_C : AConcreteFortTurretAT
+---@class ABPATGunAIT3_C : AFortTurretAT
+---@field PowerConsumer UPowerConsumerComponent
+---@field FortCommonT3BreachWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field Roof UStaticMeshComponent
 ---@field FortCommonT3Mods UTemplateComponent

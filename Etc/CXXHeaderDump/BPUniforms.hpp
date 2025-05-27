@@ -3,6 +3,6 @@
 
 class UBPUniforms_C : public UUniforms
 {
-}; // Size: 0xA00
+}; // Size: 0xBA8
 
 #endif

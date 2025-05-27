@@ -3,6 +3,6 @@
 
 class UBPMediumTank2TwinCRPGGunner_C : public UProjectileGunnerMountComponent
 {
-}; // Size: 0x8A0
+}; // Size: 0x8B0
 
 #endif

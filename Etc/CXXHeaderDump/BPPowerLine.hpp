@@ -3,8 +3,8 @@
 
 class ABPPowerLine_C : public APowerLine
 {
-    class UCableComponent* Cable;                                                     // 0x07E0 (size: 0x8)
+    class UCableComponent* Cable;                                                     // 0x0810 (size: 0x8)
 
-}; // Size: 0x7E8
+}; // Size: 0x818
 
 #endif

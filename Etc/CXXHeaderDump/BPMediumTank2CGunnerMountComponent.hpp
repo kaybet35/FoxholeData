@@ -3,6 +3,6 @@
 
 class UBPMediumTank2CGunnerMountComponent_C : public UBPDestroyerTankWGunnerMountComponent_C
 {
-}; // Size: 0x8D8
+}; // Size: 0x8D0
 
 #endif

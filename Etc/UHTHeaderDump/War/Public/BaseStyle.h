@@ -83,6 +83,9 @@ public:
     FButtonStyle BasicIconButtonStyle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FButtonStyle InvariantBasicIconButtonStyle;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FButtonStyle ExpandButtonStyle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

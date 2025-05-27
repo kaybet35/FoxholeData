@@ -13,5 +13,6 @@ FWarShardInfo::FWarShardInfo() {
     this->UprisingChanceType = EUprisingChanceType::None;
     this->NormalizedGlobalPopulation = 0.00f;
     this->DescriptionType = EShardDescription::None;
+    this->bFactionLock = false;
 }
 

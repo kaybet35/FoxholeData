@@ -9,7 +9,7 @@ class WAR_API UUniforms : public UObject {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FUniform Data[21];
+    FUniform Data[23];
     
     UUniforms();
 

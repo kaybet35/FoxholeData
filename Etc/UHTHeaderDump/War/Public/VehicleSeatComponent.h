@@ -4,8 +4,6 @@
 #include "SeatComponent.h"
 #include "VehicleSeatComponent.generated.h"
 
-class APlayerController;
-class ASimCharacter;
 class USoundCue;
 
 UCLASS(Blueprintable, ClassGroup=Custom, meta=(BlueprintSpawnableComponent))
@@ -34,12 +32,6 @@ private:
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* EnterSFX;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    APlayerController* PC;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    ASimCharacter* Character;
     
     UVehicleSeatComponent(const FObjectInitializer& ObjectInitializer);
 

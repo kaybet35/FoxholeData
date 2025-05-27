@@ -3,8 +3,8 @@
 
 class ABPFieldMortarCProjectile_C : public ABPMortarTankProjectile_C
 {
-    class USkeletalMeshComponent* SK_MortarTankAmmo_0;                                // 0x0328 (size: 0x8)
+    class USkeletalMeshComponent* SK_MortarTankAmmo_0;                                // 0x0330 (size: 0x8)
 
-}; // Size: 0x330
+}; // Size: 0x338
 
 #endif

@@ -36,6 +36,7 @@ ABuildableStructure::ABuildableStructure(const FObjectInitializer& ObjectInitial
     this->bConnectorCanSnapUnderRoads = false;
     this->BuildSiteClass = NULL;
     this->BaseStructureClass = NULL;
+    this->BreachedStructureClass = NULL;
     this->ProxyActorClass = NULL;
     this->bClearModificationsOnDowngrade = false;
     this->Icon = NULL;

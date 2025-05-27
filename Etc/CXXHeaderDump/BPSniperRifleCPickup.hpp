@@ -3,6 +3,6 @@
 
 class ABPSniperRifleCPickup_C : public AItemPickup
 {
-}; // Size: 0x3E8
+}; // Size: 0x3F0
 
 #endif

@@ -6,6 +6,7 @@ UMountComponent::UMountComponent(const FObjectInitializer& ObjectInitializer) : 
     this->ReloadSoundCue = NULL;
     this->Icon = NULL;
     this->EquippedGripType = EEquippedWeaponGripType::None;
+    this->bUseSingleItemSlotFilter = false;
     this->bMustBeStoppedToInvoke = false;
     this->bUseCharacterRotationForAim = false;
     this->bIsStationary = false;

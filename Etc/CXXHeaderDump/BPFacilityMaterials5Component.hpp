@@ -3,6 +3,6 @@
 
 class UBPFacilityMaterials5Component_C : public ULargeMaterialComponent
 {
-}; // Size: 0x978
+}; // Size: 0x980
 
 #endif

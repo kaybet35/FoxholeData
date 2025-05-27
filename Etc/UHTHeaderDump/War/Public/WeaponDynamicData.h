@@ -77,6 +77,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float TargetStabilityReductionPerShot;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float BreachingModifier;
+    
     WAR_API FWeaponDynamicData();
 };
 

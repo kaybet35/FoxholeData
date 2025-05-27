@@ -3,8 +3,8 @@
 
 class ABPTankMineProxy_C : public ABuildableStructure
 {
-    class UStaticMeshComponent* AntiTankMinePickup;                                   // 0x07C0 (size: 0x8)
+    class UStaticMeshComponent* AntiTankMinePickup;                                   // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7C8
+}; // Size: 0x7F8
 
 #endif

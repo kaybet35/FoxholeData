@@ -27,6 +27,9 @@
 ---@field AnimGraphNode_StateMachine_53CF41914C6EF7CB073DD699FA3956DC FAnimNode_StateMachine
 ---@field AnimGraphNode_LayeredBoneBlend_7311E8414A9DBD197612C2AE2A3C4442 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_BlendSpacePlayer_7E50C1E9493353A8B9D4C49F9B0F59F2 FAnimNode_BlendSpacePlayer
+---@field AnimGraphNode_SequencePlayer_C5F1E396485CE5D877D24FA0FF6476FA FAnimNode_SequencePlayer
+---@field AnimGraphNode_SequencePlayer_D031EDB842C1AE1E7CC9F6B8568014AD FAnimNode_SequencePlayer
+---@field AnimGraphNode_BlendListByBool_C63C2D8C409B462C7F6512BA59AE5A1F FAnimNode_BlendListByBool
 UABP_ScoutTankW_C = {}
 
 ---@param AnimGraph FPoseLink

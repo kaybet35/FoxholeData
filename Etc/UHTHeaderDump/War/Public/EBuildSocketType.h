@@ -39,5 +39,8 @@ enum class EBuildSocketType : uint8 {
     SatchelFoundation,
     SatchelFoundationMount,
     FieldPier,
+    TrenchIntersection,
+    FortBreach,
+    FortGarrisonStation,
 };
 

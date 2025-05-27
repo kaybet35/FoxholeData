@@ -14,5 +14,6 @@ enum class ESocketDirection : int32 {
     BackLeft,
     BackRight,
     Rail,
+    Count,
 };
 

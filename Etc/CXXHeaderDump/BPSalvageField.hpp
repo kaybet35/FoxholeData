@@ -3,9 +3,9 @@
 
 class ABPSalvageField_C : public AResourceField
 {
-    class USphereComponent* Sphere;                                                   // 0x08C0 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x08C8 (size: 0x8)
+    class USphereComponent* Sphere;                                                   // 0x08F0 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x08F8 (size: 0x8)
 
-}; // Size: 0x8D0
+}; // Size: 0x900
 
 #endif

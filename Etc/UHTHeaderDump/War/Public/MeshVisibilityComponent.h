@@ -14,7 +14,13 @@ private:
     TArray<UMeshComponent*> AnimatedMeshes;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UMeshComponent*> AnimatedFloorMeshes;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UMeshComponent*> Meshes;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UMeshComponent*> FloorMeshes;
     
 public:
     UMeshVisibilityComponent(const FObjectInitializer& ObjectInitializer);

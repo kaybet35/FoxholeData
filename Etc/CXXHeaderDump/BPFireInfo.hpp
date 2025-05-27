@@ -3,8 +3,8 @@
 
 class ABPFireInfo_C : public AFireInfo
 {
-    class USceneComponent* DefaultSceneRoot;                                          // 0x0278 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x0280 (size: 0x8)
 
-}; // Size: 0x280
+}; // Size: 0x288
 
 #endif

@@ -1,0 +1,16 @@
+---@meta
+
+---@class ABPFortCommonDirtT1T2_C : ATemplate
+---@field DirtBack UStaticMeshComponent
+---@field DirtBackRight UStaticMeshComponent
+---@field DirtLeft UStaticMeshComponent
+---@field DirtFrontRight UStaticMeshComponent
+---@field DirtFrontLeft UStaticMeshComponent
+---@field DirtBackLeft UStaticMeshComponent
+---@field DirtFront UStaticMeshComponent
+---@field DirtRight UStaticMeshComponent
+---@field DefaultSceneRoot USceneComponent
+ABPFortCommonDirtT1T2_C = {}
+
+
+

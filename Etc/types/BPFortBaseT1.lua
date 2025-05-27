@@ -1,7 +1,8 @@
 ---@meta
 
 ---@class ABPFortBaseT1_C : AFortForwardBase
----@field UnderModSlot UBPFortUnderModSlot_C
+---@field FortBaseCommon UTemplateComponent
+---@field FortBaseCommonDirtT1T2 UTemplateComponent
 ---@field SpawnPoint17 USpawnPointComponent
 ---@field SpawnPoint16 USpawnPointComponent
 ---@field SpawnPoint15 USpawnPointComponent
@@ -17,7 +18,6 @@
 ---@field Decal5 UDecalComponent
 ---@field Decal4 UDecalComponent
 ---@field Decal UDecalComponent
----@field LandscapeHoleFront UBoxComponent
 ---@field FloorDoor UStaticMeshComponent
 ---@field SideFrontStatic UStaticMeshComponent
 ---@field SideLeftStatic UStaticMeshComponent
@@ -26,15 +26,8 @@
 ---@field SideBack UStaticMeshComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field SideFront UStaticMeshComponent
----@field DirtCornerBackRight UStaticMeshComponent
 ---@field CornerFrontLeft UStaticMeshComponent
----@field DirtFront UStaticMeshComponent
----@field DirtCornerFrontRight UStaticMeshComponent
----@field DirtCornerFrontLeft UStaticMeshComponent
----@field DirtCornerBackLeft UStaticMeshComponent
 ---@field CornerBackLeft UStaticMeshComponent
----@field DirtBack UStaticMeshComponent
----@field DirtLeft UStaticMeshComponent
 ---@field CornerFrontRight UStaticMeshComponent
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
@@ -46,7 +39,6 @@
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
 ---@field Floor UStaticMeshComponent
----@field LandscapeHole UBoxComponent
 ---@field BoatHull UBoatHullComponent
 ---@field ViewTargetCamera UCameraComponent
 ABPFortBaseT1_C = {}

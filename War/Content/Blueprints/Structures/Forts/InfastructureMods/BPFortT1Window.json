@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "MovementBlocker",
+    "Name": "GunnerSeatTrigger",
     "Outer": "BPFortT1Window_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'SeatTriggerComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFortT1Window_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.17"
       }
     },
     "SuperStruct": {
@@ -28,12 +28,24 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortT1Window_C:MovementBlocker'",
+        "ObjectName": "ObjectProperty'BPFortT1Window_C:GunnerSeatTrigger'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortT1Window_C:StaticMesh'",
+        "ObjectName": "ObjectProperty'BPFortT1Window_C:GunnerSeatMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.6"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortT1Window_C:GunnerSeat'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.5"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortT1Window_C:MovementBlocker'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.7"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortT1Window_C:StaticMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.8"
       },
       {
         "ObjectName": "ObjectProperty'BPFortT1Window_C:DefaultSceneRoot'",
@@ -138,6 +150,42 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "GunnerSeat",
+    "Outer": "BPFortT1Window_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StructureSeatComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "GunnerSeatMesh",
+    "Outer": "BPFortT1Window_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "MovementBlocker",
+    "Outer": "BPFortT1Window_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "StaticMesh",
     "Outer": "BPFortT1Window_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -168,16 +216,20 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFortT1Window_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.9"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.9"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.13"
         },
         {
           "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.8"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.12"
         }
       ],
       "VariableGuid": "59F9E07F-46E8BAEA-B3D4D28E-EADB13D5",
@@ -205,6 +257,35 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StructureSeatComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StructureSeatComponent'BPFortT1Window_C:GunnerSeat_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.20"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.14"
+        }
+      ],
+      "VariableGuid": "C0D3D0C0-4B539352-99F79EAE-ADBD9A1C",
+      "InternalVariableName": "GunnerSeat"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_3",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -216,10 +297,72 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortT1Window_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.19"
       },
       "VariableGuid": "A760F5AA-481A5E72-62003B88-77C9C313",
       "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPFortT1Window_C:GunnerSeatTrigger_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.16"
+      },
+      "VariableGuid": "3D66EC56-44EFA4F8-43ED32AA-25CA7B25",
+      "InternalVariableName": "GunnerSeatTrigger"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BPFortT1Window_C:GunnerSeatMesh_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.18"
+      },
+      "VariableGuid": "20329503-420A1D98-8CB93EB6-061AE89A",
+      "InternalVariableName": "GunnerSeatMesh"
+    }
+  },
+  {
+    "Type": "SeatTriggerComponent",
+    "Name": "GunnerSeatTrigger_GEN_VARIABLE",
+    "Outer": "BPFortT1Window_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 32.0,
+        "Y": 32.0,
+        "Z": 64.0
+      },
+      "RelativeLocation": {
+        "X": 24.99998,
+        "Y": 0.0,
+        "Z": 15.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -4.781132E-05,
+        "Roll": 0.0
+      }
     }
   },
   {
@@ -232,26 +375,71 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.7"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.10"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.7"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.10"
         },
         {
           "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.9"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.13"
         },
         {
           "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.8"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.14"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFortT1Window_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/InfastructureMods/BPFortT1Window.10"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "GunnerSeatMesh_GEN_VARIABLE",
+    "Outer": "BPFortT1Window_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_FortGunner_C'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.1"
+      },
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_ModularMounts'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_ModularMounts.0"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::OnlyTickPoseWhenRendered",
+      "bReceivesDecals": false,
+      "RelativeLocation": {
+        "X": 99.999954,
+        "Y": 0.0,
+        "Z": -20.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -89.99999,
+        "Roll": 0.0
       }
     }
   },
@@ -295,6 +483,118 @@
       "ComponentTags": [
         "ShowWeatherFX"
       ]
+    }
+  },
+  {
+    "Type": "StructureSeatComponent",
+    "Name": "GunnerSeat_GEN_VARIABLE",
+    "Outer": "BPFortT1Window_C",
+    "Class": "UScriptClass'StructureSeatComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bProvidesFullCover": false,
+      "bTeleportBack": false,
+      "bOccupantCrouches": false,
+      "Index": -1,
+      "bIsExposed": true,
+      "ModularMounts": {
+        "Entries": [
+          {
+            "ItemCodeName": "ATRifleTC",
+            "CodeName": "ATRifleTC",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPATRifleTCMount_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPATRifleTCMount.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_ATRifleTC'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_ATRifleTC.0"
+            }
+          },
+          {
+            "ItemCodeName": "ATRPGTW",
+            "CodeName": "ATRPGTW",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPATRPGTWMountComponent_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPATRPGTWMountComponent.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_RpgMortarATWTripod'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_RpgMortarATWTripod.0"
+            }
+          },
+          {
+            "ItemCodeName": "ISGTC",
+            "CodeName": "InfantrySupportGun",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPInfantrySupportGunMount_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPInfantrySupportGunMount.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_InfantrySupportGun'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_InfantrySupportGun.0"
+            }
+          },
+          {
+            "ItemCodeName": "MGTC",
+            "CodeName": "MGTC",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPMGTCGunMount_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPMGTCGunMount.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_HeavyMachineGun_2'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_HeavyMachineGun_2.0"
+            }
+          },
+          {
+            "ItemCodeName": "MGTW",
+            "CodeName": "MGTW",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPMGTWGunMount_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPMGTWGunMount.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_MGHeavyTW'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_MGHeavyTW.0"
+            }
+          },
+          {
+            "ItemCodeName": "RPGTW",
+            "CodeName": "RPGTW",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPRPGTWMountComponent_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPRPGTWMountComponent.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_RPGTW'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_RPGTW.0"
+            }
+          },
+          {
+            "ItemCodeName": "GrenadeLauncherTC",
+            "CodeName": "GrenadeLauncherTC",
+            "Component": {
+              "ObjectName": "BlueprintGeneratedClass'BPGrenadeLauncherTCMountComponent_C'",
+              "ObjectPath": "War/Content/Blueprints/Structures/Components/BPGrenadeLauncherTCMountComponent.0"
+            },
+            "SkeletalMesh": {
+              "ObjectName": "SkeletalMesh'SK_GrenadeLauncherTC'",
+              "ObjectPath": "War/Content/Meshes/Weapons/SK_GrenadeLauncherTC.0"
+            }
+          }
+        ]
+      },
+      "RelativeLocation": {
+        "X": -2.55,
+        "Y": -84.3,
+        "Z": 85.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -270.0,
+        "Roll": 0.0
+      }
     }
   }
 ]

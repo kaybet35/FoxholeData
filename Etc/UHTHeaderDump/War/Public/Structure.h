@@ -34,10 +34,12 @@ class UGarrisonComponent;
 class UInfrastructureComponent;
 class UItemHolderComponent;
 class UMeshVisibilityComponent;
+class UModularMountsComponent;
 class UMultiplexedSkeletalMeshComponent;
 class UMultiplexedStaticMeshComponent;
 class UParkingSpotComponent;
 class UParticleSystem;
+class USeatComponent;
 class USoundCue;
 class UStaticMeshComponent;
 class UStealthComponent;
@@ -102,6 +104,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, SaveGame, meta=(AllowPrivateAccess=true))
     UGarrisonComponent* GarrisonComponent;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, SaveGame, meta=(AllowPrivateAccess=true))
+    UModularMountsComponent* ModularMountsComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UInfrastructureComponent* InfrastructureComponent;
@@ -197,6 +202,11 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, ReplicatedUsing=OnRep_IsPrototype, meta=(AllowPrivateAccess=true))
     bool bIsPrototype;
     
+public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
+    bool bIsPowered;
+    
+protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InteractionDistanceOverride;
     
@@ -218,6 +228,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bHasMeshVisibilityComponent: 1;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bIsBlankFortPiece: 1;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     bool bAddLandscapeHolesOnBeginPlay;
@@ -283,6 +296,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UStructureSeatComponent*> SeatComponents;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<USeatComponent*> ModularSeatComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UParkingSpotComponent* ParkingSpotComponent;

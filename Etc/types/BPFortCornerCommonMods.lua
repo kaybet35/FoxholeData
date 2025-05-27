@@ -1,7 +1,6 @@
 ---@meta
 
 ---@class ABPFortCornerCommonMods_C : ATemplate
----@field UnderModSlot UBPFortCornerUnderModSlot_C
 ---@field AngleModSlot UBPFortWallModSlot_C
 ---@field BackModSlot UBPFortWallModSlot_C
 ---@field LeftModSlot UBPFortWallModSlot_C

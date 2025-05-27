@@ -3,6 +3,6 @@
 
 class ABPUniformPickup_C : public AUniformPickup
 {
-}; // Size: 0x3F0
+}; // Size: 0x3F8
 
 #endif

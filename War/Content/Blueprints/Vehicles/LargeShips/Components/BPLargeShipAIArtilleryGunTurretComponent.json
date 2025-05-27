@@ -24,7 +24,7 @@
     "Type": "BPLargeShipAIArtilleryGunTurretComponent_C",
     "Name": "Default__BPLargeShipAIArtilleryGunTurretComponent_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Vehicles/LargeShips/Components/BPLargeShipAIArtilleryGunTurretComponent.BPLargeShipAIArtilleryGunTurretComponent_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "bUseWarningShots": false,
       "bUseArtilleryTrace": true,
@@ -45,26 +45,30 @@
       "BorderDeadZone": 3500.0,
       "bReduceRangeAtNight": false,
       "bIgnoreLineOfSight": true,
-      "DamageType": {
-        "ObjectName": "BlueprintGeneratedClass'BPHighExplosiveDamageType_C'",
-        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPHighExplosiveDamageType.0"
+      "DamageAttributes": {
+        "DamageType": {
+          "ObjectName": "BlueprintGeneratedClass'BPHighExplosiveDamageType_C'",
+          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPHighExplosiveDamageType.0"
+        },
+        "ShotSoundCue": {
+          "ObjectName": "SoundCue'MortarTankBasicShot_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/MortarTank/MortarTankBasicShot_Cue.0"
+        },
+        "MuzzleFlashPS": {
+          "ObjectName": "ParticleSystem'Mortar'",
+          "ObjectPath": "War/Content/FX/Mortar.57"
+        },
+        "WeaponDamage": 650.0,
+        "BestJitterConeHalfAngle": 2.0,
+        "WorstJitterConeHalfAngle": 5.0,
+        "FiringPeriod": 1.0,
+        "TimeToFullFireRateAndAccuracy": 3.0,
+        "EnemyPursueDuration": 15.0
       },
-      "ShotSoundCue": {
-        "ObjectName": "SoundCue'MortarTankBasicShot_Cue'",
-        "ObjectPath": "War/Content/Audio/SFX/Vehicles/MortarTank/MortarTankBasicShot_Cue.0"
+      "DamageAttributesAlternate": {
+        "WeaponDamage": 650.0
       },
-      "MuzzleFlashPS": {
-        "ObjectName": "ParticleSystem'Mortar'",
-        "ObjectPath": "War/Content/FX/Mortar.57"
-      },
-      "WeaponDamage": 650.0,
-      "WeaponDamageAgainstVehicles": 650.0,
-      "BestJitterConeHalfAngle": 2.0,
-      "WorstJitterConeHalfAngle": 5.0,
-      "FiringPeriod": 1.0,
-      "TimeToFullFireRateAndAccuracy": 3.0,
-      "FiringConeAngle": 360.0,
-      "EnemyPursueDuration": 15.0
+      "FiringConeAngle": 360.0
     }
   }
 ]

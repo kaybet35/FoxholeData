@@ -1,0 +1,12 @@
+#ifndef UE4SS_SDK_BPFortEmpT3_HPP
+#define UE4SS_SDK_BPFortEmpT3_HPP
+
+class ABPFortEmpT3_C : public AFortEmp
+{
+    class UTemplateComponent* FortCommon;                                             // 0x08C0 (size: 0x8)
+    class UStaticMeshComponent* FloorMesh;                                            // 0x08C8 (size: 0x8)
+    class UStaticMeshComponent* RoofMesh;                                             // 0x08D0 (size: 0x8)
+
+}; // Size: 0x8D8
+
+#endif

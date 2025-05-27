@@ -2,14 +2,11 @@
 
 ---@class ABPIntelCenter_C : AIntelCenter
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field LargeFortCommon UTemplateComponent
 ---@field OccupiableTrigger USeatTriggerComponent
 ---@field OccupiableComponent UStructureSeatComponent
----@field UnderModSlot UBPFortUnderModSlot_C
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field RoofBaseMesh UStaticMeshComponent
----@field BPWaterStencilComponent UBPWaterStencilComponent_C
----@field LandscapeHole UBoxComponent
----@field BoatHull UBoatHullComponent
 ---@field Flag2 UStaticMeshComponent
 ---@field Flag UStaticMeshComponent
 ---@field RoofMesh UStaticMeshComponent

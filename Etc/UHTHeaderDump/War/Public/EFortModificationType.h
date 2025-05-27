@@ -23,6 +23,7 @@ enum class EFortModificationType : uint8 {
     Chalkboard,
     Module,
     Stairs,
+    OneWay,
     Sandbags,
     Ladder,
     TrenchRoof,
@@ -70,6 +71,7 @@ enum class EFortModificationType : uint8 {
     AdvMachiningStation,
     Light,
     Insulation,
+    PowerConnection,
     Count,
     None,
 };

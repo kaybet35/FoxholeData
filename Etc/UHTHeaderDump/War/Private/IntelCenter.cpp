@@ -19,19 +19,17 @@ AIntelCenter::AIntelCenter(const FObjectInitializer& ObjectInitializer) : Super(
     this->ListeningSFXLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("ListeningSFXLoop"));
     this->StartListeningSound = NULL;
     this->EndListeningSound = NULL;
-    this->MaxPower = 100.00f;
     this->RequiredPowerForFiring = 10.00f;
     this->RequiredPowerForRotation = 1.00f;
     this->RequiredSquadMembers = 5;
     this->SquadId = 0;
-    this->Power = 0.00f;
     this->LastListenEndTime = 0.00f;
     this->ListenTimeRemaining = 0.00f;
     this->KillVolume->SetupAttachment(RootComponent);
-    this->Mesh->SetupAttachment(RootComponent);
     this->BaseMesh->SetupAttachment(RootComponent);
     this->RotationSFXLoop->SetupAttachment(RootComponent);
     this->ListeningSFXLoop->SetupAttachment(RootComponent);
+    this->Mesh->SetupAttachment(RootComponent);
 }
 
 void AIntelCenter::OnRep_LastListenEndTime(const float Previous) {
@@ -43,11 +41,9 @@ void AIntelCenter::OnRep_GunnerYawAndPitch(const FVector2D PreviousGunnerYawAndP
 void AIntelCenter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
     Super::GetLifetimeReplicatedProps(OutLifetimeProps);
     
-    DOREPLIFETIME(AIntelCenter, PowerInfo);
     DOREPLIFETIME(AIntelCenter, RequiredSquadMembers);
     DOREPLIFETIME(AIntelCenter, SquadId);
     DOREPLIFETIME(AIntelCenter, GunnerYawAndPitch);
-    DOREPLIFETIME(AIntelCenter, Power);
     DOREPLIFETIME(AIntelCenter, LastListenEndTime);
     DOREPLIFETIME(AIntelCenter, LaunchCodeInfo);
 }

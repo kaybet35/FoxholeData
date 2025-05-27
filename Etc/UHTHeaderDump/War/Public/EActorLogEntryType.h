@@ -37,6 +37,12 @@ enum class EActorLogEntryType : uint8 {
     SubmitPatient,
     RetrievePatient,
     ConvertPatient,
+    ConstructionBuildStarted,
+    ConstructionNotEnoughMaterials,
+    ConstructionBelongsToEnemy,
+    ConstructionSiteObstructed,
+    ConstructionSiteNoLongerExists,
+    OtherBuildToolRequired,
     MAX,
 };
 

@@ -3,6 +3,6 @@
 
 class UBPATRifleComponent_C : public UATRifleComponent
 {
-}; // Size: 0x9A0
+}; // Size: 0x9A8
 
 #endif

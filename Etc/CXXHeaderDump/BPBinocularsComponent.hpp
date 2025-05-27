@@ -3,6 +3,6 @@
 
 class UBPBinocularsComponent_C : public UBinocularsItemComponent
 {
-}; // Size: 0x8E0
+}; // Size: 0x8E8
 
 #endif

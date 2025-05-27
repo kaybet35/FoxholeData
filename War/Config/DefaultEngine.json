@@ -1,5 +1,5 @@
 [/Script/EngineSettings.GameMapsSettings]
-EditorStartupMap=/Game/Maps/Sandbox.Sandbox
+EditorStartupMap=/Game/Maps/ShootingRange.ShootingRange
 GameInstanceClass=/Game/Blueprints/BPWarGameInstance.BPWarGameInstance_C
 bUseSplitscreen=False
 GameDefaultMap=/Game/Maps/MainMenu.MainMenu
@@ -71,6 +71,10 @@ r.WireframeCullThreshold=5.000000
 UIScaleRule=ShortestSide
 UIScaleCurve=(EditorCurveData=(PreInfinityExtrap=RCCE_Constant,PostInfinityExtrap=RCCE_Constant,Keys=,DefaultValue=340282346638528859811704183484516925440.000000),ExternalCurve=None)
 r.TonemapperFilm=0
+r.VirtualTextures=True
+
+[/Script/Engine.VirtualTexturePoolConfig]
++Pools=(SizeInMegabyte=64, MinTileSize=0, MaxTileSize=9999, Formats=(PF_G16))
 
 [PacketSimulationSettings]
 PktLag=0
@@ -149,6 +153,13 @@ n.VerifyPeer=true
 +ClassRedirects=(OldName="VehicleExitComponent",NewName="SeatExitComponent")
 +ClassRedirects=(OldName="OccupiableComponent",NewName="StructureSeatComponent")
 +ClassRedirects=(OldName="ItemHolderBoxComponent",NewName="AccessBoxComponent")
++ClassRedirects=(OldName="ConcreteFort",NewName="Fort")
++ClassRedirects=(OldName="ConcreteFortCorner",NewName="FortCorner")
++ClassRedirects=(OldName="ConcreteFortTurret",NewName="FortTurret")
++ClassRedirects=(OldName="ConcreteFortTurretAT",NewName="FortTurretAT")
++ClassRedirects=(OldName="ConcreteFortTurretMG",NewName="FortTurretMG")
++ClassRedirects=(OldName="FortGunner",NewName="Fort")
++ClassRedirects=(OldName="FortGunnerBuildSite",NewName="FortBuildSite")
 +StructRedirects=(OldName="BaseUIStyle",NewName="BaseStyle")
 +PropertyRedirects=(OldName="TeamStructure.bCanDecayBePreventedBySupplyStation",NewName="TeamStructure.bCanDecayBePreventedByMaintenanceShed")
 +PropertyRedirects=(OldName="EncumbranceManager.bEnableEncumbranceModifiers",NewName="EncumbranceManager.bEnableItemEncumbrance")
@@ -441,5 +452,4 @@ DefaultASTCQualityBySpeed=1
 DefaultASTCQualityBySize=3
 cook.AllowCookedDataInEditorBuilds=False
 bCookBlueprintComponentTemplateData=False
-
 

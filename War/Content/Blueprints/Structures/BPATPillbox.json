@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "LandscapeCheck5",
+    "Name": "SeatTriggerComponent",
     "Outer": "BPATPillbox_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectName": "Class'SeatTriggerComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPATPillbox_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.38"
       }
     },
     "SuperStruct": {
@@ -28,8 +28,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPATPillbox_C:LandscapeCheck5'",
+        "ObjectName": "ObjectProperty'BPATPillbox_C:SeatTriggerComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATPillbox_C:SeatComponent0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.24"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPATPillbox_C:LandscapeCheck5'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.22"
       },
       {
         "ObjectName": "ObjectProperty'BPATPillbox_C:LandscapeCheck4'",
@@ -52,12 +60,8 @@
         "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.17"
       },
       {
-        "ObjectName": "ObjectProperty'BPATPillbox_C:OccupyComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.23"
-      },
-      {
         "ObjectName": "ObjectProperty'BPATPillbox_C:MultiplexedStaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.23"
       },
       {
         "ObjectName": "ObjectProperty'BPATPillbox_C:ATPillbox'",
@@ -80,7 +84,7 @@
     "Type": "BPATPillbox_C",
     "Name": "Default__BPATPillbox_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPATPillbox.BPATPillbox_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AITurretComponent": {
         "ObjectName": "AITurretComponent'Default__BPATPillbox_C:AITurretComponent'",
@@ -97,7 +101,7 @@
       "ShouldAggroOnDamage": true,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPATPillbox_C:FlagMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.39"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.42"
       },
       "VisibilityTraceOffsetZ": 150.0,
       "bCanBeHidden": true,
@@ -147,7 +151,7 @@
       "BuildOrder": 8,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bRotateBuildGhost": true,
-      "ValidBuildTools": 17,
+      "ValidBuildTools": 49,
       "CodeName": "ATPillbox",
       "ChassisName": {
         "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
@@ -191,7 +195,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPATPillbox_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.37"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.40"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPATPillbox_C:StructureArrow'",
@@ -206,48 +210,52 @@
     "Class": "UScriptClass'AITurretComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "AllowedTargetTypes": 30,
+      "AllowedTargetTypes": 31,
       "MaximumRange": 2800.0,
       "MaximumReachability": 5200.0,
-      "ImpactEffect": {
-        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
-        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      "DamageAttributes": {
+        "WeaponFireFXClass": {
+          "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
+          "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
+        },
+        "ImpactEffect": {
+          "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+          "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+        },
+        "DamageType": {
+          "ObjectName": "BlueprintGeneratedClass'BPAntiTankKineticDamageType_C'",
+          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPAntiTankKineticDamageType.0"
+        },
+        "ShotSoundCue": {
+          "ObjectName": "SoundCue'GarrisonATGunShot_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/AntiTankGun/GarrisonATGunShot_Cue.0"
+        },
+        "MuzzleFlashPS": {
+          "ObjectName": "ParticleSystem'RifleMF'",
+          "ObjectPath": "War/Content/FX/RifleMF.58"
+        },
+        "WeaponDamage": 150.0,
+        "BestJitterConeHalfAngle": 3.5,
+        "WorstJitterConeHalfAngle": 10.0,
+        "FiringPeriod": 2.5,
+        "TimeToFullFireRateAndAccuracy": 4.0,
+        "EnemyPursueDuration": 7.0,
+        "ArmourDamageModifier": 2.0,
+        "TargetStabilityReductionPerShot": 1.0
       },
-      "ImpactEffectAlternate": {
-        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
-        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      "DamageAttributesAlternate": {
+        "WeaponFireFXClass": {
+          "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
+          "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
+        },
+        "ImpactEffect": {
+          "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+          "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+        },
+        "DamageType": null,
+        "WeaponDamage": 0.0
       },
-      "WeaponFireFXClass": {
-        "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
-      },
-      "WeaponFireFXClassAlternate": {
-        "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
-      },
-      "DamageType": {
-        "ObjectName": "BlueprintGeneratedClass'BPAntiTankKineticStructureDamageType_C'",
-        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPAntiTankKineticStructureDamageType.0"
-      },
-      "DamageTypeAlternate": null,
-      "ShotSoundCue": {
-        "ObjectName": "SoundCue'GarrisonATGunShot_Cue'",
-        "ObjectPath": "War/Content/Audio/SFX/Weapons/AntiTankGun/GarrisonATGunShot_Cue.0"
-      },
-      "MuzzleFlashPS": {
-        "ObjectName": "ParticleSystem'RifleMF'",
-        "ObjectPath": "War/Content/FX/RifleMF.58"
-      },
-      "WeaponDamage": 150.0,
-      "WeaponDamageAgainstVehicles": 0.0,
-      "BestJitterConeHalfAngle": 1.0,
-      "WorstJitterConeHalfAngle": 4.0,
-      "FiringPeriod": 1.5,
-      "TimeToFullFireRateAndAccuracy": 1.0,
       "FiringConeAngle": 180.0,
-      "EnemyPursueDuration": 7.0,
-      "ArmourDamageModifier": 2.0,
-      "TargetStabilityReductionPerShot": 1.0,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPATPillbox_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.6"
@@ -537,6 +545,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "LandscapeCheck5",
+    "Outer": "BPATPillbox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "MultiplexedStaticMesh",
     "Outer": "BPATPillbox_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -549,7 +569,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "OccupyComponent",
+    "Name": "SeatComponent0",
     "Outer": "BPATPillbox_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -579,7 +599,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPATPillbox_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.25"
       },
       "VariableGuid": "B692036D-41768086-1E33EF9D-E041CA90",
       "InternalVariableName": "DefaultSceneRoot"
@@ -598,7 +618,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPATPillbox_C:ATPillbox_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.36"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.39"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -658,13 +678,34 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "StructureSeatComponent'BPATPillbox_C:OccupyComponent_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.38"
+        "ObjectName": "StructureSeatComponent'BPATPillbox_C:SeatComponent0_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.41"
+      },
+      "ParentComponentOrVariableName": "AITurretComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B3D2D2AD-43BDB448-898702BF-67729A84",
+      "InternalVariableName": "SeatComponent0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPATPillbox_C:SeatTriggerComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.37"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
-      "VariableGuid": "B3D2D2AD-43BDB448-898702BF-67729A84",
-      "InternalVariableName": "OccupyComponent"
+      "VariableGuid": "4B8E1926-43C91913-FA57488C-D5E28A9A",
+      "InternalVariableName": "SeatTriggerComponent"
     }
   },
   {
@@ -773,6 +814,26 @@
     }
   },
   {
+    "Type": "SeatTriggerComponent",
+    "Name": "SeatTriggerComponent_GEN_VARIABLE",
+    "Outer": "BPATPillbox_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 330.0,
+        "Y": 300.0,
+        "Z": 64.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 64.0
+      },
+      "Mobility": "EComponentMobility::Stationary"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPATPillbox_C",
@@ -782,82 +843,90 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.27"
         },
         {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.29"
         },
         {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.30"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.32"
         },
         {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.33"
         },
         {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.34"
         },
         {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.36"
+        },
+        {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.27"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.31"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.26"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.27"
         },
         {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.29"
         },
         {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.30"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.32"
         },
         {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.33"
         },
         {
-          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.34"
         },
         {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.36"
+        },
+        {
           "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.27"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.28"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.31"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPATPillbox_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.25"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPATPillbox.26"
       }
     }
   },
@@ -888,11 +957,12 @@
   },
   {
     "Type": "StructureSeatComponent",
-    "Name": "OccupyComponent_GEN_VARIABLE",
+    "Name": "SeatComponent0_GEN_VARIABLE",
     "Outer": "BPATPillbox_C",
     "Class": "UScriptClass'StructureSeatComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "TriggerName": "SeatTriggerComponent",
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,

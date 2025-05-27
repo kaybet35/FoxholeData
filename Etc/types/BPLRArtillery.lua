@@ -2,12 +2,9 @@
 
 ---@class ABPLRArtillery_C : ALongRangeArtillery
 ---@field UberGraphFrame FPointerToUberGraphFrame
+---@field LargeFortCommon UTemplateComponent
 ---@field OccupiableTrigger USeatTriggerComponent
 ---@field OccupiableComponent UStructureSeatComponent
----@field UnderModSlot UBPFortUnderModSlot_C
----@field BPWaterStencilComponent UBPWaterStencilComponent_C
----@field LandscapeHole UBoxComponent
----@field BoatHull UBoatHullComponent
 ---@field Flag2 UStaticMeshComponent
 ---@field Flag UStaticMeshComponent
 ---@field RoofMesh UStaticMeshComponent

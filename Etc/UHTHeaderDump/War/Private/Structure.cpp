@@ -18,6 +18,7 @@ AStructure::AStructure(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ItemHolder = NULL;
     this->TechID = ETechID::None;
     this->GarrisonComponent = NULL;
+    this->ModularMountsComponent = NULL;
     this->InfrastructureComponent = NULL;
     this->MeshVisibilityComponent = NULL;
     this->MaxHealth = 0;
@@ -46,9 +47,11 @@ AStructure::AStructure(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->bIsBuiltNearBorder = false;
     this->bIgnoresRapidDecay = false;
     this->bIsPrototype = false;
+    this->bIsPowered = false;
     this->InteractionDistanceOverride = 0.00f;
     this->BuildStepProgress = 0;
     this->bHasMeshVisibilityComponent = false;
+    this->bIsBlankFortPiece = false;
     this->bAddLandscapeHolesOnBeginPlay = true;
     this->bRemoveLandscapeHolesOnDestroy = true;
     this->bHasLandscapeHoles = false;
@@ -118,6 +121,7 @@ void AStructure::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(AStructure, Health);
     DOREPLIFETIME(AStructure, DynamicTier);
     DOREPLIFETIME(AStructure, bIsPrototype);
+    DOREPLIFETIME(AStructure, bIsPowered);
     DOREPLIFETIME(AStructure, BuilderPlayerOnlineID);
     DOREPLIFETIME(AStructure, BuilderName);
     DOREPLIFETIME(AStructure, BuildStepProgress);

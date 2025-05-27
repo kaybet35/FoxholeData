@@ -10,5 +10,6 @@ enum class EBuildTool : uint8 {
     Material = 4,
     Vehicle = 8,
     AdvancedVehicle = 16,
+    ConstructionEquipment = 32,
 };
 

@@ -10,6 +10,7 @@ enum class EBuildCategory : uint8 {
     Facility,
     Mining,
     Power,
+    Liquids,
     Foundation,
     Shippables,
     MAX,

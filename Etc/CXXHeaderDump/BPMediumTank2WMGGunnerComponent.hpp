@@ -3,6 +3,6 @@
 
 class UBPMediumTank2WMGGunnerComponent_C : public UBPLMGGunnerBase_C
 {
-}; // Size: 0x908
+}; // Size: 0x918
 
 #endif

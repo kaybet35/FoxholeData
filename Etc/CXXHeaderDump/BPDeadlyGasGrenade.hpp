@@ -3,8 +3,8 @@
 
 class ABPDeadlyGasGrenade_C : public ADeadlyGasGrenadeProjectile
 {
-    class UStaticMeshComponent* ProjectileMesh;                                       // 0x03B8 (size: 0x8)
+    class UStaticMeshComponent* ProjectileMesh;                                       // 0x03C0 (size: 0x8)
 
-}; // Size: 0x3C0
+}; // Size: 0x3C8
 
 #endif

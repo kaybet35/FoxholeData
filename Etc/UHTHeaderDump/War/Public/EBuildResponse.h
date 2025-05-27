@@ -29,8 +29,10 @@ enum class EBuildResponse : uint8 {
     UpgradeRequirementsNotSatisfied,
     TooSteep,
     AdjacentToFortUpgrade,
+    IsBlockingFortUpgrade,
     JoiningEnemyStructure,
     UpgradeFailedDueToDamage,
+    UpgradeFailedDueToFire,
     ConnectorFailed,
     SignPostTooClose,
     SignPostRestricted,
@@ -47,6 +49,10 @@ enum class EBuildResponse : uint8 {
     TooManyConnectedStructures,
     IsObstructedByPuddle,
     BurningFuel,
+    ConnectedBunkersDamaged,
+    UpgradeFailedOrdersActive,
+    UpgradeFailedPowerConnected,
+    MustDetachWeapon,
     NumTypes,
 };
 

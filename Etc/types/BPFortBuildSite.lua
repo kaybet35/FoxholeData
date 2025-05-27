@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortBuildSite_C : AFortBuildSite
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field Side02 UStaticMeshComponent
 ---@field SideRope02 UStaticMeshComponent
 ---@field SideRope01 UStaticMeshComponent

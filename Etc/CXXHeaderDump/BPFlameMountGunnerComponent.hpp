@@ -3,6 +3,6 @@
 
 class UBPFlameMountGunnerComponent_C : public UBPFlameMountBaseComponent_C
 {
-}; // Size: 0x948
+}; // Size: 0x958
 
 #endif

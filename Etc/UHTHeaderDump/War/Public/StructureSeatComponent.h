@@ -28,12 +28,16 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bOccupantCrouches;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_CurrentOccupant, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<ASimCharacter> CurrentOccupant;
     
     UStructureSeatComponent(const FObjectInitializer& ObjectInitializer);
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+protected:
+    UFUNCTION(BlueprintCallable)
+    void OnRep_CurrentOccupant();
+    
 };
 

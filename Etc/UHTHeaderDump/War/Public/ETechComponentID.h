@@ -5,11 +5,11 @@
 UENUM(BlueprintType)
 enum class ETechComponentID : uint8 {
     None,
-    RifleGarrison,
-    MGGarrison,
-    ATGarrison,
-    HowitzerGarrison,
-    Concrete,
+    T1Garrison,
+    T2Garrison,
+    T3Garrison,
+    T1SupportBunkers,
+    T3SupportBunkers,
     Deployment,
     AdvancedBunkers,
     CommandCenter,
@@ -23,7 +23,8 @@ enum class ETechComponentID : uint8 {
     ArtilleryShelter,
     RadioStation,
     OccupiedTown,
-    ObservationBunkers,
+    ArtilleryGarrison,
+    SafeHouse,
     TechAvailable,
     Count,
 };

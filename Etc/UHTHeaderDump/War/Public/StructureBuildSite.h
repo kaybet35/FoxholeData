@@ -26,13 +26,13 @@ public:
     uint32 ModificationMask;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
-    bool bBaseStructureHadPipes;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<FModificationSlotMigration> ModificationSlotMigrations;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
     TArray<FName> DisabledSockets;
+    
+    UPROPERTY(EditAnywhere, SaveGame, ReplicatedUsing=OnRep_MigratedModificationMask, meta=(AllowPrivateAccess=true))
+    uint32 MigratedModificationMask;
     
 protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
@@ -79,6 +79,9 @@ public:
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+    UFUNCTION(BlueprintCallable)
+    void OnRep_MigratedModificationMask();
+    
 protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_IsUpgrade();

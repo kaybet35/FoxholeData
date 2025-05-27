@@ -24,7 +24,7 @@
     "Type": "BPFortBaseTechTree_C",
     "Name": "Default__BPFortBaseTechTree_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/TechTree/BPFortBaseTechTree.BPFortBaseTechTree_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UniqueID": 1,
       "Items": [
@@ -50,52 +50,59 @@
           "ModRequirement": 0
         },
         {
-          "TechID": "ETechComponentID::RifleGarrison",
-          "NextTechID": "ETechComponentID::ATGarrison",
+          "TechID": "ETechComponentID::T1Garrison",
+          "NextTechID": "ETechComponentID::T2Garrison",
           "InfrastructureType": "EInfrastructureType::Garrison",
-          "Requirement": 10,
+          "Requirement": 50,
           "ModRequirement": 4
         },
         {
-          "TechID": "ETechComponentID::ATGarrison",
-          "NextTechID": "ETechComponentID::HowitzerGarrison",
+          "TechID": "ETechComponentID::T2Garrison",
+          "NextTechID": "ETechComponentID::T3Garrison",
           "InfrastructureType": "EInfrastructureType::Garrison",
-          "Requirement": 1000,
+          "Requirement": 150,
           "ModRequirement": 12
         },
         {
-          "TechID": "ETechComponentID::HowitzerGarrison",
-          "NextTechID": "ETechComponentID::None",
+          "TechID": "ETechComponentID::T3Garrison",
+          "NextTechID": "ETechComponentID::ArtilleryGarrison",
           "InfrastructureType": "EInfrastructureType::Garrison",
-          "Requirement": 4800,
+          "Requirement": 2210,
           "ModRequirement": 24
         },
         {
-          "TechID": "ETechComponentID::ObservationBunkers",
-          "NextTechID": "ETechComponentID::Concrete",
+          "TechID": "ETechComponentID::ArtilleryGarrison",
+          "NextTechID": "ETechComponentID::None",
+          "InfrastructureType": "EInfrastructureType::Garrison",
+          "Requirement": 5650,
+          "ModRequirement": 30
+        },
+        {
+          "TechID": "ETechComponentID::T1SupportBunkers",
+          "NextTechID": "ETechComponentID::T3SupportBunkers",
           "InfrastructureType": "EInfrastructureType::Command",
-          "Requirement": 150,
+          "Requirement": 10,
           "ModRequirement": 6
         },
         {
-          "TechID": "ETechComponentID::Concrete",
+          "TechID": "ETechComponentID::T3SupportBunkers",
           "NextTechID": "ETechComponentID::Deployment",
           "InfrastructureType": "EInfrastructureType::Command",
-          "Requirement": 2650,
+          "Requirement": 150,
           "ModRequirement": 12
         },
         {
           "TechID": "ETechComponentID::Deployment",
           "NextTechID": "ETechComponentID::AdvancedBunkers",
           "InfrastructureType": "EInfrastructureType::Command",
-          "Requirement": 4800,
+          "Requirement": 4150,
           "ModRequirement": 24
         },
         {
           "TechID": "ETechComponentID::AdvancedBunkers",
           "NextTechID": "ETechComponentID::None",
           "InfrastructureType": "EInfrastructureType::Command",
-          "Requirement": 7200,
+          "Requirement": 6800,
           "ModRequirement": 40
         }
       ],

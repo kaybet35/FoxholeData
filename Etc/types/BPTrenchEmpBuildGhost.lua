@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABPTrenchEmpBuildGhost_C : ABuildGhost
+---@field BuildFootprint135 UBPBuildFootprintBoxComponent_C
+---@field BuildFootprint45 UBPBuildFootprintBoxComponent_C
+---@field BuildFootprint90 UBPBuildFootprintBoxComponent_C
 ---@field FrontLeft UStaticMeshComponent
 ---@field BackLeft UStaticMeshComponent
 ---@field FrontRight UStaticMeshComponent

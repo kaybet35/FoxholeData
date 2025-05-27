@@ -27,6 +27,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 GroupIndex;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float MeshInstanceRemovalDelay;
+    
     UPayloadInstancedStaticMeshComponent(const FObjectInitializer& ObjectInitializer);
 
 

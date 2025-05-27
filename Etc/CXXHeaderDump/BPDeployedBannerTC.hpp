@@ -3,8 +3,8 @@
 
 class ABPDeployedBannerTC_C : public ADeployedWeapon
 {
-    class UStaticMeshComponent* BannerSandBags;                                       // 0x0830 (size: 0x8)
+    class UStaticMeshComponent* BannerSandBags;                                       // 0x0860 (size: 0x8)
 
-}; // Size: 0x838
+}; // Size: 0x868
 
 #endif

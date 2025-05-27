@@ -3,6 +3,6 @@
 
 class ABPSoldierSuppliesPickup_C : public ABasicItemPickup
 {
-}; // Size: 0x3E8
+}; // Size: 0x3F0
 
 #endif

@@ -3,10 +3,10 @@
 
 class ABPRocketPartBottom_C : public ABPRocketPart_C
 {
-    class UMultiplexedStaticMeshComponent* MultiplexedCenterMesh;                     // 0x07E8 (size: 0x8)
-    class UMultiplexedStaticMeshComponent* MultiplexedMainMesh;                       // 0x07F0 (size: 0x8)
-    class UStaticMeshComponent* RocketPartCenter;                                     // 0x07F8 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedCenterMesh;                     // 0x0818 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedMainMesh;                       // 0x0820 (size: 0x8)
+    class UStaticMeshComponent* RocketPartCenter;                                     // 0x0828 (size: 0x8)
 
-}; // Size: 0x800
+}; // Size: 0x830
 
 #endif

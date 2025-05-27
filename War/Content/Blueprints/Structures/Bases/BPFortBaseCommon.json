@@ -1,0 +1,476 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeCullFront",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPFortBaseCommon_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.17"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Template'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPFortBaseCommon_C:LandscapeCullFront'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortBaseCommon_C:LandscapeCull'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.8"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortBaseCommon_C:LandscapeHoleFront'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortBaseCommon_C:LandscapeHole'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.9"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortBaseCommon_C:DefaultSceneRoot'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.7"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPFortBaseCommon_C'Default__BPFortBaseCommon_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.2"
+    }
+  },
+  {
+    "Type": "BPFortBaseCommon_C",
+    "Name": "Default__BPFortBaseCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.BPFortBaseCommon_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "LandscapeHole_GEN_VARIABLE",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 300.0,
+        "Y": 300.0,
+        "Z": 100.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "LandscapeHole",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Landscape",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "Mobility": "EComponentMobility::Stationary",
+      "ComponentTags": [
+        "LandscapeOverlap",
+        "IncludeInBuildSite",
+        "PreserveProfileInBuildSite"
+      ],
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "LandscapeHoleFront_GEN_VARIABLE",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 300.0,
+        "Z": 100.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "CollisionProfileName": "LandscapeHole",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Landscape",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 565.0,
+        "Z": 0.0
+      },
+      "Mobility": "EComponentMobility::Stationary",
+      "ComponentTags": [
+        "LandscapeOverlap",
+        "IncludeInBuildSite",
+        "PreserveProfileInBuildSite",
+        "LandscapeRampCheck"
+      ],
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "LandscapeCull_GEN_VARIABLE",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 5.5,
+        "Y": 5.5,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BPLandscapeCullStaticMeshComponent_C",
+    "Name": "LandscapeCullFront_GEN_VARIABLE",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.BPLandscapeCullStaticMeshComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 531.766,
+        "Z": 50.0
+      },
+      "RelativeScale3D": {
+        "X": 4.3704224,
+        "Y": 6.100464,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "DefaultSceneRoot",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeCull",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeHole",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "LandscapeHoleFront",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPFortBaseCommon_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.11"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.15"
+        }
+      ],
+      "VariableGuid": "69415023-45A9B81E-AF79DE86-B955CEC8",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPFortBaseCommon_C:LandscapeHole_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.3"
+      },
+      "VariableGuid": "48F2F502-4798A4B9-924B1FB4-CF6CEF5E",
+      "InternalVariableName": "LandscapeHole"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPFortBaseCommon_C:LandscapeCull_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.5"
+      },
+      "VariableGuid": "5DF1A3F5-47C8CB3F-EBE3B086-089D2FA9",
+      "InternalVariableName": "LandscapeCull"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPLandscapeCullStaticMeshComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Culling/BPLandscapeCullStaticMeshComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPLandscapeCullStaticMeshComponent_C'BPFortBaseCommon_C:LandscapeCullFront_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.6"
+      },
+      "VariableGuid": "E08256AA-4F65BE0C-5874C283-45B8C8AA",
+      "InternalVariableName": "LandscapeCullFront"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPFortBaseCommon_C:LandscapeHoleFront_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.4"
+      },
+      "VariableGuid": "93CF5621-487BBE43-090C78B2-3532A5E3",
+      "InternalVariableName": "LandscapeHoleFront"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPFortBaseCommon_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPFortBaseCommon_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Bases/BPFortBaseCommon.12"
+      }
+    }
+  }
+]

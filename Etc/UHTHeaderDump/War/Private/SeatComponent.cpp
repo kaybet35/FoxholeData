@@ -12,6 +12,8 @@ USeatComponent::USeatComponent(const FObjectInitializer& ObjectInitializer) : Su
     this->bUsableWhenAnchored = true;
     this->bUsableWhenSubmerged = true;
     this->bIsEnabled = true;
+    this->PC = NULL;
+    this->Character = NULL;
 }
 
 

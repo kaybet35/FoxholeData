@@ -20,9 +20,18 @@ class UABP_ArmoredCarDefensive_tankette_C : public USimVehicleGunnerSupportAnimI
     FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_CA66859145589A1A7696DDB0F498643A; // 0x0B78 (size: 0x78)
     FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_D77FB98C4C64912EBE915B8B73853E4D; // 0x0BF0 (size: 0x78)
     FAnimNode_BlendListByBool AnimGraphNode_BlendListByBool_FBEB48BD4ACF04C6F66991A24AE1753C; // 0x0C68 (size: 0xA0)
+    FAnimNode_TransitionResult AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF; // 0x0D08 (size: 0x28)
+    FAnimNode_TransitionResult AnimGraphNode_TransitionResult_0A29B8264385A747D828B58A43152FB2; // 0x0D30 (size: 0x28)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_4FA604654643C493AAA46E8F5C895C54; // 0x0D58 (size: 0x78)
+    FAnimNode_StateResult AnimGraphNode_StateResult_05C8BE664C81839477B18988F3650581; // 0x0DD0 (size: 0x30)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_7215186F4BEE04FF5D64799F980D277E; // 0x0E00 (size: 0x78)
+    FAnimNode_StateResult AnimGraphNode_StateResult_061E00924F4CB10A278E87860828CB8F; // 0x0E78 (size: 0x30)
+    FAnimNode_StateMachine AnimGraphNode_StateMachine_A4E537154DD7C635E13831895FEDF5E8; // 0x0EA8 (size: 0xB0)
+    FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend_CDCD30384111DE71FE9C80A3578BAB9B; // 0x0F58 (size: 0xC0)
 
     void AnimGraph(FPoseLink& AnimGraph);
+    void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette_AnimGraphNode_TransitionResult_D3FF113D4A415EAD10EDA99A49FA84BF();
     void ExecuteUbergraph_ABP_ArmoredCarDefensive_tankette(int32 EntryPoint);
-}; // Size: 0xD08
+}; // Size: 0x1018
 
 #endif

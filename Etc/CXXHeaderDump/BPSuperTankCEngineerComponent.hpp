@@ -3,6 +3,6 @@
 
 class UBPSuperTankCEngineerComponent_C : public UTankEngineerComponent
 {
-}; // Size: 0x870
+}; // Size: 0x878
 
 #endif

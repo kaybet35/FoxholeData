@@ -1,6 +1,7 @@
 #include "PipelineValve.h"
 #include "BuildSocketComponent.h"
 #include "EStructureProfileType.h"
+#include "ModificationSlotComponent.h"
 #include "Net/UnrealNetwork.h"
 
 APipelineValve::APipelineValve(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
@@ -8,9 +9,11 @@ APipelineValve::APipelineValve(const FObjectInitializer& ObjectInitializer) : Su
     this->bIgnoreFriendlyFire = true;
     this->bUsesImpactsMaterial = true;
     this->bCanBeFlaggedForDisruptivePlacement = true;
+    this->UpgradeSlotComponent = CreateDefaultSubobject<UModificationSlotComponent>(TEXT("UpgradeSlotComponent"));
     this->BackSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("BackSocket"));
     this->FrontSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("FrontSocket"));
     this->ThroughputNormalized = 0.00f;
+    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
     this->BackSocket->SetupAttachment(RootComponent);
     this->FrontSocket->SetupAttachment(RootComponent);
 }

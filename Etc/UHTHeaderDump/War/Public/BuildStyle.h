@@ -9,7 +9,7 @@ struct WAR_API FBuildStyle {
 public:
 private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FSlateBrush Categories[8];
+    FSlateBrush Categories[9];
     
 public:
     FBuildStyle();

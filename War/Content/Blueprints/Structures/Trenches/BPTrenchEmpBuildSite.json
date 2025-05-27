@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "BPTrenchBlockerCapsule",
+    "Name": "TrenchEmpCommonDirtT1T2",
     "Outer": "BPTrenchEmpBuildSite_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "BlueprintGeneratedClass'BPTrenchBlockerCapsule_C'",
-      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPTrenchBlockerCapsule.0"
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -23,16 +23,16 @@
       }
     },
     "SuperStruct": {
-      "ObjectName": "Class'FortBuildSite'",
+      "ObjectName": "Class'FortBuildSiteBase'",
       "ObjectPath": "/Script/War"
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPTrenchEmpBuildSite_C:BPTrenchBlockerCapsule'",
+        "ObjectName": "ObjectProperty'BPTrenchEmpBuildSite_C:TrenchEmpCommonDirtT1T2'",
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPTrenchEmpBuildSite_C:BuildsiteOverlapBlock'",
+        "ObjectName": "ObjectProperty'BPTrenchEmpBuildSite_C:BPTrenchBlockerCapsule'",
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.32"
       },
       {
@@ -160,7 +160,7 @@
     "Properties": {
       "ObstructionCheckVolume": {
         "ObjectName": "BoxComponent'Default__BPTrenchEmpBuildSite_C:ObstructionCheckVolume'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.6"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.5"
       },
       "BlocksPassiveDefences": true,
       "CodeName": "TrenchEmpBuildSite",
@@ -176,7 +176,11 @@
       },
       "UseAreaBox": {
         "ObjectName": "BoxComponent'Default__BPTrenchEmpBuildSite_C:UseAreaBox'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.6"
+      },
+      "ModularMountsComponent": {
+        "ObjectName": "ModularMountsComponent'Default__BPTrenchEmpBuildSite_C:ModularMountsComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.25"
       },
       "MaxHealth": 400,
       "Health": 400,
@@ -196,58 +200,6 @@
     "Outer": "Default__BPTrenchEmpBuildSite_C",
     "Class": "UScriptClass'ArrowComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
-  },
-  {
-    "Type": "BoxComponent",
-    "Name": "BuildsiteOverlapBlock_GEN_VARIABLE",
-    "Outer": "BPTrenchEmpBuildSite_C",
-    "Class": "UScriptClass'BoxComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "BoxExtent": {
-        "X": 500.0,
-        "Y": 500.0,
-        "Z": 30.0
-      },
-      "AreaClass": {
-        "ObjectName": "Class'NavArea_Obstacle'",
-        "ObjectPath": "/Script/NavigationSystem"
-      },
-      "BodyInstance": {
-        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
-        "CollisionProfileName": "StructureBuildSite",
-        "CollisionResponses": {
-          "ResponseArray": [
-            {
-              "Channel": "Visibility",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "OverlapDowncast",
-              "Response": "ECR_Ignore"
-            },
-            {
-              "Channel": "Work",
-              "Response": "ECR_Block"
-            },
-            {
-              "Channel": "Damage",
-              "Response": "ECR_Overlap"
-            },
-            {
-              "Channel": "BuildSurface",
-              "Response": "ECR_Overlap"
-            }
-          ]
-        }
-      },
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": 0.0,
-        "Z": -15.0
-      },
-      "Mobility": "EComponentMobility::Stationary"
-    }
   },
   {
     "Type": "BoxComponent",
@@ -977,6 +929,13 @@
     }
   },
   {
+    "Type": "ModularMountsComponent",
+    "Name": "ModularMountsComponent",
+    "Outer": "Default__BPTrenchEmpBuildSite_C",
+    "Class": "UScriptClass'ModularMountsComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
     "Type": "ObjectProperty",
     "Name": "Back",
     "Outer": "BPTrenchEmpBuildSite_C",
@@ -1050,14 +1009,14 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "BuildsiteOverlapBlock",
+    "Name": "BPTrenchBlockerCapsule",
     "Outer": "BPTrenchEmpBuildSite_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "BlueprintGeneratedClass'BPTrenchBlockerCapsule_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPTrenchBlockerCapsule.0"
     }
   },
   {
@@ -1349,6 +1308,27 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPTrenchEmpBuildSite_C:TrenchEmpCommonDirtT1T2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.93"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FD7DAE60-45A7800E-64F5DABE-0AFF0CD6",
+      "InternalVariableName": "TrenchEmpCommonDirtT1T2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_11",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -1360,7 +1340,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BoxComponent'BPTrenchEmpBuildSite_C:WorkBox_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.5"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.4"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1423,7 +1403,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.25"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.24"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1444,7 +1424,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.16"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1465,7 +1445,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.17"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1486,7 +1466,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal3_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.18"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1507,7 +1487,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal4_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.19"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1528,7 +1508,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal5_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.20"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1549,7 +1529,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:LeftSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.14"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1570,7 +1550,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal6_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.21"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1591,7 +1571,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal7_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.22"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1717,7 +1697,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "DecalComponent'BPTrenchEmpBuildSite_C:Decal8_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.23"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1738,7 +1718,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BPTrenchBlockerCapsule_C'BPTrenchEmpBuildSite_C:BPTrenchBlockerCapsule_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.7"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1759,33 +1739,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:RightSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.15"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "FA18F378-49004D33-30B2A4A9-98D43B2E",
       "InternalVariableName": "RightSocket"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_35",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'BoxComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BoxComponent'BPTrenchEmpBuildSite_C:BuildsiteOverlapBlock_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.4"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "CAC793F0-43792C00-3860A2BA-BDD71E06",
-      "InternalVariableName": "BuildsiteOverlapBlock"
     }
   },
   {
@@ -1801,7 +1760,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:FrontSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.13"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1822,7 +1781,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:FrontLeftSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.11"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1843,7 +1802,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:FrontRightSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.12"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1864,7 +1823,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:BackRightSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.9"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1885,7 +1844,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:BackSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.10"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1906,7 +1865,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPTrenchEmpBuildSite_C:BackLeftSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.8"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1924,7 +1883,7 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.75"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.76"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_4'",
@@ -1952,43 +1911,43 @@
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.56"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.63"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.64"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.66"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.67"
         },
         {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.68"
+        },
+        {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.59"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.60"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
@@ -1996,49 +1955,49 @@
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.73"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.74"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.69"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.70"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.71"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_25'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.72"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.57"
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.73"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.58"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.68"
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.59"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_35'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.76"
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.69"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.74"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.56"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.75"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.76"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_4'",
@@ -2066,43 +2025,43 @@
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.65"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.56"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_15'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.60"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.61"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.62"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_18'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.63"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.64"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.66"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.57"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_20'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.67"
         },
         {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.68"
+        },
+        {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_14'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.59"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.60"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_1'",
@@ -2110,43 +2069,43 @@
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.73"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.74"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_23'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.69"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.70"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_24'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.71"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_25'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.72"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.57"
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_26'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.73"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.58"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_22'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.68"
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.59"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_35'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.76"
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.69"
         },
         {
           "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.74"
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpBuildSite_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpBuildSite.56"
         }
       ],
       "DefaultSceneRootNode": {
@@ -2760,5 +2719,21 @@
     "Outer": "Default__BPTrenchEmpBuildSite_C",
     "Class": "UScriptClass'StealthComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "TrenchEmpCommonDirtT1T2_GEN_VARIABLE",
+    "Outer": "BPTrenchEmpBuildSite_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPTrenchEmpCommonDirtT1T2_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpCommonDirtT1T2.1"
+      },
+      "bOnlyCollisions": true,
+      "OverrideCollisionProfile": "NoBuildArea",
+      "bOverrideInitiallyDisableCollisions": true
+    }
   }
 ]

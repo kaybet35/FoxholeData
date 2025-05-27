@@ -1,5 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
+#include "EActivityBonusState.h"
 #include "EInfrastructureType.h"
 #include "ESpawnPointCategory.h"
 #include "TechTreeComponentVotes.h"
@@ -16,6 +17,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bIsSpawnPointSetHere;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_IsActivityBonusActive, meta=(AllowPrivateAccess=true))
+    EActivityBonusState ActivityBonusState;
+    
     UTechTreeUserComponent(const FObjectInitializer& ObjectInitializer);
 
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
@@ -23,6 +27,9 @@ public:
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerSetVote(const ESpawnPointCategory SpawnPointCategory, const EInfrastructureType Vote);
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_IsActivityBonusActive();
     
 };
 

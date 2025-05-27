@@ -29,10 +29,13 @@ class UABP_ScoutTankW_C : public USimVehicleGunnerSupportAnimInstance
     FAnimNode_StateMachine AnimGraphNode_StateMachine_53CF41914C6EF7CB073DD699FA3956DC; // 0x0EF0 (size: 0xB0)
     FAnimNode_LayeredBoneBlend AnimGraphNode_LayeredBoneBlend_7311E8414A9DBD197612C2AE2A3C4442; // 0x0FA0 (size: 0xC0)
     FAnimNode_BlendSpacePlayer AnimGraphNode_BlendSpacePlayer_7E50C1E9493353A8B9D4C49F9B0F59F2; // 0x1060 (size: 0xE0)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_C5F1E396485CE5D877D24FA0FF6476FA; // 0x1140 (size: 0x78)
+    FAnimNode_SequencePlayer AnimGraphNode_SequencePlayer_D031EDB842C1AE1E7CC9F6B8568014AD; // 0x11B8 (size: 0x78)
+    FAnimNode_BlendListByBool AnimGraphNode_BlendListByBool_C63C2D8C409B462C7F6512BA59AE5A1F; // 0x1230 (size: 0xA0)
 
     void AnimGraph(FPoseLink& AnimGraph);
     void EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_ScoutTankW_AnimGraphNode_TransitionResult_6F77BAB84740CB700B15F4967F008DE2();
     void ExecuteUbergraph_ABP_ScoutTankW(int32 EntryPoint);
-}; // Size: 0x1140
+}; // Size: 0x12D0
 
 #endif

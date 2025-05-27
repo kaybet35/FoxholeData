@@ -3,8 +3,7 @@
 
 class ABPTrenchEmpCommonMods_C : public ATemplate
 {
-    class UBPTrenchDefenseModSlot_C* BackRightDefenseModSlot;                         // 0x0218 (size: 0x8)
-    class UBPTrenchUnderModSlot_C* UnderModSlot;                                      // 0x0220 (size: 0x8)
+    class UBPTrenchDefenseModSlot_C* BackRightDefenseModSlot;                         // 0x0220 (size: 0x8)
     class UBPTrenchDefenseModSlot_C* FrontRightDefenseModSlot;                        // 0x0228 (size: 0x8)
     class UBPTrenchDefenseModSlot_C* RightDefenseModSlot;                             // 0x0230 (size: 0x8)
     class UBPTrenchDefenseModSlot_C* LeftDefenseModSlot;                              // 0x0238 (size: 0x8)

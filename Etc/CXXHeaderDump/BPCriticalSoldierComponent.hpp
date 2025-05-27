@@ -3,6 +3,6 @@
 
 class UBPCriticalSoldierComponent_C : public USoldierItemComponent
 {
-}; // Size: 0x908
+}; // Size: 0x910
 
 #endif

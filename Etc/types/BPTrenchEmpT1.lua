@@ -1,8 +1,9 @@
 ---@meta
 
 ---@class ABPTrenchEmpT1_C : AFort
+---@field TrenchEmpDirtDecals UTemplateComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
----@field TrenchEmpCommonDirt UTemplateComponent
+---@field TrenchEmpCommonDirtT1T2 UTemplateComponent
 ---@field TrenchEmpCommonMods UTemplateComponent
 ---@field TrenchEmpCommon UTemplateComponent
 ---@field BackCornerL UStaticMeshComponent

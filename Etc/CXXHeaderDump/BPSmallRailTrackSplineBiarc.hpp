@@ -3,6 +3,6 @@
 
 class ABPSmallRailTrackSplineBiarc_C : public ABPSmallRailTrackSpline_C
 {
-}; // Size: 0x890
+}; // Size: 0x8C0
 
 #endif

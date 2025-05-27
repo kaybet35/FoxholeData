@@ -8,8 +8,6 @@ UVehicleSeatComponent::UVehicleSeatComponent(const FObjectInitializer& ObjectIni
     this->bIsWoundable = false;
     this->bOverrideAsPassenger = false;
     this->EnterSFX = NULL;
-    this->PC = NULL;
-    this->Character = NULL;
 }
 
 

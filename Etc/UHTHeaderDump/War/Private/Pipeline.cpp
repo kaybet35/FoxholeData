@@ -18,12 +18,14 @@ APipeline::APipeline(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->FrontSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("FrontSocket"));
     this->LeftSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("LeftSocket"));
     this->RightSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("RightSocket"));
-    this->SplineConnector->SetupAttachment(RootComponent);
-    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
-    this->BackSocket->SetupAttachment(RootComponent);
+    this->MaxLiquidAmount = 0.00f;
+    this->SystemIndex = -1;
     this->FrontSocket->SetupAttachment(RootComponent);
     this->LeftSocket->SetupAttachment(RootComponent);
     this->RightSocket->SetupAttachment(RootComponent);
+    this->SplineConnector->SetupAttachment(RootComponent);
+    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
+    this->BackSocket->SetupAttachment(RootComponent);
 }
 
 

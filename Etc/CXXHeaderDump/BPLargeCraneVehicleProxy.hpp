@@ -3,6 +3,6 @@
 
 class ABPLargeCraneVehicleProxy_C : public ARailVehicleProxy
 {
-}; // Size: 0x7C0
+}; // Size: 0x7F0
 
 #endif

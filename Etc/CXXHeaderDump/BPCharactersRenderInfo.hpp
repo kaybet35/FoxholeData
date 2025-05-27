@@ -3,8 +3,8 @@
 
 class ABPCharactersRenderInfo_C : public ACharactersRenderInfo
 {
-    class USceneComponent* DefaultSceneRoot;                                          // 0x12B8 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x1438 (size: 0x8)
 
-}; // Size: 0x12C0
+}; // Size: 0x1440
 
 #endif

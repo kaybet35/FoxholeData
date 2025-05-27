@@ -23,5 +23,6 @@ FWeaponDynamicData::FWeaponDynamicData() {
     this->AddedBurningMultiplier = 0.00f;
     this->ArmourDamageModifier = 0.00f;
     this->TargetStabilityReductionPerShot = 0.00f;
+    this->BreachingModifier = 0.00f;
 }
 

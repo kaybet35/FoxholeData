@@ -141,6 +141,8 @@ enum class EHUDNotification : uint8 {
     TrainCoupled,
     TrainOffRails,
     VehicleRestored,
+    PipeMustBeConnected,
+    PipesMustBeReserved,
     MAX,
 };
 

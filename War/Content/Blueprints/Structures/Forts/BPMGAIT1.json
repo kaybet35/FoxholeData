@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "BlockBuildSiteMovement",
+    "Name": "FortCommonT1BreachedWalls",
     "Outer": "BPMGAIT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -23,7 +23,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPMGAIT1_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.20"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BPMGAIT1_C:InheritableComponentHandler'",
@@ -36,12 +36,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPMGAIT1_C:BlockBuildSiteMovement'",
+        "ObjectName": "ObjectProperty'BPMGAIT1_C:FortCommonT1BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPMGAIT1_C:BlockBuildSiteMovement'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.13"
+      },
+      {
         "ObjectName": "ObjectProperty'BPMGAIT1_C:MultiplexedSkeletalMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.14"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -64,7 +68,7 @@
     "Properties": {
       "SkeletalMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPMGAIT1_C:Mesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.21"
       },
       "AITurretComponent": {
         "ObjectName": "AITurretComponent'Default__BPMGAIT1_C:AITurretComponent'",
@@ -81,12 +85,16 @@
       "MaxOccupantFiringArcDeviation": 45.0,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPMGAIT1_C:FlagMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.23"
       },
       "Tier": "EFortTier::T1",
       "BaseStructureClass": {
         "ObjectName": "BlueprintGeneratedClass'BPMGAIT1Destroyed_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1Destroyed.1"
+      },
+      "BreachedStructureClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPMGAIT1Breached_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1Breached.1"
       },
       "DestroyedDamageExtent": {
         "X": 250.0,
@@ -98,6 +106,7 @@
         "Y": 0.0,
         "Z": 100.5
       },
+      "ValidBuildTools": 49,
       "CodeName": "MGAIT1",
       "DisplayName": {
         "Namespace": "",
@@ -119,17 +128,21 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.8"
       },
       "TechComponentIDs": [
-        "ETechComponentID::RifleGarrison"
+        "ETechComponentID::T1Garrison"
       ],
-      "MaxHealth": 1650,
-      "Health": 1650,
+      "ModularMountsComponent": {
+        "ObjectName": "ModularMountsComponent'Default__BPMGAIT1_C:ModularMountsComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.11"
+      },
+      "MaxHealth": 900,
+      "Health": 900,
       "UpgradeStructureCodeName": "MGAIT2",
       "ClaimStatus": {
         "bCanBeDemolished": true
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPMGAIT1_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.22"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPMGAIT1_C:StructureArrow'",
@@ -146,10 +159,12 @@
     "Properties": {
       "MaximumRange": 3350.0,
       "bShowExtraTracers": true,
-      "WeaponDamage": 55.0,
-      "FiringPeriod": 0.15,
+      "DamageAttributes": {
+        "WeaponDamage": 55.0,
+        "FiringPeriod": 0.15,
+        "TargetStabilityReductionPerShot": 0.5
+      },
       "FiringConeAngle": 45.0,
-      "TargetStabilityReductionPerShot": 0.5,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPMGAIT1_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.6"
@@ -297,6 +312,16 @@
     "Flags": "RF_WasLoaded | RF_LoadCompleted"
   },
   {
+    "Type": "ModularMountsComponent",
+    "Name": "ModularMountsComponent",
+    "Outer": "Default__BPMGAIT1_C",
+    "Class": "UScriptClass'ModularMountsComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bReplicates": true
+    }
+  },
+  {
     "Type": "MultiplexedSkeletalMeshComponent",
     "Name": "MultiplexedSkeletalMesh_GEN_VARIABLE",
     "Outer": "BPMGAIT1_C",
@@ -332,6 +357,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "BlockBuildSiteMovement",
+    "Outer": "BPMGAIT1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "MultiplexedSkeletalMesh",
     "Outer": "BPMGAIT1_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -362,7 +399,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPMGAIT1_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.15"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -402,10 +439,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedSkeletalMeshComponent'BPMGAIT1_C:MultiplexedSkeletalMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.12"
       },
       "VariableGuid": "B7CE4494-480EBC66-F401FE89-7A1EDCC1",
       "InternalVariableName": "MultiplexedSkeletalMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPMGAIT1_C:FortCommonT1BreachedWalls_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.24"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "18D8E6B2-4A73C061-00133BA5-97E18F1E",
+      "InternalVariableName": "FortCommonT1BreachedWalls"
     }
   },
   {
@@ -418,26 +476,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.18"
         },
         {
           "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.15"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.19"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.18"
         },
         {
           "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.15"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.19"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPMGAIT1_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.16"
       }
     }
   },
@@ -471,6 +537,19 @@
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPMGAIT1_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT1.6"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonT1BreachedWalls_GEN_VARIABLE",
+    "Outer": "BPMGAIT1_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonT1BreachedWalls_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortCommonT1BreachedWalls.1"
       }
     }
   }

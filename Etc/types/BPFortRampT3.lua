@@ -1,6 +1,9 @@
 ---@meta
 
----@class ABPFortRampT3_C : AConcreteFort
+---@class ABPFortRampT3_C : AFort
+---@field BreachedLeft UStaticMeshComponent
+---@field BreachedBack UStaticMeshComponent
+---@field BreachedRight UStaticMeshComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field FortRampCommonT2T3Mods UTemplateComponent

@@ -3,6 +3,6 @@
 
 class AUnexplodedOrdnance_C : public AExplosive
 {
-}; // Size: 0x2D0
+}; // Size: 0x2D8
 
 #endif

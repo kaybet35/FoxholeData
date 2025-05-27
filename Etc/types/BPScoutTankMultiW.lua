@@ -2,7 +2,6 @@
 
 ---@class ABPScoutTankMultiW_C : AScoutTank
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field PayloadInstancedStaticMesh2 UPayloadInstancedStaticMeshComponent
 ---@field PayloadInstancedStaticMesh1 UPayloadInstancedStaticMeshComponent
 ---@field PayloadInstancedStaticMesh0 UPayloadInstancedStaticMeshComponent
 ---@field Camera UCameraComponent

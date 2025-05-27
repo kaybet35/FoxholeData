@@ -159,6 +159,16 @@
           "CodeName": "SmallTrainShipping",
           "Duration": 300,
           "RequiredCodeName": "None"
+        },
+        {
+          "CodeName": "Construction",
+          "Duration": 100,
+          "RequiredCodeName": "None"
+        },
+        {
+          "CodeName": "Crane",
+          "Duration": 100,
+          "RequiredCodeName": "None"
         }
       ],
       "Modifications": [
@@ -292,6 +302,11 @@
                 "CodeName": "LargeFieldMultiW",
                 "Duration": 600,
                 "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "ArmoredCar2MultiW",
+                "Duration": 300,
+                "RequiredCodeName": "ArmoredCar2TwinW"
               }
             ]
           }
@@ -348,6 +363,11 @@
               {
                 "CodeName": "HeavyTruckW",
                 "Duration": 600,
+                "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "ConstructionEquipment",
+                "Duration": 900,
                 "RequiredCodeName": "None"
               }
             ]
@@ -458,6 +478,11 @@
                 "CodeName": "LargeFieldCannonW",
                 "Duration": 420,
                 "RequiredCodeName": "FieldCannonW"
+              },
+              {
+                "CodeName": "LargeFieldMortarC",
+                "Duration": 420,
+                "RequiredCodeName": "FieldMortarC"
               }
             ]
           }
@@ -479,6 +504,31 @@
               {
                 "CodeName": "RocketPartTop",
                 "Duration": 86400,
+                "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "FortConstructionPart",
+                "Duration": 300,
+                "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "FortStructurePart",
+                "Duration": 300,
+                "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "FortLRArtilleryPart",
+                "Duration": 1500,
+                "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "FortIntelCenterPart",
+                "Duration": 1500,
+                "RequiredCodeName": "None"
+              },
+              {
+                "CodeName": "FortWeatherStationPart",
+                "Duration": 1500,
                 "RequiredCodeName": "None"
               }
             ]
@@ -545,7 +595,7 @@
       "BuildOrder": 15,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bDropsLargeMaterialsWhenDestroyed": false,
-      "ValidBuildTools": 24,
+      "ValidBuildTools": 56,
       "CodeName": "FacilityVehicleFactory1",
       "ChassisName": {
         "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
@@ -833,9 +883,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityMineOilRig",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -932,9 +984,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1031,9 +1085,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityTier2",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1130,9 +1186,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityTier2",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1229,9 +1287,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityTier2",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1328,9 +1388,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::UnlockFacilityTier3",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1368,13 +1430,13 @@
             "DisplayName": {
               "Namespace": "",
               "Key": "861B180244AD7046A21D6DB790C5F8D3",
-              "SourceString": "Rocket Manufactory",
+              "SourceString": "Advanced Structure Manufactory",
               "LocalizedString": "Rocket Manufactory"
             },
             "Description": {
               "Namespace": "",
               "Key": "B46BADA6427C7B4029B045A8DE9B9F96",
-              "SourceString": "A workshop platform for the assembly of multi-part long-range ballistic missiles such as the A0E-9, or AEON Rocket.",
+              "SourceString": "A workshop platform for the assembly of large, multi-part constructs such as the A0E-9 Rocket and Storm Cannon.",
               "LocalizedString": "A workshop platform for the assembly of multi-part long-range ballistic missiles such as the A0E-9, or AEON Rocket."
             },
             "Icon": {
@@ -1427,9 +1489,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": true,
-            "TechID": "ETechID::UnlockRocket",
+            "bBuildFootprintIgnoresConnectedActors": false,
+            "TechID": "ETechID::UnlockFacilityTier2",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",
@@ -1517,9 +1581,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": false,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",

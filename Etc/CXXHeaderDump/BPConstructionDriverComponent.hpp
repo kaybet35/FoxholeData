@@ -3,6 +3,6 @@
 
 class UBPConstructionDriverComponent_C : public UConstructionGunnerComponent
 {
-}; // Size: 0x850
+}; // Size: 0x858
 
 #endif

@@ -26,5 +26,6 @@ enum class ESpawnPointType : uint8 {
     TownBase,
     LargeShip,
     MedicalBase,
+    FortSafeHouse,
 };
 

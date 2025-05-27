@@ -11,6 +11,8 @@ FStructureStats::FStructureStats() {
     this->MaxHealth = 0;
     this->ConcreteProgress = 0.00f;
     this->IslandHealth = 0.00f;
+    this->IslandIntegrityBonus = 0.00f;
     this->Suppression = 0.00f;
+    this->ShelterBonus = 0.00f;
 }
 

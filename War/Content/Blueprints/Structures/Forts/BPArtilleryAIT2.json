@@ -1,0 +1,887 @@
+[
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonT2BreachedWalls",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BPArtilleryAIT2_C:SimpleConstructionScript_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.24"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BPArtilleryAIT2_C:InheritableComponentHandler'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortStaticArtillery'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "ObjectProperty'BPArtilleryAIT2_C:FortCommonT2BreachedWalls'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPArtilleryAIT2_C:BlockBuildSiteMovement'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.10"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPArtilleryAIT2_C:Floor'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.11"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPArtilleryAIT2_C:FortCommonDirtT2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.13"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPArtilleryAIT2_C:FortCommon'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPArtilleryAIT2_C:FortCommonMods'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.14"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPArtilleryAIT2_C'Default__BPArtilleryAIT2_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.2"
+    }
+  },
+  {
+    "Type": "BPArtilleryAIT2_C",
+    "Name": "Default__BPArtilleryAIT2_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.BPArtilleryAIT2_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPArtilleryAIT2_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.25"
+      },
+      "FlagMesh": {
+        "ObjectName": "TeamFlagMeshComponent'Default__BPArtilleryAIT2_C:FlagMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.28"
+      },
+      "FireShellParticleSystem": {
+        "ObjectName": "ParticleSystemComponent'Default__BPArtilleryAIT2_C:FireShellParticleSystem'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.15"
+      },
+      "MinDistance": 2500.0,
+      "MaxDistance": 60000.0,
+      "FiringAngle": 60.0,
+      "FiringCooldown": 13.0,
+      "MinVerticalAngle": 15.0,
+      "MaxVerticalAngle": 45.0,
+      "DamageParams": {
+        "Type": {
+          "ObjectName": "BlueprintGeneratedClass'BPHighExplosiveDamageType_C'",
+          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPHighExplosiveDamageType.0"
+        },
+        "BaseAmount": 500.0,
+        "Radius": 1125.0,
+        "InnerRadius": 400.0,
+        "Falloff": 2.0,
+        "AccuracyRadius": 3500.0,
+        "ExplosionClass": {
+          "ObjectName": "BlueprintGeneratedClass'StaticArtilleryExplosion_C'",
+          "ObjectPath": "War/Content/Blueprints/Items/StaticArtilleryExplosion.1"
+        },
+        "ShotSoundCue": {
+          "ObjectName": "SoundCue'HowiShot_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/Howitzer/HowiShot_Cue.0"
+        }
+      },
+      "InitialDelay": 0.8,
+      "ExplosionDelay": 2.8,
+      "ObstructionCheckOverrideExtents": {
+        "X": 300.0,
+        "Y": 300.0,
+        "Z": 400.0
+      },
+      "Tier": "EFortTier::T2",
+      "BuildGhostClass": null,
+      "BuildSiteClass": {
+        "ObjectName": "Class'FortBuildSite'",
+        "ObjectPath": "/Script/War"
+      },
+      "BaseStructureClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPArtilleryAIT2Destroyed_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2Destroyed.1"
+      },
+      "BreachedStructureClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPArtilleryAIT2Breached_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2Breached.1"
+      },
+      "Description": {
+        "Namespace": "",
+        "Key": "88D21E1046880ADCD0C1ECA1E33804F8",
+        "SourceString": "An entrenched Howitzer manned by stationed troops.",
+        "LocalizedString": "An entrenched Howitzer manned by stationed troops."
+      },
+      "Icon": {
+        "ObjectName": "Texture2D'FortT2HowitzerAIIcon'",
+        "ObjectPath": "War/Content/Textures/UI/StructureIcons/FortT2HowitzerAIIcon.0"
+      },
+      "BuildCategory": "EBuildCategory::Bunker",
+      "DestroyedDamageExtent": {
+        "X": 233.5,
+        "Y": 250.0,
+        "Z": 316.0
+      },
+      "DestroyedDamageOffset": {
+        "X": -25.0,
+        "Y": 0.0,
+        "Z": 159.5
+      },
+      "bDropsLargeMaterialsWhenDestroyed": false,
+      "ValidBuildTools": 49,
+      "CodeName": "ArtilleryAIT2",
+      "ChassisName": {
+        "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
+        "Key": "ChassisEntrenchment",
+        "SourceString": "Entrenchment",
+        "LocalizedString": "Entrenchment"
+      },
+      "DisplayName": {
+        "Namespace": "",
+        "Key": "D09EBD9045ED1976D17EDB88A80D47D4",
+        "SourceString": "Artillery Garrison (Tier 2)",
+        "LocalizedString": "Howitzer Garrison"
+      },
+      "ArmourType": "EArmourType::Tier2Structure",
+      "ArrowComponent": {
+        "ObjectName": "ArrowComponent'Default__BPArtilleryAIT2_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.3"
+      },
+      "UseAreaBox": {
+        "ObjectName": "BoxComponent'Default__BPArtilleryAIT2_C:UseAreaBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.6"
+      },
+      "KillVolume": {
+        "ObjectName": "BoxComponent'Default__BPArtilleryAIT2_C:KillVolume'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.5"
+      },
+      "DestroyedFX": {
+        "ObjectName": "ParticleSystem'GrenadeBlast'",
+        "ObjectPath": "War/Content/FX/GrenadeBlast.151"
+      },
+      "DestroyedSoundCue": {
+        "ObjectName": "SoundCue'BunkerExplosion_Cue'",
+        "ObjectPath": "War/Content/Audio/SFX/BunkerExplosion_Cue.0"
+      },
+      "TechComponentIDs": [
+        "ETechComponentID::T2Garrison"
+      ],
+      "ModularMountsComponent": {
+        "ObjectName": "ModularMountsComponent'Default__BPArtilleryAIT2_C:ModularMountsComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.9"
+      },
+      "InfrastructureComponent": {
+        "ObjectName": "InfrastructureComponent'Default__BPArtilleryAIT2_C:InfrastructureComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.7"
+      },
+      "MaxHealth": 1600,
+      "Health": 1600,
+      "UpgradeStructureCodeName": "ArtilleryAIT3",
+      "MapIntelligenceType": "EMapIntelligenceType::Defense",
+      "ClaimStatus": {
+        "bCanBeDemolished": true
+      },
+      "StealthComponent": {
+        "ObjectName": "StealthComponent'Default__BPArtilleryAIT2_C:StealthComponent'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.27"
+      },
+      "NetUpdateFrequency": 15.0,
+      "MinNetUpdateFrequency": 15.0,
+      "RootComponent": {
+        "ObjectName": "ArrowComponent'Default__BPArtilleryAIT2_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.3"
+      }
+    }
+  },
+  {
+    "Type": "ArrowComponent",
+    "Name": "StructureArrow",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ArrowComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BlockBuildSiteMovement_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 300.0,
+        "Y": 300.0,
+        "Z": 110.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -65.0
+      },
+      "Mobility": "EComponentMobility::Stationary",
+      "ComponentTags": [
+        "IncludeInBuildSite"
+      ]
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "KillVolume",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 233.5,
+        "Y": 250.0,
+        "Z": 316.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPArtilleryAIT2_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.3"
+      },
+      "RelativeLocation": {
+        "X": -25.0,
+        "Y": 0.0,
+        "Z": 159.5
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "UseAreaBox",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 400.0,
+        "Y": 400.0,
+        "Z": 160.0
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPArtilleryAIT2_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.3"
+      },
+      "RelativeLocation": {
+        "X": -6.1035156E-05,
+        "Y": 1.4084167,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "InfrastructureComponent",
+    "Name": "InfrastructureComponent",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'InfrastructureComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FilteredTypes": "EFortModificationType::DishWashStation",
+      "FilteredTypes[1]": "EFortModificationType::Kitchen",
+      "FilteredTypes[2]": "EFortModificationType::Pantry"
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ModularMountsComponent",
+    "Name": "ModularMountsComponent",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ModularMountsComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bReplicates": true
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "BlockBuildSiteMovement",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Floor",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommon",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonDirtT2",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonMods",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ParticleSystemComponent",
+    "Name": "FireShellParticleSystem",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'ParticleSystemComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Template": {
+        "ObjectName": "ParticleSystem'FieldGunMF'",
+        "ObjectPath": "War/Content/FX/FieldGunMF.82"
+      },
+      "AttachParent": {
+        "ObjectName": "SkeletalMeshComponent'Default__BPArtilleryAIT2_C:Mesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.25"
+      },
+      "RelativeLocation": {
+        "X": -1.7658167E-06,
+        "Y": 403.6981,
+        "Z": 4.4927438E-06
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BPArtilleryAIT2_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.16"
+      },
+      "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPArtilleryAIT2_C:FortCommonT2BreachedWalls_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.32"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "286CDDAC-40E39D90-BB6878A4-78A9464A",
+      "InternalVariableName": "FortCommonT2BreachedWalls"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BPArtilleryAIT2_C:BlockBuildSiteMovement_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.4"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FE953720-41078A9D-F28DD595-BAF54D95",
+      "InternalVariableName": "BlockBuildSiteMovement"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPArtilleryAIT2_C:FortCommonDirtT2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.30"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7F02F71D-40003641-AE8377BB-F226AAD4",
+      "InternalVariableName": "FortCommonDirtT2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPArtilleryAIT2_C:FortCommonMods_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.31"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "7DAEB104-416E4FD6-B67F1B85-A8E35303",
+      "InternalVariableName": "FortCommonMods"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPArtilleryAIT2_C:FortCommon_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.29"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "2607AC9B-40BB47C4-F51B87B0-D3BA6DC5",
+      "InternalVariableName": "FortCommon"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPArtilleryAIT2_C:Floor_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.26"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "827D0F9B-41149608-BFDB18B7-13857B7D",
+      "InternalVariableName": "Floor"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BPArtilleryAIT2_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.17"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimClass": {
+        "ObjectName": "AnimBlueprintGeneratedClass'ABP_T2ArtilleryGarrison_C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.1"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'SK_T2ArtilleryGarrison'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/AIBunkers/SK_T2ArtilleryGarrison.0"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldDynamic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPArtilleryAIT2_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.3"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -160.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "ComponentTags": [
+        "RoofVisibility"
+      ]
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Floor_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FortT2Floor02'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/FortT2Floor02.2"
+      },
+      "bReceivesDecals": false,
+      "BodyInstance": {
+        "CollisionProfileName": "StructureDamageableMesh",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Work",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Excavate",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -160.0
+      },
+      "Mobility": "EComponentMobility::Stationary",
+      "ComponentTags": [
+        "MultiplexedFloor"
+      ]
+    }
+  },
+  {
+    "Type": "StealthComponent",
+    "Name": "StealthComponent",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'StealthComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "TeamFlagMeshComponent",
+    "Name": "FlagMesh",
+    "Outer": "Default__BPArtilleryAIT2_C",
+    "Class": "UScriptClass'TeamFlagMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Team0Mesh": {
+        "ObjectName": "StaticMesh'FlagShortA'",
+        "ObjectPath": "War/Content/Meshes/Structures/FlagShortA.2"
+      },
+      "Team1Mesh": {
+        "ObjectName": "StaticMesh'FlagShortB'",
+        "ObjectPath": "War/Content/Meshes/Structures/FlagShortB.2"
+      },
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'FlagShortA'",
+        "ObjectPath": "War/Content/Meshes/Structures/FlagShortA.2"
+      },
+      "AttachParent": {
+        "ObjectName": "ArrowComponent'Default__BPArtilleryAIT2_C:StructureArrow'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPArtilleryAIT2.3"
+      },
+      "RelativeLocation": {
+        "X": -221.4129,
+        "Y": 207.71684,
+        "Z": 242.31595
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommon_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommon_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommon.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonDirtT2_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonDirtT2_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDirtT2.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonMods_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonMods_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonMods.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonT2BreachedWalls_GEN_VARIABLE",
+    "Outer": "BPArtilleryAIT2_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonT2BreachedWalls_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortCommonT2BreachedWalls.1"
+      }
+    }
+  }
+]

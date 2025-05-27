@@ -10,6 +10,7 @@ AHospital::AHospital(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->ArmourType = EArmourType::Tier3Structure;
     this->KillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("KillVolume"));
     this->bIsBuildSiteMapIconVisible = true;
+    this->bIsBlankFortPiece = true;
     this->HospitalComponent = CreateDefaultSubobject<UHospitalComponent>(TEXT("HospitalComponent"));
     this->GenericStockpileComponent = CreateDefaultSubobject<UGenericStockpileComponent>(TEXT("GenericStockpileComponent"));
     this->KillVolume->SetupAttachment(RootComponent);

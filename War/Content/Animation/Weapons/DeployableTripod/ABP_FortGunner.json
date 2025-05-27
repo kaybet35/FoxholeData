@@ -1,0 +1,688 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_FortGunner_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "basic motion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "closed",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 7,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "open",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 8,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                3,
+                5,
+                6
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_DeployableTripod_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Weapons/SK_DeployableTripod_Skeleton.1"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "Height",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'DeployedTripodAnimInstance:Height'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_BlendSpacePlayer_FB754BE949CA0DC2FA21F286CC4F2F56'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.9"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RelativeYaw",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'DeployedTripodAnimInstance:RelativeYaw'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_BlendSpacePlayer_67891E2D477590E93AD14BA3597A0FD8'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.7"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "RelativePitch",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'DeployedTripodAnimInstance:RelativePitch'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_BlendSpacePlayer_90B0DE044F7AC417A412EF8C8FDB4CCA'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.8"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDeployed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'DeployedTripodAnimInstance:bIsDeployed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_TransitionResult_0F29BAF7454C8C4B971B25AE28B397B0'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.16"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "bIsDeployed",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::LogicalNegateBool",
+              "DestProperty": {
+                "ObjectName": "BoolProperty'AnimNode_TransitionResult:bCanEnterTransition'",
+                "ObjectPath": "/Script/Engine"
+              },
+              "DestArrayIndex": 0,
+              "Size": 1,
+              "CachedSourceProperty": {
+                "ObjectName": "BoolProperty'DeployedTripodAnimInstance:bIsDeployed'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_TransitionResult_05C474F04B4261C7491FA58A3A1E66EC'",
+            "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.15"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_FortGunner_C:ExecuteUbergraph_ABP_FortGunner'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ModularMountAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.0"
+      },
+      {
+        "ObjectName": "Function'ABP_FortGunner_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.4"
+      },
+      {
+        "ObjectName": "Function'ABP_FortGunner_C:ExecuteUbergraph_ABP_FortGunner'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.6"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_Root_643351C248238D7C077A1E92331227F6'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_TransitionResult_05C474F04B4261C7491FA58A3A1E66EC'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_TransitionResult_0F29BAF7454C8C4B971B25AE28B397B0'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.16"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_BlendSpacePlayer_90B0DE044F7AC417A412EF8C8FDB4CCA'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.8"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_BlendSpacePlayer_67891E2D477590E93AD14BA3597A0FD8'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.7"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_LayeredBoneBlend_07FDA1C249972433B7C7898CD145E7C4'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.10"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_BlendSpacePlayer_FB754BE949CA0DC2FA21F286CC4F2F56'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.9"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_StateResult_58EF654B450909B72253948DB4AAFCC8'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_StateResult_4E500817466AFDDC9A13E6A57BCB1457'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraphNode_StateMachine_835FFB5244B607E1EE75E3AAD9738C41'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.12"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_FortGunner": {
+        "ObjectName": "Function'ABP_FortGunner_C:ExecuteUbergraph_ABP_FortGunner'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.6"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_FortGunner_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.4"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_FortGunner_C'Default__ABP_FortGunner_C'",
+      "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.2"
+    }
+  },
+  {
+    "Type": "ABP_FortGunner_C",
+    "Name": "Default__ABP_FortGunner_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.ABP_FortGunner_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_643351C248238D7C077A1E92331227F6": {
+        "Result": {
+          "LinkID": 9
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_TransitionResult_05C474F04B4261C7491FA58A3A1E66EC": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_0F29BAF7454C8C4B971B25AE28B397B0": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_BlendSpacePlayer_90B0DE044F7AC417A412EF8C8FDB4CCA": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Tripod_VerticalPivot'",
+          "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/BS_Tripod_VerticalPivot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_67891E2D477590E93AD14BA3597A0FD8": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Tripod_HorizontalPivot'",
+          "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/BS_Tripod_HorizontalPivot.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_LayeredBoneBlend_07FDA1C249972433B7C7898CD145E7C4": {
+        "BasePose": {
+          "LinkID": 6
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 4
+          },
+          {
+            "LinkID": 3
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "horizontal_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "vertical_pivot",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          }
+        ],
+        "SkeletonGuid": "23EF44B9-4144E360-5D163B90-E4D24F65",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_FB754BE949CA0DC2FA21F286CC4F2F56": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'BS_Tripod_heigh'",
+          "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/BS_Tripod_heigh.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_58EF654B450909B72253948DB4AAFCC8": {
+        "Result": {
+          "LinkID": 5
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_4E500817466AFDDC9A13E6A57BCB1457": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_835FFB5244B607E1EE75E3AAD9738C41": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_FortGunner_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.3"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_FortGunner",
+    "Class": "UScriptClass'IntProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_FortGunner",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_FortGunner_C:ExecuteUbergraph_ABP_FortGunner.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/Weapons/DeployableTripod/ABP_FortGunner.5"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_67891E2D477590E93AD14BA3597A0FD8",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_90B0DE044F7AC417A412EF8C8FDB4CCA",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_FB754BE949CA0DC2FA21F286CC4F2F56",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_07FDA1C249972433B7C7898CD145E7C4",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_643351C248238D7C077A1E92331227F6",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_835FFB5244B607E1EE75E3AAD9738C41",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4E500817466AFDDC9A13E6A57BCB1457",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_58EF654B450909B72253948DB4AAFCC8",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_05C474F04B4261C7491FA58A3A1E66EC",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_0F29BAF7454C8C4B971B25AE28B397B0",
+    "Outer": "ABP_FortGunner_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

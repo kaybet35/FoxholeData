@@ -1,0 +1,709 @@
+[
+  {
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "MaingunshootingSM",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 5,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 0,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                2
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "shooting",
+              "Transitions": [
+                {
+                  "CanTakeDelegateIndex": 6,
+                  "CustomResultNodeIndex": -1,
+                  "TransitionIndex": 1,
+                  "bDesiredTransitionReturnValue": true,
+                  "bAutomaticRemainingTimeRule": false,
+                  "PoseEvaluatorLinks": []
+                }
+              ],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [
+                4
+              ],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": [
+            {
+              "PreviousState": 0,
+              "NextState": 1,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            },
+            {
+              "PreviousState": 1,
+              "NextState": 0,
+              "CrossfadeDuration": 0.2,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "InterruptNotify": -1,
+              "BlendMode": "EAlphaBlendOption::HermiteCubic",
+              "CustomCurve": null,
+              "BlendProfile": null,
+              "LogicType": "ETransitionLogicType::TLT_StandardBlend",
+              "StateName": "None"
+            }
+          ]
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'SK_T2ArtilleryGarrison_Skeleton'",
+        "ObjectPath": "War/Content/Meshes/Structures/FortTrenches/AIBunkers/SK_T2ArtilleryGarrison_Skeleton.0"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_TransitionResult_8F5A3C0A4D59F13D186916BDA024E142'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.19"
+          }
+        },
+        {
+          "BoundFunction": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6",
+          "CopyRecords": [],
+          "Function": {
+            "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.10"
+          },
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.20"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "HorizontalAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'FortStaticArtilleryAnimInstance:HorizontalAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_BlendSpacePlayer_B81FCDD64EFEC2C23AB87FB0EB70917E'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.11"
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "SourcePropertyName": "VerticalAngle",
+              "SourceSubPropertyName": "None",
+              "SourceArrayIndex": 0,
+              "bInstanceIsTarget": false,
+              "PostCopyOperation": "EPostCopyOperation::None",
+              "DestProperty": {
+                "ObjectName": "FloatProperty'AnimNode_BlendSpacePlayer:X'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              },
+              "DestArrayIndex": 0,
+              "Size": 4,
+              "CachedSourceProperty": {
+                "ObjectName": "FloatProperty'FortStaticArtilleryAnimInstance:VerticalAngle'",
+                "ObjectPath": "/Script/War"
+              },
+              "CachedSourceStructSubProperty": null
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_BlendSpacePlayer_C494EE1A4E1F7218F9581788CE38CCC7'",
+            "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.12"
+          }
+        }
+      ],
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.5"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'FortStaticArtilleryAnimInstance'",
+      "ObjectPath": "/Script/War"
+    },
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.0"
+      },
+      {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.9"
+      },
+      {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.10"
+      },
+      {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.5"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_Root_B1A4243F400A0FF2E73244B63F232E5C'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.3"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_LayeredBoneBlend_9ED8149E4CDAAB598926E9904FBD5D11'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.13"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_BlendSpacePlayer_C494EE1A4E1F7218F9581788CE38CCC7'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.12"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_BlendSpacePlayer_B81FCDD64EFEC2C23AB87FB0EB70917E'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.11"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.20"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_TransitionResult_8F5A3C0A4D59F13D186916BDA024E142'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.19"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_SequencePlayer_00F3A823420DEDE4922DDDAB7D23E778'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.14"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_StateResult_4BBBE3E940D7E83391990BA1DAC2CF39'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.18"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_SequencePlayer_319998A84C4B5844D2C21AB1C3188D28'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.15"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_StateResult_12E417B142E6451E5DEC429CB921CD67'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.17"
+      },
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraphNode_StateMachine_A01DA6FF42CEBB5EA0ED22881BDC909A'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.16"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_T2ArtilleryGarrison": {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.5"
+      },
+      "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6": {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.10"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_T2ArtilleryGarrison_C:AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.9"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_T2ArtilleryGarrison_C'Default__ABP_T2ArtilleryGarrison_C'",
+      "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.2"
+    }
+  },
+  {
+    "Type": "ABP_T2ArtilleryGarrison_C",
+    "Name": "Default__ABP_T2ArtilleryGarrison_C",
+    "Class": "AnimBlueprintGeneratedClass'War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.ABP_T2ArtilleryGarrison_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root_B1A4243F400A0FF2E73244B63F232E5C": {
+        "Result": {
+          "LinkID": 1
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_LayeredBoneBlend_9ED8149E4CDAAB598926E9904FBD5D11": {
+        "BasePose": {
+          "LinkID": 3
+        },
+        "BlendPoses": [
+          {
+            "LinkID": 2
+          },
+          {
+            "LinkID": 10
+          }
+        ],
+        "LayerSetup": [
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "verticalPivot",
+                "BlendDepth": 0
+              }
+            ]
+          },
+          {
+            "BranchFilters": [
+              {
+                "BoneName": "GunBarrel",
+                "BlendDepth": 0
+              }
+            ]
+          }
+        ],
+        "BlendWeights": [
+          1.0,
+          1.0
+        ],
+        "bMeshSpaceRotationBlend": false,
+        "bMeshSpaceScaleBlend": false,
+        "CurveBlendOption": "ECurveBlendOption::MaxWeight",
+        "bBlendRootMotionBasedOnRootBone": true,
+        "LODThreshold": -1,
+        "PerBoneBlendWeights": [
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 0.0
+          },
+          {
+            "SourceIndex": 0,
+            "BlendWeight": 1.0
+          },
+          {
+            "SourceIndex": 1,
+            "BlendWeight": 1.0
+          }
+        ],
+        "SkeletonGuid": "9210C308-4A9502D7-D74D0DA7-A09BC760",
+        "VirtualBoneGuid": "00000000-00000000-00000000-00000000"
+      },
+      "AnimGraphNode_BlendSpacePlayer_C494EE1A4E1F7218F9581788CE38CCC7": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'T2ArtilleryGarrisonVertical'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/T2ArtilleryGarrisonVertical.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BlendSpacePlayer_B81FCDD64EFEC2C23AB87FB0EB70917E": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0,
+        "PlayRate": 1.0,
+        "bLoop": true,
+        "bResetPlayTimeWhenBlendSpaceChanges": true,
+        "StartPosition": 0.0,
+        "BlendSpace": {
+          "ObjectName": "BlendSpace1D'T2ArtilleryGarrisonHorizontal'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/T2ArtilleryGarrisonHorizontal.0"
+        },
+        "PreviousBlendSpace": null,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_TransitionResult_8F5A3C0A4D59F13D186916BDA024E142": {
+        "bCanEnterTransition": false
+      },
+      "AnimGraphNode_SequencePlayer_00F3A823420DEDE4922DDDAB7D23E778": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_T2ArtilleryGarrisonShooting'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/Anim_T2ArtilleryGarrisonShooting.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_4BBBE3E940D7E83391990BA1DAC2CF39": {
+        "Result": {
+          "LinkID": 6
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_SequencePlayer_319998A84C4B5844D2C21AB1C3188D28": {
+        "Sequence": {
+          "ObjectName": "AnimSequence'Anim_T2ArtilleryGarrisonIdele'",
+          "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/Anim_T2ArtilleryGarrisonIdele.0"
+        },
+        "PlayRateBasis": 1.0,
+        "PlayRate": 1.0,
+        "PlayRateScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 1.0,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        },
+        "StartPosition": 0.0,
+        "bLoopAnimation": true,
+        "GroupIndex": -1,
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_StateResult_12E417B142E6451E5DEC429CB921CD67": {
+        "Result": {
+          "LinkID": 8
+        },
+        "Name": "None",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine_A01DA6FF42CEBB5EA0ED22881BDC909A": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_Root_B1A4243F400A0FF2E73244B63F232E5C",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_Root'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_ABP_T2ArtilleryGarrison",
+    "Class": "UScriptClass'IntProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_T2ArtilleryGarrison",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'ABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison.EntryPoint'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.4"
+      },
+      {
+        "ObjectName": "FloatProperty'ABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison.CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.7"
+      },
+      {
+        "ObjectName": "BoolProperty'ABP_T2ArtilleryGarrison_C:ExecuteUbergraph_ABP_T2ArtilleryGarrison.CallFunc_LessEqual_FloatFloat_ReturnValue'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.6"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "BoolProperty",
+    "Name": "CallFunc_LessEqual_FloatFloat_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_T2ArtilleryGarrison",
+    "Class": "UScriptClass'BoolProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "BoolSize": 1,
+    "bIsNativeBool": true
+  },
+  {
+    "Type": "FloatProperty",
+    "Name": "CallFunc_GetInstanceAssetPlayerTimeFromEndFraction_ReturnValue",
+    "Outer": "ExecuteUbergraph_ABP_T2ArtilleryGarrison",
+    "Class": "UScriptClass'FloatProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraph",
+    "Outer": "AnimGraph",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "Parm | OutParm",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PoseLink'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "StructProperty'ABP_T2ArtilleryGarrison_C:AnimGraph.AnimGraph'",
+        "ObjectPath": "War/Content/Animation/WorldAssets/Fort_and_Trenches/AIBunkers/ABP_T2ArtilleryGarrison.8"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EvaluateGraphExposedInputs_ExecuteUbergraph_ABP_T2ArtilleryGarrison_AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_B81FCDD64EFEC2C23AB87FB0EB70917E",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_BlendSpacePlayer_C494EE1A4E1F7218F9581788CE38CCC7",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_BlendSpacePlayer'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_LayeredBoneBlend_9ED8149E4CDAAB598926E9904FBD5D11",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_LayeredBoneBlend'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_00F3A823420DEDE4922DDDAB7D23E778",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_SequencePlayer_319998A84C4B5844D2C21AB1C3188D28",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_SequencePlayer'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateMachine_A01DA6FF42CEBB5EA0ED22881BDC909A",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_12E417B142E6451E5DEC429CB921CD67",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_StateResult_4BBBE3E940D7E83391990BA1DAC2CF39",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+      "ObjectPath": "/Script/AnimGraphRuntime"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_8F5A3C0A4D59F13D186916BDA024E142",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "StructProperty",
+    "Name": "AnimGraphNode_TransitionResult_A86F0A8742F09F02D90672B3BC586FF6",
+    "Outer": "ABP_T2ArtilleryGarrison_C",
+    "Class": "UScriptClass'StructProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Struct": {
+      "ObjectName": "ScriptStruct'AnimNode_TransitionResult'",
+      "ObjectPath": "/Script/Engine"
+    }
+  }
+]

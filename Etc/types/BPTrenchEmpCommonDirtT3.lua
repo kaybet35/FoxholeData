@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class ABPTrenchEmpCommonDirtT3_C : ATemplate
----@field BackCornerL UStaticMeshComponent
----@field RightCornerR UStaticMeshComponent
----@field RightCornerL UStaticMeshComponent
----@field FrontCornerR UStaticMeshComponent
----@field FrontCornerL UStaticMeshComponent
----@field LeftCornerR UStaticMeshComponent
----@field LeftCornerL UStaticMeshComponent
----@field BackCornerR UStaticMeshComponent
+---@field DirtCorner2 UStaticMeshComponent
+---@field DirtCorner8 UStaticMeshComponent
+---@field DirtCorner7 UStaticMeshComponent
+---@field DirtCorner6 UStaticMeshComponent
+---@field DirtCorner5 UStaticMeshComponent
+---@field DirtCorner4 UStaticMeshComponent
+---@field DirtCorner1 UStaticMeshComponent
+---@field DirtCorner3 UStaticMeshComponent
 ---@field FrontLeft UStaticMeshComponent
 ---@field BackLeft UStaticMeshComponent
 ---@field FrontRight UStaticMeshComponent

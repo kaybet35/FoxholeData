@@ -3,6 +3,6 @@
 
 class UBPMortarTankAmmoComponent_C : public ULargeItemComponent
 {
-}; // Size: 0x8D8
+}; // Size: 0x8E0
 
 #endif

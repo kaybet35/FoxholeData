@@ -17,9 +17,9 @@ AEngineRailVehicle::AEngineRailVehicle(const FObjectInitializer& ObjectInitializ
     this->MaxHornDuration = 4.00f;
     this->BoostDuration = 5.00f;
     this->bHornActivated = false;
-    this->HornLoop->SetupAttachment(RootComponent);
     this->SteamParticleSystem->SetupAttachment(RootComponent);
     this->BoostingParticleSystem->SetupAttachment(RootComponent);
+    this->HornLoop->SetupAttachment(RootComponent);
 }
 
 void AEngineRailVehicle::ServerSetHornActivated_Implementation(bool InHornActivated) {

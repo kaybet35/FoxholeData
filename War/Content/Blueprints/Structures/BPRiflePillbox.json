@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "LandscapeCheck5",
+    "Name": "SeatTriggerComponent",
     "Outer": "BPRiflePillbox_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectName": "Class'SeatTriggerComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPRiflePillbox_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.35"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.38"
       }
     },
     "SuperStruct": {
@@ -28,8 +28,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPRiflePillbox_C:LandscapeCheck5'",
+        "ObjectName": "ObjectProperty'BPRiflePillbox_C:SeatTriggerComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRiflePillbox_C:SeatComponent0'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.24"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRiflePillbox_C:LandscapeCheck5'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.21"
       },
       {
         "ObjectName": "ObjectProperty'BPRiflePillbox_C:LandscapeCheck4'",
@@ -52,12 +60,8 @@
         "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.16"
       },
       {
-        "ObjectName": "ObjectProperty'BPRiflePillbox_C:OccupyComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.22"
-      },
-      {
         "ObjectName": "ObjectProperty'BPRiflePillbox_C:MultiplexedStaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.22"
       },
       {
         "ObjectName": "ObjectProperty'BPRiflePillbox_C:RiflePillbox'",
@@ -97,7 +101,7 @@
       "ShouldAggroOnDamage": true,
       "FlagMesh": {
         "ObjectName": "TeamFlagMeshComponent'Default__BPRiflePillbox_C:FlagMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.39"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.42"
       },
       "VisibilityTraceOffsetZ": 100.0,
       "bCanBeHidden": true,
@@ -147,7 +151,7 @@
       "BuildOrder": 6,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bRotateBuildGhost": true,
-      "ValidBuildTools": 17,
+      "ValidBuildTools": 49,
       "CodeName": "RiflePillbox",
       "ChassisName": {
         "TableId": "/Game/Blueprints/StringTables/STChassis.STChassis",
@@ -190,7 +194,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPRiflePillbox_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.37"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.40"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPRiflePillbox_C:StructureArrow'",
@@ -206,34 +210,38 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "MaximumRange": 2500.0,
-      "ImpactEffect": {
-        "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
-        "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+      "DamageAttributes": {
+        "WeaponFireFXClass": {
+          "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
+          "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
+        },
+        "ImpactEffect": {
+          "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
+          "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
+        },
+        "DamageType": {
+          "ObjectName": "BlueprintGeneratedClass'BPLightKineticDamageType_C'",
+          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPLightKineticDamageType.0"
+        },
+        "ShotSoundCue": {
+          "ObjectName": "SoundCue'RifleShot_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/RifleShot_Cue.0"
+        },
+        "MuzzleFlashPS": {
+          "ObjectName": "ParticleSystem'RifleMF'",
+          "ObjectPath": "War/Content/FX/RifleMF.58"
+        },
+        "WeaponDamage": 45.0,
+        "BestJitterConeHalfAngle": 4.0,
+        "WorstJitterConeHalfAngle": 20.0,
+        "FiringPeriod": 1.0,
+        "TimeToFullFireRateAndAccuracy": 5.0,
+        "EnemyPursueDuration": 5.5
       },
-      "WeaponFireFXClass": {
-        "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
-        "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
+      "DamageAttributesAlternate": {
+        "WeaponDamage": 50.0
       },
-      "DamageType": {
-        "ObjectName": "BlueprintGeneratedClass'BPLightKineticDamageType_C'",
-        "ObjectPath": "War/Content/Blueprints/DamageTypes/BPLightKineticDamageType.0"
-      },
-      "ShotSoundCue": {
-        "ObjectName": "SoundCue'RifleShot_Cue'",
-        "ObjectPath": "War/Content/Audio/SFX/Weapons/RifleShot_Cue.0"
-      },
-      "MuzzleFlashPS": {
-        "ObjectName": "ParticleSystem'RifleMF'",
-        "ObjectPath": "War/Content/FX/RifleMF.58"
-      },
-      "WeaponDamage": 45.0,
-      "WeaponDamageAgainstVehicles": 50.0,
-      "BestJitterConeHalfAngle": 4.0,
-      "WorstJitterConeHalfAngle": 20.0,
-      "FiringPeriod": 1.0,
-      "TimeToFullFireRateAndAccuracy": 5.0,
       "FiringConeAngle": 180.0,
-      "EnemyPursueDuration": 5.5,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPRiflePillbox_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.6"
@@ -511,6 +519,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "LandscapeCheck5",
+    "Outer": "BPRiflePillbox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "MultiplexedStaticMesh",
     "Outer": "BPRiflePillbox_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -518,18 +538,6 @@
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
       "ObjectName": "Class'MultiplexedStaticMeshComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "OccupyComponent",
-    "Outer": "BPRiflePillbox_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StructureSeatComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -543,6 +551,18 @@
     "PropertyClass": {
       "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "SeatComponent0",
+    "Outer": "BPRiflePillbox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StructureSeatComponent'",
+      "ObjectPath": "/Script/War"
     }
   },
   {
@@ -565,7 +585,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPRiflePillbox_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.25"
       },
       "VariableGuid": "B692036D-41768086-1E33EF9D-E041CA90",
       "InternalVariableName": "DefaultSceneRoot"
@@ -592,6 +612,27 @@
   },
   {
     "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SeatTriggerComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SeatTriggerComponent'BPRiflePillbox_C:SeatTriggerComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.37"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8E29B679-4A873372-0630DEAB-5E0D960D",
+      "InternalVariableName": "SeatTriggerComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
     "Name": "SCS_Node_2",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -603,7 +644,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPRiflePillbox_C:RiflePillbox_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.36"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.39"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -623,13 +664,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "StructureSeatComponent'BPRiflePillbox_C:OccupyComponent_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.38"
+        "ObjectName": "StructureSeatComponent'BPRiflePillbox_C:SeatComponent0_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.41"
       },
-      "ParentComponentOrVariableName": "StructureArrow",
+      "ParentComponentOrVariableName": "AITurretComponent",
       "bIsParentComponentNative": true,
       "VariableGuid": "C6F5A99E-42411C10-C4F198A4-C4010F5F",
-      "InternalVariableName": "OccupyComponent"
+      "InternalVariableName": "SeatComponent0"
     }
   },
   {
@@ -759,6 +800,26 @@
     }
   },
   {
+    "Type": "SeatTriggerComponent",
+    "Name": "SeatTriggerComponent_GEN_VARIABLE",
+    "Outer": "BPRiflePillbox_C",
+    "Class": "UScriptClass'SeatTriggerComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 300.0,
+        "Y": 260.0,
+        "Z": 64.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 64.0
+      },
+      "Mobility": "EComponentMobility::Stationary"
+    }
+  },
+  {
     "Type": "SimpleConstructionScript",
     "Name": "SimpleConstructionScript_0",
     "Outer": "BPRiflePillbox_C",
@@ -768,82 +829,90 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.29"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.30"
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.27"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.31"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.32"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.33"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.28"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.27"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.28"
-        },
-        {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.29"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.30"
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.27"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.31"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_5'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.32"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_6'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.33"
         },
         {
-          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.28"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPRiflePillbox_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.25"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPRiflePillbox.26"
       }
     }
   },
@@ -874,11 +943,12 @@
   },
   {
     "Type": "StructureSeatComponent",
-    "Name": "OccupyComponent_GEN_VARIABLE",
+    "Name": "SeatComponent0_GEN_VARIABLE",
     "Outer": "BPRiflePillbox_C",
     "Class": "UScriptClass'StructureSeatComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
+      "TriggerName": "SeatTriggerComponent",
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,

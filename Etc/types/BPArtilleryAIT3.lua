@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPArtilleryAIT3_C : AFortStaticArtillery
+---@field FortCommonT3BreachWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field FortCommonT3Mods UTemplateComponent
 ---@field Floor UStaticMeshComponent

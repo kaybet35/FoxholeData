@@ -1,8 +1,16 @@
 ---@meta
 
 ---@class ABPTrenchEmpCommon_C : ATemplate
+---@field BackCull UBPLandscapeCullStaticMeshComponent_C
+---@field LeftCull UBPLandscapeCullStaticMeshComponent_C
+---@field RightCull UBPLandscapeCullStaticMeshComponent_C
+---@field BackRightCull UBPLandscapeCullStaticMeshComponent_C
+---@field BackLeftCull UBPLandscapeCullStaticMeshComponent_C
+---@field FrontRightCull UBPLandscapeCullStaticMeshComponent_C
+---@field FrontLeftCull UBPLandscapeCullStaticMeshComponent_C
+---@field FrontCull UBPLandscapeCullStaticMeshComponent_C
+---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field BPTrenchBlockerCapsule UBPTrenchBlockerCapsule_C
----@field Decal2 UDecalComponent
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field BoatHull UBoatHullComponent
 ---@field FrontSocket UBuildSocketComponent
@@ -10,17 +18,10 @@
 ---@field LandscapeOverlap UBoxComponent
 ---@field LeftSocket UBuildSocketComponent
 ---@field RightSocket UBuildSocketComponent
----@field Decal5 UDecalComponent
 ---@field FrontLeftSocket UBuildSocketComponent
----@field Decal UDecalComponent
----@field Decal7 UDecalComponent
----@field Decal6 UDecalComponent
----@field Decal1 UDecalComponent
----@field Decal4 UDecalComponent
 ---@field BackRightSocket UBuildSocketComponent
 ---@field BackLeftSocket UBuildSocketComponent
 ---@field FrontRightSocket UBuildSocketComponent
----@field Decal3 UDecalComponent
 ---@field DefaultSceneRoot USceneComponent
 ABPTrenchEmpCommon_C = {}
 

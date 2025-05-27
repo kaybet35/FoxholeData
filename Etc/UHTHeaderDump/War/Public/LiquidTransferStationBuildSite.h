@@ -9,7 +9,10 @@ class WAR_API ALiquidTransferStationBuildSite : public AStructureBuildSite {
     GENERATED_BODY()
 public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
-    TArray<FFuelQuantity> FuelBuffers;
+    TArray<FFuelQuantity> FuelInputBuffers;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FFuelQuantity FuelOutputBuffer;
     
     ALiquidTransferStationBuildSite(const FObjectInitializer& ObjectInitializer);
 

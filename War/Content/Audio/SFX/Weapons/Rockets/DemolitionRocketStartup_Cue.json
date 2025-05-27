@@ -1,0 +1,70 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "DemolitionRocketStartup_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'DemolitionRocketStartup_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Rockets/DemolitionRocketStartup_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 500.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 20000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Explosions'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Explosions.0"
+      },
+      "Duration": 3.4967291,
+      "MaxDistance": 18000.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'LargeExplosives'",
+        "ObjectPath": "War/Content/Audio/Attenuations/LargeExplosives.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "DemolitionRocketStartup_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 0.9,
+      "PitchMax": 1.1,
+      "VolumeMin": 1.1,
+      "VolumeMax": 1.3,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'DemolitionRocketStartup_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Rockets/DemolitionRocketStartup_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "DemolitionRocketStartup_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Rockets/DemolitionRocketStartup.DemolitionRocketStartup",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'DemolitionRocketStartup'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Rockets/DemolitionRocketStartup.0"
+    }
+  }
+]

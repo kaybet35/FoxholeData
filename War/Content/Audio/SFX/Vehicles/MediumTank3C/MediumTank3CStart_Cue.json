@@ -1,0 +1,125 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "MediumTank3CStart_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeMixer'MediumTank3CStart_Cue:SoundNodeMixer_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart_Cue.2"
+      },
+      "VolumeMultiplier": 2.0,
+      "AttenuationOverrides": {
+        "bAttenuateWithLPF": true,
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Inverse",
+        "AttenuationShapeExtents": {
+          "X": 1350.8081,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 811.2747
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "bHasDelayNode": true,
+      "Duration": 4.7768126,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeDelay",
+    "Name": "SoundNodeDelay_0",
+    "Outer": "MediumTank3CStart_Cue",
+    "Class": "UScriptClass'SoundNodeDelay'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DelayMin": 0.5,
+      "DelayMax": 0.5,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MediumTank3CStart_Cue:SoundNodeWavePlayer_3'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart_Cue.5"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeMixer",
+    "Name": "SoundNodeMixer_0",
+    "Outer": "MediumTank3CStart_Cue",
+    "Class": "UScriptClass'SoundNodeMixer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InputVolume": [
+        1.0,
+        1.0
+      ],
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeModulator'MediumTank3CStart_Cue:SoundNodeModulator_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart_Cue.3"
+        },
+        {
+          "ObjectName": "SoundNodeDelay'MediumTank3CStart_Cue:SoundNodeDelay_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart_Cue.1"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "MediumTank3CStart_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'MediumTank3CStart_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart_Cue.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "MediumTank3CStart_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CEnter.MediumTank3CEnter",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MediumTank3CEnter'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CEnter.0"
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_3",
+    "Outer": "MediumTank3CStart_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart.MediumTank3CStart",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'MediumTank3CStart'",
+      "ObjectPath": "War/Content/Audio/SFX/Vehicles/MediumTank3C/MediumTank3CStart.0"
+    }
+  }
+]

@@ -44,6 +44,7 @@ enum class EStructureProfileType : uint8 {
     Fill,
     FieldBridge,
     RocketMisc,
+    FortRotatableUpgradeRestricted,
     LandMine,
     Count,
 };

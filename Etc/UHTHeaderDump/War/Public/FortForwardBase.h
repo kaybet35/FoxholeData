@@ -1,7 +1,6 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "ForwardBase.h"
-#include "PowerNode.h"
 #include "Templates/SubclassOf.h"
 #include "FortForwardBase.generated.h"
 
@@ -9,7 +8,7 @@ class ALadder;
 class USceneComponent;
 
 UCLASS(Blueprintable)
-class WAR_API AFortForwardBase : public AForwardBase, public IPowerNode {
+class WAR_API AFortForwardBase : public AForwardBase {
     GENERATED_BODY()
 public:
 protected:
@@ -25,7 +24,5 @@ protected:
 public:
     AFortForwardBase(const FObjectInitializer& ObjectInitializer);
 
-
-    // Fix for true pure virtual functions not being implemented
 };
 

@@ -90,9 +90,7 @@
         "ObjectName": "BuildSocketComponent'Default__BPFacilityPipeUnderground_C:RightSocket'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeUnderground.11"
       },
-      "LiquidTank": {
-        "MaxAmount": 100.0
-      },
+      "MaxLiquidAmount": 50.0,
       "Tier": "EFortTier::T1",
       "ProceduralUseVolumeFactor": 0.0,
       "NoBuildPhysicalMaterials": [
@@ -127,7 +125,7 @@
         "ObjectName": "Texture2D'PipeIntersectionIcon'",
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/PipeIntersectionIcon.0"
       },
-      "BuildCategory": "EBuildCategory::Facility",
+      "BuildCategory": "EBuildCategory::Liquids",
       "BuildOrder": 65,
       "BuildLocationType": "EBuildLocationType::Anywhere",
       "bDropsLargeMaterialsWhenDestroyed": false,
@@ -161,7 +159,7 @@
       "TechID": "ETechID::UnlockFacilityTier2",
       "MaxHealth": 350,
       "Health": 350,
-      "ScreenToUse": "ESimScreen::FuelSilo",
+      "ScreenToUse": "ESimScreen::Pipeline",
       "ClaimStatus": {
         "bIsEnabled": true,
         "bCanBeDemolished": true,
@@ -173,9 +171,6 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeUnderground.28"
       },
       "DecaySupplyDrain": 4,
-      "PrimaryActorTick": {
-        "TickInterval": 2.0
-      },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityPipeUnderground_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeUnderground.3"
@@ -349,6 +344,7 @@
       ],
       "MaxHeightAboveLandscape": 200.0,
       "MaxDepthBelowLandscape": 200.0,
+      "bIgnoreOwnerConnectedActorsWhenSnapped": false,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityPipeUnderground_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeUnderground.3"
@@ -379,6 +375,7 @@
       ],
       "MaxHeightAboveLandscape": 200.0,
       "MaxDepthBelowLandscape": 200.0,
+      "bIgnoreOwnerConnectedActorsWhenSnapped": false,
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFacilityPipeUnderground_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeUnderground.3"
@@ -480,9 +477,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": []
           }
         },
@@ -551,9 +550,11 @@
             "bHiddenByDefault": false,
             "bVisualsAreClientOnly": true,
             "bShowInBuildSite": false,
+            "bBuildFootprintIgnoresConnectedActors": false,
             "TechID": "ETechID::None",
             "InfrastructureType": "EInfrastructureType::None",
             "InfrastructureAmount": 0,
+            "BuildFootprintTemplate": null,
             "Tiers": [
               {
                 "Key": "EFortTier::T1",

@@ -22,6 +22,27 @@
   },
   {
     "Type": "SkeletalMeshSocket",
+    "Name": "SkeletalMeshSocket_1",
+    "Outer": "SK_ArmoredCarOffensiveW_Skeleton",
+    "Class": "UScriptClass'SkeletalMeshSocket'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SocketName": "S_ArmoredCar2MultiW_Muzzle",
+      "BoneName": "Rocket_GunPivot",
+      "RelativeLocation": {
+        "X": -56.377487,
+        "Y": -41.10852,
+        "Z": 18.405212
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshSocket",
     "Name": "SkeletalMeshSocket_2",
     "Outer": "SK_ArmoredCarOffensiveW_Skeleton",
     "Class": "UScriptClass'SkeletalMeshSocket'",
@@ -141,6 +162,15 @@
         },
         {
           "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
+        },
+        {
+          "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
+        },
+        {
+          "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
+        },
+        {
+          "TranslationRetargetingMode": "EBoneTranslationRetargetingMode::Animation"
         }
       ],
       "VirtualBoneGuid": "B9070617-430F44B4-827E73A4-E2A1F932",
@@ -151,19 +181,23 @@
         },
         {
           "ObjectName": "SkeletalMeshSocket'SK_ArmoredCarOffensiveW_Skeleton:SkeletalMeshSocket_2'",
-          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.1"
-        },
-        {
-          "ObjectName": "SkeletalMeshSocket'SK_ArmoredCarOffensiveW_Skeleton:SkeletalMeshSocket_3'",
           "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.2"
         },
         {
+          "ObjectName": "SkeletalMeshSocket'SK_ArmoredCarOffensiveW_Skeleton:SkeletalMeshSocket_3'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.3"
+        },
+        {
           "ObjectName": "SkeletalMeshSocket'SK_ArmoredCarOffensiveW_Skeleton:SkeletalMeshSocket_5'",
-          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.4"
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.5"
         },
         {
           "ObjectName": "SkeletalMeshSocket'SK_ArmoredCarOffensiveW_Skeleton:SkeletalMeshSocket_4'",
-          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.3"
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.4"
+        },
+        {
+          "ObjectName": "SkeletalMeshSocket'SK_ArmoredCarOffensiveW_Skeleton:SkeletalMeshSocket_1'",
+          "ObjectPath": "War/Content/Meshes/Vehicles/SK_ArmoredCarOffensiveW_Skeleton.1"
         }
       ]
     },
@@ -236,6 +270,18 @@
         {
           "Name": "turret_verticalPivotV2",
           "ParentIndex": 2
+        },
+        {
+          "Name": "Roket_horizontalPivot",
+          "ParentIndex": 1
+        },
+        {
+          "Name": "Rocket_GunPivot",
+          "ParentIndex": 17
+        },
+        {
+          "Name": "turret_barrel",
+          "ParentIndex": 4
         }
       ],
       "FinalRefBonePose": [
@@ -612,6 +658,72 @@
             "Z": 1.0
           },
           "IsRotationNormalized": true
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": -1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": -3.3217173E-06,
+            "Y": -164.6887,
+            "Z": 143.01859
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "IsRotationNormalized": true
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": -1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 9.282181E-06,
+            "Y": -0.0,
+            "Z": 62.1705
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "IsRotationNormalized": true
+        },
+        {
+          "Rotation": {
+            "X": 0.0,
+            "Y": -0.0,
+            "Z": 0.0,
+            "W": -1.0,
+            "IsNormalized": true,
+            "Size": 1.0,
+            "SizeSquared": 1.0
+          },
+          "Translation": {
+            "X": 0.0,
+            "Y": 59.912422,
+            "Z": 0.0
+          },
+          "Scale3D": {
+            "X": 1.0,
+            "Y": 1.0,
+            "Z": 1.0
+          },
+          "IsRotationNormalized": true
         }
       ],
       "FinalNameToIndexMap": {
@@ -631,10 +743,13 @@
         "wheel_back_R": 13,
         "back_ColisionBone": 14,
         "front_ColisionBone": 15,
-        "turret_verticalPivotV2": 16
+        "turret_verticalPivotV2": 16,
+        "Roket_horizontalPivot": 17,
+        "Rocket_GunPivot": 18,
+        "turret_barrel": 19
       }
     },
-    "Guid": "1DC49A56-4334D5A1-8FCD18BC-785A9806",
+    "Guid": "E6BE9F6B-41E826A1-1E4E11BF-83F1F978",
     "AnimRetargetSources": {},
     "NameMappings": {
       "AnimationCurves": {

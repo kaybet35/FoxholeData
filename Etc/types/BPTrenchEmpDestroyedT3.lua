@@ -1,18 +1,18 @@
 ---@meta
 
----@class ABPTrenchEmpDestroyedT3_C : AFort
+---@class ABPTrenchEmpDestroyedT3_C : ADestroyedFort
+---@field DirtCorner1 UStaticMeshComponent
+---@field DirtCorner2 UStaticMeshComponent
+---@field DirtCorner8 UStaticMeshComponent
+---@field DirtCorner7 UStaticMeshComponent
+---@field DirtCorner6 UStaticMeshComponent
+---@field DirtCorner5 UStaticMeshComponent
+---@field DirtCorner3 UStaticMeshComponent
+---@field DirtCorner4 UStaticMeshComponent
 ---@field TrenchEmplacementT3Destroyed01 UStaticMeshComponent
 ---@field TrenchEmpCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
 ---@field DirtFrontLeft UStaticMeshComponent
----@field DirtBackCornerL UStaticMeshComponent
----@field DirtRightCornerR UStaticMeshComponent
----@field DirtRightCornerL UStaticMeshComponent
----@field DirtFrontCornerR UStaticMeshComponent
----@field DirtFrontCornerL UStaticMeshComponent
----@field DirtLeftCornerR UStaticMeshComponent
----@field DirtLeftCornerL UStaticMeshComponent
----@field DirtBackCornerR UStaticMeshComponent
 ---@field DirtRight UStaticMeshComponent
 ---@field DirtFront UStaticMeshComponent
 ---@field DirtBack UStaticMeshComponent

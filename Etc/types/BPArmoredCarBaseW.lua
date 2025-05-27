@@ -5,8 +5,6 @@
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field GunnerSeat1 UVehicleSeatComponent
 ---@field Exhaust_R UParticleSystemComponent
----@field SpotLight_Turret USpotLightComponent
----@field Light_Turret UStaticMeshComponent
 ---@field Exhaust_L UParticleSystemComponent
 ---@field Light_L UStaticMeshComponent
 ---@field SpotLight_L USpotLightComponent

@@ -2,7 +2,7 @@
 
 FRepPlayerMovement::FRepPlayerMovement() {
     this->MovementBase = NULL;
-    this->LastUpdateClientTimeStamp = 0.00f;
+    this->Timestamp = 0.00f;
     this->bServerHasBaseComponent = false;
     this->MovementMode = 0;
     this->LocationQuantizationLevel = EVectorQuantization::RoundWholeNumber;

@@ -8,8 +8,10 @@ FModificationDefinition::FModificationDefinition() {
     this->bHiddenByDefault = false;
     this->bVisualsAreClientOnly = false;
     this->bShowInBuildSite = false;
+    this->bBuildFootprintIgnoresConnectedActors = false;
     this->TechID = ETechID::None;
     this->InfrastructureType = EInfrastructureType::None;
     this->InfrastructureAmount = 0;
+    this->BuildFootprintTemplate = NULL;
 }
 

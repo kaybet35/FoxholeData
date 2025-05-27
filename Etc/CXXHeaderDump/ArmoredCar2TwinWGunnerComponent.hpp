@@ -3,6 +3,6 @@
 
 class UArmoredCar2TwinWGunnerComponent_C : public UGrenadeGunnerMountComponent
 {
-}; // Size: 0x910
+}; // Size: 0x920
 
 #endif

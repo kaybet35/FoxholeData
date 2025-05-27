@@ -1,13 +1,12 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PowerNode.h"
 #include "TeamStructure.h"
 #include "AmmoRoom.generated.h"
 
 class UGenericStockpileComponent;
 
 UCLASS(Blueprintable)
-class WAR_API AAmmoRoom : public ATeamStructure, public IPowerNode {
+class WAR_API AAmmoRoom : public ATeamStructure {
     GENERATED_BODY()
 public:
 private:
@@ -17,7 +16,5 @@ private:
 public:
     AAmmoRoom(const FObjectInitializer& ObjectInitializer);
 
-
-    // Fix for true pure virtual functions not being implemented
 };
 

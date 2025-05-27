@@ -13,5 +13,7 @@ enum class EWarOpsAlertMessage : uint8 {
     DevBranchUpdateWorldSave,
     DevBranchUpdateWorldReset,
     RegionServerRestart,
+    UpcomingForcedServerPatch,
+    DeployingForcedServerPatch,
 };
 

@@ -3,6 +3,6 @@
 
 class UBandagesComponent_C : public UBandagesComponent
 {
-}; // Size: 0x8E0
+}; // Size: 0x8E8
 
 #endif

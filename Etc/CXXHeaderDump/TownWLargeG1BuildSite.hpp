@@ -3,6 +3,6 @@
 
 class ATownWLargeG1BuildSite_C : public ATownWLargeGS1BuildSite_C
 {
-}; // Size: 0x830
+}; // Size: 0x850
 
 #endif

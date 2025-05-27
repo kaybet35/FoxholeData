@@ -1,7 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "PowerInfo.h"
-#include "PowerNode.h"
 #include "StaticArtilleryDamageParams.h"
 #include "TunnelNode.h"
 #include "FortStaticArtillery.generated.h"
@@ -11,7 +9,7 @@ class USkeletalMeshComponent;
 class UTeamFlagMeshComponent;
 
 UCLASS(Blueprintable)
-class WAR_API AFortStaticArtillery : public ATunnelNode, public IPowerNode {
+class WAR_API AFortStaticArtillery : public ATunnelNode {
     GENERATED_BODY()
 public:
 protected:
@@ -52,9 +50,6 @@ protected:
     float ExplosionDelay;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
-    FPowerInfo PowerInfo;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     float HorizontalAngle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
@@ -72,7 +67,5 @@ protected:
     UFUNCTION(BlueprintCallable)
     void OnRep_IsFiring();
     
-
-    // Fix for true pure virtual functions not being implemented
 };
 

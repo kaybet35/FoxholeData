@@ -1,0 +1,66 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "LargeWeaponEquip_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'LargeWeaponEquip_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Weapons/Foley/LargeWeaponEquip_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "AttenuationOverrides": {
+        "DistanceAlgorithm": "EAttenuationDistanceModel::Logarithmic",
+        "AttenuationShapeExtents": {
+          "X": 1000.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "FalloffDistance": 6000.0
+      },
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 2.0168855,
+      "MaxDistance": 5800.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'WeaponFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/WeaponFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "LargeWeaponEquip_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'LargeWeaponEquip_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/Foley/LargeWeaponEquip_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "LargeWeaponEquip_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Weapons/Foley/LargeEquip.LargeEquip",
+        "SubPathString": ""
+      }
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'LargeEquip'",
+      "ObjectPath": "War/Content/Audio/SFX/Weapons/Foley/LargeEquip.0"
+    }
+  }
+]

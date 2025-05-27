@@ -8,10 +8,10 @@ struct FUniformRenderInfo {
     GENERATED_BODY()
 public:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FCharacterRenderInfo Male[21];
+    FCharacterRenderInfo Male[23];
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FCharacterRenderInfo Female[21];
+    FCharacterRenderInfo Female[23];
     
     WAR_API FUniformRenderInfo();
 };

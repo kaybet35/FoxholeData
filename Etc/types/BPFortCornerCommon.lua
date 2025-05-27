@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPFortCornerCommon_C : ATemplate
----@field DecalRight UDecalComponent
+---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field DecalFront UDecalComponent
 ---@field DecalBack UDecalComponent

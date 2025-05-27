@@ -3,8 +3,8 @@
 
 class ABPDestroyedVehicleFactory_C : public ADestroyedVehicleFactory
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x05F8 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0620 (size: 0x8)
 
-}; // Size: 0x600
+}; // Size: 0x628
 
 #endif

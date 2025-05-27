@@ -53,6 +53,7 @@ class UPhysicalMaterial;
 class UPlayerCameraRigComponent;
 class UPrimitiveComponent;
 class USceneComponent;
+class USeatComponent;
 class USoundCue;
 class UStaticMesh;
 class UStaticMeshComponent;
@@ -392,7 +393,7 @@ private:
     TArray<UVehicleSeatComponent*> SeatComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
-    TArray<UVehicleSeatComponent*> ModularSeatComponents;
+    TArray<USeatComponent*> ModularSeatComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     TArray<UGenericStockpileComponent*> StockpileComponents;

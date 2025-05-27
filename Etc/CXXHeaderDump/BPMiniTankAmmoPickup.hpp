@@ -3,6 +3,6 @@
 
 class ABPMiniTankAmmoPickup_C : public AExplosiveAmmoPickup
 {
-}; // Size: 0x440
+}; // Size: 0x450
 
 #endif

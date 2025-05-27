@@ -30,6 +30,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     int32 TargetRareMetalAmount;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    double ActivityAmount;
+    
     WAR_API FFactionResourceState();
 };
 

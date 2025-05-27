@@ -1,6 +1,5 @@
 #pragma once
 #include "CoreMinimal.h"
-#include "LiquidTank.h"
 #include "TeamStructure.h"
 #include "Pipeline.generated.h"
 
@@ -32,8 +31,11 @@ private:
     UBuildSocketComponent* RightSocket;
     
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float MaxLiquidAmount;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
-    FLiquidTank LiquidTank;
+    int32 SystemIndex;
     
     APipeline(const FObjectInitializer& ObjectInitializer);
 

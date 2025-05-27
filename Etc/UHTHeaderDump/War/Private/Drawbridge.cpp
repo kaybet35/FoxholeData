@@ -41,6 +41,9 @@ ADrawbridge::ADrawbridge(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->LinkedTrack = NULL;
     this->State = Closed;
     this->StartTime = 0.00f;
+    this->MovingLoop->SetupAttachment(RootComponent);
+    this->Ladder1Location->SetupAttachment(RootComponent);
+    this->Ladder2Location->SetupAttachment(RootComponent);
     this->SideAMesh->SetupAttachment(RootComponent);
     this->SideBMesh->SetupAttachment(RootComponent);
     this->SideALeverMesh->SetupAttachment(RootComponent);
@@ -55,9 +58,6 @@ ADrawbridge::ADrawbridge(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->AboveBlockingVolumeB->SetupAttachment(RootComponent);
     this->BelowBlockingArea->SetupAttachment(RootComponent);
     this->BelowBlockingVolume->SetupAttachment(RootComponent);
-    this->MovingLoop->SetupAttachment(RootComponent);
-    this->Ladder1Location->SetupAttachment(RootComponent);
-    this->Ladder2Location->SetupAttachment(RootComponent);
 }
 
 void ADrawbridge::OnRep_State() {

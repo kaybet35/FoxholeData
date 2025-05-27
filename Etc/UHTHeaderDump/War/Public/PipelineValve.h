@@ -4,12 +4,16 @@
 #include "PipelineValve.generated.h"
 
 class UBuildSocketComponent;
+class UModificationSlotComponent;
 
 UCLASS(Blueprintable)
 class WAR_API APipelineValve : public ATeamStructure {
     GENERATED_BODY()
 public:
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UModificationSlotComponent* UpgradeSlotComponent;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     UBuildSocketComponent* BackSocket;
     

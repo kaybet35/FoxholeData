@@ -3,6 +3,6 @@
 
 class UBPTripodComponent_C : public UDeployableItemComponent
 {
-}; // Size: 0x8D8
+}; // Size: 0x8E0
 
 #endif

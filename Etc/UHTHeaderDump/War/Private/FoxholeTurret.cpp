@@ -17,6 +17,7 @@ AFoxholeTurret::AFoxholeTurret(const FObjectInitializer& ObjectInitializer) : Su
     this->ShouldAggroOnDamage = false;
     this->bUseSquareMuzzleBounds = false;
     this->bIsTutorialTurret = false;
+    this->bDisallowForwardUpgradeInIsland = false;
     this->bLimitOccupantFiringArc = false;
     this->MaxOccupantFiringArcDeviation = 0.00f;
     this->FlagMesh = CreateDefaultSubobject<UTeamFlagMeshComponent>(TEXT("FlagMesh"));

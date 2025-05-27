@@ -15,6 +15,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float ShotRadius;
     
+    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint32 MaxHitsPerShot;
+    
 public:
     UShotgunComponent(const FObjectInitializer& ObjectInitializer);
 

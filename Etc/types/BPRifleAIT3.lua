@@ -1,9 +1,11 @@
 ---@meta
 
----@class ABPRifleAIT3_C : AConcreteFortTurret
+---@class ABPRifleAIT3_C : AFortTurret
+---@field OccupyComponent UStructureSeatComponent
+---@field PowerConsumer UPowerConsumerComponent
+---@field FortCommonT3BreachWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field OccupiableTriggerVolume USeatTriggerComponent
----@field OccupyComponent UStructureSeatComponent
 ---@field FortCommonT3Mods UTemplateComponent
 ---@field FortSpotLight UTemplateComponent
 ---@field FortCommonAIT3 UTemplateComponent

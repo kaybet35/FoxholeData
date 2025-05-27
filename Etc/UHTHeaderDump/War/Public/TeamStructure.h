@@ -18,6 +18,9 @@ protected:
     bool bCanBeFlaggedForDisruptivePlacement;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bCanBlockAIUpgrade: 1;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DisruptivePlacementVoteMultiplier;
     
 public:

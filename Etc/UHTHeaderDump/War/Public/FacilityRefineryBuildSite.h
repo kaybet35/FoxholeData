@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 #include "FacilityRefineryOrder.h"
 #include "FuelTank.h"
+#include "ReservePower.h"
 #include "StructureBuildSite.h"
 #include "FacilityRefineryBuildSite.generated.h"
 
@@ -36,6 +37,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 ItemInputBuffer;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FReservePower ReservePower;
     
 public:
     AFacilityRefineryBuildSite(const FObjectInitializer& ObjectInitializer);
