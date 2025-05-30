@@ -157,7 +157,9 @@ enum class EActorLogEntryType {
     ConstructionSiteObstructed = 36,
     ConstructionSiteNoLongerExists = 37,
     OtherBuildToolRequired = 38,
-    MAX = 39,
+    WeaponAttached = 39,
+    WeaponDetached = 40,
+    MAX = 41,
 };
 
 enum class EAnalyticsAccessLevel {
@@ -2428,7 +2430,7 @@ enum class ESpawnPointType {
     TownBase = 19,
     LargeShip = 20,
     MedicalBase = 21,
-    FortSafeHouse = 22,
+    FortGarrisonStation = 22,
     ESpawnPointType_MAX = 23,
 };
 

@@ -1,4 +1,5 @@
 #include "ConstructionEquipment.h"
+//CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=AudioComponent -FallbackName=AudioComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SceneComponent -FallbackName=SceneComponent
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=SkeletalMeshComponent -FallbackName=SkeletalMeshComponent
 #include "GenericStockpileComponent.h"
@@ -12,13 +13,17 @@ AConstructionEquipment::AConstructionEquipment(const FObjectInitializer& ObjectI
     this->FuelGenericStockpileComponent = CreateDefaultSubobject<UReplicatedGenericStockpileComponent>(TEXT("FuelGenericStockpileComponent"));
     this->MaterialGenericStockpileComponent = CreateDefaultSubobject<UGenericStockpileComponent>(TEXT("MaterialsGenericStockpileComponent"));
     this->CollisionQueryLocation = CreateDefaultSubobject<USceneComponent>(TEXT("CollisionQueryLocation"));
+    this->ActiveLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("ActiveLoopAudioComponent"));
+    this->TurningLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("TurningLoopAudioComponent"));
     this->ImpactEffectClass = NULL;
-    this->BuildCycleCompleteSoundCue = NULL;
+    this->MaterialDropSoundCue = NULL;
     this->MaterialSubmissionDistance = 500.00f;
     this->RecheckBlockedSiteTime = 3.00f;
     this->FuelConsumptionPerCycle = 10;
     this->SkeletalMesh->SetupAttachment(RootComponent);
     this->CollisionQueryLocation->SetupAttachment(RootComponent);
+    this->ActiveLoop->SetupAttachment(RootComponent);
+    this->TurningLoop->SetupAttachment(RootComponent);
 }
 
 void AConstructionEquipment::OnRep_ConstructionEquipmentServerState() {

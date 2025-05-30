@@ -7,6 +7,7 @@
 #include "ConstructionEquipment.generated.h"
 
 class AImpactEffect;
+class UAudioComponent;
 class UGenericStockpileComponent;
 class USceneComponent;
 class USkeletalMeshComponent;
@@ -33,11 +34,17 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* CollisionQueryLocation;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* ActiveLoop;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* TurningLoop;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AImpactEffect> ImpactEffectClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    USoundCue* BuildCycleCompleteSoundCue;
+    USoundCue* MaterialDropSoundCue;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FName FuelName;

@@ -1,10 +1,12 @@
 #include "FortGarrisonStation.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=StaticMeshComponent -FallbackName=StaticMeshComponent
 #include "BoatHullComponent.h"
+#include "GarrisonComponent.h"
 #include "GenericStockpileComponent.h"
 #include "SafeHouseVisibilityToggleComponent.h"
 
 AFortGarrisonStation::AFortGarrisonStation(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
+    this->GarrisonComponent = CreateDefaultSubobject<UGarrisonComponent>(TEXT("GarrisonComponent"));
     this->RoofMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("RoofMesh"));
     this->BasementMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BasementMesh"));
     this->GroundStaircaseMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("GroundStaircaseMesh"));

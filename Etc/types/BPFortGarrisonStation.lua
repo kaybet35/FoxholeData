@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABPFortGarrisonStation_C : AFortGarrisonStation
+---@field ViewTargetCamera UCameraComponent
+---@field GroundFloorMetal UStaticMeshComponent
+---@field BasementMetal UStaticMeshComponent
 ---@field PointLight42 UPointLightComponent
 ---@field PointLight41 UPointLightComponent
 ---@field LadderRight UStaticMeshComponent

@@ -489,8 +489,10 @@ AConquestConfig = {}
 ---@field FuelGenericStockpileComponent UGenericStockpileComponent
 ---@field MaterialGenericStockpileComponent UGenericStockpileComponent
 ---@field CollisionQueryLocation USceneComponent
+---@field ActiveLoop UAudioComponent
+---@field TurningLoop UAudioComponent
 ---@field ImpactEffectClass TSubclassOf<AImpactEffect>
----@field BuildCycleCompleteSoundCue USoundCue
+---@field MaterialDropSoundCue USoundCue
 ---@field FuelName FName
 ---@field Config FConstructionEquipmentConfig
 ---@field MaterialSubmissionDistance float
@@ -3373,6 +3375,7 @@ function ASimGameMode:HeadlessCommand(Command) end
 ---@field PrevWindDirection uint8
 ---@field NextWindDirectionTime float
 ---@field NextWindDirection uint8
+---@field ReplicatedServerTimestamp FQuantizedTimestamp
 ---@field ColonialTechTree ATechTree
 ---@field WardenTechTree ATechTree
 ---@field ConquestWinner EFactionId
@@ -3383,6 +3386,7 @@ ASimGameState = {}
 
 function ASimGameState:OnRep_WorldWeatherState() end
 function ASimGameState:OnRep_WardenTechTree() end
+function ASimGameState:OnRep_ReplicatedServerTimestamp() end
 function ASimGameState:OnRep_GameplayFlags() end
 function ASimGameState:OnRep_ColonialTechTree() end
 function ASimGameState:MulticastToggleEarlyWarRestrictionOverride() end
@@ -4521,6 +4525,7 @@ ASpiderMech = {}
 
 
 ---@class ASpoolProjectile : AWarProjectile
+---@field FiringAudioComponent UAudioComponent
 ---@field AccuracyModifiedVelocity FVector
 ---@field InitialVelocity FVector
 ---@field SpoolDuration float
@@ -4871,9 +4876,7 @@ function ATechTree:OnRep_TechUnlockBits(PreviousTechUnlockBits) end
 
 
 ---@class ATemplate : AActor
----@field bInitiallyDisableCollisions boolean
 ATemplate = {}
-
 
 
 ---@class ATimedProjectile : AWarProjectile
@@ -6061,7 +6064,7 @@ FCharacterCustomizationInfo = {}
 ---@class FCharacterInvokeInfo
 ---@field ImpactPoint FVector_NetQuantize
 ---@field MuzzleOffset FMuzzleOffsetVector_NetQuantize
----@field RenderTimestamp float
+---@field RenderTimestamp FQuantizedTimestamp
 FCharacterInvokeInfo = {}
 
 
@@ -8883,6 +8886,12 @@ FPutProfileRequest = {}
 
 
 
+---@class FQuantizedTimestamp
+---@field Value uint32
+FQuantizedTimestamp = {}
+
+
+
 ---@class FQueueStyle
 ---@field ProductionArrowRightBGImage FSlateBrush
 ---@field ProductionArrowRightFillImage FSlateBrush
@@ -9567,7 +9576,7 @@ FRepPipelineSystem = {}
 ---@field Rotation FRotator
 ---@field MovementBase UPrimitiveComponent
 ---@field BoneName FName
----@field Timestamp float
+---@field Timestamp FQuantizedTimestamp
 ---@field bServerHasBaseComponent boolean
 ---@field MovementMode uint8
 ---@field LocationQuantizationLevel EVectorQuantization
@@ -15332,8 +15341,6 @@ function UTemperatureModifierSphereComponent:OnBeginOverlap(OverlappedComponent,
 ---@field TemplateActor TSubclassOf<ATemplate>
 ---@field bOnlyCollisions boolean
 ---@field OverrideCollisionProfile FName
----@field bOverrideInitiallyDisableCollisions boolean
----@field bInitiallyDisableCollisions boolean
 ---@field SpawnedComponents TArray<UActorComponent>
 UTemplateComponent = {}
 

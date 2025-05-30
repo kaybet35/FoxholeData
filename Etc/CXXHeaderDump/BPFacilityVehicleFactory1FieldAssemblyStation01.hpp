@@ -3,11 +3,11 @@
 
 class ABPFacilityVehicleFactory1FieldAssemblyStation01_C : public AModificationTemplate
 {
-    class UStaticMeshComponent* FVFWireWheel2;                                        // 0x0218 (size: 0x8)
-    class UStaticMeshComponent* FVFAmmoBoxsmall1;                                     // 0x0220 (size: 0x8)
-    class UStaticMeshComponent* FVFAmmoBox3;                                          // 0x0228 (size: 0x8)
-    class UStaticMeshComponent* FVFAmmoBoxLong2;                                      // 0x0230 (size: 0x8)
-    class UStaticMeshComponent* FVFAmmoBoxsmall;                                      // 0x0238 (size: 0x8)
+    class UStaticMeshComponent* FVFAmmoBoxsmall1;                                     // 0x0218 (size: 0x8)
+    class UStaticMeshComponent* FVFAmmoBoxsmall;                                      // 0x0220 (size: 0x8)
+    class UStaticMeshComponent* FVFWireWheel2;                                        // 0x0228 (size: 0x8)
+    class UStaticMeshComponent* FVFAmmoBox3;                                          // 0x0230 (size: 0x8)
+    class UStaticMeshComponent* FVFAmmoBoxLong2;                                      // 0x0238 (size: 0x8)
     class UDecalComponent* Decal;                                                     // 0x0240 (size: 0x8)
     class UStaticMeshComponent* FVFAmmoBoxLong1;                                      // 0x0248 (size: 0x8)
     class UStaticMeshComponent* FVFAmmoBox2;                                          // 0x0250 (size: 0x8)

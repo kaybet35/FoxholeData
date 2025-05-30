@@ -22,9 +22,9 @@ AFoxholeTurret::AFoxholeTurret(const FObjectInitializer& ObjectInitializer) : Su
     this->MaxOccupantFiringArcDeviation = 0.00f;
     this->FlagMesh = CreateDefaultSubobject<UTeamFlagMeshComponent>(TEXT("FlagMesh"));
     this->KillVolume->SetupAttachment(RootComponent);
+    this->FlagMesh->SetupAttachment(RootComponent);
     this->AITurretComponent->SetupAttachment(RootComponent);
     this->MuzzleFlashLocationComponent->SetupAttachment(RootComponent);
-    this->FlagMesh->SetupAttachment(RootComponent);
 }
 
 

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFacilityVehicleFactory2BaseMod_C : AModificationTemplate
+---@field FVFAmmoBox UStaticMeshComponent
 ---@field Decal5 UDecalComponent
 ---@field Decal4 UDecalComponent
 ---@field Decal3 UDecalComponent
@@ -8,7 +9,6 @@
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field PlatformMesh UStaticMeshComponent
----@field FVFAmmoBox UStaticMeshComponent
 ---@field FVFLargeWoodCreateClose1 UStaticMeshComponent
 ---@field FVFLargeWoodCreateClose UStaticMeshComponent
 ---@field FVFAmmoBoxLong UStaticMeshComponent

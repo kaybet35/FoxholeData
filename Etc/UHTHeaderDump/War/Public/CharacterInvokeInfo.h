@@ -2,6 +2,7 @@
 #include "CoreMinimal.h"
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=Vector_NetQuantize -FallbackName=Vector_NetQuantize
 #include "MuzzleOffsetVector_NetQuantize.h"
+#include "QuantizedTimestamp.h"
 #include "CharacterInvokeInfo.generated.h"
 
 USTRUCT(BlueprintType)
@@ -15,7 +16,7 @@ public:
     FMuzzleOffsetVector_NetQuantize MuzzleOffset;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float RenderTimestamp;
+    FQuantizedTimestamp RenderTimestamp;
     
     WAR_API FCharacterInvokeInfo();
 };

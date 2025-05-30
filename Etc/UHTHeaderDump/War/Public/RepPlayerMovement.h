@@ -4,6 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=ERotatorQuantization -FallbackName=ERotatorQuantization
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=EVectorQuantization -FallbackName=EVectorQuantization
+#include "QuantizedTimestamp.h"
 #include "RepPlayerMovement.generated.h"
 
 class UPrimitiveComponent;
@@ -28,7 +29,7 @@ public:
     FName BoneName;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
-    float Timestamp;
+    FQuantizedTimestamp Timestamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bServerHasBaseComponent;

@@ -5,6 +5,7 @@
 #include "EFactionId.h"
 #include "EWarPhase.h"
 #include "GameplayFlags.h"
+#include "QuantizedTimestamp.h"
 #include "TownHallInfo.h"
 #include "WarAchievementProgress.h"
 #include "WarGameState.h"
@@ -65,6 +66,9 @@ public:
     uint8 NextWindDirection;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ReplicatedServerTimestamp, meta=(AllowPrivateAccess=true))
+    FQuantizedTimestamp ReplicatedServerTimestamp;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ColonialTechTree, meta=(AllowPrivateAccess=true))
     ATechTree* ColonialTechTree;
     
@@ -94,6 +98,9 @@ protected:
     
     UFUNCTION(BlueprintCallable)
     void OnRep_WardenTechTree();
+    
+    UFUNCTION(BlueprintCallable)
+    void OnRep_ReplicatedServerTimestamp();
     
     UFUNCTION(BlueprintCallable)
     void OnRep_GameplayFlags();

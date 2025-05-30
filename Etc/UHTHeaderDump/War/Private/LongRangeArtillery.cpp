@@ -28,11 +28,11 @@ ALongRangeArtillery::ALongRangeArtillery(const FObjectInitializer& ObjectInitial
     this->SquadId = 0;
     this->StashedAmmo = 0;
     this->KillVolume->SetupAttachment(RootComponent);
+    this->EjectShellParticleSystem->SetupAttachment(Mesh);
     this->Mesh->SetupAttachment(RootComponent);
     this->BaseMesh->SetupAttachment(RootComponent);
     this->RotationSFXLoop->SetupAttachment(RootComponent);
     this->FireShellParticleSystem->SetupAttachment(Mesh);
-    this->EjectShellParticleSystem->SetupAttachment(Mesh);
 }
 
 void ALongRangeArtillery::OnRep_GunnerYawAndPitch(const FVector2D PreviousGunnerYawAndPitch) {

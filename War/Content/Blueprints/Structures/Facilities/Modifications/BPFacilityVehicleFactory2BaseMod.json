@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "Decal5",
+    "Name": "FVFAmmoBox",
     "Outer": "BPFacilityVehicleFactory2BaseMod_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'DecalComponent'",
+      "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -28,8 +28,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:Decal5'",
+        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:FVFAmmoBox'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:Decal5'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.14"
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:Decal4'",
@@ -54,10 +58,6 @@
       {
         "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:PlatformMesh'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.24"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:FVFAmmoBox'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.15"
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:FVFLargeWoodCreateClose1'",
@@ -93,7 +93,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFacilityVehicleFactory2BaseMod_C:DefaultSceneRoot'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.15"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -344,6 +344,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "Decal5",
+    "Outer": "BPFacilityVehicleFactory2BaseMod_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'DecalComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "DefaultSceneRoot",
     "Outer": "BPFacilityVehicleFactory2BaseMod_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -351,18 +363,6 @@
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
       "ObjectName": "Class'SceneComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "FVFAmmoBox",
-    "Outer": "BPFacilityVehicleFactory2BaseMod_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -556,6 +556,10 @@
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.34"
         }
       ],
       "VariableGuid": "C4A89795-4773319D-945E39BF-E042FD6B",
@@ -615,12 +619,6 @@
         "ObjectName": "StaticMeshComponent'BPFacilityVehicleFactory2BaseMod_C:FVFAmmoBoxLong_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.45"
       },
-      "ChildNodes": [
-        {
-          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.34"
-        }
-      ],
       "VariableGuid": "192F52CE-4D76E6A8-41645BB8-006E903E",
       "InternalVariableName": "FVFAmmoBoxLong"
     }
@@ -923,10 +921,6 @@
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.33"
         },
         {
-          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_19'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.34"
-        },
-        {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.27"
         },
@@ -953,6 +947,10 @@
         {
           "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_13'",
           "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFacilityVehicleFactory2BaseMod_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Facilities/Modifications/BPFacilityVehicleFactory2BaseMod.34"
         }
       ],
       "DefaultSceneRootNode": {
@@ -1022,13 +1020,13 @@
         }
       },
       "RelativeLocation": {
-        "X": -6.109906,
-        "Y": 9.228901,
-        "Z": 71.597694
+        "X": -750.6716,
+        "Y": 66.56612,
+        "Z": 132.9501
       },
       "RelativeRotation": {
         "Pitch": 0.0,
-        "Yaw": -100.00018,
+        "Yaw": -100.000084,
         "Roll": 0.0
       }
     }

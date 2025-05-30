@@ -26,10 +26,10 @@ AIntelCenter::AIntelCenter(const FObjectInitializer& ObjectInitializer) : Super(
     this->LastListenEndTime = 0.00f;
     this->ListenTimeRemaining = 0.00f;
     this->KillVolume->SetupAttachment(RootComponent);
+    this->Mesh->SetupAttachment(RootComponent);
     this->BaseMesh->SetupAttachment(RootComponent);
     this->RotationSFXLoop->SetupAttachment(RootComponent);
     this->ListeningSFXLoop->SetupAttachment(RootComponent);
-    this->Mesh->SetupAttachment(RootComponent);
 }
 
 void AIntelCenter::OnRep_LastListenEndTime(const float Previous) {

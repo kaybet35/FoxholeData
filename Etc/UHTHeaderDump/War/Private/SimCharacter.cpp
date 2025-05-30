@@ -158,6 +158,10 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Grip_Standing->SetupAttachment(RootComponent);
     this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Grip_Prone->SetupAttachment(RootComponent);
+    this->GasMaskMesh->SetupAttachment(RootComponent);
+    this->Muzzle_Standing->SetupAttachment(RootComponent);
+    this->Muzzle_Crouched->SetupAttachment(RootComponent);
+    this->Muzzle_Prone->SetupAttachment(RootComponent);
     this->GroundEquippedItemMesh->SetupAttachment(RootComponent);
     this->SuppressionSphere->SetupAttachment(RootComponent);
     this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -170,10 +174,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Back->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Helmet->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EquippedItemMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->GasMaskMesh->SetupAttachment(RootComponent);
-    this->Muzzle_Standing->SetupAttachment(RootComponent);
-    this->Muzzle_Crouched->SetupAttachment(RootComponent);
-    this->Muzzle_Prone->SetupAttachment(RootComponent);
 }
 
 void ASimCharacter::SlowTick() {

@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ConstructionEquipmentTurnLoop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ConstructionEquipmentTurnLoop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentTurnLoop_Cue.1"
+      },
+      "VolumeMultiplier": 1.0,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ConstructionEquipmentTurnLoop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 0.99,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.99,
+      "VolumeMax": 1.01,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ConstructionEquipmentTurnLoop_Cue:SoundNodeWavePlayer_1'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentTurnLoop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_1",
+    "Outer": "ConstructionEquipmentTurnLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentTurnLoop.ConstructionEquipmentTurnLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ConstructionEquipmentTurnLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentTurnLoop.0"
+    }
+  }
+]

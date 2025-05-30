@@ -1,0 +1,62 @@
+[
+  {
+    "Type": "SoundCue",
+    "Name": "ConstructionEquipmentActiveLoop_Cue",
+    "Class": "UScriptClass'SoundCue'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FirstNode": {
+        "ObjectName": "SoundNodeModulator'ConstructionEquipmentActiveLoop_Cue:SoundNodeModulator_0'",
+        "ObjectPath": "War/Content/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentActiveLoop_Cue.1"
+      },
+      "VolumeMultiplier": 0.6,
+      "SoundClassObject": {
+        "ObjectName": "SoundClass'Foley'",
+        "ObjectPath": "War/Content/Audio/SoundClasses/Foley.0"
+      },
+      "Duration": 10000.0,
+      "MaxDistance": 7150.0,
+      "AttenuationSettings": {
+        "ObjectName": "SoundAttenuation'EnvironmentFoley'",
+        "ObjectPath": "War/Content/Audio/Attenuations/EnvironmentFoley.0"
+      }
+    }
+  },
+  {
+    "Type": "SoundNodeModulator",
+    "Name": "SoundNodeModulator_0",
+    "Outer": "ConstructionEquipmentActiveLoop_Cue",
+    "Class": "UScriptClass'SoundNodeModulator'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PitchMin": 0.99,
+      "PitchMax": 1.1,
+      "VolumeMin": 0.99,
+      "VolumeMax": 1.01,
+      "ChildNodes": [
+        {
+          "ObjectName": "SoundNodeWavePlayer'ConstructionEquipmentActiveLoop_Cue:SoundNodeWavePlayer_0'",
+          "ObjectPath": "War/Content/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentActiveLoop_Cue.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SoundNodeWavePlayer",
+    "Name": "SoundNodeWavePlayer_0",
+    "Outer": "ConstructionEquipmentActiveLoop_Cue",
+    "Class": "UScriptClass'SoundNodeWavePlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SoundWaveAssetPtr": {
+        "AssetPathName": "/Game/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentActiveLoop.ConstructionEquipmentActiveLoop",
+        "SubPathString": ""
+      },
+      "bLooping": true
+    },
+    "SoundWave": {
+      "ObjectName": "SoundWave'ConstructionEquipmentActiveLoop'",
+      "ObjectPath": "War/Content/Audio/SFX/Structure/ConstructionEquipment/ConstructionEquipmentActiveLoop.0"
+    }
+  }
+]

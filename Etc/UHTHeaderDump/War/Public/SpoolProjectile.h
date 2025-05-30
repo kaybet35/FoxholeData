@@ -4,11 +4,16 @@
 #include "WarProjectile.h"
 #include "SpoolProjectile.generated.h"
 
+class UAudioComponent;
+
 UCLASS(Blueprintable)
 class WAR_API ASpoolProjectile : public AWarProjectile {
     GENERATED_BODY()
 public:
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UAudioComponent* FiringAudioComponent;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     FVector AccuracyModifiedVelocity;
     

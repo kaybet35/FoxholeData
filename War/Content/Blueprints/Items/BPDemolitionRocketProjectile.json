@@ -1,13 +1,13 @@
 [
   {
-    "Type": "StructProperty",
-    "Name": "UberGraphFrame",
+    "Type": "ObjectProperty",
+    "Name": "StaticMesh",
     "Outer": "BPDemolitionRocketProjectile_C",
-    "Class": "UScriptClass'StructProperty'",
+    "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "Transient | DuplicateTransient",
-    "Struct": {
-      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -19,15 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPDemolitionRocketProjectile_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.16"
-      },
-      "UberGraphFramePointerProperty": {
-        "ObjectName": "StructProperty'BPDemolitionRocketProjectile_C:UberGraphFrame'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.0"
-      },
-      "UberGraphFunction": {
-        "ObjectName": "Function'BPDemolitionRocketProjectile_C:ExecuteUbergraph_BPDemolitionRocketProjectile'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.7"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.10"
       }
     },
     "SuperStruct": {
@@ -36,36 +28,10 @@
     },
     "Children": [
       {
-        "ObjectName": "StructProperty'BPDemolitionRocketProjectile_C:UberGraphFrame'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.0"
-      },
-      {
-        "ObjectName": "Function'BPDemolitionRocketProjectile_C:ReceiveBeginPlay'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.8"
-      },
-      {
-        "ObjectName": "Function'BPDemolitionRocketProjectile_C:ExecuteUbergraph_BPDemolitionRocketProjectile'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.7"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPDemolitionRocketProjectile_C:RocketLaunch_Cue'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.5"
-      },
-      {
         "ObjectName": "ObjectProperty'BPDemolitionRocketProjectile_C:StaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.9"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.0"
       }
     ],
-    "FuncMap": {
-      "ExecuteUbergraph_BPDemolitionRocketProjectile": {
-        "ObjectName": "Function'BPDemolitionRocketProjectile_C:ExecuteUbergraph_BPDemolitionRocketProjectile'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.7"
-      },
-      "ReceiveBeginPlay": {
-        "ObjectName": "Function'BPDemolitionRocketProjectile_C:ReceiveBeginPlay'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.8"
-      }
-    },
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -82,21 +48,24 @@
     "Type": "BPDemolitionRocketProjectile_C",
     "Name": "Default__BPDemolitionRocketProjectile_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Items/BPDemolitionRocketProjectile.BPDemolitionRocketProjectile_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "UberGraphFrame": {},
+      "FiringAudioComponent": {
+        "ObjectName": "AudioComponent'Default__BPDemolitionRocketProjectile_C:FiringAudioComponent'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.3"
+      },
       "SpoolDuration": 2.75,
       "MovementComp": {
         "ObjectName": "ProjectileMovementComponent'Default__BPDemolitionRocketProjectile_C:ProjectileComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.11"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.6"
       },
       "CollisionComp": {
         "ObjectName": "SphereComponent'Default__BPDemolitionRocketProjectile_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.17"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.11"
       },
       "ParticleComp": {
         "ObjectName": "ParticleSystemComponent'Default__BPDemolitionRocketProjectile_C:ParticleComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.10"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.5"
       },
       "LoopingAudio": {
         "ObjectName": "AudioComponent'Default__BPDemolitionRocketProjectile_C:LoopingAudio'",
@@ -112,32 +81,25 @@
       "bImpactsWater": true,
       "RootComponent": {
         "ObjectName": "SphereComponent'Default__BPDemolitionRocketProjectile_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.17"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.11"
       }
     }
   },
   {
     "Type": "AudioComponent",
-    "Name": "RocketLaunch_Cue_GEN_VARIABLE",
-    "Outer": "BPDemolitionRocketProjectile_C",
+    "Name": "FiringAudioComponent",
+    "Outer": "Default__BPDemolitionRocketProjectile_C",
     "Class": "UScriptClass'AudioComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "Sound": {
         "ObjectName": "SoundCue'DemolitionRocketLaunch_Cue'",
         "ObjectPath": "War/Content/Audio/SFX/Weapons/Rockets/DemolitionRocketLaunch_Cue.0"
       },
-      "RelativeLocation": {
-        "X": -8.100186E-13,
-        "Y": 5.421011E-20,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 89.999985,
-        "Roll": 0.0
-      },
-      "bAutoActivate": false
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__BPDemolitionRocketProjectile_C:SphereComp'",
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.11"
+      }
     }
   },
   {
@@ -153,66 +115,8 @@
       },
       "AttachParent": {
         "ObjectName": "SphereComponent'Default__BPDemolitionRocketProjectile_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.17"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.11"
       }
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "RocketLaunch_Cue",
-    "Outer": "BPDemolitionRocketProjectile_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'AudioComponent'",
-      "ObjectPath": "/Script/Engine"
-    }
-  },
-  {
-    "Type": "IntProperty",
-    "Name": "EntryPoint",
-    "Outer": "ExecuteUbergraph_BPDemolitionRocketProjectile",
-    "Class": "UScriptClass'IntProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
-  },
-  {
-    "Type": "Function",
-    "Name": "ExecuteUbergraph_BPDemolitionRocketProjectile",
-    "Outer": "BPDemolitionRocketProjectile_C",
-    "Class": "UScriptClass'Function'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "Children": [
-      {
-        "ObjectName": "IntProperty'BPDemolitionRocketProjectile_C:ExecuteUbergraph_BPDemolitionRocketProjectile.EntryPoint'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.6"
-      }
-    ],
-    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
-  },
-  {
-    "Type": "Function",
-    "Name": "ReceiveBeginPlay",
-    "Outer": "BPDemolitionRocketProjectile_C",
-    "Class": "UScriptClass'Function'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "SuperStruct": {
-      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
-      "ObjectPath": "/Script/Engine"
-    },
-    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "StaticMesh",
-    "Outer": "BPDemolitionRocketProjectile_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
-      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -228,7 +132,7 @@
       },
       "AttachParent": {
         "ObjectName": "SphereComponent'Default__BPDemolitionRocketProjectile_C:SphereComp'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.17"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.11"
       },
       "RelativeLocation": {
         "X": -75.0,
@@ -270,31 +174,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPDemolitionRocketProjectile_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.12"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.7"
       },
       "VariableGuid": "74BF4467-4EA8C57D-77ACC998-A2AD2114",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'AudioComponent'",
-        "ObjectPath": "/Script/Engine"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "AudioComponent'BPDemolitionRocketProjectile_C:RocketLaunch_Cue_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.3"
-      },
-      "ParentComponentOrVariableName": "SphereComp",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "F994B529-44FDF510-A8EA22AC-830B2387",
-      "InternalVariableName": "RocketLaunch_Cue"
     }
   },
   {
@@ -310,7 +193,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPDemolitionRocketProjectile_C:StaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.18"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.12"
       },
       "ParentComponentOrVariableName": "SphereComp",
       "bIsParentComponentNative": true,
@@ -328,26 +211,18 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPDemolitionRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDemolitionRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.14"
+          "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.9"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPDemolitionRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPDemolitionRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.14"
+          "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.9"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPDemolitionRocketProjectile_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.13"
+        "ObjectPath": "War/Content/Blueprints/Items/BPDemolitionRocketProjectile.8"
       }
     }
   },
@@ -358,7 +233,7 @@
     "Class": "UScriptClass'SphereComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "SphereRadius": 20.0
+      "SphereRadius": 17.0
     }
   },
   {
@@ -369,8 +244,8 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "StaticMesh": {
-        "ObjectName": "StaticMesh'DemolitionRocketAmmo'",
-        "ObjectPath": "War/Content/Meshes/Weapons/DemolitionRocketAmmo.2"
+        "ObjectName": "StaticMesh'DemolitionRocketAmmo_RootOffset'",
+        "ObjectPath": "War/Content/Meshes/Weapons/DemolitionRocketAmmo_RootOffset.2"
       },
       "bGenerateOverlapEvents": false,
       "CanCharacterStepUpOn": "ECB_No",
@@ -425,7 +300,7 @@
       },
       "RelativeLocation": {
         "X": 0.0,
-        "Y": -8.100187E-13,
+        "Y": -1.1921011E-07,
         "Z": 0.0
       },
       "RelativeRotation": {

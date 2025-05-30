@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommon",
+    "Name": "Arrow",
     "Outer": "BPFortEmpT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'TemplateComponent'",
-      "ObjectPath": "/Script/War"
+      "ObjectName": "Class'StaticMeshComponent'",
+      "ObjectPath": "/Script/Engine"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFortEmpT3_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.19"
       }
     },
     "SuperStruct": {
@@ -28,8 +28,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortEmpT3_C:FortCommon'",
+        "ObjectName": "ObjectProperty'BPFortEmpT3_C:Arrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortEmpT3_C:FortCommon'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.11"
       },
       {
         "ObjectName": "ObjectProperty'BPFortEmpT3_C:FloorMesh'",
@@ -37,7 +41,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFortEmpT3_C:RoofMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.12"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -60,11 +64,11 @@
     "Properties": {
       "FirstSegmentMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPFortEmpT3_C:FirstSegmentMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.23"
       },
       "SecondSegmentMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPFortEmpT3_C:SecondSegmentMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.24"
       },
       "BuildLocation": {
         "ObjectName": "BoxComponent'Default__BPFortEmpT3_C:Build Location'",
@@ -112,12 +116,12 @@
           "ObjectPath": "War/Content/Meshes/Structures/WeatherStationCenter.2"
         },
         "FirstFortGarrisonSegmentMesh": {
-          "ObjectName": "StaticMesh'FortGarrisonStationRoof'",
-          "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationRoof.2"
+          "ObjectName": "StaticMesh'FortGarrisonStationBottom'",
+          "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationBottom.2"
         },
         "SecondFortGarrisonSegmentMesh": {
-          "ObjectName": "StaticMesh'FortGarrisonStationGroundFloor'",
-          "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationGroundFloor.2"
+          "ObjectName": "StaticMesh'FortGarrisonStationCenter'",
+          "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationCenter.2"
         },
         "LRArtilleryPartCodeName": "FortLRArtilleryPart",
         "WeatherStationPartCodeName": "FortWeatherStationPart",
@@ -144,6 +148,7 @@
         "ObjectName": "Texture2D'EMPT3Icon'",
         "ObjectPath": "War/Content/Textures/UI/StructureIcons/EMPT3Icon.0"
       },
+      "BuildCategory": "EBuildCategory::Bunker",
       "bDropsLargeMaterialsWhenDestroyed": false,
       "ValidBuildTools": 52,
       "CodeName": "FortEmpT3",
@@ -153,7 +158,7 @@
         "SourceString": "Large Structure Foundation",
         "LocalizedString": "Large Structure Foundation"
       },
-      "ProfileType": "EStructureProfileType::FortUpgrade",
+      "ProfileType": "EStructureProfileType::FortRotatableUpgrade",
       "ArmourType": "EArmourType::Tier3Structure",
       "ArrowComponent": {
         "ObjectName": "ArrowComponent'Default__BPFortEmpT3_C:StructureArrow'",
@@ -186,7 +191,7 @@
       "bHasMeshVisibilityComponent": true,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortEmpT3_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.25"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFortEmpT3_C:StructureArrow'",
@@ -348,6 +353,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "FortCommon",
+    "Outer": "BPFortEmpT3_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "RoofMesh",
     "Outer": "BPFortEmpT3_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -378,10 +395,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFortEmpT3_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.13"
       },
       "VariableGuid": "34B1469B-45E7BE5A-1BCDF9A2-B7FEA138",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BPFortEmpT3_C:Arrow_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.20"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "A01B1C91-489BBBDA-2D17E8B7-32AE539A",
+      "InternalVariableName": "Arrow"
     }
   },
   {
@@ -397,7 +435,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortEmpT3_C:RoofMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.22"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -418,7 +456,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortEmpT3_C:FloorMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.21"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -439,7 +477,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortEmpT3_C:FortCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.26"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -457,35 +495,123 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.14"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.16"
         },
         {
           "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.15"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.17"
         },
         {
           "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.15"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.14"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.16"
         },
         {
           "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.15"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.17"
         },
         {
           "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.16"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.15"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFortEmpT3_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPFortEmpT3.14"
       }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Arrow_GEN_VARIABLE",
+    "Outer": "BPFortEmpT3_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'PipelineDirectionArrow01'",
+        "ObjectPath": "War/Content/Meshes/Structures/Facilities/PipelineDirectionArrow01.2"
+      },
+      "bGenerateOverlapEvents": false,
+      "bReceivesDecals": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "OverlapDowncast",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 500.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      },
+      "bVisible": false,
+      "Mobility": "EComponentMobility::Stationary",
+      "ComponentTags": [
+        "IncludeInBuildGhost"
+      ]
     }
   },
   {
@@ -577,7 +703,8 @@
       },
       "ComponentTags": [
         "FortConstructionPart",
-        "RoofVisibility"
+        "RoofVisibility",
+        "ShowWeatherFX"
       ]
     }
   },
@@ -604,7 +731,8 @@
       },
       "ComponentTags": [
         "FortStructurePart",
-        "RoofVisibility"
+        "RoofVisibility",
+        "ShowWeatherFX"
       ]
     }
   },

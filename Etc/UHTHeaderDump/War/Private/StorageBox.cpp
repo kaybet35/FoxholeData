@@ -14,8 +14,8 @@ AStorageBox::AStorageBox(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->ReplenishRate = 0.00f;
     this->bReplenishFirstItem = false;
     this->bReplenishedOnce = false;
-    this->KillVolume->SetupAttachment(RootComponent);
     this->MeshComponent->SetupAttachment(RootComponent);
+    this->KillVolume->SetupAttachment(RootComponent);
 }
 
 

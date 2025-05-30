@@ -14,13 +14,13 @@ AFortEmp::AFortEmp(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->FortEmpSelectedStructure = EFortEmpStructure::None;
     this->RequiredSquadMembers = 5;
     this->SquadId = 0;
+    this->IntelCenterObstructionShape->SetupAttachment(RootComponent);
+    this->WeatherStationObstructionShape->SetupAttachment(RootComponent);
+    this->FortGarrisonStationObstructionShape->SetupAttachment(RootComponent);
     this->FirstSegmentMesh->SetupAttachment(RootComponent);
     this->SecondSegmentMesh->SetupAttachment(RootComponent);
     this->BuildLocation->SetupAttachment(RootComponent);
     this->LRArtilleryObstructionShape->SetupAttachment(RootComponent);
-    this->IntelCenterObstructionShape->SetupAttachment(RootComponent);
-    this->WeatherStationObstructionShape->SetupAttachment(RootComponent);
-    this->FortGarrisonStationObstructionShape->SetupAttachment(RootComponent);
 }
 
 void AFortEmp::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

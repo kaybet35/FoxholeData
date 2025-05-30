@@ -43,6 +43,8 @@ enum class EActorLogEntryType : uint8 {
     ConstructionSiteObstructed,
     ConstructionSiteNoLongerExists,
     OtherBuildToolRequired,
+    WeaponAttached,
+    WeaponDetached,
     MAX,
 };
 
