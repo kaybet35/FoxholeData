@@ -17,6 +17,7 @@ FDamageProfile::FDamageProfile() {
     this->Trench = 0.00f;
     this->Tier1LargeShip = 0.00f;
     this->Tier1Ship = 0.00f;
+    this->WorldStructureHusk = 0.00f;
     this->Ice = 0.00f;
 }
 

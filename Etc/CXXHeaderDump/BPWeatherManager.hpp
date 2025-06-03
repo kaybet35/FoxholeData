@@ -3,6 +3,6 @@
 
 class UBPWeatherManager_C : public UWeatherManager
 {
-}; // Size: 0x1E8
+}; // Size: 0x1F0
 
 #endif

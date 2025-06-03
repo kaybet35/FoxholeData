@@ -7,10 +7,10 @@ AFieldBridge::AFieldBridge(const FObjectInitializer& ObjectInitializer) : Super(
     this->BackRamp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BackRamp"));
     this->FrontKillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("FrontKillVolume"));
     this->BackKillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("BackKillVolume"));
-    this->BackKillVolume->SetupAttachment(BackRamp);
     this->FrontRamp->SetupAttachment(RootComponent);
     this->BackRamp->SetupAttachment(RootComponent);
     this->FrontKillVolume->SetupAttachment(FrontRamp);
+    this->BackKillVolume->SetupAttachment(BackRamp);
 }
 
 

@@ -1243,7 +1243,8 @@ struct FDamageProfile : public FTableRowBase
     float Trench;                                                                     // 0x003C (size: 0x4)
     float Tier1LargeShip;                                                             // 0x0040 (size: 0x4)
     float Tier1Ship;                                                                  // 0x0044 (size: 0x4)
-    float Ice;                                                                        // 0x0048 (size: 0x4)
+    float WorldStructureHusk;                                                         // 0x0048 (size: 0x4)
+    float Ice;                                                                        // 0x004C (size: 0x4)
 
 }; // Size: 0x50
 
@@ -4516,13 +4517,13 @@ struct FSavedVehicle
 
 struct FScheduledWeatherState
 {
-    FWeatherState State;                                                              // 0x0000 (size: 0x1C)
-    FVector2D NormalizedLocation;                                                     // 0x001C (size: 0x8)
-    FDateTime StartTime;                                                              // 0x0028 (size: 0x8)
-    FDateTime EndTime;                                                                // 0x0030 (size: 0x8)
-    int8 IntensityCurve;                                                              // 0x0038 (size: 0x1)
+    FWeatherState State;                                                              // 0x0000 (size: 0x28)
+    FVector2D NormalizedLocation;                                                     // 0x0028 (size: 0x8)
+    FDateTime StartTime;                                                              // 0x0030 (size: 0x8)
+    FDateTime EndTime;                                                                // 0x0038 (size: 0x8)
+    int8 IntensityCurve;                                                              // 0x0040 (size: 0x1)
 
-}; // Size: 0x48
+}; // Size: 0x50
 
 struct FSearchBarStyle
 {
@@ -6663,10 +6664,10 @@ struct FWeatherIceState
 
 struct FWeatherManagerState
 {
-    FWorldWeatherState WorldState;                                                    // 0x0000 (size: 0x38)
-    TArray<FScheduledWeatherState> StateTimes;                                        // 0x0038 (size: 0x10)
+    FWorldWeatherState WorldState;                                                    // 0x0000 (size: 0x40)
+    TArray<FScheduledWeatherState> StateTimes;                                        // 0x0040 (size: 0x10)
 
-}; // Size: 0x58
+}; // Size: 0x60
 
 struct FWeatherPattern
 {
@@ -6688,8 +6689,9 @@ struct FWeatherState
     float InnerRadius;                                                                // 0x0010 (size: 0x4)
     float OuterRadius;                                                                // 0x0014 (size: 0x4)
     float DryingStartTime;                                                            // 0x0018 (size: 0x4)
+    FDateTime StartTime;                                                              // 0x0020 (size: 0x8)
 
-}; // Size: 0x1C
+}; // Size: 0x28
 
 struct FWeatherStationGlobalMessage
 {
@@ -6781,12 +6783,12 @@ struct FWorldMapStyle
 
 struct FWorldWeatherState
 {
-    FWeatherState GameplayState;                                                      // 0x0000 (size: 0x1C)
-    TArray<FWeatherState> States;                                                     // 0x0020 (size: 0x10)
-    bool bIsWeatherVisibleC;                                                          // 0x0030 (size: 0x1)
-    bool bIsWeatherVisibleW;                                                          // 0x0031 (size: 0x1)
+    FWeatherState GameplayState;                                                      // 0x0000 (size: 0x28)
+    TArray<FWeatherState> States;                                                     // 0x0028 (size: 0x10)
+    bool bIsWeatherVisibleC;                                                          // 0x0038 (size: 0x1)
+    bool bIsWeatherVisibleW;                                                          // 0x0039 (size: 0x1)
 
-}; // Size: 0x38
+}; // Size: 0x40
 
 struct FZombieFootPrintActorInfo
 {
@@ -6867,7 +6869,7 @@ class AArmourProfiles : public AInfo
 {
     class UDataTable* DataTable;                                                      // 0x0218 (size: 0x8)
 
-}; // Size: 0x368
+}; // Size: 0x378
 
 class AArtillery : public ARWDSimVehicle
 {
@@ -9894,22 +9896,22 @@ class ASimGameState : public AWarGameState
     class ASubmarineAudioVolume* SubmarineAudioVolume;                                // 0x02B0 (size: 0x8)
     FWarAchievementProgress WarAchievementProgress;                                   // 0x0320 (size: 0x20)
     uint32 StructureLayers;                                                           // 0x0340 (size: 0x4)
-    FWorldWeatherState WorldWeatherState;                                             // 0x0348 (size: 0x38)
-    float PrevWindSpeedTime;                                                          // 0x0380 (size: 0x4)
-    uint8 PrevWindSpeed;                                                              // 0x0384 (size: 0x1)
-    float NextWindSpeedTime;                                                          // 0x0388 (size: 0x4)
-    uint8 NextWindSpeed;                                                              // 0x038C (size: 0x1)
-    float PrevWindDirectionTime;                                                      // 0x0390 (size: 0x4)
-    uint8 PrevWindDirection;                                                          // 0x0394 (size: 0x1)
-    float NextWindDirectionTime;                                                      // 0x0398 (size: 0x4)
-    uint8 NextWindDirection;                                                          // 0x039C (size: 0x1)
-    FQuantizedTimestamp ReplicatedServerTimestamp;                                    // 0x03B0 (size: 0x4)
-    class ATechTree* ColonialTechTree;                                                // 0x03E8 (size: 0x8)
-    class ATechTree* WardenTechTree;                                                  // 0x03F0 (size: 0x8)
-    EFactionId ConquestWinner;                                                        // 0x03F8 (size: 0x1)
-    EWarPhase WarPhase;                                                               // 0x03F9 (size: 0x1)
-    FDateTime WarPhaseEndTime;                                                        // 0x0400 (size: 0x8)
-    bool bIsPatchRequired;                                                            // 0x0408 (size: 0x1)
+    FWorldWeatherState WorldWeatherState;                                             // 0x0348 (size: 0x40)
+    float PrevWindSpeedTime;                                                          // 0x0388 (size: 0x4)
+    uint8 PrevWindSpeed;                                                              // 0x038C (size: 0x1)
+    float NextWindSpeedTime;                                                          // 0x0390 (size: 0x4)
+    uint8 NextWindSpeed;                                                              // 0x0394 (size: 0x1)
+    float PrevWindDirectionTime;                                                      // 0x0398 (size: 0x4)
+    uint8 PrevWindDirection;                                                          // 0x039C (size: 0x1)
+    float NextWindDirectionTime;                                                      // 0x03A0 (size: 0x4)
+    uint8 NextWindDirection;                                                          // 0x03A4 (size: 0x1)
+    FQuantizedTimestamp ReplicatedServerTimestamp;                                    // 0x03B8 (size: 0x4)
+    class ATechTree* ColonialTechTree;                                                // 0x03F0 (size: 0x8)
+    class ATechTree* WardenTechTree;                                                  // 0x03F8 (size: 0x8)
+    EFactionId ConquestWinner;                                                        // 0x0400 (size: 0x1)
+    EWarPhase WarPhase;                                                               // 0x0401 (size: 0x1)
+    FDateTime WarPhaseEndTime;                                                        // 0x0408 (size: 0x8)
+    bool bIsPatchRequired;                                                            // 0x0410 (size: 0x1)
 
     void OnRep_WorldWeatherState();
     void OnRep_WardenTechTree();
@@ -9919,7 +9921,7 @@ class ASimGameState : public AWarGameState
     void MulticastToggleEarlyWarRestrictionOverride();
     void MulticastRemoveOfflinePlayerState(FString OnlineID);
     FVector2D GetWindVector();
-}; // Size: 0x720
+}; // Size: 0x728
 
 class ASimPainCausingVolume : public APainCausingVolume
 {
@@ -14605,7 +14607,7 @@ class UWeatherManager : public UObject
     TArray<class UPhysicalMaterial*> SnowyPhysicalMaterials;                          // 0x0100 (size: 0x10)
     TArray<class AWeatherIceActor*> WeatherIceActors;                                 // 0x0110 (size: 0x10)
 
-}; // Size: 0x1E8
+}; // Size: 0x1F0
 
 class UWeatherStationAnimInstance : public UAnimInstance
 {

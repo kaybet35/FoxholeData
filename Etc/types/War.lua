@@ -6660,6 +6660,7 @@ FDamageMitigation = {}
 ---@field Trench float
 ---@field Tier1LargeShip float
 ---@field Tier1Ship float
+---@field WorldStructureHusk float
 ---@field Ice float
 FDamageProfile = {}
 
@@ -12105,6 +12106,7 @@ FWeatherPattern = {}
 ---@field InnerRadius float
 ---@field OuterRadius float
 ---@field DryingStartTime float
+---@field StartTime FDateTime
 FWeatherState = {}
 
 

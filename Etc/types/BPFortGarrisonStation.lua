@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortGarrisonStation_C : AFortGarrisonStation
+---@field MapIntelligenceSource UMapIntelligenceSourceComponent
 ---@field ViewTargetCamera UCameraComponent
 ---@field GroundFloorMetal UStaticMeshComponent
 ---@field BasementMetal UStaticMeshComponent

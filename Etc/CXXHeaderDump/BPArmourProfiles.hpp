@@ -3,8 +3,8 @@
 
 class ABPArmourProfiles_C : public AArmourProfiles
 {
-    class USceneComponent* DefaultSceneRoot;                                          // 0x0368 (size: 0x8)
+    class USceneComponent* DefaultSceneRoot;                                          // 0x0378 (size: 0x8)
 
-}; // Size: 0x370
+}; // Size: 0x380
 
 #endif

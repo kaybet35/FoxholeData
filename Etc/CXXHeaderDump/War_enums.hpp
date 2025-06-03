@@ -245,8 +245,9 @@ enum class EArmourType {
     Trench = 15,
     Tier1LargeShip = 16,
     Tier1Ship = 17,
-    Ice = 18,
-    MAX = 19,
+    WorldStructureHusk = 18,
+    Ice = 19,
+    MAX = 20,
 };
 
 enum class EAssemblyAreaState {
@@ -698,7 +699,8 @@ enum class ECustomMovementMode {
     MOVE_Custom_LadderClimbing = 1,
     MOVE_Custom_WoundedCarried = 2,
     MOVE_Custom_StationaryPassenger = 3,
-    MOVE_Custom_MAX = 4,
+    MOVE_Custom_StationaryOccupant = 4,
+    MOVE_Custom_MAX = 5,
 };
 
 enum class EDamageSource {

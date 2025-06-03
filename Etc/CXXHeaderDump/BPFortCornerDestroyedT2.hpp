@@ -3,7 +3,7 @@
 
 class ABPFortCornerDestroyedT2_C : public ADestroyedFort
 {
-    class UTemplateComponent* FortCornerCommonDirtT2;                                 // 0x0820 (size: 0x8)
+    class UTemplateComponent* FortCornerCommonDirtT1;                                 // 0x0820 (size: 0x8)
     class ULocationMultiplexedMeshComponent* LocationMultiplexedMesh;                 // 0x0828 (size: 0x8)
     class UStaticMeshComponent* FortT2AngleDestroyedBackLeft;                         // 0x0830 (size: 0x8)
     class UStaticMeshComponent* FortT2AngleDestroyedAngle;                            // 0x0838 (size: 0x8)

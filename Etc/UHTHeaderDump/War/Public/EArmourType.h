@@ -22,6 +22,7 @@ enum class EArmourType : uint8 {
     Trench,
     Tier1LargeShip,
     Tier1Ship,
+    WorldStructureHusk,
     Ice,
     MAX,
 };

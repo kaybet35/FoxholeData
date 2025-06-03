@@ -140,7 +140,7 @@
       "Description": {
         "Namespace": "",
         "Key": "5C98C2CE4BF49E1FB1FF05877CB5DE6F",
-        "SourceString": "This heavily reinforced pillbox allows the garrisoned infantry with anti-tank rifles to fire on approaching enemy armour from a safe position.",
+        "SourceString": "This heavily reinforced pillbox allows the garrisoned infantry with 30mm support guns to fire on approaching enemy armour from a safe position.",
         "LocalizedString": "This heavily reinforced pillbox allows the garrisoned infantry with anti-tank rifles to fire on approaching enemy armour from a safe position."
       },
       "Icon": {
@@ -210,38 +210,26 @@
     "Class": "UScriptClass'AITurretComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
-      "AllowedTargetTypes": 31,
-      "MaximumRange": 2800.0,
-      "MaximumReachability": 5200.0,
+      "AllowedTargetTypes": 30,
+      "MaximumRange": 3500.0,
+      "MaximumReachability": 3500.0,
       "DamageAttributes": {
-        "WeaponFireFXClass": {
-          "ObjectName": "BlueprintGeneratedClass'TracerFireFX_C'",
-          "ObjectPath": "War/Content/Blueprints/TracerFireFX.1"
-        },
-        "ImpactEffect": {
-          "ObjectName": "BlueprintGeneratedClass'RifleImpactEffect_C'",
-          "ObjectPath": "War/Content/Blueprints/Items/RifleImpactEffect.1"
-        },
         "DamageType": {
-          "ObjectName": "BlueprintGeneratedClass'BPAntiTankKineticDamageType_C'",
-          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPAntiTankKineticDamageType.0"
+          "ObjectName": "BlueprintGeneratedClass'BPExplosivePenetratingDamageType_C'",
+          "ObjectPath": "War/Content/Blueprints/DamageTypes/BPExplosivePenetratingDamageType.0"
         },
         "ShotSoundCue": {
-          "ObjectName": "SoundCue'GarrisonATGunShot_Cue'",
-          "ObjectPath": "War/Content/Audio/SFX/Weapons/AntiTankGun/GarrisonATGunShot_Cue.0"
+          "ObjectName": "SoundCue'ISGShot01_Cue'",
+          "ObjectPath": "War/Content/Audio/SFX/Weapons/ISG/ISGShot01_Cue.0"
         },
         "MuzzleFlashPS": {
-          "ObjectName": "ParticleSystem'RifleMF'",
-          "ObjectPath": "War/Content/FX/RifleMF.58"
+          "ObjectName": "ParticleSystem'ISGMF'",
+          "ObjectPath": "War/Content/FX/ISGMF.61"
         },
-        "WeaponDamage": 150.0,
-        "BestJitterConeHalfAngle": 3.5,
-        "WorstJitterConeHalfAngle": 10.0,
-        "FiringPeriod": 2.5,
-        "TimeToFullFireRateAndAccuracy": 4.0,
-        "EnemyPursueDuration": 7.0,
-        "ArmourDamageModifier": 2.0,
-        "TargetStabilityReductionPerShot": 1.0
+        "WeaponDamage": 400.0,
+        "FiringPeriod": 4.5,
+        "TimeToFullFireRateAndAccuracy": 7.0,
+        "EnemyPursueDuration": 4.0
       },
       "DamageAttributesAlternate": {
         "WeaponFireFXClass": {
