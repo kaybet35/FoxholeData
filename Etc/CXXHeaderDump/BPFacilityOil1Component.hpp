@@ -3,6 +3,6 @@
 
 class UBPFacilityOil1Component_C : public UFuelItemComponent
 {
-}; // Size: 0x908
+}; // Size: 0x920
 
 #endif

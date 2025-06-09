@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchEmpDestroyedT3_C : ADestroyedFort
+---@field TrenchEmpCommonSockets UTemplateComponent
 ---@field DirtCorner1 UStaticMeshComponent
 ---@field DirtCorner2 UStaticMeshComponent
 ---@field DirtCorner8 UStaticMeshComponent

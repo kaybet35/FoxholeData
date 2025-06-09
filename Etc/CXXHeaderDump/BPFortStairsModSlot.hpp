@@ -3,6 +3,6 @@
 
 class UBPFortStairsModSlot_C : public ULadderModificationSlotComponent
 {
-}; // Size: 0x3F0
+}; // Size: 0x440
 
 #endif

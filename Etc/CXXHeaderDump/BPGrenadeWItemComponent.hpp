@@ -3,6 +3,6 @@
 
 class UBPGrenadeWItemComponent_C : public UGrenadeItemComponent
 {
-}; // Size: 0x928
+}; // Size: 0x940
 
 #endif

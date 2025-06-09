@@ -486,8 +486,8 @@ AConquestConfig = {}
 ---@class AConstructionEquipment : ATeamStructure
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field ScoopMaterialMesh UStaticMeshComponent
----@field FuelGenericStockpileComponent UGenericStockpileComponent
 ---@field MaterialGenericStockpileComponent UGenericStockpileComponent
+---@field FuelGenericStockpileComponent UGenericStockpileComponent
 ---@field CollisionQueryLocation USceneComponent
 ---@field ActiveLoop UAudioComponent
 ---@field TurningLoop UAudioComponent
@@ -12688,6 +12688,7 @@ UBuildFootprintBoxComponent = {}
 ---@field MaxSurfaceSamplePadding float
 ---@field MaxSurfaceSampleSlopeAngle float
 ---@field bAllowMultipleOverlaps boolean
+---@field bContributeToIslandIntegrityBonus boolean
 ---@field MinimumPathSeparation float
 ---@field bOnlyTestMinimumPathSeparationOnUnconnected boolean
 ---@field bAllowRotatedPlacement boolean
@@ -14009,6 +14010,7 @@ function UMeleeWeaponComponent:ClientSetIsBlocking(bInIsblocking) end
 ---@field AnimatedFloorMeshes TArray<UMeshComponent>
 ---@field Meshes TArray<UMeshComponent>
 ---@field FloorMeshes TArray<UMeshComponent>
+---@field FloorIGRComponents TArray<UItemGroupRenderComponent>
 UMeshVisibilityComponent = {}
 
 
@@ -14025,6 +14027,7 @@ function UMiscItemComponent:OnRep_IsEquipped() end
 ---@field LinkedSocketNames TArray<FName>
 ---@field bIsBlockedByLinkedSocket boolean
 ---@field BlockedByModSlotNames TArray<FName>
+---@field BlockedByModTypes TSet<EFortModificationType>
 ---@field bOverrideSplineTarget boolean
 ---@field SplineTargetComponentNameOverride FName
 ---@field bIgnoreSocketModSiblings boolean
@@ -15343,6 +15346,7 @@ function UTemperatureModifierSphereComponent:OnBeginOverlap(OverlappedComponent,
 ---@field TemplateActor TSubclassOf<ATemplate>
 ---@field bOnlyCollisions boolean
 ---@field OverrideCollisionProfile FName
+---@field bUnidirectionalSockets boolean
 ---@field SpawnedComponents TArray<UActorComponent>
 UTemplateComponent = {}
 

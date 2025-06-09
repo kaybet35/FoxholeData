@@ -4,7 +4,7 @@
 class ABPFortArtilleryShelterT2_C : public AFortArtilleryShelter
 {
     class UTemplateComponent* FortCommonT2Corners;                                    // 0x0820 (size: 0x8)
-    class UTemplateComponent* FortCommonT2T3Mods;                                     // 0x0828 (size: 0x8)
+    class UTemplateComponent* FortCommonT2T3ModsMinimal;                              // 0x0828 (size: 0x8)
     class UTemplateComponent* FortCommonDefenseMods;                                  // 0x0830 (size: 0x8)
     class UTemplateComponent* FortCommonMods;                                         // 0x0838 (size: 0x8)
     class UStaticMeshComponent* ArtilleryShelterRoof;                                 // 0x0840 (size: 0x8)

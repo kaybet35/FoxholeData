@@ -3,6 +3,6 @@
 
 class UBPBicycleDriverComponent_C : public UMountComponent
 {
-}; // Size: 0x850
+}; // Size: 0x868
 
 #endif

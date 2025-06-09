@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "TrenchEmpDirtDecals",
+    "Name": "TrenchEmpCommonSockets",
     "Outer": "BPTrenchEmpT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPTrenchEmpT3_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.21"
       }
     },
     "SuperStruct": {
@@ -28,8 +28,12 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPTrenchEmpT3_C:TrenchEmpDirtDecals'",
+        "ObjectName": "ObjectProperty'BPTrenchEmpT3_C:TrenchEmpCommonSockets'",
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.0"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPTrenchEmpT3_C:TrenchEmpDirtDecals'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.12"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpT3_C:TrenchEmpCommonDirtT3'",
@@ -138,7 +142,7 @@
       "bIsBlankFortPiece": false,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPTrenchEmpT3_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.23"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPTrenchEmpT3_C:StructureArrow'",
@@ -273,6 +277,18 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "TrenchEmpDirtDecals",
+    "Outer": "BPTrenchEmpT3_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPTrenchEmpT3_C",
@@ -292,7 +308,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPTrenchEmpT3_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.13"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -311,7 +327,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPTrenchEmpT3_C:TrenchEmpCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.24"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -332,7 +348,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPTrenchEmpT3_C:Floor_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.22"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -353,7 +369,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPTrenchEmpT3_C:TrenchEmpCommonMods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.24"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.26"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -374,7 +390,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPTrenchEmpT3_C:TrenchEmpCommonDirtT3_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.25"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -395,12 +411,33 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPTrenchEmpT3_C:TrenchEmpDirtDecals_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.25"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.28"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "9581ED2B-4D368C41-7AB79B88-EAA601CE",
       "InternalVariableName": "TrenchEmpDirtDecals"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'TemplateComponent'",
+        "ObjectPath": "/Script/War"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "TemplateComponent'BPTrenchEmpT3_C:TrenchEmpCommonSockets_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.27"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E3A18DD1-4C81BF99-17FF1ABA-042C87A0",
+      "InternalVariableName": "TrenchEmpCommonSockets"
     }
   },
   {
@@ -413,50 +450,58 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_128'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.16"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.17"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.20"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_128'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.15"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.14"
-        },
-        {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.16"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_17'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.17"
         },
         {
-          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.20"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPTrenchEmpT3_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpT3.14"
       }
     }
   },
@@ -533,6 +578,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPTrenchEmpCommonMods_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpCommonMods.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "TrenchEmpCommonSockets_GEN_VARIABLE",
+    "Outer": "BPTrenchEmpT3_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPTrenchEmpCommonSockets_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpCommonSockets.1"
       }
     }
   },

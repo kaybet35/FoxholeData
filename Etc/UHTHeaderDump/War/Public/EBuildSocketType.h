@@ -42,5 +42,7 @@ enum class EBuildSocketType : uint8 {
     TrenchIntersection,
     FortBreach,
     FortGarrisonStation,
+    FortCornerInternalLeft,
+    FortCornerInternalRight,
 };
 

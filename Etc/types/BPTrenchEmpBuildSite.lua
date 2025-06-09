@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchEmpBuildSite_C : AFortBuildSiteBase
+---@field TrenchEmpCommonSockets UTemplateComponent
 ---@field BuildsiteOverlapBlock3 UBoxComponent
 ---@field BuildsiteOverlapBlock2 UBoxComponent
 ---@field BuildsiteOverlapBlock1 UBoxComponent
@@ -25,14 +26,6 @@
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
 ---@field WorkBox UBoxComponent
----@field LeftSocket UBuildSocketComponent
----@field BackLeftSocket UBuildSocketComponent
----@field BackSocket UBuildSocketComponent
----@field BackRightSocket UBuildSocketComponent
----@field FrontRightSocket UBuildSocketComponent
----@field FrontLeftSocket UBuildSocketComponent
----@field FrontSocket UBuildSocketComponent
----@field RightSocket UBuildSocketComponent
 ABPTrenchEmpBuildSite_C = {}
 
 

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchEmpT3_C : AFort
+---@field TrenchEmpCommonSockets UTemplateComponent
 ---@field TrenchEmpDirtDecals UTemplateComponent
 ---@field TrenchEmpCommonDirtT3 UTemplateComponent
 ---@field TrenchEmpCommonMods UTemplateComponent

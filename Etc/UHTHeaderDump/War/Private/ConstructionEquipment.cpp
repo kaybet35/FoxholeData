@@ -10,8 +10,8 @@ AConstructionEquipment::AConstructionEquipment(const FObjectInitializer& ObjectI
     this->bCanBeFlaggedForDisruptivePlacement = true;
     this->SkeletalMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
     this->ScoopMaterialMesh = NULL;
-    this->FuelGenericStockpileComponent = CreateDefaultSubobject<UReplicatedGenericStockpileComponent>(TEXT("FuelGenericStockpileComponent"));
     this->MaterialGenericStockpileComponent = CreateDefaultSubobject<UGenericStockpileComponent>(TEXT("MaterialsGenericStockpileComponent"));
+    this->FuelGenericStockpileComponent = CreateDefaultSubobject<UReplicatedGenericStockpileComponent>(TEXT("FuelGenericStockpileComponent"));
     this->CollisionQueryLocation = CreateDefaultSubobject<USceneComponent>(TEXT("CollisionQueryLocation"));
     this->ActiveLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("ActiveLoopAudioComponent"));
     this->TurningLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("TurningLoopAudioComponent"));

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPMedicalRoomT2_C : AHospital
+---@field BuildSiteLadderBlockVolume UBoxComponent
 ---@field FortCommonT2Corners UTemplateComponent
 ---@field FortCommonThreeWallsMods UTemplateComponent
 ---@field FortCommonT2BreachedWalls UTemplateComponent

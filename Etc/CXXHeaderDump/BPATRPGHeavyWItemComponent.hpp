@@ -3,6 +3,6 @@
 
 class UBPATRPGHeavyWItemComponent_C : public UProjectileItemComponent
 {
-}; // Size: 0x968
+}; // Size: 0x980
 
 #endif

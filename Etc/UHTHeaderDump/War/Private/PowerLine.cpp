@@ -7,9 +7,9 @@ APowerLine::APowerLine(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->BackSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("BackSocket"));
     this->FrontSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("FrontSocket"));
     this->BuildGhostOffsetZ = 0.00f;
-    this->FrontSocket->SetupAttachment(RootComponent);
     this->SplineConnector->SetupAttachment(RootComponent);
     this->BackSocket->SetupAttachment(RootComponent);
+    this->FrontSocket->SetupAttachment(RootComponent);
 }
 
 

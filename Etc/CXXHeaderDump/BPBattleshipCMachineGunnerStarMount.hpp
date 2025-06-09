@@ -3,6 +3,6 @@
 
 class UBPBattleshipCMachineGunnerStarMount_C : public UHitScanMountComponent
 {
-}; // Size: 0x918
+}; // Size: 0x930
 
 #endif

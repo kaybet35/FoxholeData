@@ -3,6 +3,6 @@
 
 class UBPEmplacementMortarMountComponent_C : public UEmplacementMortarMountComponent
 {
-}; // Size: 0x8A0
+}; // Size: 0x8B8
 
 #endif

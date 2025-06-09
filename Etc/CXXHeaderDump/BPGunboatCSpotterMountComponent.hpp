@@ -3,6 +3,6 @@
 
 class UBPGunboatCSpotterMountComponent_C : public USpotterMountComponent
 {
-}; // Size: 0x860
+}; // Size: 0x878
 
 #endif

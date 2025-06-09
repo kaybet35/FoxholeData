@@ -26,10 +26,10 @@ protected:
     UStaticMeshComponent* ScoopMaterialMesh;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, SaveGame, meta=(AllowPrivateAccess=true))
-    UGenericStockpileComponent* FuelGenericStockpileComponent;
+    UGenericStockpileComponent* MaterialGenericStockpileComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, SaveGame, meta=(AllowPrivateAccess=true))
-    UGenericStockpileComponent* MaterialGenericStockpileComponent;
+    UGenericStockpileComponent* FuelGenericStockpileComponent;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
     USceneComponent* CollisionQueryLocation;

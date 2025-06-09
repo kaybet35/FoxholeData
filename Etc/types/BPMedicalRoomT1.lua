@@ -1,12 +1,13 @@
 ---@meta
 
 ---@class ABPMedicalRoomT1_C : AHospital
+---@field BuildSiteLadderBlockVolume UBoxComponent
 ---@field FortCommonThreeWallsMods UTemplateComponent
 ---@field FortCommonT1BreachedWalls UTemplateComponent
 ---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field Blanket UStaticMeshComponent
 ---@field MedicalRoomSpawnPoints UTemplateComponent
----@field MedicalRoomCommon UTemplateComponent
+---@field FortLadderComponent UTemplateComponent
 ---@field Roof UStaticMeshComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field Light UParticleSystemComponent

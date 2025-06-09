@@ -2,7 +2,7 @@
 
 ---@class ABPFortFlameT2_C : AFortFireSuppression
 ---@field FortCommonT2Corners UTemplateComponent
----@field FortCommonThreeWallsMods UTemplateComponent
+---@field FortFlameCommonThreeWallsMods UTemplateComponent
 ---@field SideRight UStaticMeshComponent
 ---@field RoofDirt UStaticMeshComponent
 ---@field Roof UStaticMeshComponent

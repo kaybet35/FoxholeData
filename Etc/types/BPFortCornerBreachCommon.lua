@@ -7,10 +7,7 @@
 ---@field DecalBack UDecalComponent
 ---@field DecalLeft UDecalComponent
 ---@field FoundationSocket UBuildSocketComponent
----@field AngleFortSocket UBuildSocketComponent
 ---@field LandscapeHole UBoxComponent
----@field BackFortSocket UBuildSocketComponent
----@field LeftFortSocket UBuildSocketComponent
 ---@field BoatHull UBoatHullComponent
 ---@field DefaultSceneRoot USceneComponent
 ABPFortCornerBreachCommon_C = {}

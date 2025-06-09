@@ -3,6 +3,6 @@
 
 class ABPFortCornerT2Fill_C : public ABPFortCornerT2_C
 {
-}; // Size: 0x8D8
+}; // Size: 0x8E0
 
 #endif

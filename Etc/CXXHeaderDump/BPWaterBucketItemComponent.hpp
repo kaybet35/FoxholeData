@@ -3,6 +3,6 @@
 
 class UBPWaterBucketItemComponent_C : public UWaterBucketItemComponent
 {
-}; // Size: 0x970
+}; // Size: 0x988
 
 #endif

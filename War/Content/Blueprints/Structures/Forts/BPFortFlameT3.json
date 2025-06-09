@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonThreeWallsMods",
+    "Name": "FortFlameCommonThreeWallsMods",
     "Outer": "BPFortFlameT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -28,7 +28,7 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortFlameT3_C:FortCommonThreeWallsMods'",
+        "ObjectName": "ObjectProperty'BPFortFlameT3_C:FortFlameCommonThreeWallsMods'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.0"
       },
       {
@@ -123,7 +123,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.28"
       },
       "WaterTank": {
-        "FuelCapacity": 5000.0,
+        "FuelCapacity": 2000.0,
         "FuelItemCodeName": "Water",
         "bCanRefuelFromTanker": false
       },
@@ -136,6 +136,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.4"
       },
       "PipeInputAssociatedSocketName": "RightFortSocket",
+      "DispenseAmountPerSec": 2.0,
       "Tier": "EFortTier::T3",
       "BuildGhostClass": null,
       "BaseStructureClass": {
@@ -202,8 +203,8 @@
       "TechComponentIDs": [
         "ETechComponentID::T3SupportBunkers"
       ],
-      "MaxHealth": 3000,
-      "Health": 3000,
+      "MaxHealth": 3750,
+      "Health": 3750,
       "ScreenToUse": "ESimScreen::FireSuppression",
       "StructureNetRelevancySize": "EStructureNetRelevancySize::Large",
       "StealthComponent": {
@@ -307,6 +308,7 @@
       "PipeInfo": {
         "Type": "EPipeType::Input"
       },
+      "bContributeToIslandIntegrityBonus": false,
       "RelativeLocation": {
         "X": 9E-06,
         "Y": 531.0,
@@ -781,7 +783,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT3_C:FortFlameCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.63"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.62"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -988,13 +990,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPFortFlameT3_C:FortCommonThreeWallsMods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.62"
+        "ObjectName": "TemplateComponent'BPFortFlameT3_C:FortFlameCommonThreeWallsMods_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.63"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "DAFBC4D9-41A24914-AECAA098-F51C1307",
-      "InternalVariableName": "FortCommonThreeWallsMods"
+      "InternalVariableName": "FortFlameCommonThreeWallsMods"
     }
   },
   {
@@ -1639,19 +1641,6 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonThreeWallsMods_GEN_VARIABLE",
-    "Outer": "BPFortFlameT3_C",
-    "Class": "UScriptClass'TemplateComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonThreeWallsMods_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonThreeWallsMods.1"
-      }
-    }
-  },
-  {
-    "Type": "TemplateComponent",
     "Name": "FortFlameCommon_GEN_VARIABLE",
     "Outer": "BPFortFlameT3_C",
     "Class": "UScriptClass'TemplateComponent'",
@@ -1660,6 +1649,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortFlameCommon_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameCommon.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortFlameCommonThreeWallsMods_GEN_VARIABLE",
+    "Outer": "BPFortFlameT3_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortFlameCommonThreeWallsMods_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameCommonThreeWallsMods.1"
       }
     }
   },

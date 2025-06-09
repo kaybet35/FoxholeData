@@ -3,6 +3,6 @@
 
 class UBPLargeShipBaseShipMachineGunner_C : public UBPColVehicleMachineGunnerComponent_C
 {
-}; // Size: 0x918
+}; // Size: 0x930
 
 #endif

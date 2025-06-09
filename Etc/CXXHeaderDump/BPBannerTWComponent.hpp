@@ -3,6 +3,6 @@
 
 class UBPBannerTWComponent_C : public UBPBannerTCComponent_C
 {
-}; // Size: 0x8E0
+}; // Size: 0x8F8
 
 #endif

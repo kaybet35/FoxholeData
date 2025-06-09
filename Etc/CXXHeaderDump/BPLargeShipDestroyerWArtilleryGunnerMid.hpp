@@ -3,6 +3,6 @@
 
 class UBPLargeShipDestroyerWArtilleryGunnerMid_C : public UArtilleryGunnerMountComponent
 {
-}; // Size: 0x910
+}; // Size: 0x928
 
 #endif

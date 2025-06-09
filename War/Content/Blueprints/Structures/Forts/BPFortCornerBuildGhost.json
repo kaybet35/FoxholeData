@@ -1,13 +1,13 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "SlopeDetectionSocket",
+    "Name": "FortCornerCommonSockets",
     "Outer": "BPFortCornerBuildGhost_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BuildSocketComponent'",
+      "ObjectName": "Class'TemplateComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFortCornerBuildGhost_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.21"
       }
     },
     "SuperStruct": {
@@ -28,40 +28,32 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:SlopeDetectionSocket'",
+        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:FortCornerCommonSockets'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:AngleFortSocket'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.9"
+        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:SlopeDetectionSocket'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.6"
       },
       {
         "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:TrenchBuildsite02SideRope04'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.16"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.11"
       },
       {
         "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:TrenchBuildsite02Side05'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.9"
       },
       {
         "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:TrenchBuildsite02Side04'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.8"
       },
       {
         "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:TrenchBuildsite02SideRope03'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.15"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:TrenchBuildsite02Side03'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.12"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:BackFortSocket'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.10"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:LeftFortSocket'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.11"
+        "ObjectName": "ObjectProperty'BPFortCornerBuildGhost_C:TrenchBuildsite02Side03'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.7"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -111,157 +103,13 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoxExtent": {
-        "X": 280.0,
-        "Y": 280.0,
+        "X": 240.0,
+        "Y": 240.0,
         "Z": 100.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFortCornerBuildGhost_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.3"
-      }
-    }
-  },
-  {
-    "Type": "BuildSocketComponent",
-    "Name": "AngleFortSocket_GEN_VARIABLE",
-    "Outer": "BPFortCornerBuildGhost_C",
-    "Class": "UScriptClass'BuildSocketComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "SocketTags": [
-        {
-          "SocketTypeMask": 34359738370,
-          "SocketTypeCategory": 4,
-          "Tag": "DirtAngle",
-          "ShowsTag": "None",
-          "ShowsTagBoth": "None",
-          "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
-          "HidesTagHigher": "None",
-          "MaxZOffset": 0.0,
-          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
-          "ConnectorAttachmentTag": "None"
-        },
-        {
-          "SocketTypeMask": 4,
-          "SocketTypeCategory": 4,
-          "Tag": "DirtAngle",
-          "ShowsTag": "None",
-          "ShowsTagBoth": "None",
-          "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
-          "HidesTagHigher": "None",
-          "MaxZOffset": 0.0,
-          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
-          "ConnectorAttachmentTag": "None"
-        }
-      ],
-      "Direction": "ESocketDirection::Right",
-      "RelativeLocation": {
-        "X": 90.0,
-        "Y": 90.0,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 45.0,
-        "Roll": 0.0
-      }
-    }
-  },
-  {
-    "Type": "BuildSocketComponent",
-    "Name": "BackFortSocket_GEN_VARIABLE",
-    "Outer": "BPFortCornerBuildGhost_C",
-    "Class": "UScriptClass'BuildSocketComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "SocketTags": [
-        {
-          "SocketTypeMask": 34359738370,
-          "SocketTypeCategory": 4,
-          "Tag": "DirtBack",
-          "ShowsTag": "None",
-          "ShowsTagBoth": "None",
-          "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
-          "HidesTagHigher": "None",
-          "MaxZOffset": 0.0,
-          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
-          "ConnectorAttachmentTag": "None"
-        },
-        {
-          "SocketTypeMask": 4,
-          "SocketTypeCategory": 4,
-          "Tag": "SideBack",
-          "ShowsTag": "None",
-          "ShowsTagBoth": "None",
-          "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
-          "HidesTagHigher": "None",
-          "MaxZOffset": 0.0,
-          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
-          "ConnectorAttachmentTag": "None"
-        }
-      ],
-      "Direction": "ESocketDirection::Back",
-      "RelativeLocation": {
-        "X": -250.0,
-        "Y": 0.0,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": 179.99976,
-        "Roll": 0.0
-      }
-    }
-  },
-  {
-    "Type": "BuildSocketComponent",
-    "Name": "LeftFortSocket_GEN_VARIABLE",
-    "Outer": "BPFortCornerBuildGhost_C",
-    "Class": "UScriptClass'BuildSocketComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "SocketTags": [
-        {
-          "SocketTypeMask": 34359738370,
-          "SocketTypeCategory": 4,
-          "Tag": "DirtLeft",
-          "ShowsTag": "None",
-          "ShowsTagBoth": "None",
-          "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
-          "HidesTagHigher": "None",
-          "MaxZOffset": 0.0,
-          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
-          "ConnectorAttachmentTag": "None"
-        },
-        {
-          "SocketTypeMask": 4,
-          "SocketTypeCategory": 4,
-          "Tag": "SideLeft",
-          "ShowsTag": "None",
-          "ShowsTagBoth": "None",
-          "ShowsTagHigher": "None",
-          "HidesTagBoth": "None",
-          "HidesTagHigher": "None",
-          "MaxZOffset": 0.0,
-          "ApplicationRule": "EBuildSocketTagRule::AffectsBoth",
-          "ConnectorAttachmentTag": "None"
-        }
-      ],
-      "Direction": "ESocketDirection::Left",
-      "RelativeLocation": {
-        "X": 0.0,
-        "Y": -250.0,
-        "Z": 0.0
-      },
-      "RelativeRotation": {
-        "Pitch": 0.0,
-        "Yaw": -90.000114,
-        "Roll": 0.0
       }
     }
   },
@@ -288,31 +136,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "AngleFortSocket",
-    "Outer": "BPFortCornerBuildGhost_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BuildSocketComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "BackFortSocket",
-    "Outer": "BPFortCornerBuildGhost_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'BuildSocketComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "LeftFortSocket",
+    "Name": "SlopeDetectionSocket",
     "Outer": "BPFortCornerBuildGhost_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -402,31 +226,10 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFortCornerBuildGhost_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.17"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.12"
       },
       "VariableGuid": "62E065DA-48E0472E-CE235EAF-E5512AF6",
       "InternalVariableName": "DefaultSceneRoot"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_1",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'BuildSocketComponent'",
-        "ObjectPath": "/Script/War"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BuildSocketComponent'BPFortCornerBuildGhost_C:AngleFortSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.5"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "9508665F-4616E1FB-E5E8B092-4DB4D584",
-      "InternalVariableName": "AngleFortSocket"
     }
   },
   {
@@ -442,7 +245,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "BuildSocketComponent'BPFortCornerBuildGhost_C:SlopeDetectionSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.5"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -463,7 +266,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortCornerBuildGhost_C:TrenchBuildsite02Side03_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.22"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -484,7 +287,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortCornerBuildGhost_C:TrenchBuildsite02SideRope03_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.32"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.25"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -505,7 +308,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortCornerBuildGhost_C:TrenchBuildsite02Side04_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.23"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -526,7 +329,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortCornerBuildGhost_C:TrenchBuildsite02Side05_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.31"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.24"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -547,7 +350,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortCornerBuildGhost_C:TrenchBuildsite02SideRope04_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.33"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.26"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -557,44 +360,23 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_6",
+    "Name": "SCS_Node_3",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
     "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "ComponentClass": {
-        "ObjectName": "Class'BuildSocketComponent'",
+        "ObjectName": "Class'TemplateComponent'",
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "BuildSocketComponent'BPFortCornerBuildGhost_C:LeftFortSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.7"
+        "ObjectName": "TemplateComponent'BPFortCornerBuildGhost_C:FortCornerCommonSockets_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.27"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
-      "VariableGuid": "AD2BC5E2-42649651-48DBD79D-EF5E9D0E",
-      "InternalVariableName": "LeftFortSocket"
-    }
-  },
-  {
-    "Type": "SCS_Node",
-    "Name": "SCS_Node_7",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'BuildSocketComponent'",
-        "ObjectPath": "/Script/War"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "BuildSocketComponent'BPFortCornerBuildGhost_C:BackFortSocket_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.6"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "681DB858-49074D86-D4038B98-14E58736",
-      "InternalVariableName": "BackFortSocket"
+      "VariableGuid": "E4342C88-43E26C63-F2F256A1-8E8C27DB",
+      "InternalVariableName": "FortCornerCommonSockets"
     }
   },
   {
@@ -606,83 +388,67 @@
     "Properties": {
       "RootNodes": [
         {
-          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.27"
-        },
-        {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.15"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.16"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.17"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.24"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.18"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.19"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.20"
         }
       ],
       "AllNodes": [
         {
-          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.26"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.27"
-        },
-        {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_25'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.21"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.15"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_26'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.22"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.16"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_27'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.23"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.17"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_28'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.24"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.18"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_29'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.25"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_1'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.19"
         },
         {
           "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_3'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.20"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFortCornerBuildGhost_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.18"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerBuildGhost.13"
       }
     }
   },
@@ -871,6 +637,19 @@
         "Z": 1.0
       },
       "Mobility": "EComponentMobility::Stationary"
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCornerCommonSockets_GEN_VARIABLE",
+    "Outer": "BPFortCornerBuildGhost_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCornerCommonSockets_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCornerCommonSockets.1"
+      }
     }
   }
 ]

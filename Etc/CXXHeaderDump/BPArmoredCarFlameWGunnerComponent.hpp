@@ -3,6 +3,6 @@
 
 class UBPArmoredCarFlameWGunnerComponent_C : public UBPFlameMountBaseComponent_C
 {
-}; // Size: 0x958
+}; // Size: 0x970
 
 #endif

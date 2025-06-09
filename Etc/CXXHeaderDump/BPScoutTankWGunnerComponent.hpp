@@ -3,6 +3,6 @@
 
 class UBPScoutTankWGunnerComponent_C : public UBPWarVehicleMachineGunnerComponent_C
 {
-}; // Size: 0x918
+}; // Size: 0x930
 
 #endif

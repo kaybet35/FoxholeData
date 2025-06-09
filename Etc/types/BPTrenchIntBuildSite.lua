@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchIntBuildSite_C : AFortBuildSiteBase
+---@field BuildsiteOverlapBlock UBoxComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
 ---@field TrenchBuildsite02SideRope02 UStaticMeshComponent
 ---@field TrenchBuildsite02SideRope010 UStaticMeshComponent

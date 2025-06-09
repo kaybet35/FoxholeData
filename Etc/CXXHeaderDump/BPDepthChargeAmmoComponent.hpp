@@ -3,6 +3,6 @@
 
 class UBPDepthChargeAmmoComponent_C : public ULargeItemComponent
 {
-}; // Size: 0x8E0
+}; // Size: 0x8F8
 
 #endif

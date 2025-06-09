@@ -155,7 +155,7 @@ public:
     float MaxActivityLatencyCompensation;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FActivityStateInfo ActivityStateInfos[69];
+    FActivityStateInfo ActivityStateInfos[70];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<ECharacterActivityState, FEmoteActivityOptions> EmoteActivityOptionsTable;

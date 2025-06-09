@@ -3,6 +3,6 @@
 
 class UBPAssaultRifleComponent_C : public UAssaultRifleComponent
 {
-}; // Size: 0xB20
+}; // Size: 0xB38
 
 #endif

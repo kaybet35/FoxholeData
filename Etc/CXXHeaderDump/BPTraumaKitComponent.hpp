@@ -3,6 +3,6 @@
 
 class UBPTraumaKitComponent_C : public UTraumaKitComponent
 {
-}; // Size: 0x970
+}; // Size: 0x988
 
 #endif

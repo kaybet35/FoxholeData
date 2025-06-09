@@ -3,6 +3,6 @@
 
 class UBPSledgeHammerComponent_C : public UHammerComponent
 {
-}; // Size: 0x9A0
+}; // Size: 0x9B8
 
 #endif

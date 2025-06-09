@@ -7293,8 +7293,8 @@ class AConstructionEquipment : public ATeamStructure
 {
     class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0810 (size: 0x8)
     class UStaticMeshComponent* ScoopMaterialMesh;                                    // 0x0818 (size: 0x8)
-    class UGenericStockpileComponent* FuelGenericStockpileComponent;                  // 0x0820 (size: 0x8)
-    class UGenericStockpileComponent* MaterialGenericStockpileComponent;              // 0x0828 (size: 0x8)
+    class UGenericStockpileComponent* MaterialGenericStockpileComponent;              // 0x0820 (size: 0x8)
+    class UGenericStockpileComponent* FuelGenericStockpileComponent;                  // 0x0828 (size: 0x8)
     class USceneComponent* CollisionQueryLocation;                                    // 0x0830 (size: 0x8)
     class UAudioComponent* ActiveLoop;                                                // 0x0838 (size: 0x8)
     class UAudioComponent* TurningLoop;                                               // 0x0840 (size: 0x8)
@@ -9047,7 +9047,7 @@ class APipelineValve : public ATeamStructure
 
 class APlayerCharacter : public ASimCharacter
 {
-}; // Size: 0x16E0
+}; // Size: 0x1700
 
 class APlayerImposter : public ASimVehicle
 {
@@ -9691,113 +9691,113 @@ class ASimCharacter : public AWarCharacter
     int32 ResetWoundedStateThreshold;                                                 // 0x09B4 (size: 0x4)
     float HealthThresholdForHurtMaterial;                                             // 0x09B8 (size: 0x4)
     float MaxActivityLatencyCompensation;                                             // 0x09BC (size: 0x4)
-    FActivityStateInfo ActivityStateInfos;                                            // 0x09C0 (size: 0x678)
-    TMap<class ECharacterActivityState, class FEmoteActivityOptions> EmoteActivityOptionsTable; // 0x1038 (size: 0x50)
-    float AllowedDeviationOfShootingDirection;                                        // 0x1088 (size: 0x4)
-    float InVehicleAllowedDeviationOfShootingDirection;                               // 0x108C (size: 0x4)
-    float WeaponFiringConeAbilityModifierPct;                                         // 0x1090 (size: 0x4)
-    uint8 TeamId;                                                                     // 0x1094 (size: 0x1)
-    uint8 VisualCustomizationMask;                                                    // 0x1095 (size: 0x1)
-    uint8 bIsWearingGasMask;                                                          // 0x1098 (size: 0x1)
-    uint8 bUsesDynamicMaterials;                                                      // 0x1098 (size: 0x1)
-    EUniformType UniformType;                                                         // 0x109C (size: 0x1)
-    TEnumAsByte<EPhysicalSurface> CurrentSurfaceType;                                 // 0x1131 (size: 0x1)
-    TArray<FSurfaceMovementData> SurfaceMovementModifiers;                            // 0x1140 (size: 0x10)
-    class USkeletalMeshComponent* Head;                                               // 0x1150 (size: 0x8)
-    class USkeletalMeshComponent* Hands;                                              // 0x1158 (size: 0x8)
-    class USkeletalMeshComponent* Legs;                                               // 0x1160 (size: 0x8)
-    class USkeletalMeshComponent* Back;                                               // 0x1168 (size: 0x8)
-    class USkeletalMeshComponent* Helmet;                                             // 0x1170 (size: 0x8)
-    class USkeletalMeshComponent* EquippedItemMesh;                                   // 0x1178 (size: 0x8)
-    class USkeletalMeshComponent* GasMaskMesh;                                        // 0x1180 (size: 0x8)
-    class USkeletalMeshComponent* AccessoryMesh;                                      // 0x1188 (size: 0x8)
-    class USceneComponent* Muzzle_Standing;                                           // 0x1190 (size: 0x8)
-    class USceneComponent* Muzzle_Crouched;                                           // 0x1198 (size: 0x8)
-    class USceneComponent* Muzzle_Prone;                                              // 0x11A0 (size: 0x8)
-    class UStaticMeshComponent* GroundEquippedItemMesh;                               // 0x11A8 (size: 0x8)
-    class UItemHolderComponent* ItemHolder;                                           // 0x11B0 (size: 0x8)
-    class USphereComponent* SuppressionSphere;                                        // 0x11B8 (size: 0x8)
-    TArray<FItemInstance> ItemHolderItems;                                            // 0x11C0 (size: 0x10)
-    class UEquipmentHolderComponent* EquipmentItemHolder;                             // 0x11D0 (size: 0x8)
-    TArray<FItemInstance> EquipmentItemHolderItems;                                   // 0x11D8 (size: 0x10)
-    class UParticleSystemComponent* SwimmingPS;                                       // 0x11F0 (size: 0x8)
-    class UParticleSystemComponent* EnterWaterPS;                                     // 0x11F8 (size: 0x8)
-    class UAudioComponent* SwimmingSFX;                                               // 0x1200 (size: 0x8)
-    class UAudioComponent* EnterWaterSFX;                                             // 0x1208 (size: 0x8)
-    ECharacterActivityState CharacterActivityStateInternal;                           // 0x1210 (size: 0x1)
-    float Health;                                                                     // 0x1220 (size: 0x4)
-    uint8 ReplicatedItemEncumbrance;                                                  // 0x1224 (size: 0x1)
-    class AActor* LastMovementBase;                                                   // 0x1228 (size: 0x8)
-    float MeleeMinDamage;                                                             // 0x125C (size: 0x4)
-    float MeleeMaxDamage;                                                             // 0x1260 (size: 0x4)
-    TSubclassOf<class UDamageType> MeleeDamageType;                                   // 0x1268 (size: 0x8)
-    TSubclassOf<class AImpactEffect> MeleeImpactEffect;                               // 0x1270 (size: 0x8)
-    class USoundCue* MeleeAttackSound;                                                // 0x1278 (size: 0x8)
-    float SwimmingBuoyancy;                                                           // 0x1280 (size: 0x4)
-    float DrowningBuoyancy;                                                           // 0x1284 (size: 0x4)
-    float MaxStamina;                                                                 // 0x1288 (size: 0x4)
-    float IdleStaminaRestoreRate;                                                     // 0x128C (size: 0x4)
-    float IdleStaminaRestoreDelay;                                                    // 0x1290 (size: 0x4)
-    float GasMaskStaminaRestoreRate;                                                  // 0x1294 (size: 0x4)
-    float SuppressionStaminaRegenModifier;                                            // 0x1298 (size: 0x4)
-    float StaminaDrainExponent;                                                       // 0x129C (size: 0x4)
-    float AddedSprintingStaminaDrain;                                                 // 0x12A0 (size: 0x4)
-    float AddedFloodedStaminaDrain;                                                   // 0x12A4 (size: 0x4)
-    float AddedBlockingStaminaDrain;                                                  // 0x12A8 (size: 0x4)
-    float AddedChargingStaminaDrain;                                                  // 0x12AC (size: 0x4)
-    float AddedDeadlyGasStaminaDrain;                                                 // 0x12B0 (size: 0x4)
-    float MeleeStaminaCostNormalized;                                                 // 0x12B4 (size: 0x4)
-    float SwimmingStaminaDrainRate;                                                   // 0x12B8 (size: 0x4)
-    float SwimmingStaminaDrainDepthCutoff;                                            // 0x12BC (size: 0x4)
-    float ClimbingDepthCutoff;                                                        // 0x12C0 (size: 0x4)
-    float RagdollInWaterLinearDamping;                                                // 0x12C4 (size: 0x4)
-    float RagdollOutOfWaterLinearDamping;                                             // 0x12C8 (size: 0x4)
-    float StabilityMovementDecayRate;                                                 // 0x12E8 (size: 0x4)
-    float StabilityDecayMovementSpeed;                                                // 0x12EC (size: 0x4)
-    float StabilityYawDecayRate;                                                      // 0x12F0 (size: 0x4)
-    float StabilityYawDecayTime;                                                      // 0x12F4 (size: 0x4)
-    float StabilityGainRates;                                                         // 0x12F8 (size: 0x10)
-    float HealTimer;                                                                  // 0x1320 (size: 0x4)
-    bool BleedingEnabled;                                                             // 0x1370 (size: 0x1)
-    float BleedDamagePerSecond;                                                       // 0x1374 (size: 0x4)
-    float BleedMinDamageReq;                                                          // 0x1378 (size: 0x4)
-    float StaggerMinDamageReq;                                                        // 0x137C (size: 0x4)
-    class UParticleSystem* BleedingEffectTemplate;                                    // 0x1380 (size: 0x8)
-    class UParticleSystemComponent* SpawnedBleedingEffect;                            // 0x1388 (size: 0x8)
-    uint8 bIsEffectedByDeadlyGas;                                                     // 0x13A0 (size: 0x1)
-    uint8 bIsBleeding;                                                                // 0x13A0 (size: 0x1)
-    EZombieType ZombieType;                                                           // 0x13BC (size: 0x1)
-    float WoundedTimeRemaining;                                                       // 0x13C0 (size: 0x4)
-    float ZombieMeleeReach;                                                           // 0x13C8 (size: 0x4)
-    TSubclassOf<class AImpactEffect> ZombieMeleeImpactEffect;                         // 0x13D0 (size: 0x8)
-    class USoundCue* ZombieDeathSound;                                                // 0x13D8 (size: 0x8)
-    float ZombieHitRadius;                                                            // 0x13E0 (size: 0x4)
-    float ZombieHitHalfHeight;                                                        // 0x13E4 (size: 0x4)
-    class ASimCharacter* CarryingPlayer;                                              // 0x1400 (size: 0x8)
-    TWeakObjectPtr<class AController> LastBurningHitInstigator;                       // 0x1428 (size: 0x8)
-    float BlockingMaxSpeedModifier;                                                   // 0x1440 (size: 0x4)
-    float ChargingMaxSpeedModifier;                                                   // 0x1444 (size: 0x4)
-    float AimingMaxSpeedModifier;                                                     // 0x1448 (size: 0x4)
-    bool bDisablePlayerFogOfWar;                                                      // 0x144C (size: 0x1)
-    float AlwaysVisibleRadius;                                                        // 0x1450 (size: 0x4)
-    int32 AimRadius;                                                                  // 0x1454 (size: 0x4)
-    int32 ScopeRadius;                                                                // 0x1458 (size: 0x4)
-    FUITargetingInfo LastUITargetingInfo;                                             // 0x145C (size: 0x54)
-    float EffectiveBlockingMaxDeviation;                                              // 0x1594 (size: 0x4)
-    FVector2D_NetQuantize YawPitchPacked;                                             // 0x1598 (size: 0xC)
-    class UPlayerCameraRigComponent* CameraRigComponent;                              // 0x15A8 (size: 0x8)
-    class UCameraComponent* TopDownCameraComponent;                                   // 0x15B0 (size: 0x8)
-    class UParticleSystemComponent* ScopePS;                                          // 0x15B8 (size: 0x8)
-    class UPostProcessComponent* LOSPostProcess;                                      // 0x15C0 (size: 0x8)
-    class UPlayerLOSRasterComponent* LOSRasterComponent;                              // 0x15C8 (size: 0x8)
-    TSubclassOf<class UCameraShake> SprintCameraShake;                                // 0x15D0 (size: 0x8)
-    class UStaticMeshComponent* GrenadeAimMesh;                                       // 0x15D8 (size: 0x8)
-    class USceneComponent* Grip_Standing;                                             // 0x15E0 (size: 0x8)
-    class USceneComponent* Grip_Crouched;                                             // 0x15E8 (size: 0x8)
-    class USceneComponent* Grip_Prone;                                                // 0x15F0 (size: 0x8)
-    class UMaterialParameterCollection* RegionBoundaryParamCollection;                // 0x15F8 (size: 0x8)
-    uint8 bIsInScopeMode;                                                             // 0x16A8 (size: 0x1)
-    FDateTime OfflineExpiryTime;                                                      // 0x16B0 (size: 0x8)
+    FActivityStateInfo ActivityStateInfos;                                            // 0x09C0 (size: 0x690)
+    TMap<class ECharacterActivityState, class FEmoteActivityOptions> EmoteActivityOptionsTable; // 0x1050 (size: 0x50)
+    float AllowedDeviationOfShootingDirection;                                        // 0x10A0 (size: 0x4)
+    float InVehicleAllowedDeviationOfShootingDirection;                               // 0x10A4 (size: 0x4)
+    float WeaponFiringConeAbilityModifierPct;                                         // 0x10A8 (size: 0x4)
+    uint8 TeamId;                                                                     // 0x10AC (size: 0x1)
+    uint8 VisualCustomizationMask;                                                    // 0x10AD (size: 0x1)
+    uint8 bIsWearingGasMask;                                                          // 0x10B0 (size: 0x1)
+    uint8 bUsesDynamicMaterials;                                                      // 0x10B0 (size: 0x1)
+    EUniformType UniformType;                                                         // 0x10B4 (size: 0x1)
+    TEnumAsByte<EPhysicalSurface> CurrentSurfaceType;                                 // 0x1149 (size: 0x1)
+    TArray<FSurfaceMovementData> SurfaceMovementModifiers;                            // 0x1158 (size: 0x10)
+    class USkeletalMeshComponent* Head;                                               // 0x1168 (size: 0x8)
+    class USkeletalMeshComponent* Hands;                                              // 0x1170 (size: 0x8)
+    class USkeletalMeshComponent* Legs;                                               // 0x1178 (size: 0x8)
+    class USkeletalMeshComponent* Back;                                               // 0x1180 (size: 0x8)
+    class USkeletalMeshComponent* Helmet;                                             // 0x1188 (size: 0x8)
+    class USkeletalMeshComponent* EquippedItemMesh;                                   // 0x1190 (size: 0x8)
+    class USkeletalMeshComponent* GasMaskMesh;                                        // 0x1198 (size: 0x8)
+    class USkeletalMeshComponent* AccessoryMesh;                                      // 0x11A0 (size: 0x8)
+    class USceneComponent* Muzzle_Standing;                                           // 0x11A8 (size: 0x8)
+    class USceneComponent* Muzzle_Crouched;                                           // 0x11B0 (size: 0x8)
+    class USceneComponent* Muzzle_Prone;                                              // 0x11B8 (size: 0x8)
+    class UStaticMeshComponent* GroundEquippedItemMesh;                               // 0x11C0 (size: 0x8)
+    class UItemHolderComponent* ItemHolder;                                           // 0x11C8 (size: 0x8)
+    class USphereComponent* SuppressionSphere;                                        // 0x11D0 (size: 0x8)
+    TArray<FItemInstance> ItemHolderItems;                                            // 0x11D8 (size: 0x10)
+    class UEquipmentHolderComponent* EquipmentItemHolder;                             // 0x11E8 (size: 0x8)
+    TArray<FItemInstance> EquipmentItemHolderItems;                                   // 0x11F0 (size: 0x10)
+    class UParticleSystemComponent* SwimmingPS;                                       // 0x1208 (size: 0x8)
+    class UParticleSystemComponent* EnterWaterPS;                                     // 0x1210 (size: 0x8)
+    class UAudioComponent* SwimmingSFX;                                               // 0x1218 (size: 0x8)
+    class UAudioComponent* EnterWaterSFX;                                             // 0x1220 (size: 0x8)
+    ECharacterActivityState CharacterActivityStateInternal;                           // 0x1228 (size: 0x1)
+    float Health;                                                                     // 0x1238 (size: 0x4)
+    uint8 ReplicatedItemEncumbrance;                                                  // 0x123C (size: 0x1)
+    class AActor* LastMovementBase;                                                   // 0x1240 (size: 0x8)
+    float MeleeMinDamage;                                                             // 0x1274 (size: 0x4)
+    float MeleeMaxDamage;                                                             // 0x1278 (size: 0x4)
+    TSubclassOf<class UDamageType> MeleeDamageType;                                   // 0x1280 (size: 0x8)
+    TSubclassOf<class AImpactEffect> MeleeImpactEffect;                               // 0x1288 (size: 0x8)
+    class USoundCue* MeleeAttackSound;                                                // 0x1290 (size: 0x8)
+    float SwimmingBuoyancy;                                                           // 0x1298 (size: 0x4)
+    float DrowningBuoyancy;                                                           // 0x129C (size: 0x4)
+    float MaxStamina;                                                                 // 0x12A0 (size: 0x4)
+    float IdleStaminaRestoreRate;                                                     // 0x12A4 (size: 0x4)
+    float IdleStaminaRestoreDelay;                                                    // 0x12A8 (size: 0x4)
+    float GasMaskStaminaRestoreRate;                                                  // 0x12AC (size: 0x4)
+    float SuppressionStaminaRegenModifier;                                            // 0x12B0 (size: 0x4)
+    float StaminaDrainExponent;                                                       // 0x12B4 (size: 0x4)
+    float AddedSprintingStaminaDrain;                                                 // 0x12B8 (size: 0x4)
+    float AddedFloodedStaminaDrain;                                                   // 0x12BC (size: 0x4)
+    float AddedBlockingStaminaDrain;                                                  // 0x12C0 (size: 0x4)
+    float AddedChargingStaminaDrain;                                                  // 0x12C4 (size: 0x4)
+    float AddedDeadlyGasStaminaDrain;                                                 // 0x12C8 (size: 0x4)
+    float MeleeStaminaCostNormalized;                                                 // 0x12CC (size: 0x4)
+    float SwimmingStaminaDrainRate;                                                   // 0x12D0 (size: 0x4)
+    float SwimmingStaminaDrainDepthCutoff;                                            // 0x12D4 (size: 0x4)
+    float ClimbingDepthCutoff;                                                        // 0x12D8 (size: 0x4)
+    float RagdollInWaterLinearDamping;                                                // 0x12DC (size: 0x4)
+    float RagdollOutOfWaterLinearDamping;                                             // 0x12E0 (size: 0x4)
+    float StabilityMovementDecayRate;                                                 // 0x1300 (size: 0x4)
+    float StabilityDecayMovementSpeed;                                                // 0x1304 (size: 0x4)
+    float StabilityYawDecayRate;                                                      // 0x1308 (size: 0x4)
+    float StabilityYawDecayTime;                                                      // 0x130C (size: 0x4)
+    float StabilityGainRates;                                                         // 0x1310 (size: 0x10)
+    float HealTimer;                                                                  // 0x1338 (size: 0x4)
+    bool BleedingEnabled;                                                             // 0x1388 (size: 0x1)
+    float BleedDamagePerSecond;                                                       // 0x138C (size: 0x4)
+    float BleedMinDamageReq;                                                          // 0x1390 (size: 0x4)
+    float StaggerMinDamageReq;                                                        // 0x1394 (size: 0x4)
+    class UParticleSystem* BleedingEffectTemplate;                                    // 0x1398 (size: 0x8)
+    class UParticleSystemComponent* SpawnedBleedingEffect;                            // 0x13A0 (size: 0x8)
+    uint8 bIsEffectedByDeadlyGas;                                                     // 0x13B8 (size: 0x1)
+    uint8 bIsBleeding;                                                                // 0x13B8 (size: 0x1)
+    EZombieType ZombieType;                                                           // 0x13D4 (size: 0x1)
+    float WoundedTimeRemaining;                                                       // 0x13D8 (size: 0x4)
+    float ZombieMeleeReach;                                                           // 0x13E0 (size: 0x4)
+    TSubclassOf<class AImpactEffect> ZombieMeleeImpactEffect;                         // 0x13E8 (size: 0x8)
+    class USoundCue* ZombieDeathSound;                                                // 0x13F0 (size: 0x8)
+    float ZombieHitRadius;                                                            // 0x13F8 (size: 0x4)
+    float ZombieHitHalfHeight;                                                        // 0x13FC (size: 0x4)
+    class ASimCharacter* CarryingPlayer;                                              // 0x1418 (size: 0x8)
+    TWeakObjectPtr<class AController> LastBurningHitInstigator;                       // 0x1440 (size: 0x8)
+    float BlockingMaxSpeedModifier;                                                   // 0x1458 (size: 0x4)
+    float ChargingMaxSpeedModifier;                                                   // 0x145C (size: 0x4)
+    float AimingMaxSpeedModifier;                                                     // 0x1460 (size: 0x4)
+    bool bDisablePlayerFogOfWar;                                                      // 0x1464 (size: 0x1)
+    float AlwaysVisibleRadius;                                                        // 0x1468 (size: 0x4)
+    int32 AimRadius;                                                                  // 0x146C (size: 0x4)
+    int32 ScopeRadius;                                                                // 0x1470 (size: 0x4)
+    FUITargetingInfo LastUITargetingInfo;                                             // 0x1474 (size: 0x54)
+    float EffectiveBlockingMaxDeviation;                                              // 0x15AC (size: 0x4)
+    FVector2D_NetQuantize YawPitchPacked;                                             // 0x15B0 (size: 0xC)
+    class UPlayerCameraRigComponent* CameraRigComponent;                              // 0x15C0 (size: 0x8)
+    class UCameraComponent* TopDownCameraComponent;                                   // 0x15C8 (size: 0x8)
+    class UParticleSystemComponent* ScopePS;                                          // 0x15D0 (size: 0x8)
+    class UPostProcessComponent* LOSPostProcess;                                      // 0x15D8 (size: 0x8)
+    class UPlayerLOSRasterComponent* LOSRasterComponent;                              // 0x15E0 (size: 0x8)
+    TSubclassOf<class UCameraShake> SprintCameraShake;                                // 0x15E8 (size: 0x8)
+    class UStaticMeshComponent* GrenadeAimMesh;                                       // 0x15F0 (size: 0x8)
+    class USceneComponent* Grip_Standing;                                             // 0x15F8 (size: 0x8)
+    class USceneComponent* Grip_Crouched;                                             // 0x1600 (size: 0x8)
+    class USceneComponent* Grip_Prone;                                                // 0x1608 (size: 0x8)
+    class UMaterialParameterCollection* RegionBoundaryParamCollection;                // 0x1610 (size: 0x8)
+    uint8 bIsInScopeMode;                                                             // 0x16C0 (size: 0x1)
+    FDateTime OfflineExpiryTime;                                                      // 0x16C8 (size: 0x8)
 
     void SlowTick();
     void ServerUseShipHatch(class UHatchComponent* HatchComponent);
@@ -9868,7 +9868,7 @@ class ASimCharacter : public AWarCharacter
     void BPUpdateHeatVisuals(bool bState);
     void BPSetTeamVisuals(const int32 VisualTeamId);
     void BPCinematicDeath();
-}; // Size: 0x16E0
+}; // Size: 0x1700
 
 class ASimGameMode : public AWarGameMode
 {
@@ -11523,9 +11523,9 @@ class UAITurretsControllerComponent : public UActorComponent
 
 class UATRifleComponent : public UHitScanWeaponComponent
 {
-    bool bRequiresOpenVehiclePlatform;                                                // 0x09A0 (size: 0x1)
+    bool bRequiresOpenVehiclePlatform;                                                // 0x09B8 (size: 0x1)
 
-}; // Size: 0x9A8
+}; // Size: 0x9C0
 
 class UAccessBoxComponent : public UUseComponent
 {
@@ -11537,9 +11537,9 @@ class UAccessBoxComponent : public UUseComponent
 
 class UAmmoBackpackItemComponent : public UMiscItemComponent
 {
-    FName ProvidedAmmoName;                                                           // 0x08D8 (size: 0x8)
+    FName ProvidedAmmoName;                                                           // 0x08F0 (size: 0x8)
 
-}; // Size: 0x8E0
+}; // Size: 0x8F8
 
 class UAnchorComponent : public USceneComponent
 {
@@ -11557,45 +11557,45 @@ class UAnchorUseComponent : public UUseComponent
 
 class UArtilleryGunnerMountComponent : public UMultiAmmoVehicleMountComponent
 {
-    TSoftClassPtr<ARocketLauncherProjectileDummy> DummyProjectileActorType;           // 0x0890 (size: 0x28)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x08B8 (size: 0x8)
-    float TelegraphOffset;                                                            // 0x08C0 (size: 0x4)
-    float DamageDelay;                                                                // 0x08C4 (size: 0x4)
-    float FireDelay;                                                                  // 0x08C8 (size: 0x4)
-    float SpoolupDelay;                                                               // 0x08CC (size: 0x4)
-    float FiringAngleOverride;                                                        // 0x08D0 (size: 0x4)
-    bool bUseMuzzleRotationForFiringAngleOverride;                                    // 0x08D4 (size: 0x1)
-    bool bUseCustomDelayScaling;                                                      // 0x08D5 (size: 0x1)
-    bool bCanRotate;                                                                  // 0x08D6 (size: 0x1)
-    bool bUseClampTrjectoryToDistanceHack;                                            // 0x08D7 (size: 0x1)
-    bool bIsAutomaticFire;                                                            // 0x08D8 (size: 0x1)
-    bool bHighArc;                                                                    // 0x08D9 (size: 0x1)
-    float FlightObstructionCheckDistance;                                             // 0x08DC (size: 0x4)
-    bool bUsePerBarrelFX;                                                             // 0x08E0 (size: 0x1)
-    bool bSupportsDirectFireMode;                                                     // 0x08E1 (size: 0x1)
-    float DirectFireScopeRange;                                                       // 0x08E4 (size: 0x4)
-    float DirectFireMaxDistance;                                                      // 0x08E8 (size: 0x4)
-    float DirectFireDropOffset;                                                       // 0x08EC (size: 0x4)
+    TSoftClassPtr<ARocketLauncherProjectileDummy> DummyProjectileActorType;           // 0x08A8 (size: 0x28)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x08D0 (size: 0x8)
+    float TelegraphOffset;                                                            // 0x08D8 (size: 0x4)
+    float DamageDelay;                                                                // 0x08DC (size: 0x4)
+    float FireDelay;                                                                  // 0x08E0 (size: 0x4)
+    float SpoolupDelay;                                                               // 0x08E4 (size: 0x4)
+    float FiringAngleOverride;                                                        // 0x08E8 (size: 0x4)
+    bool bUseMuzzleRotationForFiringAngleOverride;                                    // 0x08EC (size: 0x1)
+    bool bUseCustomDelayScaling;                                                      // 0x08ED (size: 0x1)
+    bool bCanRotate;                                                                  // 0x08EE (size: 0x1)
+    bool bUseClampTrjectoryToDistanceHack;                                            // 0x08EF (size: 0x1)
+    bool bIsAutomaticFire;                                                            // 0x08F0 (size: 0x1)
+    bool bHighArc;                                                                    // 0x08F1 (size: 0x1)
+    float FlightObstructionCheckDistance;                                             // 0x08F4 (size: 0x4)
+    bool bUsePerBarrelFX;                                                             // 0x08F8 (size: 0x1)
+    bool bSupportsDirectFireMode;                                                     // 0x08F9 (size: 0x1)
+    float DirectFireScopeRange;                                                       // 0x08FC (size: 0x4)
+    float DirectFireMaxDistance;                                                      // 0x0900 (size: 0x4)
+    float DirectFireDropOffset;                                                       // 0x0904 (size: 0x4)
 
     void ServerStopInvoke();
     void ServerSetPitch(float Pitch);
     void ServerFireShell(FActivityStateChange ActivityStateChange, const bool bInIsDirectFireMode);
     void MulticastPlayRocketFiringFX(const class AExplosiveAmmoPickup* AmmoPickupCDO, const uint8 MuzzleIndex);
     void MulticastPlayFiringFX(const class AExplosiveAmmoPickup* AmmoPickupCDO);
-}; // Size: 0x910
+}; // Size: 0x928
 
 class UAssaultRifleComponent : public UHeavyMachineGunItemComponent
 {
-    FName SingleShotCodeName;                                                         // 0x09A8 (size: 0x8)
-    FName SingleShotAmmoCodeName;                                                     // 0x09B0 (size: 0x8)
-    FText SingleShotDisplayName;                                                      // 0x09B8 (size: 0x18)
-    class USoundCue* ChangeShootingModeSoundCue;                                      // 0x09D0 (size: 0x8)
-    FActivityStateInfo FiringActivityStateInfoSemiMode;                               // 0x09D8 (size: 0x18)
-    float SingleShotScopeRange;                                                       // 0x09F0 (size: 0x4)
-    bool bIsInSingleShotMode;                                                         // 0x09F4 (size: 0x1)
+    FName SingleShotCodeName;                                                         // 0x09C0 (size: 0x8)
+    FName SingleShotAmmoCodeName;                                                     // 0x09C8 (size: 0x8)
+    FText SingleShotDisplayName;                                                      // 0x09D0 (size: 0x18)
+    class USoundCue* ChangeShootingModeSoundCue;                                      // 0x09E8 (size: 0x8)
+    FActivityStateInfo FiringActivityStateInfoSemiMode;                               // 0x09F0 (size: 0x18)
+    float SingleShotScopeRange;                                                       // 0x0A08 (size: 0x4)
+    bool bIsInSingleShotMode;                                                         // 0x0A0C (size: 0x1)
 
     void ServerToggleFireMode();
-}; // Size: 0xB20
+}; // Size: 0xB38
 
 class UAssemblyAreaAnimInstance : public UAnimInstance
 {
@@ -11645,21 +11645,21 @@ class UBadWordFilter : public UObject
 
 class UBallastMountComponent : public UMountComponent
 {
-    EBallastType BallastType;                                                         // 0x0851 (size: 0x1)
-    float TargetFloodPercent;                                                         // 0x0854 (size: 0x4)
+    EBallastType BallastType;                                                         // 0x0869 (size: 0x1)
+    float TargetFloodPercent;                                                         // 0x086C (size: 0x4)
 
     void ServerSetTargetFloodPercent(float InTargetFloodPercent);
-}; // Size: 0x868
+}; // Size: 0x880
 
 class UBandagesComponent : public UItemComponent
 {
-    class USkeletalMesh* BandagesMesh;                                                // 0x08D0 (size: 0x8)
-    class USoundCue* BanadagesSoundCue;                                               // 0x08D8 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x08E0 (size: 0x1)
+    class USkeletalMesh* BandagesMesh;                                                // 0x08E8 (size: 0x8)
+    class USoundCue* BanadagesSoundCue;                                               // 0x08F0 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x08F8 (size: 0x1)
 
     void ServerUseBandages(FActivityStateChange ActivityStateChange);
     void OnRep_IsEquipped();
-}; // Size: 0x8E8
+}; // Size: 0x900
 
 class UBannerAnimInstance : public UAnimInstance
 {
@@ -11695,13 +11695,13 @@ class UBicycleAnimInstance : public USimVehicleAnimInstance
 
 class UBinocularsItemComponent : public UItemComponent
 {
-    class UCurveFloat* CameraArmLengthCurve;                                          // 0x08D0 (size: 0x8)
-    class USkeletalMesh* SkeletalMesh;                                                // 0x08D8 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x08E0 (size: 0x1)
+    class UCurveFloat* CameraArmLengthCurve;                                          // 0x08E8 (size: 0x8)
+    class USkeletalMesh* SkeletalMesh;                                                // 0x08F0 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x08F8 (size: 0x1)
 
     void ServerStartStopScope(bool IsStartScope, FActivityStateChange ActivityStateChange);
     void OnRep_IsEquipped();
-}; // Size: 0x8E8
+}; // Size: 0x900
 
 class UBoatHullComponent : public UBoxComponent
 {
@@ -11764,6 +11764,7 @@ class UBuildSocketComponent : public USceneComponent
     float MaxSurfaceSamplePadding;                                                    // 0x028C (size: 0x4)
     float MaxSurfaceSampleSlopeAngle;                                                 // 0x0290 (size: 0x4)
     bool bAllowMultipleOverlaps;                                                      // 0x0294 (size: 0x1)
+    bool bContributeToIslandIntegrityBonus;                                           // 0x0295 (size: 0x1)
     float MinimumPathSeparation;                                                      // 0x0298 (size: 0x4)
     bool bOnlyTestMinimumPathSeparationOnUnconnected;                                 // 0x029C (size: 0x1)
     bool bAllowRotatedPlacement;                                                      // 0x029D (size: 0x1)
@@ -11893,9 +11894,9 @@ class UConstructionEquipmentAnimInstance : public UAnimInstance
 
 class UConstructionGunnerComponent : public UMountComponent
 {
-    bool bSupportsAdvancedConstruction;                                               // 0x0850 (size: 0x1)
+    bool bSupportsAdvancedConstruction;                                               // 0x0868 (size: 0x1)
 
-}; // Size: 0x858
+}; // Size: 0x870
 
 class UConstructionVehicleAnimInstance : public USimVehicleAnimInstance
 {
@@ -11967,7 +11968,7 @@ class UCraneOperatorComponent : public UMountComponent
     void ServerPickUpShippable(class AActor* Actor);
     void ServerDropShippable();
     void ClientShowShippableStatus(const EShippableStatus Status);
-}; // Size: 0x858
+}; // Size: 0x870
 
 class UCraneSpawnLocationComponent : public USceneComponent
 {
@@ -12007,7 +12008,7 @@ class UDeployUseComponent : public UUseComponent
 
 class UDeployableItemComponent : public ULargeItemComponent
 {
-}; // Size: 0x8E0
+}; // Size: 0x8F8
 
 class UDeployedTripodAnimInstance : public UAnimInstance
 {
@@ -12061,15 +12062,15 @@ class UEmplacedWeaponAnimInstance : public UAnimInstance
 
 class UEmplacementMortarMountComponent : public UMultiAmmoStructureMountComponent
 {
-    float ScopeRange;                                                                 // 0x0888 (size: 0x4)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0890 (size: 0x8)
-    float TelegraphDelay;                                                             // 0x0898 (size: 0x4)
-    float MortarFlightTime;                                                           // 0x089C (size: 0x4)
+    float ScopeRange;                                                                 // 0x08A0 (size: 0x4)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x08A8 (size: 0x8)
+    float TelegraphDelay;                                                             // 0x08B0 (size: 0x4)
+    float MortarFlightTime;                                                           // 0x08B4 (size: 0x4)
 
     void ServerStartInvoke(FActivityStateChange ActivityStateChange, float Distance);
     void MulticastPlayFiringFX(const class AExplosiveAmmoPickup* AmmoPickupCDO);
     void MulticastDamageDebug(FVector TraceStart, FVector TraceEnd, FVector Location, const class AExplosiveAmmoPickup* AmmoPickupCDO);
-}; // Size: 0x8A0
+}; // Size: 0x8B8
 
 class UEnterVehicleUseComponent : public UUseComponent
 {
@@ -12137,18 +12138,18 @@ class UExplodeOnDeathComponent : public UActorComponent
 
 class UExplosiveItemComponent : public UItemComponent
 {
-    float DeployDuration;                                                             // 0x08D0 (size: 0x4)
-    TSubclassOf<class AExplosive> ExplosiveClass;                                     // 0x08D8 (size: 0x8)
-    class USoundCue* DeploySound;                                                     // 0x08E0 (size: 0x8)
-    bool ShouldShowDetonationMessage;                                                 // 0x08E8 (size: 0x1)
-    bool bPreventBorderPlacement;                                                     // 0x08E9 (size: 0x1)
-    bool ShouldDoLandscapeCheck;                                                      // 0x08EA (size: 0x1)
-    bool bIsEquipped;                                                                 // 0x08EB (size: 0x1)
+    float DeployDuration;                                                             // 0x08E8 (size: 0x4)
+    TSubclassOf<class AExplosive> ExplosiveClass;                                     // 0x08F0 (size: 0x8)
+    class USoundCue* DeploySound;                                                     // 0x08F8 (size: 0x8)
+    bool ShouldShowDetonationMessage;                                                 // 0x0900 (size: 0x1)
+    bool bPreventBorderPlacement;                                                     // 0x0901 (size: 0x1)
+    bool ShouldDoLandscapeCheck;                                                      // 0x0902 (size: 0x1)
+    bool bIsEquipped;                                                                 // 0x0903 (size: 0x1)
 
     void ServerStartInvoke(FActivityStateChange ActivityStateChange);
     void OnRep_IsEquipped();
     void MulticastPlayDeploySFX();
-}; // Size: 0x910
+}; // Size: 0x928
 
 class UFacilityFuelLightComponent : public USceneComponent
 {
@@ -12193,11 +12194,11 @@ class UFacilityRefineryUserComponent : public UUserComponent
 
 class UFestivalFlagItemComponent : public ULargeItemComponent
 {
-    float WalkingSpeedScale;                                                          // 0x08E0 (size: 0x4)
-    uint8 TeamId;                                                                     // 0x08E4 (size: 0x1)
+    float WalkingSpeedScale;                                                          // 0x08F8 (size: 0x4)
+    uint8 TeamId;                                                                     // 0x08FC (size: 0x1)
 
     void OnRep_TeamID();
-}; // Size: 0x8E8
+}; // Size: 0x900
 
 class UFirePitComponent : public USceneComponent
 {
@@ -12214,59 +12215,59 @@ class UFirePitComponent : public USceneComponent
 
 class UFiremanMountComponent : public UMountComponent
 {
-    int32 CoalPerBoost;                                                               // 0x0850 (size: 0x4)
+    int32 CoalPerBoost;                                                               // 0x0868 (size: 0x4)
 
     void ServerBoost(FActivityStateChange ActivityStateChange);
     void MulticastBoostFX();
-}; // Size: 0x858
+}; // Size: 0x870
 
 class UFirstAidKitComponent : public UItemComponent
 {
-    float HealAmountPerApplication;                                                   // 0x08D0 (size: 0x4)
-    float HealApplicationInterval_Sec;                                                // 0x08D4 (size: 0x4)
-    uint8 HealingChargesPerBandage;                                                   // 0x08D8 (size: 0x1)
-    class USkeletalMesh* FirstAidKitMesh;                                             // 0x08E0 (size: 0x8)
-    class USoundCue* FirstAidApplicationSound;                                        // 0x08E8 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x0908 (size: 0x1)
+    float HealAmountPerApplication;                                                   // 0x08E8 (size: 0x4)
+    float HealApplicationInterval_Sec;                                                // 0x08EC (size: 0x4)
+    uint8 HealingChargesPerBandage;                                                   // 0x08F0 (size: 0x1)
+    class USkeletalMesh* FirstAidKitMesh;                                             // 0x08F8 (size: 0x8)
+    class USoundCue* FirstAidApplicationSound;                                        // 0x0900 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x0920 (size: 0x1)
 
     void ServerUseFirstAidKit();
     void ServerStartActivityState(FActivityStateChange ActivityStateChange);
     void ServerCancelActivityState();
     void OnRep_IsEquipped();
-}; // Size: 0x910
+}; // Size: 0x928
 
 class UFlameMountComponent : public UHitScanMountComponent
 {
-    class UParticleSystem* FlameStreamFX;                                             // 0x0918 (size: 0x8)
-    class UParticleSystem* FlameBurstFX;                                              // 0x0920 (size: 0x8)
-    class UParticleSystemComponent* AttachedFlameComponent;                           // 0x0928 (size: 0x8)
-    class UParticleSystemComponent* ImpactBurstFXComponent;                           // 0x0930 (size: 0x8)
-    float FuelReloadAmount;                                                           // 0x0938 (size: 0x4)
-    float FlameSpeedPredictionFactor;                                                 // 0x093C (size: 0x4)
-    float FlameStreamFXParam;                                                         // 0x0940 (size: 0x4)
-    FFlameImpactFXInfo FlameImpactFXInfo;                                             // 0x0944 (size: 0x10)
+    class UParticleSystem* FlameStreamFX;                                             // 0x0930 (size: 0x8)
+    class UParticleSystem* FlameBurstFX;                                              // 0x0938 (size: 0x8)
+    class UParticleSystemComponent* AttachedFlameComponent;                           // 0x0940 (size: 0x8)
+    class UParticleSystemComponent* ImpactBurstFXComponent;                           // 0x0948 (size: 0x8)
+    float FuelReloadAmount;                                                           // 0x0950 (size: 0x4)
+    float FlameSpeedPredictionFactor;                                                 // 0x0954 (size: 0x4)
+    float FlameStreamFXParam;                                                         // 0x0958 (size: 0x4)
+    FFlameImpactFXInfo FlameImpactFXInfo;                                             // 0x095C (size: 0x10)
 
     void OnRep_FlameStreamFXParam();
     void OnRep_FlameImpactFXInfo();
-}; // Size: 0x958
+}; // Size: 0x970
 
 class UFlamethrowerWeaponComponent : public UHeavyMachineGunItemComponent
 {
-    class UParticleSystem* FlameStreamFX;                                             // 0x09A8 (size: 0x8)
-    class UParticleSystem* FlameBurstFX;                                              // 0x09B0 (size: 0x8)
-    class UParticleSystem* FlameIdleFX;                                               // 0x09B8 (size: 0x8)
-    class UParticleSystemComponent* AttachedFlameComponent;                           // 0x09C0 (size: 0x8)
-    class UParticleSystemComponent* ImpactBurstFXComponent;                           // 0x09C8 (size: 0x8)
-    class UParticleSystemComponent* IdleFlameFXComponent;                             // 0x09D0 (size: 0x8)
-    float FlameSpeedPredictionFactor;                                                 // 0x09D8 (size: 0x4)
-    float FlameStreamFXParam;                                                         // 0x09DC (size: 0x4)
-    FFlameImpactFXInfo FlameImpactFXInfo;                                             // 0x09E0 (size: 0x10)
-    class AAmmoPickup* CachedAmmoPickupCDO;                                           // 0x09F0 (size: 0x8)
-    FVector IdleFlameFXOffset;                                                        // 0x09F8 (size: 0xC)
+    class UParticleSystem* FlameStreamFX;                                             // 0x09C0 (size: 0x8)
+    class UParticleSystem* FlameBurstFX;                                              // 0x09C8 (size: 0x8)
+    class UParticleSystem* FlameIdleFX;                                               // 0x09D0 (size: 0x8)
+    class UParticleSystemComponent* AttachedFlameComponent;                           // 0x09D8 (size: 0x8)
+    class UParticleSystemComponent* ImpactBurstFXComponent;                           // 0x09E0 (size: 0x8)
+    class UParticleSystemComponent* IdleFlameFXComponent;                             // 0x09E8 (size: 0x8)
+    float FlameSpeedPredictionFactor;                                                 // 0x09F0 (size: 0x4)
+    float FlameStreamFXParam;                                                         // 0x09F4 (size: 0x4)
+    FFlameImpactFXInfo FlameImpactFXInfo;                                             // 0x09F8 (size: 0x10)
+    class AAmmoPickup* CachedAmmoPickupCDO;                                           // 0x0A08 (size: 0x8)
+    FVector IdleFlameFXOffset;                                                        // 0x0A10 (size: 0xC)
 
     void OnRep_FlameStreamFXParam();
     void OnRep_FlameImpactFXInfo();
-}; // Size: 0xA10
+}; // Size: 0xA28
 
 class UFloodableComponent : public UActorComponent
 {
@@ -12308,16 +12309,16 @@ class UFreighterAnimInstance : public USimVehicleAnimInstance
 
 class UFuelItemComponent : public UItemComponent
 {
-    FName FuelItemCodeName;                                                           // 0x08D0 (size: 0x8)
-    int32 FuelCapacity;                                                               // 0x08D8 (size: 0x4)
-    class USoundCue* RefuelSound;                                                     // 0x08E0 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x0900 (size: 0x1)
+    FName FuelItemCodeName;                                                           // 0x08E8 (size: 0x8)
+    int32 FuelCapacity;                                                               // 0x08F0 (size: 0x4)
+    class USoundCue* RefuelSound;                                                     // 0x08F8 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x0918 (size: 0x1)
 
     void ServerStartActivityState(FActivityStateChange ActivityStateChange);
     void ServerRefuelTarget();
     void ServerCancelActivityState();
     void OnRep_IsEquipped();
-}; // Size: 0x908
+}; // Size: 0x920
 
 class UGangwayRamp : public USkeletalMeshComponent
 {
@@ -12395,16 +12396,16 @@ class UGenericStockpileComponent : public UActorComponent
 
 class UGrenadeAdapterComponent : public UHitScanWeaponComponent
 {
-    class USkeletalMesh* GrenadeAdapterMesh;                                          // 0x09A0 (size: 0x8)
-    FActivityStateInfo GrenadeReloadActivityStateInfo;                                // 0x09A8 (size: 0x18)
-    TArray<class TSubclassOf<AWarProjectile>> GrenadeClasses;                         // 0x09C0 (size: 0x10)
-    class USoundCue* GrenadeFireSound;                                                // 0x09D0 (size: 0x8)
-    class USkeletalMesh* BayonetMesh;                                                 // 0x09D8 (size: 0x8)
-    class USoundCue* AttachAccessorySound;                                            // 0x09E0 (size: 0x8)
-    class USoundCue* BayonetAttackSound;                                              // 0x09E8 (size: 0x8)
-    FMultiAmmo GrenadeMultiAmmo;                                                      // 0x09F0 (size: 0x38)
-    bool bIsGrenadeMode;                                                              // 0x0A28 (size: 0x1)
-    bool bIsBayonetMode;                                                              // 0x0A29 (size: 0x1)
+    class USkeletalMesh* GrenadeAdapterMesh;                                          // 0x09B8 (size: 0x8)
+    FActivityStateInfo GrenadeReloadActivityStateInfo;                                // 0x09C0 (size: 0x18)
+    TArray<class TSubclassOf<AWarProjectile>> GrenadeClasses;                         // 0x09D8 (size: 0x10)
+    class USoundCue* GrenadeFireSound;                                                // 0x09E8 (size: 0x8)
+    class USkeletalMesh* BayonetMesh;                                                 // 0x09F0 (size: 0x8)
+    class USoundCue* AttachAccessorySound;                                            // 0x09F8 (size: 0x8)
+    class USoundCue* BayonetAttackSound;                                              // 0x0A00 (size: 0x8)
+    FMultiAmmo GrenadeMultiAmmo;                                                      // 0x0A08 (size: 0x38)
+    bool bIsGrenadeMode;                                                              // 0x0A40 (size: 0x1)
+    bool bIsBayonetMode;                                                              // 0x0A41 (size: 0x1)
 
     void ServerToggleFireMode(FActivityStateChange ActivityStateChange);
     void ServerSetDesiredAmmoType(FName InDesiredAmmoType);
@@ -12415,31 +12416,31 @@ class UGrenadeAdapterComponent : public UHitScanWeaponComponent
     void OnRep_GrenadeMultiAmmo();
     void MulticastPlayFX();
     void ClientSetDesiredAmmoType(FName InDesiredAmmoType);
-}; // Size: 0xA38
+}; // Size: 0xA50
 
 class UGrenadeGunnerMountComponent : public UProjectileGunnerMountComponent
 {
-    FMultiAmmo MultiAmmo;                                                             // 0x08B0 (size: 0x38)
-    TArray<class TSubclassOf<AWarProjectile>> GrenadeClasses;                         // 0x08E8 (size: 0x10)
+    FMultiAmmo MultiAmmo;                                                             // 0x08C8 (size: 0x38)
+    TArray<class TSubclassOf<AWarProjectile>> GrenadeClasses;                         // 0x0900 (size: 0x10)
 
     void ServerSetDesiredAmmoType(FName InDesiredAmmoType);
-}; // Size: 0x920
+}; // Size: 0x938
 
 class UGrenadeItemComponent : public UItemComponent
 {
-    TSubclassOf<class AWarProjectile> GrenadeClass;                                   // 0x08D0 (size: 0x8)
-    float PostTossDelay;                                                              // 0x08D8 (size: 0x4)
-    float AimLineThickness;                                                           // 0x08DC (size: 0x4)
-    bool bCanCook;                                                                    // 0x08E0 (size: 0x1)
-    FThrowingStabilityInfo ThrowingStabilityInfo;                                     // 0x08E4 (size: 0x18)
-    class USoundCue* PinPullSound;                                                    // 0x0900 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x0908 (size: 0x1)
+    TSubclassOf<class AWarProjectile> GrenadeClass;                                   // 0x08E8 (size: 0x8)
+    float PostTossDelay;                                                              // 0x08F0 (size: 0x4)
+    float AimLineThickness;                                                           // 0x08F4 (size: 0x4)
+    bool bCanCook;                                                                    // 0x08F8 (size: 0x1)
+    FThrowingStabilityInfo ThrowingStabilityInfo;                                     // 0x08FC (size: 0x18)
+    class USoundCue* PinPullSound;                                                    // 0x0918 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x0920 (size: 0x1)
 
     void ServerThrowGrenade(const FCharacterInvokeInfo WeaponInvokeInfo, float SecondsOnFuse, FActivityStateChange ActivityStateChange, const FVector& Target);
     void ServerPullPin(FActivityStateChange ActivityStateChange);
     void ServerOnFuseExpired(const FCharacterInvokeInfo WeaponInvokeInfo, const FVector& Target);
     void OnRep_IsEquipped();
-}; // Size: 0x928
+}; // Size: 0x940
 
 class UGroundZeroDamageType : public USimDamageType
 {
@@ -12459,16 +12460,16 @@ class UHUDWidgetStyle : public USlateWidgetStyleContainerBase
 
 class UHammerComponent : public UTaskItemComponent
 {
-    TSubclassOf<class UDamageType> DamageType;                                        // 0x0970 (size: 0x8)
-    TSubclassOf<class AImpactEffect> ImpactEffectClass;                               // 0x0978 (size: 0x8)
-    FName HammerHeadSocketName;                                                       // 0x0980 (size: 0x8)
-    bool bCanBuild;                                                                   // 0x0988 (size: 0x1)
-    int32 ResourceLevel;                                                              // 0x098C (size: 0x4)
-    int32 GatherXPMultiplier;                                                         // 0x0990 (size: 0x4)
+    TSubclassOf<class UDamageType> DamageType;                                        // 0x0988 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffectClass;                               // 0x0990 (size: 0x8)
+    FName HammerHeadSocketName;                                                       // 0x0998 (size: 0x8)
+    bool bCanBuild;                                                                   // 0x09A0 (size: 0x1)
+    int32 ResourceLevel;                                                              // 0x09A4 (size: 0x4)
+    int32 GatherXPMultiplier;                                                         // 0x09A8 (size: 0x4)
 
     void MulticastPlayImpactFX();
     void MulticastOnGather(class AResource* Resource, TSubclassOf<class AImpactEffect> ImpactEffect, const FGatherResult& GatherResult);
-}; // Size: 0x9A0
+}; // Size: 0x9B8
 
 class UHarvestDamageType : public USimDamageType
 {
@@ -12500,72 +12501,72 @@ class UHeadlessLocalPlayer : public UWarLocalPlayer
 
 class UHeavyMachineGunItemComponent : public UItemComponent
 {
-    class USkeletalMesh* SkeletalMesh;                                                // 0x08D0 (size: 0x8)
-    TSubclassOf<class UCameraShake> FireCameraShake;                                  // 0x08D8 (size: 0x8)
-    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x08E0 (size: 0x8)
-    TSubclassOf<class AWeaponFireFX> WeaponFireFXClass;                               // 0x08E8 (size: 0x8)
-    FWeaponShotSFX WeaponShotSFX;                                                     // 0x08F0 (size: 0x20)
-    class USoundCue* ShotSoundCue;                                                    // 0x0910 (size: 0x8)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0918 (size: 0x8)
-    float FiringRate;                                                                 // 0x0920 (size: 0x4)
-    bool bSpawnFakeTracerFX;                                                          // 0x0924 (size: 0x1)
-    ECoverMitigationType MitigationType;                                              // 0x0925 (size: 0x1)
-    bool bRequiresOpenVehiclePlatform;                                                // 0x0926 (size: 0x1)
-    bool bIsVehiclePlatformHeavyWeaponsRestricted;                                    // 0x0927 (size: 0x1)
-    bool bCheckForOpenSpaceWhenFiring;                                                // 0x0928 (size: 0x1)
-    bool bCanFireFromVehicle;                                                         // 0x0929 (size: 0x1)
-    bool bIsEquipped;                                                                 // 0x092A (size: 0x1)
-    FHitNotify SimulatedHitNotify;                                                    // 0x0930 (size: 0x38)
+    class USkeletalMesh* SkeletalMesh;                                                // 0x08E8 (size: 0x8)
+    TSubclassOf<class UCameraShake> FireCameraShake;                                  // 0x08F0 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x08F8 (size: 0x8)
+    TSubclassOf<class AWeaponFireFX> WeaponFireFXClass;                               // 0x0900 (size: 0x8)
+    FWeaponShotSFX WeaponShotSFX;                                                     // 0x0908 (size: 0x20)
+    class USoundCue* ShotSoundCue;                                                    // 0x0928 (size: 0x8)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x0930 (size: 0x8)
+    float FiringRate;                                                                 // 0x0938 (size: 0x4)
+    bool bSpawnFakeTracerFX;                                                          // 0x093C (size: 0x1)
+    ECoverMitigationType MitigationType;                                              // 0x093D (size: 0x1)
+    bool bRequiresOpenVehiclePlatform;                                                // 0x093E (size: 0x1)
+    bool bIsVehiclePlatformHeavyWeaponsRestricted;                                    // 0x093F (size: 0x1)
+    bool bCheckForOpenSpaceWhenFiring;                                                // 0x0940 (size: 0x1)
+    bool bCanFireFromVehicle;                                                         // 0x0941 (size: 0x1)
+    bool bIsEquipped;                                                                 // 0x0942 (size: 0x1)
+    FHitNotify SimulatedHitNotify;                                                    // 0x0948 (size: 0x38)
 
     void ServerStopInvoke();
     void ServerStartInvoke(const FCharacterInvokeInfo& InvokeInfo, FActivityStateChange ActivityStateChange);
     void OnRep_SimulatedHitNotify();
     void OnRep_IsEquipped();
-}; // Size: 0x9A8
+}; // Size: 0x9C0
 
 class UHitScanMountComponent : public UMountComponent
 {
-    float FiringRate;                                                                 // 0x0850 (size: 0x4)
-    bool bIsAutomaticFire;                                                            // 0x0854 (size: 0x1)
-    bool bSpawnExtraTracers;                                                          // 0x0855 (size: 0x1)
-    bool bUsePerBarrelFX;                                                             // 0x0856 (size: 0x1)
-    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x0858 (size: 0x8)
-    TSubclassOf<class AWeaponFireFX> WeaponFireFXClass;                               // 0x0860 (size: 0x8)
-    TSubclassOf<class AWarExplosionEffect> ExplosionClass;                            // 0x0868 (size: 0x8)
-    FWeaponShotSFX WeaponShotSFX;                                                     // 0x0870 (size: 0x20)
-    class USoundCue* ShotSoundCue;                                                    // 0x0890 (size: 0x8)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0898 (size: 0x8)
-    FHitNotify SimulatedHitNotify;                                                    // 0x08A0 (size: 0x38)
-    int32 Ammo;                                                                       // 0x08F4 (size: 0x4)
+    float FiringRate;                                                                 // 0x0868 (size: 0x4)
+    bool bIsAutomaticFire;                                                            // 0x086C (size: 0x1)
+    bool bSpawnExtraTracers;                                                          // 0x086D (size: 0x1)
+    bool bUsePerBarrelFX;                                                             // 0x086E (size: 0x1)
+    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x0870 (size: 0x8)
+    TSubclassOf<class AWeaponFireFX> WeaponFireFXClass;                               // 0x0878 (size: 0x8)
+    TSubclassOf<class AWarExplosionEffect> ExplosionClass;                            // 0x0880 (size: 0x8)
+    FWeaponShotSFX WeaponShotSFX;                                                     // 0x0888 (size: 0x20)
+    class USoundCue* ShotSoundCue;                                                    // 0x08A8 (size: 0x8)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x08B0 (size: 0x8)
+    FHitNotify SimulatedHitNotify;                                                    // 0x08B8 (size: 0x38)
+    int32 Ammo;                                                                       // 0x090C (size: 0x4)
 
     void ServerStopInvoke();
     void ServerStartInvoke(const FCharacterInvokeInfo& InvokeInfo, FActivityStateChange ActivityStateChange);
     void OnRep_SimulatedHitNotify();
     void MulticastSpawnTracerFX();
-}; // Size: 0x918
+}; // Size: 0x930
 
 class UHitScanWeaponComponent : public UItemComponent
 {
-    TSubclassOf<class UCameraShake> FireCameraShake;                                  // 0x08D0 (size: 0x8)
-    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x08D8 (size: 0x8)
-    TSubclassOf<class AWeaponFireFX> WeaponFireFXClass;                               // 0x08E0 (size: 0x8)
-    class USoundCue* ShotSoundCue;                                                    // 0x08E8 (size: 0x8)
-    class USoundCue* ShotNoAmmoSoundCue;                                              // 0x08F0 (size: 0x8)
-    class USoundCue* ClipEmptiedSoundCue;                                             // 0x08F8 (size: 0x8)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0900 (size: 0x8)
-    class USkeletalMesh* SkeletalMesh;                                                // 0x0928 (size: 0x8)
-    uint8 TotalShotsFired;                                                            // 0x0930 (size: 0x1)
-    float BurstFiringRate;                                                            // 0x0934 (size: 0x4)
-    ECoverMitigationType MitigationType;                                              // 0x0938 (size: 0x1)
-    bool bCanFireFromVehicle;                                                         // 0x0939 (size: 0x1)
-    bool bIsEquipped;                                                                 // 0x093A (size: 0x1)
-    float AimAssistOffsetZ;                                                           // 0x093C (size: 0x4)
-    FHitNotify SimulatedHitNotify;                                                    // 0x0940 (size: 0x38)
+    TSubclassOf<class UCameraShake> FireCameraShake;                                  // 0x08E8 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x08F0 (size: 0x8)
+    TSubclassOf<class AWeaponFireFX> WeaponFireFXClass;                               // 0x08F8 (size: 0x8)
+    class USoundCue* ShotSoundCue;                                                    // 0x0900 (size: 0x8)
+    class USoundCue* ShotNoAmmoSoundCue;                                              // 0x0908 (size: 0x8)
+    class USoundCue* ClipEmptiedSoundCue;                                             // 0x0910 (size: 0x8)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x0918 (size: 0x8)
+    class USkeletalMesh* SkeletalMesh;                                                // 0x0940 (size: 0x8)
+    uint8 TotalShotsFired;                                                            // 0x0948 (size: 0x1)
+    float BurstFiringRate;                                                            // 0x094C (size: 0x4)
+    ECoverMitigationType MitigationType;                                              // 0x0950 (size: 0x1)
+    bool bCanFireFromVehicle;                                                         // 0x0951 (size: 0x1)
+    bool bIsEquipped;                                                                 // 0x0952 (size: 0x1)
+    float AimAssistOffsetZ;                                                           // 0x0954 (size: 0x4)
+    FHitNotify SimulatedHitNotify;                                                    // 0x0958 (size: 0x38)
 
     void ServerStartInvoke(const FCharacterInvokeInfo& InvokeInfo, FActivityStateChange ActivityStateChange);
     void OnRep_SimulatedHitNotify();
     void OnRep_IsEquipped();
-}; // Size: 0x9A0
+}; // Size: 0x9B8
 
 class UHospitalComponent : public UActorComponent
 {
@@ -12599,7 +12600,7 @@ class UInfantryRailVehicleAnimInstance : public URailVehicleAnimInstance
 
 class UInfraModificationSlotComponent : public UModificationSlotComponent
 {
-}; // Size: 0x3F0
+}; // Size: 0x440
 
 class UInfrastructureComponent : public UActorComponent
 {
@@ -12620,7 +12621,7 @@ class UIntelCenterMountComponent : public UMountComponent
 
     void ServerSetDesiredPitch(const float Pitch);
     void ServerFireListeningArea();
-}; // Size: 0x850
+}; // Size: 0x868
 
 class UInteractiveBlueprintComponent : public UUseComponent
 {
@@ -12632,24 +12633,24 @@ class UInteractiveBlueprintComponent : public UUseComponent
 class UItemComponent : public UActorComponent
 {
     EEquippedWeaponGripType EquippedGripType;                                         // 0x00B8 (size: 0x1)
-    FActivityStateInfo ActivityStateInfos;                                            // 0x00C0 (size: 0x678)
-    class USoundCue* ReloadSoundCue;                                                  // 0x0738 (size: 0x8)
-    TSubclassOf<class UAnimInstance> AnimClass;                                       // 0x0750 (size: 0x8)
-    FName MuzzleSocketName;                                                           // 0x0758 (size: 0x8)
-    FName CompatibleAmmoCodeName;                                                     // 0x0760 (size: 0x8)
-    FName DeployCodeName;                                                             // 0x0768 (size: 0x8)
-    bool SafeItem;                                                                    // 0x0770 (size: 0x1)
-    class USkeletalMesh* AttachedItemMesh;                                            // 0x0778 (size: 0x8)
-    FVector MeshOffset;                                                               // 0x0780 (size: 0xC)
-    FRotator MeshRotation;                                                            // 0x078C (size: 0xC)
-    class UStaticMesh* GroundItemMesh;                                                // 0x0798 (size: 0x8)
-    ECharacterActivityState GroundItemActivityState;                                  // 0x07A0 (size: 0x1)
-    FVector GroundItemOffset;                                                         // 0x07A4 (size: 0xC)
-    bool bRequiresCoverOrLowStanceToInvoke;                                           // 0x07B0 (size: 0x1)
-    bool bAllowsMovementDuringReload;                                                 // 0x07B1 (size: 0x1)
+    FActivityStateInfo ActivityStateInfos;                                            // 0x00C0 (size: 0x690)
+    class USoundCue* ReloadSoundCue;                                                  // 0x0750 (size: 0x8)
+    TSubclassOf<class UAnimInstance> AnimClass;                                       // 0x0768 (size: 0x8)
+    FName MuzzleSocketName;                                                           // 0x0770 (size: 0x8)
+    FName CompatibleAmmoCodeName;                                                     // 0x0778 (size: 0x8)
+    FName DeployCodeName;                                                             // 0x0780 (size: 0x8)
+    bool SafeItem;                                                                    // 0x0788 (size: 0x1)
+    class USkeletalMesh* AttachedItemMesh;                                            // 0x0790 (size: 0x8)
+    FVector MeshOffset;                                                               // 0x0798 (size: 0xC)
+    FRotator MeshRotation;                                                            // 0x07A4 (size: 0xC)
+    class UStaticMesh* GroundItemMesh;                                                // 0x07B0 (size: 0x8)
+    ECharacterActivityState GroundItemActivityState;                                  // 0x07B8 (size: 0x1)
+    FVector GroundItemOffset;                                                         // 0x07BC (size: 0xC)
+    bool bRequiresCoverOrLowStanceToInvoke;                                           // 0x07C8 (size: 0x1)
+    bool bAllowsMovementDuringReload;                                                 // 0x07C9 (size: 0x1)
 
     void ClientSyncAmmo(int32 CurrentAmmo);
-}; // Size: 0x8D0
+}; // Size: 0x8E8
 
 class UItemGroupRenderComponent : public USceneComponent
 {
@@ -12713,10 +12714,10 @@ class ULadderComponent : public UBoxComponent
 
 class ULadderModificationSlotComponent : public UModificationSlotComponent
 {
-    TSubclassOf<class ALadder> LadderType;                                            // 0x03E0 (size: 0x8)
-    class ALadder* Ladder;                                                            // 0x03E8 (size: 0x8)
+    TSubclassOf<class ALadder> LadderType;                                            // 0x0430 (size: 0x8)
+    class ALadder* Ladder;                                                            // 0x0438 (size: 0x8)
 
-}; // Size: 0x3F0
+}; // Size: 0x440
 
 class ULandingCraftAnimInstance : public USimVehicleGunnerSupportAnimInstance
 {
@@ -12738,18 +12739,18 @@ class ULandscapeDeformationManager : public UObject
 
 class ULargeItemComponent : public UItemComponent
 {
-    class USkeletalMesh* Mesh;                                                        // 0x08D0 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x08D8 (size: 0x1)
+    class USkeletalMesh* Mesh;                                                        // 0x08E8 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x08F0 (size: 0x1)
 
     void OnRep_IsEquipped();
-}; // Size: 0x8E0
+}; // Size: 0x8F8
 
 class ULargeMaterialComponent : public UTaskItemComponent
 {
-    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x0970 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x0988 (size: 0x8)
 
     void MulticastPlayFX();
-}; // Size: 0x980
+}; // Size: 0x998
 
 class ULargeShipAnimInstance : public USimVehicleGunnerSupportAnimInstance
 {
@@ -12855,14 +12856,14 @@ class ULocationMultiplexedMeshComponent : public UActorComponent
 
 class ULongRangeArtilleryMountComponent : public UMountComponent
 {
-    float ExtendedMaxDistance;                                                        // 0x0850 (size: 0x4)
-    int8 Ammo;                                                                        // 0x0854 (size: 0x1)
-    bool bCanDeploySelf;                                                              // 0x0855 (size: 0x1)
+    float ExtendedMaxDistance;                                                        // 0x0868 (size: 0x4)
+    int8 Ammo;                                                                        // 0x086C (size: 0x1)
+    bool bCanDeploySelf;                                                              // 0x086D (size: 0x1)
 
     void ServerSetDesiredPitch(const float Pitch);
     void ServerFireShell(FActivityStateChange ActivityStateChange);
     void ServerDeploySelf();
-}; // Size: 0x858
+}; // Size: 0x870
 
 class ULoreKeyUseComponent : public UUseComponent
 {
@@ -12928,17 +12929,17 @@ class UMechAnimInstance : public UAnimInstance
 
 class UMeleeWeaponComponent : public UItemComponent
 {
-    float ChargeUpTime;                                                               // 0x08D0 (size: 0x4)
-    float QuickClickTime;                                                             // 0x08D4 (size: 0x4)
-    bool bIsBlocking;                                                                 // 0x08DF (size: 0x1)
-    bool bIsSustainingCharge;                                                         // 0x08E0 (size: 0x1)
-    bool bIsEquipped;                                                                 // 0x08E1 (size: 0x1)
-    class USoundCue* QuickAttackSound;                                                // 0x08E8 (size: 0x8)
-    class USoundCue* LongAttackSound;                                                 // 0x08F0 (size: 0x8)
-    class USoundCue* ChargedSound;                                                    // 0x08F8 (size: 0x8)
-    TSubclassOf<class AImpactEffect> DefaultImpactEffectClass;                        // 0x0900 (size: 0x8)
-    TSubclassOf<class AImpactEffect> ChargedImpactEffectClass;                        // 0x0908 (size: 0x8)
-    TSubclassOf<class AImpactEffect> BlockedImpactEffectClass;                        // 0x0910 (size: 0x8)
+    float ChargeUpTime;                                                               // 0x08E8 (size: 0x4)
+    float QuickClickTime;                                                             // 0x08EC (size: 0x4)
+    bool bIsBlocking;                                                                 // 0x08F7 (size: 0x1)
+    bool bIsSustainingCharge;                                                         // 0x08F8 (size: 0x1)
+    bool bIsEquipped;                                                                 // 0x08F9 (size: 0x1)
+    class USoundCue* QuickAttackSound;                                                // 0x0900 (size: 0x8)
+    class USoundCue* LongAttackSound;                                                 // 0x0908 (size: 0x8)
+    class USoundCue* ChargedSound;                                                    // 0x0910 (size: 0x8)
+    TSubclassOf<class AImpactEffect> DefaultImpactEffectClass;                        // 0x0918 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ChargedImpactEffectClass;                        // 0x0920 (size: 0x8)
+    TSubclassOf<class AImpactEffect> BlockedImpactEffectClass;                        // 0x0928 (size: 0x8)
 
     void ServerStopInvoke();
     void ServerStopCharging();
@@ -12950,7 +12951,7 @@ class UMeleeWeaponComponent : public UItemComponent
     void OnRep_IsEquipped();
     void MulticastSpawnImpactEffects(FHitNotify SimulatedHitNotify, const bool bWasBlocked, const bool bWasCharged);
     void ClientSetIsBlocking(const bool bInIsblocking);
-}; // Size: 0x938
+}; // Size: 0x950
 
 class UMeshVisibilityComponent : public UActorComponent
 {
@@ -12958,15 +12959,16 @@ class UMeshVisibilityComponent : public UActorComponent
     TArray<class UMeshComponent*> AnimatedFloorMeshes;                                // 0x00C0 (size: 0x10)
     TArray<class UMeshComponent*> Meshes;                                             // 0x00D0 (size: 0x10)
     TArray<class UMeshComponent*> FloorMeshes;                                        // 0x00E0 (size: 0x10)
+    TArray<class UItemGroupRenderComponent*> FloorIGRComponents;                      // 0x00F0 (size: 0x10)
 
-}; // Size: 0x108
+}; // Size: 0x118
 
 class UMiscItemComponent : public UItemComponent
 {
-    bool bIsEquipped;                                                                 // 0x08D0 (size: 0x1)
+    bool bIsEquipped;                                                                 // 0x08E8 (size: 0x1)
 
     void OnRep_IsEquipped();
-}; // Size: 0x8D8
+}; // Size: 0x8F0
 
 class UModificationSlotComponent : public USceneComponent
 {
@@ -12974,25 +12976,26 @@ class UModificationSlotComponent : public USceneComponent
     TArray<FName> LinkedSocketNames;                                                  // 0x01F8 (size: 0x10)
     bool bIsBlockedByLinkedSocket;                                                    // 0x0208 (size: 0x1)
     TArray<FName> BlockedByModSlotNames;                                              // 0x0210 (size: 0x10)
-    bool bOverrideSplineTarget;                                                       // 0x0220 (size: 0x1)
-    FName SplineTargetComponentNameOverride;                                          // 0x0224 (size: 0x8)
-    bool bIgnoreSocketModSiblings;                                                    // 0x022C (size: 0x1)
-    TArray<FName> SubComponentTags;                                                   // 0x0230 (size: 0x10)
-    TMap<class EFortModificationType, class FModificationDefinition> Modifications;   // 0x0240 (size: 0x50)
-    class UMaterialInterface* HighlightMaterial;                                      // 0x0290 (size: 0x8)
-    bool bIgnoreConcreteMaterial;                                                     // 0x0298 (size: 0x1)
-    bool bIsBuildableUnderRoads;                                                      // 0x0299 (size: 0x1)
-    bool bPreviewAllInGhost;                                                          // 0x029A (size: 0x1)
-    EFortModificationType ActiveType;                                                 // 0x029B (size: 0x1)
-    FModificationTier ActiveTier;                                                     // 0x02A0 (size: 0x68)
-    FModificationTier ShownTier;                                                      // 0x0308 (size: 0x68)
-    bool bRevertedToDefault;                                                          // 0x0370 (size: 0x1)
-    int32 NumMaskBits;                                                                // 0x0374 (size: 0x4)
-    int32 MaskStartBit;                                                               // 0x0378 (size: 0x4)
-    TArray<TWeakObjectPtr<UBuildSocketComponent>> LinkedSockets;                      // 0x0380 (size: 0x10)
-    TMap<class FName, class TWeakObjectPtr<UActorComponent>> SpawnedActorComponents;  // 0x0390 (size: 0x50)
+    TSet<EFortModificationType> BlockedByModTypes;                                    // 0x0220 (size: 0x50)
+    bool bOverrideSplineTarget;                                                       // 0x0270 (size: 0x1)
+    FName SplineTargetComponentNameOverride;                                          // 0x0274 (size: 0x8)
+    bool bIgnoreSocketModSiblings;                                                    // 0x027C (size: 0x1)
+    TArray<FName> SubComponentTags;                                                   // 0x0280 (size: 0x10)
+    TMap<class EFortModificationType, class FModificationDefinition> Modifications;   // 0x0290 (size: 0x50)
+    class UMaterialInterface* HighlightMaterial;                                      // 0x02E0 (size: 0x8)
+    bool bIgnoreConcreteMaterial;                                                     // 0x02E8 (size: 0x1)
+    bool bIsBuildableUnderRoads;                                                      // 0x02E9 (size: 0x1)
+    bool bPreviewAllInGhost;                                                          // 0x02EA (size: 0x1)
+    EFortModificationType ActiveType;                                                 // 0x02EB (size: 0x1)
+    FModificationTier ActiveTier;                                                     // 0x02F0 (size: 0x68)
+    FModificationTier ShownTier;                                                      // 0x0358 (size: 0x68)
+    bool bRevertedToDefault;                                                          // 0x03C0 (size: 0x1)
+    int32 NumMaskBits;                                                                // 0x03C4 (size: 0x4)
+    int32 MaskStartBit;                                                               // 0x03C8 (size: 0x4)
+    TArray<TWeakObjectPtr<UBuildSocketComponent>> LinkedSockets;                      // 0x03D0 (size: 0x10)
+    TMap<class FName, class TWeakObjectPtr<UActorComponent>> SpawnedActorComponents;  // 0x03E0 (size: 0x50)
 
-}; // Size: 0x3E0
+}; // Size: 0x430
 
 class UModularMountAnimInstance : public UDeployedTripodAnimInstance
 {
@@ -13012,17 +13015,17 @@ class UMonumentManager : public UObject
 
 class UMortarItemComponent : public UMultiAmmoItemComponent
 {
-    class USkeletalMesh* SkeletalMesh;                                                // 0x0910 (size: 0x8)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0918 (size: 0x8)
-    float TelegraphDelay;                                                             // 0x0920 (size: 0x4)
-    float MortarFlightTime;                                                           // 0x0924 (size: 0x4)
-    float MinDistance;                                                                // 0x0928 (size: 0x4)
-    float MaxDistance;                                                                // 0x092C (size: 0x4)
+    class USkeletalMesh* SkeletalMesh;                                                // 0x0928 (size: 0x8)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x0930 (size: 0x8)
+    float TelegraphDelay;                                                             // 0x0938 (size: 0x4)
+    float MortarFlightTime;                                                           // 0x093C (size: 0x4)
+    float MinDistance;                                                                // 0x0940 (size: 0x4)
+    float MaxDistance;                                                                // 0x0944 (size: 0x4)
 
     void ServerFire(float Distance, FActivityStateChange ActivityStateChange);
     void MulticastPlayFiringFX(const class AExplosiveAmmoPickup* AmmoPickup);
     void ClientDrawDamageDebug(FVector HitLocation, float Radius);
-}; // Size: 0x938
+}; // Size: 0x950
 
 class UMountComponent : public UActorComponent
 {
@@ -13032,52 +13035,52 @@ class UMountComponent : public UActorComponent
     class USoundCue* ReloadSoundCue;                                                  // 0x00E0 (size: 0x8)
     class UTexture2D* Icon;                                                           // 0x00E8 (size: 0x8)
     EEquippedWeaponGripType EquippedGripType;                                         // 0x00F0 (size: 0x1)
-    FActivityStateInfo ActivityStateInfos;                                            // 0x00F8 (size: 0x678)
-    FName RotationBaseSocketName;                                                     // 0x0770 (size: 0x8)
-    bool bUseSingleItemSlotFilter;                                                    // 0x0778 (size: 0x1)
-    bool bMustBeStoppedToInvoke;                                                      // 0x0779 (size: 0x1)
-    bool bUseCharacterRotationForAim;                                                 // 0x077A (size: 0x1)
-    uint8 bIsStationary;                                                              // 0x077B (size: 0x1)
-    uint8 bUpdateCharacterRotation;                                                   // 0x077B (size: 0x1)
-    EVehicleSubsystem LinkedVehicleSubsystem;                                         // 0x077C (size: 0x1)
-    class AAmmoPickup* CachedAmmoPickupCDO;                                           // 0x0790 (size: 0x8)
-    bool bIsMultiWeapon;                                                              // 0x07A8 (size: 0x1)
-    bool bIsDeployedGunner;                                                           // 0x07A9 (size: 0x1)
-    bool bTriggerDriverFiringState;                                                   // 0x07AA (size: 0x1)
-    float CameraLerpModifierOverride;                                                 // 0x07AC (size: 0x4)
-    int8 MountIndex;                                                                  // 0x07B0 (size: 0x1)
-    uint8 bIsEquipped;                                                                // 0x07B1 (size: 0x1)
+    FActivityStateInfo ActivityStateInfos;                                            // 0x00F8 (size: 0x690)
+    FName RotationBaseSocketName;                                                     // 0x0788 (size: 0x8)
+    bool bUseSingleItemSlotFilter;                                                    // 0x0790 (size: 0x1)
+    bool bMustBeStoppedToInvoke;                                                      // 0x0791 (size: 0x1)
+    bool bUseCharacterRotationForAim;                                                 // 0x0792 (size: 0x1)
+    uint8 bIsStationary;                                                              // 0x0793 (size: 0x1)
+    uint8 bUpdateCharacterRotation;                                                   // 0x0793 (size: 0x1)
+    EVehicleSubsystem LinkedVehicleSubsystem;                                         // 0x0794 (size: 0x1)
+    class AAmmoPickup* CachedAmmoPickupCDO;                                           // 0x07A8 (size: 0x8)
+    bool bIsMultiWeapon;                                                              // 0x07C0 (size: 0x1)
+    bool bIsDeployedGunner;                                                           // 0x07C1 (size: 0x1)
+    bool bTriggerDriverFiringState;                                                   // 0x07C2 (size: 0x1)
+    float CameraLerpModifierOverride;                                                 // 0x07C4 (size: 0x4)
+    int8 MountIndex;                                                                  // 0x07C8 (size: 0x1)
+    uint8 bIsEquipped;                                                                // 0x07C9 (size: 0x1)
 
     void OnRep_MountIndex();
     void OnRep_IsEquipped();
     void ClientSyncAmmo(int32 CurrentAmmo);
-}; // Size: 0x850
+}; // Size: 0x868
 
 class UMultiAmmoItemComponent : public UItemComponent
 {
-    FMultiAmmo MultiAmmo;                                                             // 0x08D0 (size: 0x38)
-    bool bIsEquipped;                                                                 // 0x0908 (size: 0x1)
+    FMultiAmmo MultiAmmo;                                                             // 0x08E8 (size: 0x38)
+    bool bIsEquipped;                                                                 // 0x0920 (size: 0x1)
 
     void ServerSetDesiredAmmoType(FName InDesiredAmmoType);
     void OnRep_MultiAmmo();
     void OnRep_IsEquipped();
     void ClientSetDesiredAmmoType(FName InDesiredAmmoType);
-}; // Size: 0x910
+}; // Size: 0x928
 
 class UMultiAmmoStructureMountComponent : public UMountComponent
 {
-    FMultiAmmo MultiAmmo;                                                             // 0x0850 (size: 0x38)
+    FMultiAmmo MultiAmmo;                                                             // 0x0868 (size: 0x38)
 
     void ServerSetDesiredAmmoType(FName InDesiredAmmoType);
-}; // Size: 0x888
+}; // Size: 0x8A0
 
 class UMultiAmmoVehicleMountComponent : public UMountComponent
 {
-    bool bRequiresExternalReload;                                                     // 0x0850 (size: 0x1)
-    FMultiAmmo MultiAmmo;                                                             // 0x0858 (size: 0x38)
+    bool bRequiresExternalReload;                                                     // 0x0868 (size: 0x1)
+    FMultiAmmo MultiAmmo;                                                             // 0x0870 (size: 0x38)
 
     void ServerSetDesiredAmmoType(FName InDesiredAmmoType);
-}; // Size: 0x890
+}; // Size: 0x8A8
 
 class UMultiFloorVisibilityToggleComponent : public UVisibilityToggleAreaComponent
 {
@@ -13298,48 +13301,48 @@ class UPowerPoleUserComponent : public UUserComponent
 
 class UProjectileGunnerMountComponent : public UMountComponent
 {
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0850 (size: 0x8)
-    class UParticleSystem* BackMuzzleFlashPS;                                         // 0x0858 (size: 0x8)
-    class USoundCue* ShotSoundCue;                                                    // 0x0860 (size: 0x8)
-    float MinSpeed;                                                                   // 0x0868 (size: 0x4)
-    float MaxSpeed;                                                                   // 0x086C (size: 0x4)
-    float SpeedVariation;                                                             // 0x0870 (size: 0x4)
-    float SuggestedVelocitySpeed;                                                     // 0x0874 (size: 0x4)
-    float FallbackAngle;                                                              // 0x0878 (size: 0x4)
-    float DetonationDepthToggleIncrement;                                             // 0x087C (size: 0x4)
-    float MinDetonationDepth;                                                         // 0x0880 (size: 0x4)
-    float MaxDetonationDepth;                                                         // 0x0884 (size: 0x4)
-    TSubclassOf<class AWarProjectile> ProjectileClass;                                // 0x0888 (size: 0x8)
-    bool bIsArtilleryMode;                                                            // 0x0890 (size: 0x1)
-    bool bIsDepthMode;                                                                // 0x0891 (size: 0x1)
-    bool bShowAimMesh;                                                                // 0x0892 (size: 0x1)
-    bool bIsAutomaticFire;                                                            // 0x0893 (size: 0x1)
-    bool bApplyVehicleAngleLimit;                                                     // 0x0894 (size: 0x1)
-    int8 Ammo;                                                                        // 0x0895 (size: 0x1)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x0868 (size: 0x8)
+    class UParticleSystem* BackMuzzleFlashPS;                                         // 0x0870 (size: 0x8)
+    class USoundCue* ShotSoundCue;                                                    // 0x0878 (size: 0x8)
+    float MinSpeed;                                                                   // 0x0880 (size: 0x4)
+    float MaxSpeed;                                                                   // 0x0884 (size: 0x4)
+    float SpeedVariation;                                                             // 0x0888 (size: 0x4)
+    float SuggestedVelocitySpeed;                                                     // 0x088C (size: 0x4)
+    float FallbackAngle;                                                              // 0x0890 (size: 0x4)
+    float DetonationDepthToggleIncrement;                                             // 0x0894 (size: 0x4)
+    float MinDetonationDepth;                                                         // 0x0898 (size: 0x4)
+    float MaxDetonationDepth;                                                         // 0x089C (size: 0x4)
+    TSubclassOf<class AWarProjectile> ProjectileClass;                                // 0x08A0 (size: 0x8)
+    bool bIsArtilleryMode;                                                            // 0x08A8 (size: 0x1)
+    bool bIsDepthMode;                                                                // 0x08A9 (size: 0x1)
+    bool bShowAimMesh;                                                                // 0x08AA (size: 0x1)
+    bool bIsAutomaticFire;                                                            // 0x08AB (size: 0x1)
+    bool bApplyVehicleAngleLimit;                                                     // 0x08AC (size: 0x1)
+    int8 Ammo;                                                                        // 0x08AD (size: 0x1)
 
     void ServerStopInvoke();
     void ServerStartInvoke(FCharacterInvokeInfo InvokeInfo, FActivityStateChange ActivityStateChange, const float InDetonationDepth);
     void ServerSetPitch(float Pitch);
     void AllSpawnFiringEffects();
-}; // Size: 0x8B0
+}; // Size: 0x8C8
 
 class UProjectileItemComponent : public UMultiAmmoItemComponent
 {
-    class USkeletalMesh* SkeletalMesh;                                                // 0x0910 (size: 0x8)
-    class USkeletalMesh* PayloadMesh;                                                 // 0x0918 (size: 0x8)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0920 (size: 0x8)
-    class UParticleSystem* BackMuzzleFlashPS;                                         // 0x0928 (size: 0x8)
-    class USoundCue* ShotSoundCue;                                                    // 0x0930 (size: 0x8)
-    TArray<class TSubclassOf<AWarProjectile>> ProjectileClasses;                      // 0x0938 (size: 0x10)
-    EProjectileFiringMode FiringMode;                                                 // 0x0948 (size: 0x1)
-    float SuggestedVelocitySpeed;                                                     // 0x094C (size: 0x4)
-    float FallbackAngle;                                                              // 0x0950 (size: 0x4)
-    float MinDistance;                                                                // 0x0954 (size: 0x4)
-    bool bIsSingleUse;                                                                // 0x0958 (size: 0x1)
+    class USkeletalMesh* SkeletalMesh;                                                // 0x0928 (size: 0x8)
+    class USkeletalMesh* PayloadMesh;                                                 // 0x0930 (size: 0x8)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x0938 (size: 0x8)
+    class UParticleSystem* BackMuzzleFlashPS;                                         // 0x0940 (size: 0x8)
+    class USoundCue* ShotSoundCue;                                                    // 0x0948 (size: 0x8)
+    TArray<class TSubclassOf<AWarProjectile>> ProjectileClasses;                      // 0x0950 (size: 0x10)
+    EProjectileFiringMode FiringMode;                                                 // 0x0960 (size: 0x1)
+    float SuggestedVelocitySpeed;                                                     // 0x0964 (size: 0x4)
+    float FallbackAngle;                                                              // 0x0968 (size: 0x4)
+    float MinDistance;                                                                // 0x096C (size: 0x4)
+    bool bIsSingleUse;                                                                // 0x0970 (size: 0x1)
 
     void ServerStartInvoke(FCharacterInvokeInfo InvokeInfo, FActivityStateChange ActivityStateChange);
     void AllSpawnFiringEffects();
-}; // Size: 0x968
+}; // Size: 0x980
 
 class UPuddleComponent : public USphereComponent
 {
@@ -13373,10 +13376,10 @@ class URWDVehicleMovementComponent : public USimpleVehicleMovementComponent
 
 class URadioBackpackItemComponent : public UMiscItemComponent
 {
-    float DetectionCooldown;                                                          // 0x08D8 (size: 0x4)
-    float DetectionRadius;                                                            // 0x08DC (size: 0x4)
+    float DetectionCooldown;                                                          // 0x08F0 (size: 0x4)
+    float DetectionRadius;                                                            // 0x08F4 (size: 0x4)
 
-}; // Size: 0x8F0
+}; // Size: 0x908
 
 class URailCouplerUseComponent : public UUseComponent
 {
@@ -13566,10 +13569,10 @@ class URoomComponent : public USceneComponent
 
 class URotatorMountComponent : public UMountComponent
 {
-    int32 PlayersRequiredToRotate;                                                    // 0x0850 (size: 0x4)
+    int32 PlayersRequiredToRotate;                                                    // 0x0868 (size: 0x4)
 
     void ServerOnMoveRight(float Val);
-}; // Size: 0x858
+}; // Size: 0x870
 
 class URuinedComponent : public USceneComponent
 {
@@ -13623,10 +13626,10 @@ class USeatTriggerComponent : public UBoxComponent
 
 class USensorOperatorMountComponent : public USubmarineMountComponent
 {
-    float ElectricityCost;                                                            // 0x0870 (size: 0x4)
+    float ElectricityCost;                                                            // 0x0888 (size: 0x4)
 
     void ServerStartInvoke(FActivityStateChange ActivityStateChange, bool bIsOmnidirectional);
-}; // Size: 0x880
+}; // Size: 0x898
 
 class UServerSettings : public USaveGame
 {
@@ -13690,19 +13693,19 @@ class UShippableUseComponent : public UUseComponent
 
 class UShotgunComponent : public UHitScanWeaponComponent
 {
-    TArray<FHitNotify> SimulatedHitNotifies;                                          // 0x09A0 (size: 0x10)
-    float ShotRadius;                                                                 // 0x09B0 (size: 0x4)
-    uint32 MaxHitsPerShot;                                                            // 0x09B4 (size: 0x4)
+    TArray<FHitNotify> SimulatedHitNotifies;                                          // 0x09B8 (size: 0x10)
+    float ShotRadius;                                                                 // 0x09C8 (size: 0x4)
+    uint32 MaxHitsPerShot;                                                            // 0x09CC (size: 0x4)
 
     void OnRep_SimulatedHitNotifies();
-}; // Size: 0x9B8
+}; // Size: 0x9D0
 
 class UShovelComponent : public UTaskItemComponent
 {
-    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x0970 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x0988 (size: 0x8)
 
     void MulticastPlayFX();
-}; // Size: 0x980
+}; // Size: 0x998
 
 class USignPostDownVoteDamageType : public USimDamageType
 {
@@ -13821,23 +13824,23 @@ class USnapshotManager : public UObject
 
 class USniperRifleComponent : public UHitScanWeaponComponent
 {
-}; // Size: 0x9A8
+}; // Size: 0x9C0
 
 class USoldierItemComponent : public ULargeItemComponent
 {
-    uint8 SoldierVisualsPacked;                                                       // 0x08E0 (size: 0x1)
+    uint8 SoldierVisualsPacked;                                                       // 0x08F8 (size: 0x1)
 
     void OnRep_SoldierVisuals();
-}; // Size: 0x910
+}; // Size: 0x928
 
 class USoulstoneComponent : public UItemComponent
 {
-    TSubclassOf<class AWarExplosionEffect> TransformExplosionEffect;                  // 0x08D0 (size: 0x8)
-    bool bIsEquipped;                                                                 // 0x08D8 (size: 0x1)
+    TSubclassOf<class AWarExplosionEffect> TransformExplosionEffect;                  // 0x08E8 (size: 0x8)
+    bool bIsEquipped;                                                                 // 0x08F0 (size: 0x1)
 
     void ServerUseSoulstone(FActivityStateChange ActivityStateChange);
     void OnRep_IsEquipped();
-}; // Size: 0x8E0
+}; // Size: 0x8F8
 
 class USpawnPointComponent : public USceneComponent
 {
@@ -13941,10 +13944,10 @@ class USplineConnectorComponent : public USceneComponent
 
 class USpotterMountComponent : public UMountComponent
 {
-    float CameraArmLengthOverride;                                                    // 0x0850 (size: 0x4)
-    class UCurveFloat* CameraArmLengthCurve;                                          // 0x0858 (size: 0x8)
+    float CameraArmLengthOverride;                                                    // 0x0868 (size: 0x4)
+    class UCurveFloat* CameraArmLengthCurve;                                          // 0x0870 (size: 0x8)
 
-}; // Size: 0x860
+}; // Size: 0x878
 
 class UStaticArtilleryAnimInstance : public UAnimInstance
 {
@@ -14024,26 +14027,26 @@ class USubmarineDivingMountComponent : public USubmarineMountComponent
 {
 
     void ServerSetDivingPlaneInput(int8 Input);
-}; // Size: 0x878
+}; // Size: 0x890
 
 class USubmarineDriverMountComponent : public UMountComponent
 {
-}; // Size: 0x850
+}; // Size: 0x868
 
 class USubmarineMountComponent : public UMountComponent
 {
-    TSubclassOf<class ASensorReadingProxy> SensorReadingProxy;                        // 0x0850 (size: 0x8)
-    class USoundCue* ResponseSoundCue;                                                // 0x0858 (size: 0x8)
+    TSubclassOf<class ASensorReadingProxy> SensorReadingProxy;                        // 0x0868 (size: 0x8)
+    class USoundCue* ResponseSoundCue;                                                // 0x0870 (size: 0x8)
 
     void ClientSensorPingResponse(const TArray<FSensorPingResponse>& Responses, bool bIsIntel);
-}; // Size: 0x870
+}; // Size: 0x888
 
 class USubmarinePeriscopeMountComponent : public USubmarineMountComponent
 {
-    float MaxDepthForVisuals;                                                         // 0x0870 (size: 0x4)
-    class UCurveFloat* CameraArmLengthCurve;                                          // 0x0878 (size: 0x8)
+    float MaxDepthForVisuals;                                                         // 0x0888 (size: 0x4)
+    class UCurveFloat* CameraArmLengthCurve;                                          // 0x0890 (size: 0x8)
 
-}; // Size: 0x880
+}; // Size: 0x898
 
 class USubmarineTubeUseComponent : public UShipFlagUseComponent
 {
@@ -14055,28 +14058,28 @@ class USubmarineVisibilityToggleComponent : public UVisibilityToggleAreaComponen
 
 class UTankEngineerComponent : public UMountComponent
 {
-    int32 TargetMountIndex;                                                           // 0x0850 (size: 0x4)
-    int32 RepairAmount;                                                               // 0x0854 (size: 0x4)
-    TArray<FName> CompatibleAmmoNames;                                                // 0x0868 (size: 0x10)
+    int32 TargetMountIndex;                                                           // 0x0868 (size: 0x4)
+    int32 RepairAmount;                                                               // 0x086C (size: 0x4)
+    TArray<FName> CompatibleAmmoNames;                                                // 0x0880 (size: 0x10)
 
     void ServerSetDesiredAmmoType(FName InDesiredAmmoType);
     void ServerRepair(FActivityStateChange ActivityStateChange);
-}; // Size: 0x878
+}; // Size: 0x890
 
 class UTankGunnerMountComponent : public UMultiAmmoVehicleMountComponent
 {
-    class USoundCue* ShotSoundCue;                                                    // 0x0890 (size: 0x8)
-    class UParticleSystem* MuzzleFlashPS;                                             // 0x0898 (size: 0x8)
-    bool bUsePerBarrelFX;                                                             // 0x08A0 (size: 0x1)
-    bool AimOffsetEnabled;                                                            // 0x08A1 (size: 0x1)
-    float AimOffsetStartRange;                                                        // 0x08A4 (size: 0x4)
-    float AimRightOffsetAmount;                                                       // 0x08A8 (size: 0x4)
-    float AimDistanceOffsetAmount;                                                    // 0x08AC (size: 0x4)
+    class USoundCue* ShotSoundCue;                                                    // 0x08A8 (size: 0x8)
+    class UParticleSystem* MuzzleFlashPS;                                             // 0x08B0 (size: 0x8)
+    bool bUsePerBarrelFX;                                                             // 0x08B8 (size: 0x1)
+    bool AimOffsetEnabled;                                                            // 0x08B9 (size: 0x1)
+    float AimOffsetStartRange;                                                        // 0x08BC (size: 0x4)
+    float AimRightOffsetAmount;                                                       // 0x08C0 (size: 0x4)
+    float AimDistanceOffsetAmount;                                                    // 0x08C4 (size: 0x4)
 
     void ServerFireShell(FActivityStateChange ActivityStateChange, const FCharacterInvokeInfo InvokeInfo);
     void MulticastPlayFiringFX();
     void MulticastPlayDebugTrace(FVector TraceStart, FVector TraceEnd, FVector HitLocation, float HitAngle, FVector HitNormal, float DamageInnerRadius, float DamageOuterRadius);
-}; // Size: 0x8D0
+}; // Size: 0x8E8
 
 class UTankZombieDamageType : public USimDamageType
 {
@@ -14088,22 +14091,22 @@ class UTankZombieSecondaryDamageType : public USimDamageType
 
 class UTaskItemComponent : public UItemComponent
 {
-    class USkeletalMesh* ItemMesh;                                                    // 0x08D0 (size: 0x8)
-    class USoundCue* StartTaskSoundCue;                                               // 0x08D8 (size: 0x8)
-    ECharacterActivityState TaskActivityState;                                        // 0x08E0 (size: 0x1)
-    float MaxRangeToTarget;                                                           // 0x08E4 (size: 0x4)
-    FText NoTargetText;                                                               // 0x08E8 (size: 0x18)
-    FText NoAmmoText;                                                                 // 0x0900 (size: 0x18)
-    FText StartTaskText;                                                              // 0x0918 (size: 0x18)
-    FText EndTaskText;                                                                // 0x0930 (size: 0x18)
-    float LoopDuration;                                                               // 0x0948 (size: 0x4)
-    ETaskItemTargetCheckMethod TargetCheckMethod;                                     // 0x094C (size: 0x1)
-    bool bIsEquipped;                                                                 // 0x094D (size: 0x1)
+    class USkeletalMesh* ItemMesh;                                                    // 0x08E8 (size: 0x8)
+    class USoundCue* StartTaskSoundCue;                                               // 0x08F0 (size: 0x8)
+    ECharacterActivityState TaskActivityState;                                        // 0x08F8 (size: 0x1)
+    float MaxRangeToTarget;                                                           // 0x08FC (size: 0x4)
+    FText NoTargetText;                                                               // 0x0900 (size: 0x18)
+    FText NoAmmoText;                                                                 // 0x0918 (size: 0x18)
+    FText StartTaskText;                                                              // 0x0930 (size: 0x18)
+    FText EndTaskText;                                                                // 0x0948 (size: 0x18)
+    float LoopDuration;                                                               // 0x0960 (size: 0x4)
+    ETaskItemTargetCheckMethod TargetCheckMethod;                                     // 0x0964 (size: 0x1)
+    bool bIsEquipped;                                                                 // 0x0965 (size: 0x1)
 
     void ServerTryStartTask(FActivityStateChange ActivityStateChange);
     void ServerStopInvokeTask();
     void OnRep_IsEquipped();
-}; // Size: 0x970
+}; // Size: 0x988
 
 class UTeamFlagMeshComponent : public UStaticMeshComponent
 {
@@ -14169,22 +14172,23 @@ class UTemplateComponent : public USceneComponent
     TSubclassOf<class ATemplate> TemplateActor;                                       // 0x01F0 (size: 0x8)
     bool bOnlyCollisions;                                                             // 0x01F8 (size: 0x1)
     FName OverrideCollisionProfile;                                                   // 0x01FC (size: 0x8)
+    bool bUnidirectionalSockets;                                                      // 0x0204 (size: 0x1)
     TArray<class UActorComponent*> SpawnedComponents;                                 // 0x0208 (size: 0x10)
 
 }; // Size: 0x220
 
 class UTorpedoGunnerMountComponent : public USubmarineMountComponent
 {
-    TSubclassOf<class AWarProjectile> ProjectileClass;                                // 0x0870 (size: 0x8)
-    float MinDepth;                                                                   // 0x0878 (size: 0x4)
-    float MaxDepth;                                                                   // 0x087C (size: 0x4)
-    float RangeIncrement;                                                             // 0x0880 (size: 0x4)
-    int8 Ammo;                                                                        // 0x0888 (size: 0x1)
-    uint8 RangeIndex;                                                                 // 0x0889 (size: 0x1)
+    TSubclassOf<class AWarProjectile> ProjectileClass;                                // 0x0888 (size: 0x8)
+    float MinDepth;                                                                   // 0x0890 (size: 0x4)
+    float MaxDepth;                                                                   // 0x0894 (size: 0x4)
+    float RangeIncrement;                                                             // 0x0898 (size: 0x4)
+    int8 Ammo;                                                                        // 0x08A0 (size: 0x1)
+    uint8 RangeIndex;                                                                 // 0x08A1 (size: 0x1)
 
     void ServerStartInvoke(FActivityStateChange ActivityStateChange, FVector2D TargetDirection, float TargetDepth);
     void ServerCycleRange();
-}; // Size: 0x898
+}; // Size: 0x8B0
 
 class UTorpedoMovementComponent : public UProjectileMovementComponent
 {
@@ -14212,10 +14216,10 @@ class UTrackSwitchAnimInstance : public UAnimInstance
 
 class UTrainPassengerMountComponent : public UMountComponent
 {
-    bool bAllowItemSubmission;                                                        // 0x0850 (size: 0x1)
+    bool bAllowItemSubmission;                                                        // 0x0868 (size: 0x1)
 
     void ServerSubmitItems(class AActor* TargetActor);
-}; // Size: 0x858
+}; // Size: 0x870
 
 class UTransferLocationComponent : public USceneComponent
 {
@@ -14225,7 +14229,7 @@ class UTransferLocationComponent : public USceneComponent
 
 class UTraumaKitComponent : public UTaskItemComponent
 {
-}; // Size: 0x970
+}; // Size: 0x988
 
 class UTravelManager : public UObject
 {
@@ -14521,11 +14525,11 @@ class UWatchTowerMountComponent : public UMountComponent
 {
 
     void ServerSetRotationDirection(const ERotationDirection Direction);
-}; // Size: 0x858
+}; // Size: 0x870
 
 class UWaterBucketItemComponent : public UProjectileItemComponent
 {
-}; // Size: 0x970
+}; // Size: 0x988
 
 class UWaterDamageType : public USimDamageType
 {
@@ -14533,16 +14537,16 @@ class UWaterDamageType : public USimDamageType
 
 class UWaterMineItemComponent : public ULargeItemComponent
 {
-    TSubclassOf<class AWaterMine> WaterMineClass;                                     // 0x08E0 (size: 0x8)
-    float DetonationDepthToggleIncrement;                                             // 0x08E8 (size: 0x4)
-    float MinDeploymentDepth;                                                         // 0x08EC (size: 0x4)
-    float MaxDeploymentDepth;                                                         // 0x08F0 (size: 0x4)
-    float MinDistanceBetweenMines;                                                    // 0x08F4 (size: 0x4)
-    float MaxDeploymentRange;                                                         // 0x08F8 (size: 0x4)
-    float DeployDuration;                                                             // 0x08FC (size: 0x4)
+    TSubclassOf<class AWaterMine> WaterMineClass;                                     // 0x08F8 (size: 0x8)
+    float DetonationDepthToggleIncrement;                                             // 0x0900 (size: 0x4)
+    float MinDeploymentDepth;                                                         // 0x0904 (size: 0x4)
+    float MaxDeploymentDepth;                                                         // 0x0908 (size: 0x4)
+    float MinDistanceBetweenMines;                                                    // 0x090C (size: 0x4)
+    float MaxDeploymentRange;                                                         // 0x0910 (size: 0x4)
+    float DeployDuration;                                                             // 0x0914 (size: 0x4)
 
     void ServerStartInvoke(FActivityStateChange ActivityStateChange, const FVector MouseTraceStart, const FVector MouseTraceEnd, const float InDetonationDepth);
-}; // Size: 0x928
+}; // Size: 0x940
 
 class UWaterProjectileMovementComponent : public UProjectileMovementComponent
 {
@@ -14628,7 +14632,7 @@ class UWeatherStationMountComponent : public UMountComponent
 {
 
     void ServerStartPrediction();
-}; // Size: 0x850
+}; // Size: 0x868
 
 class UWeatherStationUserComponent : public UUserComponent
 {
@@ -14656,16 +14660,16 @@ class UWindsockAnimInstance : public UAnimInstance
 
 class UWorkItemComponent : public UItemComponent
 {
-    class USkeletalMesh* SkeletalMesh;                                                // 0x08D0 (size: 0x8)
-    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x08D8 (size: 0x8)
-    class USoundCue* WorkSoundCue;                                                    // 0x08E0 (size: 0x8)
-    float QueryOffset;                                                                // 0x08E8 (size: 0x4)
-    int32 MaxRange;                                                                   // 0x08EC (size: 0x4)
-    bool bIsEquipped;                                                                 // 0x08F0 (size: 0x1)
+    class USkeletalMesh* SkeletalMesh;                                                // 0x08E8 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffect;                                    // 0x08F0 (size: 0x8)
+    class USoundCue* WorkSoundCue;                                                    // 0x08F8 (size: 0x8)
+    float QueryOffset;                                                                // 0x0900 (size: 0x4)
+    int32 MaxRange;                                                                   // 0x0904 (size: 0x4)
+    bool bIsEquipped;                                                                 // 0x0908 (size: 0x1)
 
     void ServerPerformWork(class AActor* InTargetActor, class USceneComponent* InTargetActorComponent, FActivityStateChange ActivityStateChange);
     void OnRep_IsEquipped();
-}; // Size: 0x8F8
+}; // Size: 0x910
 
 class UWorldResourceSpawner : public UObject
 {
@@ -14679,32 +14683,32 @@ class UWoundCausingDamageType : public USimDamageType
 
 class UWoundedCarriedItemComponent : public ULargeItemComponent
 {
-    class ASimCharacter* CarriedCharacter;                                            // 0x08E0 (size: 0x8)
-    FVector CapsuleOffset;                                                            // 0x08E8 (size: 0xC)
+    class ASimCharacter* CarriedCharacter;                                            // 0x08F8 (size: 0x8)
+    FVector CapsuleOffset;                                                            // 0x0900 (size: 0xC)
 
-}; // Size: 0x8F8
+}; // Size: 0x910
 
 class UZombieWeaponComponent : public UItemComponent
 {
-    TArray<FZombieWeaponInfo> WeaponInfo;                                             // 0x08D0 (size: 0x10)
-    float MeleeDamageDelay;                                                           // 0x08E0 (size: 0x4)
-    float MeleeDamageDelaySecond;                                                     // 0x08E4 (size: 0x4)
-    TSubclassOf<class AWarProjectile> ProjectileClass;                                // 0x08E8 (size: 0x8)
-    float ProjectileDelay;                                                            // 0x08F0 (size: 0x4)
-    float ProjectileSpeed;                                                            // 0x08F4 (size: 0x4)
-    class USoundCue* ProjectileSoundCue;                                              // 0x08F8 (size: 0x8)
-    class UParticleSystem* ProjectilePS;                                              // 0x0900 (size: 0x8)
-    TSubclassOf<class AWarExplosionEffect> SmashExplosionEffect;                      // 0x0908 (size: 0x8)
-    float SmashDamageDelay;                                                           // 0x0910 (size: 0x4)
-    float SmashBaseDamage;                                                            // 0x0914 (size: 0x4)
-    float SmashRadius;                                                                // 0x0918 (size: 0x4)
-    bool bIsEquipped;                                                                 // 0x091C (size: 0x1)
+    TArray<FZombieWeaponInfo> WeaponInfo;                                             // 0x08E8 (size: 0x10)
+    float MeleeDamageDelay;                                                           // 0x08F8 (size: 0x4)
+    float MeleeDamageDelaySecond;                                                     // 0x08FC (size: 0x4)
+    TSubclassOf<class AWarProjectile> ProjectileClass;                                // 0x0900 (size: 0x8)
+    float ProjectileDelay;                                                            // 0x0908 (size: 0x4)
+    float ProjectileSpeed;                                                            // 0x090C (size: 0x4)
+    class USoundCue* ProjectileSoundCue;                                              // 0x0910 (size: 0x8)
+    class UParticleSystem* ProjectilePS;                                              // 0x0918 (size: 0x8)
+    TSubclassOf<class AWarExplosionEffect> SmashExplosionEffect;                      // 0x0920 (size: 0x8)
+    float SmashDamageDelay;                                                           // 0x0928 (size: 0x4)
+    float SmashBaseDamage;                                                            // 0x092C (size: 0x4)
+    float SmashRadius;                                                                // 0x0930 (size: 0x4)
+    bool bIsEquipped;                                                                 // 0x0934 (size: 0x1)
 
     void ServerInvokeRangedAttack(const FCharacterInvokeInfo& WeaponInvokeInfo, FActivityStateChange ActivityStateChange);
     void ServerInvokePrimaryAttack(FActivityStateChange ActivityStateChange);
     void ServerInvokeFrontalAOEAttack(FActivityStateChange ActivityStateChange);
     void OnRep_IsEquipped();
     void MulticastRangedAttackTriggered();
-}; // Size: 0x940
+}; // Size: 0x958
 
 #endif

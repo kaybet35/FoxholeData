@@ -3,6 +3,6 @@
 
 class USuperTankWGrenadeLauncherRearGunnerComponent_C : public UGrenadeGunnerMountComponent
 {
-}; // Size: 0x920
+}; // Size: 0x938
 
 #endif

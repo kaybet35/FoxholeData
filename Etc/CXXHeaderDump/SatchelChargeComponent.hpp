@@ -3,6 +3,6 @@
 
 class USatchelChargeComponent_C : public UExplosiveItemComponent
 {
-}; // Size: 0x910
+}; // Size: 0x928
 
 #endif

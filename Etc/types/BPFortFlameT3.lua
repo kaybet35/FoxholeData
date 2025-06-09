@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPFortFlameT3_C : AFortFireSuppression
----@field FortCommonThreeWallsMods UTemplateComponent
+---@field FortFlameCommonThreeWallsMods UTemplateComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field InputMesh1 UStaticMeshComponent
 ---@field InputDecal1 UDecalComponent

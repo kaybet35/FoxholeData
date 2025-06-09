@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortCornerBreachedT3_C : ADestroyedFort
+---@field FortCornerBreachCommonSockets UTemplateComponent
 ---@field DirtCornerBackRight UStaticMeshComponent
 ---@field DirtCornerFrontLeftTrench UStaticMeshComponent
 ---@field DirtCornerBackRightTrench UStaticMeshComponent

@@ -73,6 +73,7 @@ enum class ECharacterActivityState : uint8 {
     MeleeCharging,
     MeleeAttackQuick,
     MeleeAttackLong,
+    DetachLargeItem,
     MAX,
 };
 

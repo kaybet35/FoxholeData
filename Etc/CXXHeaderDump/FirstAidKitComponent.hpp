@@ -3,6 +3,6 @@
 
 class UFirstAidKitComponent_C : public UFirstAidKitComponent
 {
-}; // Size: 0x910
+}; // Size: 0x928
 
 #endif

@@ -6,8 +6,8 @@ ATripodMountedStructure::ATripodMountedStructure(const FObjectInitializer& Objec
     this->TripodMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("TripodMesh"));
     this->GunMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("GunMesh"));
     this->BaseItemCodeName = TEXT("Tripod");
-    this->GunMesh->SetupAttachment(TripodMesh);
     this->TripodMesh->SetupAttachment(RootComponent);
+    this->GunMesh->SetupAttachment(TripodMesh);
 }
 
 

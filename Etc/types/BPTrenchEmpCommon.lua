@@ -13,15 +13,7 @@
 ---@field BPTrenchBlockerCapsule UBPTrenchBlockerCapsule_C
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field BoatHull UBoatHullComponent
----@field FrontSocket UBuildSocketComponent
----@field BackSocket UBuildSocketComponent
 ---@field LandscapeOverlap UBoxComponent
----@field LeftSocket UBuildSocketComponent
----@field RightSocket UBuildSocketComponent
----@field FrontLeftSocket UBuildSocketComponent
----@field BackRightSocket UBuildSocketComponent
----@field BackLeftSocket UBuildSocketComponent
----@field FrontRightSocket UBuildSocketComponent
 ---@field DefaultSceneRoot USceneComponent
 ABPTrenchEmpCommon_C = {}
 

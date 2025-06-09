@@ -3,6 +3,6 @@
 
 class UBPSensorOperatorMountComponent_C : public USensorOperatorMountComponent
 {
-}; // Size: 0x880
+}; // Size: 0x898
 
 #endif

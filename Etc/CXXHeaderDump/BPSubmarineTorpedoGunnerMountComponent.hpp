@@ -3,6 +3,6 @@
 
 class UBPSubmarineTorpedoGunnerMountComponent_C : public UTorpedoGunnerMountComponent
 {
-}; // Size: 0x898
+}; // Size: 0x8B0
 
 #endif

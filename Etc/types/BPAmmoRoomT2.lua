@@ -13,7 +13,6 @@
 ---@field Floor UStaticMeshComponent
 ---@field InstancedStaticMesh UInstancedStaticMeshComponent
 ---@field ItemGroupRender UItemGroupRenderComponent
----@field BuildSiteWorkVolume UBoxComponent
 ---@field FortCommonT2T3ModsMinimal UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortCommon UTemplateComponent

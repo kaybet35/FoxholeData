@@ -23,7 +23,7 @@ public:
     EEquippedWeaponGripType EquippedGripType;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FActivityStateInfo ActivityStateInfos[69];
+    FActivityStateInfo ActivityStateInfos[70];
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     USoundCue* ReloadSoundCue;

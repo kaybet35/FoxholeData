@@ -3,6 +3,6 @@
 
 class ABPTrenchEmpT2Fill_C : public ABPTrenchEmpT2_C
 {
-}; // Size: 0x8C8
+}; // Size: 0x8D0
 
 #endif

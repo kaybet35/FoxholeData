@@ -2,7 +2,7 @@
 
 ---@class ABPFortArtilleryShelterT2_C : AFortArtilleryShelter
 ---@field FortCommonT2Corners UTemplateComponent
----@field FortCommonT2T3Mods UTemplateComponent
+---@field FortCommonT2T3ModsMinimal UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortCommonMods UTemplateComponent
 ---@field ArtilleryShelterRoof UStaticMeshComponent

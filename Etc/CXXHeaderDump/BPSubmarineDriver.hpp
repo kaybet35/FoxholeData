@@ -3,6 +3,6 @@
 
 class UBPSubmarineDriver_C : public USubmarineDriverMountComponent
 {
-}; // Size: 0x850
+}; // Size: 0x868
 
 #endif

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchEmpDestroyedT1_C : ADestroyedFort
+---@field TrenchEmpCommonSockets UTemplateComponent
 ---@field BPTrenchEmpCommonDirtT1T2 UTemplateComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field FloorDecal UDecalComponent

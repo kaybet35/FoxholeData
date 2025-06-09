@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortCornerT3_C : AFortCorner
+---@field FortCornerCommonSockets UTemplateComponent
 ---@field BreachedLeft UStaticMeshComponent
 ---@field BreachedBack UStaticMeshComponent
 ---@field BreachedAngle UStaticMeshComponent

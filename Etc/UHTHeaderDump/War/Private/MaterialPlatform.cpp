@@ -12,8 +12,8 @@ AMaterialPlatform::AMaterialPlatform(const FObjectInitializer& ObjectInitializer
     this->MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->BoxCollision = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxCollision"));
     this->GenericStockpileComponent = CreateDefaultSubobject<UReplicatedGenericStockpileComponent>(TEXT("GenericStockpileComponent"));
-    this->MeshComponent->SetupAttachment(RootComponent);
     this->BoxCollision->SetupAttachment(MeshComponent);
+    this->MeshComponent->SetupAttachment(RootComponent);
 }
 
 

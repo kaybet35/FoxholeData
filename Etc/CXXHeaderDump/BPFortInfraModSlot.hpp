@@ -3,6 +3,6 @@
 
 class UBPFortInfraModSlot_C : public UInfraModificationSlotComponent
 {
-}; // Size: 0x3F0
+}; // Size: 0x440
 
 #endif

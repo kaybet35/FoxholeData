@@ -3,6 +3,6 @@
 
 class UBPInfantryMineItemComponent_C : public ULargeMaterialComponent
 {
-}; // Size: 0x980
+}; // Size: 0x998
 
 #endif

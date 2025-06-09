@@ -4,7 +4,7 @@
 class ABPFortFlameT2_C : public AFortFireSuppression
 {
     class UTemplateComponent* FortCommonT2Corners;                                    // 0x0860 (size: 0x8)
-    class UTemplateComponent* FortCommonThreeWallsMods;                               // 0x0868 (size: 0x8)
+    class UTemplateComponent* FortFlameCommonThreeWallsMods;                          // 0x0868 (size: 0x8)
     class UStaticMeshComponent* SideRight;                                            // 0x0870 (size: 0x8)
     class UStaticMeshComponent* RoofDirt;                                             // 0x0878 (size: 0x8)
     class UStaticMeshComponent* Roof;                                                 // 0x0880 (size: 0x8)

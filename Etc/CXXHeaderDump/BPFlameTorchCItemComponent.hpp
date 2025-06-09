@@ -3,6 +3,6 @@
 
 class UBPFlameTorchCItemComponent_C : public UFlamethrowerWeaponComponent
 {
-}; // Size: 0xA10
+}; // Size: 0xA28
 
 #endif

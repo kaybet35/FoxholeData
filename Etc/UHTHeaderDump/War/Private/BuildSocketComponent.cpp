@@ -18,6 +18,7 @@ UBuildSocketComponent::UBuildSocketComponent(const FObjectInitializer& ObjectIni
     this->MaxSurfaceSamplePadding = 0.00f;
     this->MaxSurfaceSampleSlopeAngle = 45.00f;
     this->bAllowMultipleOverlaps = false;
+    this->bContributeToIslandIntegrityBonus = true;
     this->MinimumPathSeparation = 0.00f;
     this->bOnlyTestMinimumPathSeparationOnUnconnected = false;
     this->bAllowRotatedPlacement = false;

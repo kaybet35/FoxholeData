@@ -3,6 +3,6 @@
 
 class USMGHeavyC_C : public UHeavyMachineGunItemComponent
 {
-}; // Size: 0x9A8
+}; // Size: 0x9C0
 
 #endif

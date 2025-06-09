@@ -3,6 +3,6 @@
 
 class UBPMortarItemComponent_C : public UMortarItemComponent
 {
-}; // Size: 0x938
+}; // Size: 0x950
 
 #endif

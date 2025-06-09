@@ -24,8 +24,8 @@ AExplosive::AExplosive(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ExplosionLength = 300.00f;
     this->bExplosionEffectsTrigger = false;
     this->TeamId = 255;
-    this->ItemMesh->SetupAttachment(RootComponent);
     this->CollisionComp->SetupAttachment(RootComponent);
+    this->ItemMesh->SetupAttachment(RootComponent);
 }
 
 void AExplosive::OnRep_Exploded() {
