@@ -19,12 +19,12 @@ AScreenshotCharacter::AScreenshotCharacter(const FObjectInitializer& ObjectIniti
     this->bIsFemale = false;
     this->SkinTone = 0;
     this->OverrideMaterial = NULL;
-    this->Back->SetupAttachment(RootComponent);
-    this->Helmet->SetupAttachment(RootComponent);
-    this->EquippedItemMesh->SetupAttachment(RootComponent);
     this->Head->SetupAttachment(RootComponent);
     this->Hands->SetupAttachment(RootComponent);
     this->Legs->SetupAttachment(RootComponent);
+    this->Back->SetupAttachment(RootComponent);
+    this->Helmet->SetupAttachment(RootComponent);
+    this->EquippedItemMesh->SetupAttachment(RootComponent);
 }
 
 

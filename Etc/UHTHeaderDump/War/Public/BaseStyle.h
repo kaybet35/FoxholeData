@@ -149,6 +149,9 @@ public:
     FHelpToolTipStyle HelpToolTipStyle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FHelpToolTipStyle ShortWarHelpToolTipStyle;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FRocketSiteStyle RocketSiteStyle;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))

@@ -14,12 +14,12 @@ ALadder::ALadder(const FObjectInitializer& ObjectInitializer) : Super(ObjectInit
     this->ClimbVolumeTop = CreateDefaultSubobject<UBoxComponent>(TEXT("ClimbVolumeTop"));
     this->EnterPositionBottom = CreateDefaultSubobject<USceneComponent>(TEXT("EnterPositionBottom"));
     this->EnterPositionTop = CreateDefaultSubobject<USceneComponent>(TEXT("EnterPositionTop"));
-    this->LadderComponent->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
     this->ClimbVolume->SetupAttachment(RootComponent);
     this->ClimbVolumeTop->SetupAttachment(RootComponent);
     this->EnterPositionBottom->SetupAttachment(RootComponent);
     this->EnterPositionTop->SetupAttachment(RootComponent);
+    this->LadderComponent->SetupAttachment(RootComponent);
 }
 
 

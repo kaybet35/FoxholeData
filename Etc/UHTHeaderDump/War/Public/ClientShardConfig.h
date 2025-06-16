@@ -14,6 +14,9 @@ public:
     int32 RequiredVictoryTowns;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 ShortRequiredVictoryTowns;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FDateTime ScheduledConquestStartTime;
     
     WAR_API FClientShardConfig();

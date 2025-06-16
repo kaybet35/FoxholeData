@@ -12,9 +12,9 @@ ABuiltRoad::ABuiltRoad(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->GrassCullRadius = 0.00f;
     this->BackSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("BackSocket"));
     this->FrontSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("FrontSocket"));
-    this->SplineConnector->SetupAttachment(RootComponent);
     this->BackSocket->SetupAttachment(RootComponent);
     this->FrontSocket->SetupAttachment(RootComponent);
+    this->SplineConnector->SetupAttachment(RootComponent);
 }
 
 

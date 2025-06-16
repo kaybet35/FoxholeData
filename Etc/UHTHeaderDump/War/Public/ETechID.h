@@ -65,6 +65,7 @@ enum class ETechID : uint16 {
     UnlockATGarrison,
     UnlockBunkerBases,
     UnlockConcreteMixer,
+    UnlockConstructionEquipment,
     UnlockEmplacedATGun,
     UnlockEmplacedATLarge,
     UnlockEmplacedCannonLarge,

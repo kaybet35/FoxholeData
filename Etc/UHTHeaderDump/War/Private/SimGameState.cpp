@@ -20,6 +20,7 @@ ASimGameState::ASimGameState(const FObjectInitializer& ObjectInitializer) : Supe
     this->ConquestWinner = EFactionId::NoTeam;
     this->WarPhase = EWarPhase::PreConquest;
     this->bIsPatchRequired = false;
+    this->bIsShortWar = false;
 }
 
 void ASimGameState::OnRep_WorldWeatherState() {
@@ -70,6 +71,7 @@ void ASimGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(ASimGameState, WarPhase);
     DOREPLIFETIME(ASimGameState, WarPhaseEndTime);
     DOREPLIFETIME(ASimGameState, bIsPatchRequired);
+    DOREPLIFETIME(ASimGameState, bIsShortWar);
 }
 
 

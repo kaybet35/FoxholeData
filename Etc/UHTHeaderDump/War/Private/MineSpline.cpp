@@ -20,9 +20,9 @@ AMineSpline::AMineSpline(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->MaxMineCount = 16;
     this->bTriggeredByInfantry = false;
     this->bTriggeredByVehicles = false;
+    this->FrontSocket->SetupAttachment(RootComponent);
     this->SplineConnector->SetupAttachment(RootComponent);
     this->BackSocket->SetupAttachment(RootComponent);
-    this->FrontSocket->SetupAttachment(RootComponent);
 }
 
 void AMineSpline::OnRep_MineMask(uint32 PrevMask) {

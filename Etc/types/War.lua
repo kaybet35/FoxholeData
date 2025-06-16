@@ -3382,6 +3382,7 @@ function ASimGameMode:HeadlessCommand(Command) end
 ---@field WarPhase EWarPhase
 ---@field WarPhaseEndTime FDateTime
 ---@field bIsPatchRequired boolean
+---@field bIsShortWar boolean
 ASimGameState = {}
 
 function ASimGameState:OnRep_WorldWeatherState() end
@@ -5865,6 +5866,7 @@ FBanReasonInfo = {}
 ---@field ProgressBarButtonStyle FProgressBarButtonStyle
 ---@field PrototypeButtonStyle FButtonStyle
 ---@field HelpToolTipStyle FHelpToolTipStyle
+---@field ShortWarHelpToolTipStyle FHelpToolTipStyle
 ---@field RocketSiteStyle FRocketSiteStyle
 ---@field StaticCheckBoxStyle FStaticCheckBoxStyle
 ---@field InteractContextMenuStyle FInteractContextMenuStyle
@@ -6275,6 +6277,7 @@ FClearSquadsConditionalWarMessage = {}
 ---@class FClientShardConfig
 ---@field PopulationCap int32
 ---@field RequiredVictoryTowns int32
+---@field ShortRequiredVictoryTowns int32
 ---@field ScheduledConquestStartTime FDateTime
 FClientShardConfig = {}
 
@@ -11475,6 +11478,7 @@ FWarPropertyUtil = {}
 ---@field StartTime int64
 ---@field ColonialWarAchievementProgressList TArray<float>
 ---@field WardenWarAchievementProgressList TArray<float>
+---@field bIsShortWar boolean
 FWarRecord = {}
 
 
@@ -15347,6 +15351,7 @@ function UTemperatureModifierSphereComponent:OnBeginOverlap(OverlappedComponent,
 ---@field bOnlyCollisions boolean
 ---@field OverrideCollisionProfile FName
 ---@field bUnidirectionalSockets boolean
+---@field OnlyIncludeOn TSubclassOf<AActor>
 ---@field SpawnedComponents TArray<UActorComponent>
 UTemplateComponent = {}
 

@@ -448,38 +448,39 @@ struct FBaseStyle : public FSlateWidgetStyle
     FProgressBarButtonStyle ProgressBarButtonStyle;                                   // 0x141D0 (size: 0x388)
     FButtonStyle PrototypeButtonStyle;                                                // 0x14558 (size: 0x278)
     FHelpToolTipStyle HelpToolTipStyle;                                               // 0x147D0 (size: 0x300)
-    FRocketSiteStyle RocketSiteStyle;                                                 // 0x14AD0 (size: 0x230)
-    FStaticCheckBoxStyle StaticCheckBoxStyle;                                         // 0x14D00 (size: 0x110)
-    FInteractContextMenuStyle InteractContextMenuStyle;                               // 0x14E10 (size: 0x198)
-    float XSpaceBetweenColumns;                                                       // 0x14FA8 (size: 0x4)
-    float YSpaceBetweenWidgets;                                                       // 0x14FAC (size: 0x4)
-    float SimScreenSideColumnWidth;                                                   // 0x14FB0 (size: 0x4)
-    float SimScreenCenterColumnWidth;                                                 // 0x14FB4 (size: 0x4)
-    float SimScreenColumnHeight;                                                      // 0x14FB8 (size: 0x4)
-    float BackgroundBlurStrength;                                                     // 0x14FBC (size: 0x4)
-    FComboBoxStyle DropdownStyle;                                                     // 0x14FC0 (size: 0x3D8)
-    FTableRowStyle DropdownRowStyle;                                                  // 0x15398 (size: 0x7C8)
-    FListViewStyle ListViewStyle;                                                     // 0x15B60 (size: 0xB70)
-    FFactionSelectStyle FactionSelectStyle;                                           // 0x166D0 (size: 0x5A0)
-    FLobbyStyle LobbyStyle;                                                           // 0x16C70 (size: 0x3B0)
-    FSquadStyle SquadStyle;                                                           // 0x17020 (size: 0x1738)
-    FTechTreeStyle TechTreeComponentStyle;                                            // 0x18758 (size: 0x660)
-    FTechTreeStyle TechTreeStyle;                                                     // 0x18DB8 (size: 0x660)
-    FHospitalStyle HospitalStyle;                                                     // 0x19418 (size: 0x198)
-    FInfrastructuresStyle InfrastructuresStyle;                                       // 0x195B0 (size: 0x23A0)
-    FWarStandardColour StandardColour;                                                // 0x1B950 (size: 0x70)
-    FReserveStockpileStyle ReserveStockpileStyle;                                     // 0x1B9C0 (size: 0x1078)
-    FWarAchievementsStyle WarAchievementsStyle;                                       // 0x1CA38 (size: 0x98)
-    FSlateBrush FactionIcons;                                                         // 0x1CAD0 (size: 0x110)
-    FSlateBrush PlayerOnlineStatusIcons;                                              // 0x1CBE0 (size: 0x220)
-    FGeneralPurposeIcons GeneralPurposeIcons;                                         // 0x1CE00 (size: 0x88)
-    FWeatherStyle WeatherStyle;                                                       // 0x1CE88 (size: 0x778)
-    FListeningAreaStyle ListeningAreaStyle;                                           // 0x1D600 (size: 0x88)
-    FGearboxStyle GearboxStyle;                                                       // 0x1D688 (size: 0x110)
-    FButtonStyle ItemHolderSortButtonStyle;                                           // 0x1D798 (size: 0x278)
-    FSearchBarStyle MapSearchBarStyle;                                                // 0x1DA10 (size: 0x1170)
+    FHelpToolTipStyle ShortWarHelpToolTipStyle;                                       // 0x14AD0 (size: 0x300)
+    FRocketSiteStyle RocketSiteStyle;                                                 // 0x14DD0 (size: 0x230)
+    FStaticCheckBoxStyle StaticCheckBoxStyle;                                         // 0x15000 (size: 0x110)
+    FInteractContextMenuStyle InteractContextMenuStyle;                               // 0x15110 (size: 0x198)
+    float XSpaceBetweenColumns;                                                       // 0x152A8 (size: 0x4)
+    float YSpaceBetweenWidgets;                                                       // 0x152AC (size: 0x4)
+    float SimScreenSideColumnWidth;                                                   // 0x152B0 (size: 0x4)
+    float SimScreenCenterColumnWidth;                                                 // 0x152B4 (size: 0x4)
+    float SimScreenColumnHeight;                                                      // 0x152B8 (size: 0x4)
+    float BackgroundBlurStrength;                                                     // 0x152BC (size: 0x4)
+    FComboBoxStyle DropdownStyle;                                                     // 0x152C0 (size: 0x3D8)
+    FTableRowStyle DropdownRowStyle;                                                  // 0x15698 (size: 0x7C8)
+    FListViewStyle ListViewStyle;                                                     // 0x15E60 (size: 0xB70)
+    FFactionSelectStyle FactionSelectStyle;                                           // 0x169D0 (size: 0x5A0)
+    FLobbyStyle LobbyStyle;                                                           // 0x16F70 (size: 0x3B0)
+    FSquadStyle SquadStyle;                                                           // 0x17320 (size: 0x1738)
+    FTechTreeStyle TechTreeComponentStyle;                                            // 0x18A58 (size: 0x660)
+    FTechTreeStyle TechTreeStyle;                                                     // 0x190B8 (size: 0x660)
+    FHospitalStyle HospitalStyle;                                                     // 0x19718 (size: 0x198)
+    FInfrastructuresStyle InfrastructuresStyle;                                       // 0x198B0 (size: 0x23A0)
+    FWarStandardColour StandardColour;                                                // 0x1BC50 (size: 0x70)
+    FReserveStockpileStyle ReserveStockpileStyle;                                     // 0x1BCC0 (size: 0x1078)
+    FWarAchievementsStyle WarAchievementsStyle;                                       // 0x1CD38 (size: 0x98)
+    FSlateBrush FactionIcons;                                                         // 0x1CDD0 (size: 0x110)
+    FSlateBrush PlayerOnlineStatusIcons;                                              // 0x1CEE0 (size: 0x220)
+    FGeneralPurposeIcons GeneralPurposeIcons;                                         // 0x1D100 (size: 0x88)
+    FWeatherStyle WeatherStyle;                                                       // 0x1D188 (size: 0x778)
+    FListeningAreaStyle ListeningAreaStyle;                                           // 0x1D900 (size: 0x88)
+    FGearboxStyle GearboxStyle;                                                       // 0x1D988 (size: 0x110)
+    FButtonStyle ItemHolderSortButtonStyle;                                           // 0x1DA98 (size: 0x278)
+    FSearchBarStyle MapSearchBarStyle;                                                // 0x1DD10 (size: 0x1170)
 
-}; // Size: 0x1EB80
+}; // Size: 0x1EE80
 
 struct FBatchModifiedRegimentIdMessage
 {
@@ -858,9 +859,10 @@ struct FClientShardConfig
 {
     int32 PopulationCap;                                                              // 0x0000 (size: 0x4)
     int32 RequiredVictoryTowns;                                                       // 0x0004 (size: 0x4)
-    FDateTime ScheduledConquestStartTime;                                             // 0x0008 (size: 0x8)
+    int32 ShortRequiredVictoryTowns;                                                  // 0x0008 (size: 0x4)
+    FDateTime ScheduledConquestStartTime;                                             // 0x0010 (size: 0x8)
 
-}; // Size: 0x10
+}; // Size: 0x18
 
 struct FCodeNameQuantity
 {
@@ -4348,7 +4350,7 @@ struct FResourceRenderInfo
 
 struct FRewindContext
 {
-}; // Size: 0x18
+}; // Size: 0x20
 
 struct FRichTextFieldColor
 {
@@ -6058,8 +6060,9 @@ struct FWarRecord
     int64 StartTime;                                                                  // 0x0008 (size: 0x8)
     TArray<float> ColonialWarAchievementProgressList;                                 // 0x0010 (size: 0x10)
     TArray<float> WardenWarAchievementProgressList;                                   // 0x0020 (size: 0x10)
+    bool bIsShortWar;                                                                 // 0x0030 (size: 0x1)
 
-}; // Size: 0x30
+}; // Size: 0x38
 
 struct FWarRecordList
 {
@@ -8429,7 +8432,7 @@ class AHeadlessPlayerController : public ASimPlayerController
 {
 
     void ClientParseCommand(FString CommandString);
-}; // Size: 0x1290
+}; // Size: 0x12A0
 
 class AHomeRegionBase : public AStaticBase
 {
@@ -9912,6 +9915,7 @@ class ASimGameState : public AWarGameState
     EWarPhase WarPhase;                                                               // 0x0401 (size: 0x1)
     FDateTime WarPhaseEndTime;                                                        // 0x0408 (size: 0x8)
     bool bIsPatchRequired;                                                            // 0x0410 (size: 0x1)
+    bool bIsShortWar;                                                                 // 0x0411 (size: 0x1)
 
     void OnRep_WorldWeatherState();
     void OnRep_WardenTechTree();
@@ -9951,12 +9955,12 @@ class ASimPlayerController : public AWarPlayerController
     int32 PlaceInDeploymentQueue;                                                     // 0x1010 (size: 0x4)
     FStockpileEffects StockpileEffects;                                               // 0x1068 (size: 0x18)
     TArray<class UUserComponent*> UserComponents;                                     // 0x1080 (size: 0x10)
-    TArray<FStructureStats> StatsForNearybyStructures;                                // 0x1140 (size: 0x10)
-    TWeakObjectPtr<class ARailVehicle> RailHUDTarget;                                 // 0x11D8 (size: 0x8)
-    float RailHUDTargetDismountTime;                                                  // 0x11E0 (size: 0x4)
-    class ACalloutMarkerGhost* CalloutMarkerGhost;                                    // 0x11E8 (size: 0x8)
-    TSubclassOf<class ARuntimeVirtualTextureVolume> LandscapeCullRVTVolumeClass;      // 0x1230 (size: 0x8)
-    class ARuntimeVirtualTextureVolume* LandscapeCullRVTVolume;                       // 0x1238 (size: 0x8)
+    TArray<FStructureStats> StatsForNearybyStructures;                                // 0x1148 (size: 0x10)
+    TWeakObjectPtr<class ARailVehicle> RailHUDTarget;                                 // 0x11E0 (size: 0x8)
+    float RailHUDTargetDismountTime;                                                  // 0x11E8 (size: 0x4)
+    class ACalloutMarkerGhost* CalloutMarkerGhost;                                    // 0x11F0 (size: 0x8)
+    TSubclassOf<class ARuntimeVirtualTextureVolume> LandscapeCullRVTVolumeClass;      // 0x1238 (size: 0x8)
+    class ARuntimeVirtualTextureVolume* LandscapeCullRVTVolume;                       // 0x1240 (size: 0x8)
 
     void WarMessageTest(const int32 TestInt, const float TestFloat, const bool TestBool, FString TestStr, const ETestEnum TestEnum);
     void TunnelNetworkDebugDraw();
@@ -11683,9 +11687,9 @@ class UBargeAnimInstance : public USimVehicleAnimInstance
 
 class UBaseWidgetStyle : public USlateWidgetStyleContainerBase
 {
-    FBaseStyle WidgetStyle;                                                           // 0x0030 (size: 0x1EB80)
+    FBaseStyle WidgetStyle;                                                           // 0x0030 (size: 0x1EE80)
 
-}; // Size: 0x1EBB0
+}; // Size: 0x1EEB0
 
 class UBicycleAnimInstance : public USimVehicleAnimInstance
 {
@@ -13215,12 +13219,12 @@ class UPlayerCharacterMovementComponent : public UCharacterMovementComponent
 {
     float MaxWalkSpeedProne;                                                          // 0x06D0 (size: 0x4)
     float MaxLadderClimbingSpeed;                                                     // 0x06D4 (size: 0x4)
-    float ImmersionDepthHeightBias;                                                   // 0x06FC (size: 0x4)
-    float WaterFrictionCoefficient;                                                   // 0x0700 (size: 0x4)
+    float ImmersionDepthHeightBias;                                                   // 0x0700 (size: 0x4)
+    float WaterFrictionCoefficient;                                                   // 0x0704 (size: 0x4)
 
     void CapsuleEndOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     void CapsuleBeginOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-}; // Size: 0x710
+}; // Size: 0x720
 
 class UPlayerLOSRasterComponent : public USceneComponent
 {
@@ -14173,7 +14177,8 @@ class UTemplateComponent : public USceneComponent
     bool bOnlyCollisions;                                                             // 0x01F8 (size: 0x1)
     FName OverrideCollisionProfile;                                                   // 0x01FC (size: 0x8)
     bool bUnidirectionalSockets;                                                      // 0x0204 (size: 0x1)
-    TArray<class UActorComponent*> SpawnedComponents;                                 // 0x0208 (size: 0x10)
+    TSubclassOf<class AActor> OnlyIncludeOn;                                          // 0x0208 (size: 0x8)
+    TArray<class UActorComponent*> SpawnedComponents;                                 // 0x0210 (size: 0x10)
 
 }; // Size: 0x220
 

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchConnectorT1_C : AFortConnector
+---@field TrenchConnectorBuildGhostSockets UTemplateComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field TrenchConnectorCommonT1T2 UTemplateComponent
 ---@field TrenchConnectorCommon UTemplateComponent

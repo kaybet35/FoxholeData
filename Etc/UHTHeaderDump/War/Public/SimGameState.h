@@ -87,6 +87,9 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bIsPatchRequired;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    bool bIsShortWar;
+    
 public:
     ASimGameState(const FObjectInitializer& ObjectInitializer);
 

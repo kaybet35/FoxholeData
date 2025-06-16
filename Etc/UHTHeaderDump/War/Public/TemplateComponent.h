@@ -4,6 +4,7 @@
 #include "Templates/SubclassOf.h"
 #include "TemplateComponent.generated.h"
 
+class AActor;
 class ATemplate;
 class UActorComponent;
 
@@ -22,6 +23,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     bool bUnidirectionalSockets;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AActor> OnlyIncludeOn;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, Transient, meta=(AllowPrivateAccess=true))
     TArray<UActorComponent*> SpawnedComponents;

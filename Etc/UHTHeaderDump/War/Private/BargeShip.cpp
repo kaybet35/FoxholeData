@@ -26,8 +26,6 @@ ABargeShip::ABargeShip(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->UndockingObstructionCheckVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("UndockingObstructionCheck"));
     this->ShippableUseComponent = NULL;
     this->StarterFuelNormalizedOverride = 0.00f;
-    this->KillVolume->SetupAttachment(RootComponent);
-    this->WorkVolume->SetupAttachment(RootComponent);
     this->BaseMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->RopeMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->TransferLocation->SetupAttachment(RootComponent);
@@ -35,6 +33,8 @@ ABargeShip::ABargeShip(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->UndockingObstructionCheckVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->RampDriveVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->WaterDriveLoop->SetupAttachment(RootComponent);
+    this->KillVolume->SetupAttachment(RootComponent);
+    this->WorkVolume->SetupAttachment(RootComponent);
 }
 
 void ABargeShip::ServerToggleRamp_Implementation() {

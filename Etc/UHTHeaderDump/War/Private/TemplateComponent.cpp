@@ -4,6 +4,7 @@ UTemplateComponent::UTemplateComponent(const FObjectInitializer& ObjectInitializ
     this->TemplateActor = NULL;
     this->bOnlyCollisions = false;
     this->bUnidirectionalSockets = false;
+    this->OnlyIncludeOn = NULL;
 }
 
 
