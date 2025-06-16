@@ -11,8 +11,8 @@ AEmplacedWeapon::AEmplacedWeapon(const FObjectInitializer& ObjectInitializer) : 
     this->Mesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("SkeletalMesh"));
     this->FoundationMesh = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("FoundationMesh"));
     this->StashedAmmo = 0;
-    this->Mesh->SetupAttachment(RootComponent);
     this->FoundationMesh->SetupAttachment(RootComponent);
+    this->Mesh->SetupAttachment(RootComponent);
 }
 
 void AEmplacedWeapon::OnRep_StashedAmmo() {

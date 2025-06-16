@@ -11,7 +11,6 @@
 ---@field InputMesh0 UStaticMeshComponent
 ---@field PipeInput0 UBuildSocketComponent
 ---@field FortFlameT2BreachedWalls UTemplateComponent
----@field FortFlameT2T3Mods UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommonDirtT2 UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent

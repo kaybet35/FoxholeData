@@ -3318,6 +3318,20 @@ struct FPlayerActivity
 
 }; // Size: 0x38
 
+struct FPlayerAdjustment
+{
+    FVector NewLocation;                                                              // 0x0000 (size: 0xC)
+    FVector NewVelocity;                                                              // 0x000C (size: 0xC)
+    class UPrimitiveComponent* NewBase;                                               // 0x0018 (size: 0x8)
+    FName NewBaseBoneName;                                                            // 0x0020 (size: 0x8)
+    bool bHasBase;                                                                    // 0x0028 (size: 0x1)
+    bool bBaseRelativePosition;                                                       // 0x0029 (size: 0x1)
+    bool bBaseRelativeVelocity;                                                       // 0x002A (size: 0x1)
+    uint8 ServerMovementMode;                                                         // 0x002B (size: 0x1)
+    uint8 QuantizedStagger;                                                           // 0x002C (size: 0x1)
+
+}; // Size: 0x30
+
 struct FPlayerBan
 {
     int64 BanLiftTimeUnix;                                                            // 0x0000 (size: 0x8)
@@ -7378,6 +7392,10 @@ class ACraneMarker : public AActor
 
 }; // Size: 0x248
 
+class ACraneRailwayTrack : public ARailwayTrack
+{
+}; // Size: 0x8C0
+
 class ACrater : public ABuildableStructure
 {
     TArray<FCraterMeshStop> MeshStops;                                                // 0x07F0 (size: 0x10)
@@ -9050,7 +9068,7 @@ class APipelineValve : public ATeamStructure
 
 class APlayerCharacter : public ASimCharacter
 {
-}; // Size: 0x1700
+}; // Size: 0x16F0
 
 class APlayerImposter : public ASimVehicle
 {
@@ -9704,103 +9722,103 @@ class ASimCharacter : public AWarCharacter
     uint8 bIsWearingGasMask;                                                          // 0x10B0 (size: 0x1)
     uint8 bUsesDynamicMaterials;                                                      // 0x10B0 (size: 0x1)
     EUniformType UniformType;                                                         // 0x10B4 (size: 0x1)
-    TEnumAsByte<EPhysicalSurface> CurrentSurfaceType;                                 // 0x1149 (size: 0x1)
-    TArray<FSurfaceMovementData> SurfaceMovementModifiers;                            // 0x1158 (size: 0x10)
-    class USkeletalMeshComponent* Head;                                               // 0x1168 (size: 0x8)
-    class USkeletalMeshComponent* Hands;                                              // 0x1170 (size: 0x8)
-    class USkeletalMeshComponent* Legs;                                               // 0x1178 (size: 0x8)
-    class USkeletalMeshComponent* Back;                                               // 0x1180 (size: 0x8)
-    class USkeletalMeshComponent* Helmet;                                             // 0x1188 (size: 0x8)
-    class USkeletalMeshComponent* EquippedItemMesh;                                   // 0x1190 (size: 0x8)
-    class USkeletalMeshComponent* GasMaskMesh;                                        // 0x1198 (size: 0x8)
-    class USkeletalMeshComponent* AccessoryMesh;                                      // 0x11A0 (size: 0x8)
-    class USceneComponent* Muzzle_Standing;                                           // 0x11A8 (size: 0x8)
-    class USceneComponent* Muzzle_Crouched;                                           // 0x11B0 (size: 0x8)
-    class USceneComponent* Muzzle_Prone;                                              // 0x11B8 (size: 0x8)
-    class UStaticMeshComponent* GroundEquippedItemMesh;                               // 0x11C0 (size: 0x8)
-    class UItemHolderComponent* ItemHolder;                                           // 0x11C8 (size: 0x8)
-    class USphereComponent* SuppressionSphere;                                        // 0x11D0 (size: 0x8)
-    TArray<FItemInstance> ItemHolderItems;                                            // 0x11D8 (size: 0x10)
-    class UEquipmentHolderComponent* EquipmentItemHolder;                             // 0x11E8 (size: 0x8)
-    TArray<FItemInstance> EquipmentItemHolderItems;                                   // 0x11F0 (size: 0x10)
-    class UParticleSystemComponent* SwimmingPS;                                       // 0x1208 (size: 0x8)
-    class UParticleSystemComponent* EnterWaterPS;                                     // 0x1210 (size: 0x8)
-    class UAudioComponent* SwimmingSFX;                                               // 0x1218 (size: 0x8)
-    class UAudioComponent* EnterWaterSFX;                                             // 0x1220 (size: 0x8)
-    ECharacterActivityState CharacterActivityStateInternal;                           // 0x1228 (size: 0x1)
-    float Health;                                                                     // 0x1238 (size: 0x4)
-    uint8 ReplicatedItemEncumbrance;                                                  // 0x123C (size: 0x1)
-    class AActor* LastMovementBase;                                                   // 0x1240 (size: 0x8)
-    float MeleeMinDamage;                                                             // 0x1274 (size: 0x4)
-    float MeleeMaxDamage;                                                             // 0x1278 (size: 0x4)
-    TSubclassOf<class UDamageType> MeleeDamageType;                                   // 0x1280 (size: 0x8)
-    TSubclassOf<class AImpactEffect> MeleeImpactEffect;                               // 0x1288 (size: 0x8)
-    class USoundCue* MeleeAttackSound;                                                // 0x1290 (size: 0x8)
-    float SwimmingBuoyancy;                                                           // 0x1298 (size: 0x4)
-    float DrowningBuoyancy;                                                           // 0x129C (size: 0x4)
-    float MaxStamina;                                                                 // 0x12A0 (size: 0x4)
-    float IdleStaminaRestoreRate;                                                     // 0x12A4 (size: 0x4)
-    float IdleStaminaRestoreDelay;                                                    // 0x12A8 (size: 0x4)
-    float GasMaskStaminaRestoreRate;                                                  // 0x12AC (size: 0x4)
-    float SuppressionStaminaRegenModifier;                                            // 0x12B0 (size: 0x4)
-    float StaminaDrainExponent;                                                       // 0x12B4 (size: 0x4)
-    float AddedSprintingStaminaDrain;                                                 // 0x12B8 (size: 0x4)
-    float AddedFloodedStaminaDrain;                                                   // 0x12BC (size: 0x4)
-    float AddedBlockingStaminaDrain;                                                  // 0x12C0 (size: 0x4)
-    float AddedChargingStaminaDrain;                                                  // 0x12C4 (size: 0x4)
-    float AddedDeadlyGasStaminaDrain;                                                 // 0x12C8 (size: 0x4)
-    float MeleeStaminaCostNormalized;                                                 // 0x12CC (size: 0x4)
-    float SwimmingStaminaDrainRate;                                                   // 0x12D0 (size: 0x4)
-    float SwimmingStaminaDrainDepthCutoff;                                            // 0x12D4 (size: 0x4)
-    float ClimbingDepthCutoff;                                                        // 0x12D8 (size: 0x4)
-    float RagdollInWaterLinearDamping;                                                // 0x12DC (size: 0x4)
-    float RagdollOutOfWaterLinearDamping;                                             // 0x12E0 (size: 0x4)
-    float StabilityMovementDecayRate;                                                 // 0x1300 (size: 0x4)
-    float StabilityDecayMovementSpeed;                                                // 0x1304 (size: 0x4)
-    float StabilityYawDecayRate;                                                      // 0x1308 (size: 0x4)
-    float StabilityYawDecayTime;                                                      // 0x130C (size: 0x4)
-    float StabilityGainRates;                                                         // 0x1310 (size: 0x10)
-    float HealTimer;                                                                  // 0x1338 (size: 0x4)
-    bool BleedingEnabled;                                                             // 0x1388 (size: 0x1)
-    float BleedDamagePerSecond;                                                       // 0x138C (size: 0x4)
-    float BleedMinDamageReq;                                                          // 0x1390 (size: 0x4)
-    float StaggerMinDamageReq;                                                        // 0x1394 (size: 0x4)
-    class UParticleSystem* BleedingEffectTemplate;                                    // 0x1398 (size: 0x8)
-    class UParticleSystemComponent* SpawnedBleedingEffect;                            // 0x13A0 (size: 0x8)
-    uint8 bIsEffectedByDeadlyGas;                                                     // 0x13B8 (size: 0x1)
-    uint8 bIsBleeding;                                                                // 0x13B8 (size: 0x1)
-    EZombieType ZombieType;                                                           // 0x13D4 (size: 0x1)
-    float WoundedTimeRemaining;                                                       // 0x13D8 (size: 0x4)
-    float ZombieMeleeReach;                                                           // 0x13E0 (size: 0x4)
-    TSubclassOf<class AImpactEffect> ZombieMeleeImpactEffect;                         // 0x13E8 (size: 0x8)
-    class USoundCue* ZombieDeathSound;                                                // 0x13F0 (size: 0x8)
-    float ZombieHitRadius;                                                            // 0x13F8 (size: 0x4)
-    float ZombieHitHalfHeight;                                                        // 0x13FC (size: 0x4)
-    class ASimCharacter* CarryingPlayer;                                              // 0x1418 (size: 0x8)
-    TWeakObjectPtr<class AController> LastBurningHitInstigator;                       // 0x1440 (size: 0x8)
-    float BlockingMaxSpeedModifier;                                                   // 0x1458 (size: 0x4)
-    float ChargingMaxSpeedModifier;                                                   // 0x145C (size: 0x4)
-    float AimingMaxSpeedModifier;                                                     // 0x1460 (size: 0x4)
-    bool bDisablePlayerFogOfWar;                                                      // 0x1464 (size: 0x1)
-    float AlwaysVisibleRadius;                                                        // 0x1468 (size: 0x4)
-    int32 AimRadius;                                                                  // 0x146C (size: 0x4)
-    int32 ScopeRadius;                                                                // 0x1470 (size: 0x4)
-    FUITargetingInfo LastUITargetingInfo;                                             // 0x1474 (size: 0x54)
-    float EffectiveBlockingMaxDeviation;                                              // 0x15AC (size: 0x4)
-    FVector2D_NetQuantize YawPitchPacked;                                             // 0x15B0 (size: 0xC)
-    class UPlayerCameraRigComponent* CameraRigComponent;                              // 0x15C0 (size: 0x8)
-    class UCameraComponent* TopDownCameraComponent;                                   // 0x15C8 (size: 0x8)
-    class UParticleSystemComponent* ScopePS;                                          // 0x15D0 (size: 0x8)
-    class UPostProcessComponent* LOSPostProcess;                                      // 0x15D8 (size: 0x8)
-    class UPlayerLOSRasterComponent* LOSRasterComponent;                              // 0x15E0 (size: 0x8)
-    TSubclassOf<class UCameraShake> SprintCameraShake;                                // 0x15E8 (size: 0x8)
-    class UStaticMeshComponent* GrenadeAimMesh;                                       // 0x15F0 (size: 0x8)
-    class USceneComponent* Grip_Standing;                                             // 0x15F8 (size: 0x8)
-    class USceneComponent* Grip_Crouched;                                             // 0x1600 (size: 0x8)
-    class USceneComponent* Grip_Prone;                                                // 0x1608 (size: 0x8)
-    class UMaterialParameterCollection* RegionBoundaryParamCollection;                // 0x1610 (size: 0x8)
-    uint8 bIsInScopeMode;                                                             // 0x16C0 (size: 0x1)
-    FDateTime OfflineExpiryTime;                                                      // 0x16C8 (size: 0x8)
+    TEnumAsByte<EPhysicalSurface> CurrentSurfaceType;                                 // 0x1145 (size: 0x1)
+    TArray<FSurfaceMovementData> SurfaceMovementModifiers;                            // 0x1150 (size: 0x10)
+    class USkeletalMeshComponent* Head;                                               // 0x1160 (size: 0x8)
+    class USkeletalMeshComponent* Hands;                                              // 0x1168 (size: 0x8)
+    class USkeletalMeshComponent* Legs;                                               // 0x1170 (size: 0x8)
+    class USkeletalMeshComponent* Back;                                               // 0x1178 (size: 0x8)
+    class USkeletalMeshComponent* Helmet;                                             // 0x1180 (size: 0x8)
+    class USkeletalMeshComponent* EquippedItemMesh;                                   // 0x1188 (size: 0x8)
+    class USkeletalMeshComponent* GasMaskMesh;                                        // 0x1190 (size: 0x8)
+    class USkeletalMeshComponent* AccessoryMesh;                                      // 0x1198 (size: 0x8)
+    class USceneComponent* Muzzle_Standing;                                           // 0x11A0 (size: 0x8)
+    class USceneComponent* Muzzle_Crouched;                                           // 0x11A8 (size: 0x8)
+    class USceneComponent* Muzzle_Prone;                                              // 0x11B0 (size: 0x8)
+    class UStaticMeshComponent* GroundEquippedItemMesh;                               // 0x11B8 (size: 0x8)
+    class UItemHolderComponent* ItemHolder;                                           // 0x11C0 (size: 0x8)
+    class USphereComponent* SuppressionSphere;                                        // 0x11C8 (size: 0x8)
+    TArray<FItemInstance> ItemHolderItems;                                            // 0x11D0 (size: 0x10)
+    class UEquipmentHolderComponent* EquipmentItemHolder;                             // 0x11E0 (size: 0x8)
+    TArray<FItemInstance> EquipmentItemHolderItems;                                   // 0x11E8 (size: 0x10)
+    class UParticleSystemComponent* SwimmingPS;                                       // 0x1200 (size: 0x8)
+    class UParticleSystemComponent* EnterWaterPS;                                     // 0x1208 (size: 0x8)
+    class UAudioComponent* SwimmingSFX;                                               // 0x1210 (size: 0x8)
+    class UAudioComponent* EnterWaterSFX;                                             // 0x1218 (size: 0x8)
+    ECharacterActivityState CharacterActivityStateInternal;                           // 0x1220 (size: 0x1)
+    float Health;                                                                     // 0x1230 (size: 0x4)
+    uint8 ReplicatedItemEncumbrance;                                                  // 0x1234 (size: 0x1)
+    class AActor* LastMovementBase;                                                   // 0x1238 (size: 0x8)
+    float MeleeMinDamage;                                                             // 0x126C (size: 0x4)
+    float MeleeMaxDamage;                                                             // 0x1270 (size: 0x4)
+    TSubclassOf<class UDamageType> MeleeDamageType;                                   // 0x1278 (size: 0x8)
+    TSubclassOf<class AImpactEffect> MeleeImpactEffect;                               // 0x1280 (size: 0x8)
+    class USoundCue* MeleeAttackSound;                                                // 0x1288 (size: 0x8)
+    float SwimmingBuoyancy;                                                           // 0x1290 (size: 0x4)
+    float DrowningBuoyancy;                                                           // 0x1294 (size: 0x4)
+    float MaxStamina;                                                                 // 0x1298 (size: 0x4)
+    float IdleStaminaRestoreRate;                                                     // 0x129C (size: 0x4)
+    float IdleStaminaRestoreDelay;                                                    // 0x12A0 (size: 0x4)
+    float GasMaskStaminaRestoreRate;                                                  // 0x12A4 (size: 0x4)
+    float SuppressionStaminaRegenModifier;                                            // 0x12A8 (size: 0x4)
+    float StaminaDrainExponent;                                                       // 0x12AC (size: 0x4)
+    float AddedSprintingStaminaDrain;                                                 // 0x12B0 (size: 0x4)
+    float AddedFloodedStaminaDrain;                                                   // 0x12B4 (size: 0x4)
+    float AddedBlockingStaminaDrain;                                                  // 0x12B8 (size: 0x4)
+    float AddedChargingStaminaDrain;                                                  // 0x12BC (size: 0x4)
+    float AddedDeadlyGasStaminaDrain;                                                 // 0x12C0 (size: 0x4)
+    float MeleeStaminaCostNormalized;                                                 // 0x12C4 (size: 0x4)
+    float SwimmingStaminaDrainRate;                                                   // 0x12C8 (size: 0x4)
+    float SwimmingStaminaDrainDepthCutoff;                                            // 0x12CC (size: 0x4)
+    float ClimbingDepthCutoff;                                                        // 0x12D0 (size: 0x4)
+    float RagdollInWaterLinearDamping;                                                // 0x12D4 (size: 0x4)
+    float RagdollOutOfWaterLinearDamping;                                             // 0x12D8 (size: 0x4)
+    float StabilityMovementDecayRate;                                                 // 0x12F8 (size: 0x4)
+    float StabilityDecayMovementSpeed;                                                // 0x12FC (size: 0x4)
+    float StabilityYawDecayRate;                                                      // 0x1300 (size: 0x4)
+    float StabilityYawDecayTime;                                                      // 0x1304 (size: 0x4)
+    float StabilityGainRates;                                                         // 0x1308 (size: 0x10)
+    float HealTimer;                                                                  // 0x1330 (size: 0x4)
+    bool BleedingEnabled;                                                             // 0x1380 (size: 0x1)
+    float BleedDamagePerSecond;                                                       // 0x1384 (size: 0x4)
+    float BleedMinDamageReq;                                                          // 0x1388 (size: 0x4)
+    float StaggerMinDamageReq;                                                        // 0x138C (size: 0x4)
+    class UParticleSystem* BleedingEffectTemplate;                                    // 0x1390 (size: 0x8)
+    class UParticleSystemComponent* SpawnedBleedingEffect;                            // 0x1398 (size: 0x8)
+    uint8 bIsEffectedByDeadlyGas;                                                     // 0x13B0 (size: 0x1)
+    uint8 bIsBleeding;                                                                // 0x13B0 (size: 0x1)
+    EZombieType ZombieType;                                                           // 0x13CC (size: 0x1)
+    float WoundedTimeRemaining;                                                       // 0x13D0 (size: 0x4)
+    float ZombieMeleeReach;                                                           // 0x13D8 (size: 0x4)
+    TSubclassOf<class AImpactEffect> ZombieMeleeImpactEffect;                         // 0x13E0 (size: 0x8)
+    class USoundCue* ZombieDeathSound;                                                // 0x13E8 (size: 0x8)
+    float ZombieHitRadius;                                                            // 0x13F0 (size: 0x4)
+    float ZombieHitHalfHeight;                                                        // 0x13F4 (size: 0x4)
+    class ASimCharacter* CarryingPlayer;                                              // 0x1410 (size: 0x8)
+    TWeakObjectPtr<class AController> LastBurningHitInstigator;                       // 0x1438 (size: 0x8)
+    float BlockingMaxSpeedModifier;                                                   // 0x1450 (size: 0x4)
+    float ChargingMaxSpeedModifier;                                                   // 0x1454 (size: 0x4)
+    float AimingMaxSpeedModifier;                                                     // 0x1458 (size: 0x4)
+    bool bDisablePlayerFogOfWar;                                                      // 0x145C (size: 0x1)
+    float AlwaysVisibleRadius;                                                        // 0x1460 (size: 0x4)
+    int32 AimRadius;                                                                  // 0x1464 (size: 0x4)
+    int32 ScopeRadius;                                                                // 0x1468 (size: 0x4)
+    FUITargetingInfo LastUITargetingInfo;                                             // 0x146C (size: 0x54)
+    float EffectiveBlockingMaxDeviation;                                              // 0x15A4 (size: 0x4)
+    FVector2D_NetQuantize YawPitchPacked;                                             // 0x15A8 (size: 0xC)
+    class UPlayerCameraRigComponent* CameraRigComponent;                              // 0x15B8 (size: 0x8)
+    class UCameraComponent* TopDownCameraComponent;                                   // 0x15C0 (size: 0x8)
+    class UParticleSystemComponent* ScopePS;                                          // 0x15C8 (size: 0x8)
+    class UPostProcessComponent* LOSPostProcess;                                      // 0x15D0 (size: 0x8)
+    class UPlayerLOSRasterComponent* LOSRasterComponent;                              // 0x15D8 (size: 0x8)
+    TSubclassOf<class UCameraShake> SprintCameraShake;                                // 0x15E0 (size: 0x8)
+    class UStaticMeshComponent* GrenadeAimMesh;                                       // 0x15E8 (size: 0x8)
+    class USceneComponent* Grip_Standing;                                             // 0x15F0 (size: 0x8)
+    class USceneComponent* Grip_Crouched;                                             // 0x15F8 (size: 0x8)
+    class USceneComponent* Grip_Prone;                                                // 0x1600 (size: 0x8)
+    class UMaterialParameterCollection* RegionBoundaryParamCollection;                // 0x1608 (size: 0x8)
+    uint8 bIsInScopeMode;                                                             // 0x16B8 (size: 0x1)
+    FDateTime OfflineExpiryTime;                                                      // 0x16C0 (size: 0x8)
 
     void SlowTick();
     void ServerUseShipHatch(class UHatchComponent* HatchComponent);
@@ -9847,9 +9865,9 @@ class ASimCharacter : public AWarCharacter
     void OnRep_CurrentOccupiedStructure();
     void OnRep_CharacterActivityState();
     void MulticastSpawnMeleeHitEffects(FHitNotify SimulatedHitNotify);
+    void MulticastSetStagger(const uint8 InStagger);
     void MulticastSetNormalizedStamina(const float InNormalizedStamina);
     void MulticastOnUniformMitigatedDamage(EDamageType DamageType);
-    void MulticastApplyNonFatalHit(const float InStagger);
     void ClientVehicleSeatSwitched(bool bIsDriver, class ASimVehicle* Vehicle);
     void ClientTraceActivity(FActivityStateDebugTrace NewTrace);
     void ClientSyncActivityStateSequence(uint8 CurrentSequenceNumber, int8 HeldItemIndex);
@@ -9863,6 +9881,7 @@ class ASimCharacter : public AWarCharacter
     void ClientCarryWoundedSetupMovement(class ASimCharacter* WoundedCharacter, bool bBeganCarrying);
     void ClientCannonLaunch(const FVector2D_NetQuantize LaunchVelocity);
     void ClientBeginWoundedState();
+    void ClientAdjustPositionPlayer(float Timestamp, const FPlayerAdjustment& Adjustment);
     void ClientAddSuppression(const float SuppressAmount);
     void ClientAddStability(const float StabilityAmount);
     void ClientAckActivityState(uint8 SequenceNumber);
@@ -9871,7 +9890,7 @@ class ASimCharacter : public AWarCharacter
     void BPUpdateHeatVisuals(bool bState);
     void BPSetTeamVisuals(const int32 VisualTeamId);
     void BPCinematicDeath();
-}; // Size: 0x1700
+}; // Size: 0x16F0
 
 class ASimGameMode : public AWarGameMode
 {
@@ -9908,7 +9927,7 @@ class ASimGameState : public AWarGameState
     uint8 PrevWindDirection;                                                          // 0x039C (size: 0x1)
     float NextWindDirectionTime;                                                      // 0x03A0 (size: 0x4)
     uint8 NextWindDirection;                                                          // 0x03A4 (size: 0x1)
-    FQuantizedTimestamp ReplicatedServerTimestamp;                                    // 0x03B8 (size: 0x4)
+    FQuantizedTimestamp InitialReplicatedServerTimestamp;                             // 0x03B8 (size: 0x4)
     class ATechTree* ColonialTechTree;                                                // 0x03F0 (size: 0x8)
     class ATechTree* WardenTechTree;                                                  // 0x03F8 (size: 0x8)
     EFactionId ConquestWinner;                                                        // 0x0400 (size: 0x1)
@@ -9919,10 +9938,11 @@ class ASimGameState : public AWarGameState
 
     void OnRep_WorldWeatherState();
     void OnRep_WardenTechTree();
-    void OnRep_ReplicatedServerTimestamp();
+    void OnRep_InitialReplicatedServerTimestamp();
     void OnRep_GameplayFlags();
     void OnRep_ColonialTechTree();
     void MulticastToggleEarlyWarRestrictionOverride();
+    void MulticastServerTimestamp(FQuantizedTimestamp ServerTimestamp);
     void MulticastRemoveOfflinePlayerState(FString OnlineID);
     FVector2D GetWindVector();
 }; // Size: 0x728
@@ -13219,8 +13239,8 @@ class UPlayerCharacterMovementComponent : public UCharacterMovementComponent
 {
     float MaxWalkSpeedProne;                                                          // 0x06D0 (size: 0x4)
     float MaxLadderClimbingSpeed;                                                     // 0x06D4 (size: 0x4)
-    float ImmersionDepthHeightBias;                                                   // 0x0700 (size: 0x4)
-    float WaterFrictionCoefficient;                                                   // 0x0704 (size: 0x4)
+    float ImmersionDepthHeightBias;                                                   // 0x0704 (size: 0x4)
+    float WaterFrictionCoefficient;                                                   // 0x0708 (size: 0x4)
 
     void CapsuleEndOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
     void CapsuleBeginOverlap(class UPrimitiveComponent* OverlappedComp, class AActor* Other, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
@@ -14006,6 +14026,7 @@ class UStructureSeatComponent : public USeatComponent
 {
     FVector SafeSpawnOffset;                                                          // 0x0280 (size: 0xC)
     uint8 bProvidesFullCover;                                                         // 0x028C (size: 0x1)
+    uint8 bProvidesInvul;                                                             // 0x028C (size: 0x1)
     uint8 bTeleportBack;                                                              // 0x028C (size: 0x1)
     bool bCanOccupantSeeThroughEverything;                                            // 0x028D (size: 0x1)
     bool bCheckForPlayersOnOccupy;                                                    // 0x028E (size: 0x1)

@@ -29,7 +29,7 @@ void ASimGameState::OnRep_WorldWeatherState() {
 void ASimGameState::OnRep_WardenTechTree() {
 }
 
-void ASimGameState::OnRep_ReplicatedServerTimestamp() {
+void ASimGameState::OnRep_InitialReplicatedServerTimestamp() {
 }
 
 void ASimGameState::OnRep_GameplayFlags() {
@@ -39,6 +39,9 @@ void ASimGameState::OnRep_ColonialTechTree() {
 }
 
 void ASimGameState::MulticastToggleEarlyWarRestrictionOverride_Implementation() {
+}
+
+void ASimGameState::MulticastServerTimestamp_Implementation(FQuantizedTimestamp ServerTimestamp) {
 }
 
 void ASimGameState::MulticastRemoveOfflinePlayerState_Implementation(const FString& OnlineID) {
@@ -64,7 +67,7 @@ void ASimGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(ASimGameState, PrevWindDirection);
     DOREPLIFETIME(ASimGameState, NextWindDirectionTime);
     DOREPLIFETIME(ASimGameState, NextWindDirection);
-    DOREPLIFETIME(ASimGameState, ReplicatedServerTimestamp);
+    DOREPLIFETIME(ASimGameState, InitialReplicatedServerTimestamp);
     DOREPLIFETIME(ASimGameState, ColonialTechTree);
     DOREPLIFETIME(ASimGameState, WardenTechTree);
     DOREPLIFETIME(ASimGameState, ConquestWinner);

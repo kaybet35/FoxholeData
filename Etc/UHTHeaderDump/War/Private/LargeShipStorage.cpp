@@ -16,13 +16,13 @@ ALargeShipStorage::ALargeShipStorage(const FObjectInitializer& ObjectInitializer
     this->DeployingSFXLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("DeployingSFXLoop"));
     this->PulleyMovementSFXLoop = CreateDefaultSubobject<UAudioComponent>(TEXT("PulleyMovementSFXLoop"));
     this->CraneComponent = CreateDefaultSubobject<UCraneComponent>(TEXT("CraneComponent"));
+    this->DeployingSFXLoop->SetupAttachment(CraneMesh);
+    this->PulleyMovementSFXLoop->SetupAttachment(CraneMesh);
     this->CraneMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->BaseMesh->SetupAttachment(CraneMesh);
     this->RopeMesh->SetupAttachment(CraneMesh);
     this->ShippableCollision->SetupAttachment(CraneMesh);
     this->ArmMovementSFXLoop->SetupAttachment(CraneMesh);
-    this->DeployingSFXLoop->SetupAttachment(CraneMesh);
-    this->PulleyMovementSFXLoop->SetupAttachment(CraneMesh);
 }
 
 

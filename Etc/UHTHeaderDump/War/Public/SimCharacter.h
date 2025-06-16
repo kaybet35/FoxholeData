@@ -21,6 +21,7 @@
 #include "HitNotify.h"
 #include "ItemInstance.h"
 #include "MapIntelligenceInterface.h"
+#include "PlayerAdjustment.h"
 #include "RepPlayerMovement.h"
 #include "SurfaceMovementData.h"
 #include "Templates/SubclassOf.h"
@@ -653,6 +654,9 @@ protected:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void MulticastSpawnMeleeHitEffects(FHitNotify SimulatedHitNotify);
     
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    void MulticastSetStagger(const uint8 InStagger);
+    
 public:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void MulticastSetNormalizedStamina(const float InNormalizedStamina);
@@ -660,10 +664,6 @@ public:
 private:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void MulticastOnUniformMitigatedDamage(EDamageType DamageType);
-    
-protected:
-    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
-    void MulticastApplyNonFatalHit(const float InStagger);
     
 public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
@@ -714,6 +714,9 @@ protected:
     void ClientBeginWoundedState();
     
 public:
+    UFUNCTION(BlueprintCallable, Client, Unreliable)
+    void ClientAdjustPositionPlayer(float Timestamp, const FPlayerAdjustment& Adjustment);
+    
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientAddSuppression(const float SuppressAmount);
     

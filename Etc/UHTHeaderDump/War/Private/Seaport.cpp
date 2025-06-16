@@ -17,16 +17,16 @@ ASeaport::ASeaport(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->LadderLocationDock2 = CreateDefaultSubobject<USceneComponent>(TEXT("LadderLocationDock2"));
     this->LadderType = NULL;
     this->FlagMesh = CreateDefaultSubobject<UTeamFlagMeshComponent>(TEXT("FlagMesh"));
-    this->TransferLocation2->SetupAttachment(RootComponent);
-    this->CraneSpawnLocationComponent2->SetupAttachment(RootComponent);
-    this->ProxyLoadingDockComponent->SetupAttachment(RootComponent);
-    this->PassengerUnloadingArea1->SetupAttachment(RootComponent);
-    this->PassengerUnloadingArea2->SetupAttachment(RootComponent);
     this->LadderLocationSeaport1->SetupAttachment(RootComponent);
     this->LadderLocationSeaport2->SetupAttachment(RootComponent);
     this->LadderLocationDock1->SetupAttachment(RootComponent);
     this->LadderLocationDock2->SetupAttachment(RootComponent);
     this->FlagMesh->SetupAttachment(RootComponent);
+    this->TransferLocation2->SetupAttachment(RootComponent);
+    this->CraneSpawnLocationComponent2->SetupAttachment(RootComponent);
+    this->ProxyLoadingDockComponent->SetupAttachment(RootComponent);
+    this->PassengerUnloadingArea1->SetupAttachment(RootComponent);
+    this->PassengerUnloadingArea2->SetupAttachment(RootComponent);
 }
 
 

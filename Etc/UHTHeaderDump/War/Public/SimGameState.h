@@ -66,8 +66,8 @@ public:
     uint8 NextWindDirection;
     
 protected:
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ReplicatedServerTimestamp, meta=(AllowPrivateAccess=true))
-    FQuantizedTimestamp ReplicatedServerTimestamp;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_InitialReplicatedServerTimestamp, meta=(AllowPrivateAccess=true))
+    FQuantizedTimestamp InitialReplicatedServerTimestamp;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, ReplicatedUsing=OnRep_ColonialTechTree, meta=(AllowPrivateAccess=true))
     ATechTree* ColonialTechTree;
@@ -103,7 +103,7 @@ protected:
     void OnRep_WardenTechTree();
     
     UFUNCTION(BlueprintCallable)
-    void OnRep_ReplicatedServerTimestamp();
+    void OnRep_InitialReplicatedServerTimestamp();
     
     UFUNCTION(BlueprintCallable)
     void OnRep_GameplayFlags();
@@ -115,6 +115,11 @@ public:
     UFUNCTION(BlueprintCallable, NetMulticast, Reliable)
     void MulticastToggleEarlyWarRestrictionOverride();
     
+protected:
+    UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
+    void MulticastServerTimestamp(FQuantizedTimestamp ServerTimestamp);
+    
+public:
     UFUNCTION(BlueprintCallable, NetMulticast, Unreliable)
     void MulticastRemoveOfflinePlayerState(const FString& OnlineID);
     

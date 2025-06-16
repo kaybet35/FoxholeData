@@ -43,7 +43,7 @@ function ABPSulfurMine_C:UpdateVisuals_SlowTick() end
 function ABPSulfurMine_C:ExecuteUbergraph_BPSulfurMine(EntryPoint) end
 
 
----@class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482254
-UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482254 = {}
+---@class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482253
+UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482253 = {}
 
 

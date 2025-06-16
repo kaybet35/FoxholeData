@@ -1,6 +1,6 @@
 ---@meta
 
----@class ABPCraneRailTrackSpline_C : ARailwayTrack
+---@class ABPCraneRailTrackSpline_C : ACraneRailwayTrack
 ABPCraneRailTrackSpline_C = {}
 
 

@@ -9,7 +9,6 @@
 ---@field Roof UStaticMeshComponent
 ---@field FortFlame USkeletalMeshComponent
 ---@field FortFlameT3BreachWalls UTemplateComponent
----@field FortFlameT2T3Mods UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortFlameCommon UTemplateComponent

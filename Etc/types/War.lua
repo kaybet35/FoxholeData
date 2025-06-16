@@ -573,6 +573,10 @@ ACraneMarker = {}
 
 
 
+---@class ACraneRailwayTrack : ARailwayTrack
+ACraneRailwayTrack = {}
+
+
 ---@class ACrater : ABuildableStructure
 ---@field MeshStops TArray<FCraterMeshStop>
 ACrater = {}
@@ -3284,12 +3288,12 @@ function ASimCharacter:OnRep_CurrentOccupiedStructure() end
 function ASimCharacter:OnRep_CharacterActivityState() end
 ---@param SimulatedHitNotify FHitNotify
 function ASimCharacter:MulticastSpawnMeleeHitEffects(SimulatedHitNotify) end
+---@param InStagger uint8
+function ASimCharacter:MulticastSetStagger(InStagger) end
 ---@param InNormalizedStamina float
 function ASimCharacter:MulticastSetNormalizedStamina(InNormalizedStamina) end
 ---@param DamageType EDamageType
 function ASimCharacter:MulticastOnUniformMitigatedDamage(DamageType) end
----@param InStagger float
-function ASimCharacter:MulticastApplyNonFatalHit(InStagger) end
 ---@param bIsDriver boolean
 ---@param Vehicle ASimVehicle
 function ASimCharacter:ClientVehicleSeatSwitched(bIsDriver, Vehicle) end
@@ -3323,6 +3327,9 @@ function ASimCharacter:ClientCarryWoundedSetupMovement(WoundedCharacter, bBeganC
 ---@param LaunchVelocity FVector2D_NetQuantize
 function ASimCharacter:ClientCannonLaunch(LaunchVelocity) end
 function ASimCharacter:ClientBeginWoundedState() end
+---@param Timestamp float
+---@param Adjustment FPlayerAdjustment
+function ASimCharacter:ClientAdjustPositionPlayer(Timestamp, Adjustment) end
 ---@param SuppressAmount float
 function ASimCharacter:ClientAddSuppression(SuppressAmount) end
 ---@param StabilityAmount float
@@ -3375,7 +3382,7 @@ function ASimGameMode:HeadlessCommand(Command) end
 ---@field PrevWindDirection uint8
 ---@field NextWindDirectionTime float
 ---@field NextWindDirection uint8
----@field ReplicatedServerTimestamp FQuantizedTimestamp
+---@field InitialReplicatedServerTimestamp FQuantizedTimestamp
 ---@field ColonialTechTree ATechTree
 ---@field WardenTechTree ATechTree
 ---@field ConquestWinner EFactionId
@@ -3387,10 +3394,12 @@ ASimGameState = {}
 
 function ASimGameState:OnRep_WorldWeatherState() end
 function ASimGameState:OnRep_WardenTechTree() end
-function ASimGameState:OnRep_ReplicatedServerTimestamp() end
+function ASimGameState:OnRep_InitialReplicatedServerTimestamp() end
 function ASimGameState:OnRep_GameplayFlags() end
 function ASimGameState:OnRep_ColonialTechTree() end
 function ASimGameState:MulticastToggleEarlyWarRestrictionOverride() end
+---@param ServerTimestamp FQuantizedTimestamp
+function ASimGameState:MulticastServerTimestamp(ServerTimestamp) end
 ---@param OnlineID FString
 function ASimGameState:MulticastRemoveOfflinePlayerState(OnlineID) end
 ---@return FVector2D
@@ -8734,6 +8743,20 @@ FPipelineSystem = {}
 ---@field MaterialsGathered int32
 ---@field SuppliesDelivered int32
 FPlayerActivity = {}
+
+
+
+---@class FPlayerAdjustment
+---@field NewLocation FVector
+---@field NewVelocity FVector
+---@field NewBase UPrimitiveComponent
+---@field NewBaseBoneName FName
+---@field bHasBase boolean
+---@field bBaseRelativePosition boolean
+---@field bBaseRelativeVelocity boolean
+---@field ServerMovementMode uint8
+---@field QuantizedStagger uint8
+FPlayerAdjustment = {}
 
 
 
@@ -15143,6 +15166,7 @@ UStructureLayerComponent = {}
 ---@class UStructureSeatComponent : USeatComponent
 ---@field SafeSpawnOffset FVector
 ---@field bProvidesFullCover boolean
+---@field bProvidesInvul boolean
 ---@field bTeleportBack boolean
 ---@field bCanOccupantSeeThroughEverything boolean
 ---@field bCheckForPlayersOnOccupy boolean

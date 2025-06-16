@@ -43,7 +43,7 @@ class ABPSulfurMine_C : public AResourceMine
     void ExecuteUbergraph_BPSulfurMine(int32 EntryPoint);
 }; // Size: 0x971
 
-class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482254
+class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482253
 {
 }; // Size: 0x0
 

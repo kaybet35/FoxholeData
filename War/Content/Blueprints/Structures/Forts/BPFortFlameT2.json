@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFortFlameT2_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.48"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.46"
       }
     },
     "SuperStruct": {
@@ -37,15 +37,15 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:SideRight'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.26"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPFortFlameT2_C:RoofDirt'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.25"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortFlameT2_C:Roof'",
+        "ObjectName": "ObjectProperty'BPFortFlameT2_C:RoofDirt'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.24"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortFlameT2_C:Roof'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.23"
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:FortFlame'",
@@ -53,27 +53,23 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:InputDecal0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.19"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.18"
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:InputMesh0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.20"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.19"
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:PipeInput0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.23"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.22"
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:FortFlameT2BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.17"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortFlameT2_C:FortFlameT2T3Mods'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.18"
-      },
-      {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:LocationMultiplexedMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.21"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.20"
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:FortCommonDirtT2'",
@@ -89,7 +85,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:LocationMultiplexedMeshFloor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.22"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.21"
       },
       {
         "ObjectName": "ObjectProperty'BPFortFlameT2_C:Floor'",
@@ -116,7 +112,7 @@
     "Properties": {
       "PowerConsumerComponent": {
         "ObjectName": "PowerConsumerComponent'Default__BPFortFlameT2_C:PowerConsumerComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.28"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.27"
       },
       "WaterTank": {
         "FuelCapacity": 2000.0,
@@ -125,7 +121,7 @@
       },
       "SprinklerVFXComponent": {
         "ObjectName": "ParticleSystemComponent'Default__BPFortFlameT2_C:SprinklerVFX'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.26"
       },
       "PumpingLoopComponent": {
         "ObjectName": "AudioComponent'Default__BPFortFlameT2_C:PumpingLoopSFX'",
@@ -133,6 +129,7 @@
       },
       "PipeInputAssociatedSocketName": "RightFortSocket",
       "DispenseAmountPerSec": 2.0,
+      "bCanBeFlaggedForDisruptivePlacement": true,
       "Tier": "EFortTier::T2",
       "BuildGhostClass": null,
       "BaseStructureClass": {
@@ -204,7 +201,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortFlameT2_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.55"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.53"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPFortFlameT2_C:StructureArrow'",
@@ -490,18 +487,6 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortFlameT2T3Mods",
-    "Outer": "BPFortFlameT2_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'TemplateComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
     "Name": "InputDecal0",
     "Outer": "BPFortFlameT2_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -644,7 +629,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFortFlameT2_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.29"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.28"
       },
       "VariableGuid": "1144E758-45F21128-659C63A0-98B6F24C",
       "InternalVariableName": "DefaultSceneRoot"
@@ -663,14 +648,14 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortFlameT2_C:Roof_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.52"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.50"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.36"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.35"
         }
       ],
       "VariableGuid": "FCEA48FF-46A2C7D1-BCB7E39C-22B22A84",
@@ -690,7 +675,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortFlameT2_C:InputMesh0_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.51"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.49"
       },
       "VariableGuid": "58121F1D-48F9D0EE-5114238B-EA2B5C67",
       "InternalVariableName": "InputMesh0"
@@ -709,7 +694,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortCommonT2Corners_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.58"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.56"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -749,7 +734,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortFlameT2BreachedWalls_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.61"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.59"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -770,7 +755,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortFlameT2_C:RoofDirt_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.53"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.51"
       },
       "VariableGuid": "85DD5C97-4A8F2168-DA64D185-4B9369BA",
       "InternalVariableName": "RoofDirt"
@@ -789,7 +774,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortFlameT2_C:SideRight_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.54"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.52"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -810,7 +795,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortFlameCommonThreeWallsMods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.60"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.58"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -831,7 +816,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortFlameCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.59"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.57"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -852,7 +837,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortCommonDefenseMods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.56"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.54"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -873,7 +858,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortCommonDirtT2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.57"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.55"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -894,7 +879,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortFlameT2_C:Floor_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.50"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.48"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -915,7 +900,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPFortFlameT2_C:FortFlame_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.49"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.47"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -963,27 +948,6 @@
   },
   {
     "Type": "SCS_Node",
-    "Name": "SCS_Node_8",
-    "Outer": "SimpleConstructionScript_0",
-    "Class": "UScriptClass'SCS_Node'",
-    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "ComponentClass": {
-        "ObjectName": "Class'TemplateComponent'",
-        "ObjectPath": "/Script/War"
-      },
-      "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPFortFlameT2_C:FortFlameT2T3Mods_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.62"
-      },
-      "ParentComponentOrVariableName": "StructureArrow",
-      "bIsParentComponentNative": true,
-      "VariableGuid": "6FF00C93-4D8492EE-233BDC95-236E9640",
-      "InternalVariableName": "FortFlameT2T3Mods"
-    }
-  },
-  {
-    "Type": "SCS_Node",
     "Name": "SCS_Node_9",
     "Outer": "SimpleConstructionScript_0",
     "Class": "UScriptClass'SCS_Node'",
@@ -1002,11 +966,11 @@
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.32"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.31"
         },
         {
           "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.34"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.33"
         }
       ],
       "VariableGuid": "227D0E33-48F4900B-6F9A4EB2-C36B8709",
@@ -1023,134 +987,126 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_40'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.41"
         },
         {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.44"
         },
         {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.35"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.38"
         },
         {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.37"
+        },
+        {
           "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_11'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.33"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.32"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_40'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.42"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_7'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.45"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.39"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.40"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_4'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.41"
         },
         {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.44"
         },
         {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_8'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.46"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_13'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.35"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_9'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.47"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_10'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.32"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_12'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.34"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_5'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.43"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.31"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_16'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.36"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_17'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.37"
-        },
-        {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_2'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.38"
         },
         {
-          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.39"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.40"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.43"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.34"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.45"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.31"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_12'",
           "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.33"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.42"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.30"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.35"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.36"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.37"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.32"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFortFlameT2_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.30"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2.29"
       }
     }
   },
@@ -1486,19 +1442,6 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortFlameT2BreachedWalls_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFortFlameT2BreachedWalls.1"
-      }
-    }
-  },
-  {
-    "Type": "TemplateComponent",
-    "Name": "FortFlameT2T3Mods_GEN_VARIABLE",
-    "Outer": "BPFortFlameT2_C",
-    "Class": "UScriptClass'TemplateComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortFlameT2T3Mods_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT2T3Mods.1"
       }
     }
   }

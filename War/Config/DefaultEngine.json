@@ -287,6 +287,56 @@ AltShared=(Type=FileSystem, ReadOnly=true, Clean=false, Flush=false, DeleteUnuse
 Pak=(Type=ReadPak, Filename=%GAMEDIR%DerivedDataCache/DDC.ddp)
 EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
 
+[/Script/UnrealEd.CookerSettings]
+bEnableCookOnTheSide=False
+bEnableBuildDDCInBackground=False
+bIterativeCookingForLaunchOn=False
+bIterativeCookingForFileCookContent=False
+bCookOnTheFlyForLaunchOn=False
+cook.displaymode=1
+bIgnoreIniSettingsOutOfDateForIteration=False
+bIgnoreScriptPackagesOutOfDateForIteration=False
+bCompileBlueprintsInDevelopmentMode=True
+BlueprintComponentDataCookingMethod=EnabledBlueprintsOnly
++ClassesExcludedOnDedicatedServer=WidgetBlueprint
++ClassesExcludedOnDedicatedServer=GroupActor
++ClassesExcludedOnDedicatedServer=MetaData
++ClassesExcludedOnDedicatedServer=ObjectRedirector
++ClassesExcludedOnDedicatedServer=NavMeshRenderingComponent
++ClassesExcludedOnDedicatedServer=ReflectionCaptureComponent
++ClassesExcludedOnDedicatedServer=TextRenderComponent
++ClassesExcludedOnDedicatedServer=Font
++ClassesExcludedOnDedicatedServer=InterpCurveEdSetup
++ClassesExcludedOnDedicatedServer=MaterialExpression
++ClassesExcludedOnDedicatedServer=MatineeActorCameraAnim
++ClassesExcludedOnDedicatedServer=ParticleEmitter
++ClassesExcludedOnDedicatedServer=ParticleLODLevel
++ClassesExcludedOnDedicatedServer=ParticleModule
++ClassesExcludedOnDedicatedServer=SubUVAnimation
++ClassesExcludedOnDedicatedServer=SoundNode
++ClassesExcludedOnDedicatedServer=GameplayEffectUIData
++ClassesExcludedOnDedicatedClient=WidgetBlueprint
++ClassesExcludedOnDedicatedClient=GroupActor
++ClassesExcludedOnDedicatedClient=MetaData
++ClassesExcludedOnDedicatedClient=ObjectRedirector
++ClassesExcludedOnDedicatedClient=InterpCurveEdSetup
++ClassesExcludedOnDedicatedClient=MatineeActorCameraAnim
++VersionedIntRValues=r.AllowStaticLighting
++VersionedIntRValues=r.GBuffer
++VersionedIntRValues=r.BasePassOutputsVelocity
++VersionedIntRValues=r.SelectiveBasePassOutputs
++VersionedIntRValues=r.DBuffer
++VersionedIntRValues=r.Shaders.KeepDebugInfo
++VersionedIntRValues=r.Shaders.Optimize
++VersionedIntRValues=r.CompileShadersForDevelopment
++VersionedIntRValues=r.MobileHDR
++VersionedIntRValues=r.UsePreExposure
+DefaultPVRTCQuality=1
+DefaultASTCQualityBySpeed=1
+DefaultASTCQualityBySize=3
+cook.AllowCookedDataInEditorBuilds=False
+bCookBlueprintComponentTemplateData=False
+
 [/Script/Engine.CollisionProfile]
 +Profiles=(Name="BarbedWire",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="For structures - Overlaps pawn only")
 +Profiles=(Name="BlockAll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="WorldStatic",CustomResponses=,HelpMessage="WorldStatic object that blocks all actors by default. All new custom channels will use its own default response. ")
@@ -341,7 +391,7 @@ EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
 +Profiles=(Name="Ragdoll",CollisionEnabled=QueryAndPhysics,bCanModify=False,ObjectTypeName="PhysicsBody",CustomResponses=((Channel="Pawn",Response=ECR_Ignore)),HelpMessage="Simulating Skeletal Mesh Component. All other channels will be set to default.")
 +Profiles=(Name="ResourceNoPawnCollision",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Ignore),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work"),(Channel="Excavate")),HelpMessage="On resources that the player and vehicles can clip through")
 +Profiles=(Name="ShipRoot",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="Vehicle",CustomResponses=((Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Overlap),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Ignore),(Channel="Work",Response=ECR_Overlap),(Channel="IceBlocker")),HelpMessage="Collision preset for ships.")
-+Profiles=(Name="ShipHullMesh",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap)),HelpMessage="Used for ship hull meshes negating the effects of water.")
++Profiles=(Name="ShipHullMesh",CollisionEnabled=QueryOnly,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="WorldStatic",Response=ECR_Ignore),(Channel="WorldDynamic",Response=ECR_Ignore),(Channel="Pawn",Response=ECR_Overlap),(Channel="Visibility",Response=ECR_Overlap),(Channel="Camera",Response=ECR_Overlap),(Channel="PhysicsBody",Response=ECR_Ignore),(Channel="Vehicle",Response=ECR_Overlap),(Channel="Destructible",Response=ECR_Ignore),(Channel="OverlapDowncast",Response=ECR_Ignore),(Channel="Projectile",Response=ECR_Overlap),(Channel="LandscapeAndWater",Response=ECR_Overlap)),HelpMessage="Used for ship hull meshes negating the effects of water.")
 +Profiles=(Name="ShootThroughDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Ignore)),HelpMessage="Needs description")
 +Profiles=(Name="ShootThroughProjectileDynamic",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldDynamic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap),(Channel="Projectile",Response=ECR_Ignore)),HelpMessage="Allow aiming, shooting, and projectiles")
 +Profiles=(Name="ShootThroughStatic",CollisionEnabled=QueryAndPhysics,bCanModify=True,ObjectTypeName="WorldStatic",CustomResponses=((Channel="Visibility",Response=ECR_Ignore),(Channel="Camera",Response=ECR_Overlap)),HelpMessage="Needs description")
@@ -403,53 +453,4 @@ EnginePak=(Type=ReadPak, Filename=../../../Engine/DerivedDataCache/DDC.ddp)
 +CollisionChannelRedirects=(OldName="VehicleMovement",NewName="Vehicle")
 +CollisionChannelRedirects=(OldName="PawnMovement",NewName="Pawn")
 
-[/Script/UnrealEd.CookerSettings]
-bEnableCookOnTheSide=False
-bEnableBuildDDCInBackground=False
-bIterativeCookingForLaunchOn=False
-bIterativeCookingForFileCookContent=False
-bCookOnTheFlyForLaunchOn=False
-cook.displaymode=1
-bIgnoreIniSettingsOutOfDateForIteration=False
-bIgnoreScriptPackagesOutOfDateForIteration=False
-bCompileBlueprintsInDevelopmentMode=True
-BlueprintComponentDataCookingMethod=EnabledBlueprintsOnly
-+ClassesExcludedOnDedicatedServer=WidgetBlueprint
-+ClassesExcludedOnDedicatedServer=GroupActor
-+ClassesExcludedOnDedicatedServer=MetaData
-+ClassesExcludedOnDedicatedServer=ObjectRedirector
-+ClassesExcludedOnDedicatedServer=NavMeshRenderingComponent
-+ClassesExcludedOnDedicatedServer=ReflectionCaptureComponent
-+ClassesExcludedOnDedicatedServer=TextRenderComponent
-+ClassesExcludedOnDedicatedServer=Font
-+ClassesExcludedOnDedicatedServer=InterpCurveEdSetup
-+ClassesExcludedOnDedicatedServer=MaterialExpression
-+ClassesExcludedOnDedicatedServer=MatineeActorCameraAnim
-+ClassesExcludedOnDedicatedServer=ParticleEmitter
-+ClassesExcludedOnDedicatedServer=ParticleLODLevel
-+ClassesExcludedOnDedicatedServer=ParticleModule
-+ClassesExcludedOnDedicatedServer=SubUVAnimation
-+ClassesExcludedOnDedicatedServer=SoundNode
-+ClassesExcludedOnDedicatedServer=GameplayEffectUIData
-+ClassesExcludedOnDedicatedClient=WidgetBlueprint
-+ClassesExcludedOnDedicatedClient=GroupActor
-+ClassesExcludedOnDedicatedClient=MetaData
-+ClassesExcludedOnDedicatedClient=ObjectRedirector
-+ClassesExcludedOnDedicatedClient=InterpCurveEdSetup
-+ClassesExcludedOnDedicatedClient=MatineeActorCameraAnim
-+VersionedIntRValues=r.AllowStaticLighting
-+VersionedIntRValues=r.GBuffer
-+VersionedIntRValues=r.BasePassOutputsVelocity
-+VersionedIntRValues=r.SelectiveBasePassOutputs
-+VersionedIntRValues=r.DBuffer
-+VersionedIntRValues=r.Shaders.KeepDebugInfo
-+VersionedIntRValues=r.Shaders.Optimize
-+VersionedIntRValues=r.CompileShadersForDevelopment
-+VersionedIntRValues=r.MobileHDR
-+VersionedIntRValues=r.UsePreExposure
-DefaultPVRTCQuality=1
-DefaultASTCQualityBySpeed=1
-DefaultASTCQualityBySize=3
-cook.AllowCookedDataInEditorBuilds=False
-bCookBlueprintComponentTemplateData=False
 

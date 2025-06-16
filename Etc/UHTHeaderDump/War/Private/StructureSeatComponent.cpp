@@ -4,6 +4,7 @@
 UStructureSeatComponent::UStructureSeatComponent(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {
     this->bReplicates = true;
     this->bProvidesFullCover = true;
+    this->bProvidesInvul = true;
     this->bTeleportBack = true;
     this->bCanOccupantSeeThroughEverything = false;
     this->bCheckForPlayersOnOccupy = false;

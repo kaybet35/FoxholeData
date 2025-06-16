@@ -31,7 +31,7 @@ class ABPComponentMine_C : public AResourceMine
     void ExecuteUbergraph_BPComponentMine(int32 EntryPoint);
 }; // Size: 0x909
 
-class UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482259
+class UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482258
 {
 }; // Size: 0x0
 

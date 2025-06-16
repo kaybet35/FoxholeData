@@ -150,7 +150,10 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Grip_Prone = CreateDefaultSubobject<USceneComponent>(TEXT("Grip_Prone"));
     this->RegionBoundaryParamCollection = NULL;
     this->bIsInScopeMode = false;
+    this->Grip_Standing->SetupAttachment(RootComponent);
+    this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Grip_Prone->SetupAttachment(RootComponent);
+    this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EnterWaterPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->SwimmingSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EnterWaterSFX->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -159,8 +162,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->LOSPostProcess->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->LOSRasterComponent->SetupAttachment(LOSPostProcess);
     this->GrenadeAimMesh->SetupAttachment(RootComponent);
-    this->Grip_Standing->SetupAttachment(RootComponent);
-    this->Grip_Crouched->SetupAttachment(RootComponent);
     this->Head->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Hands->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->Legs->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
@@ -173,7 +174,6 @@ ASimCharacter::ASimCharacter(const FObjectInitializer& ObjectInitializer) : Supe
     this->Muzzle_Prone->SetupAttachment(RootComponent);
     this->GroundEquippedItemMesh->SetupAttachment(RootComponent);
     this->SuppressionSphere->SetupAttachment(RootComponent);
-    this->SwimmingPS->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 void ASimCharacter::SlowTick() {
@@ -395,13 +395,13 @@ void ASimCharacter::OnRep_CharacterActivityState() {
 void ASimCharacter::MulticastSpawnMeleeHitEffects_Implementation(FHitNotify SimulatedHitNotify) {
 }
 
+void ASimCharacter::MulticastSetStagger_Implementation(const uint8 InStagger) {
+}
+
 void ASimCharacter::MulticastSetNormalizedStamina_Implementation(const float InNormalizedStamina) {
 }
 
 void ASimCharacter::MulticastOnUniformMitigatedDamage_Implementation(EDamageType DamageType) {
-}
-
-void ASimCharacter::MulticastApplyNonFatalHit_Implementation(const float InStagger) {
 }
 
 void ASimCharacter::ClientVehicleSeatSwitched_Implementation(bool bIsDriver, ASimVehicle* Vehicle) {
@@ -444,6 +444,9 @@ void ASimCharacter::ClientCannonLaunch_Implementation(const FVector2D_NetQuantiz
 }
 
 void ASimCharacter::ClientBeginWoundedState_Implementation() {
+}
+
+void ASimCharacter::ClientAdjustPositionPlayer_Implementation(float Timestamp, const FPlayerAdjustment& Adjustment) {
 }
 
 void ASimCharacter::ClientAddSuppression_Implementation(const float SuppressAmount) {
