@@ -30,7 +30,7 @@
 ---@field AnimGraphNode_StateMachine_17BE56274239925A0535D19605C4388F FAnimNode_StateMachine
 ---@field AnimGraphNode_SequencePlayer_6CEDCAD642CBF7D2EF6748B17E604431 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_3F711D8145A525AD901409A7338B8D3A FAnimNode_BlendListByBool
-UABPLandingShip_C = {}
+local UABPLandingShip_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABPLandingShip_C:AnimGraph(AnimGraph) end

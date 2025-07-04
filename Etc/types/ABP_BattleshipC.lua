@@ -60,7 +60,7 @@
 ---@field isAltGunner05Firing boolean
 ---@field isAltGunner06Firing boolean
 ---@field isAltGunner07Firing boolean
-UABP_BattleshipC_C = {}
+local UABP_BattleshipC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_BattleshipC_C:AnimGraph(AnimGraph) end

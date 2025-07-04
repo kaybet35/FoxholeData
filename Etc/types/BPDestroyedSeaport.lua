@@ -52,7 +52,7 @@
 ---@field SeaportSideway UStaticMeshComponent
 ---@field Handrail UStaticMeshComponent
 ---@field Seaport UStaticMeshComponent
-ABPDestroyedSeaport_C = {}
+local ABPDestroyedSeaport_C = {}
 
 
 

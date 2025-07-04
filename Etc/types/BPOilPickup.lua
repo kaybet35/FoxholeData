@@ -2,7 +2,7 @@
 
 ---@class ABPOilPickup_C : AGearPickup
 ---@field StaticMesh UStaticMeshComponent
-ABPOilPickup_C = {}
+local ABPOilPickup_C = {}
 
 
 

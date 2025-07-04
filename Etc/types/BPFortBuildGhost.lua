@@ -9,7 +9,7 @@
 ---@field RightFortSocket UBuildSocketComponent
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
-ABPFortBuildGhost_C = {}
+local ABPFortBuildGhost_C = {}
 
 
 

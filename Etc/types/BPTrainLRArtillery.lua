@@ -8,7 +8,7 @@
 ---@field RightExit USeatExitComponent
 ---@field RightTrigger USeatTriggerComponent
 ---@field UseVolume UBoxComponent
-ABPTrainLRArtillery_C = {}
+local ABPTrainLRArtillery_C = {}
 
 
 

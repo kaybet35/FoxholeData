@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_EC673E2F42DBE56ADDC0398127BD4CD3 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_C900A17A43B9C18A6EC7809DD702FE01 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_1782206A44C6DDCA5F99AC8239AC4031 FAnimNode_BlendSpacePlayer
-UABP_FieldModificationCenter_C = {}
+local UABP_FieldModificationCenter_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FieldModificationCenter_C:AnimGraph(AnimGraph) end

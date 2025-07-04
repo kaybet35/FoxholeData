@@ -17,7 +17,7 @@
 ---@field FVFSmalllCrate03 UStaticMeshComponent
 ---@field FVFSmalllCrate02 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityFactoryAmmoLargeShellFactory_C = {}
+local ABPFacilityFactoryAmmoLargeShellFactory_C = {}
 
 
 

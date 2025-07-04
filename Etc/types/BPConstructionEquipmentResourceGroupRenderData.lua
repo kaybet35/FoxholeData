@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPConstructionEquipmentResourceGroupRenderData_C : UResourceGroupRenderData
-UBPConstructionEquipmentResourceGroupRenderData_C = {}
+local UBPConstructionEquipmentResourceGroupRenderData_C = {}
 
 

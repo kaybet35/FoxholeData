@@ -30,7 +30,7 @@
 ---@field ConveyerTranslation float
 ---@field ConveyerMaterial UMaterialInstanceDynamic
 ---@field bIsProducingSFXActive boolean
-ABPScrapMine_C = {}
+local ABPScrapMine_C = {}
 
 function ABPScrapMine_C:ReceiveBeginPlay() end
 function ABPScrapMine_C:UpdateVisuals_FastTick() end

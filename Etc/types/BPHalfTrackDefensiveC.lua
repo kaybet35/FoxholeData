@@ -5,7 +5,7 @@
 ---@field TowHitchUse UTowHitchUseComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
 ---@field MainBodyTop USkeletalMeshComponent
-ABPHalfTrackDefensiveC_C = {}
+local ABPHalfTrackDefensiveC_C = {}
 
 ---@param IsOn boolean
 function ABPHalfTrackDefensiveC_C:BPOnVehicleOn(IsOn) end

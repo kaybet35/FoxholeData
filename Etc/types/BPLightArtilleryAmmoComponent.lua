@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLightArtilleryAmmoComponent_C : ULargeItemComponent
-UBPLightArtilleryAmmoComponent_C = {}
+local UBPLightArtilleryAmmoComponent_C = {}
 
 

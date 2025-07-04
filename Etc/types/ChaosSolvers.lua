@@ -5,7 +5,7 @@
 ---@field MinMass float
 ---@field MinSpeed float
 ---@field MinVolume float
-FSolverBreakingFilterSettings = {}
+local FSolverBreakingFilterSettings = {}
 
 
 
@@ -14,7 +14,7 @@ FSolverBreakingFilterSettings = {}
 ---@field MinMass float
 ---@field MinSpeed float
 ---@field MinImpulse float
-FSolverCollisionFilterSettings = {}
+local FSolverCollisionFilterSettings = {}
 
 
 
@@ -23,7 +23,7 @@ FSolverCollisionFilterSettings = {}
 ---@field MinMass float
 ---@field MinSpeed float
 ---@field MinVolume float
-FSolverTrailingFilterSettings = {}
+local FSolverTrailingFilterSettings = {}
 
 
 

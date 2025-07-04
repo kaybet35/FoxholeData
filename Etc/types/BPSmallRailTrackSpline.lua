@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSmallRailTrackSpline_C : ARailwayTrack
-ABPSmallRailTrackSpline_C = {}
+local ABPSmallRailTrackSpline_C = {}
 
 

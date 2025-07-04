@@ -17,7 +17,7 @@
 ---@field Decal UDecalComponent
 ---@field FacilityRocketBox4 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory1ShipAssembly_C = {}
+local ABPFacilityVehicleFactory1ShipAssembly_C = {}
 
 
 

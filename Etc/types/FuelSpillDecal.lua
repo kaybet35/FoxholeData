@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AFuelSpillDecal_C : ADecalActor
-AFuelSpillDecal_C = {}
+local AFuelSpillDecal_C = {}
 
 

@@ -150,7 +150,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWPubG1_C = {}
+local AUniqueWPubG1_C = {}
 
 
 

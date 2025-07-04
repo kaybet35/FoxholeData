@@ -12,7 +12,7 @@
 ---@field FrontSocket UBuildSocketComponent
 ---@field RightSocket UBuildSocketComponent
 ---@field LeftSocket UBuildSocketComponent
-ABPTrenchBuildGhost_C = {}
+local ABPTrenchBuildGhost_C = {}
 
 
 

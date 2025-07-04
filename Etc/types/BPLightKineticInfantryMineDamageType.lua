@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLightKineticInfantryMineDamageType_C : USimDamageType
-UBPLightKineticInfantryMineDamageType_C = {}
+local UBPLightKineticInfantryMineDamageType_C = {}
 
 

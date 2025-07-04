@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AUnexplodedOrdnance_C : AExplosive
-AUnexplodedOrdnance_C = {}
+local AUnexplodedOrdnance_C = {}
 
 

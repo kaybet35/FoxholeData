@@ -9,7 +9,7 @@
 ---@field Handrail UStaticMeshComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field Seaport UStaticMeshComponent
-ABPSeaportBuildSite_C = {}
+local ABPSeaportBuildSite_C = {}
 
 
 

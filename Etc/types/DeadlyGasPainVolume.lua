@@ -2,7 +2,7 @@
 
 ---@class ADeadlyGasPainVolume_C : AWarPainVolume
 ---@field DefaultSceneRoot USceneComponent
-ADeadlyGasPainVolume_C = {}
+local ADeadlyGasPainVolume_C = {}
 
 
 

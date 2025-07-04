@@ -20,7 +20,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field destroyedps UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPTruckLiquidC_C = {}
+local ABPTruckLiquidC_C = {}
 
 ---@param IsOn boolean
 function ABPTruckLiquidC_C:BPOnVehicleOn(IsOn) end

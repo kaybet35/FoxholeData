@@ -4,7 +4,7 @@
 ---@field TowHitchUse UTowHitchUseComponent
 ---@field Bumper UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPTruckDefensiveW_C = {}
+local ABPTruckDefensiveW_C = {}
 
 
 

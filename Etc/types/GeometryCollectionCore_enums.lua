@@ -1,5 +1,5 @@
 ---@enum EGeometryCollectionCacheType
-EGeometryCollectionCacheType = {
+local EGeometryCollectionCacheType = {
     None = 0,
     Record = 1,
     Play = 2,

@@ -15,7 +15,7 @@
 ---@field BoatHull UBoatHullComponent
 ---@field LandscapeOverlap UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchEmpCommon_C = {}
+local ABPTrenchEmpCommon_C = {}
 
 
 

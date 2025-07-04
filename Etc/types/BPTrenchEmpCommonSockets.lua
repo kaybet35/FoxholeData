@@ -10,7 +10,7 @@
 ---@field BackLeftSocket UBuildSocketComponent
 ---@field FrontRightSocket UBuildSocketComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchEmpCommonSockets_C = {}
+local ABPTrenchEmpCommonSockets_C = {}
 
 
 

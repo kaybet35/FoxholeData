@@ -10,7 +10,7 @@
 ---@field AnimGraphNode_BlendListByBool_FC2BD80F41349CB3A35D27A2940876B6 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_BlendSpacePlayer_21F5A0C2499A33DE8B91A1BD551BFCA4 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_1193ED2E49590628E2F5F88C766951F7 FAnimNode_BlendSpacePlayer
-UABP_RelicAPC_C = {}
+local UABP_RelicAPC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RelicAPC_C:AnimGraph(AnimGraph) end

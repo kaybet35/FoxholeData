@@ -13,7 +13,7 @@
 ---@field NoBuildZone UBoxComponent
 ---@field Box UBoxComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPForwardBase1BuildSite_C = {}
+local ABPForwardBase1BuildSite_C = {}
 
 
 

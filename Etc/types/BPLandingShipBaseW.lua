@@ -5,7 +5,7 @@
 ---@field NoVehicleVolume UBoxComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field Exhaust1 UParticleSystemComponent
-ABPLandingShipBaseW_C = {}
+local ABPLandingShipBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPLandingShipBaseW_C:BPOnVehicleOn(IsOn) end

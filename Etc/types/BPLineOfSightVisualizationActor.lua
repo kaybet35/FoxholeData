@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPLineOfSightVisualizationActor_C : ALineOfSightVisualizationActor
-ABPLineOfSightVisualizationActor_C = {}
+local ABPLineOfSightVisualizationActor_C = {}
 
 

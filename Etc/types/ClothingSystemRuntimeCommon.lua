@@ -3,7 +3,7 @@
 ---@class UClothLODDataBase : UObject
 ---@field PhysicalMeshData UClothPhysicalMeshDataBase
 ---@field CollisionData FClothCollisionData
-UClothLODDataBase = {}
+local UClothLODDataBase = {}
 
 
 
@@ -16,11 +16,11 @@ UClothLODDataBase = {}
 ---@field UsedBoneIndices TArray<int32>
 ---@field ReferenceBoneIndex int32
 ---@field CustomData UClothingAssetCustomData
-UClothingAssetCommon = {}
+local UClothingAssetCommon = {}
 
 
 
 ---@class UClothingAssetCustomData : UObject
-UClothingAssetCustomData = {}
+local UClothingAssetCustomData = {}
 
 

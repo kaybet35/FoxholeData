@@ -6,7 +6,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPDieselPowerBase_C = {}
+local ABPDieselPowerBase_C = {}
 
 
 

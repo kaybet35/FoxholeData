@@ -7,7 +7,7 @@
 ---@field StaticMesh4 UStaticMeshComponent
 ---@field Collision UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-AFortCommandRadioStation01_C = {}
+local AFortCommandRadioStation01_C = {}
 
 
 

@@ -11,7 +11,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field SpotLight_R USpotLightComponent
 ---@field SpotLight_L USpotLightComponent
-ABPMotorcycleBaseC_C = {}
+local ABPMotorcycleBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPMotorcycleBaseC_C:BPOnVehicleOn(IsOn) end

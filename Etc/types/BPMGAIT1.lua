@@ -4,7 +4,7 @@
 ---@field FortCommonT1BreachedWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPMGAIT1_C = {}
+local ABPMGAIT1_C = {}
 
 
 

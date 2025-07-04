@@ -5,7 +5,7 @@
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPDeployedGrenadeLauncherTCGhost_C = {}
+local ABPDeployedGrenadeLauncherTCGhost_C = {}
 
 
 

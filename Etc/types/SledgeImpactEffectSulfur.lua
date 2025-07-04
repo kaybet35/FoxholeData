@@ -2,7 +2,7 @@
 
 ---@class ASledgeImpactEffectSulfur_C : AImpactEffect
 ---@field DefaultSceneRoot USceneComponent
-ASledgeImpactEffectSulfur_C = {}
+local ASledgeImpactEffectSulfur_C = {}
 
 
 

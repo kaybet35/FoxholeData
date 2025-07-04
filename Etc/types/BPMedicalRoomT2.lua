@@ -18,7 +18,7 @@
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field MedicalRoomMesh UStaticMeshComponent
-ABPMedicalRoomT2_C = {}
+local ABPMedicalRoomT2_C = {}
 
 ---@param AmmoCount int32
 function ABPMedicalRoomT2_C:UpdateAmmoInstanceMesh(AmmoCount) end

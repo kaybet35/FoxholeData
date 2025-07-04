@@ -27,12 +27,12 @@ ALongRangeArtillery::ALongRangeArtillery(const FObjectInitializer& ObjectInitial
     this->RequiredSquadMembers = 5;
     this->SquadId = 0;
     this->StashedAmmo = 0;
+    this->BaseMesh->SetupAttachment(RootComponent);
+    this->EjectShellParticleSystem->SetupAttachment(Mesh);
+    this->FireShellParticleSystem->SetupAttachment(Mesh);
     this->KillVolume->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
-    this->BaseMesh->SetupAttachment(RootComponent);
     this->RotationSFXLoop->SetupAttachment(RootComponent);
-    this->FireShellParticleSystem->SetupAttachment(Mesh);
-    this->EjectShellParticleSystem->SetupAttachment(Mesh);
 }
 
 void ALongRangeArtillery::OnRep_GunnerYawAndPitch(const FVector2D PreviousGunnerYawAndPitch) {

@@ -11,7 +11,7 @@
 ---@field MultiplexedRoof UMultiplexedStaticMeshComponent
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ABPGarrisonHouseFishHut2_C = {}
+local ABPGarrisonHouseFishHut2_C = {}
 
 
 

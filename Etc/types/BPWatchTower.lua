@@ -5,7 +5,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field Box UBoxComponent
 ---@field WatchTowerMesh UStaticMeshComponent
-ABPWatchTower_C = {}
+local ABPWatchTower_C = {}
 
 
 

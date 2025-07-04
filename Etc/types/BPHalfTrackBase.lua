@@ -14,7 +14,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field DriveIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPHalfTrackBase_C = {}
+local ABPHalfTrackBase_C = {}
 
 
 

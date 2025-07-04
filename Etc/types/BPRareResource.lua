@@ -8,7 +8,7 @@
 ---@field Timeline_0_NewTrack_0_52892B784AC8CBC8E941B1BB187B9F66 FVector
 ---@field Timeline_0__Direction_52892B784AC8CBC8E941B1BB187B9F66 ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPRareResource_C = {}
+local ABPRareResource_C = {}
 
 function ABPRareResource_C:Timeline_0__FinishedFunc() end
 function ABPRareResource_C:Timeline_0__UpdateFunc() end

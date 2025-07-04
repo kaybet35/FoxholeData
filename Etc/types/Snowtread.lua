@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ASnowtread_C : ADecalActor
-ASnowtread_C = {}
+local ASnowtread_C = {}
 
 

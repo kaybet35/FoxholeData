@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
 ---@field DefaultSceneRoot USceneComponent
-ASwordImpactEffect_C = {}
+local ASwordImpactEffect_C = {}
 
 function ASwordImpactEffect_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

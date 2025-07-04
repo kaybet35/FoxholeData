@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPNegativeBallastMountComponent_C : UBallastMountComponent
-UBPNegativeBallastMountComponent_C = {}
+local UBPNegativeBallastMountComponent_C = {}
 
 

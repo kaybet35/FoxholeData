@@ -23,7 +23,7 @@
 ---@field Node01 UStaticMeshComponent
 ---@field Node00 UStaticMeshComponent
 ---@field BPResourceGroupRenderComponent UBPResourceGroupRenderComponent_C
-ABPTruckResourceC_C = {}
+local ABPTruckResourceC_C = {}
 
 ---@param IsOn boolean
 function ABPTruckResourceC_C:BPOnVehicleOn(IsOn) end

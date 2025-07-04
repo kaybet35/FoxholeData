@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ADeadlyGasGrenadeExplosion_C : AWarExplosionEffect
-ADeadlyGasGrenadeExplosion_C = {}
+local ADeadlyGasGrenadeExplosion_C = {}
 
 

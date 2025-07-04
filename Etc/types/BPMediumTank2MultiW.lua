@@ -8,7 +8,7 @@
 ---@field TurretLight_R UStaticMeshComponent
 ---@field Exhaust2 UParticleSystemComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
-ABPMediumTank2MultiW_C = {}
+local ABPMediumTank2MultiW_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2MultiW_C:BPOnVehicleOn(IsOn) end

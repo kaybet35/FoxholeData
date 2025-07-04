@@ -7,7 +7,7 @@
 ---@field Collision UBoxComponent
 ---@field Locker04 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-AFortGarrisionLatrine01_C = {}
+local AFortGarrisionLatrine01_C = {}
 
 
 

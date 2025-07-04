@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USuperTankWGrenadeLauncherFrontGunnerComponent_C : UGrenadeGunnerMountComponent
-USuperTankWGrenadeLauncherFrontGunnerComponent_C = {}
+local USuperTankWGrenadeLauncherFrontGunnerComponent_C = {}
 
 

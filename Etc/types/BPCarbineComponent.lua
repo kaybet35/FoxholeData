@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPCarbineComponent_C : UGrenadeAdapterComponent
-UBPCarbineComponent_C = {}
+local UBPCarbineComponent_C = {}
 
 

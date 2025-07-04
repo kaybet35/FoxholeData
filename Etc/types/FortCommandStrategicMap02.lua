@@ -10,7 +10,7 @@
 ---@field StaticMesh4 UStaticMeshComponent
 ---@field Collision UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-AFortCommandStrategicMap02_C = {}
+local AFortCommandStrategicMap02_C = {}
 
 
 

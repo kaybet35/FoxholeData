@@ -1,5 +1,5 @@
 ---@enum EFlipbookCollisionMode
-EFlipbookCollisionMode = {
+local EFlipbookCollisionMode = {
     NoCollision = 0,
     FirstFrameCollision = 1,
     EachFrameCollision = 2,
@@ -7,14 +7,14 @@ EFlipbookCollisionMode = {
 }
 
 ---@enum EPaperSpriteAtlasPadding
-EPaperSpriteAtlasPadding = {
+local EPaperSpriteAtlasPadding = {
     DilateBorder = 0,
     PadWithZero = 1,
     EPaperSpriteAtlasPadding_MAX = 2,
 }
 
 ---@enum ESpriteCollisionMode
-ESpriteCollisionMode = {
+local ESpriteCollisionMode = {
     None = 0,
     Use2DPhysics = 1,
     Use3DPhysics = 2,
@@ -22,7 +22,7 @@ ESpriteCollisionMode = {
 }
 
 ---@enum ESpritePivotMode
-ESpritePivotMode = {
+local ESpritePivotMode = {
     Top_Left = 0,
     Top_Center = 1,
     Top_Right = 2,
@@ -37,7 +37,7 @@ ESpritePivotMode = {
 }
 
 ---@enum ESpritePolygonMode
-ESpritePolygonMode = {
+local ESpritePolygonMode = {
     SourceBoundingBox = 0,
     TightBoundingBox = 1,
     ShrinkWrapped = 2,
@@ -47,7 +47,7 @@ ESpritePolygonMode = {
 }
 
 ---@enum ESpriteShapeType
-ESpriteShapeType = {
+local ESpriteShapeType = {
     Box = 0,
     Circle = 1,
     Polygon = 2,
@@ -55,7 +55,7 @@ ESpriteShapeType = {
 }
 
 ---@enum ETileMapProjectionMode
-ETileMapProjectionMode = {
+local ETileMapProjectionMode = {
     Orthogonal = 0,
     IsometricDiamond = 1,
     IsometricStaggered = 2,

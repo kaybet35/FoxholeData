@@ -4,7 +4,7 @@
 ---@field RoofDirt UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortT2Roof_C = {}
+local ABPFortT2Roof_C = {}
 
 
 

@@ -1,5 +1,5 @@
 ---@enum EMagicLeapAutoPinType
-EMagicLeapAutoPinType = {
+local EMagicLeapAutoPinType = {
     OnlyOnDataRestoration = 0,
     Always = 1,
     Never = 2,
@@ -7,7 +7,7 @@ EMagicLeapAutoPinType = {
 }
 
 ---@enum EMagicLeapPassableWorldError
-EMagicLeapPassableWorldError = {
+local EMagicLeapPassableWorldError = {
     None = 0,
     LowMapQuality = 1,
     UnableToLocalize = 2,

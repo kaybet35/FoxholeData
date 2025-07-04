@@ -6,7 +6,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field BPFuelLightTemplate UTemplateComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPFacilitySiloOil_C = {}
+local ABPFacilitySiloOil_C = {}
 
 
 

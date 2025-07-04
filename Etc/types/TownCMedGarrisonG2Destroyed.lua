@@ -16,7 +16,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field RuinedMesh URuinedMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownCMedGarrisonG2Destroyed_C = {}
+local ATownCMedGarrisonG2Destroyed_C = {}
 
 
 

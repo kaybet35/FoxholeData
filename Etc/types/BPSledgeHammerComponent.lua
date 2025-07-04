@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSledgeHammerComponent_C : UHammerComponent
-UBPSledgeHammerComponent_C = {}
+local UBPSledgeHammerComponent_C = {}
 
 

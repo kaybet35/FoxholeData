@@ -11,8 +11,8 @@ AMech::AMech(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
     this->StashedMainGunAmmo = 0;
     this->StashedLeftGunAmmo = 0;
     this->StashedRightGunAmmo = 0;
-    this->MainGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->LeftGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->MainGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->RightGunMuzzleLocation->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 

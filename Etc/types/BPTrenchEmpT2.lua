@@ -23,7 +23,7 @@
 ---@field Left UStaticMeshComponent
 ---@field Back UStaticMeshComponent
 ---@field Right UStaticMeshComponent
-ABPTrenchEmpT2_C = {}
+local ABPTrenchEmpT2_C = {}
 
 
 

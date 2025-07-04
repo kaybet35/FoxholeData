@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class FDiscordRichPresenceData
-FDiscordRichPresenceData = {}
+local FDiscordRichPresenceData = {}
 
 
 ---@class UDiscordRichPresence : UObject
-UDiscordRichPresence = {}
+local UDiscordRichPresence = {}
 
 

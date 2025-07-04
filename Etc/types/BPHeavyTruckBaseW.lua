@@ -7,7 +7,7 @@
 ---@field PointLight UPointLightComponent
 ---@field SpotLight_R USpotLightComponent
 ---@field Headlight_R UStaticMeshComponent
-ABPHeavyTruckBaseW_C = {}
+local ABPHeavyTruckBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPHeavyTruckBaseW_C:BPOnVehicleOn(IsOn) end

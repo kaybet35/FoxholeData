@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPBandagesPickup_C : AGearPickup
-ABPBandagesPickup_C = {}
+local ABPBandagesPickup_C = {}
 
 

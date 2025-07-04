@@ -7,7 +7,7 @@
 ---@field Decal UDecalComponent
 ---@field Floor UStaticMeshComponent
 ---@field Hole UBoxComponent
-ABPCraterMedium_C = {}
+local ABPCraterMedium_C = {}
 
 
 

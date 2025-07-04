@@ -15,7 +15,7 @@
 ---@field AnimGraphNode_StateResult_C03093BF411A0E767ACC92901092E569 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_08E0E1844922D4ED93A385B7CEAD2926 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_9666569148FA6DF336FE1CB2633E58A4 FAnimNode_StateMachine
-UABP_AmbulanceFlameC_C = {}
+local UABP_AmbulanceFlameC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_AmbulanceFlameC_C:AnimGraph(AnimGraph) end

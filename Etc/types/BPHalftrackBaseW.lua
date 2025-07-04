@@ -12,7 +12,7 @@
 ---@field mainBody UStaticMeshComponent
 ---@field SpotLight_R USpotLightComponent
 ---@field Light_R UStaticMeshComponent
-ABPHalfTrackBaseW_C = {}
+local ABPHalfTrackBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPHalfTrackBaseW_C:BPOnVehicleOn(IsOn) end

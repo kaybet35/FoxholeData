@@ -10,7 +10,7 @@
 ---@field FortT1Destroyed01Right UStaticMeshComponent
 ---@field FortT1Destroyed01Front UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortDestroyedT1Meshes_C = {}
+local ABPFortDestroyedT1Meshes_C = {}
 
 
 

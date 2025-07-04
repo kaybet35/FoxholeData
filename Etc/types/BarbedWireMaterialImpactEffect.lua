@@ -2,7 +2,7 @@
 
 ---@class ABarbedWireMaterialImpactEffect_C : AImpactEffect
 ---@field DefaultSceneRoot USceneComponent
-ABarbedWireMaterialImpactEffect_C = {}
+local ABarbedWireMaterialImpactEffect_C = {}
 
 
 

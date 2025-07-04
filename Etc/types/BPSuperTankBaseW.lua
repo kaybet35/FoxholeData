@@ -7,7 +7,7 @@
 ---@field Gunner2Exit USeatExitComponent
 ---@field Gunner2Trigger USeatTriggerComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
-ABPSuperTankBaseW_C = {}
+local ABPSuperTankBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPSuperTankBaseW_C:BPOnVehicleOn(IsOn) end

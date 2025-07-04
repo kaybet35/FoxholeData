@@ -2,7 +2,7 @@
 
 ---@class ABPBattleTankAmmoPickup_C : ATankAmmoPickup
 ---@field ItemMeshSK USkeletalMeshComponent
-ABPBattleTankAmmoPickup_C = {}
+local ABPBattleTankAmmoPickup_C = {}
 
 
 

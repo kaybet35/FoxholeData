@@ -14,7 +14,7 @@
 ---@field DefaultInstanceData UObject
 ---@field BurnInInstance ULevelSequenceBurnIn
 ---@field bShowBurnin boolean
-ALevelSequenceActor = {}
+local ALevelSequenceActor = {}
 
 function ALevelSequenceActor:ShowBurnin() end
 ---@param InSequence ULevelSequence
@@ -65,51 +65,51 @@ function ALevelSequenceActor:AddBinding(Binding, Actor, bAllowBindingsFromAsset)
 
 
 ---@class FBoundActorProxy
-FBoundActorProxy = {}
+local FBoundActorProxy = {}
 
 
 ---@class FLevelSequenceBindingReference
 ---@field PackageName FString
 ---@field ExternalObjectPath FSoftObjectPath
 ---@field ObjectPath FString
-FLevelSequenceBindingReference = {}
+local FLevelSequenceBindingReference = {}
 
 
 
 ---@class FLevelSequenceBindingReferenceArray
 ---@field References TArray<FLevelSequenceBindingReference>
-FLevelSequenceBindingReferenceArray = {}
+local FLevelSequenceBindingReferenceArray = {}
 
 
 
 ---@class FLevelSequenceBindingReferences
 ---@field BindingIdToReferences TMap<FGuid, FLevelSequenceBindingReferenceArray>
 ---@field AnimSequenceInstances TSet<FGuid>
-FLevelSequenceBindingReferences = {}
+local FLevelSequenceBindingReferences = {}
 
 
 
 ---@class FLevelSequenceCameraSettings
 ---@field bOverrideAspectRatioAxisConstraint boolean
 ---@field AspectRatioAxisConstraint EAspectRatioAxisConstraint
-FLevelSequenceCameraSettings = {}
+local FLevelSequenceCameraSettings = {}
 
 
 
 ---@class FLevelSequenceLegacyObjectReference
-FLevelSequenceLegacyObjectReference = {}
+local FLevelSequenceLegacyObjectReference = {}
 
 
 ---@class FLevelSequenceObject
 ---@field ObjectOrOwner TLazyObjectPtr<UObject>
 ---@field ComponentName FString
 ---@field CachedComponent TWeakObjectPtr<UObject>
-FLevelSequenceObject = {}
+local FLevelSequenceObject = {}
 
 
 
 ---@class FLevelSequenceObjectReferenceMap
-FLevelSequenceObjectReferenceMap = {}
+local FLevelSequenceObjectReferenceMap = {}
 
 
 ---@class FLevelSequencePlayerSnapshot
@@ -124,30 +124,30 @@ FLevelSequenceObjectReferenceMap = {}
 ---@field Settings FLevelSequenceSnapshotSettings
 ---@field ActiveShot ULevelSequence
 ---@field ShotID FMovieSceneSequenceID
-FLevelSequencePlayerSnapshot = {}
+local FLevelSequencePlayerSnapshot = {}
 
 
 
 ---@class FLevelSequenceSnapshotSettings
 ---@field ZeroPadAmount uint8
 ---@field FrameRate FFrameRate
-FLevelSequenceSnapshotSettings = {}
+local FLevelSequenceSnapshotSettings = {}
 
 
 
 ---@class ILevelSequenceMetaData : IInterface
-ILevelSequenceMetaData = {}
+local ILevelSequenceMetaData = {}
 
 
 ---@class UDefaultLevelSequenceInstanceData : UObject
 ---@field TransformOriginActor AActor
 ---@field TransformOrigin FTransform
-UDefaultLevelSequenceInstanceData = {}
+local UDefaultLevelSequenceInstanceData = {}
 
 
 
 ---@class ULegacyLevelSequenceDirectorBlueprint : UBlueprint
-ULegacyLevelSequenceDirectorBlueprint = {}
+local ULegacyLevelSequenceDirectorBlueprint = {}
 
 
 ---@class ULevelSequence : UMovieSceneSequence
@@ -156,7 +156,7 @@ ULegacyLevelSequenceDirectorBlueprint = {}
 ---@field BindingReferences FLevelSequenceBindingReferences
 ---@field PossessedObjects TMap<FString, FLevelSequenceObject>
 ---@field DirectorClass UClass
-ULevelSequence = {}
+local ULevelSequence = {}
 
 ---@param InClass UClass
 function ULevelSequence:RemoveMetaDataByClass(InClass) end
@@ -174,7 +174,7 @@ function ULevelSequence:CopyMetaData(InMetaData) end
 ---@class ULevelSequenceBurnIn : UUserWidget
 ---@field FrameInformation FLevelSequencePlayerSnapshot
 ---@field LevelSequenceActor ALevelSequenceActor
-ULevelSequenceBurnIn = {}
+local ULevelSequenceBurnIn = {}
 
 ---@param InSettings UObject
 function ULevelSequenceBurnIn:SetSettings(InSettings) end
@@ -183,14 +183,14 @@ function ULevelSequenceBurnIn:GetSettingsClass() end
 
 
 ---@class ULevelSequenceBurnInInitSettings : UObject
-ULevelSequenceBurnInInitSettings = {}
+local ULevelSequenceBurnInInitSettings = {}
 
 
 ---@class ULevelSequenceBurnInOptions : UObject
 ---@field bUseBurnIn boolean
 ---@field BurnInClass FSoftClassPath
 ---@field Settings ULevelSequenceBurnInInitSettings
-ULevelSequenceBurnInOptions = {}
+local ULevelSequenceBurnInOptions = {}
 
 ---@param InBurnInClass FSoftClassPath
 function ULevelSequenceBurnInOptions:SetBurnIn(InBurnInClass) end
@@ -198,14 +198,14 @@ function ULevelSequenceBurnInOptions:SetBurnIn(InBurnInClass) end
 
 ---@class ULevelSequenceDirector : UObject
 ---@field Player ULevelSequencePlayer
-ULevelSequenceDirector = {}
+local ULevelSequenceDirector = {}
 
 function ULevelSequenceDirector:OnCreated() end
 
 
 ---@class ULevelSequencePlayer : UMovieSceneSequencePlayer
 ---@field OnCameraCut FLevelSequencePlayerOnCameraCut
-ULevelSequencePlayer = {}
+local ULevelSequencePlayer = {}
 
 ---@return UCameraComponent
 function ULevelSequencePlayer:GetActiveCameraComponent() end

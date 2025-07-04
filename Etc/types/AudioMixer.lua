@@ -13,7 +13,7 @@
 ---@field OutputGainDb float
 ---@field bChannelLinked boolean
 ---@field bAnalogMode boolean
-FSubmixEffectDynamicsProcessorSettings = {}
+local FSubmixEffectDynamicsProcessorSettings = {}
 
 
 
@@ -22,7 +22,7 @@ FSubmixEffectDynamicsProcessorSettings = {}
 ---@field Bandwidth float
 ---@field GainDb float
 ---@field bEnabled boolean
-FSubmixEffectEQBand = {}
+local FSubmixEffectEQBand = {}
 
 
 
@@ -40,7 +40,7 @@ FSubmixEffectEQBand = {}
 ---@field AirAbsorptionGainHF float
 ---@field WetLevel float
 ---@field DryLevel float
-FSubmixEffectReverbFastSettings = {}
+local FSubmixEffectReverbFastSettings = {}
 
 
 
@@ -58,22 +58,22 @@ FSubmixEffectReverbFastSettings = {}
 ---@field AirAbsorptionGainHF float
 ---@field WetLevel float
 ---@field DryLevel float
-FSubmixEffectReverbSettings = {}
+local FSubmixEffectReverbSettings = {}
 
 
 
 ---@class FSubmixEffectSubmixEQSettings
 ---@field EQBands TArray<FSubmixEffectEQBand>
-FSubmixEffectSubmixEQSettings = {}
+local FSubmixEffectSubmixEQSettings = {}
 
 
 
 ---@class UAudioGenerator : UObject
-UAudioGenerator = {}
+local UAudioGenerator = {}
 
 
 ---@class UAudioMixerBlueprintLibrary : UBlueprintFunctionLibrary
-UAudioMixerBlueprintLibrary = {}
+local UAudioMixerBlueprintLibrary = {}
 
 ---@param InMegabytesToFree float
 ---@return float
@@ -150,7 +150,7 @@ function UAudioMixerBlueprintLibrary:AddMasterSubmixEffect(WorldContextObject, S
 
 ---@class USubmixEffectDynamicsProcessorPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectDynamicsProcessorSettings
-USubmixEffectDynamicsProcessorPreset = {}
+local USubmixEffectDynamicsProcessorPreset = {}
 
 ---@param InSettings FSubmixEffectDynamicsProcessorSettings
 function USubmixEffectDynamicsProcessorPreset:SetSettings(InSettings) end
@@ -158,7 +158,7 @@ function USubmixEffectDynamicsProcessorPreset:SetSettings(InSettings) end
 
 ---@class USubmixEffectReverbFastPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectReverbFastSettings
-USubmixEffectReverbFastPreset = {}
+local USubmixEffectReverbFastPreset = {}
 
 ---@param InReverbEffect UReverbEffect
 ---@param WetLevel float
@@ -170,7 +170,7 @@ function USubmixEffectReverbFastPreset:SetSettings(InSettings) end
 
 ---@class USubmixEffectReverbPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectReverbSettings
-USubmixEffectReverbPreset = {}
+local USubmixEffectReverbPreset = {}
 
 ---@param InReverbEffect UReverbEffect
 ---@param WetLevel float
@@ -182,7 +182,7 @@ function USubmixEffectReverbPreset:SetSettings(InSettings) end
 
 ---@class USubmixEffectSubmixEQPreset : USoundEffectSubmixPreset
 ---@field Settings FSubmixEffectSubmixEQSettings
-USubmixEffectSubmixEQPreset = {}
+local USubmixEffectSubmixEQPreset = {}
 
 ---@param InSettings FSubmixEffectSubmixEQSettings
 function USubmixEffectSubmixEQPreset:SetSettings(InSettings) end
@@ -212,7 +212,7 @@ function USubmixEffectSubmixEQPreset:SetSettings(InSettings) end
 ---@field OnAudioEnvelopeValue FSynthComponentOnAudioEnvelopeValue
 ---@field Synth USynthSound
 ---@field AudioComponent UAudioComponent
-USynthComponent = {}
+local USynthComponent = {}
 
 function USynthComponent:Stop() end
 function USynthComponent:Start() end
@@ -227,7 +227,7 @@ function USynthComponent:IsPlaying() end
 
 ---@class USynthSound : USoundWaveProcedural
 ---@field OwningSynthComponent USynthComponent
-USynthSound = {}
+local USynthSound = {}
 
 
 

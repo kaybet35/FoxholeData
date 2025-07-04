@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFortInfraModSlot_C : UInfraModificationSlotComponent
-UBPFortInfraModSlot_C = {}
+local UBPFortInfraModSlot_C = {}
 
 

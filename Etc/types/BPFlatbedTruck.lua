@@ -15,7 +15,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field TruckIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPFlatbedTruck_C = {}
+local ABPFlatbedTruck_C = {}
 
 ---@param IsOn boolean
 function ABPFlatbedTruck_C:BPOnVehicleOn(IsOn) end

@@ -15,7 +15,7 @@
 ---@field Node02 UStaticMeshComponent
 ---@field Node01 UStaticMeshComponent
 ---@field BPResourceGroupRenderComponent UBPResourceGroupRenderComponent_C
-ABPConstructionEquipment_C = {}
+local ABPConstructionEquipment_C = {}
 
 
 

@@ -6,7 +6,7 @@
 ---@field Resource1 UStaticMeshComponent
 ---@field ModMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityMineResource1DefaultBin_C = {}
+local ABPFacilityMineResource1DefaultBin_C = {}
 
 
 

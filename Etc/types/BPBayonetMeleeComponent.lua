@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBayonetMeleeComponent_C : UMeleeWeaponComponent
-UBPBayonetMeleeComponent_C = {}
+local UBPBayonetMeleeComponent_C = {}
 
 

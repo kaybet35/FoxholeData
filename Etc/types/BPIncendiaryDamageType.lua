@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPIncendiaryDamageType_C : USimDamageType
-UBPIncendiaryDamageType_C = {}
+local UBPIncendiaryDamageType_C = {}
 
 

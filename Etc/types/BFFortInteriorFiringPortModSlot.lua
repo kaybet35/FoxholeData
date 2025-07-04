@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBFFortInteriorFiringPortModSlot_C : UModificationSlotComponent
-UBFFortInteriorFiringPortModSlot_C = {}
+local UBFFortInteriorFiringPortModSlot_C = {}
 
 

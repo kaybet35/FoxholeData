@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_StateResult_1E11F8D545354C4600FC49A96592FCE2 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_F51EF88A4ACD58BE4DBE9B803E2C69A9 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_2410090F4D8048BD945D5996BD67F625 FAnimNode_StateMachine
-UABP_ConcreteMixer_C = {}
+local UABP_ConcreteMixer_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ConcreteMixer_C:AnimGraph(AnimGraph) end

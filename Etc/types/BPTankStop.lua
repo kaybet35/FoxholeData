@@ -7,7 +7,7 @@
 ---@field CollisionBox UBoxComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field TankStopMesh UStaticMeshComponent
-ABPTankStop_C = {}
+local ABPTankStop_C = {}
 
 
 

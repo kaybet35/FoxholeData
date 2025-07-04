@@ -28,7 +28,7 @@
 ---@field AnimGraphNode_SequencePlayer_B74AB46E4CEF2EB2FEE07C91B25B46F3 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_AF926EB0462F15D3D1EEB7BF4AC8440D FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_1E1B42FE4F1F9B8C588E009A254D6357 FAnimNode_StateMachine
-UABP_Harvester_C = {}
+local UABP_Harvester_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Harvester_C:AnimGraph(AnimGraph) end

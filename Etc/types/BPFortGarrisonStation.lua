@@ -44,7 +44,7 @@
 ---@field Ladder0 ULadderComponent
 ---@field FortGarrisonStationCommon UTemplateComponent
 ---@field BPWaterStencilComponent UBPWaterStencilComponent_C
-ABPFortGarrisonStation_C = {}
+local ABPFortGarrisonStation_C = {}
 
 
 

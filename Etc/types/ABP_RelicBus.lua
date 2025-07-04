@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_StateResult_33CC778C47EDF3A37F6776BF1B880687 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_935AE37544C38C9A42B667B0E698A93F FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_F7837433429B53833331BE9F18A6D67B FAnimNode_StateMachine
-UABP_RelicBus_C = {}
+local UABP_RelicBus_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RelicBus_C:AnimGraph(AnimGraph) end

@@ -6,7 +6,7 @@
 ---@field BaseMesh UStaticMeshComponent
 ---@field Light USpotLightComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortSpotLight_C = {}
+local ABPFortSpotLight_C = {}
 
 
 

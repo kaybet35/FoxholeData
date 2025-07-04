@@ -190,7 +190,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueCChurchG1_C = {}
+local AUniqueCChurchG1_C = {}
 
 ---@param Enter boolean
 ---@param Actor AActor

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPAssaultRifleComponent_C : UAssaultRifleComponent
-UBPAssaultRifleComponent_C = {}
+local UBPAssaultRifleComponent_C = {}
 
 

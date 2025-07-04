@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFlameBackpackW_C : UAmmoBackpackItemComponent
-UBPFlameBackpackW_C = {}
+local UBPFlameBackpackW_C = {}
 
 

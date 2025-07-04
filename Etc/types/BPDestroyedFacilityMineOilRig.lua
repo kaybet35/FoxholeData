@@ -9,7 +9,7 @@
 ---@field MineMesh UStaticMeshComponent
 ---@field FacilityResourceLoadingPlatform UStaticMeshComponent
 ---@field FacilityMineOilRig UStaticMeshComponent
-ABPDestroyedFacilityMineOilRig_C = {}
+local ABPDestroyedFacilityMineOilRig_C = {}
 
 
 

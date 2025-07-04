@@ -6,7 +6,7 @@
 ---@field LightRear UStaticMeshComponent
 ---@field LightRearEmitter UPointLightComponent
 ---@field mainBody USkeletalMeshComponent
-ABPArmoredCar2MultiW_C = {}
+local ABPArmoredCar2MultiW_C = {}
 
 ---@param IsOn boolean
 function ABPArmoredCar2MultiW_C:BPOnVehicleOn(IsOn) end

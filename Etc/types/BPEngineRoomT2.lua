@@ -13,7 +13,7 @@
 ---@field Light UParticleSystemComponent
 ---@field Roof UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPEngineRoomT2_C = {}
+local ABPEngineRoomT2_C = {}
 
 
 

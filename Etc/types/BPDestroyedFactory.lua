@@ -11,7 +11,7 @@
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPDestroyedFactory_C = {}
+local ABPDestroyedFactory_C = {}
 
 
 

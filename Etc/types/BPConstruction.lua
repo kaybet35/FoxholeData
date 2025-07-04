@@ -11,7 +11,7 @@
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPConstruction_C = {}
+local ABPConstruction_C = {}
 
 ---@param IsOn boolean
 function ABPConstruction_C:BPOnVehicleOn(IsOn) end

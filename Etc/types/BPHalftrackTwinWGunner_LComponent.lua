@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHalftrackTwinWGunner_LComponent_C : UHitScanMountComponent
-UBPHalftrackTwinWGunner_LComponent_C = {}
+local UBPHalftrackTwinWGunner_LComponent_C = {}
 
 

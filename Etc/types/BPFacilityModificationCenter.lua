@@ -32,7 +32,7 @@
 ---@field FoundationDecal UDecalComponent
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field RoofMesh UStaticMeshComponent
-ABPFacilityModificationCenter_C = {}
+local ABPFacilityModificationCenter_C = {}
 
 
 

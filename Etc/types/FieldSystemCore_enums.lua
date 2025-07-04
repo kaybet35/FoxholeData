@@ -1,5 +1,5 @@
 ---@enum EFieldCullingOperationType
-EFieldCullingOperationType = {
+local EFieldCullingOperationType = {
     Field_Culling_Inside = 0,
     Field_Culling_Outside = 1,
     Field_Culling_Operation_Max = 2,
@@ -7,7 +7,7 @@ EFieldCullingOperationType = {
 }
 
 ---@enum EFieldFalloffType
-EFieldFalloffType = {
+local EFieldFalloffType = {
     Field_FallOff_None = 0,
     Field_Falloff_Linear = 1,
     Field_Falloff_Inverse = 2,
@@ -17,7 +17,7 @@ EFieldFalloffType = {
 }
 
 ---@enum EFieldOperationType
-EFieldOperationType = {
+local EFieldOperationType = {
     Field_Multiply = 0,
     Field_Divide = 1,
     Field_Add = 2,
@@ -26,7 +26,7 @@ EFieldOperationType = {
 }
 
 ---@enum EFieldPhysicsDefaultFields
-EFieldPhysicsDefaultFields = {
+local EFieldPhysicsDefaultFields = {
     Field_RadialIntMask = 0,
     Field_RadialFalloff = 1,
     Field_UniformVector = 2,
@@ -37,7 +37,7 @@ EFieldPhysicsDefaultFields = {
 }
 
 ---@enum EFieldPhysicsType
-EFieldPhysicsType = {
+local EFieldPhysicsType = {
     Field_None = 0,
     Field_DynamicState = 1,
     Field_LinearForce = 2,
@@ -59,7 +59,7 @@ EFieldPhysicsType = {
 }
 
 ---@enum EFieldResolutionType
-EFieldResolutionType = {
+local EFieldResolutionType = {
     Field_Resolution_Minimal = 0,
     Field_Resolution_DisabledParents = 1,
     Field_Resolution_Maximum = 2,
@@ -67,7 +67,7 @@ EFieldResolutionType = {
 }
 
 ---@enum ESetMaskConditionType
-ESetMaskConditionType = {
+local ESetMaskConditionType = {
     Field_Set_Always = 0,
     Field_Set_IFF_NOT_Interior = 1,
     Field_Set_IFF_NOT_Exterior = 2,

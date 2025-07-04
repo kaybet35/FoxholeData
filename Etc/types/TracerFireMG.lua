@@ -2,7 +2,7 @@
 
 ---@class ATracerFireMG_C : AWeaponFireFX
 ---@field StaticMesh UStaticMeshComponent
-ATracerFireMG_C = {}
+local ATracerFireMG_C = {}
 
 
 

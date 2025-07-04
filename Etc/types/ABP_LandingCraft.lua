@@ -11,7 +11,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_EFDFC0BB4A9A90625307FEADD3EE3349 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_F3B29386466DDBF6C3898F9599BF4C8B FAnimNode_SequencePlayer
 ---@field AnimGraphNode_ApplyAdditive_0182064C41EE59045A7A36B5A89ECB8F FAnimNode_ApplyAdditive
-UABP_LandingCraft_C = {}
+local UABP_LandingCraft_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LandingCraft_C:AnimGraph(AnimGraph) end

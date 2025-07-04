@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPInfantryMineItemComponent_C : ULargeMaterialComponent
-UBPInfantryMineItemComponent_C = {}
+local UBPInfantryMineItemComponent_C = {}
 
 

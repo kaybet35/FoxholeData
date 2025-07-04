@@ -1,19 +1,19 @@
 ---@enum ECollisionTypeEnum
-ECollisionTypeEnum = {
+local ECollisionTypeEnum = {
     Chaos_Volumetric = 0,
     Chaos_Surface_Volumetric = 1,
     Chaos_Max = 2,
 }
 
 ---@enum EEmissionPatternTypeEnum
-EEmissionPatternTypeEnum = {
+local EEmissionPatternTypeEnum = {
     Chaos_Emission_Pattern_First_Frame = 0,
     Chaos_Emission_Pattern_On_Demand = 1,
     Chaos_Max = 2,
 }
 
 ---@enum EGeometryCollectionPhysicsTypeEnum
-EGeometryCollectionPhysicsTypeEnum = {
+local EGeometryCollectionPhysicsTypeEnum = {
     Chaos_AngularVelocity = 0,
     Chaos_DynamicState = 1,
     Chaos_LinearVelocity = 2,
@@ -26,7 +26,7 @@ EGeometryCollectionPhysicsTypeEnum = {
 }
 
 ---@enum EImplicitTypeEnum
-EImplicitTypeEnum = {
+local EImplicitTypeEnum = {
     Chaos_Implicit_Box = 0,
     Chaos_Implicit_Sphere = 1,
     Chaos_Implicit_Capsule = 2,
@@ -36,14 +36,14 @@ EImplicitTypeEnum = {
 }
 
 ---@enum EInitialVelocityTypeEnum
-EInitialVelocityTypeEnum = {
+local EInitialVelocityTypeEnum = {
     Chaos_Initial_Velocity_User_Defined = 0,
     Chaos_Initial_Velocity_None = 1,
     Chaos_Max = 2,
 }
 
 ---@enum EObjectStateTypeEnum
-EObjectStateTypeEnum = {
+local EObjectStateTypeEnum = {
     Chaos_NONE = 0,
     Chaos_Object_Sleeping = 1,
     Chaos_Object_Kinematic = 2,

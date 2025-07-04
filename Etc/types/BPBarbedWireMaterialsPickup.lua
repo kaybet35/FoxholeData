@@ -2,7 +2,7 @@
 
 ---@class ABPBarbedWireMaterialsPickup_C : AGearPickup
 ---@field ItemMeshSK USkeletalMeshComponent
-ABPBarbedWireMaterialsPickup_C = {}
+local ABPBarbedWireMaterialsPickup_C = {}
 
 
 

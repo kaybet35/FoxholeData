@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPStickyBombComponent_C : UGrenadeItemComponent
-UBPStickyBombComponent_C = {}
+local UBPStickyBombComponent_C = {}
 
 

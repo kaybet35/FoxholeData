@@ -1,5 +1,5 @@
 ---@enum EChaosBufferMode
-EChaosBufferMode = {
+local EChaosBufferMode = {
     Double = 0,
     Triple = 1,
     Num = 2,
@@ -8,7 +8,7 @@ EChaosBufferMode = {
 }
 
 ---@enum EChaosSolverTickMode
-EChaosSolverTickMode = {
+local EChaosSolverTickMode = {
     Fixed = 0,
     Variable = 1,
     VariableCapped = 2,
@@ -17,7 +17,7 @@ EChaosSolverTickMode = {
 }
 
 ---@enum EChaosThreadingMode
-EChaosThreadingMode = {
+local EChaosThreadingMode = {
     DedicatedThread = 0,
     TaskGraph = 1,
     SingleThread = 2,

@@ -14,7 +14,7 @@
 ---@field EndBack UStaticMeshComponent
 ---@field RoofEndFront UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchT3Roof_C = {}
+local ABPTrenchT3Roof_C = {}
 
 
 

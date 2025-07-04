@@ -1,5 +1,5 @@
 ---@enum EVehicleDifferential4W
-EVehicleDifferential4W = {
+local EVehicleDifferential4W = {
     LimitedSlip_4W = 0,
     LimitedSlip_FrontDrive = 1,
     LimitedSlip_RearDrive = 2,
@@ -10,7 +10,7 @@ EVehicleDifferential4W = {
 }
 
 ---@enum EWheelSweepType
-EWheelSweepType = {
+local EWheelSweepType = {
     SimpleAndComplex = 0,
     Simple = 1,
     Complex = 2,

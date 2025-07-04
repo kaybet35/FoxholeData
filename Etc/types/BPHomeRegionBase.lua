@@ -34,7 +34,7 @@
 ---@field Timeline_0_Emissive_2817AA6448D8119AC585B0BC2FC5BCEF float
 ---@field Timeline_0__Direction_2817AA6448D8119AC585B0BC2FC5BCEF ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPHomeRegionBase_C = {}
+local ABPHomeRegionBase_C = {}
 
 function ABPHomeRegionBase_C:Timeline_0__FinishedFunc() end
 function ABPHomeRegionBase_C:Timeline_0__UpdateFunc() end

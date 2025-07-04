@@ -28,7 +28,7 @@
 ---@field AnimGraphNode_ApplyAdditive_221B3B0149149F9A8116AEA018162D79 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_BlendListByBool_3F75553845FED345E34082964BE5C6A0 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_3925B2AD477DFDFCC7EDA9B71DFAE52F FAnimNode_SequencePlayer
-UABP_SuperTankC_C = {}
+local UABP_SuperTankC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_SuperTankC_C:AnimGraph(AnimGraph) end

@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field PassengerSeat2 UVehicleSeatComponent
 ---@field GunnerSeat1 UVehicleSeatComponent
-ABPLightTankArtilleryW_C = {}
+local ABPLightTankArtilleryW_C = {}
 
 ---@param IsOn boolean
 function ABPLightTankArtilleryW_C:BPOnVehicleOn(IsOn) end

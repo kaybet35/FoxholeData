@@ -2,7 +2,7 @@
 
 ---@class ABPSatchelChargeTPickup_C : AGearPickup
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPSatchelChargeTPickup_C = {}
+local ABPSatchelChargeTPickup_C = {}
 
 
 

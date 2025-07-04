@@ -12,7 +12,7 @@
 ---@field StaticMesh4 UStaticMeshComponent
 ---@field Collision UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-AFortCommandChalkboard01_C = {}
+local AFortCommandChalkboard01_C = {}
 
 
 

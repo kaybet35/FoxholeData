@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBattleTankHeavyArtilleryWCommander_C : UMountComponent
-UBPBattleTankHeavyArtilleryWCommander_C = {}
+local UBPBattleTankHeavyArtilleryWCommander_C = {}
 
 

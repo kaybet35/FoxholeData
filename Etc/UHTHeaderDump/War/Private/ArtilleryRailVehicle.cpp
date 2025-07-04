@@ -11,8 +11,8 @@ AArtilleryRailVehicle::AArtilleryRailVehicle(const FObjectInitializer& ObjectIni
     this->ExplosionDelay = 0.00f;
     this->FuelPowerForRotation = 1.00f;
     this->FuelPowerForFiring = 5.00f;
-    this->FireShellParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->EjectShellParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->FireShellParticleSystem->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 

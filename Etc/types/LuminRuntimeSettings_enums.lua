@@ -1,5 +1,5 @@
 ---@enum ELuminComponentSubElementType
-ELuminComponentSubElementType = {
+local ELuminComponentSubElementType = {
     FileExtension = 0,
     MimeType = 1,
     Mode = 2,
@@ -9,7 +9,7 @@ ELuminComponentSubElementType = {
 }
 
 ---@enum ELuminComponentType
-ELuminComponentType = {
+local ELuminComponentType = {
     Universe = 0,
     Fullscreen = 1,
     SearchProvider = 2,
@@ -22,7 +22,7 @@ ELuminComponentType = {
 }
 
 ---@enum ELuminFrameTimingHint
-ELuminFrameTimingHint = {
+local ELuminFrameTimingHint = {
     Unspecified = 0,
     Maximum = 1,
     FPS_60 = 2,
@@ -31,7 +31,7 @@ ELuminFrameTimingHint = {
 }
 
 ---@enum ELuminPrivilege
-ELuminPrivilege = {
+local ELuminPrivilege = {
     Invalid = 0,
     BatteryInfo = 1,
     CameraCapture = 2,

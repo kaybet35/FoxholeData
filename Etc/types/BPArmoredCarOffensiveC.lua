@@ -3,7 +3,7 @@
 ---@class ABPArmoredCarOffensiveC_C : ABPArmoredCarBaseC_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field mainBody USkeletalMeshComponent
-ABPArmoredCarOffensiveC_C = {}
+local ABPArmoredCarOffensiveC_C = {}
 
 ---@param IsOn boolean
 function ABPArmoredCarOffensiveC_C:BPOnVehicleOn(IsOn) end

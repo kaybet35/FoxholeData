@@ -21,7 +21,7 @@
 ---@field Floor UStaticMeshComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent
-ABPMedicalRoomT3_C = {}
+local ABPMedicalRoomT3_C = {}
 
 ---@param AmmoCount int32
 function ABPMedicalRoomT3_C:UpdateAmmoInstanceMesh(AmmoCount) end

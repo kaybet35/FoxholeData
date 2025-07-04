@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_SequencePlayer_7EFC66124310602C84401EBABE6EF8C8 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_6B895A2B42056DE60BF374B27925B154 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_6C1C968D459A3912BCC12581F5E75D5D FAnimNode_SequencePlayer
-UABP_Trailer_C = {}
+local UABP_Trailer_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Trailer_C:AnimGraph(AnimGraph) end

@@ -6,8 +6,8 @@ ABridge::ABridge(const FObjectInitializer& ObjectInitializer) : Super(ObjectInit
     this->ProfileType = EStructureProfileType::Bridge;
     this->BelowBlockingVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("BelowBlockingVolume"));
     this->AboveBlockingArea = CreateDefaultSubobject<UBoxComponent>(TEXT("AboveBlockingArea"));
-    this->BelowBlockingVolume->SetupAttachment(RootComponent);
     this->AboveBlockingArea->SetupAttachment(RootComponent);
+    this->BelowBlockingVolume->SetupAttachment(RootComponent);
 }
 
 

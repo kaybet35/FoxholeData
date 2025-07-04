@@ -37,7 +37,7 @@
 ---@field Floor UStaticMeshComponent
 ---@field BoatHull UBoatHullComponent
 ---@field ViewTargetCamera UCameraComponent
-ABPFortBaseT3_C = {}
+local ABPFortBaseT3_C = {}
 
 
 

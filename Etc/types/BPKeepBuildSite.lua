@@ -13,7 +13,7 @@
 ---@field Box UBoxComponent
 ---@field RoofMesh UStaticMeshComponent
 ---@field KeepMesh UStaticMeshComponent
-ABPKeepBuildSite_C = {}
+local ABPKeepBuildSite_C = {}
 
 
 

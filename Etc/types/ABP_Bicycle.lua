@@ -13,7 +13,7 @@
 ---@field AnimGraphNode_SequencePlayer_F6CAA0A64109620FD13EFAA95A35C7C1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_7459D22643CE12335278CEA5308FA9FB FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_8D92B3084866942FEBC4A986E919D691 FAnimNode_StateMachine
-UABP_Bicycle_C = {}
+local UABP_Bicycle_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Bicycle_C:AnimGraph(AnimGraph) end

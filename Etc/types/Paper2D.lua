@@ -2,25 +2,25 @@
 
 ---@class APaperCharacter : ACharacter
 ---@field Sprite UPaperFlipbookComponent
-APaperCharacter = {}
+local APaperCharacter = {}
 
 
 
 ---@class APaperFlipbookActor : AActor
 ---@field RenderComponent UPaperFlipbookComponent
-APaperFlipbookActor = {}
+local APaperFlipbookActor = {}
 
 
 
 ---@class APaperGroupedSpriteActor : AActor
 ---@field RenderComponent UPaperGroupedSpriteComponent
-APaperGroupedSpriteActor = {}
+local APaperGroupedSpriteActor = {}
 
 
 
 ---@class APaperSpriteActor : AActor
 ---@field RenderComponent UPaperSpriteComponent
-APaperSpriteActor = {}
+local APaperSpriteActor = {}
 
 
 
@@ -28,13 +28,13 @@ APaperSpriteActor = {}
 ---@field DummyRoot USceneComponent
 ---@field SplineComponent UPaperTerrainSplineComponent
 ---@field RenderComponent UPaperTerrainComponent
-APaperTerrainActor = {}
+local APaperTerrainActor = {}
 
 
 
 ---@class APaperTileMapActor : AActor
 ---@field RenderComponent UPaperTileMapComponent
-APaperTileMapActor = {}
+local APaperTileMapActor = {}
 
 
 
@@ -43,14 +43,14 @@ APaperTileMapActor = {}
 ---@field Top int32
 ---@field Right int32
 ---@field Bottom int32
-FIntMargin = {}
+local FIntMargin = {}
 
 
 
 ---@class FPaperFlipbookKeyFrame
 ---@field Sprite UPaperSprite
 ---@field FrameRun int32
-FPaperFlipbookKeyFrame = {}
+local FPaperFlipbookKeyFrame = {}
 
 
 
@@ -61,14 +61,14 @@ FPaperFlipbookKeyFrame = {}
 ---@field Y int32
 ---@field Width int32
 ---@field Height int32
-FPaperSpriteAtlasSlot = {}
+local FPaperSpriteAtlasSlot = {}
 
 
 
 ---@class FPaperSpriteSocket
 ---@field LocalTransform FTransform
 ---@field SocketName FName
-FPaperSpriteSocket = {}
+local FPaperSpriteSocket = {}
 
 
 
@@ -81,14 +81,14 @@ FPaperSpriteSocket = {}
 ---@field bEnableCollision boolean
 ---@field CollisionOffset float
 ---@field DrawOrder int32
-FPaperTerrainMaterialRule = {}
+local FPaperTerrainMaterialRule = {}
 
 
 
 ---@class FPaperTileInfo
 ---@field TileSet UPaperTileSet
 ---@field PackedTileIndex int32
-FPaperTileInfo = {}
+local FPaperTileInfo = {}
 
 
 
@@ -96,26 +96,26 @@ FPaperTileInfo = {}
 ---@field UserDataName FName
 ---@field CollisionData FSpriteGeometryCollection
 ---@field TerrainMembership uint8
-FPaperTileMetadata = {}
+local FPaperTileMetadata = {}
 
 
 
 ---@class FPaperTileSetTerrain
 ---@field TerrainName FString
 ---@field CenterTileIndex int32
-FPaperTileSetTerrain = {}
+local FPaperTileSetTerrain = {}
 
 
 
 ---@class FSpriteAssetInitParameters
-FSpriteAssetInitParameters = {}
+local FSpriteAssetInitParameters = {}
 
 
 ---@class FSpriteDrawCallRecord
 ---@field Destination FVector
 ---@field BaseTexture UTexture
 ---@field Color FColor
-FSpriteDrawCallRecord = {}
+local FSpriteDrawCallRecord = {}
 
 
 
@@ -128,7 +128,7 @@ FSpriteDrawCallRecord = {}
 ---@field AlphaThreshold float
 ---@field DetailAmount float
 ---@field SimplifyEpsilon float
-FSpriteGeometryCollection = {}
+local FSpriteGeometryCollection = {}
 
 
 
@@ -139,7 +139,7 @@ FSpriteGeometryCollection = {}
 ---@field BoxPosition FVector2D
 ---@field Rotation float
 ---@field bNegativeWinding boolean
-FSpriteGeometryShape = {}
+local FSpriteGeometryShape = {}
 
 
 
@@ -148,7 +148,7 @@ FSpriteGeometryShape = {}
 ---@field SourceSprite UPaperSprite
 ---@field VertexColor FColor
 ---@field MaterialIndex int32
-FSpriteInstanceData = {}
+local FSpriteInstanceData = {}
 
 
 
@@ -156,7 +156,7 @@ FSpriteInstanceData = {}
 ---@field bSampleAdditionalTextures boolean
 ---@field AdditionalSlotIndex int32
 ---@field SlotDisplayName FText
-UMaterialExpressionSpriteTextureSampler = {}
+local UMaterialExpressionSpriteTextureSampler = {}
 
 
 
@@ -165,7 +165,7 @@ UMaterialExpressionSpriteTextureSampler = {}
 ---@field KeyFrames TArray<FPaperFlipbookKeyFrame>
 ---@field DefaultMaterial UMaterialInterface
 ---@field CollisionSource EFlipbookCollisionMode::Type
-UPaperFlipbook = {}
+local UPaperFlipbook = {}
 
 ---@param Index int32
 ---@return boolean
@@ -201,7 +201,7 @@ function UPaperFlipbook:GetKeyFrameIndexAtTime(Time, bClampToEnds) end
 ---@field SpriteColor FLinearColor
 ---@field CachedBodySetup UBodySetup
 ---@field OnFinishedPlaying FPaperFlipbookComponentOnFinishedPlaying
-UPaperFlipbookComponent = {}
+local UPaperFlipbookComponent = {}
 
 function UPaperFlipbookComponent:Stop() end
 ---@param NewColor FLinearColor
@@ -252,7 +252,7 @@ function UPaperFlipbookComponent:GetFlipbook() end
 ---@class UPaperGroupedSpriteComponent : UMeshComponent
 ---@field InstanceMaterials TArray<UMaterialInterface>
 ---@field PerInstanceSpriteData TArray<FSpriteInstanceData>
-UPaperGroupedSpriteComponent = {}
+local UPaperGroupedSpriteComponent = {}
 
 ---@param InstanceIndex int32
 ---@param NewInstanceTransform FTransform
@@ -291,7 +291,7 @@ function UPaperGroupedSpriteComponent:AddInstance(Transform, Sprite, bWorldSpace
 ---@field bEnableSpriteAtlasGroups boolean
 ---@field bEnableTerrainSplineEditing boolean
 ---@field bResizeSpriteDataToMatchTextures boolean
-UPaperRuntimeSettings = {}
+local UPaperRuntimeSettings = {}
 
 
 
@@ -308,16 +308,16 @@ UPaperRuntimeSettings = {}
 ---@field BodySetup UBodySetup
 ---@field AlternateMaterialSplitIndex int32
 ---@field BakedRenderData TArray<FVector4>
-UPaperSprite = {}
+local UPaperSprite = {}
 
 
 
 ---@class UPaperSpriteAtlas : UObject
-UPaperSpriteAtlas = {}
+local UPaperSpriteAtlas = {}
 
 
 ---@class UPaperSpriteBlueprintLibrary : UBlueprintFunctionLibrary
-UPaperSpriteBlueprintLibrary = {}
+local UPaperSpriteBlueprintLibrary = {}
 
 ---@param Sprite UPaperSprite
 ---@param Width int32
@@ -330,7 +330,7 @@ function UPaperSpriteBlueprintLibrary:MakeBrushFromSprite(Sprite, Width, Height)
 ---@field SourceSprite UPaperSprite
 ---@field MaterialOverride UMaterialInterface
 ---@field SpriteColor FLinearColor
-UPaperSpriteComponent = {}
+local UPaperSpriteComponent = {}
 
 ---@param NewColor FLinearColor
 function UPaperSpriteComponent:SetSpriteColor(NewColor) end
@@ -353,7 +353,7 @@ function UPaperSpriteComponent:GetSprite() end
 ---@field SpriteCollisionDomain ESpriteCollisionMode::Type
 ---@field CollisionThickness float
 ---@field CachedBodySetup UBodySetup
-UPaperTerrainComponent = {}
+local UPaperTerrainComponent = {}
 
 ---@param NewColor FLinearColor
 function UPaperTerrainComponent:SetTerrainColor(NewColor) end
@@ -362,12 +362,12 @@ function UPaperTerrainComponent:SetTerrainColor(NewColor) end
 ---@class UPaperTerrainMaterial : UDataAsset
 ---@field Rules TArray<FPaperTerrainMaterialRule>
 ---@field InteriorFill UPaperSprite
-UPaperTerrainMaterial = {}
+local UPaperTerrainMaterial = {}
 
 
 
 ---@class UPaperTerrainSplineComponent : USplineComponent
-UPaperTerrainSplineComponent = {}
+local UPaperTerrainSplineComponent = {}
 
 
 ---@class UPaperTileLayer : UObject
@@ -386,7 +386,7 @@ UPaperTerrainSplineComponent = {}
 ---@field AllocatedCells TArray<FPaperTileInfo>
 ---@field TileSet UPaperTileSet
 ---@field AllocatedGrid TArray<int32>
-UPaperTileLayer = {}
+local UPaperTileLayer = {}
 
 
 
@@ -408,7 +408,7 @@ UPaperTileLayer = {}
 ---@field HexSideLength int32
 ---@field BodySetup UBodySetup
 ---@field LayerNameIndex int32
-UPaperTileMap = {}
+local UPaperTileMap = {}
 
 
 
@@ -424,7 +424,7 @@ UPaperTileMap = {}
 ---@field UseSingleLayerIndex int32
 ---@field bUseSingleLayer boolean
 ---@field TileMap UPaperTileMap
-UPaperTileMapComponent = {}
+local UPaperTileMapComponent = {}
 
 ---@param NewColor FLinearColor
 function UPaperTileMapComponent:SetTileMapColor(NewColor) end
@@ -517,12 +517,12 @@ function UPaperTileMapComponent:AddNewLayer() end
 ---@field TileHeight int32
 ---@field Margin int32
 ---@field Spacing int32
-UPaperTileSet = {}
+local UPaperTileSet = {}
 
 
 
 ---@class UTileMapBlueprintLibrary : UBlueprintFunctionLibrary
-UTileMapBlueprintLibrary = {}
+local UTileMapBlueprintLibrary = {}
 
 ---@param TileIndex int32
 ---@param TileSet UPaperTileSet

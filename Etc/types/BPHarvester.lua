@@ -27,7 +27,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field VehicleIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPHarvester_C = {}
+local ABPHarvester_C = {}
 
 ---@param IsOn boolean
 function ABPHarvester_C:BPOnVehicleOn(IsOn) end

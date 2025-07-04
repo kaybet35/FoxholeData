@@ -24,7 +24,7 @@
 ---@field AnimGraphNode_ApplyAdditive_D9ED063E4C8FE1A70F5C008E33AE4852 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_BlendListByBool_DB98573A4444C505512AD5A57B37BD8F FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_718BF95C41E75AF59D63299AD14172DC FAnimNode_SequencePlayer
-UABP_MediumTank3C_C = {}
+local UABP_MediumTank3C_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_MediumTank3C_C:AnimGraph(AnimGraph) end

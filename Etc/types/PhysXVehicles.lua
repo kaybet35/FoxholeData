@@ -3,12 +3,12 @@
 ---@class AWheeledVehicle : APawn
 ---@field Mesh USkeletalMeshComponent
 ---@field VehicleMovement UWheeledVehicleMovementComponent
-AWheeledVehicle = {}
+local AWheeledVehicle = {}
 
 
 
 ---@class FAnimNode_WheelHandler : FAnimNode_SkeletalControlBase
-FAnimNode_WheelHandler = {}
+local FAnimNode_WheelHandler = {}
 
 
 ---@class FReplicatedVehicleState
@@ -17,19 +17,19 @@ FAnimNode_WheelHandler = {}
 ---@field BrakeInput float
 ---@field HandbrakeInput float
 ---@field CurrentGear int32
-FReplicatedVehicleState = {}
+local FReplicatedVehicleState = {}
 
 
 
 ---@class FTireConfigMaterialFriction
 ---@field PhysicalMaterial UPhysicalMaterial
 ---@field FrictionScale float
-FTireConfigMaterialFriction = {}
+local FTireConfigMaterialFriction = {}
 
 
 
 ---@class FVehicleAnimInstanceProxy : FAnimInstanceProxy
-FVehicleAnimInstanceProxy = {}
+local FVehicleAnimInstanceProxy = {}
 
 
 ---@class FVehicleDifferential4WData
@@ -40,7 +40,7 @@ FVehicleAnimInstanceProxy = {}
 ---@field CentreBias float
 ---@field FrontBias float
 ---@field RearBias float
-FVehicleDifferential4WData = {}
+local FVehicleDifferential4WData = {}
 
 
 
@@ -51,7 +51,7 @@ FVehicleDifferential4WData = {}
 ---@field DampingRateFullThrottle float
 ---@field DampingRateZeroThrottleClutchEngaged float
 ---@field DampingRateZeroThrottleClutchDisengaged float
-FVehicleEngineData = {}
+local FVehicleEngineData = {}
 
 
 
@@ -59,14 +59,14 @@ FVehicleEngineData = {}
 ---@field Ratio float
 ---@field DownRatio float
 ---@field UpRatio float
-FVehicleGearData = {}
+local FVehicleGearData = {}
 
 
 
 ---@class FVehicleInputRate
 ---@field RiseRate float
 ---@field FallRate float
-FVehicleInputRate = {}
+local FVehicleInputRate = {}
 
 
 
@@ -79,7 +79,7 @@ FVehicleInputRate = {}
 ---@field ReverseGearRatio float
 ---@field NeutralGearUpRatio float
 ---@field ClutchStrength float
-FVehicleTransmissionData = {}
+local FVehicleTransmissionData = {}
 
 
 
@@ -88,12 +88,12 @@ FVehicleTransmissionData = {}
 ---@field BoneName FName
 ---@field AdditionalOffset FVector
 ---@field bDisableSteering boolean
-FWheelSetup = {}
+local FWheelSetup = {}
 
 
 
 ---@class USimpleWheeledVehicleMovementComponent : UWheeledVehicleMovementComponent
-USimpleWheeledVehicleMovementComponent = {}
+local USimpleWheeledVehicleMovementComponent = {}
 
 ---@param SteerAngle float
 ---@param WheelIndex int32
@@ -109,13 +109,13 @@ function USimpleWheeledVehicleMovementComponent:SetBrakeTorque(BrakeTorque, Whee
 ---@class UTireConfig : UDataAsset
 ---@field FrictionScale float
 ---@field TireFrictionScales TArray<FTireConfigMaterialFriction>
-UTireConfig = {}
+local UTireConfig = {}
 
 
 
 ---@class UVehicleAnimInstance : UAnimInstance
 ---@field WheeledVehicleMovementComponent UWheeledVehicleMovementComponent
-UVehicleAnimInstance = {}
+local UVehicleAnimInstance = {}
 
 ---@return AWheeledVehicle
 function UVehicleAnimInstance:GetVehicle() end
@@ -156,7 +156,7 @@ function UVehicleAnimInstance:GetVehicle() end
 ---@field Location FVector
 ---@field OldLocation FVector
 ---@field Velocity FVector
-UVehicleWheel = {}
+local UVehicleWheel = {}
 
 ---@return boolean
 function UVehicleWheel:IsInAir() end
@@ -221,7 +221,7 @@ function UVehicleWheel:GetRotationAngle() end
 ---@field HandbrakeInputRate FVehicleInputRate
 ---@field SteeringInputRate FVehicleInputRate
 ---@field OverrideController AController
-UWheeledVehicleMovementComponent = {}
+local UWheeledVehicleMovementComponent = {}
 
 ---@param bUseAuto boolean
 function UWheeledVehicleMovementComponent:SetUseAutoGears(bUseAuto) end
@@ -280,7 +280,7 @@ function UWheeledVehicleMovementComponent:GetCurrentGear() end
 ---@field AckermannAccuracy float
 ---@field TransmissionSetup FVehicleTransmissionData
 ---@field SteeringCurve FRuntimeFloatCurve
-UWheeledVehicleMovementComponent4W = {}
+local UWheeledVehicleMovementComponent4W = {}
 
 
 

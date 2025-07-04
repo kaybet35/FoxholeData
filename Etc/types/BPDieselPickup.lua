@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPDieselPickup_C : AGearPickup
-ABPDieselPickup_C = {}
+local ABPDieselPickup_C = {}
 
 

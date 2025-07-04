@@ -13,9 +13,9 @@ APipelineValve::APipelineValve(const FObjectInitializer& ObjectInitializer) : Su
     this->BackSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("BackSocket"));
     this->FrontSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("FrontSocket"));
     this->ThroughputNormalized = 0.00f;
-    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
     this->BackSocket->SetupAttachment(RootComponent);
     this->FrontSocket->SetupAttachment(RootComponent);
+    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
 }
 
 void APipelineValve::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

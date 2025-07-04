@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AUnderwaterTorpedoExplosion_C : AWarExplosionEffect
-AUnderwaterTorpedoExplosion_C = {}
+local AUnderwaterTorpedoExplosion_C = {}
 
 

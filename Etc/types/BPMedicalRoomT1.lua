@@ -19,7 +19,7 @@
 ---@field Floor UStaticMeshComponent
 ---@field FortCommon UTemplateComponent
 ---@field MedicalRoomMesh UStaticMeshComponent
-ABPMedicalRoomT1_C = {}
+local ABPMedicalRoomT1_C = {}
 
 ---@param AmmoCount int32
 function ABPMedicalRoomT1_C:UpdateAmmoInstanceMesh(AmmoCount) end

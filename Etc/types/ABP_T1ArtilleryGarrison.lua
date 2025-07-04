@@ -6,7 +6,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_A2081DD146F87B9E0AFD938302201183 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_BlendSpacePlayer_D393333F40694890F975A499D6C1EDE5 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_E326BB86473EB5D2637C1098E53610A5 FAnimNode_BlendSpacePlayer
-UABP_T1ArtilleryGarrison_C = {}
+local UABP_T1ArtilleryGarrison_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_T1ArtilleryGarrison_C:AnimGraph(AnimGraph) end

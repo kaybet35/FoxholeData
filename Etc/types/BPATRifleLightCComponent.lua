@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATRifleLightCComponent_C : UATRifleComponent
-UBPATRifleLightCComponent_C = {}
+local UBPATRifleLightCComponent_C = {}
 
 

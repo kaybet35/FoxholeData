@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
 ---@field DefaultSceneRoot USceneComponent
-ABayonetChargedImpact_C = {}
+local ABayonetChargedImpact_C = {}
 
 function ABayonetChargedImpact_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

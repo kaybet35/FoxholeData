@@ -2,31 +2,31 @@
 
 ---@class AAccessoryPickup : AGearPickup
 ---@field SlotsToAccessorize TArray<EEquipmentSlot>
-AAccessoryPickup = {}
+local AAccessoryPickup = {}
 
 
 
 ---@class AAlwaysReservableItemPickup : ABasicItemPickup
-AAlwaysReservableItemPickup = {}
+local AAlwaysReservableItemPickup = {}
 
 
 ---@class AAmbulance : ARWDSimVehicle
-AAmbulance = {}
+local AAmbulance = {}
 
 
 ---@class AAmmoPickup : ABasicItemPickup
-AAmmoPickup = {}
+local AAmmoPickup = {}
 
 
 ---@class AAmmoRoom : ATeamStructure
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AAmmoRoom = {}
+local AAmmoRoom = {}
 
 
 
 ---@class AAmmoRoomBuildSite : AFortBuildSite
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AAmmoRoomBuildSite = {}
+local AAmmoRoomBuildSite = {}
 
 
 
@@ -37,12 +37,12 @@ AAmmoRoomBuildSite = {}
 ---@field BackLeftWaterEmitter UParticleSystemComponent
 ---@field WakeWaterEmitter UParticleSystemComponent
 ---@field WaterDriveLoop UAudioComponent
-AAmphibiousVehicle = {}
+local AAmphibiousVehicle = {}
 
 
 
 ---@class AAntiZombiePainVolume : AWarPainVolume
-AAntiZombiePainVolume = {}
+local AAntiZombiePainVolume = {}
 
 
 ---@class AArmoredCar : ARWDSimVehicle
@@ -50,7 +50,7 @@ AAntiZombiePainVolume = {}
 ---@field StashedAmmoType FName
 ---@field StashedAmmo int32
 ---@field PayloadMeshes FPayloadMeshes
-AArmoredCar = {}
+local AArmoredCar = {}
 
 function AArmoredCar:OnRep_StashedAmmo() end
 function AArmoredCar:OnRep_GunnerYawAndPitch() end
@@ -58,7 +58,7 @@ function AArmoredCar:OnRep_GunnerYawAndPitch() end
 
 ---@class AArmourProfiles : AInfo
 ---@field DataTable UDataTable
-AArmourProfiles = {}
+local AArmourProfiles = {}
 
 
 
@@ -67,7 +67,7 @@ AArmourProfiles = {}
 ---@field StashedAmmo int32
 ---@field StashedAmmoType FName
 ---@field PayloadMeshes FPayloadMeshes
-AArtillery = {}
+local AArtillery = {}
 
 function AArtillery:OnRep_StashedAmmo() end
 function AArtillery:OnRep_GunnerYawAndPitch() end
@@ -80,7 +80,7 @@ function AArtillery:OnRep_GunnerYawAndPitch() end
 ---@field ExplosionDelay float
 ---@field FuelPowerForRotation float
 ---@field FuelPowerForFiring float
-AArtilleryRailVehicle = {}
+local AArtilleryRailVehicle = {}
 
 
 
@@ -112,7 +112,7 @@ AArtilleryRailVehicle = {}
 ---@field LadderLocation3 USceneComponent
 ---@field LadderType TSubclassOf<ALadder>
 ---@field SpawnedLadders TArray<ALadder>
-AAssemblyStation = {}
+local AAssemblyStation = {}
 
 function AAssemblyStation:OnRep_PowerGridInfo() end
 function AAssemblyStation:OnRep_BuildActor() end
@@ -121,18 +121,18 @@ function AAssemblyStation:OnRep_AssemblyAreaState() end
 
 ---@class AAssemblyStationBuildSite : AStructureBuildSite
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AAssemblyStationBuildSite = {}
+local AAssemblyStationBuildSite = {}
 
 
 
 ---@class ABackpackItemPickup : AItemPickup
 ---@field BackpackMeshes TArray<USkeletalMesh>
-ABackpackItemPickup = {}
+local ABackpackItemPickup = {}
 
 
 
 ---@class ABarbedWire : ABuildableStructure
-ABarbedWire = {}
+local ABarbedWire = {}
 
 
 ---@class ABarge : ASimVehicle
@@ -157,7 +157,7 @@ ABarbedWire = {}
 ---@field ShippableData FReplicatedShippableData
 ---@field SavedData FSavedShippableData
 ---@field ShippableUseComponent UShippableUseComponent
-ABarge = {}
+local ABarge = {}
 
 function ABarge:ServerToggleRamp() end
 function ABarge:OnRep_ShippableData() end
@@ -185,7 +185,7 @@ function ABarge:OnRep_CurrentShippable() end
 ---@field UndockingObstructionCheckVolume UBoxComponent
 ---@field ShippableUseComponent UShippableUseComponent
 ---@field StarterFuelNormalizedOverride float
-ABargeShip = {}
+local ABargeShip = {}
 
 function ABargeShip:ServerToggleRamp() end
 function ABargeShip:OnRep_ShippableData() end
@@ -201,7 +201,7 @@ function ABargeShip:OnRep_CurrentShippable() end
 ---@field BaseTunnelConnectionRange int32
 ---@field DecayInfo FDecayInfo
 ---@field SpawnPoints FSpawnPoints
-ABase = {}
+local ABase = {}
 
 
 
@@ -215,12 +215,12 @@ ABase = {}
 ---@field TunnelNodeProxy ATunnelNodeProxy
 ---@field bIsBaseUpgrade boolean
 ---@field TunnelConnectionRange int32
-ABaseBuildSite = {}
+local ABaseBuildSite = {}
 
 
 
 ---@class ABasicItemPickup : AItemPickup
-ABasicItemPickup = {}
+local ABasicItemPickup = {}
 
 
 ---@class ABattleTank : ATankBase
@@ -237,7 +237,7 @@ ABasicItemPickup = {}
 ---@field AlternateStashedAmmo int32
 ---@field Alternate2StashedAmmo int32
 ---@field PayloadMeshes FPayloadMeshes
-ABattleTank = {}
+local ABattleTank = {}
 
 function ABattleTank:OnRep_StashedAmmo() end
 function ABattleTank:OnRep_MainGunYaw() end
@@ -252,7 +252,7 @@ function ABattleTank:GetIsMainGunFiring() end
 
 
 ---@class ABicycle : ASimVehicle
-ABicycle = {}
+local ABicycle = {}
 
 
 ---@class ABorderBase : AForwardBase
@@ -260,7 +260,7 @@ ABicycle = {}
 ---@field OnSpawnedSFX USoundCue
 ---@field bIsUsable boolean
 ---@field Info FBorderBaseInfo
-ABorderBase = {}
+local ABorderBase = {}
 
 function ABorderBase:OnRep_IsUsable() end
 function ABorderBase:MulticastOnSpawned() end
@@ -268,21 +268,21 @@ function ABorderBase:MulticastOnSpawned() end
 
 ---@class ABorderTravelGhost : AActor
 ---@field BoxCollision UBoxComponent
-ABorderTravelGhost = {}
+local ABorderTravelGhost = {}
 
 
 
 ---@class ABoundaryHex : AActor
 ---@field Mesh UStaticMeshComponent
 ---@field EditorMesh UStaticMeshComponent
-ABoundaryHex = {}
+local ABoundaryHex = {}
 
 
 
 ---@class ABridge : ABuildableStructure
 ---@field BelowBlockingVolume UBoxComponent
 ---@field AboveBlockingArea UBoxComponent
-ABridge = {}
+local ABridge = {}
 
 
 
@@ -306,7 +306,7 @@ ABridge = {}
 ---@field UpgradeModeMaterial UMaterialInterface
 ---@field LineOfSightVisualizationActor ALineOfSightVisualizationActor
 ---@field UpgradeStructure ABuildableStructure
-ABuildGhost = {}
+local ABuildGhost = {}
 
 
 
@@ -327,7 +327,7 @@ ABuildGhost = {}
 ---@field RemainingExpiryTime float
 ---@field PawnCheckVolumes TArray<UShapeComponent>
 ---@field BuildSiteMaterial UMaterialInterface
-ABuildSite = {}
+local ABuildSite = {}
 
 function ABuildSite:OnRep_ResourceRequirements() end
 function ABuildSite:OnRep_DefaultResourceRequirements() end
@@ -404,7 +404,7 @@ function ABuildSite:OnRep_DefaultResourceRequirements() end
 ---@field bIsReservable boolean
 ---@field bUsesImpactsMaterial boolean
 ---@field PackagedMesh UStaticMesh
-ABuildableStructure = {}
+local ABuildableStructure = {}
 
 function ABuildableStructure:OnRep_PathSockets() end
 ---@param PreviousModificationMask uint32
@@ -416,31 +416,31 @@ function ABuildableStructure:OnRep_ModificationMask(PreviousModificationMask) en
 ---@field GrassCullRadius float
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
-ABuiltRoad = {}
+local ABuiltRoad = {}
 
 
 
 ---@class ACabooseRailVehicle : ARailVehicle
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ACabooseRailVehicle = {}
+local ACabooseRailVehicle = {}
 
 
 
 ---@class ACalloutMarker : AActor
 ---@field Lifetime_Sec float
 ---@field MoveSpeed float
-ACalloutMarker = {}
+local ACalloutMarker = {}
 
 
 
 ---@class ACalloutMarkerGhost : AActor
 ---@field SimPlayerController ASimPlayerController
-ACalloutMarkerGhost = {}
+local ACalloutMarkerGhost = {}
 
 
 
 ---@class ACatWalk : ATeamStructure
-ACatWalk = {}
+local ACatWalk = {}
 
 
 ---@class ACharactersRenderInfo : AInfo
@@ -452,7 +452,7 @@ ACatWalk = {}
 ---@field ZombieFootprintInfo FZombieFootPrintActorInfo
 ---@field IdleAnimations TArray<FIdleAnimation>
 ---@field PhysicalMaterialResolver FPhysicalMaterialResolver
-ACharactersRenderInfo = {}
+local ACharactersRenderInfo = {}
 
 
 
@@ -462,24 +462,24 @@ ACharactersRenderInfo = {}
 ---@field CriticalThreshold float
 ---@field ReplacementState EClientFoliageReplacementState
 ---@field OriginalComponent UFoliageInstancedStaticMeshComponent
-AClientFoliageReplacement = {}
+local AClientFoliageReplacement = {}
 
 ---@param State EClientFoliageReplacementState
 function AClientFoliageReplacement:OnStateChanged(State) end
 
 
 ---@class ACoastalGun : AGunTurret
-ACoastalGun = {}
+local ACoastalGun = {}
 
 
 ---@class AConcreteWall : AWall
-AConcreteWall = {}
+local AConcreteWall = {}
 
 
 ---@class AConquestConfig : AInfo
 ---@field ItemsC TArray<FCodeNameQuantity>
 ---@field ItemsW TArray<FCodeNameQuantity>
-AConquestConfig = {}
+local AConquestConfig = {}
 
 
 
@@ -499,7 +499,7 @@ AConquestConfig = {}
 ---@field RecheckBlockedSiteTime float
 ---@field FuelConsumptionPerCycle int32
 ---@field ServerState FConstructionEquipmentServerState
-AConstructionEquipment = {}
+local AConstructionEquipment = {}
 
 function AConstructionEquipment:OnRep_ConstructionEquipmentServerState() end
 function AConstructionEquipment:MulticastPlayMaterialDropFX() end
@@ -510,7 +510,7 @@ function AConstructionEquipment:MulticastPlayMaterialDropFX() end
 ---@field GarageFootprintComponent UBoxComponent
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
 ---@field FullRepairCost int32
-AConstructionSite = {}
+local AConstructionSite = {}
 
 ---@return boolean
 function AConstructionSite:ValidateMapBuildLocation() end
@@ -518,7 +518,7 @@ function AConstructionSite:ValidateMapBuildLocation() end
 
 ---@class AConstructionSiteBuildSite : AStructureBuildSite
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
-AConstructionSiteBuildSite = {}
+local AConstructionSiteBuildSite = {}
 
 
 
@@ -529,7 +529,7 @@ AConstructionSiteBuildSite = {}
 ---@field WorkPS UParticleSystem
 ---@field CabYaw float
 ---@field bIsWorking boolean
-AConstructionVehicle = {}
+local AConstructionVehicle = {}
 
 ---@param DesiredYaw float
 function AConstructionVehicle:ServerSyncDesiredYaw(DesiredYaw) end
@@ -545,7 +545,7 @@ function AConstructionVehicle:MulticastPlayFX() end
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field Colors TArray<FLinearColor>
 ---@field ColorIndex uint8
-AContainer = {}
+local AContainer = {}
 
 function AContainer:OnRep_Color() end
 
@@ -558,7 +558,7 @@ function AContainer:OnRep_Color() end
 ---@field DeployingSFXLoop UAudioComponent
 ---@field PulleyMovementSFXLoop UAudioComponent
 ---@field CraneComponent UCraneComponent
-ACrane = {}
+local ACrane = {}
 
 
 
@@ -569,23 +569,23 @@ ACrane = {}
 ---@field InteractBlockedMesh UStaticMesh
 ---@field InvalidMesh UStaticMesh
 ---@field UseMesh UStaticMesh
-ACraneMarker = {}
+local ACraneMarker = {}
 
 
 
 ---@class ACraneRailwayTrack : ARailwayTrack
-ACraneRailwayTrack = {}
+local ACraneRailwayTrack = {}
 
 
 ---@class ACrater : ABuildableStructure
 ---@field MeshStops TArray<FCraterMeshStop>
-ACrater = {}
+local ACrater = {}
 
 
 
 ---@class ADamageProfiles : AInfo
 ---@field DataTable UDataTable
-ADamageProfiles = {}
+local ADamageProfiles = {}
 
 
 
@@ -621,20 +621,20 @@ ADamageProfiles = {}
 ---@field SunAngle float
 ---@field SunAngleQuantized uint16
 ---@field EnvironmentalModificationData UEnvironmentalModificationData
-ADayNightCycleManager = {}
+local ADayNightCycleManager = {}
 
 function ADayNightCycleManager:OnRep_SunAngleQuantized() end
 
 
 ---@class ADeadlyGasGrenadeProjectile : ATimedProjectile
 ---@field PainVolumeTemplate TSubclassOf<AWarPainVolume>
-ADeadlyGasGrenadeProjectile = {}
+local ADeadlyGasGrenadeProjectile = {}
 
 
 
 ---@class ADeployedListeningKit : ATripodMountedStructure
 ---@field ListeningAreaComponent UListeningAreaComponent
-ADeployedListeningKit = {}
+local ADeployedListeningKit = {}
 
 
 
@@ -642,13 +642,13 @@ ADeployedListeningKit = {}
 ---@field TeamId uint8
 ---@field bEnableFriendlyFireTrackingOverride boolean
 ---@field IgnoreDamageFromStructures TArray<FName>
-ADeployedStructure = {}
+local ADeployedStructure = {}
 
 
 
 ---@class ADeployedTripod : ADeployedStructure
 ---@field BaseItemCodeName FName
-ADeployedTripod = {}
+local ADeployedTripod = {}
 
 
 
@@ -659,21 +659,21 @@ ADeployedTripod = {}
 ---@field StashedAmmo int16
 ---@field StashedAmmoType FName
 ---@field TripodHeight float
-ADeployedWeapon = {}
+local ADeployedWeapon = {}
 
 function ADeployedWeapon:OnRep_StashedAmmo() end
 
 
 ---@class ADepthProjectile : AWarProjectile
 ---@field WaterVelocityZ float
-ADepthProjectile = {}
+local ADepthProjectile = {}
 
 
 
 ---@class ADestroyedAssemblyStation : ADestroyedTeamStructure
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field ModificationMask uint32
-ADestroyedAssemblyStation = {}
+local ADestroyedAssemblyStation = {}
 
 
 
@@ -682,40 +682,40 @@ ADestroyedAssemblyStation = {}
 ---@field bIsStaticBase boolean
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field TechTreeComponent UTechTreeComponent
-ADestroyedBase = {}
+local ADestroyedBase = {}
 
 
 
 ---@class ADestroyedBorderBase : ADestroyedBase
 ---@field Info FBorderBaseInfo
 ---@field bIsActive boolean
-ADestroyedBorderBase = {}
+local ADestroyedBorderBase = {}
 
 
 
 ---@class ADestroyedBridge : ADestroyedStructure
-ADestroyedBridge = {}
+local ADestroyedBridge = {}
 
 
 ---@class ADestroyedConstructionSite : ADestroyedTeamStructure
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
-ADestroyedConstructionSite = {}
+local ADestroyedConstructionSite = {}
 
 
 
 ---@class ADestroyedDrawbridge : ADestroyedStructure
 ---@field SideAProxy UPersistentProxyComponent
 ---@field SideBProxy UPersistentProxyComponent
-ADestroyedDrawbridge = {}
+local ADestroyedDrawbridge = {}
 
 
 
 ---@class ADestroyedEmplacementHouse : ADestroyedTeamStructure
-ADestroyedEmplacementHouse = {}
+local ADestroyedEmplacementHouse = {}
 
 
 ---@class ADestroyedEngineeringCenter : ADestroyedTeamStructure
-ADestroyedEngineeringCenter = {}
+local ADestroyedEngineeringCenter = {}
 
 
 ---@class ADestroyedFacilityRefinery : ADestroyedTeamStructure
@@ -729,53 +729,53 @@ ADestroyedEngineeringCenter = {}
 ---@field ItemInputBuffer int32
 ---@field ReservePower FReservePower
 ---@field ModificationMask uint32
-ADestroyedFacilityRefinery = {}
+local ADestroyedFacilityRefinery = {}
 
 
 
 ---@class ADestroyedFort : AFort
-ADestroyedFort = {}
+local ADestroyedFort = {}
 
 
 ---@class ADestroyedFortForwardBase : ADestroyedBase
-ADestroyedFortForwardBase = {}
+local ADestroyedFortForwardBase = {}
 
 
 ---@class ADestroyedGarrisonHouse : ADestroyedTeamStructure
-ADestroyedGarrisonHouse = {}
+local ADestroyedGarrisonHouse = {}
 
 
 ---@class ADestroyedGarrisonStation : ADestroyedGarrisonHouse
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field TechTreeComponent UTechTreeComponent
 ---@field LastSpawnPointID uint32
-ADestroyedGarrisonStation = {}
+local ADestroyedGarrisonStation = {}
 
 
 
 ---@class ADestroyedHospital : ADestroyedTeamStructure
 ---@field LastSpawnPointID uint32
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ADestroyedHospital = {}
+local ADestroyedHospital = {}
 
 
 
 ---@class ADestroyedKeep : ADestroyedTeamStructure
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ADestroyedKeep = {}
+local ADestroyedKeep = {}
 
 
 
 ---@class ADestroyedLiquidTransferStation : ADestroyedResourceTransferStation
 ---@field FuelInputBuffers TArray<FFuelQuantity>
 ---@field FuelOutputBuffer FFuelQuantity
-ADestroyedLiquidTransferStation = {}
+local ADestroyedLiquidTransferStation = {}
 
 
 
 ---@class ADestroyedMassProductionFactory : ADestroyedSpecializedFactory
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
-ADestroyedMassProductionFactory = {}
+local ADestroyedMassProductionFactory = {}
 
 
 
@@ -783,25 +783,25 @@ ADestroyedMassProductionFactory = {}
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
 ---@field RefinementOrderMap TMap<FString, FRefinementOrderInfo>
-ADestroyedRefinery = {}
+local ADestroyedRefinery = {}
 
 
 
 ---@class ADestroyedResourceMine : ADestroyedStructure
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ADestroyedResourceMine = {}
+local ADestroyedResourceMine = {}
 
 
 
 ---@class ADestroyedResourceTransferStation : ADestroyedTeamStructure
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ADestroyedResourceTransferStation = {}
+local ADestroyedResourceTransferStation = {}
 
 
 
 ---@class ADestroyedRocketFacility : ADestroyedTeamStructure
 ---@field FuelTank FFuelTank
-ADestroyedRocketFacility = {}
+local ADestroyedRocketFacility = {}
 
 
 
@@ -809,13 +809,13 @@ ADestroyedRocketFacility = {}
 ---@field CraneSpawnLocationComponent2 UCraneSpawnLocationComponent
 ---@field ProxyLoadingDockComponent UPersistentProxyComponent
 ---@field SpawnedLadders TArray<ALadder>
-ADestroyedSeaport = {}
+local ADestroyedSeaport = {}
 
 
 
 ---@class ADestroyedSpecializedFactory : ADestroyedTeamStructure
 ---@field SpecializedFactoryComponent USpecializedFactoryComponent
-ADestroyedSpecializedFactory = {}
+local ADestroyedSpecializedFactory = {}
 
 
 
@@ -823,35 +823,35 @@ ADestroyedSpecializedFactory = {}
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field ReserveStockpileComponent UReserveStockpileComponent
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
-ADestroyedStorageFacility = {}
+local ADestroyedStorageFacility = {}
 
 
 
 ---@class ADestroyedStructure : AStructure
 ---@field bIsScorchable boolean
 ---@field bIsScorched boolean
-ADestroyedStructure = {}
+local ADestroyedStructure = {}
 
 
 
 ---@class ADestroyedTeamStructure : ARuinableStructure
 ---@field LastHeldFactionID EFactionId
-ADestroyedTeamStructure = {}
+local ADestroyedTeamStructure = {}
 
 
 
 ---@class ADestroyedTownHall : ADestroyedBase
-ADestroyedTownHall = {}
+local ADestroyedTownHall = {}
 
 
 ---@class ADestroyedVehicleFactory : ADestroyedConstructionSite
-ADestroyedVehicleFactory = {}
+local ADestroyedVehicleFactory = {}
 
 
 ---@class ADestructibleProp : AActor
 ---@field DestroyedFX UParticleSystem
 ---@field DestroyedSoundCue USoundCue
-ADestructibleProp = {}
+local ADestructibleProp = {}
 
 function ADestructibleProp:MulticastApplyFatalHit() end
 
@@ -887,7 +887,7 @@ function ADestructibleProp:MulticastApplyFatalHit() end
 ---@field SideBState FBridgeSideState
 ---@field State EBridgeState
 ---@field StartTime float
-ADrawbridge = {}
+local ADrawbridge = {}
 
 function ADrawbridge:OnRep_State() end
 function ADrawbridge:OnRep_StartTime() end
@@ -904,14 +904,14 @@ function ADrawbridge:ApplyVehicleDecay() end
 ---@class ADrawbridgeBuildSite : AStructureBuildSite
 ---@field SideAProxy UPersistentProxyComponent
 ---@field SideBProxy UPersistentProxyComponent
-ADrawbridgeBuildSite = {}
+local ADrawbridgeBuildSite = {}
 
 
 
 ---@class AEffectSpawnerProxy : AActor
 ---@field DestroyedVFX UParticleSystem
 ---@field DestroyedSoundCue USoundCue
-AEffectSpawnerProxy = {}
+local AEffectSpawnerProxy = {}
 
 function AEffectSpawnerProxy:OnRep_DestroyedVFX() end
 function AEffectSpawnerProxy:OnRep_DestroyedSoundCue() end
@@ -920,13 +920,13 @@ function AEffectSpawnerProxy:OnRep_DestroyedSoundCue() end
 ---@class AEmplacedArtillery : AEmplacedWeapon
 ---@field RequiredSquadMembers uint8
 ---@field SquadId int32
-AEmplacedArtillery = {}
+local AEmplacedArtillery = {}
 
 
 
 ---@class AEmplacedStructure : ATeamStructure
 ---@field EmplacedIncomingDamageModifier float
-AEmplacedStructure = {}
+local AEmplacedStructure = {}
 
 
 
@@ -939,13 +939,13 @@ AEmplacedStructure = {}
 ---@field StashedAmmoType FName
 ---@field MuzzleInfo TArray<FMuzzleInfo>
 ---@field PayloadMeshes FPayloadMeshes
-AEmplacedWeapon = {}
+local AEmplacedWeapon = {}
 
 function AEmplacedWeapon:OnRep_StashedAmmo() end
 
 
 ---@class AEmplacedWeaponWithShieldedSeat : AEmplacedWeapon
-AEmplacedWeaponWithShieldedSeat = {}
+local AEmplacedWeaponWithShieldedSeat = {}
 
 
 ---@class AEmplacementHouse : ATunnelNode
@@ -959,12 +959,12 @@ AEmplacedWeaponWithShieldedSeat = {}
 ---@field StashedAmmoType FName
 ---@field GunnerYawAndPitch FVector2D
 ---@field Ladder ALadder
-AEmplacementHouse = {}
+local AEmplacementHouse = {}
 
 
 
 ---@class AEmplacementHouseBuildSite : AStructureBuildSite
-AEmplacementHouseBuildSite = {}
+local AEmplacementHouseBuildSite = {}
 
 
 ---@class AEngineRailVehicle : ARailVehicle
@@ -981,7 +981,7 @@ AEmplacementHouseBuildSite = {}
 ---@field MaxHornDuration float
 ---@field BoostDuration float
 ---@field bHornActivated boolean
-AEngineRailVehicle = {}
+local AEngineRailVehicle = {}
 
 ---@param InHornActivated boolean
 function AEngineRailVehicle:ServerSetHornActivated(InHornActivated) end
@@ -993,20 +993,20 @@ function AEngineRailVehicle:ClientSetBoosting(InBoosting) end
 ---@class AEngineRoom : AFacilityRefinery
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field AnimMontage UAnimMontage
-AEngineRoom = {}
+local AEngineRoom = {}
 
 
 
 ---@class AEngineRoomBuildSite : AFacilityRefineryBuildSite
-AEngineRoomBuildSite = {}
+local AEngineRoomBuildSite = {}
 
 
 ---@class AEngineeringCenter : ATeamStructure
-AEngineeringCenter = {}
+local AEngineeringCenter = {}
 
 
 ---@class AEngineeringCenterBuildSite : AStructureBuildSite
-AEngineeringCenterBuildSite = {}
+local AEngineeringCenterBuildSite = {}
 
 
 ---@class AEnvironmentModification : AActor
@@ -1023,7 +1023,7 @@ AEngineeringCenterBuildSite = {}
 ---@field bFirstReplicationOfDevastationHeatmap boolean
 ---@field CreationTime float
 ---@field EncodedRemovedFoliageInstances TArray<uint8>
-AEnvironmentModification = {}
+local AEnvironmentModification = {}
 
 ---@param OldDevastationHeatmap TArray<uint8>
 function AEnvironmentModification:ProcessDevastationHeatmapReplication(OldDevastationHeatmap) end
@@ -1041,13 +1041,13 @@ function AEnvironmentModification:OnRep_CreationTime(OldCreationTime) end
 ---@field ArrowComponent UArrowComponent
 ---@field DayTimeSFX UAudioComponent
 ---@field NightTimeSFX UAudioComponent
-AEnvironmentSFX = {}
+local AEnvironmentSFX = {}
 
 
 
 ---@class AEnvironmentVFX : AActor
 ---@field ArrowComponent UArrowComponent
-AEnvironmentVFX = {}
+local AEnvironmentVFX = {}
 
 
 
@@ -1067,7 +1067,7 @@ AEnvironmentVFX = {}
 ---@field ExplosionLength float
 ---@field bExplosionEffectsTrigger boolean
 ---@field TeamId uint8
-AExplosive = {}
+local AExplosive = {}
 
 function AExplosive:OnRep_Exploded() end
 
@@ -1077,7 +1077,7 @@ function AExplosive:OnRep_Exploded() end
 ---@field DirectFireExplosionClass TSubclassOf<AWarExplosionEffect>
 ---@field ShotSoundCue USoundCue
 ---@field bSupportsDirectFireMode boolean
-AExplosiveAmmoPickup = {}
+local AExplosiveAmmoPickup = {}
 
 
 
@@ -1103,7 +1103,7 @@ AExplosiveAmmoPickup = {}
 ---@field Orders TArray<FFacilityRefineryOrder>
 ---@field CompletedOrders TArray<FFacilityRefineryOrder>
 ---@field ItemInputBuffer int32
-AFacilityRefinery = {}
+local AFacilityRefinery = {}
 
 function AFacilityRefinery:OnRep_ReplicatedIsActive() end
 function AFacilityRefinery:OnRep_ReplicatedIndex() end
@@ -1124,13 +1124,13 @@ function AFacilityRefinery:BPOnStateActive() end
 ---@field CompletedOrders TArray<FFacilityRefineryOrder>
 ---@field ItemInputBuffer int32
 ---@field ReservePower FReservePower
-AFacilityRefineryBuildSite = {}
+local AFacilityRefineryBuildSite = {}
 
 
 
 ---@class AFestivalFlagHolder : ATeamStructure
 ---@field DropOffLocation UCapsuleComponent
-AFestivalFlagHolder = {}
+local AFestivalFlagHolder = {}
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -1145,7 +1145,7 @@ function AFestivalFlagHolder:OnBeginOverlap(OverlappedComponent, OtherActor, Oth
 ---@field FlagMesh USkeletalMeshComponent
 ---@field ColonialMaterial UMaterialInterface
 ---@field WardenMaterial UMaterialInterface
-AFestivalFlagPickUp = {}
+local AFestivalFlagPickUp = {}
 
 
 
@@ -1153,7 +1153,7 @@ AFestivalFlagPickUp = {}
 ---@field TeleportLocation USceneComponent
 ---@field Name FString
 ---@field Destination FString
-AFestivalPortal = {}
+local AFestivalPortal = {}
 
 
 
@@ -1162,12 +1162,12 @@ AFestivalPortal = {}
 ---@field BackRamp UStaticMeshComponent
 ---@field FrontKillVolume UBoxComponent
 ---@field BackKillVolume UBoxComponent
-AFieldBridge = {}
+local AFieldBridge = {}
 
 
 
 ---@class AFieldBridgeBuildSite : AStructureBuildSite
-AFieldBridgeBuildSite = {}
+local AFieldBridgeBuildSite = {}
 
 
 ---@class AFieldMachineGun : ARWDSimVehicle
@@ -1176,7 +1176,7 @@ AFieldBridgeBuildSite = {}
 ---@field GunnerYawAndPitch FVector2D
 ---@field StashedAmmoType FName
 ---@field StashedAmmo int32
-AFieldMachineGun = {}
+local AFieldMachineGun = {}
 
 ---@return boolean
 function AFieldMachineGun:GetIsFiring() end
@@ -1187,7 +1187,7 @@ function AFieldMachineGun:GetGunnerYawAndPitch(GunnerIndex) end
 
 ---@class AFieldPier : ABuildableStructure
 ---@field ShippableZOffset float
-AFieldPier = {}
+local AFieldPier = {}
 
 
 
@@ -1199,7 +1199,7 @@ AFieldPier = {}
 ---@field SteamParticleSystem UParticleSystemComponent
 ---@field bIsIgnited boolean
 ---@field TimeToReignite float
-AFireBarrel = {}
+local AFireBarrel = {}
 
 function AFireBarrel:OnRep_bIsIgnited() end
 
@@ -1220,7 +1220,7 @@ function AFireBarrel:OnRep_bIsIgnited() end
 ---@field WaterFireLoopSFX USoundCue
 ---@field WaterFireTailSFX USoundCue
 ---@field WaterFireVFX UParticleSystem
-AFireInfo = {}
+local AFireInfo = {}
 
 
 
@@ -1233,18 +1233,18 @@ AFireInfo = {}
 ---@field FireSFXLoop UAudioComponent
 ---@field FuelTankDiesel FFuelTank
 ---@field DieselConsumptionRate float
-AFirePit = {}
+local AFirePit = {}
 
 function AFirePit:OnRep_FuelTankDiesel() end
 
 
 ---@class AFirearmPickup : AGearPickup
-AFirearmPickup = {}
+local AFirearmPickup = {}
 
 
 ---@class AFlameActor : AActor
 ---@field WaterFireVFXComponent UParticleSystemComponent
-AFlameActor = {}
+local AFlameActor = {}
 
 ---@param Direction FVector
 function AFlameActor:BPUpdateWindDirection(Direction) end
@@ -1262,7 +1262,7 @@ function AFlameActor:BPDeactivate() end
 ---@field MaxActiveLightsInRange int32
 ---@field MaxLightCullingRange float
 ---@field LightParticleSystem UParticleSystemComponent
-AFlareExplosionEffect = {}
+local AFlareExplosionEffect = {}
 
 
 
@@ -1275,7 +1275,7 @@ AFlareExplosionEffect = {}
 ---@field CurrentShippable FName
 ---@field ShippableData FReplicatedShippableData
 ---@field SavedData FSavedShippableData
-AFlatbedRailVehicle = {}
+local AFlatbedRailVehicle = {}
 
 function AFlatbedRailVehicle:OnRep_ShippableData() end
 function AFlatbedRailVehicle:OnRep_CurrentShippable() end
@@ -1290,7 +1290,7 @@ function AFlatbedRailVehicle:OnRep_CurrentShippable() end
 ---@field CurrentShippable FName
 ---@field ShippableData FReplicatedShippableData
 ---@field SavedData FSavedShippableData
-AFlatbedTruck = {}
+local AFlatbedTruck = {}
 
 function AFlatbedTruck:OnRep_ShippableData() end
 function AFlatbedTruck:OnRep_CurrentShippable() end
@@ -1302,40 +1302,40 @@ function AFlatbedTruck:OnRep_CurrentShippable() end
 ---@field MinUpgradeTargetDistance float
 ---@field ObstructionCheckOverrideExtents FVector
 ---@field EmplacedStructure TWeakObjectPtr<AEmplacedStructure>
-AFort = {}
+local AFort = {}
 
 
 
 ---@class AFortArtilleryShelter : AFort
 ---@field BaseShelterBonus float
-AFortArtilleryShelter = {}
+local AFortArtilleryShelter = {}
 
 
 
 ---@class AFortBuildSite : AFortBuildSiteBase
-AFortBuildSite = {}
+local AFortBuildSite = {}
 
 
 ---@class AFortBuildSiteBase : AStructureBuildSite
-AFortBuildSiteBase = {}
+local AFortBuildSiteBase = {}
 
 
 ---@class AFortConnector : AFort
-AFortConnector = {}
+local AFortConnector = {}
 
 
 ---@class AFortConnectorBuildSite : AFortBuildSiteBase
-AFortConnectorBuildSite = {}
+local AFortConnectorBuildSite = {}
 
 
 ---@class AFortCorner : AFort
 ---@field IncompatibleCornerSockets TArray<FName>
-AFortCorner = {}
+local AFortCorner = {}
 
 
 
 ---@class AFortCornerBuildSite : AFortBuildSiteBase
-AFortCornerBuildSite = {}
+local AFortCornerBuildSite = {}
 
 
 ---@class AFortEmp : ATeamStructure
@@ -1350,13 +1350,13 @@ AFortCornerBuildSite = {}
 ---@field FortEmpSelectedStructure EFortEmpStructure
 ---@field RequiredSquadMembers uint8
 ---@field SquadId int32
-AFortEmp = {}
+local AFortEmp = {}
 
 
 
 ---@class AFortFirePit : AFort
 ---@field FuelTankDiesel FFuelTank
-AFortFirePit = {}
+local AFortFirePit = {}
 
 function AFortFirePit:OnRep_FuelTankDiesel() end
 
@@ -1370,14 +1370,14 @@ function AFortFirePit:OnRep_FuelTankDiesel() end
 ---@field SteamVFXComponent UParticleSystemComponent
 ---@field PipeInputAssociatedSocketName FName
 ---@field DispenseAmountPerSec float
-AFortFireSuppression = {}
+local AFortFireSuppression = {}
 
 function AFortFireSuppression:OnRep_IsDispensingWater() end
 
 
 ---@class AFortFireSuppressionBuildSite : AStructureBuildSite
 ---@field WaterTank FFuelTank
-AFortFireSuppressionBuildSite = {}
+local AFortFireSuppressionBuildSite = {}
 
 
 
@@ -1385,12 +1385,12 @@ AFortFireSuppressionBuildSite = {}
 ---@field LadderLocation USceneComponent
 ---@field LadderType TSubclassOf<ALadder>
 ---@field Ladder ALadder
-AFortForwardBase = {}
+local AFortForwardBase = {}
 
 
 
 ---@class AFortForwardBaseBuildSite : ABaseBuildSite
-AFortForwardBaseBuildSite = {}
+local AFortForwardBaseBuildSite = {}
 
 
 ---@class AFortGarrisonStation : ATeamStructure
@@ -1401,7 +1401,7 @@ AFortForwardBaseBuildSite = {}
 ---@field VisibilityToggleComponent USafeHouseVisibilityToggleComponent
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field SpawnPoints FSpawnPoints
-AFortGarrisonStation = {}
+local AFortGarrisonStation = {}
 
 
 
@@ -1410,7 +1410,7 @@ AFortGarrisonStation = {}
 ---@field MapIntelligenceSource UMapIntelligenceSourceComponent
 ---@field PowerConsumerComponent UPowerConsumerComponent
 ---@field TeamFlagMeshComponent UTeamFlagMeshComponent
-AFortObservation = {}
+local AFortObservation = {}
 
 
 
@@ -1430,41 +1430,41 @@ AFortObservation = {}
 ---@field HorizontalAngle float
 ---@field VerticalAngle float
 ---@field bIsFiring boolean
-AFortStaticArtillery = {}
+local AFortStaticArtillery = {}
 
 function AFortStaticArtillery:OnRep_IsFiring() end
 
 
 ---@class AFortTurret : AFoxholeTurret
-AFortTurret = {}
+local AFortTurret = {}
 
 
 ---@class AFortTurretAT : AGunTurret
-AFortTurretAT = {}
+local AFortTurretAT = {}
 
 
 ---@class AFortTurretMG : AFortTurret
 ---@field SkeletalMesh USkeletalMeshComponent
-AFortTurretMG = {}
+local AFortTurretMG = {}
 
 
 
 ---@class AForwardBase : AOutpost
 ---@field TeamFlagMeshComponent UTeamFlagMeshComponent
-AForwardBase = {}
+local AForwardBase = {}
 
 
 
 ---@class AFoundation : ATeamStructure
-AFoundation = {}
+local AFoundation = {}
 
 
 ---@class AFoundationBuildSite : AStructureBuildSite
-AFoundationBuildSite = {}
+local AFoundationBuildSite = {}
 
 
 ---@class AFoxhole : ABuildableStructure
-AFoxhole = {}
+local AFoxhole = {}
 
 
 ---@class AFoxholeTurret : ATunnelNode
@@ -1478,7 +1478,7 @@ AFoxhole = {}
 ---@field bLimitOccupantFiringArc boolean
 ---@field MaxOccupantFiringArcDeviation float
 ---@field FlagMesh UTeamFlagMeshComponent
-AFoxholeTurret = {}
+local AFoxholeTurret = {}
 
 
 
@@ -1499,7 +1499,7 @@ AFoxholeTurret = {}
 ---@field ShippableData FReplicatedShippableData
 ---@field State uint8
 ---@field DynamicMeshComponent UMeshComponent
-AFreighter = {}
+local AFreighter = {}
 
 ---@param bIsDeploy boolean
 function AFreighter:ServerToggleMode(bIsDeploy) end
@@ -1511,7 +1511,7 @@ function AFreighter:OnRep_CurrentShippables() end
 
 ---@class AFuelContainer : AContainer
 ---@field FuelTankerInfo FFuelTankerInfo
-AFuelContainer = {}
+local AFuelContainer = {}
 
 function AFuelContainer:OnRep_FuelTankerInfo() end
 
@@ -1520,14 +1520,14 @@ function AFuelContainer:OnRep_FuelTankerInfo() end
 ---@field TimeToStarvation float
 ---@field DynamicTierInfo FDynamicTierInfo
 ---@field AITurretsController UAITurretsControllerComponent
-AGarrisonHouse = {}
+local AGarrisonHouse = {}
 
 ---@return boolean
 function AGarrisonHouse:IsNeutralHouse() end
 
 
 ---@class AGarrisonHouseBuildSite : AStructureBuildSite
-AGarrisonHouseBuildSite = {}
+local AGarrisonHouseBuildSite = {}
 
 
 ---@class AGarrisonStation : AGarrisonHouse
@@ -1537,7 +1537,7 @@ AGarrisonHouseBuildSite = {}
 ---@field TunnelConnectionRange float
 ---@field DecayInfo FDecayInfo
 ---@field SpawnPoints FSpawnPoints
-AGarrisonStation = {}
+local AGarrisonStation = {}
 
 
 
@@ -1545,7 +1545,7 @@ AGarrisonStation = {}
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field TechTreeComponent UTechTreeComponent
 ---@field SpawnPoints FSpawnPoints
-AGarrisonStationBuildSite = {}
+local AGarrisonStationBuildSite = {}
 
 
 
@@ -1559,29 +1559,29 @@ AGarrisonStationBuildSite = {}
 ---@field GateDoorOverlapMaterial UMaterialInterface
 ---@field GateState EGateState
 ---@field AutomaticCloseTime float
-AGate = {}
+local AGate = {}
 
 function AGate:OnRep_GateState() end
 
 
 ---@class AGearPickup : AItemPickup
-AGearPickup = {}
+local AGearPickup = {}
 
 
 ---@class AGlobalEffectSpawnerProxy : AEffectSpawnerProxy
-AGlobalEffectSpawnerProxy = {}
+local AGlobalEffectSpawnerProxy = {}
 
 
 ---@class AGlobalFestivalInfo : AInfo
 ---@field RenderInfoMap TMap<FName, FFestivalRenderInfo>
-AGlobalFestivalInfo = {}
+local AGlobalFestivalInfo = {}
 
 
 
 ---@class AGlobalMovementModifiersInfo : AInfo
 ---@field VehicleData TArray<FSurfaceMovementData>
 ---@field MotorboatData TArray<FSurfaceMovementData>
-AGlobalMovementModifiersInfo = {}
+local AGlobalMovementModifiersInfo = {}
 
 
 
@@ -1590,14 +1590,14 @@ AGlobalMovementModifiersInfo = {}
 ---@field NormalSizeConfig FShippableRenderInfo
 ---@field LargeSizeConfig FShippableRenderInfo
 ---@field ExtraLargeSizeConfig FShippableRenderInfo
-AGlobalShippableInfo = {}
+local AGlobalShippableInfo = {}
 
 
 
 ---@class AGunTurret : AFoxholeTurret
 ---@field SkelMesh USkeletalMeshComponent
 ---@field GunnerYaw float
-AGunTurret = {}
+local AGunTurret = {}
 
 function AGunTurret:OnRep_GunnerYaw() end
 ---@return float
@@ -1608,7 +1608,7 @@ function AGunTurret:GetTrackingAngle() end
 ---@field WorkVolume UBoxComponent
 ---@field KillVolume UBoxComponent
 ---@field GunnerInfos TArray<FVehicleGunnerInfo>
-AGunboat = {}
+local AGunboat = {}
 
 
 
@@ -1622,7 +1622,7 @@ AGunboat = {}
 ---@field PayloadMeshes FPayloadMeshes
 ---@field MainGunnerIndex int32
 ---@field TowingRearAxleOffest float
-AHalfTrack = {}
+local AHalfTrack = {}
 
 function AHalfTrack:OnRep_StashedAmmo() end
 function AHalfTrack:OnRep_GunnerYawAndPitch() end
@@ -1645,7 +1645,7 @@ function AHalfTrack:OnRep_GunnerYawAndPitch() end
 ---@field SplittingSFXLoop UAudioComponent
 ---@field RotatingSFXLoop UAudioComponent
 ---@field Action uint8
-AHarvester = {}
+local AHarvester = {}
 
 function AHarvester:ServerStopAction() end
 function AHarvester:ServerStartGrinding() end
@@ -1657,7 +1657,7 @@ function AHarvester:MulticastOnGather(Resource, GatherResult) end
 
 
 ---@class AHeadlessPlayerController : ASimPlayerController
-AHeadlessPlayerController = {}
+local AHeadlessPlayerController = {}
 
 ---@param CommandString FString
 function AHeadlessPlayerController:ClientParseCommand(CommandString) end
@@ -1665,7 +1665,7 @@ function AHeadlessPlayerController:ClientParseCommand(CommandString) end
 
 ---@class AHomeRegionBase : AStaticBase
 ---@field SpawnPriority int32
-AHomeRegionBase = {}
+local AHomeRegionBase = {}
 
 
 
@@ -1673,7 +1673,7 @@ AHomeRegionBase = {}
 ---@field HospitalComponent UHospitalComponent
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field SpawnPoints FSpawnPoints
-AHospital = {}
+local AHospital = {}
 
 
 
@@ -1681,7 +1681,7 @@ AHospital = {}
 ---@field HospitalComponent UHospitalComponent
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field SpawnPoints FSpawnPoints
-AHospitalBuildSite = {}
+local AHospitalBuildSite = {}
 
 
 
@@ -1689,7 +1689,7 @@ AHospitalBuildSite = {}
 ---@field EffectOverrides TArray<FImpactEffectOverride>
 ---@field FleshBloodSplatterDecal FDecalData
 ---@field HitNotify FHitNotify
-AImpactEffect = {}
+local AImpactEffect = {}
 
 
 
@@ -1700,7 +1700,7 @@ AImpactEffect = {}
 ---@field RightGunnerIndex int32
 ---@field LeftGunnerIndex int32
 ---@field MainGunnerIndex int32
-AInfantryRailVehicle = {}
+local AInfantryRailVehicle = {}
 
 function AInfantryRailVehicle:OnRep_GunnerYawAndPitch() end
 
@@ -1720,7 +1720,7 @@ function AInfantryRailVehicle:OnRep_GunnerYawAndPitch() end
 ---@field LastListenEndTime float
 ---@field ListenTimeRemaining float
 ---@field LaunchCodeInfo FRocketLaunchCodeInfo
-AIntelCenter = {}
+local AIntelCenter = {}
 
 ---@param Previous float
 function AIntelCenter:OnRep_LastListenEndTime(Previous) end
@@ -1729,7 +1729,7 @@ function AIntelCenter:OnRep_GunnerYawAndPitch(PreviousGunnerYawAndPitch) end
 
 
 ---@class AItemCratePickup : AItemPickup
-AItemCratePickup = {}
+local AItemCratePickup = {}
 
 
 ---@class AItemPickup : AActor
@@ -1762,14 +1762,14 @@ AItemCratePickup = {}
 ---@field ItemMesh UStaticMeshComponent
 ---@field ItemBox UBoxComponent
 ---@field DescriptionDetails TArray<FTooltipDetailText>
-AItemPickup = {}
+local AItemPickup = {}
 
 function AItemPickup:OnRep_ItemInstance() end
 
 
 ---@class AItemProfileTable : AInfo
 ---@field ItemProfileTable TMap<EItemProfileType, FItemProfileData>
-AItemProfileTable = {}
+local AItemProfileTable = {}
 
 
 
@@ -1777,17 +1777,17 @@ AItemProfileTable = {}
 ---@field DecayTime float
 ---@field DespawnIfEmptyTime float
 ---@field CollisionBox UBoxComponent
-AItemStash = {}
+local AItemStash = {}
 
 
 
 ---@class AKeep : AForwardBase
-AKeep = {}
+local AKeep = {}
 
 
 ---@class AKeepBuildSite : AStructureBuildSite
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AKeepBuildSite = {}
+local AKeepBuildSite = {}
 
 
 
@@ -1799,26 +1799,26 @@ AKeepBuildSite = {}
 ---@field ClimbVolumeTop UBoxComponent
 ---@field EnterPositionBottom USceneComponent
 ---@field EnterPositionTop USceneComponent
-ALadder = {}
+local ALadder = {}
 
 
 
 ---@class ALandMine : AMine
-ALandMine = {}
+local ALandMine = {}
 
 
 ---@class ALandingCraft : AAmphibiousVehicle
 ---@field KillVolume UBoxComponent
 ---@field bBackHatchOpen boolean
 ---@field StashedAmmo int32
-ALandingCraft = {}
+local ALandingCraft = {}
 
 ---@return boolean
 function ALandingCraft:GetBackHatchOpen() end
 
 
 ---@class ALandscapeEnvironmentActor : AActor
-ALandscapeEnvironmentActor = {}
+local ALandscapeEnvironmentActor = {}
 
 
 ---@class ALargeShip : AShipVehicle
@@ -1869,7 +1869,7 @@ ALandscapeEnvironmentActor = {}
 ---@field bRainStormsCauseFlooding boolean
 ---@field LightComponents TArray<USceneComponent>
 ---@field VisibilityToggleAreas TArray<UVisibilityToggleAreaComponent>
-ALargeShip = {}
+local ALargeShip = {}
 
 function ALargeShip:OnRep_Leaks() end
 ---@param LastGunnerInfos TArray<FLargeShipGunnerInfo>
@@ -1891,7 +1891,7 @@ function ALargeShip:AddLightComponents(InLightComponents) end
 ---@field DeployingSFXLoop UAudioComponent
 ---@field PulleyMovementSFXLoop UAudioComponent
 ---@field CraneComponent UCraneComponent
-ALargeShipStorage = {}
+local ALargeShipStorage = {}
 
 
 
@@ -1900,7 +1900,7 @@ ALargeShipStorage = {}
 ---@field StashedAmmo int32
 ---@field StashedAmmoType FName
 ---@field PayloadMeshes FPayloadMeshes
-ALightTank = {}
+local ALightTank = {}
 
 function ALightTank:OnRep_StashedAmmo() end
 function ALightTank:OnRep_GunnerYawAndPitch() end
@@ -1914,7 +1914,7 @@ function ALightTank:GetGunPitch() end
 
 ---@class ALimitedVulnerabilityStructure : ABuildableStructure
 ---@field VulnerableDamageType TSubclassOf<UDamageType>
-ALimitedVulnerabilityStructure = {}
+local ALimitedVulnerabilityStructure = {}
 
 
 
@@ -1928,7 +1928,7 @@ ALimitedVulnerabilityStructure = {}
 ---@field InvalidOutlineColour FLinearColor
 ---@field InvalidOutlineColour2 FLinearColor
 ---@field WorkSplittingFactor int32
-ALineOfSightVisualizationActor = {}
+local ALineOfSightVisualizationActor = {}
 
 
 
@@ -1937,21 +1937,21 @@ ALineOfSightVisualizationActor = {}
 ---@field FuelOutputBuffer FFuelQuantity
 ---@field InputSocket UBuildSocketComponent
 ---@field OutputSocket UBuildSocketComponent
-ALiquidTransferStation = {}
+local ALiquidTransferStation = {}
 
 
 
 ---@class ALiquidTransferStationBuildSite : AStructureBuildSite
 ---@field FuelInputBuffers TArray<FFuelQuantity>
 ---@field FuelOutputBuffer FFuelQuantity
-ALiquidTransferStationBuildSite = {}
+local ALiquidTransferStationBuildSite = {}
 
 
 
 ---@class AListeningArea : AActor
 ---@field LifeSpanRemaining float
 ---@field ListeningComponent UListeningAreaComponent
-AListeningArea = {}
+local AListeningArea = {}
 
 
 
@@ -1970,41 +1970,41 @@ AListeningArea = {}
 ---@field SquadId int32
 ---@field GunnerYawAndPitch FVector2D
 ---@field StashedAmmo int32
-ALongRangeArtillery = {}
+local ALongRangeArtillery = {}
 
 ---@param PreviousGunnerYawAndPitch FVector2D
 function ALongRangeArtillery:OnRep_GunnerYawAndPitch(PreviousGunnerYawAndPitch) end
 
 
 ---@class ALoreKeyVerificationActor : AActor
-ALoreKeyVerificationActor = {}
+local ALoreKeyVerificationActor = {}
 
 
 ---@class ALoreList : AInfo
 ---@field LoreDataTable TMap<FName, FLoreData>
-ALoreList = {}
+local ALoreList = {}
 
 
 
 ---@class ALorePickup : AItemPickup
 ---@field ReadableTextComponent UReadableTextComponent
-ALorePickup = {}
+local ALorePickup = {}
 
 
 
 ---@class AMGPillbox : AFoxholeTurret
 ---@field SkeletalMesh USkeletalMeshComponent
-AMGPillbox = {}
+local AMGPillbox = {}
 
 
 
 ---@class AMainMenuGameMode : AWarGameMode
-AMainMenuGameMode = {}
+local AMainMenuGameMode = {}
 
 
 ---@class AMainMenuPlayerController : AWarPlayerController
 ---@field ImageDownloadTaskList TArray<UNewsItemImageDownloadTask>
-AMainMenuPlayerController = {}
+local AMainMenuPlayerController = {}
 
 ---@param ShardId int32
 function AMainMenuPlayerController:RefreshShardStatus(ShardId) end
@@ -2018,7 +2018,7 @@ function AMainMenuPlayerController:RefreshShardStatus(ShardId) end
 ---@field GrassCullRadius float
 ---@field Range float
 ---@field Filter uint16
-AMaintenanceTunnel = {}
+local AMaintenanceTunnel = {}
 
 
 
@@ -2026,14 +2026,14 @@ AMaintenanceTunnel = {}
 ---@field ArrowComponent UArrowComponent
 ---@field MarkerArea UBoxComponent
 ---@field NoBuildArea UBoxComponent
-AMapBoundary = {}
+local AMapBoundary = {}
 
 
 
 ---@class AMapExtentMarker : AActor
 ---@field Location EMapExtentMarkerLocation
 ---@field MarkerScene USceneComponent
-AMapExtentMarker = {}
+local AMapExtentMarker = {}
 
 
 
@@ -2041,7 +2041,7 @@ AMapExtentMarker = {}
 ---@field MapTeamId EMapTeamId
 ---@field MapIconType EMapIconType
 ---@field DefaultSceneComponent USceneComponent
-AMapIcon = {}
+local AMapIcon = {}
 
 
 
@@ -2049,19 +2049,19 @@ AMapIcon = {}
 ---@field MapName FText
 ---@field MapImage UTexture2D
 ---@field MapImagePractice UTexture2D
-AMapInfo = {}
+local AMapInfo = {}
 
 
 
 ---@class AMapIntelligence : AInfo
 ---@field MapIntelligenceTypeConfigs FMapIntelligenceTypeConfig
-AMapIntelligence = {}
+local AMapIntelligence = {}
 
 
 
 ---@class AMapList : AInfo
 ---@field MapDatabase TMap<FName, FMapData>
-AMapList = {}
+local AMapList = {}
 
 
 
@@ -2073,7 +2073,7 @@ AMapList = {}
 ---@field MajorText FText
 ---@field MinorText FText
 ---@field MapMarkerType EMapMarkerType
-AMapMarker = {}
+local AMapMarker = {}
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -2090,14 +2090,14 @@ function AMapMarker:BeginMarkerOverlap(OverlappedComponent, OtherActor, OtherCom
 ---@field TransferLocationFootprint UBoxComponent
 ---@field ShippableCrateSound USoundCue
 ---@field ShippableCratePS UParticleSystem
-AMassProductionFactory = {}
+local AMassProductionFactory = {}
 
 function AMassProductionFactory:MulticastPlayShippableCrateFX() end
 
 
 ---@class AMassProductionFactoryBuildSite : ASpecializedFactoryBuildSite
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
-AMassProductionFactoryBuildSite = {}
+local AMassProductionFactoryBuildSite = {}
 
 
 
@@ -2105,7 +2105,7 @@ AMassProductionFactoryBuildSite = {}
 ---@field MeshComponent UStaticMeshComponent
 ---@field BoxCollision UBoxComponent
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AMaterialPlatform = {}
+local AMaterialPlatform = {}
 
 
 
@@ -2120,7 +2120,7 @@ AMaterialPlatform = {}
 ---@field StashedMainGunAmmoType FName
 ---@field StashedLeftGunAmmo int32
 ---@field StashedRightGunAmmo int32
-AMech = {}
+local AMech = {}
 
 
 
@@ -2132,7 +2132,7 @@ AMech = {}
 ---@field Health int32
 ---@field ArmourType EArmourType
 ---@field SpawnTime FDateTime
-AMine = {}
+local AMine = {}
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -2156,7 +2156,7 @@ function AMine:OnBeginOverlap(OverlappedComponent, OtherActor, OtherComp, OtherB
 ---@field MaxMineCount uint8
 ---@field bTriggeredByInfantry boolean
 ---@field bTriggeredByVehicles boolean
-AMineSpline = {}
+local AMineSpline = {}
 
 ---@param PrevMask uint32
 function AMineSpline:OnRep_MineMask(PrevMask) end
@@ -2170,7 +2170,7 @@ function AMineSpline:OnBeginOverlap(OverlappedComponent, OtherActor, OtherComp, 
 
 
 ---@class AMineSplineBuildSite : AStructureBuildSite
-AMineSplineBuildSite = {}
+local AMineSplineBuildSite = {}
 
 
 ---@class AMiniMapCapturer : AActor
@@ -2179,12 +2179,12 @@ AMineSplineBuildSite = {}
 ---@field ResultTexture UTexture2D
 ---@field CameraAngleCorrection float
 ---@field TargetGamma float
-AMiniMapCapturer = {}
+local AMiniMapCapturer = {}
 
 
 
 ---@class AModificationTemplate : AActor
-AModificationTemplate = {}
+local AModificationTemplate = {}
 
 
 ---@class AMonument : AActor
@@ -2193,44 +2193,44 @@ AModificationTemplate = {}
 ---@field UseMonumentComponent UUseMonumentComponent
 ---@field MonumentIndex int32
 ---@field MonumentType EMonumentType
-AMonument = {}
+local AMonument = {}
 
 
 
 ---@class AMortarAmmoPickup : AExplosiveAmmoPickup
-AMortarAmmoPickup = {}
+local AMortarAmmoPickup = {}
 
 
 ---@class AMortarTank : ALightTank
-AMortarTank = {}
+local AMortarTank = {}
 
 
 ---@class AMotorboat : ASimVehicle
 ---@field FrontWaterEmitter UParticleSystemComponent
 ---@field BackWaterEmitter UParticleSystemComponent
-AMotorboat = {}
+local AMotorboat = {}
 
 
 
 ---@class AMotorcycle : ARWDSimVehicle
 ---@field StashedAmmo int32
-AMotorcycle = {}
+local AMotorcycle = {}
 
 
 
 ---@class ANoBuildArea : AActor
 ---@field NoBuildComponent UBoxComponent
 ---@field PlacementStatus EPlacementStatus
-ANoBuildArea = {}
+local ANoBuildArea = {}
 
 
 
 ---@class ANonWalkableStructureBuildSite : AStructureBuildSite
-ANonWalkableStructureBuildSite = {}
+local ANonWalkableStructureBuildSite = {}
 
 
 ---@class AObservationTower : AWatchTower
-AObservationTower = {}
+local AObservationTower = {}
 
 
 ---@class AOfflineCharacter : AActor
@@ -2251,29 +2251,29 @@ AObservationTower = {}
 ---@field CurrentHealth float
 ---@field MaxHealth float
 ---@field DeathDuration float
-AOfflineCharacter = {}
+local AOfflineCharacter = {}
 
 function AOfflineCharacter:MulticastApplyFatalHit() end
 function AOfflineCharacter:BPApplyFatalHit() end
 
 
 ---@class AOilPipelineSegment : ATeamStructure
-AOilPipelineSegment = {}
+local AOilPipelineSegment = {}
 
 
 ---@class AOilTanker : ARWDSimVehicle
-AOilTanker = {}
+local AOilTanker = {}
 
 
 ---@class AOutpost : ABase
 ---@field MeshComponent UStaticMeshComponent
-AOutpost = {}
+local AOutpost = {}
 
 
 
 ---@class APersistentProxy : ALandscapeEnvironmentActor
 ---@field Mesh UStaticMeshComponent
-APersistentProxy = {}
+local APersistentProxy = {}
 
 
 
@@ -2286,13 +2286,13 @@ APersistentProxy = {}
 ---@field RightSocket UBuildSocketComponent
 ---@field MaxLiquidAmount float
 ---@field SystemIndex int32
-APipeline = {}
+local APipeline = {}
 
 
 
 ---@class APipelineSilo : APipeline
 ---@field VisibleMeshes uint8
-APipelineSilo = {}
+local APipelineSilo = {}
 
 function APipelineSilo:OnRep_VisibleMeshes() end
 
@@ -2302,12 +2302,12 @@ function APipelineSilo:OnRep_VisibleMeshes() end
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
 ---@field ThroughputNormalized float
-APipelineValve = {}
+local APipelineValve = {}
 
 
 
 ---@class APlayerCharacter : ASimCharacter
-APlayerCharacter = {}
+local APlayerCharacter = {}
 
 
 ---@class APlayerImposter : ASimVehicle
@@ -2324,7 +2324,7 @@ APlayerCharacter = {}
 ---@field SkinTone uint8
 ---@field EquippedItemCodeName FName
 ---@field CustomizationVersion uint8
-APlayerImposter = {}
+local APlayerImposter = {}
 
 function APlayerImposter:OnRep_CustomizationVersion() end
 
@@ -2334,12 +2334,12 @@ function APlayerImposter:OnRep_CustomizationVersion() end
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
 ---@field BuildGhostOffsetZ float
-APowerLine = {}
+local APowerLine = {}
 
 
 
 ---@class APowerPlant : AFacilityRefinery
-APowerPlant = {}
+local APowerPlant = {}
 
 
 ---@class APowerPole : ATeamStructure
@@ -2349,17 +2349,17 @@ APowerPlant = {}
 ---@field bAutoConnectToNearby boolean
 ---@field AutoConnectSearchRadius float
 ---@field PowerGridInfo FPowerGridInfo
-APowerPole = {}
+local APowerPole = {}
 
 function APowerPole:OnRep_PowerGridInfo() end
 
 
 ---@class APrototypeKitPickup : AItemPickup
-APrototypeKitPickup = {}
+local APrototypeKitPickup = {}
 
 
 ---@class AProxyDrawbridgeSide : APersistentProxy
-AProxyDrawbridgeSide = {}
+local AProxyDrawbridgeSide = {}
 
 
 ---@class ARWDSimVehicle : ASimVehicle
@@ -2389,7 +2389,7 @@ AProxyDrawbridgeSide = {}
 ---@field GearShiftDownSoundCue USoundCue
 ---@field TowHitch UTowHitchUseComponent
 ---@field SavedLinkedTrailerName FString
-ARWDSimVehicle = {}
+local ARWDSimVehicle = {}
 
 ---@param Move FRWDMove
 ---@param Base FRWDMoveBase
@@ -2436,11 +2436,11 @@ function ARWDSimVehicle:ClientAdjustPositionRwd(Timestamp, Adjustment, SteeringA
 
 
 ---@class ARadioBackpackPickup : ABackpackItemPickup
-ARadioBackpackPickup = {}
+local ARadioBackpackPickup = {}
 
 
 ---@class ARadioPickup : ABasicItemPickup
-ARadioPickup = {}
+local ARadioPickup = {}
 
 
 ---@class ARailVehicle : ASimVehicle
@@ -2469,7 +2469,7 @@ ARadioPickup = {}
 ---@field LastRearBogieTrack ARailwayTrack
 ---@field bIsBoosting boolean
 ---@field BorderTravelOverrideExtent float
-ARailVehicle = {}
+local ARailVehicle = {}
 
 function ARailVehicle:ServerRequestTrainInfo() end
 ---@param TimeStamp0 float
@@ -2509,7 +2509,7 @@ function ARailVehicle:ClientRailAdjustPosition(Timestamp, ServerMovementMode, Ne
 ---@field FrontTrackName FString
 ---@field RearTrackName FString
 ---@field FrontTrackPackedAlpha float
-ARailVehicleBuildSite = {}
+local ARailVehicleBuildSite = {}
 
 
 
@@ -2521,7 +2521,7 @@ ARailVehicleBuildSite = {}
 ---@field DeployingSFXLoop UAudioComponent
 ---@field PulleyMovementSFXLoop UAudioComponent
 ---@field CraneComponent UCraneComponent
-ARailVehicleCrane = {}
+local ARailVehicleCrane = {}
 
 
 
@@ -2533,18 +2533,18 @@ ARailVehicleCrane = {}
 ---@field GunnerYawAndPitch FVector2D
 ---@field StashedAmmoType FName
 ---@field StashedAmmo int32
-ARailVehicleHospital = {}
+local ARailVehicleHospital = {}
 
 function ARailVehicleHospital:OnRep_GunnerYawAndPitch() end
 
 
 ---@class ARailVehicleProxy : ABuildableStructure
-ARailVehicleProxy = {}
+local ARailVehicleProxy = {}
 
 
 ---@class ARailVehicleResourcePlatform : ARailVehicle
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ARailVehicleResourcePlatform = {}
+local ARailVehicleResourcePlatform = {}
 
 
 
@@ -2568,7 +2568,7 @@ ARailVehicleResourcePlatform = {}
 ---@field Vehicles TArray<ARailVehicle>
 ---@field RoadCheckPhysMaterials TArray<UPhysicalMaterial>
 ---@field bHasIncomingTravel boolean
-ARailwayTrack = {}
+local ARailwayTrack = {}
 
 function ARailwayTrack:OnRep_SwitchStates() end
 function ARailwayTrack:OnRep_IsDisabled() end
@@ -2581,7 +2581,7 @@ function ARailwayTrack:OnRep_IsDisabled() end
 ---@field RefinementOrderMap TMap<FString, FRefinementOrderInfo>
 ---@field RefinableItems TArray<FRefinableItemInfo>
 ---@field bIsRefining boolean
-ARefinery = {}
+local ARefinery = {}
 
 ---@return boolean
 function ARefinery:IsRefining() end
@@ -2591,7 +2591,7 @@ function ARefinery:IsRefining() end
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
 ---@field RefinementOrderMap TMap<FString, FRefinementOrderInfo>
-ARefineryBuildSite = {}
+local ARefineryBuildSite = {}
 
 
 
@@ -2602,42 +2602,42 @@ ARefineryBuildSite = {}
 ---@field RightGunYawAndPitch FVector2D
 ---@field StashedLeftGunAmmo int32
 ---@field StashedRightGunAmmo int32
-ARelicAPC = {}
+local ARelicAPC = {}
 
 
 
 ---@class ARelicAPCStructure : ABuildableStructure
 ---@field VehicleClass TSubclassOf<ASimVehicle>
-ARelicAPCStructure = {}
+local ARelicAPCStructure = {}
 
 
 
 ---@class ARelicAPCStructureBuildSite : AStructureBuildSite
-ARelicAPCStructureBuildSite = {}
+local ARelicAPCStructureBuildSite = {}
 
 
 ---@class ARelicArmouredCar : AArmoredCar
-ARelicArmouredCar = {}
+local ARelicArmouredCar = {}
 
 
 ---@class ARelicBase : AStaticBase
-ARelicBase = {}
+local ARelicBase = {}
 
 
 ---@class ARelicBus : ARWDSimVehicle
-ARelicBus = {}
+local ARelicBus = {}
 
 
 ---@class ARelicScoutVehicle : ASimVehicle
-ARelicScoutVehicle = {}
+local ARelicScoutVehicle = {}
 
 
 ---@class AReplicatedLadder : ALadder
-AReplicatedLadder = {}
+local AReplicatedLadder = {}
 
 
 ---@class AReservableStructure : ABuildableStructure
-AReservableStructure = {}
+local AReservableStructure = {}
 
 
 ---@class AResource : AActor
@@ -2662,7 +2662,7 @@ AReservableStructure = {}
 ---@field DestroyedFX UParticleSystem
 ---@field DestroyedSoundCue USoundCue
 ---@field SpawnSoundCue USoundCue
-AResource = {}
+local AResource = {}
 
 ---@param bPreviousIsHighYield boolean
 function AResource:OnRep_IsHighYield(bPreviousIsHighYield) end
@@ -2672,7 +2672,7 @@ function AResource:BPOnGatherHit(Gatherer, GatherLevel) end
 
 
 ---@class AResourceContainer : AContainer
-AResourceContainer = {}
+local AResourceContainer = {}
 
 
 ---@class AResourceField : ABuildableStructure
@@ -2699,7 +2699,7 @@ AResourceContainer = {}
 ---@field SecondaryResourceWeights TArray<FSecondaryResourceWeight>
 ---@field ChanceToSpawnSecondaryNormalized float
 ---@field SecondaryResourceToSpawn TSubclassOf<AItemPickup>
-AResourceField = {}
+local AResourceField = {}
 
 function AResourceField:OnRep_ResourcesLeftToSpawn() end
 
@@ -2720,7 +2720,7 @@ function AResourceField:OnRep_ResourcesLeftToSpawn() end
 ---@field ItemsInProduction float
 ---@field TransferLocation USceneComponent
 ---@field RequiredFieldCodeName FName
-AResourceMine = {}
+local AResourceMine = {}
 
 ---@return boolean
 function AResourceMine:IsProducing() end
@@ -2728,29 +2728,29 @@ function AResourceMine:IsProducing() end
 
 ---@class AResourceMineBuildSite : AStructureBuildSite
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AResourceMineBuildSite = {}
+local AResourceMineBuildSite = {}
 
 
 
 ---@class AResourceTransferStation : ATeamStructure
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field TransferLocation USceneComponent
-AResourceTransferStation = {}
+local AResourceTransferStation = {}
 
 
 
 ---@class AResourceTransferStationBuildSite : AStructureBuildSite
 ---@field GenericStockpileComponent UGenericStockpileComponent
-AResourceTransferStationBuildSite = {}
+local AResourceTransferStationBuildSite = {}
 
 
 
 ---@class ARespawnSpectatorPawn : ASpectatorPawn
-ARespawnSpectatorPawn = {}
+local ARespawnSpectatorPawn = {}
 
 
 ---@class ARock : AWall
-ARock = {}
+local ARock = {}
 
 
 ---@class ARocket : ATeamStructure
@@ -2774,7 +2774,7 @@ ARock = {}
 ---@field SelectedStrikeLocation FVector
 ---@field OriginMapID EWorldConquestMapId
 ---@field SelectedCode FRocketLaunchCodeInfo
-ARocket = {}
+local ARocket = {}
 
 function ARocket:OnRep_State() end
 function ARocket:OnRep_LiquidTank() end
@@ -2798,32 +2798,32 @@ function ARocket:BPBeginLaunch() end
 ---@field TimeToLaunch double
 ---@field LastFailure ERocketLaunchResponse
 ---@field LastFailureTime FDateTime
-ARocketFacility = {}
+local ARocketFacility = {}
 
 function ARocketFacility:OnRep_TimeToLaunch() end
 
 
 ---@class ARocketFacilityBuildSite : AStructureBuildSite
 ---@field FuelTank FFuelTank
-ARocketFacilityBuildSite = {}
+local ARocketFacilityBuildSite = {}
 
 
 
 ---@class ARocketGroundZero : ATeamStructure
 ---@field DamageDuration float
-ARocketGroundZero = {}
+local ARocketGroundZero = {}
 
 
 
 ---@class ARocketImpactEffect : AActor
 ---@field ArrowComponent UArrowComponent
-ARocketImpactEffect = {}
+local ARocketImpactEffect = {}
 
 
 
 ---@class ARocketLauncherProjectileDummy : AActor
 ---@field SkeletalMesh USkeletalMeshComponent
-ARocketLauncherProjectileDummy = {}
+local ARocketLauncherProjectileDummy = {}
 
 function ARocketLauncherProjectileDummy:SpoolupFinished() end
 function ARocketLauncherProjectileDummy:BPBeginLaunch() end
@@ -2834,7 +2834,7 @@ function ARocketLauncherProjectileDummy:BPBeginLaunch() end
 ---@field LaunchCodeID uint16
 ---@field LaunchTimeRemaining float
 ---@field bIsSirenActive boolean
-ARocketTarget = {}
+local ARocketTarget = {}
 
 function ARocketTarget:OnRep_IsSirenActive() end
 
@@ -2842,18 +2842,18 @@ function ARocketTarget:OnRep_IsSirenActive() end
 ---@class ARuinableStructure : ADestroyedStructure
 ---@field bShowRuinedInEditor boolean
 ---@field RuinedComponent URuinedComponent
-ARuinableStructure = {}
+local ARuinableStructure = {}
 
 
 
 ---@class AScoutTank : ALightTank
-AScoutTank = {}
+local AScoutTank = {}
 
 
 ---@class AScoutVehicle : ARWDSimVehicle
 ---@field GunMuzzleLocation USceneComponent
 ---@field StashedAmmo int32
-AScoutVehicle = {}
+local AScoutVehicle = {}
 
 
 
@@ -2875,7 +2875,7 @@ AScoutVehicle = {}
 ---@field SkinTone uint8
 ---@field OverrideMaterial UMaterialInstance
 ---@field EquippedItem TSoftClassPtr<AItemPickup>
-AScreenshotCharacter = {}
+local AScreenshotCharacter = {}
 
 
 
@@ -2892,7 +2892,7 @@ AScreenshotCharacter = {}
 ---@field LadderType TSubclassOf<ALadder>
 ---@field SpawnedLadders TArray<ALadder>
 ---@field FlagMesh UTeamFlagMeshComponent
-ASeaport = {}
+local ASeaport = {}
 
 
 
@@ -2900,14 +2900,14 @@ ASeaport = {}
 ---@field CraneSpawnLocationComponent2 UCraneSpawnLocationComponent
 ---@field ProxyLoadingDockComponent UPersistentProxyComponent
 ---@field SpawnedLadders TArray<ALadder>
-ASeaportBuildSite = {}
+local ASeaportBuildSite = {}
 
 
 
 ---@class ASensorReadingProxy : AActor
 ---@field Mesh USkeletalMeshComponent
 ---@field Material UMaterialInterface
-ASensorReadingProxy = {}
+local ASensorReadingProxy = {}
 
 
 
@@ -2919,7 +2919,7 @@ ASensorReadingProxy = {}
 ---@field RudderPivot FVector
 ---@field ControlSurfaces TArray<FControlSurface>
 ---@field MovementFlags uint8
-AShipVehicle = {}
+local AShipVehicle = {}
 
 ---@param Timestamp float
 ---@param InAccel FVector_NetQuantize10
@@ -3003,7 +3003,7 @@ function AShipVehicle:ClientAdjustPositionShip(Timestamp, Adjustment, NewBase, N
 ---@field ShippableType FName
 ---@field ShippableData FReplicatedShippableData
 ---@field SavedData FSavedShippableData
-AShippable = {}
+local AShippable = {}
 
 function AShippable:OnRep_ShippableType() end
 function AShippable:OnRep_ShippableData() end
@@ -3012,17 +3012,17 @@ function AShippable:OnRep_ShippableData() end
 ---@class AShippableCrate : ABuildableStructure
 ---@field ShippableMesh UStaticMesh
 ---@field StoredCodeName FName
-AShippableCrate = {}
+local AShippableCrate = {}
 
 
 
 ---@class AShippingContainer : AContainer
-AShippingContainer = {}
+local AShippingContainer = {}
 
 
 ---@class AShootingRangeArea : AActor
 ---@field ShootingRangeComponent UBoxComponent
-AShootingRangeArea = {}
+local AShootingRangeArea = {}
 
 ---@param OverlappedActor AActor
 ---@param OtherActor AActor
@@ -3039,12 +3039,12 @@ function AShootingRangeArea:OnOverlapBegin(OverlappedActor, OtherActor) end
 ---@field VoteList TArray<FSignPostVote>
 ---@field LastEditedTimeTicks int64
 ---@field bIsWorldSignPost boolean
-ASignPost = {}
+local ASignPost = {}
 
 
 
 ---@class ASignPostBuildSite : AStructureBuildSite
-ASignPostBuildSite = {}
+local ASignPostBuildSite = {}
 
 
 ---@class ASimCharacter : AWarCharacter
@@ -3183,7 +3183,7 @@ ASignPostBuildSite = {}
 ---@field RegionBoundaryParamCollection UMaterialParameterCollection
 ---@field bIsInScopeMode boolean
 ---@field OfflineExpiryTime FDateTime
-ASimCharacter = {}
+local ASimCharacter = {}
 
 function ASimCharacter:SlowTick() end
 ---@param HatchComponent UHatchComponent
@@ -3358,7 +3358,7 @@ function ASimCharacter:BPCinematicDeath() end
 ---@field WarReporter FWarReporter
 ---@field ResourceMapping UResourceMapping
 ---@field DecayPreventers TSet<AActor>
-ASimGameMode = {}
+local ASimGameMode = {}
 
 ---@param Command FString
 function ASimGameMode:HeadlessServerCommand(Command) end
@@ -3390,7 +3390,7 @@ function ASimGameMode:HeadlessCommand(Command) end
 ---@field WarPhaseEndTime FDateTime
 ---@field bIsPatchRequired boolean
 ---@field bIsShortWar boolean
-ASimGameState = {}
+local ASimGameState = {}
 
 function ASimGameState:OnRep_WorldWeatherState() end
 function ASimGameState:OnRep_WardenTechTree() end
@@ -3407,14 +3407,14 @@ function ASimGameState:GetWindVector() end
 
 
 ---@class ASimPainCausingVolume : APainCausingVolume
-ASimPainCausingVolume = {}
+local ASimPainCausingVolume = {}
 
 
 ---@class ASimPlayerCameraManager : APlayerCameraManager
 ---@field PostProcessComponent UPostProcessComponent
 ---@field FogMaterialDynamic UMaterialInstanceDynamic
 ---@field SpectateTarget FSpectateTarget
-ASimPlayerCameraManager = {}
+local ASimPlayerCameraManager = {}
 
 
 
@@ -3439,7 +3439,7 @@ ASimPlayerCameraManager = {}
 ---@field CalloutMarkerGhost ACalloutMarkerGhost
 ---@field LandscapeCullRVTVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
 ---@field LandscapeCullRVTVolume ARuntimeVirtualTextureVolume
-ASimPlayerController = {}
+local ASimPlayerController = {}
 
 ---@param TestInt int32
 ---@param TestFloat float
@@ -4281,7 +4281,7 @@ function ASimPlayerController:CaptureDebugScreenshot() end
 ---@field SquadId int32
 ---@field InactiveSquadIds int32
 ---@field RegimentID int32
-ASimPlayerState = {}
+local ASimPlayerState = {}
 
 ---@param PreviousSquadId int32
 function ASimPlayerState:OnRep_SquadId(PreviousSquadId) end
@@ -4421,7 +4421,7 @@ function ASimPlayerState:ClientSetIsGodMode(bIsGodMode) end
 ---@field bIsVisibleOnSonar boolean
 ---@field bDestroysIceWhenWaterTravelling boolean
 ---@field FuelTankerInfo FFuelTankerInfo
-ASimVehicle = {}
+local ASimVehicle = {}
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
@@ -4482,15 +4482,15 @@ function ASimVehicle:AllFire() end
 
 
 ---@class ASimWaterVolume : ASimPainCausingVolume
-ASimWaterVolume = {}
+local ASimWaterVolume = {}
 
 
 ---@class ASimulatedBombardment : AActor
-ASimulatedBombardment = {}
+local ASimulatedBombardment = {}
 
 
 ---@class ASkySphere : AActor
-ASkySphere = {}
+local ASkySphere = {}
 
 function ASkySphere:BP_UpdateSunDirection() end
 
@@ -4499,7 +4499,7 @@ function ASkySphere:BP_UpdateSunDirection() end
 ---@field ObscuringSphere UObscuringSphereComponent
 ---@field MinimumVisibilityRadius float
 ---@field VisibilityRadiusCurve UCurveFloat
-ASmokeGrenadeExplosionEffect = {}
+local ASmokeGrenadeExplosionEffect = {}
 
 
 
@@ -4509,19 +4509,19 @@ ASmokeGrenadeExplosionEffect = {}
 ---@field Head USkeletalMeshComponent
 ---@field Hands USkeletalMeshComponent
 ---@field Helmet USkeletalMeshComponent
-ASoldierItemPickUp = {}
+local ASoldierItemPickUp = {}
 
 
 
 ---@class ASpecializedFactory : ATeamStructure
 ---@field SpecializedFactoryComponent USpecializedFactoryComponent
-ASpecializedFactory = {}
+local ASpecializedFactory = {}
 
 
 
 ---@class ASpecializedFactoryBuildSite : AStructureBuildSite
 ---@field SpecializedFactoryComponent USpecializedFactoryComponent
-ASpecializedFactoryBuildSite = {}
+local ASpecializedFactoryBuildSite = {}
 
 
 
@@ -4530,7 +4530,7 @@ ASpecializedFactoryBuildSite = {}
 ---@field AltGunnerYawAndPitch FVector2D
 ---@field StashedAmmo int32
 ---@field AltStashedAmmo int32
-ASpiderMech = {}
+local ASpiderMech = {}
 
 
 
@@ -4541,7 +4541,7 @@ ASpiderMech = {}
 ---@field SpoolDuration float
 ---@field LerpStartDistance float
 ---@field LerpDuration float
-ASpoolProjectile = {}
+local ASpoolProjectile = {}
 
 function ASpoolProjectile:OnRep_InitialVelocity() end
 
@@ -4551,7 +4551,7 @@ function ASpoolProjectile:OnRep_InitialVelocity() end
 ---@field DynamicTierInfo FDynamicTierInfo
 ---@field bIsVictoryTownRep boolean
 ---@field TownConnectionLevel int32
-AStaticBase = {}
+local AStaticBase = {}
 
 function AStaticBase:OnRep_IsVictoryTown() end
 
@@ -4568,7 +4568,7 @@ function AStaticBase:OnRep_IsVictoryTown() end
 ---@field LightComponent UFacilityLightComponent
 ---@field CraneComponent UCraneComponent
 ---@field PowerGridInfo FPowerGridInfo
-AStaticCrane = {}
+local AStaticCrane = {}
 
 function AStaticCrane:OnRep_PowerGridInfo() end
 
@@ -4576,7 +4576,7 @@ function AStaticCrane:OnRep_PowerGridInfo() end
 ---@class AStickyBombExplosive : AExplosive
 ---@field TotalFuseTime float
 ---@field FuseTime float
-AStickyBombExplosive = {}
+local AStickyBombExplosive = {}
 
 
 
@@ -4584,7 +4584,7 @@ AStickyBombExplosive = {}
 ---@field BombMesh USkeletalMeshComponent
 ---@field AttachCue USoundCue
 ---@field DetonationDelay float
-AStickyBombProjectile = {}
+local AStickyBombProjectile = {}
 
 function AStickyBombProjectile:CallDetonateWithLastHitResult() end
 
@@ -4595,7 +4595,7 @@ function AStickyBombProjectile:CallDetonateWithLastHitResult() end
 ---@field ReplenishRate float
 ---@field bReplenishFirstItem boolean
 ---@field bReplenishedOnce boolean
-AStorageBox = {}
+local AStorageBox = {}
 
 
 
@@ -4605,7 +4605,7 @@ AStorageBox = {}
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
 ---@field TransferLocation USceneComponent
 ---@field AITurretsController UAITurretsControllerComponent
-AStorageFacility = {}
+local AStorageFacility = {}
 
 
 
@@ -4613,7 +4613,7 @@ AStorageFacility = {}
 ---@field GenericStockpileComponent UGenericStockpileComponent
 ---@field ReserveStockpileComponent UReserveStockpileComponent
 ---@field CraneSpawnLocationComponent UCraneSpawnLocationComponent
-AStorageFacilityBuildSite = {}
+local AStorageFacilityBuildSite = {}
 
 
 
@@ -4699,7 +4699,7 @@ AStorageFacilityBuildSite = {}
 ---@field ModularSeatComponents TArray<USeatComponent>
 ---@field ParkingSpotComponent UParkingSpotComponent
 ---@field FirePitComponent UFirePitComponent
-AStructure = {}
+local AStructure = {}
 
 ---@param UsingPlayer AWarCharacter
 function AStructure:Use(UsingPlayer) end
@@ -4746,14 +4746,14 @@ function AStructure:BPOnFireIntensityIncreased(OldIntensity, NewIntensity) end
 ---@field PreviousBuilderOnlineID FString
 ---@field PreviousBuilderName FString
 ---@field ConnectorConfiguration FConnectorConfiguration
-AStructureBuildSite = {}
+local AStructureBuildSite = {}
 
 function AStructureBuildSite:OnRep_MigratedModificationMask() end
 function AStructureBuildSite:OnRep_IsUpgrade() end
 
 
 ---@class AStructureCrate : AShippableCrate
-AStructureCrate = {}
+local AStructureCrate = {}
 
 
 ---@class AStructureIsland : AActor
@@ -4768,20 +4768,20 @@ AStructureCrate = {}
 ---@field HealthPool float
 ---@field HealthPoolMax float
 ---@field FireIntensity EFireIntensity
-AStructureIsland = {}
+local AStructureIsland = {}
 
 function AStructureIsland:OnRep_Structures() end
 
 
 ---@class AStructureProfileList : AInfo
 ---@field StructureProfileMap TMap<EStructureProfileType, FStructureProfileData>
-AStructureProfileList = {}
+local AStructureProfileList = {}
 
 
 
 ---@class ASubmarineAudioVolume : AAudioVolume
 ---@field AssociatedSubmarine ASubmarineVehicle
-ASubmarineAudioVolume = {}
+local ASubmarineAudioVolume = {}
 
 
 
@@ -4825,7 +4825,7 @@ ASubmarineAudioVolume = {}
 ---@field VeryMinorDamageUnderWaterPS UParticleSystemComponent
 ---@field UnderWaterDamagePSDepth float
 ---@field ActiveTorpedoes TArray<ATorpedoProjectile>
-ASubmarineVehicle = {}
+local ASubmarineVehicle = {}
 
 function ASubmarineVehicle:ShowDamageDepthWarning() end
 function ASubmarineVehicle:OnRep_TorpedoTubeStates() end
@@ -4839,24 +4839,24 @@ function ASubmarineVehicle:CheckDamageDepthWarning() end
 
 
 ---@class ATankAmmoPickup : AExplosiveAmmoPickup
-ATankAmmoPickup = {}
+local ATankAmmoPickup = {}
 
 
 ---@class ATankBase : ARWDSimVehicle
 ---@field DisabledFuelTankFX UParticleSystemComponent
 ---@field FuelSpillDecal TSubclassOf<ADecalActor>
-ATankBase = {}
+local ATankBase = {}
 
 
 
 ---@class ATargetingRange : AActor
-ATargetingRange = {}
+local ATargetingRange = {}
 
 
 ---@class ATargetingWall : AActor
 ---@field DamageEvents TArray<FPointDamageEvent>
 ---@field ResetTrigger UStaticMeshComponent
-ATargetingWall = {}
+local ATargetingWall = {}
 
 function ATargetingWall:OnRep_DamageEvents() end
 
@@ -4867,7 +4867,7 @@ function ATargetingWall:OnRep_DamageEvents() end
 ---@field bCanBeFlaggedForDisruptivePlacement boolean
 ---@field bCanBlockAIUpgrade boolean
 ---@field DisruptivePlacementVoteMultiplier float
-ATeamStructure = {}
+local ATeamStructure = {}
 
 function ATeamStructure:OnRep_TeamIdNotify() end
 ---@param VisualTeamId int32
@@ -4879,19 +4879,19 @@ function ATeamStructure:BPSetTeamVisuals(VisualTeamId) end
 ---@field Categories FTechTreeCategories
 ---@field TechUnlockBits TArray<uint32>
 ---@field TechUnlockProgress TArray<float>
-ATechTree = {}
+local ATechTree = {}
 
 ---@param PreviousTechUnlockBits TArray<uint32>
 function ATechTree:OnRep_TechUnlockBits(PreviousTechUnlockBits) end
 
 
 ---@class ATemplate : AActor
-ATemplate = {}
+local ATemplate = {}
 
 
 ---@class ATimedProjectile : AWarProjectile
 ---@field FuseTimer float
-ATimedProjectile = {}
+local ATimedProjectile = {}
 
 
 
@@ -4907,43 +4907,43 @@ ATimedProjectile = {}
 ---@field ConeStartRadius float
 ---@field ConeEndRadius float
 ---@field ConeLength float
-ATorpedoProjectile = {}
+local ATorpedoProjectile = {}
 
 function ATorpedoProjectile:OnRep_SiblingProjectiles() end
 
 
 ---@class ATownBase : AStaticBase
-ATownBase = {}
+local ATownBase = {}
 
 
 ---@class ATownBaseBuildSite : ATownHallBuildSite
-ATownBaseBuildSite = {}
+local ATownBaseBuildSite = {}
 
 
 ---@class ATownHall : ABase
 ---@field bIsFort boolean
 ---@field MapIntelligenceSourceComponent UMapIntelligenceSourceComponent
-ATownHall = {}
+local ATownHall = {}
 
 
 
 ---@class ATownHallBuildSite : ABaseBuildSite
-ATownHallBuildSite = {}
+local ATownHallBuildSite = {}
 
 
 ---@class ATractor : ARWDSimVehicle
-ATractor = {}
+local ATractor = {}
 
 
 ---@class ATrailerVehicle : ARWDSimVehicle
 ---@field UseAreaBox UBoxComponent
-ATrailerVehicle = {}
+local ATrailerVehicle = {}
 
 
 
 ---@class ATrailerVehicleStockpile : ATrailerVehicle
 ---@field GenericStockpileComponent UGenericStockpileComponent
-ATrailerVehicleStockpile = {}
+local ATrailerVehicleStockpile = {}
 
 
 
@@ -4952,7 +4952,7 @@ ATrailerVehicleStockpile = {}
 ---@field StashedAmmo int32
 ---@field StashedAmmoType FName
 ---@field PayloadMeshes FPayloadMeshes
-ATransportTruck = {}
+local ATransportTruck = {}
 
 function ATransportTruck:OnRep_StashedAmmo() end
 function ATransportTruck:OnRep_GunnerYawAndPitch() end
@@ -4961,7 +4961,7 @@ function ATransportTruck:OnRep_GunnerYawAndPitch() end
 ---@class ATravelBlockingArea : AActor
 ---@field TravelBlockingComponent UBoxComponent
 ---@field bBlockOutgoing boolean
-ATravelBlockingArea = {}
+local ATravelBlockingArea = {}
 
 
 
@@ -4970,7 +4970,7 @@ ATravelBlockingArea = {}
 ---@field GunMesh USkeletalMeshComponent
 ---@field ItemCodeName FName
 ---@field BaseItemCodeName FName
-ATripodMountedStructure = {}
+local ATripodMountedStructure = {}
 
 
 
@@ -4982,7 +4982,7 @@ ATripodMountedStructure = {}
 ---@field bCanBeHidden boolean
 ---@field TunnelConnectionState ETunnelConnectionState
 ---@field ConnectedTunnelNodes TArray<ATunnelNode>
-ATunnelNode = {}
+local ATunnelNode = {}
 
 function ATunnelNode:OnRep_TunnelConnectionState() end
 ---@param NewTunnelConnectionState ETunnelConnectionState
@@ -4991,13 +4991,13 @@ function ATunnelNode:BPSetTunnelConnectionStateVisuals(NewTunnelConnectionState)
 
 ---@class ATunnelNodeProxy : ATunnelNode
 ---@field ProxyConnectionRange float
-ATunnelNodeProxy = {}
+local ATunnelNodeProxy = {}
 
 
 
 ---@class AUniformPickup : AItemPickup
 ---@field UniformType EUniformType
-AUniformPickup = {}
+local AUniformPickup = {}
 
 
 
@@ -5007,57 +5007,57 @@ AUniformPickup = {}
 ---@field BuildOffset FVector
 ---@field BuildRotation FRotator
 ---@field VehicleCodeName FName
-AVehicleBuildSite = {}
+local AVehicleBuildSite = {}
 
 
 
 ---@class AVehicleCrate : AShippableCrate
-AVehicleCrate = {}
+local AVehicleCrate = {}
 
 
 ---@class AVehicleFactory : AConstructionSite
-AVehicleFactory = {}
+local AVehicleFactory = {}
 
 
 ---@class AVehicleFactoryBuildSite : AConstructionSiteBuildSite
-AVehicleFactoryBuildSite = {}
+local AVehicleFactoryBuildSite = {}
 
 
 ---@class AVehicleMovementProfileList : AInfo
 ---@field VehicleMovementProfileMap TMap<EVehicleMovementProfileType, FVehicleMovementProfileData>
-AVehicleMovementProfileList = {}
+local AVehicleMovementProfileList = {}
 
 
 
 ---@class AVehicleProfileList : AInfo
 ---@field VehicleProfileMap TMap<EVehicleProfileType, FVehicleProfileData>
-AVehicleProfileList = {}
+local AVehicleProfileList = {}
 
 
 
 ---@class AVehiclesRenderInfo : AInfo
 ---@field PhysicalMaterialResolver FPhysicalMaterialResolver
-AVehiclesRenderInfo = {}
+local AVehiclesRenderInfo = {}
 
 
 
 ---@class AWall : ABuildableStructure
 ---@field bAllowStanding boolean
 ---@field UpgradeRequiresConnectedWalls boolean
-AWall = {}
+local AWall = {}
 
 
 
 ---@class AWallBuildSite : AStructureBuildSite
-AWallBuildSite = {}
+local AWallBuildSite = {}
 
 
 ---@class AWarBaseHUD : AHUD
-AWarBaseHUD = {}
+local AWarBaseHUD = {}
 
 
 ---@class AWarBeaconClient : AOnlineBeaconClient
-AWarBeaconClient = {}
+local AWarBeaconClient = {}
 
 function AWarBeaconClient:ServerRequestQueueStatusUpdate() end
 function AWarBeaconClient:ServerLeaveQueue() end
@@ -5078,11 +5078,11 @@ function AWarBeaconClient:ClientJoinQueueResponse(JoinWarResponse) end
 
 
 ---@class AWarBeaconHost : AOnlineBeaconHostObject
-AWarBeaconHost = {}
+local AWarBeaconHost = {}
 
 
 ---@class AWarBenchmarkPlayerController : ASimPlayerController
-AWarBenchmarkPlayerController = {}
+local AWarBenchmarkPlayerController = {}
 
 
 ---@class AWarCharacter : ACharacter
@@ -5095,7 +5095,7 @@ AWarBenchmarkPlayerController = {}
 ---@field StealthComponent UStealthComponent
 ---@field Muddyness float
 ---@field NearbyFlares TArray<TWeakObjectPtr<AFlareExplosionEffect>>
-AWarCharacter = {}
+local AWarCharacter = {}
 
 ---@param Structure AStructure
 function AWarCharacter:ServerUseStructure(Structure) end
@@ -5146,7 +5146,7 @@ function AWarCharacter:IsPawnVisible(TargetPawn) end
 ---@field ServerDetonationTime float
 ---@field ProjectileImpactVelocity FVector
 ---@field ExplosionParticleSystem UParticleSystemComponent
-AWarExplosionEffect = {}
+local AWarExplosionEffect = {}
 
 ---@param PSystem UParticleSystemComponent
 function AWarExplosionEffect:OnParticleSystemFinished(PSystem) end
@@ -5163,15 +5163,15 @@ function AWarExplosionEffect:BPDetonate() end
 
 
 ---@class AWarGameMode : AGameMode
-AWarGameMode = {}
+local AWarGameMode = {}
 
 
 ---@class AWarGameSession : AGameSession
-AWarGameSession = {}
+local AWarGameSession = {}
 
 
 ---@class AWarGameState : AGameState
-AWarGameState = {}
+local AWarGameState = {}
 
 
 ---@class AWarHUD : AWarBaseHUD
@@ -5182,7 +5182,7 @@ AWarGameState = {}
 ---@field WarTimerFont UFont
 ---@field ReticleFont UFont
 ---@field MapGridFont UFont
-AWarHUD = {}
+local AWarHUD = {}
 
 
 
@@ -5190,7 +5190,7 @@ AWarHUD = {}
 ---@field Damage float
 ---@field Radius float
 ---@field DamageType TSubclassOf<UDamageType>
-AWarPainVolume = {}
+local AWarPainVolume = {}
 
 
 
@@ -5202,7 +5202,7 @@ AWarPainVolume = {}
 ---@field bQueuedViaBorderTravel boolean
 ---@field bAllowedToContinueTravelling boolean
 ---@field WarBeaconClient AWarBeaconClient
-AWarPlayerController = {}
+local AWarPlayerController = {}
 
 function AWarPlayerController:ServerInitiateTravel() end
 function AWarPlayerController:ServerClientTravelLoadComplete() end
@@ -5233,12 +5233,12 @@ function AWarPlayerController:ClientQueueForTravel(DestinationMapId, RegionConne
 
 ---@class AWarPlayerStart : APlayerStart
 ---@field PlayerStartOwner AActor
-AWarPlayerStart = {}
+local AWarPlayerStart = {}
 
 
 
 ---@class AWarPlayerState : APlayerState
-AWarPlayerState = {}
+local AWarPlayerState = {}
 
 
 ---@class AWarProjectile : AActor
@@ -5267,7 +5267,7 @@ AWarPlayerState = {}
 ---@field RotationVelocityRequirement float
 ---@field UnderWaterExplosionTemplate TSubclassOf<AWarExplosionEffect>
 ---@field WaterSurfaceExplosionTemplate TSubclassOf<AWarExplosionEffect>
-AWarProjectile = {}
+local AWarProjectile = {}
 
 ---@param Target AActor
 function AWarProjectile:SetHomingTarget(Target) end
@@ -5287,7 +5287,7 @@ function AWarProjectile:ApplyExplosiveDamageAndSpawnFx(HitResult) end
 
 
 ---@class AWarReplicationGraphDebugActor : AReplicationGraphDebugActor
-AWarReplicationGraphDebugActor = {}
+local AWarReplicationGraphDebugActor = {}
 
 ---@param Delay float
 function AWarReplicationGraphDebugActor:ServerViewTargets(Delay) end
@@ -5304,36 +5304,36 @@ function AWarReplicationGraphDebugActor:ClientActorInfo(DebugInfo, ViewLocation)
 ---@field MapIntelligenceSourceComponent UMapIntelligenceSourceComponent
 ---@field TeamFlagMeshComponent UTeamFlagMeshComponent
 ---@field GunnerYaw float
-AWatchTower = {}
+local AWatchTower = {}
 
 
 
 ---@class AWaterMeshActor : AStaticMeshActor
-AWaterMeshActor = {}
+local AWaterMeshActor = {}
 
 
 ---@class AWaterMine : AMine
-AWaterMine = {}
+local AWaterMine = {}
 
 
 ---@class AWaterProjectile : AWarProjectile
 ---@field InstigatorRoom URoomComponent
 ---@field LastRoom URoomComponent
-AWaterProjectile = {}
+local AWaterProjectile = {}
 
 
 
 ---@class AWeaponFireFX : AActor
 ---@field MovementComp UProjectileMovementComponent
 ---@field CollisionComp USphereComponent
-AWeaponFireFX = {}
+local AWeaponFireFX = {}
 
 ---@param HitResult FHitResult
 function AWeaponFireFX:OnProjectileStop(HitResult) end
 
 
 ---@class AWearablePickup : AItemPickup
-AWearablePickup = {}
+local AWearablePickup = {}
 
 
 ---@class AWeatherActor : AActor
@@ -5343,12 +5343,12 @@ AWearablePickup = {}
 ---@field ParameterName FName
 ---@field ParameterCurve UCurveFloat
 ---@field TransitionDuration float
-AWeatherActor = {}
+local AWeatherActor = {}
 
 
 
 ---@class AWeatherEffectsActor : AActor
-AWeatherEffectsActor = {}
+local AWeatherEffectsActor = {}
 
 
 ---@class AWeatherIceActor : AActor
@@ -5371,7 +5371,7 @@ AWeatherEffectsActor = {}
 ---@field ReplicatedStates TArray<uint32>
 ---@field IceActorDataIndex int16
 ---@field WeatherIceMapData AWeatherIceMapData
-AWeatherIceActor = {}
+local AWeatherIceActor = {}
 
 ---@param PreviousReplicatedStates TArray<uint32>
 function AWeatherIceActor:OnRep_ReplicatedStates(PreviousReplicatedStates) end
@@ -5380,7 +5380,7 @@ function AWeatherIceActor:OnRep_ReplicatedStates(PreviousReplicatedStates) end
 ---@class AWeatherIceMapData : AActor
 ---@field IceActorClass TSubclassOf<AWeatherIceActor>
 ---@field AllIceActorData TArray<FWeatherIceActorData>
-AWeatherIceMapData = {}
+local AWeatherIceMapData = {}
 
 
 
@@ -5410,7 +5410,7 @@ AWeatherIceMapData = {}
 ---@field ConnectionFrom FWeatherStationID
 ---@field CoordConnectionFrom FWarGridCoordinate
 ---@field RemainingActiveTime float
-AWeatherStation = {}
+local AWeatherStation = {}
 
 ---@param PreviousYaw float
 function AWeatherStation:OnRep_Yaw(PreviousYaw) end
@@ -5419,35 +5419,35 @@ function AWeatherStation:OnRep_State() end
 
 ---@class AWorldProxyActor : AActor
 ---@field ActorTypes TArray<TSubclassOf<AActor>>
-AWorldProxyActor = {}
+local AWorldProxyActor = {}
 
 
 
 ---@class AWorldResource : AResource
-AWorldResource = {}
+local AWorldResource = {}
 
 
 ---@class AWoundedCarriedItemPickup : AItemPickup
-AWoundedCarriedItemPickup = {}
+local AWoundedCarriedItemPickup = {}
 
 
 ---@class FAcceptInviteToRegimentMessage
 ---@field InviteToAccept FInviteToRegimentMessage
 ---@field TargetPlayerName FString
-FAcceptInviteToRegimentMessage = {}
+local FAcceptInviteToRegimentMessage = {}
 
 
 
 ---@class FAcceptJoinSquadWarMessage
 ---@field JoinMessage FJoinSquadWarMessage
-FAcceptJoinSquadWarMessage = {}
+local FAcceptJoinSquadWarMessage = {}
 
 
 
 ---@class FAcceptSquadInviteWarMessage
 ---@field SquadInviteInfo FSquadInviteInfo
 ---@field NewMemberName FString
-FAcceptSquadInviteWarMessage = {}
+local FAcceptSquadInviteWarMessage = {}
 
 
 
@@ -5455,33 +5455,33 @@ FAcceptSquadInviteWarMessage = {}
 ---@field ButtonStyle FButtonStyle
 ---@field ToolTipText FText
 ---@field ToolTipDescription FText
-FActionStyle = {}
+local FActionStyle = {}
 
 
 
 ---@class FActionsStyle
 ---@field AllStyles FActionStyle
-FActionsStyle = {}
+local FActionsStyle = {}
 
 
 
 ---@class FActivateSquadWarMessage
 ---@field SquadId int32
-FActivateSquadWarMessage = {}
+local FActivateSquadWarMessage = {}
 
 
 
 ---@class FActivityIndicatorStyle
 ---@field AlphaCurve UCurveFloat
 ---@field ScaleCurve UCurveFloat
-FActivityIndicatorStyle = {}
+local FActivityIndicatorStyle = {}
 
 
 
 ---@class FActivityResource
 ---@field AmountC float
 ---@field AmountW float
-FActivityResource = {}
+local FActivityResource = {}
 
 
 
@@ -5489,7 +5489,7 @@ FActivityResource = {}
 ---@field LastAckedSequence uint8
 ---@field Sequence uint8
 ---@field State ECharacterActivityState
-FActivityStateChange = {}
+local FActivityStateChange = {}
 
 
 
@@ -5499,7 +5499,7 @@ FActivityStateChange = {}
 ---@field Type EActivityStateDebugTraceType
 ---@field ActivityState ECharacterActivityState
 ---@field SequenceNumber uint8
-FActivityStateDebugTrace = {}
+local FActivityStateDebugTrace = {}
 
 
 
@@ -5509,13 +5509,13 @@ FActivityStateDebugTrace = {}
 ---@field bIsReversed boolean
 ---@field Duration float
 ---@field SectionName FName
-FActivityStateInfo = {}
+local FActivityStateInfo = {}
 
 
 
 ---@class FActorLog
 ---@field Entries TArray<FActorLogEntry>
-FActorLog = {}
+local FActorLog = {}
 
 
 
@@ -5527,13 +5527,13 @@ FActorLog = {}
 ---@field Value int32
 ---@field EventTime FDateTime
 ---@field CodeName FName
-FActorLogEntry = {}
+local FActorLogEntry = {}
 
 
 
 ---@class FActorLogPage
 ---@field EntryList TArray<FActorLogEntry>
-FActorLogPage = {}
+local FActorLogPage = {}
 
 
 
@@ -5545,7 +5545,7 @@ FActorLogPage = {}
 ---@field FactionId EFactionId
 ---@field Value int32
 ---@field Timestamp int64
-FAddGlobalLogEntryRequest = {}
+local FAddGlobalLogEntryRequest = {}
 
 
 
@@ -5553,14 +5553,14 @@ FAddGlobalLogEntryRequest = {}
 ---@field Result FString
 ---@field Message FString
 ---@field ServerName FString
-FAdminCommandHttpResponse = {}
+local FAdminCommandHttpResponse = {}
 
 
 
 ---@class FAdminCommandHttpResponseGroup
 ---@field ResponseList TArray<FAdminCommandHttpResponse>
 ---@field AdminOnlineID FString
-FAdminCommandHttpResponseGroup = {}
+local FAdminCommandHttpResponseGroup = {}
 
 
 
@@ -5569,40 +5569,40 @@ FAdminCommandHttpResponseGroup = {}
 ---@field AdminSimController ASimPlayerController
 ---@field AdminOnlineID FString
 ---@field AdminPlayerName FString
-FAdminCommandPlayerContext = {}
+local FAdminCommandPlayerContext = {}
 
 
 
 ---@class FAdminCommandResult
 ---@field Result FString
 ---@field Message FString
-FAdminCommandResult = {}
+local FAdminCommandResult = {}
 
 
 
 ---@class FAdminSteamInfo
 ---@field steamId FString
 ---@field PlayerName FString
-FAdminSteamInfo = {}
+local FAdminSteamInfo = {}
 
 
 
 ---@class FAlert
-FAlert = {}
+local FAlert = {}
 
 
 ---@class FAlertAllPlayersOnTeamRPCInfo
 ---@field AlertText FString
 ---@field Duration_Sec float
 ---@field TeamId uint8
-FAlertAllPlayersOnTeamRPCInfo = {}
+local FAlertAllPlayersOnTeamRPCInfo = {}
 
 
 
 ---@class FAlertAllPlayersRPCInfo
 ---@field AlertText FString
 ---@field Duration_Sec float
-FAlertAllPlayersRPCInfo = {}
+local FAlertAllPlayersRPCInfo = {}
 
 
 
@@ -5610,7 +5610,7 @@ FAlertAllPlayersRPCInfo = {}
 ---@field TownName FString
 ---@field MapId EWorldConquestMapId
 ---@field TeamId uint8
-FAlertTownBuiltRPCInfo = {}
+local FAlertTownBuiltRPCInfo = {}
 
 
 
@@ -5618,7 +5618,7 @@ FAlertTownBuiltRPCInfo = {}
 ---@field TownName FString
 ---@field MapId EWorldConquestMapId
 ---@field TeamId uint8
-FAlertTownDestroyedRPCInfo = {}
+local FAlertTownDestroyedRPCInfo = {}
 
 
 
@@ -5626,7 +5626,7 @@ FAlertTownDestroyedRPCInfo = {}
 ---@field TownName FString
 ---@field MapId EWorldConquestMapId
 ---@field TeamId uint8
-FAlertTownUnderAttackRPCInfo = {}
+local FAlertTownUnderAttackRPCInfo = {}
 
 
 
@@ -5637,7 +5637,7 @@ FAlertTownUnderAttackRPCInfo = {}
 ---@field Var1 int32
 ---@field Var2 int32
 ---@field DurationSecs float
-FAlertWarOpsMessageRPCInfo = {}
+local FAlertWarOpsMessageRPCInfo = {}
 
 
 
@@ -5653,7 +5653,7 @@ FAlertWarOpsMessageRPCInfo = {}
 ---@field AddedBurning float
 ---@field AddedHeat float
 ---@field BreachingModifier float
-FAmmoDynamicData = {}
+local FAmmoDynamicData = {}
 
 
 
@@ -5662,7 +5662,7 @@ FAmmoDynamicData = {}
 ---@field CodeName FName
 ---@field QuantityReleased int32
 ---@field TotalQuantity int32
-FAnalayticsReleaseReserveStockpileItemInfo = {}
+local FAnalayticsReleaseReserveStockpileItemInfo = {}
 
 
 
@@ -5670,7 +5670,7 @@ FAnalayticsReleaseReserveStockpileItemInfo = {}
 ---@field ChatChannel EChatChannel
 ---@field ChatLanguage EChatLanguage
 ---@field Message FString
-FAnalyticsChatInfo = {}
+local FAnalyticsChatInfo = {}
 
 
 
@@ -5689,7 +5689,7 @@ FAnalyticsChatInfo = {}
 ---@field DeviceID FString
 ---@field TeamId uint8
 ---@field JsonPayload FString
-FAnalyticsEvent = {}
+local FAnalyticsEvent = {}
 
 
 
@@ -5697,20 +5697,20 @@ FAnalyticsEvent = {}
 ---@field OrderItems TArray<FSpecializedFactoryOrderItem>
 ---@field AccessLevel EFactoryOrderAccess
 ---@field SquadId int16
-FAnalyticsFactoryOrderCompleteInfo = {}
+local FAnalyticsFactoryOrderCompleteInfo = {}
 
 
 
 ---@class FAnalyticsItem
 ---@field Name FString
 ---@field Quantity int32
-FAnalyticsItem = {}
+local FAnalyticsItem = {}
 
 
 
 ---@class FAnalyticsItemList
 ---@field ItemList TArray<FAnalyticsItem>
-FAnalyticsItemList = {}
+local FAnalyticsItemList = {}
 
 
 
@@ -5719,7 +5719,7 @@ FAnalyticsItemList = {}
 ---@field AdminOnlineID FString
 ---@field DurationMins float
 ---@field BanReason EBanReason
-FAnalyticsModBanInfo = {}
+local FAnalyticsModBanInfo = {}
 
 
 
@@ -5728,7 +5728,7 @@ FAnalyticsModBanInfo = {}
 ---@field RestrictionType FString
 ---@field DurationMins float
 ---@field bWasRestrictedByAdmin boolean
-FAnalyticsPlayerRestrictedInfo = {}
+local FAnalyticsPlayerRestrictedInfo = {}
 
 
 
@@ -5736,21 +5736,21 @@ FAnalyticsPlayerRestrictedInfo = {}
 ---@field PrototypeCodeName FName
 ---@field bPrototypeComplete boolean
 ---@field bPrototypeSucceeded boolean
-FAnalyticsPrototypeResult = {}
+local FAnalyticsPrototypeResult = {}
 
 
 
 ---@class FAnalyticsReserveItem
 ---@field StockpileName FString
 ---@field Item FAnalyticsItem
-FAnalyticsReserveItem = {}
+local FAnalyticsReserveItem = {}
 
 
 
 ---@class FAnalyticsReserveItemList
 ---@field StockpileName FString
 ---@field ItemList FAnalyticsItemList
-FAnalyticsReserveItemList = {}
+local FAnalyticsReserveItemList = {}
 
 
 
@@ -5758,14 +5758,14 @@ FAnalyticsReserveItemList = {}
 ---@field DeadPlayerName FString
 ---@field DeadPlayerOnlineID FString
 ---@field TeamKillSource FString
-FAnalyticsTeamKillInfo = {}
+local FAnalyticsTeamKillInfo = {}
 
 
 
 ---@class FAnalyticsUnstuckInfo
 ---@field NewLocation FVector
 ---@field NumUnstuckCommandsUsed int32
-FAnalyticsUnstuckInfo = {}
+local FAnalyticsUnstuckInfo = {}
 
 
 
@@ -5774,7 +5774,7 @@ FAnalyticsUnstuckInfo = {}
 ---@field SquadId int16
 ---@field FactionId EFactionId
 ---@field LastDriverOnlineID FString
-FAnalyticsVehicleWrenchUnlockedInfo = {}
+local FAnalyticsVehicleWrenchUnlockedInfo = {}
 
 
 
@@ -5783,20 +5783,20 @@ FAnalyticsVehicleWrenchUnlockedInfo = {}
 ---@field TargetOnlineID FString
 ---@field TargetPlayerName FString
 ---@field Message FString
-FAnalyticsWhisperInfo = {}
+local FAnalyticsWhisperInfo = {}
 
 
 
 ---@class FArmourDirectionBoneNamesList
 ---@field ArmourDirection EArmourDirection
 ---@field BoneNamesList TArray<FName>
-FArmourDirectionBoneNamesList = {}
+local FArmourDirectionBoneNamesList = {}
 
 
 
 ---@class FArmourProfile : FTableRowBase
 ---@field SuppressionModifier float
-FArmourProfile = {}
+local FArmourProfile = {}
 
 
 
@@ -5804,20 +5804,20 @@ FArmourProfile = {}
 ---@field CodeName FName
 ---@field Duration int32
 ---@field RequiredCodeName FName
-FAssemblyItem = {}
+local FAssemblyItem = {}
 
 
 
 ---@class FAssemblyModification
 ---@field AssemblyItems TArray<FAssemblyItem>
-FAssemblyModification = {}
+local FAssemblyModification = {}
 
 
 
 ---@class FAssignSquadOfficerToLeaderWarMessage
 ---@field SquadId int32
 ---@field OfficerOnlineId FString
-FAssignSquadOfficerToLeaderWarMessage = {}
+local FAssignSquadOfficerToLeaderWarMessage = {}
 
 
 
@@ -5831,13 +5831,13 @@ FAssignSquadOfficerToLeaderWarMessage = {}
 ---@field FloodedMass float
 ---@field TargetFloodPercent float
 ---@field FloodPercent float
-FBallastInfo = {}
+local FBallastInfo = {}
 
 
 
 ---@class FBanReasonInfo
 ---@field BanReason EBanReason
-FBanReasonInfo = {}
+local FBanReasonInfo = {}
 
 
 
@@ -5906,7 +5906,7 @@ FBanReasonInfo = {}
 ---@field GearboxStyle FGearboxStyle
 ---@field ItemHolderSortButtonStyle FButtonStyle
 ---@field MapSearchBarStyle FSearchBarStyle
-FBaseStyle = {}
+local FBaseStyle = {}
 
 
 
@@ -5914,21 +5914,21 @@ FBaseStyle = {}
 ---@field ID int32
 ---@field FactionId int8
 ---@field OnlineIdList TArray<FString>
-FBatchModifiedRegimentIdMessage = {}
+local FBatchModifiedRegimentIdMessage = {}
 
 
 
 ---@class FBatchRegimentIdRequest
 ---@field RequestID int32
 ---@field OnlineIds TArray<FString>
-FBatchRegimentIdRequest = {}
+local FBatchRegimentIdRequest = {}
 
 
 
 ---@class FBatchRegimentIdResponse
 ---@field RequestID int32
 ---@field RegimentIds TArray<int32>
-FBatchRegimentIdResponse = {}
+local FBatchRegimentIdResponse = {}
 
 
 
@@ -5936,7 +5936,7 @@ FBatchRegimentIdResponse = {}
 ---@field StartPosition FVector
 ---@field StartRotation FRotator
 ---@field Frames TArray<FBenchmarkReplayFrame>
-FBenchmarkReplay = {}
+local FBenchmarkReplay = {}
 
 
 
@@ -5944,7 +5944,7 @@ FBenchmarkReplay = {}
 ---@field Frame int32
 ---@field Input FVector
 ---@field bWantsToSprint boolean
-FBenchmarkReplayFrame = {}
+local FBenchmarkReplayFrame = {}
 
 
 
@@ -5953,13 +5953,13 @@ FBenchmarkReplayFrame = {}
 ---@field HexDirection EHexDirection
 ---@field RoadID uint8
 ---@field NextClaimTime FDateTime
-FBorderBaseInfo = {}
+local FBorderBaseInfo = {}
 
 
 
 ---@class FBridgeSideState
 ---@field bIsControlEnabled boolean
-FBridgeSideState = {}
+local FBridgeSideState = {}
 
 
 
@@ -5967,7 +5967,7 @@ FBridgeSideState = {}
 ---@field bCheckForLandscape boolean
 ---@field bCheckForObstructions boolean
 ---@field IgnoreMask uint8
-FBuildFootprintInfo = {}
+local FBuildFootprintInfo = {}
 
 
 
@@ -5976,7 +5976,7 @@ FBuildFootprintInfo = {}
 ---@field PlacementStatus EPlacementStatus
 ---@field Structure AStructure
 ---@field CodeName FName
-FBuildResponse = {}
+local FBuildResponse = {}
 
 
 
@@ -5993,13 +5993,13 @@ FBuildResponse = {}
 ---@field ApplicationRule EBuildSocketTagRule
 ---@field ConnectorAttachmentTag FName
 ---@field bIgnoreHidesTag boolean
-FBuildSocketTag = {}
+local FBuildSocketTag = {}
 
 
 
 ---@class FBuildStyle
 ---@field Categories FSlateBrush
-FBuildStyle = {}
+local FBuildStyle = {}
 
 
 
@@ -6008,7 +6008,7 @@ FBuildStyle = {}
 ---@field NoBGOrangeHighlight FButtonStyle
 ---@field Grey FButtonStyle
 ---@field Red FButtonStyle
-FButtonStyles = {}
+local FButtonStyles = {}
 
 
 
@@ -6016,7 +6016,7 @@ FButtonStyles = {}
 ---@field LandscapeActorToWorld FTransform
 ---@field Bounds FBox
 ---@field Proxy ALandscapeProxy
-FCachedLandscape = {}
+local FCachedLandscape = {}
 
 
 
@@ -6035,21 +6035,21 @@ FCachedLandscape = {}
 ---@field RecentFriendlyVehicleDamage float
 ---@field RecentNameChanges int16
 ---@field TimeWhenCached FDateTime
-FCachedPlayerState = {}
+local FCachedPlayerState = {}
 
 
 
 ---@class FCachedWorldStructure
 ---@field StructureClass TSubclassOf<AStructure>
 ---@field WorldPosition FVector
-FCachedWorldStructure = {}
+local FCachedWorldStructure = {}
 
 
 
 ---@class FCalloutInfo
 ---@field Message FText
 ---@field RequiresWorldMarker boolean
-FCalloutInfo = {}
+local FCalloutInfo = {}
 
 
 
@@ -6061,14 +6061,14 @@ FCalloutInfo = {}
 ---@field bRequiresGripType boolean
 ---@field bRequiresWeather boolean
 ---@field bRequiresWarming boolean
-FCharacterConditions = {}
+local FCharacterConditions = {}
 
 
 
 ---@class FCharacterCustomizationInfo
 ---@field bIsFemale boolean
 ---@field SkinTone int8
-FCharacterCustomizationInfo = {}
+local FCharacterCustomizationInfo = {}
 
 
 
@@ -6076,7 +6076,7 @@ FCharacterCustomizationInfo = {}
 ---@field ImpactPoint FVector_NetQuantize
 ---@field MuzzleOffset FMuzzleOffsetVector_NetQuantize
 ---@field RenderTimestamp FQuantizedTimestamp
-FCharacterInvokeInfo = {}
+local FCharacterInvokeInfo = {}
 
 
 
@@ -6094,35 +6094,35 @@ FCharacterInvokeInfo = {}
 ---@field Helmet USkeletalMesh
 ---@field bCanUpdateHeadSkinTone boolean
 ---@field bCanUpdateHandSkinTone boolean
-FCharacterRenderInfo = {}
+local FCharacterRenderInfo = {}
 
 
 
 ---@class FCharacterSkinToneInfo
 ---@field HeadMaterial UMaterialInstance
 ---@field HandsMaterial UMaterialInstance
-FCharacterSkinToneInfo = {}
+local FCharacterSkinToneInfo = {}
 
 
 
 ---@class FChatChannelStyle
 ---@field Color FRichTextFieldColor
 ---@field MessageColor FRichTextFieldColor
-FChatChannelStyle = {}
+local FChatChannelStyle = {}
 
 
 
 ---@class FChatStyle
 ---@field ChannelStyleMap TMap<EChatChannel, FChatChannelStyle>
 ---@field EnemyNameColor FRichTextFieldColor
-FChatStyle = {}
+local FChatStyle = {}
 
 
 
 ---@class FCheatDisbandRegimentRequest
 ---@field Admin FUObjectHandle
 ---@field RegimentID int32
-FCheatDisbandRegimentRequest = {}
+local FCheatDisbandRegimentRequest = {}
 
 
 
@@ -6130,7 +6130,7 @@ FCheatDisbandRegimentRequest = {}
 ---@field Request FCheatDisbandRegimentRequest
 ---@field RegimentName FString
 ---@field RegimentTag FString
-FCheatDisbandRegimentResponse = {}
+local FCheatDisbandRegimentResponse = {}
 
 
 
@@ -6139,13 +6139,13 @@ FCheatDisbandRegimentResponse = {}
 ---@field RegimentID int32
 ---@field Name FString
 ---@field Tag FString
-FCheatEditRegimentRequest = {}
+local FCheatEditRegimentRequest = {}
 
 
 
 ---@class FCheatEditRegimentResponse
 ---@field Request FCheatEditRegimentRequest
-FCheatEditRegimentResponse = {}
+local FCheatEditRegimentResponse = {}
 
 
 
@@ -6153,21 +6153,21 @@ FCheatEditRegimentResponse = {}
 ---@field Admin FUObjectHandle
 ---@field QueryType ERegimentQueryType
 ---@field QueryValue FString
-FCheatGetRegimentInfoRequest = {}
+local FCheatGetRegimentInfoRequest = {}
 
 
 
 ---@class FCheatGetRegimentInfoResponse
 ---@field Request FCheatGetRegimentInfoRequest
 ---@field RegimentList TArray<FRegiment>
-FCheatGetRegimentInfoResponse = {}
+local FCheatGetRegimentInfoResponse = {}
 
 
 
 ---@class FCheatGetSquadInfoRequest
 ---@field AdminOnlineID FString
 ---@field TargetOnlineID FString
-FCheatGetSquadInfoRequest = {}
+local FCheatGetSquadInfoRequest = {}
 
 
 
@@ -6176,7 +6176,7 @@ FCheatGetSquadInfoRequest = {}
 ---@field ExpectedSquadId int32
 ---@field ColonialSquadIds TArray<int32>
 ---@field WardenSquadIds TArray<int32>
-FCheatGetSquadInfoResponse = {}
+local FCheatGetSquadInfoResponse = {}
 
 
 
@@ -6184,35 +6184,35 @@ FCheatGetSquadInfoResponse = {}
 ---@field Admin FUObjectHandle
 ---@field CurrentCommanderOnlineID FString
 ---@field NewCommanderOnlineID FString
-FCheatMakeRegimentCommanderRequest = {}
+local FCheatMakeRegimentCommanderRequest = {}
 
 
 
 ---@class FCheatMakeRegimentCommanderResponse
 ---@field Request FCheatMakeRegimentCommanderRequest
 ---@field bIsSuccess boolean
-FCheatMakeRegimentCommanderResponse = {}
+local FCheatMakeRegimentCommanderResponse = {}
 
 
 
 ---@class FCheatRemoveFromRegimentRequest
 ---@field Admin FUObjectHandle
 ---@field TargetOnlineID FString
-FCheatRemoveFromRegimentRequest = {}
+local FCheatRemoveFromRegimentRequest = {}
 
 
 
 ---@class FCheatRemoveFromRegimentResponse
 ---@field Request FCheatRemoveFromRegimentRequest
 ---@field bIsSuccess boolean
-FCheatRemoveFromRegimentResponse = {}
+local FCheatRemoveFromRegimentResponse = {}
 
 
 
 ---@class FCheatRemoveFromSquadRequest
 ---@field AdminOnlineID FString
 ---@field TargetOnlineID FString
-FCheatRemoveFromSquadRequest = {}
+local FCheatRemoveFromSquadRequest = {}
 
 
 
@@ -6220,14 +6220,14 @@ FCheatRemoveFromSquadRequest = {}
 ---@field CheatRemoveFromSquadRequest FCheatRemoveFromSquadRequest
 ---@field RemovedFromColonialSquadIds TArray<int32>
 ---@field RemovedFromWardenSquadIds TArray<int32>
-FCheatRemoveFromSquadResponse = {}
+local FCheatRemoveFromSquadResponse = {}
 
 
 
 ---@class FCheatViewRegimentInfoRequest
 ---@field Admin FUObjectHandle
 ---@field RegimentID int32
-FCheatViewRegimentInfoRequest = {}
+local FCheatViewRegimentInfoRequest = {}
 
 
 
@@ -6238,14 +6238,14 @@ FCheatViewRegimentInfoRequest = {}
 ---@field Link FString
 ---@field FactionId EFactionId
 ---@field Members int32
-FCheatViewRegimentInfoResponse = {}
+local FCheatViewRegimentInfoResponse = {}
 
 
 
 ---@class FCheatViewSquadInfoRequest
 ---@field Admin FUObjectHandle
 ---@field SquadId int32
-FCheatViewSquadInfoRequest = {}
+local FCheatViewSquadInfoRequest = {}
 
 
 
@@ -6257,7 +6257,7 @@ FCheatViewSquadInfoRequest = {}
 ---@field LeaderName FString
 ---@field MemberCount int16
 ---@field InactiveMemberCount int16
-FCheatViewSquadInfoResponse = {}
+local FCheatViewSquadInfoResponse = {}
 
 
 
@@ -6272,14 +6272,14 @@ FCheatViewSquadInfoResponse = {}
 ---@field OriginalBuildTime int64
 ---@field ClaimDurationHours int16
 ---@field DemolishDurationHours int16
-FClaimStatus = {}
+local FClaimStatus = {}
 
 
 
 ---@class FClearSquadsConditionalWarMessage
 ---@field MinAgeMinutes int32
 ---@field MaxHistoricalPlayers int32
-FClearSquadsConditionalWarMessage = {}
+local FClearSquadsConditionalWarMessage = {}
 
 
 
@@ -6288,28 +6288,28 @@ FClearSquadsConditionalWarMessage = {}
 ---@field RequiredVictoryTowns int32
 ---@field ShortRequiredVictoryTowns int32
 ---@field ScheduledConquestStartTime FDateTime
-FClientShardConfig = {}
+local FClientShardConfig = {}
 
 
 
 ---@class FCodeNameQuantity
 ---@field CodeName FName
 ---@field Quantity int32
-FCodeNameQuantity = {}
+local FCodeNameQuantity = {}
 
 
 
 ---@class FCodeNameSmallQuantity
 ---@field CodeName FName
 ---@field Quantity int16
-FCodeNameSmallQuantity = {}
+local FCodeNameSmallQuantity = {}
 
 
 
 ---@class FColorsStyle
 ---@field ButtonBackground FSlateBrush
 ---@field Button FButtonStyle
-FColorsStyle = {}
+local FColorsStyle = {}
 
 
 
@@ -6317,18 +6317,18 @@ FColorsStyle = {}
 ---@field CommendedPlayerID FString
 ---@field NumCommends int32
 ---@field LastCommendUnixTimestamp int64
-FCommendHistory = {}
+local FCommendHistory = {}
 
 
 
 ---@class FCommsRating
 ---@field Condition ECommsRatingCondition
-FCommsRating = {}
+local FCommsRating = {}
 
 
 
 ---@class FCommsRatingChatVoteInfo
-FCommsRatingChatVoteInfo = {}
+local FCommsRatingChatVoteInfo = {}
 
 
 ---@class FConcreteSettler
@@ -6339,7 +6339,7 @@ FCommsRatingChatVoteInfo = {}
 ---@field RoughnessEnd float
 ---@field ColourStart FLinearColor
 ---@field ColourEnd FLinearColor
-FConcreteSettler = {}
+local FConcreteSettler = {}
 
 
 
@@ -6348,7 +6348,7 @@ FConcreteSettler = {}
 ---@field Direction ESocketDirection
 ---@field SocketTypeMask int64
 ---@field ShowsTags TArray<FName>
-FConnectionRule = {}
+local FConnectionRule = {}
 
 
 
@@ -6358,7 +6358,7 @@ FConnectionRule = {}
 ---@field TargetRotation FQuat
 ---@field CustomData uint8
 ---@field Flags EConnectorConfigurationFlag
-FConnectorConfiguration = {}
+local FConnectorConfiguration = {}
 
 
 
@@ -6366,7 +6366,7 @@ FConnectorConfiguration = {}
 ---@field ConquestWinner uint8
 ---@field NumColonialAchievements int8
 ---@field NumWardenAchievements int8
-FConquestOverNotificationInfo = {}
+local FConquestOverNotificationInfo = {}
 
 
 
@@ -6403,14 +6403,14 @@ FConquestOverNotificationInfo = {}
 ---@field ScoopMaterialMesh UStaticMesh
 ---@field ArmHalfDimensions FVector2D
 ---@field ScoopRadius float
-FConstructionEquipmentConfig = {}
+local FConstructionEquipmentConfig = {}
 
 
 
 ---@class FConstructionEquipmentServerState
 ---@field TargetBuildSite TWeakObjectPtr<ABuildSite>
 ---@field ServerTimestamp float
-FConstructionEquipmentServerState = {}
+local FConstructionEquipmentServerState = {}
 
 
 
@@ -6422,7 +6422,7 @@ FConstructionEquipmentServerState = {}
 ---@field ContentImage FSlateBrush
 ---@field DarkContentImage FSlateBrush
 ---@field CategoryImage FSlateBrush
-FContainerStyle = {}
+local FContainerStyle = {}
 
 
 
@@ -6445,7 +6445,7 @@ FContainerStyle = {}
 ---@field MenuBackground FSlateBrush
 ---@field MenuKeybinding FTextBlockStyle
 ---@field MenuCheckbox FCheckBoxStyle
-FContextMenuStyle = {}
+local FContextMenuStyle = {}
 
 
 
@@ -6455,21 +6455,21 @@ FContextMenuStyle = {}
 ---@field Dimensions FVector2D
 ---@field bVertical boolean
 ---@field bInvertedControls boolean
-FControlSurface = {}
+local FControlSurface = {}
 
 
 
 ---@class FControlsPage
 ---@field MainColumn TArray<FControlsPageRow>
 ---@field AltColumn TArray<FControlsPageRow>
-FControlsPage = {}
+local FControlsPage = {}
 
 
 
 ---@class FControlsPageEntry
 ---@field Hotkeys TArray<FControlsPageEntryHotkey>
 ---@field OptionalImage FSlateBrush
-FControlsPageEntry = {}
+local FControlsPageEntry = {}
 
 
 
@@ -6477,13 +6477,13 @@ FControlsPageEntry = {}
 ---@field Icon FSlateBrush
 ---@field IconText FText
 ---@field Text FText
-FControlsPageEntryHotkey = {}
+local FControlsPageEntryHotkey = {}
 
 
 
 ---@class FControlsPageRow
 ---@field Entries TArray<FControlsPageEntry>
-FControlsPageRow = {}
+local FControlsPageRow = {}
 
 
 
@@ -6491,7 +6491,7 @@ FControlsPageRow = {}
 ---@field CodeName FName
 ---@field Quantity int32
 ---@field Limit int32
-FConversionItem = {}
+local FConversionItem = {}
 
 
 
@@ -6499,7 +6499,7 @@ FConversionItem = {}
 ---@field CodeName FName
 ---@field Quantity float
 ---@field Limit float
-FConversionLiquid = {}
+local FConversionLiquid = {}
 
 
 
@@ -6540,7 +6540,7 @@ FConversionLiquid = {}
 ---@field bRequiresPower boolean
 ---@field bUseClosestCabRotationZ boolean
 ---@field bAllowsInventoryAccess boolean
-FCraneComponentConfig = {}
+local FCraneComponentConfig = {}
 
 
 
@@ -6552,7 +6552,7 @@ FCraneComponentConfig = {}
 ---@field ArmMovementSFXLoop UAudioComponent
 ---@field DeployingSFXLoop UAudioComponent
 ---@field PulleyMovementSFXLoop UAudioComponent
-FCraneComponents = {}
+local FCraneComponents = {}
 
 
 
@@ -6562,20 +6562,20 @@ FCraneComponents = {}
 ---@field Radius float
 ---@field OuterRadius float
 ---@field SpawnWeight float
-FCraterInfo = {}
+local FCraterInfo = {}
 
 
 
 ---@class FCraterMeshStop
 ---@field Length float
 ---@field StaticMesh UStaticMesh
-FCraterMeshStop = {}
+local FCraterMeshStop = {}
 
 
 
 ---@class FCreateDebugMapPostRequest
 ---@field Request FCreateMapPostRequest
-FCreateDebugMapPostRequest = {}
+local FCreateDebugMapPostRequest = {}
 
 
 
@@ -6587,7 +6587,7 @@ FCreateDebugMapPostRequest = {}
 ---@field FacilityMapPostType EFacilityMapPostType
 ---@field bIsModModeOn boolean
 ---@field GroupId int32
-FCreateMapPostRequest = {}
+local FCreateMapPostRequest = {}
 
 
 
@@ -6596,13 +6596,13 @@ FCreateMapPostRequest = {}
 ---@field Tag FString
 ---@field Link FString
 ---@field FactionId int8
-FCreateRegimentWarMessage = {}
+local FCreateRegimentWarMessage = {}
 
 
 
 ---@class FCreateSquadWarMessage
 ---@field Name FString
-FCreateSquadWarMessage = {}
+local FCreateSquadWarMessage = {}
 
 
 
@@ -6612,21 +6612,21 @@ FCreateSquadWarMessage = {}
 ---@field OriginLocationZ float
 ---@field Rotation FRotator
 ---@field Serialized TArray<uint8>
-FCrossRegionActorData = {}
+local FCrossRegionActorData = {}
 
 
 
 ---@class FCrossRegionSerializedActor
 ---@field ActorClass UClass
 ---@field ActorBytes TArray<uint8>
-FCrossRegionSerializedActor = {}
+local FCrossRegionSerializedActor = {}
 
 
 
 ---@class FCursorStyle
 ---@field Brush FSlateBrush
 ---@field Offset FVector2D
-FCursorStyle = {}
+local FCursorStyle = {}
 
 
 
@@ -6644,14 +6644,14 @@ FCursorStyle = {}
 ---@field EnemyPursueDuration float
 ---@field ArmourDamageModifier float
 ---@field TargetStabilityReductionPerShot float
-FDamageAttributes = {}
+local FDamageAttributes = {}
 
 
 
 ---@class FDamageMitigation
 ---@field Mitigation float
 ---@field SFX USoundBase
-FDamageMitigation = {}
+local FDamageMitigation = {}
 
 
 
@@ -6674,7 +6674,7 @@ FDamageMitigation = {}
 ---@field Tier1Ship float
 ---@field WorldStructureHusk float
 ---@field Ice float
-FDamageProfile = {}
+local FDamageProfile = {}
 
 
 
@@ -6690,7 +6690,7 @@ FDamageProfile = {}
 ---@field CrushHighlights float
 ---@field Toe float
 ---@field DirectionalLightTemperature float
-FDayNightCycleCubemapInfo = {}
+local FDayNightCycleCubemapInfo = {}
 
 
 
@@ -6699,13 +6699,13 @@ FDayNightCycleCubemapInfo = {}
 ---@field DecalSize FVector
 ---@field LifeSpan float
 ---@field FadeScreenSize float
-FDecalData = {}
+local FDecalData = {}
 
 
 
 ---@class FDecayInfo
 ---@field FractionalSuppliesConsumed float
-FDecayInfo = {}
+local FDecayInfo = {}
 
 
 
@@ -6714,34 +6714,34 @@ FDecayInfo = {}
 ---@field ClosestStructureCount int32
 ---@field PreferredStructureCount int32
 ---@field PreferredSuppliesPerTick int32
-FDecayPreventionStructureCounts = {}
+local FDecayPreventionStructureCounts = {}
 
 
 
 ---@class FDeleteMapPostRequest
 ---@field OriginalPosterOnlineId FString
 ---@field RequesterOnlineID FString
-FDeleteMapPostRequest = {}
+local FDeleteMapPostRequest = {}
 
 
 
 ---@class FDeleteMapPostResponse
 ---@field bSuccess boolean
 ---@field DeletedPostOwnerOnlineID FString
-FDeleteMapPostResponse = {}
+local FDeleteMapPostResponse = {}
 
 
 
 ---@class FDenySquadOfficerToLeaderWarMessage
 ---@field SquadId int32
-FDenySquadOfficerToLeaderWarMessage = {}
+local FDenySquadOfficerToLeaderWarMessage = {}
 
 
 
 ---@class FDeployHistory
 ---@field LastDeployTime FDateTime
 ---@field LastDeployTimeAlt FDateTime
-FDeployHistory = {}
+local FDeployHistory = {}
 
 
 
@@ -6750,7 +6750,7 @@ FDeployHistory = {}
 ---@field TargetMapID EWorldConquestMapId
 ---@field TravelPoint FSpawnPoint
 ---@field bIsRecovery boolean
-FDeploymentQueueEntry = {}
+local FDeploymentQueueEntry = {}
 
 
 
@@ -6761,14 +6761,14 @@ FDeploymentQueueEntry = {}
 ---@field BanReason EBanReason
 ---@field AdminOnlineID FString
 ---@field AdminPlayerName FString
-FDeviceIdBanRequest = {}
+local FDeviceIdBanRequest = {}
 
 
 
 ---@class FDeviceIdBannedMessage
 ---@field DeviceIdBanRequest FDeviceIdBanRequest
 ---@field bIsSenderServer boolean
-FDeviceIdBannedMessage = {}
+local FDeviceIdBannedMessage = {}
 
 
 
@@ -6779,13 +6779,13 @@ FDeviceIdBannedMessage = {}
 ---@field ButtonTextStyle FTextBlockStyle
 ---@field BackgroundFillColour FSlateColor
 ---@field BackgroundBlurStrength float
-FDialogBoxStyle = {}
+local FDialogBoxStyle = {}
 
 
 
 ---@class FDisbandRegimentMessage
 ---@field RegimentID int32
-FDisbandRegimentMessage = {}
+local FDisbandRegimentMessage = {}
 
 
 
@@ -6793,14 +6793,14 @@ FDisbandRegimentMessage = {}
 ---@field OpenAnimationDuration float
 ---@field ClosedAnimationDuration float
 ---@field State EDynamicState
-FDynamicState = {}
+local FDynamicState = {}
 
 
 
 ---@class FDynamicTierInfo
 ---@field bIsEnabled boolean
 ---@field WindowMeshSet TSubclassOf<UWindowMeshSet>
-FDynamicTierInfo = {}
+local FDynamicTierInfo = {}
 
 
 
@@ -6808,7 +6808,7 @@ FDynamicTierInfo = {}
 ---@field bLockStance boolean
 ---@field bHideWeapon boolean
 ---@field AllowedStances TArray<ESimCharacterStance>
-FEmoteActivityOptions = {}
+local FEmoteActivityOptions = {}
 
 
 
@@ -6818,7 +6818,7 @@ FEmoteActivityOptions = {}
 ---@field EncumbranceModifiers FEncumbranceModifiers
 ---@field CurrentItemEncumbrance int32
 ---@field CurrentMudEncumbrance int32
-FEncumbranceManager = {}
+local FEncumbranceManager = {}
 
 
 
@@ -6843,12 +6843,12 @@ FEncumbranceManager = {}
 ---@field CurrentStaminaRestoreMod float
 ---@field CurrentMassAlpha float
 ---@field CurrentEngineForceModifier float
-FEncumbranceModifiers = {}
+local FEncumbranceModifiers = {}
 
 
 
 ---@class FEnvironmentModificationKey
-FEnvironmentModificationKey = {}
+local FEnvironmentModificationKey = {}
 
 
 ---@class FExplosionMaterialOverride
@@ -6856,25 +6856,25 @@ FEnvironmentModificationKey = {}
 ---@field ExplosionFX UParticleSystem
 ---@field ExplosionSFX USoundCue
 ---@field Decal FDecalData
-FExplosionMaterialOverride = {}
+local FExplosionMaterialOverride = {}
 
 
 
 ---@class FExternalWarServiceReplicatedState
 ---@field RegimentClientReplicatedState FRegimentClientReplicatedState
-FExternalWarServiceReplicatedState = {}
+local FExternalWarServiceReplicatedState = {}
 
 
 
 ---@class FFacilityLightRenderInfo
 ---@field MeshComponent UMeshComponent
-FFacilityLightRenderInfo = {}
+local FFacilityLightRenderInfo = {}
 
 
 
 ---@class FFacilityModification
 ---@field ConversionEntries TArray<FMultiConversionInfo>
-FFacilityModification = {}
+local FFacilityModification = {}
 
 
 
@@ -6895,7 +6895,7 @@ FFacilityModification = {}
 ---@field ConsumeAmountModifier float
 ---@field ProgressNormalized float
 ---@field LastUseTime int64
-FFacilityRefineryOrder = {}
+local FFacilityRefineryOrder = {}
 
 
 
@@ -6906,7 +6906,7 @@ FFacilityRefineryOrder = {}
 ---@field PausedButtonStyle FButtonStyle
 ---@field EnabledButtonStyle FButtonStyle
 ---@field ConversionInfoStyle FButtonStyle
-FFacilityStyle = {}
+local FFacilityStyle = {}
 
 
 
@@ -6920,7 +6920,7 @@ FFacilityStyle = {}
 ---@field RareMetalAmount int32
 ---@field TargetRareMetalAmount int32
 ---@field ActivityAmount double
-FFactionResourceState = {}
+local FFactionResourceState = {}
 
 
 
@@ -6933,20 +6933,20 @@ FFactionResourceState = {}
 ---@field ColonialFlavourText FText
 ---@field WardenFlavourText FText
 ---@field QueueWarningImageColour FSlateColor
-FFactionSelectStyle = {}
+local FFactionSelectStyle = {}
 
 
 
 ---@class FFactoryProductionCategory
 ---@field Type EFactoryQueueType
 ---@field CategoryItems TArray<FFactoryProductionItem>
-FFactoryProductionCategory = {}
+local FFactoryProductionCategory = {}
 
 
 
 ---@class FFactoryProductionItem
 ---@field CodeName FName
-FFactoryProductionItem = {}
+local FFactoryProductionItem = {}
 
 
 
@@ -6956,13 +6956,13 @@ FFactoryProductionItem = {}
 ---@field CraftingSpeedFactor float
 ---@field Orders TArray<FSpecializedFactoryOrder>
 ---@field CompletedOrders TArray<FSpecializedFactoryOrder>
-FFactoryQueue = {}
+local FFactoryQueue = {}
 
 
 
 ---@class FFestivalRenderInfo
 ---@field MaterialOverrides TArray<FMaterialOverride>
-FFestivalRenderInfo = {}
+local FFestivalRenderInfo = {}
 
 
 
@@ -6973,21 +6973,21 @@ FFestivalRenderInfo = {}
 ---@field CharacterBurn float
 ---@field FireDamageBaseGainRate float
 ---@field FireDamageBaseDecayRate float
-FFireIntensityThreshold = {}
+local FFireIntensityThreshold = {}
 
 
 
 ---@class FFlameImpactFXInfo
 ---@field Location FVector
 ---@field bActive boolean
-FFlameImpactFXInfo = {}
+local FFlameImpactFXInfo = {}
 
 
 
 ---@class FFoliageModificationInfo
 ---@field OriginalMesh UStaticMesh
 ---@field Replacement TSubclassOf<AClientFoliageReplacement>
-FFoliageModificationInfo = {}
+local FFoliageModificationInfo = {}
 
 
 
@@ -6995,7 +6995,7 @@ FFoliageModificationInfo = {}
 ---@field PhysicalMaterial UPhysicalMaterial
 ---@field FootPrintActorLeft TSubclassOf<ADecalActor>
 ---@field FootPrintActorRight TSubclassOf<ADecalActor>
-FFootPrintActorInfo = {}
+local FFootPrintActorInfo = {}
 
 
 
@@ -7012,14 +7012,14 @@ FFootPrintActorInfo = {}
 ---@field WeatherStationPartCodeName FName
 ---@field IntelCenterPartCodeName FName
 ---@field FortGarrisonPartCodeName FName
-FFortEmpConfig = {}
+local FFortEmpConfig = {}
 
 
 
 ---@class FFreighterCargo
 ---@field CodeName FName
 ---@field SavedData FSavedShippableData
-FFreighterCargo = {}
+local FFreighterCargo = {}
 
 
 
@@ -7029,27 +7029,27 @@ FFreighterCargo = {}
 ---@field StructureDamage int32
 ---@field VehicleDamage int32
 ---@field NameChanges int32
-FFriendlyFireStats = {}
+local FFriendlyFireStats = {}
 
 
 
 ---@class FFuelInfo
 ---@field Tank FFuelTank
 ---@field ConsumptionRate float
-FFuelInfo = {}
+local FFuelInfo = {}
 
 
 
 ---@class FFuelQuantity
 ---@field CodeName FName
 ---@field Quantity float
-FFuelQuantity = {}
+local FFuelQuantity = {}
 
 
 
 ---@class FFuelStyle
 ---@field Button FButtonStyle
-FFuelStyle = {}
+local FFuelStyle = {}
 
 
 
@@ -7059,7 +7059,7 @@ FFuelStyle = {}
 ---@field FuelItemCodeName FName
 ---@field bCanRefuelFromTanker boolean
 ---@field bCanSiphon boolean
-FFuelTank = {}
+local FFuelTank = {}
 
 
 
@@ -7079,7 +7079,7 @@ FFuelTank = {}
 ---@field TargetActorToRefuel AActor
 ---@field FuelBuffer FFuelQuantity
 ---@field bEnabled boolean
-FFuelTankerInfo = {}
+local FFuelTankerInfo = {}
 
 
 
@@ -7118,13 +7118,13 @@ FFuelTankerInfo = {}
 ---@field OutfitType EOutfitType
 ---@field CharacterCustomizationInfo FCharacterCustomizationInfo
 ---@field VoteKickImmunityTime FDateTime
-FGameServerProfile = {}
+local FGameServerProfile = {}
 
 
 
 ---@class FGameplayFlags
 ---@field Flags int32
-FGameplayFlags = {}
+local FGameplayFlags = {}
 
 
 
@@ -7133,34 +7133,34 @@ FGameplayFlags = {}
 ---@field SuppressLossRate float
 ---@field StabilityGainRateMultiplier float
 ---@field CoverFactorFloor float
-FGameplayParams = {}
+local FGameplayParams = {}
 
 
 
 ---@class FGangwayRampSaveState
 ---@field State ERampState
 ---@field RampAngle float
-FGangwayRampSaveState = {}
+local FGangwayRampSaveState = {}
 
 
 
 ---@class FGatherResult
 ---@field ResourceCodeName FName
 ---@field GatheredAmount int32
-FGatherResult = {}
+local FGatherResult = {}
 
 
 
 ---@class FGearboxStyle
 ---@field GearboxLow FSlateBrush
 ---@field GearboxHigh FSlateBrush
-FGearboxStyle = {}
+local FGearboxStyle = {}
 
 
 
 ---@class FGeneralPurposeIcons
 ---@field DownwardTriangle FSlateBrush
-FGeneralPurposeIcons = {}
+local FGeneralPurposeIcons = {}
 
 
 
@@ -7173,124 +7173,124 @@ FGeneralPurposeIcons = {}
 ---@field ValidEntriesOverride TArray<FName>
 ---@field PreStockedEntries TArray<FStockpileEntry>
 ---@field RetrieveDurationModifiers TMap<FName, float>
-FGenericStockpileConfig = {}
+local FGenericStockpileConfig = {}
 
 
 
 ---@class FGetAnalyticsEventsRequest
 ---@field WarId FString
 ---@field EventType EAnalyticsEventType
-FGetAnalyticsEventsRequest = {}
+local FGetAnalyticsEventsRequest = {}
 
 
 
 ---@class FGetAnalyticsEventsResponse
 ---@field EventList TArray<FAnalyticsEvent>
-FGetAnalyticsEventsResponse = {}
+local FGetAnalyticsEventsResponse = {}
 
 
 
 ---@class FGetBanAndProfileRequest
 ---@field OnlineID FString
 ---@field DeviceID FString
-FGetBanAndProfileRequest = {}
+local FGetBanAndProfileRequest = {}
 
 
 
 ---@class FGetBanAndProfileResponse
 ---@field PlayerBan FPlayerBan
 ---@field ProfileResponse FGetProfileResponse
-FGetBanAndProfileResponse = {}
+local FGetBanAndProfileResponse = {}
 
 
 
 ---@class FGetBanRequest
 ---@field OnlineID FString
 ---@field DeviceID FString
-FGetBanRequest = {}
+local FGetBanRequest = {}
 
 
 
 ---@class FGetBanResponse
 ---@field PlayerBan FPlayerBan
-FGetBanResponse = {}
+local FGetBanResponse = {}
 
 
 
 ---@class FGetMapPostsRequest
 ---@field bIsModModeOn boolean
-FGetMapPostsRequest = {}
+local FGetMapPostsRequest = {}
 
 
 
 ---@class FGetMapPostsResponse
 ---@field MapPosts TArray<FRepMapPost>
-FGetMapPostsResponse = {}
+local FGetMapPostsResponse = {}
 
 
 
 ---@class FGetProfileRequest
 ---@field OnlineID FString
-FGetProfileRequest = {}
+local FGetProfileRequest = {}
 
 
 
 ---@class FGetProfileResponse
 ---@field ResponseCode EGetProfileResponseCode
 ---@field WarPlayerProfileSerializable FWarPlayerProfileSerialized
-FGetProfileResponse = {}
+local FGetProfileResponse = {}
 
 
 
 ---@class FGetSquadInfoWarMessage
 ---@field OnlineID FString
 ---@field FactionId int8
-FGetSquadInfoWarMessage = {}
+local FGetSquadInfoWarMessage = {}
 
 
 
 ---@class FGetSquadInfosResponse
 ---@field SquadInfos TArray<FSquadInfo>
-FGetSquadInfosResponse = {}
+local FGetSquadInfosResponse = {}
 
 
 
 ---@class FGetSquadsResponse
 ---@field Squads TArray<FSquad>
-FGetSquadsResponse = {}
+local FGetSquadsResponse = {}
 
 
 
 ---@class FGetViolationsHttpRequest
 ---@field OnlineID FString
 ---@field DeviceID FString
-FGetViolationsHttpRequest = {}
+local FGetViolationsHttpRequest = {}
 
 
 
 ---@class FGetViolationsHttpResponse
 ---@field EventList TArray<FViolationEvent>
-FGetViolationsHttpResponse = {}
+local FGetViolationsHttpResponse = {}
 
 
 
 ---@class FGetViolationsRequest
-FGetViolationsRequest = {}
+local FGetViolationsRequest = {}
 
 
 ---@class FGetViolationsResponse
-FGetViolationsResponse = {}
+local FGetViolationsResponse = {}
 
 
 ---@class FGlobalAdminCommand
-FGlobalAdminCommand = {}
+local FGlobalAdminCommand = {}
 
 
 ---@class FGlobalAdminCommandRequest
 ---@field Params TArray<FString>
 ---@field TargetServerName FString
 ---@field AdminOnlineID FString
-FGlobalAdminCommandRequest = {}
+local FGlobalAdminCommandRequest = {}
 
 
 
@@ -7301,33 +7301,33 @@ FGlobalAdminCommandRequest = {}
 ---@field Value int32
 ---@field Timestamp FDateTime
 ---@field MapId int8
-FGlobalLogEntry = {}
+local FGlobalLogEntry = {}
 
 
 
 ---@class FGlobalLogPage
 ---@field Entries TArray<FGlobalLogEntry>
-FGlobalLogPage = {}
+local FGlobalLogPage = {}
 
 
 
 ---@class FGlobalLogPageRequest
 ---@field LogPageIndex int32
-FGlobalLogPageRequest = {}
+local FGlobalLogPageRequest = {}
 
 
 
 ---@class FGlobalLogPageResponse
 ---@field LogPage FGlobalLogPage
 ---@field PageCount int32
-FGlobalLogPageResponse = {}
+local FGlobalLogPageResponse = {}
 
 
 
 ---@class FGlobalResourceState
 ---@field Colonials FFactionResourceState
 ---@field Wardens FFactionResourceState
-FGlobalResourceState = {}
+local FGlobalResourceState = {}
 
 
 
@@ -7339,7 +7339,7 @@ FGlobalResourceState = {}
 ---@field OverpopTextType EOverpopText
 ---@field OverpopYesButtonType EOverpopButtonText
 ---@field OverpopNoButtonType EOverpopButtonText
-FGlobalShardConfig = {}
+local FGlobalShardConfig = {}
 
 
 
@@ -7350,7 +7350,7 @@ FGlobalShardConfig = {}
 ---@field XPForCP int32
 ---@field Level int8
 ---@field CommendHistories TArray<FCommendHistory>
-FGlobalShardProfile = {}
+local FGlobalShardProfile = {}
 
 
 
@@ -7358,14 +7358,14 @@ FGlobalShardProfile = {}
 ---@field Local FSpawnPoint
 ---@field Location FVector2D
 ---@field MapId EWorldConquestMapId
-FGlobalSpawnPoint = {}
+local FGlobalSpawnPoint = {}
 
 
 
 ---@class FGlobalSpawnPointMinimal
 ---@field ID uint32
 ---@field MapId EWorldConquestMapId
-FGlobalSpawnPointMinimal = {}
+local FGlobalSpawnPointMinimal = {}
 
 
 
@@ -7375,7 +7375,7 @@ FGlobalSpawnPointMinimal = {}
 ---@field GrenadeFuseTimer float
 ---@field GrenadeRangeLimit float
 ---@field ArmourDamageModifier float
-FGrenadeDynamicData = {}
+local FGrenadeDynamicData = {}
 
 
 
@@ -7384,12 +7384,12 @@ FGrenadeDynamicData = {}
 ---@field AmmoAmount int32
 ---@field YawAndPitch FVector2D
 ---@field bIsFiring boolean
-FGunnerInfo = {}
+local FGunnerInfo = {}
 
 
 
 ---@class FHUDInfo
-FHUDInfo = {}
+local FHUDInfo = {}
 
 
 ---@class FHUDStyle : FSlateWidgetStyle
@@ -7478,14 +7478,14 @@ FHUDInfo = {}
 ---@field WinResultVictorySound FSlateSound
 ---@field WinResultDefeatSound FSlateSound
 ---@field RailCouplerIcon FSlateBrush
-FHUDStyle = {}
+local FHUDStyle = {}
 
 
 
 ---@class FHelpToolTipStyle
 ---@field Button FButtonStyle
 ---@field BackgroundImage FSlateBrush
-FHelpToolTipStyle = {}
+local FHelpToolTipStyle = {}
 
 
 
@@ -7496,14 +7496,14 @@ FHelpToolTipStyle = {}
 ---@field HitFromDirection FVector_NetQuantizeNormal
 ---@field PhysMaterial TWeakObjectPtr<UPhysicalMaterial>
 ---@field Damage float
-FHitNotify = {}
+local FHitNotify = {}
 
 
 
 ---@class FHornData
 ---@field Sound USoundCue
 ---@field CooldownSeconds float
-FHornData = {}
+local FHornData = {}
 
 
 
@@ -7511,12 +7511,12 @@ FHornData = {}
 ---@field UnoccupiedBedImage FSlateBrush
 ---@field OccupiedBedImage FSlateBrush
 ---@field BedFillImage FSlateBrush
-FHospitalStyle = {}
+local FHospitalStyle = {}
 
 
 
 ---@class FIconInfo
-FIconInfo = {}
+local FIconInfo = {}
 
 
 ---@class FIconsStyle
@@ -7547,14 +7547,14 @@ FIconInfo = {}
 ---@field CratesSubCategory FSlateBrush
 ---@field WeaponsStructures FSlateBrush
 ---@field Reservable FSlateBrush
-FIconsStyle = {}
+local FIconsStyle = {}
 
 
 
 ---@class FIdleAnimation
 ---@field ActivityMontage UAnimMontage
 ---@field Conditions FCharacterConditions
-FIdleAnimation = {}
+local FIdleAnimation = {}
 
 
 
@@ -7565,14 +7565,14 @@ FIdleAnimation = {}
 ---@field Decal FDecalData
 ---@field bOrientToHitDirection boolean
 ---@field DamageThreshold float
-FImpactEffectOverride = {}
+local FImpactEffectOverride = {}
 
 
 
 ---@class FInfrastructureStyle
 ---@field Icon FSlateBrush
 ---@field Name FText
-FInfrastructureStyle = {}
+local FInfrastructureStyle = {}
 
 
 
@@ -7581,33 +7581,33 @@ FInfrastructureStyle = {}
 ---@field Items FTechTreeComponentUIItem
 ---@field VoteBrush FSlateBrush
 ---@field ActivityBonusButton FButtonStyle
-FInfrastructuresStyle = {}
+local FInfrastructuresStyle = {}
 
 
 
 ---@class FInitialCharacterState
 ---@field ItemInstances TArray<FItemInstance>
-FInitialCharacterState = {}
+local FInitialCharacterState = {}
 
 
 
 ---@class FInputAction
 ---@field Name FText
 ---@field Category EInputActionCategory
-FInputAction = {}
+local FInputAction = {}
 
 
 
 ---@class FInputActions
 ---@field Actions TMap<FName, FInputAction>
-FInputActions = {}
+local FInputActions = {}
 
 
 
 ---@class FInputStyle
 ---@field PageUp FSlateBrush
 ---@field PageDown FSlateBrush
-FInputStyle = {}
+local FInputStyle = {}
 
 
 
@@ -7615,7 +7615,7 @@ FInputStyle = {}
 ---@field LadderIcon FSlateBrush
 ---@field ServerTravelPortalIcon FSlateBrush
 ---@field ReadableSignIcon FSlateBrush
-FInteractContextMenuStyle = {}
+local FInteractContextMenuStyle = {}
 
 
 
@@ -7624,7 +7624,7 @@ FInteractContextMenuStyle = {}
 ---@field LowEncumbranceColor FLinearColor
 ---@field MediumEncumbranceColor FLinearColor
 ---@field HighEncumbranceColor FLinearColor
-FInventoryStyle = {}
+local FInventoryStyle = {}
 
 
 
@@ -7636,7 +7636,7 @@ FInventoryStyle = {}
 ---@field InviterFactionId int8
 ---@field RegimentName FString
 ---@field RegimentTag FString
-FInviteToRegimentMessage = {}
+local FInviteToRegimentMessage = {}
 
 
 
@@ -7647,7 +7647,7 @@ FInviteToRegimentMessage = {}
 ---@field SingleRetrieveTime float
 ---@field CrateRetrieveTime float
 ---@field ResearchLevel int32
-FItemDynamicData = {}
+local FItemDynamicData = {}
 
 
 
@@ -7657,7 +7657,7 @@ FItemDynamicData = {}
 ---@field MeshesAlongX int32
 ---@field MeshesAlongY int32
 ---@field MeshOffset FVector
-FItemGroupLayer = {}
+local FItemGroupLayer = {}
 
 
 
@@ -7680,14 +7680,14 @@ FItemGroupLayer = {}
 ---@field LocalRotation FVector
 ---@field LocalScale float
 ---@field bIgnoreGenerateLayoutData boolean
-FItemGroupRenderLayout = {}
+local FItemGroupRenderLayout = {}
 
 
 
 ---@class FItemHolderData
 ---@field Component UItemHolderComponent
 ---@field Items TArray<FItemInstance>
-FItemHolderData = {}
+local FItemHolderData = {}
 
 
 
@@ -7698,7 +7698,7 @@ FItemHolderData = {}
 ---@field StackSize int8
 ---@field Payload uint16
 ---@field HolderId uint16
-FItemInstance = {}
+local FItemInstance = {}
 
 
 
@@ -7712,7 +7712,7 @@ FItemInstance = {}
 ---@field StackTransferLimit int32
 ---@field RetrieveQuantity int32
 ---@field ReserveStockpileMaxQuantity int32
-FItemProfileData = {}
+local FItemProfileData = {}
 
 
 
@@ -7720,7 +7720,7 @@ FItemProfileData = {}
 ---@field CodeName FName
 ---@field ExtraCodeNames TSet<FName>
 ---@field StackLimit int32
-FItemSlotFilter = {}
+local FItemSlotFilter = {}
 
 
 
@@ -7734,7 +7734,7 @@ FItemSlotFilter = {}
 ---@field CornerWidgetPadding float
 ---@field SlotFilterBrush FSlateBrush
 ---@field MultiSlotFilterBrush FSlateBrush
-FItemStyle = {}
+local FItemStyle = {}
 
 
 
@@ -7743,14 +7743,14 @@ FItemStyle = {}
 ---@field SecondaryHudSize float
 ---@field Padding float
 ---@field IconColour FSlateColor
-FItemSubtypeStyle = {}
+local FItemSubtypeStyle = {}
 
 
 
 ---@class FJoinSquadRequestMessage
 ---@field JoinMessage FJoinSquadWarMessage
 ---@field LeaderOnlineID FString
-FJoinSquadRequestMessage = {}
+local FJoinSquadRequestMessage = {}
 
 
 
@@ -7758,12 +7758,12 @@ FJoinSquadRequestMessage = {}
 ---@field SquadId int32
 ---@field NewMember FSquadMember
 ---@field NewMemberRegimentTag FString
-FJoinSquadWarMessage = {}
+local FJoinSquadWarMessage = {}
 
 
 
 ---@class FLandscapeDeformationTickFunction : FTickFunction
-FLandscapeDeformationTickFunction = {}
+local FLandscapeDeformationTickFunction = {}
 
 
 ---@class FLargeShipGunnerInfo
@@ -7772,7 +7772,7 @@ FLandscapeDeformationTickFunction = {}
 ---@field bIsFiring boolean
 ---@field AmmoAmount int32
 ---@field AmmoName FName
-FLargeShipGunnerInfo = {}
+local FLargeShipGunnerInfo = {}
 
 
 
@@ -7781,7 +7781,7 @@ FLargeShipGunnerInfo = {}
 ---@field RelativeEndX float
 ---@field Offset float
 ---@field Side ELeakOffsetRangeSide
-FLeakOffsetRange = {}
+local FLeakOffsetRange = {}
 
 
 
@@ -7790,37 +7790,37 @@ FLeakOffsetRange = {}
 ---@field Amount float
 ---@field bIsTypeSet boolean
 ---@field MaxAmount float
-FLiquidTank = {}
+local FLiquidTank = {}
 
 
 
 ---@class FListViewStyle
 ---@field ListHeaderRowStyle FHeaderRowStyle
-FListViewStyle = {}
+local FListViewStyle = {}
 
 
 
 ---@class FListeningAreaDebugData
 ---@field Location FVector2D
 ---@field Radius float
-FListeningAreaDebugData = {}
+local FListeningAreaDebugData = {}
 
 
 
 ---@class FListeningAreaStyle
 ---@field RadiusBrush FSlateBrush
-FListeningAreaStyle = {}
+local FListeningAreaStyle = {}
 
 
 
 ---@class FLoSTraceHandle
-FLoSTraceHandle = {}
+local FLoSTraceHandle = {}
 
 
 ---@class FLoadoutBackpackItem
 ---@field CodeName FName
 ---@field Quantity int32
-FLoadoutBackpackItem = {}
+local FLoadoutBackpackItem = {}
 
 
 
@@ -7832,7 +7832,7 @@ FLoadoutBackpackItem = {}
 ---@field bHasUniform boolean
 ---@field bAllowPartialAssembly boolean
 ---@field bAutoSubmitStarterItems boolean
-FLoadoutData = {}
+local FLoadoutData = {}
 
 
 
@@ -7840,7 +7840,7 @@ FLoadoutData = {}
 ---@field CodeName FName
 ---@field Quantity uint8
 ---@field EquipmentSlot EEquipmentSlot
-FLoadoutEquipmentItem = {}
+local FLoadoutEquipmentItem = {}
 
 
 
@@ -7849,7 +7849,7 @@ FLoadoutEquipmentItem = {}
 ---@field LoadoutDataW TArray<FLoadoutData>
 ---@field SelectedLoadoutIndexC int32
 ---@field SelectedLoadoutIndexW int32
-FLoadoutSaveData = {}
+local FLoadoutSaveData = {}
 
 
 
@@ -7858,13 +7858,13 @@ FLoadoutSaveData = {}
 ---@field WardenImage FSlateBrush
 ---@field TitleTextColour FSlateColor
 ---@field EditButton FButtonStyle
-FLobbyStyle = {}
+local FLobbyStyle = {}
 
 
 
 ---@class FLocalModerationInfo
 ---@field LastUsedSteamID FString
-FLocalModerationInfo = {}
+local FLocalModerationInfo = {}
 
 
 
@@ -7873,7 +7873,7 @@ FLocalModerationInfo = {}
 ---@field LastWarId FString
 ---@field OfflineCharacterExpiry FDateTime
 ---@field OfflineCharacterMapId EWorldConquestMapId
-FLocalShardProfile = {}
+local FLocalShardProfile = {}
 
 
 
@@ -7882,26 +7882,26 @@ FLocalShardProfile = {}
 ---@field LastWarId FString
 ---@field OfflineCharacterExpiry int64
 ---@field OfflineCharacterMapId uint8
-FLocalShardProfileSerialized = {}
+local FLocalShardProfileSerialized = {}
 
 
 
 ---@class FLocationMeshStop
 ---@field StaticMesh UStaticMesh
-FLocationMeshStop = {}
+local FLocationMeshStop = {}
 
 
 
 ---@class FLocationSkeletalMeshStop
 ---@field SkeletalMesh USkeletalMesh
-FLocationSkeletalMeshStop = {}
+local FLocationSkeletalMeshStop = {}
 
 
 
 ---@class FLogCommsRatingChangeMessage
 ---@field OnlineID FString
 ---@field NewCondition int8
-FLogCommsRatingChangeMessage = {}
+local FLogCommsRatingChangeMessage = {}
 
 
 
@@ -7911,7 +7911,7 @@ FLogCommsRatingChangeMessage = {}
 ---@field RegimentTag FString
 ---@field CreatorOnlineID FString
 ---@field CreatorName FString
-FLogCreateRegimentRequest = {}
+local FLogCreateRegimentRequest = {}
 
 
 
@@ -7920,7 +7920,7 @@ FLogCreateRegimentRequest = {}
 ---@field SquadName FString
 ---@field CreatorOnlineID FString
 ---@field CreatorName FString
-FLogCreateSquadRequest = {}
+local FLogCreateSquadRequest = {}
 
 
 
@@ -7930,7 +7930,7 @@ FLogCreateSquadRequest = {}
 ---@field RegimentTag FString
 ---@field InstigatorOnlineId FString
 ---@field InstigatorName FString
-FLogDisbandRegimentRequest = {}
+local FLogDisbandRegimentRequest = {}
 
 
 
@@ -7944,7 +7944,7 @@ FLogDisbandRegimentRequest = {}
 ---@field OldRegimentName FString
 ---@field OldRegimentTag FString
 ---@field OldRegimentLink FString
-FLogEditRegimentRequest = {}
+local FLogEditRegimentRequest = {}
 
 
 
@@ -7955,7 +7955,7 @@ FLogEditRegimentRequest = {}
 ---@field RegimentID int32
 ---@field RegimentName FString
 ---@field Text FString
-FLogRegimentMessage = {}
+local FLogRegimentMessage = {}
 
 
 
@@ -7966,7 +7966,7 @@ FLogRegimentMessage = {}
 ---@field SquadId int32
 ---@field SquadName FString
 ---@field Text FString
-FLogSquadMessage = {}
+local FLogSquadMessage = {}
 
 
 
@@ -7975,7 +7975,7 @@ FLogSquadMessage = {}
 ---@field SubmitColor FSlateColor
 ---@field ItemColor FSlateColor
 ---@field QuantityColor FSlateColor
-FLogStyle = {}
+local FLogStyle = {}
 
 
 
@@ -7986,7 +7986,7 @@ FLogStyle = {}
 ---@field RecipientName FString
 ---@field RecipientOnlineID FString
 ---@field Text FString
-FLogWhisperMessage = {}
+local FLogWhisperMessage = {}
 
 
 
@@ -7997,7 +7997,7 @@ FLogWhisperMessage = {}
 ---@field BodyText FText
 ---@field HintText FText
 ---@field ActionNames TArray<FName>
-FLoreData = {}
+local FLoreData = {}
 
 
 
@@ -8009,7 +8009,7 @@ FLoreData = {}
 ---@field GridCoord FIntPoint
 ---@field bIsIsland boolean
 ---@field bCanOceanTravel boolean
-FMapData = {}
+local FMapData = {}
 
 
 
@@ -8020,7 +8020,7 @@ FMapData = {}
 ---@field VehicleCrates TArray<FStockpileEntry>
 ---@field Structures TArray<FStockpileEntry>
 ---@field StructureCrates TArray<FStockpileEntry>
-FMapDetailStockpileInfo = {}
+local FMapDetailStockpileInfo = {}
 
 
 
@@ -8028,7 +8028,7 @@ FMapDetailStockpileInfo = {}
 ---@field MapData float
 ---@field MapIntel float
 ---@field MapText float
-FMapElementScale = {}
+local FMapElementScale = {}
 
 
 
@@ -8045,7 +8045,7 @@ FMapElementScale = {}
 ---@field RegionZones FVector2D
 ---@field Weather FVector2D
 ---@field Railways FVector2D
-FMapElementVisibilityZoomThresholds = {}
+local FMapElementVisibilityZoomThresholds = {}
 
 
 
@@ -8064,7 +8064,7 @@ FMapElementVisibilityZoomThresholds = {}
 ---@field LetterPositionOffsetY float
 ---@field NumberPositionOffsetX float
 ---@field TextItemScale float
-FMapGridConfig = {}
+local FMapGridConfig = {}
 
 
 
@@ -8077,32 +8077,32 @@ FMapGridConfig = {}
 ---@field HalfDetectionAngle float
 ---@field SortOrder uint32
 ---@field FactionIconBrushes FSlateBrush
-FMapIconStyle = {}
+local FMapIconStyle = {}
 
 
 
 ---@class FMapIntelHistoricSnapshot
-FMapIntelHistoricSnapshot = {}
+local FMapIntelHistoricSnapshot = {}
 
 
 ---@class FMapIntelList
 ---@field MapId int8
 ---@field PackedIntelItems TArray<int64>
-FMapIntelList = {}
+local FMapIntelList = {}
 
 
 
 ---@class FMapIntelLoSRequest
-FMapIntelLoSRequest = {}
+local FMapIntelLoSRequest = {}
 
 
 ---@class FMapIntelRequest
-FMapIntelRequest = {}
+local FMapIntelRequest = {}
 
 
 ---@class FMapIntelResponse
 ---@field MapIntelLists TArray<FMapIntelList>
-FMapIntelResponse = {}
+local FMapIntelResponse = {}
 
 
 
@@ -8110,7 +8110,7 @@ FMapIntelResponse = {}
 ---@field MapId int8
 ---@field PackedColonialIntelItems TArray<int64>
 ---@field PackedWardenIntelItems TArray<int64>
-FMapIntelUpdate = {}
+local FMapIntelUpdate = {}
 
 
 
@@ -8122,7 +8122,7 @@ FMapIntelUpdate = {}
 ---@field NormalizedMapLocation FVector2D
 ---@field bStructureWasAttackedRecently boolean
 ---@field ListeningTeamID uint8
-FMapIntelligenceItem = {}
+local FMapIntelligenceItem = {}
 
 
 
@@ -8132,14 +8132,14 @@ FMapIntelligenceItem = {}
 ---@field ExpirySeconds float
 ---@field FactionIconBrush FMapIntelligenceTypeIcon
 ---@field bRequiresPlayerLineOfSight boolean
-FMapIntelligenceTypeConfig = {}
+local FMapIntelligenceTypeConfig = {}
 
 
 
 ---@class FMapIntelligenceTypeIcon
 ---@field IconBrush FSlateBrush
 ---@field FadedIconBrush FSlateBrush
-FMapIntelligenceTypeIcon = {}
+local FMapIntelligenceTypeIcon = {}
 
 
 
@@ -8152,7 +8152,7 @@ FMapIntelligenceTypeIcon = {}
 ---@field Flags uint8
 ---@field NormalizedLocation FVector2D
 ---@field ViewDirection uint8
-FMapItem = {}
+local FMapItem = {}
 
 
 
@@ -8163,14 +8163,14 @@ FMapItem = {}
 ---@field StockpileInfo FMapDetailStockpileInfo
 ---@field ReserveStockpileInfoList TArray<FReserveStockpileMapDetailInfo>
 ---@field Values TArray<uint8>
-FMapItemDetails = {}
+local FMapItemDetails = {}
 
 
 
 ---@class FMapItemInfo
 ---@field CodeName FName
 ---@field DetailValue int16
-FMapItemInfo = {}
+local FMapItemInfo = {}
 
 
 
@@ -8184,7 +8184,7 @@ FMapItemInfo = {}
 ---@field OutpostBrush FSlateBrush
 ---@field FieldHospitalBrush FSlateBrush
 ---@field FacilityBrush FSlateBrush
-FMapLegendFactionStyle = {}
+local FMapLegendFactionStyle = {}
 
 
 
@@ -8193,7 +8193,7 @@ FMapLegendFactionStyle = {}
 ---@field VisibleIntelC uint16
 ---@field VisibleIntelW uint16
 ---@field VisibleIcons uint8
-FMapLegendFilter = {}
+local FMapLegendFilter = {}
 
 
 
@@ -8201,7 +8201,7 @@ FMapLegendFilter = {}
 ---@field WinConditionBrush FSlateBrush
 ---@field Colonial FMapLegendFactionStyle
 ---@field Warden FMapLegendFactionStyle
-FMapLegendStyle = {}
+local FMapLegendStyle = {}
 
 
 
@@ -8209,7 +8209,7 @@ FMapLegendStyle = {}
 ---@field Flags uint16
 ---@field SummedItems TArray<FMapPostItemEntry>
 ---@field MapItemInfos TArray<FMapItemInfo>
-FMapPostDetails = {}
+local FMapPostDetails = {}
 
 
 
@@ -8217,25 +8217,25 @@ FMapPostDetails = {}
 ---@field Member FMapPostMember
 ---@field Text FString
 ---@field UnixTimeStamp int64
-FMapPostEntry = {}
+local FMapPostEntry = {}
 
 
 
 ---@class FMapPostItemEntry
 ---@field CodeName FName
 ---@field Quantity int32
-FMapPostItemEntry = {}
+local FMapPostItemEntry = {}
 
 
 
 ---@class FMapPostManager
-FMapPostManager = {}
+local FMapPostManager = {}
 
 
 ---@class FMapPostMember
 ---@field OnlineID FString
 ---@field Name FString
-FMapPostMember = {}
+local FMapPostMember = {}
 
 
 
@@ -8244,20 +8244,20 @@ FMapPostMember = {}
 ---@field MapId int8
 ---@field FacilityMapPostType int8
 ---@field NormalizedMapCoords FVector2D
-FMapPostQueryData = {}
+local FMapPostQueryData = {}
 
 
 
 ---@class FMapPostReplyRequest
 ---@field OriginalPosterOnlineId FString
 ---@field ReplyText FString
-FMapPostReplyRequest = {}
+local FMapPostReplyRequest = {}
 
 
 
 ---@class FMapPostReplyResponse
 ---@field bSuccess boolean
-FMapPostReplyResponse = {}
+local FMapPostReplyResponse = {}
 
 
 
@@ -8267,7 +8267,7 @@ FMapPostReplyResponse = {}
 ---@field RequesterFactionID EFactionId
 ---@field RequesterOnlineID FString
 ---@field Requester FUObjectHandle
-FMapPostRequest = {}
+local FMapPostRequest = {}
 
 
 
@@ -8277,7 +8277,7 @@ FMapPostRequest = {}
 ---@field RequesterFactionID EFactionId
 ---@field RequesterOnlineID FString
 ---@field Requester FUObjectHandle
-FMapPostResponse = {}
+local FMapPostResponse = {}
 
 
 
@@ -8298,20 +8298,20 @@ FMapPostResponse = {}
 ---@field BackgroundImage FSlateBrush
 ---@field ContentBackgroundImage FSlateBrush
 ---@field FacilityPostMapIcons FSlateBrush
-FMapPostStyle = {}
+local FMapPostStyle = {}
 
 
 
 ---@class FMapPostVoteRequest
 ---@field OriginalPosterOnlineId FString
 ---@field VoteType EMapPostVoteType
-FMapPostVoteRequest = {}
+local FMapPostVoteRequest = {}
 
 
 
 ---@class FMapPostVoteResponse
 ---@field bSuccess boolean
-FMapPostVoteResponse = {}
+local FMapPostVoteResponse = {}
 
 
 
@@ -8319,7 +8319,7 @@ FMapPostVoteResponse = {}
 ---@field FactionId int8
 ---@field MapId int8
 ---@field Lines TArray<FMapRailwayLine>
-FMapRailwayFactionMessage = {}
+local FMapRailwayFactionMessage = {}
 
 
 
@@ -8329,7 +8329,7 @@ FMapRailwayFactionMessage = {}
 ---@field P2 FVector2D
 ---@field P3 FVector2D
 ---@field P4 FVector2D
-FMapRailwayLine = {}
+local FMapRailwayLine = {}
 
 
 
@@ -8337,29 +8337,29 @@ FMapRailwayLine = {}
 ---@field MapId int8
 ---@field Version int32
 ---@field Lines TArray<FMapRailwayLine>
-FMapRailwayMessage = {}
+local FMapRailwayMessage = {}
 
 
 
 ---@class FMapRailwayRequest
-FMapRailwayRequest = {}
+local FMapRailwayRequest = {}
 
 
 ---@class FMapRailwayResponse
 ---@field Messages TArray<FMapRailwayMessage>
-FMapRailwayResponse = {}
+local FMapRailwayResponse = {}
 
 
 
 ---@class FMapSnapshotDatum
 ---@field IntelCount uint32
 ---@field RequesterScouted boolean
-FMapSnapshotDatum = {}
+local FMapSnapshotDatum = {}
 
 
 
 ---@class FMapSnapshotRequest
-FMapSnapshotRequest = {}
+local FMapSnapshotRequest = {}
 
 
 ---@class FMapStyle : FSlateWidgetStyle
@@ -8395,7 +8395,7 @@ FMapSnapshotRequest = {}
 ---@field MapPostStyle FMapPostStyle
 ---@field TravelMapStyle FTravelMapStyle
 ---@field MapIconStyles FMapIconStyle
-FMapStyle = {}
+local FMapStyle = {}
 
 
 
@@ -8403,14 +8403,14 @@ FMapStyle = {}
 ---@field NormalizedLocation FVector2D
 ---@field Text FString
 ---@field MapMarkerType EMapMarkerType
-FMapTextItem = {}
+local FMapTextItem = {}
 
 
 
 ---@class FMaterialOverride
 ---@field Index int32
 ---@field Material UMaterialInstance
-FMaterialOverride = {}
+local FMaterialOverride = {}
 
 
 
@@ -8418,7 +8418,7 @@ FMaterialOverride = {}
 ---@field StaminaCostNormalized float
 ---@field Damage float
 ---@field Delay float
-FMeleeAttackData = {}
+local FMeleeAttackData = {}
 
 
 
@@ -8427,7 +8427,7 @@ FMeleeAttackData = {}
 ---@field BlockingMaxSpeedModifier float
 ---@field QuickAttack FMeleeAttackData
 ---@field LongAttack FMeleeAttackData
-FMeleeDynamicData = {}
+local FMeleeDynamicData = {}
 
 
 
@@ -8438,14 +8438,14 @@ FMeleeDynamicData = {}
 ---@field SurfaceDeltaUpperBound float
 ---@field bRequireBothSidesWithinBounds boolean
 ---@field PhysMatBlockList TArray<UPhysicalMaterial>
-FMeshConfigSurfaceSettings = {}
+local FMeshConfigSurfaceSettings = {}
 
 
 
 ---@class FMeshStop
 ---@field Threshold int32
 ---@field StaticMesh UStaticMesh
-FMeshStop = {}
+local FMeshStop = {}
 
 
 
@@ -8459,12 +8459,12 @@ FMeshStop = {}
 ---@field BanReason EBanReason
 ---@field AdminOnlineID FString
 ---@field AdminPlayerName FString
-FModBanRequest = {}
+local FModBanRequest = {}
 
 
 
 ---@class FModerationHelper
-FModerationHelper = {}
+local FModerationHelper = {}
 
 
 ---@class FModificationDefinition
@@ -8484,7 +8484,7 @@ FModerationHelper = {}
 ---@field InfrastructureAmount int32
 ---@field BuildFootprintTemplate TSubclassOf<AModificationTemplate>
 ---@field Tiers TMap<EFortTier, FModificationTier>
-FModificationDefinition = {}
+local FModificationDefinition = {}
 
 
 
@@ -8492,7 +8492,7 @@ FModificationDefinition = {}
 ---@field PreviousComponentDirection uint8
 ---@field ModificationType EFortModificationType
 ---@field SlotName FName
-FModificationSlotMigration = {}
+local FModificationSlotMigration = {}
 
 
 
@@ -8500,7 +8500,7 @@ FModificationSlotMigration = {}
 ---@field ModificationSlotComponentName FName
 ---@field ModificationType EFortModificationType
 ---@field ModificationTier EFortTier
-FModificationSocketPreviewInfo = {}
+local FModificationSocketPreviewInfo = {}
 
 
 
@@ -8512,19 +8512,19 @@ FModificationSocketPreviewInfo = {}
 ---@field TemplateActor TSubclassOf<AModificationTemplate>
 ---@field bUsePreviewMesh boolean
 ---@field PreviewMesh UStaticMesh
-FModificationTier = {}
+local FModificationTier = {}
 
 
 
 ---@class FModifiedFoliageInfo
-FModifiedFoliageInfo = {}
+local FModifiedFoliageInfo = {}
 
 
 ---@class FModifiedRegimentIdMessage
 ---@field ID int32
 ---@field FactionId int8
 ---@field OnlineID FString
-FModifiedRegimentIdMessage = {}
+local FModifiedRegimentIdMessage = {}
 
 
 
@@ -8532,26 +8532,26 @@ FModifiedRegimentIdMessage = {}
 ---@field FactionId int8
 ---@field OnlineID FString
 ---@field Records TArray<FModifiedSquadIdRecord>
-FModifiedSquadIdMessage = {}
+local FModifiedSquadIdMessage = {}
 
 
 
 ---@class FModifiedSquadIdRecord
 ---@field SquadId int32
 ---@field bIsLeader boolean
-FModifiedSquadIdRecord = {}
+local FModifiedSquadIdRecord = {}
 
 
 
 ---@class FModifiedSquadInfoMessage
 ---@field SquadInfo FSquadInfo
-FModifiedSquadInfoMessage = {}
+local FModifiedSquadInfoMessage = {}
 
 
 
 ---@class FModifiedSquadMessage
 ---@field ModifiedSquad FSquad
-FModifiedSquadMessage = {}
+local FModifiedSquadMessage = {}
 
 
 
@@ -8560,13 +8560,13 @@ FModifiedSquadMessage = {}
 ---@field CodeName FName
 ---@field Component TSubclassOf<UMountComponent>
 ---@field SkeletalMesh USkeletalMesh
-FModularMount = {}
+local FModularMount = {}
 
 
 
 ---@class FModularMounts
 ---@field Entries TArray<FModularMount>
-FModularMounts = {}
+local FModularMounts = {}
 
 
 
@@ -8598,20 +8598,20 @@ FModularMounts = {}
 ---@field ArmourDamageModifier float
 ---@field TargetStabilityReductionPerShot float
 ---@field BreachingModifier float
-FMountDynamicData = {}
+local FMountDynamicData = {}
 
 
 
 ---@class FMovementModifierData
 ---@field Stances FMovementModifierForStanceData
-FMovementModifierData = {}
+local FMovementModifierData = {}
 
 
 
 ---@class FMovementModifierForStanceData
 ---@field TurnRateScale float
 ---@field WalkingSpeedScale float
-FMovementModifierForStanceData = {}
+local FMovementModifierForStanceData = {}
 
 
 
@@ -8621,7 +8621,7 @@ FMovementModifierForStanceData = {}
 ---@field DesiredAmmoType FName
 ---@field CompatibleAmmoNames TArray<FName>
 ---@field AmmoSlotFilterAmounts TArray<int32>
-FMultiAmmo = {}
+local FMultiAmmo = {}
 
 
 
@@ -8635,7 +8635,7 @@ FMultiAmmo = {}
 ---@field Duration int32
 ---@field PowerDelta int32
 ---@field bConsumeResourceNodes boolean
-FMultiConversionInfo = {}
+local FMultiConversionInfo = {}
 
 
 
@@ -8643,38 +8643,38 @@ FMultiConversionInfo = {}
 ---@field GunnerIndex int32
 ---@field MuzzleIndex int32
 ---@field SocketName FName
-FMuzzleInfo = {}
+local FMuzzleInfo = {}
 
 
 
 ---@class FMuzzleOffsetVector_NetQuantize : FVector
-FMuzzleOffsetVector_NetQuantize = {}
+local FMuzzleOffsetVector_NetQuantize = {}
 
 
 ---@class FNamedParameterRange
 ---@field Name FName
 ---@field Start float
 ---@field End float
-FNamedParameterRange = {}
+local FNamedParameterRange = {}
 
 
 
 ---@class FNewsItemInfo
 ---@field ImageTexture UTexture2DDynamic
-FNewsItemInfo = {}
+local FNewsItemInfo = {}
 
 
 
 ---@class FOutfitMeshInfo
 ---@field OutfitMeshTable TMap<EOutfitMeshInfoType, FCharacterRenderInfo>
-FOutfitMeshInfo = {}
+local FOutfitMeshInfo = {}
 
 
 
 ---@class FOutpostInfo
 ---@field TeamId int8
 ---@field Location FVector2D_NetQuantize
-FOutpostInfo = {}
+local FOutpostInfo = {}
 
 
 
@@ -8683,7 +8683,7 @@ FOutpostInfo = {}
 ---@field IntegralSaturation float
 ---@field OutputSaturation float
 ---@field bUseValueRate boolean
-FPIDController = {}
+local FPIDController = {}
 
 
 
@@ -8692,14 +8692,14 @@ FPIDController = {}
 ---@field PackedAlpha float
 ---@field Socket TWeakObjectPtr<UBuildSocketComponent>
 ---@field CleanupHandle FTimerHandle
-FPathSocket = {}
+local FPathSocket = {}
 
 
 
 ---@class FPayloadMeshes
 ---@field GunnerIndex int32
 ---@field bUseForMuzzleTransform boolean
-FPayloadMeshes = {}
+local FPayloadMeshes = {}
 
 
 
@@ -8707,14 +8707,14 @@ FPayloadMeshes = {}
 ---@field MaterialsEffectedByImpact TArray<UPhysicalMaterial>
 ---@field ImpactedMaterial UPhysicalMaterial
 ---@field SnowMaterial UPhysicalMaterial
-FPhysicalMaterialResolver = {}
+local FPhysicalMaterialResolver = {}
 
 
 
 ---@class FPipelineSocket
 ---@field Type EPipeType
 ---@field Index uint8
-FPipelineSocket = {}
+local FPipelineSocket = {}
 
 
 
@@ -8722,7 +8722,7 @@ FPipelineSocket = {}
 ---@field CodeName FName
 ---@field Amount float
 ---@field MaxAmount float
-FPipelineSystem = {}
+local FPipelineSystem = {}
 
 
 
@@ -8742,7 +8742,7 @@ FPipelineSystem = {}
 ---@field MaterialsSubmitted int32
 ---@field MaterialsGathered int32
 ---@field SuppliesDelivered int32
-FPlayerActivity = {}
+local FPlayerActivity = {}
 
 
 
@@ -8756,7 +8756,7 @@ FPlayerActivity = {}
 ---@field bBaseRelativeVelocity boolean
 ---@field ServerMovementMode uint8
 ---@field QuantizedStagger uint8
-FPlayerAdjustment = {}
+local FPlayerAdjustment = {}
 
 
 
@@ -8764,14 +8764,14 @@ FPlayerAdjustment = {}
 ---@field BanLiftTimeUnix int64
 ---@field UnderReviewLiftTimeUnix int64
 ---@field BanReason EBanReason
-FPlayerBan = {}
+local FPlayerBan = {}
 
 
 
 ---@class FPlayerModBannedMessage
 ---@field ModBanRequest FModBanRequest
 ---@field bIsSenderServer boolean
-FPlayerModBannedMessage = {}
+local FPlayerModBannedMessage = {}
 
 
 
@@ -8781,7 +8781,7 @@ FPlayerModBannedMessage = {}
 ---@field PermissionLevel EPermissionLevel
 ---@field Name FString
 ---@field OnlineID FString
-FPlayerServerData = {}
+local FPlayerServerData = {}
 
 
 
@@ -8790,7 +8790,7 @@ FPlayerServerData = {}
 ---@field ForwardBase FGlobalSpawnPoint
 ---@field MedicalBase FGlobalSpawnPoint
 ---@field SelectedCategory ESpawnPointCategory
-FPlayerSpawnPoints = {}
+local FPlayerSpawnPoints = {}
 
 
 
@@ -8798,7 +8798,7 @@ FPlayerSpawnPoints = {}
 ---@field StaticBase FSpawnPointInfo
 ---@field ForwardBase FSpawnPointInfo
 ---@field MedicalBase FSpawnPointInfo
-FPlayerSpawnPointsInfo = {}
+local FPlayerSpawnPointsInfo = {}
 
 
 
@@ -8806,7 +8806,7 @@ FPlayerSpawnPointsInfo = {}
 ---@field VoteKickRequest FVoteKickRequest
 ---@field bIsSenderServer boolean
 ---@field BanDurationSec int64
-FPlayerVoteBannedMessage = {}
+local FPlayerVoteBannedMessage = {}
 
 
 
@@ -8823,7 +8823,7 @@ FPlayerVoteBannedMessage = {}
 ---@field RecentFriendlyStructureDamage float
 ---@field RecentFriendlyVehicleDamage float
 ---@field RecentNameChanges int16
-FPlayerVoteKickInfo = {}
+local FPlayerVoteKickInfo = {}
 
 
 
@@ -8840,7 +8840,7 @@ FPlayerVoteKickInfo = {}
 ---@field LastResourceSpawn FDateTime
 ---@field TimeInConquest float
 ---@field Activity FPlayerActivity
-FPlayerWarState = {}
+local FPlayerWarState = {}
 
 
 
@@ -8853,14 +8853,14 @@ FPlayerWarState = {}
 ---@field PowerConsumed int32
 ---@field Connections TWeakObjectPtr<AActor>
 ---@field ConnectionNames FName
-FPowerGridInfo = {}
+local FPowerGridInfo = {}
 
 
 
 ---@class FProductionResource
 ---@field ItemCodeName FName
 ---@field Quantity uint16
-FProductionResource = {}
+local FProductionResource = {}
 
 
 
@@ -8868,7 +8868,7 @@ FProductionResource = {}
 ---@field BGImage FSlateBrush
 ---@field FillImage FSlateBrush
 ---@field Button FButtonStyle
-FProgressBarButtonStyle = {}
+local FProgressBarButtonStyle = {}
 
 
 
@@ -8879,14 +8879,14 @@ FProgressBarButtonStyle = {}
 ---@field Component TWeakObjectPtr<UPrimitiveComponent>
 ---@field BoneName FName
 ---@field PhysMaterial TWeakObjectPtr<UPhysicalMaterial>
-FProjectileHitInfo_NetQuantize = {}
+local FProjectileHitInfo_NetQuantize = {}
 
 
 
 ---@class FPuddleDecalInfo
 ---@field Decal FDecalData
 ---@field RequiredPhysMats TArray<UPhysicalMaterial>
-FPuddleDecalInfo = {}
+local FPuddleDecalInfo = {}
 
 
 
@@ -8902,20 +8902,20 @@ FPuddleDecalInfo = {}
 ---@field DecalIx int8
 ---@field DevastatedDecalIx int8
 ---@field SpawnedDecalIx int8
-FPuddleInfo = {}
+local FPuddleInfo = {}
 
 
 
 ---@class FPutProfileRequest
 ---@field OnlineID FString
 ---@field WarPlayerProfileSerialized FWarPlayerProfileSerialized
-FPutProfileRequest = {}
+local FPutProfileRequest = {}
 
 
 
 ---@class FQuantizedTimestamp
 ---@field Value uint32
-FQuantizedTimestamp = {}
+local FQuantizedTimestamp = {}
 
 
 
@@ -8934,7 +8934,7 @@ FQuantizedTimestamp = {}
 ---@field CostBackgroundStyle FSlateBrush
 ---@field AccessLevelStyle FComboBoxStyle
 ---@field QueueTimerColor FSlateColor
-FQueueStyle = {}
+local FQueueStyle = {}
 
 
 
@@ -8943,7 +8943,7 @@ FQueueStyle = {}
 ---@field BeaconClient AWarBeaconClient
 ---@field TimeoutTime FDateTime
 ---@field IsConnected boolean
-FQueuedPlayer = {}
+local FQueuedPlayer = {}
 
 
 
@@ -8952,7 +8952,7 @@ FQueuedPlayer = {}
 ---@field OriginMapID EWorldConquestMapId
 ---@field RoadID uint8
 ---@field ClaimingFaction EFactionId
-FRPCBorderBaseClaimRequest = {}
+local FRPCBorderBaseClaimRequest = {}
 
 
 
@@ -8962,7 +8962,7 @@ FRPCBorderBaseClaimRequest = {}
 ---@field Response uint8
 ---@field bIsUsable boolean
 ---@field bAllowClaimOverride boolean
-FRPCBorderBaseClaimResponse = {}
+local FRPCBorderBaseClaimResponse = {}
 
 
 
@@ -8970,14 +8970,14 @@ FRPCBorderBaseClaimResponse = {}
 ---@field OriginServer EWorldConquestMapId
 ---@field InitTicks int64
 ---@field Ids TArray<int32>
-FRPCCrossRegionActorBroadcast = {}
+local FRPCCrossRegionActorBroadcast = {}
 
 
 
 ---@class FRPCCrossRegionActorRequest
 ---@field RequestingServer EWorldConquestMapId
 ---@field Ids TArray<int32>
-FRPCCrossRegionActorRequest = {}
+local FRPCCrossRegionActorRequest = {}
 
 
 
@@ -8985,7 +8985,7 @@ FRPCCrossRegionActorRequest = {}
 ---@field OriginServer EWorldConquestMapId
 ---@field NewActors TArray<FCrossRegionActorData>
 ---@field RemovedActors TArray<int32>
-FRPCCrossRegionChangelistBroadcast = {}
+local FRPCCrossRegionChangelistBroadcast = {}
 
 
 
@@ -8994,7 +8994,7 @@ FRPCCrossRegionChangelistBroadcast = {}
 ---@field FactionId EFactionId
 ---@field Radius float
 ---@field Duration float
-FRPCIntelCenterFireListeningAreaEvent = {}
+local FRPCIntelCenterFireListeningAreaEvent = {}
 
 
 
@@ -9003,7 +9003,7 @@ FRPCIntelCenterFireListeningAreaEvent = {}
 ---@field FactionId EFactionId
 ---@field ArtilleryType ELongRangeArtilleryType
 ---@field ShooterLocation FVector2D
-FRPCLRAFireShellEvent = {}
+local FRPCLRAFireShellEvent = {}
 
 
 
@@ -9013,7 +9013,7 @@ FRPCLRAFireShellEvent = {}
 ---@field RequesterOnlineID FString
 ---@field Requester FUObjectHandle
 ---@field MapItem FUObjectHandle
-FRPCMapItemRequest = {}
+local FRPCMapItemRequest = {}
 
 
 
@@ -9022,7 +9022,7 @@ FRPCMapItemRequest = {}
 ---@field Requester FUObjectHandle
 ---@field MapItem FUObjectHandle
 ---@field MapItemDetails FMapItemDetails
-FRPCMapItemResponse = {}
+local FRPCMapItemResponse = {}
 
 
 
@@ -9031,7 +9031,7 @@ FRPCMapItemResponse = {}
 ---@field MapPostID int32
 ---@field MapPostDetails FMapPostDetails
 ---@field Requester FUObjectHandle
-FRPCMapPostMessage = {}
+local FRPCMapPostMessage = {}
 
 
 
@@ -9039,7 +9039,7 @@ FRPCMapPostMessage = {}
 ---@field Origin EWorldConquestMapId
 ---@field Requester FUObjectHandle
 ---@field Faction EFactionId
-FRPCRegionZoneRequest = {}
+local FRPCRegionZoneRequest = {}
 
 
 
@@ -9047,7 +9047,7 @@ FRPCRegionZoneRequest = {}
 ---@field Origin EWorldConquestMapId
 ---@field Requester FUObjectHandle
 ---@field Data FRegionMinimalData
-FRPCRegionZoneResponse = {}
+local FRPCRegionZoneResponse = {}
 
 
 
@@ -9057,7 +9057,7 @@ FRPCRegionZoneResponse = {}
 ---@field Origin EWorldConquestMapId
 ---@field FactionId EFactionId
 ---@field LocalStrikeLocation FVector_NetQuantize
-FRPCRocketLaunchCodeRequest = {}
+local FRPCRocketLaunchCodeRequest = {}
 
 
 
@@ -9068,14 +9068,14 @@ FRPCRocketLaunchCodeRequest = {}
 ---@field TraceResult ERocketLaunchResponse
 ---@field LocalStrikeLocation FVector_NetQuantize
 ---@field Coordinate FWarGridCoordinate
-FRPCRocketLaunchCodeResponse = {}
+local FRPCRocketLaunchCodeResponse = {}
 
 
 
 ---@class FRPCRocketLaunchFail
 ---@field LaunchCodeID uint16
 ---@field Origin EWorldConquestMapId
-FRPCRocketLaunchFail = {}
+local FRPCRocketLaunchFail = {}
 
 
 
@@ -9086,7 +9086,7 @@ FRPCRocketLaunchFail = {}
 ---@field TargetMapID EWorldConquestMapId
 ---@field Coordinate FWarGridCoordinate
 ---@field LocalStrikeLocation FVector_NetQuantize
-FRPCRocketPreLaunchAlert = {}
+local FRPCRocketPreLaunchAlert = {}
 
 
 
@@ -9094,7 +9094,7 @@ FRPCRocketPreLaunchAlert = {}
 ---@field Origin EWorldConquestMapId
 ---@field FactionId EFactionId
 ---@field TargetMapID EWorldConquestMapId
-FRPCRocketPreLaunchUpdateAlert = {}
+local FRPCRocketPreLaunchUpdateAlert = {}
 
 
 
@@ -9104,7 +9104,7 @@ FRPCRocketPreLaunchUpdateAlert = {}
 ---@field FactionId EFactionId
 ---@field LocalStrikeLocation FVector_NetQuantize
 ---@field LaunchTimeRemaining float
-FRPCRocketTargetUpdate = {}
+local FRPCRocketTargetUpdate = {}
 
 
 
@@ -9113,7 +9113,7 @@ FRPCRocketTargetUpdate = {}
 ---@field FactionId EFactionId
 ---@field Info FRocketLaunchCodeInfo
 ---@field LocalStrikeLocation FVector_NetQuantize
-FRPCRocketTravel = {}
+local FRPCRocketTravel = {}
 
 
 
@@ -9123,7 +9123,7 @@ FRPCRocketTravel = {}
 ---@field WorldLocation2D FVector2D
 ---@field TargetLocalID uint8
 ---@field FactionId EFactionId
-FRPCWeatherConnectRequest = {}
+local FRPCWeatherConnectRequest = {}
 
 
 
@@ -9132,14 +9132,14 @@ FRPCWeatherConnectRequest = {}
 ---@field SenderCoordinate FWarGridCoordinate
 ---@field TargetLocalID uint8
 ---@field Result EWeatherStationResult
-FRPCWeatherConnectResponse = {}
+local FRPCWeatherConnectResponse = {}
 
 
 
 ---@class FRPCWeatherDisconnectEvent
 ---@field SenderID FWeatherStationID
 ---@field TargetLocalID uint8
-FRPCWeatherDisconnectEvent = {}
+local FRPCWeatherDisconnectEvent = {}
 
 
 
@@ -9147,7 +9147,7 @@ FRPCWeatherDisconnectEvent = {}
 ---@field SenderID FWeatherStationID
 ---@field TargetLocalID uint8
 ---@field FactionId EFactionId
-FRPCWeatherDisconnectRequest = {}
+local FRPCWeatherDisconnectRequest = {}
 
 
 
@@ -9155,7 +9155,7 @@ FRPCWeatherDisconnectRequest = {}
 ---@field SenderID FWeatherStationID
 ---@field TargetLocalID uint8
 ---@field Result EWeatherStationResult
-FRPCWeatherDisconnectResponse = {}
+local FRPCWeatherDisconnectResponse = {}
 
 
 
@@ -9170,7 +9170,7 @@ FRPCWeatherDisconnectResponse = {}
 ---@field bHasBase boolean
 ---@field bBaseRelativePosition boolean
 ---@field QuantizedMuddyness uint8
-FRWDAdjustment = {}
+local FRWDAdjustment = {}
 
 
 
@@ -9183,14 +9183,14 @@ FRWDAdjustment = {}
 ---@field CompressedMoveFlags uint8
 ---@field MovementMode uint8
 ---@field QuantizedMuddyness uint8
-FRWDMove = {}
+local FRWDMove = {}
 
 
 
 ---@class FRWDMoveBase
 ---@field MovementBase UPrimitiveComponent
 ---@field BoneName FName
-FRWDMoveBase = {}
+local FRWDMoveBase = {}
 
 
 
@@ -9199,14 +9199,14 @@ FRWDMoveBase = {}
 ---@field Timestamp float
 ---@field View uint32
 ---@field CompressedMoveFlags uint8
-FRWDMoveDual = {}
+local FRWDMoveDual = {}
 
 
 
 ---@class FRWDMoveTrailer
 ---@field Loc FVector_NetQuantize100
 ---@field MovementMode uint8
-FRWDMoveTrailer = {}
+local FRWDMoveTrailer = {}
 
 
 
@@ -9219,7 +9219,7 @@ FRWDMoveTrailer = {}
 ---@field bHasBase boolean
 ---@field bBaseRelativePosition boolean
 ---@field QuantizedMuddyness uint8
-FRWDVeryShortAdjustment = {}
+local FRWDVeryShortAdjustment = {}
 
 
 
@@ -9227,7 +9227,7 @@ FRWDVeryShortAdjustment = {}
 ---@field System UParticleSystemComponent
 ---@field OriginalYaw float
 ---@field CurrentYaw float
-FRailParticleSystem = {}
+local FRailParticleSystem = {}
 
 
 
@@ -9246,14 +9246,14 @@ FRailParticleSystem = {}
 ---@field bRearWagonToRail boolean
 ---@field bWasCollidingWithTrailer boolean
 ---@field bWasBlocked boolean
-FRailPhysicsState = {}
+local FRailPhysicsState = {}
 
 
 
 ---@class FRailSwitchState
 ---@field ID uint8
 ---@field bIsActive boolean
-FRailSwitchState = {}
+local FRailSwitchState = {}
 
 
 
@@ -9269,21 +9269,21 @@ FRailSwitchState = {}
 ---@field bCanOpenWithoutSurface boolean
 ---@field RampAngleWithNoDock float
 ---@field bRequireSandWhenNotAtDock boolean
-FRampData = {}
+local FRampData = {}
 
 
 
 ---@class FRay_NetQuantize
 ---@field Origin FVector_NetQuantize
 ---@field Direction FVector_NetQuantizeNormal
-FRay_NetQuantize = {}
+local FRay_NetQuantize = {}
 
 
 
 ---@class FReassignSquadLeaderWarMessage
 ---@field SquadId int32
 ---@field NewLeaderOnlineId FString
-FReassignSquadLeaderWarMessage = {}
+local FReassignSquadLeaderWarMessage = {}
 
 
 
@@ -9294,7 +9294,7 @@ FReassignSquadLeaderWarMessage = {}
 ---@field YieldModifier float
 ---@field MaxRefinedItemCount int32
 ---@field TransferStackSize int32
-FRefinableItemInfo = {}
+local FRefinableItemInfo = {}
 
 
 
@@ -9303,7 +9303,7 @@ FRefinableItemInfo = {}
 ---@field RefinedItemCodeName FName
 ---@field SpeedModifier float
 ---@field YieldModifier float
-FRefinableItemModifier = {}
+local FRefinableItemModifier = {}
 
 
 
@@ -9315,7 +9315,7 @@ FRefinableItemModifier = {}
 ---@field CompletedCount float
 ---@field ProgressForCurrentUnit float
 ---@field OrderOwnerFactionId EFactionId
-FRefinementOrder = {}
+local FRefinementOrder = {}
 
 
 
@@ -9323,7 +9323,7 @@ FRefinementOrder = {}
 ---@field AccessLevel ERefineryOrderAccessLevel
 ---@field OrderList TArray<FRefinementOrder>
 ---@field ExpiryTimestampTicks int64
-FRefinementOrderInfo = {}
+local FRefinementOrderInfo = {}
 
 
 
@@ -9335,7 +9335,7 @@ FRefinementOrderInfo = {}
 ---@field Link FString
 ---@field Members TArray<FRegimentMember>
 ---@field LastActiveWarId FString
-FRegiment = {}
+local FRegiment = {}
 
 
 
@@ -9343,7 +9343,7 @@ FRegiment = {}
 ---@field RegimentID int32
 ---@field TargetOnlineID FString
 ---@field DesiredTargetRole ERegimentRole
-FRegimentChangeRoleMessage = {}
+local FRegimentChangeRoleMessage = {}
 
 
 
@@ -9353,20 +9353,20 @@ FRegimentChangeRoleMessage = {}
 ---@field SenderName FString
 ---@field Message FString
 ---@field ChatLanguage int8
-FRegimentChatMessage = {}
+local FRegimentChatMessage = {}
 
 
 
 ---@class FRegimentClientReplicatedState
 ---@field ActiveRegimentList TArray<FRegiment>
-FRegimentClientReplicatedState = {}
+local FRegimentClientReplicatedState = {}
 
 
 
 ---@class FRegimentCreatedMessage
 ---@field CreatorOnlineID FString
 ---@field RegimentInfo FRegimentInfo
-FRegimentCreatedMessage = {}
+local FRegimentCreatedMessage = {}
 
 
 
@@ -9375,33 +9375,33 @@ FRegimentCreatedMessage = {}
 ---@field Name FString
 ---@field Tag FString
 ---@field Link FString
-FRegimentEditMessage = {}
+local FRegimentEditMessage = {}
 
 
 
 ---@class FRegimentFullMessage
 ---@field RegimentID int32
-FRegimentFullMessage = {}
+local FRegimentFullMessage = {}
 
 
 
 ---@class FRegimentIdChangedMessage
 ---@field OnlineID FString
 ---@field RegimentID int32
-FRegimentIdChangedMessage = {}
+local FRegimentIdChangedMessage = {}
 
 
 
 ---@class FRegimentIdClearedMessage
 ---@field OnlineID FString
-FRegimentIdClearedMessage = {}
+local FRegimentIdClearedMessage = {}
 
 
 
 ---@class FRegimentInfo
 ---@field ID int32
 ---@field Tag FString
-FRegimentInfo = {}
+local FRegimentInfo = {}
 
 
 
@@ -9409,7 +9409,7 @@ FRegimentInfo = {}
 ---@field RequestID int32
 ---@field RegimentIds TArray<int32>
 ---@field OnlineIds TArray<FString>
-FRegimentInfoRequest = {}
+local FRegimentInfoRequest = {}
 
 
 
@@ -9417,38 +9417,38 @@ FRegimentInfoRequest = {}
 ---@field RequestID int32
 ---@field RegimentInfos TArray<FRegimentInfo>
 ---@field RegimentIds TArray<int32>
-FRegimentInfoResponse = {}
+local FRegimentInfoResponse = {}
 
 
 
 ---@class FRegimentManager
-FRegimentManager = {}
+local FRegimentManager = {}
 
 
 ---@class FRegimentMember
 ---@field OnlineID FString
 ---@field PlayerName FString
 ---@field Role ERegimentRole
-FRegimentMember = {}
+local FRegimentMember = {}
 
 
 
 ---@class FRegimentMemberSquadIdMessage
 ---@field OnlineID FString
 ---@field SquadId int32
-FRegimentMemberSquadIdMessage = {}
+local FRegimentMemberSquadIdMessage = {}
 
 
 
 ---@class FRegimentMemberSquadIdsMessage
 ---@field Messages TArray<FRegimentMemberSquadIdMessage>
-FRegimentMemberSquadIdsMessage = {}
+local FRegimentMemberSquadIdsMessage = {}
 
 
 
 ---@class FRegimentMessage
 ---@field Regiment FRegiment
-FRegimentMessage = {}
+local FRegimentMessage = {}
 
 
 
@@ -9460,7 +9460,7 @@ FRegimentMessage = {}
 ---@field NewRole ERegimentRole
 ---@field NewRegimentName FString
 ---@field NewRegimentTag FString
-FRegimentNotificationMessage = {}
+local FRegimentNotificationMessage = {}
 
 
 
@@ -9468,7 +9468,7 @@ FRegimentNotificationMessage = {}
 ---@field Name FText
 ---@field Tag FText
 ---@field Link FText
-FRegimentPromptParams = {}
+local FRegimentPromptParams = {}
 
 
 
@@ -9487,7 +9487,7 @@ FRegimentPromptParams = {}
 ---@field wardenQueueSize int16
 ---@field ColonialOpenSlots int16
 ---@field WardenOpenSlots int16
-FRegionConnectionInfo = {}
+local FRegionConnectionInfo = {}
 
 
 
@@ -9495,7 +9495,7 @@ FRegionConnectionInfo = {}
 ---@field Entries TArray<FRegionLogEntry>
 ---@field NextEntryIndex int32
 ---@field NextRegionLogID uint32
-FRegionLog = {}
+local FRegionLog = {}
 
 
 
@@ -9509,20 +9509,20 @@ FRegionLog = {}
 ---@field LocationY float
 ---@field RegionLogID uint32
 ---@field CodeName FName
-FRegionLogEntry = {}
+local FRegionLogEntry = {}
 
 
 
 ---@class FRegionLogPage
 ---@field Entries TArray<FRegionLogEntry>
-FRegionLogPage = {}
+local FRegionLogPage = {}
 
 
 
 ---@class FRegionLogs
 ---@field Colonial FRegionLog
 ---@field Warden FRegionLog
-FRegionLogs = {}
+local FRegionLogs = {}
 
 
 
@@ -9534,7 +9534,7 @@ FRegionLogs = {}
 ---@field MapItemsC TArray<FMapItem>
 ---@field MapItemsW TArray<FMapItem>
 ---@field TextItems TArray<FMapTextItem>
-FRegionMapData = {}
+local FRegionMapData = {}
 
 
 
@@ -9542,32 +9542,32 @@ FRegionMapData = {}
 ---@field StarterRegionTeamID EFactionId
 ---@field ColonialStarterRegionZones TArray<FVector2D>
 ---@field WardenStarterRegionZones TArray<FVector2D>
-FRegionMinimalData = {}
+local FRegionMinimalData = {}
 
 
 
 ---@class FRegionZoneManager
-FRegionZoneManager = {}
+local FRegionZoneManager = {}
 
 
 ---@class FRemoveFromSquadWarMessage
 ---@field SquadId int32
 ---@field TargetOnlineID FString
-FRemoveFromSquadWarMessage = {}
+local FRemoveFromSquadWarMessage = {}
 
 
 
 ---@class FRemoveMemberFromRegimentMessage
 ---@field RegimentID int32
 ---@field MemberToRemoveOnlineId FString
-FRemoveMemberFromRegimentMessage = {}
+local FRemoveMemberFromRegimentMessage = {}
 
 
 
 ---@class FRenameSquadWarMessage
 ---@field SquadId int32
 ---@field NewName FString
-FRenameSquadWarMessage = {}
+local FRenameSquadWarMessage = {}
 
 
 
@@ -9583,7 +9583,7 @@ FRenameSquadWarMessage = {}
 ---@field GroupId int32
 ---@field TotalVotes int32
 ---@field Rank int32
-FRepMapPost = {}
+local FRepMapPost = {}
 
 
 
@@ -9593,7 +9593,7 @@ FRepMapPost = {}
 ---@field Amount float
 ---@field MaxAmount float
 ---@field ThroughputNormalized float
-FRepPipelineSystem = {}
+local FRepPipelineSystem = {}
 
 
 
@@ -9609,7 +9609,7 @@ FRepPipelineSystem = {}
 ---@field LocationQuantizationLevel EVectorQuantization
 ---@field VelocityQuantizationLevel EVectorQuantization
 ---@field RotationQuantizationLevel ERotatorQuantization
-FRepPlayerMovement = {}
+local FRepPlayerMovement = {}
 
 
 
@@ -9629,7 +9629,7 @@ FRepPlayerMovement = {}
 ---@field bHasTrailer boolean
 ---@field bIsForcedUpdate boolean
 ---@field TrailerMovement FRepRWDTrailerMovement
-FRepRWDMovement = {}
+local FRepRWDMovement = {}
 
 
 
@@ -9640,7 +9640,7 @@ FRepRWDMovement = {}
 ---@field RelativeLocation FVector
 ---@field Rotation FRotator
 ---@field MovementMode uint8
-FRepRWDTrailerMovement = {}
+local FRepRWDTrailerMovement = {}
 
 
 
@@ -9654,7 +9654,7 @@ FRepRWDTrailerMovement = {}
 ---@field PackedPrimaryAlpha float
 ---@field Location FVector
 ---@field Rotation FRotator
-FRepRailwayMovement = {}
+local FRepRailwayMovement = {}
 
 
 
@@ -9670,7 +9670,7 @@ FRepRailwayMovement = {}
 ---@field DivePlaneAngle float
 ---@field bStabilizerActivated boolean
 ---@field bIsForcedUpdate boolean
-FRepShipMovement = {}
+local FRepShipMovement = {}
 
 
 
@@ -9682,7 +9682,7 @@ FRepShipMovement = {}
 ---@field RotationZ float
 ---@field TargetPath USplineConnectorComponent
 ---@field PathPackedAlpha float
-FRepSnapInfo = {}
+local FRepSnapInfo = {}
 
 
 
@@ -9691,7 +9691,7 @@ FRepSnapInfo = {}
 ---@field LastUpdateClientTimeStamp float
 ---@field Acceleration int8
 ---@field bIsBoosting boolean
-FRepTrainMovement = {}
+local FRepTrainMovement = {}
 
 
 
@@ -9700,21 +9700,21 @@ FRepTrainMovement = {}
 ---@field AltPayload uint8
 ---@field Temperature uint8
 ---@field Items TArray<FStockpileEntry>
-FReplicatedShippableData = {}
+local FReplicatedShippableData = {}
 
 
 
 ---@class FRequestSquadOfficerToLeaderMessage
 ---@field SquadId int32
 ---@field OfficerOnlineId FString
-FRequestSquadOfficerToLeaderMessage = {}
+local FRequestSquadOfficerToLeaderMessage = {}
 
 
 
 ---@class FReservePower
 ---@field MaxAmount float
 ---@field Amount float
-FReservePower = {}
+local FReservePower = {}
 
 
 
@@ -9722,7 +9722,7 @@ FReservePower = {}
 ---@field ButtonStyle FButtonStyle
 ---@field ToolTipText FText
 ---@field ToolTipDescription FText
-FReserveStockpileActionStyle = {}
+local FReserveStockpileActionStyle = {}
 
 
 
@@ -9739,21 +9739,21 @@ FReserveStockpileActionStyle = {}
 ---@field VehicleCrates TArray<FStockpileEntry>
 ---@field Structures TArray<FStockpileEntry>
 ---@field StructureCrates TArray<FStockpileEntry>
-FReserveStockpileData = {}
+local FReserveStockpileData = {}
 
 
 
 ---@class FReserveStockpileFailedPassCodeInfo
 ---@field NumFailedAttempts int32
 ---@field LastAttemptTimestampTicks int64
-FReserveStockpileFailedPassCodeInfo = {}
+local FReserveStockpileFailedPassCodeInfo = {}
 
 
 
 ---@class FReserveStockpileMapDetailInfo
 ---@field StockpileName FString
 ---@field StockpileInfo FMapDetailStockpileInfo
-FReserveStockpileMapDetailInfo = {}
+local FReserveStockpileMapDetailInfo = {}
 
 
 
@@ -9765,39 +9765,39 @@ FReserveStockpileMapDetailInfo = {}
 ---@field CopyAccessCodeButtonStyle FReserveStockpileActionStyle
 ---@field ResetAccessButtonStyle FReserveStockpileActionStyle
 ---@field TabIcon FSlateBrush
-FReserveStockpileStyle = {}
+local FReserveStockpileStyle = {}
 
 
 
 ---@class FResourceAmounts
 ---@field Resource FCodeNameSmallQuantity
 ---@field OtherResources TArray<FCodeNameSmallQuantity>
-FResourceAmounts = {}
+local FResourceAmounts = {}
 
 
 
 ---@class FResourceConverter
 ---@field OrderList TArray<FRefinementOrder>
 ---@field RefinableItems TArray<FRefinableItemInfo>
-FResourceConverter = {}
+local FResourceConverter = {}
 
 
 
 ---@class FResourceRenderInfo
 ---@field CodeName FName
 ---@field StaticMesh UStaticMesh
-FResourceRenderInfo = {}
+local FResourceRenderInfo = {}
 
 
 
 ---@class FRewindContext
-FRewindContext = {}
+local FRewindContext = {}
 
 
 ---@class FRichTextFieldColor
 ---@field ID FString
 ---@field Color FLinearColor
-FRichTextFieldColor = {}
+local FRichTextFieldColor = {}
 
 
 
@@ -9806,14 +9806,14 @@ FRichTextFieldColor = {}
 ---@field LaunchCodeID uint16
 ---@field StrikeLocation FVector
 ---@field LocalStrikeLocation FVector
-FRocketLaunchCodeInfo = {}
+local FRocketLaunchCodeInfo = {}
 
 
 
 ---@class FRocketLaunchCodeRequest
 ---@field RocketFacility ARocketFacility
 ---@field LaunchCodeID uint16
-FRocketLaunchCodeRequest = {}
+local FRocketLaunchCodeRequest = {}
 
 
 
@@ -9823,7 +9823,7 @@ FRocketLaunchCodeRequest = {}
 ---@field Radius float
 ---@field AddedHeat float
 ---@field DamageType TSubclassOf<UDamageType>
-FRocketLaunchFire = {}
+local FRocketLaunchFire = {}
 
 
 
@@ -9833,13 +9833,13 @@ FRocketLaunchFire = {}
 ---@field ProgressBarFillImage FSlateBrush
 ---@field ProgressBarMarker FSlateBrush
 ---@field ToolTipTextColor FLinearColor
-FRocketSiteStyle = {}
+local FRocketSiteStyle = {}
 
 
 
 ---@class FRoomComponentSaveState
 ---@field WaterLevel float
-FRoomComponentSaveState = {}
+local FRoomComponentSaveState = {}
 
 
 
@@ -9848,7 +9848,7 @@ FRoomComponentSaveState = {}
 ---@field LargeRepairCost uint8
 ---@field LeakChance float
 ---@field FloodedMass float
-FRoomDynamicData = {}
+local FRoomDynamicData = {}
 
 
 
@@ -9862,13 +9862,13 @@ FRoomDynamicData = {}
 ---@field WaterFX TWeakObjectPtr<UParticleSystemComponent>
 ---@field AboveWaterFX TWeakObjectPtr<UParticleSystemComponent>
 ---@field LeakingSFXLoop TWeakObjectPtr<UAudioComponent>
-FRoomLeak = {}
+local FRoomLeak = {}
 
 
 
 ---@class FRoomLeakArray : FFastArraySerializer
 ---@field Items TArray<FRoomLeak>
-FRoomLeakArray = {}
+local FRoomLeakArray = {}
 
 
 
@@ -9878,14 +9878,14 @@ FRoomLeakArray = {}
 ---@field ActorClass UClass
 ---@field bIsLoadedFromMap boolean
 ---@field ByteStream TArray<uint8>
-FSavedActor = {}
+local FSavedActor = {}
 
 
 
 ---@class FSavedBallastInfo
 ---@field TargetFloodPercent float
 ---@field FloodPercent float
-FSavedBallastInfo = {}
+local FSavedBallastInfo = {}
 
 
 
@@ -9893,7 +9893,7 @@ FSavedBallastInfo = {}
 ---@field Health float
 ---@field BagItems TArray<FItemInstance>
 ---@field EquippedItems TArray<FItemInstance>
-FSavedCharacter = {}
+local FSavedCharacter = {}
 
 
 
@@ -9901,7 +9901,7 @@ FSavedCharacter = {}
 ---@field BagItems TArray<FItemInstance>
 ---@field EquippedItems TArray<FItemInstance>
 ---@field OverrideStarterGear boolean
-FSavedCharacterInventory = {}
+local FSavedCharacterInventory = {}
 
 
 
@@ -9914,14 +9914,14 @@ FSavedCharacterInventory = {}
 ---@field Muddyness float
 ---@field SavedCharacter FSavedCharacter
 ---@field ParentShipName FString
-FSavedRecoveryCharacter = {}
+local FSavedRecoveryCharacter = {}
 
 
 
 ---@class FSavedRecoveryVehicle : FSavedActor
 ---@field LastAutoSaveTimestamp FDateTime
 ---@field OriginatorBuildSiteName FString
-FSavedRecoveryVehicle = {}
+local FSavedRecoveryVehicle = {}
 
 
 
@@ -9941,7 +9941,7 @@ FSavedRecoveryVehicle = {}
 ---@field bIsReservable boolean
 ---@field TankArmour int32
 ---@field GlobalSpawnPoint FGlobalSpawnPointMinimal
-FSavedShippableData = {}
+local FSavedShippableData = {}
 
 
 
@@ -9955,7 +9955,7 @@ FSavedShippableData = {}
 ---@field RailEntryPackedAlpha float
 ---@field bRailIsTailFirst boolean
 ---@field ShipDepth float
-FSavedVehicle = {}
+local FSavedVehicle = {}
 
 
 
@@ -9965,7 +9965,7 @@ FSavedVehicle = {}
 ---@field StartTime FDateTime
 ---@field EndTime FDateTime
 ---@field IntensityCurve int8
-FScheduledWeatherState = {}
+local FScheduledWeatherState = {}
 
 
 
@@ -9977,18 +9977,18 @@ FScheduledWeatherState = {}
 ---@field MenuBorderPadding FMargin
 ---@field ItemStyle FTableRowStyle
 ---@field TextInputBoxStyle FEditableTextBoxStyle
-FSearchBarStyle = {}
+local FSearchBarStyle = {}
 
 
 
 ---@class FSecondaryHUDInfo
-FSecondaryHUDInfo = {}
+local FSecondaryHUDInfo = {}
 
 
 ---@class FSecondaryResourceWeight
 ---@field ResourcePickupType TSubclassOf<AItemPickup>
 ---@field Weight int32
-FSecondaryResourceWeight = {}
+local FSecondaryResourceWeight = {}
 
 
 
@@ -9999,7 +9999,7 @@ FSecondaryResourceWeight = {}
 ---@field QuantizedStrength uint8
 ---@field bIsIntel boolean
 ---@field ReceivedWorldTime float
-FSensorPingResponse = {}
+local FSensorPingResponse = {}
 
 
 
@@ -10008,23 +10008,23 @@ FSensorPingResponse = {}
 ---@field OriginType EServerTravelOriginType
 ---@field OriginServerType EWarServerType
 ---@field bIsBorderTravel boolean
-FServerTravelClientState = {}
+local FServerTravelClientState = {}
 
 
 
 ---@class FSessionServerState
-FSessionServerState = {}
+local FSessionServerState = {}
 
 
 ---@class FSessionWarStatus
-FSessionWarStatus = {}
+local FSessionWarStatus = {}
 
 
 ---@class FShardConfig
 ---@field PopulationCap int32
 ---@field EnabledRegions TArray<FString>
 ---@field ScheduledConquestStartTime FDateTime
-FShardConfig = {}
+local FShardConfig = {}
 
 
 
@@ -10034,7 +10034,7 @@ FShardConfig = {}
 ---@field WarId FString
 ---@field SquadMaxSize int32
 ---@field bUseCustomSignaling boolean
-FShardStatus = {}
+local FShardStatus = {}
 
 
 
@@ -10053,7 +10053,7 @@ FShardStatus = {}
 ---@field serverType int32
 ---@field openColonialSlots int16
 ---@field openWardenSlots int16
-FShardStatusServerConnectionInfo = {}
+local FShardStatusServerConnectionInfo = {}
 
 
 
@@ -10065,7 +10065,7 @@ FShardStatusServerConnectionInfo = {}
 ---@field RudderAngle float
 ---@field DivePlaneAngle float
 ---@field ServerMovementMode uint8
-FShipAdjustment = {}
+local FShipAdjustment = {}
 
 
 
@@ -10094,7 +10094,7 @@ FShipAdjustment = {}
 ---@field BallastBlowRate float
 ---@field FullyFloodedEngineForceMultiplier float
 ---@field BeachedEngineForceMultiplier float
-FShipDynamicData = {}
+local FShipDynamicData = {}
 
 
 
@@ -10104,7 +10104,7 @@ FShipDynamicData = {}
 ---@field RudderAngle float
 ---@field DivePlaneAngle float
 ---@field ServerMovementMode uint8
-FShipVeryShortAdjustment = {}
+local FShipVeryShortAdjustment = {}
 
 
 
@@ -10112,7 +10112,7 @@ FShipVeryShortAdjustment = {}
 ---@field Type EShippableType
 ---@field bAllowShippableTransfer boolean
 ---@field MaxSupportedSize EShippableType
-FShippableInfo = {}
+local FShippableInfo = {}
 
 
 
@@ -10124,45 +10124,45 @@ FShippableInfo = {}
 ---@field ContainerRope UStaticMesh
 ---@field CollisionExtents FVector
 ---@field DanglingRopeOffsetZ float
-FShippableRenderInfo = {}
+local FShippableRenderInfo = {}
 
 
 
 ---@class FSignPostVote
 ---@field VoterOnlineID FString
 ---@field bIsUpVote boolean
-FSignPostVote = {}
+local FSignPostVote = {}
 
 
 
 ---@class FSignedPayload
 ---@field Signature uint8
 ---@field Payload TArray<uint8>
-FSignedPayload = {}
+local FSignedPayload = {}
 
 
 
 ---@class FSkeletalMeshStop
 ---@field Threshold int32
 ---@field SkeletalMesh USkeletalMesh
-FSkeletalMeshStop = {}
+local FSkeletalMeshStop = {}
 
 
 
 ---@class FSnapshotManagerTickFunction : FTickFunction
-FSnapshotManagerTickFunction = {}
+local FSnapshotManagerTickFunction = {}
 
 
 ---@class FSoundClassVolume
 ---@field ClassName FString
 ---@field Value float
-FSoundClassVolume = {}
+local FSoundClassVolume = {}
 
 
 
 ---@class FSpawnPoint
 ---@field ID uint32
-FSpawnPoint = {}
+local FSpawnPoint = {}
 
 
 
@@ -10171,7 +10171,7 @@ FSpawnPoint = {}
 ---@field SpawnPointType uint8
 ---@field bIsAvailable boolean
 ---@field SpawnCharges uint16
-FSpawnPointInfo = {}
+local FSpawnPointInfo = {}
 
 
 
@@ -10181,7 +10181,7 @@ FSpawnPointInfo = {}
 ---@field SpawnPointID FSpawnPoint
 ---@field HighPrioritySpawns TArray<USpawnPointComponent>
 ---@field LowPrioritySpawn TArray<USpawnPointComponent>
-FSpawnPoints = {}
+local FSpawnPoints = {}
 
 
 
@@ -10193,20 +10193,20 @@ FSpawnPoints = {}
 ---@field OrderItems TArray<FSpecializedFactoryOrderItem>
 ---@field ProductionTimeMultiplier float
 ---@field CompleteTime float
-FSpecializedFactoryOrder = {}
+local FSpecializedFactoryOrder = {}
 
 
 
 ---@class FSpecializedFactoryOrderItem
 ---@field CodeName FName
 ---@field bIsPrototype boolean
-FSpecializedFactoryOrderItem = {}
+local FSpecializedFactoryOrderItem = {}
 
 
 
 ---@class FSpectateTarget
 ---@field PlayerState APlayerState
-FSpectateTarget = {}
+local FSpectateTarget = {}
 
 
 
@@ -10214,7 +10214,7 @@ FSpectateTarget = {}
 ---@field ComponentName FName
 ---@field RelativeTransform FTransform
 ---@field Distance float
-FSplineConnectorComponentConfig = {}
+local FSplineConnectorComponentConfig = {}
 
 
 
@@ -10269,7 +10269,7 @@ FSplineConnectorComponentConfig = {}
 ---@field bEndCapReactsToSockets boolean
 ---@field bReactToSurface boolean
 ---@field SurfaceSettings FMeshConfigSurfaceSettings
-FSplineConnectorMeshConfig = {}
+local FSplineConnectorMeshConfig = {}
 
 
 
@@ -10277,16 +10277,16 @@ FSplineConnectorMeshConfig = {}
 ---@field PointIndex int32
 ---@field MinPrevDistance float
 ---@field MinNextDistance float
-FSplineConnectorMeshConfigPoint = {}
+local FSplineConnectorMeshConfigPoint = {}
 
 
 
 ---@class FSplineConnectorMeshConfigTransient
-FSplineConnectorMeshConfigTransient = {}
+local FSplineConnectorMeshConfigTransient = {}
 
 
 ---@class FSplineConnectorTickFunction : FTickFunction
-FSplineConnectorTickFunction = {}
+local FSplineConnectorTickFunction = {}
 
 
 ---@class FSquad
@@ -10296,27 +10296,27 @@ FSplineConnectorTickFunction = {}
 ---@field Leader FSquadMember
 ---@field MemberList TArray<FSquadMember>
 ---@field InactiveMemberList TArray<FSquadMember>
-FSquad = {}
+local FSquad = {}
 
 
 
 ---@class FSquadAccessLevelChangedMessage
 ---@field SquadId int32
 ---@field AccessLevel int8
-FSquadAccessLevelChangedMessage = {}
+local FSquadAccessLevelChangedMessage = {}
 
 
 
 ---@class FSquadDeletedMessage
 ---@field SquadId int32
-FSquadDeletedMessage = {}
+local FSquadDeletedMessage = {}
 
 
 
 ---@class FSquadErrorResponse
 ---@field bSquadFull boolean
 ---@field bTooManySquads boolean
-FSquadErrorResponse = {}
+local FSquadErrorResponse = {}
 
 
 
@@ -10328,7 +10328,7 @@ FSquadErrorResponse = {}
 ---@field OnlineActiveCount int16
 ---@field OnlineInactiveCount int16
 ---@field AccessLevel int8
-FSquadInfo = {}
+local FSquadInfo = {}
 
 
 
@@ -10338,13 +10338,13 @@ FSquadInfo = {}
 ---@field LeaderMember FSquadMember
 ---@field TargetOnlineID FString
 ---@field FactionId int8
-FSquadInviteInfo = {}
+local FSquadInviteInfo = {}
 
 
 
 ---@class FSquadInviteWarMessage
 ---@field SquadInviteInfo FSquadInviteInfo
-FSquadInviteWarMessage = {}
+local FSquadInviteWarMessage = {}
 
 
 
@@ -10352,19 +10352,19 @@ FSquadInviteWarMessage = {}
 ---@field SquadId int32
 ---@field LeaderOnlineID FString
 ---@field LeaderName FString
-FSquadLeaderChangedMessage = {}
+local FSquadLeaderChangedMessage = {}
 
 
 
 ---@class FSquadManager
-FSquadManager = {}
+local FSquadManager = {}
 
 
 ---@class FSquadMember
 ---@field OnlineID FString
 ---@field Name FString
 ---@field bIsOfficer boolean
-FSquadMember = {}
+local FSquadMember = {}
 
 
 
@@ -10375,7 +10375,7 @@ FSquadMember = {}
 ---@field bIsAdd boolean
 ---@field bIsActive boolean
 ---@field bIsOfficer boolean
-FSquadMemberDeltaMessage = {}
+local FSquadMemberDeltaMessage = {}
 
 
 
@@ -10385,14 +10385,14 @@ FSquadMemberDeltaMessage = {}
 ---@field Message FString
 ---@field SquadId int32
 ---@field Language int8
-FSquadMessageMessage = {}
+local FSquadMessageMessage = {}
 
 
 
 ---@class FSquadMessageWarMessage
 ---@field Message FString
 ---@field Language int8
-FSquadMessageWarMessage = {}
+local FSquadMessageWarMessage = {}
 
 
 
@@ -10400,7 +10400,7 @@ FSquadMessageWarMessage = {}
 ---@field SquadId int32
 ---@field OnlineID FString
 ---@field bNewOfficerState boolean
-FSquadOfficerDeltaMessage = {}
+local FSquadOfficerDeltaMessage = {}
 
 
 
@@ -10408,14 +10408,14 @@ FSquadOfficerDeltaMessage = {}
 ---@field SquadId int32
 ---@field OnlineID FString
 ---@field bNewOfficerState boolean
-FSquadOfficerDeltaWarMessage = {}
+local FSquadOfficerDeltaWarMessage = {}
 
 
 
 ---@class FSquadOfficerToLeaderResponseMessage
 ---@field SquadId int32
 ---@field bRequestSuccessful boolean
-FSquadOfficerToLeaderResponseMessage = {}
+local FSquadOfficerToLeaderResponseMessage = {}
 
 
 
@@ -10423,32 +10423,32 @@ FSquadOfficerToLeaderResponseMessage = {}
 ---@field SquadId int32
 ---@field Active int16
 ---@field Inactive int16
-FSquadOnlineCounts = {}
+local FSquadOnlineCounts = {}
 
 
 
 ---@class FSquadOnlineCountsMessage
 ---@field SquadOnlineCounts TArray<FSquadOnlineCounts>
-FSquadOnlineCountsMessage = {}
+local FSquadOnlineCountsMessage = {}
 
 
 
 ---@class FSquadRemovedMessage
 ---@field SquadId int32
-FSquadRemovedMessage = {}
+local FSquadRemovedMessage = {}
 
 
 
 ---@class FSquadRenamedMessage
 ---@field SquadId int32
 ---@field Name FString
-FSquadRenamedMessage = {}
+local FSquadRenamedMessage = {}
 
 
 
 ---@class FSquadReplicatedState
 ---@field ActiveSquadIdList TArray<int32>
-FSquadReplicatedState = {}
+local FSquadReplicatedState = {}
 
 
 
@@ -10469,7 +10469,7 @@ FSquadReplicatedState = {}
 ---@field MemberNameColour FSlateColor
 ---@field InactiveMemberNameColour FSlateColor
 ---@field SquadListElementButton FButtonStyle
-FSquadStyle = {}
+local FSquadStyle = {}
 
 
 
@@ -10482,21 +10482,21 @@ FSquadStyle = {}
 ---@field AccuracyRadius float
 ---@field ExplosionClass TSubclassOf<AWarExplosionEffect>
 ---@field ShotSoundCue USoundCue
-FStaticArtilleryDamageParams = {}
+local FStaticArtilleryDamageParams = {}
 
 
 
 ---@class FStaticCheckBoxStyle
 ---@field BGImage FSlateBrush
 ---@field FGImage FSlateBrush
-FStaticCheckBoxStyle = {}
+local FStaticCheckBoxStyle = {}
 
 
 
 ---@class FStaticMeshOverride
 ---@field Target UStaticMesh
 ---@field Override UStaticMesh
-FStaticMeshOverride = {}
+local FStaticMeshOverride = {}
 
 
 
@@ -10518,12 +10518,12 @@ FStaticMeshOverride = {}
 ---@field LowHealthCriticalImage FSlateBrush
 ---@field LockedImage FSlateBrush
 ---@field UnlockedImage FSlateBrush
-FStatusStyle = {}
+local FStatusStyle = {}
 
 
 
 ---@class FStealthChecker
-FStealthChecker = {}
+local FStealthChecker = {}
 
 
 ---@class FStockpileAccessEvent
@@ -10532,7 +10532,7 @@ FStealthChecker = {}
 ---@field bIsCrate boolean
 ---@field OnlineID FString
 ---@field Name FString
-FStockpileAccessEvent = {}
+local FStockpileAccessEvent = {}
 
 
 
@@ -10542,20 +10542,20 @@ FStockpileAccessEvent = {}
 ---@field StockpiledStructure AStructure
 ---@field Submissions TArray<FStockpileEntry>
 ---@field bAreSubmissionsCrates boolean
-FStockpileBroadcastAlertInfo = {}
+local FStockpileBroadcastAlertInfo = {}
 
 
 
 ---@class FStockpileEffects
 ---@field DebuffPercent uint8
-FStockpileEffects = {}
+local FStockpileEffects = {}
 
 
 
 ---@class FStockpileEntry
 ---@field CodeName FName
 ---@field Quantity int16
-FStockpileEntry = {}
+local FStockpileEntry = {}
 
 
 
@@ -10563,21 +10563,21 @@ FStockpileEntry = {}
 ---@field ItemEvents TArray<FStockpileAccessEvent>
 ---@field VehicleEvents TArray<FStockpileAccessEvent>
 ---@field StructureEvents TArray<FStockpileAccessEvent>
-FStockpileEvents = {}
+local FStockpileEvents = {}
 
 
 
 ---@class FStockpileItemFilter
 ---@field ItemHolderSlotIndex int32
 ---@field QuantityToSubmit int32
-FStockpileItemFilter = {}
+local FStockpileItemFilter = {}
 
 
 
 ---@class FStructureBuildStep
 ---@field RequiredCodeName FName
 ---@field NextStructureCodeName FName
-FStructureBuildStep = {}
+local FStructureBuildStep = {}
 
 
 
@@ -10594,7 +10594,7 @@ FStructureBuildStep = {}
 ---@field bCanBeHarvested boolean
 ---@field IsVaultable boolean
 ---@field bIsDamagedWhileDrivingOver boolean
-FStructureDynamicData = {}
+local FStructureDynamicData = {}
 
 
 
@@ -10614,7 +10614,7 @@ FStructureDynamicData = {}
 ---@field bBypassesRapidDecayForNearbyStructures boolean
 ---@field bUsesImpactsMaterial boolean
 ---@field bIsBurnable boolean
-FStructureProfileData = {}
+local FStructureProfileData = {}
 
 
 
@@ -10633,14 +10633,14 @@ FStructureProfileData = {}
 ---@field IslandIntegrityBonus float
 ---@field Suppression float
 ---@field ShelterBonus float
-FStructureStats = {}
+local FStructureStats = {}
 
 
 
 ---@class FSubmarineDivePlane
 ---@field Pivot FVector
 ---@field Size FVector2D
-FSubmarineDivePlane = {}
+local FSubmarineDivePlane = {}
 
 
 
@@ -10648,7 +10648,7 @@ FSubmarineDivePlane = {}
 ---@field PhysicalMaterial UPhysicalMaterial
 ---@field StaminaDrainModifier float
 ---@field MovementSpeedModifier float
-FSurfaceMovementData = {}
+local FSurfaceMovementData = {}
 
 
 
@@ -10656,7 +10656,7 @@ FSurfaceMovementData = {}
 ---@field FactionId EFactionId
 ---@field ID ETechResourceID
 ---@field Amount int16
-FTechResource = {}
+local FTechResource = {}
 
 
 
@@ -10664,7 +10664,7 @@ FTechResource = {}
 ---@field Name FString
 ---@field UniqueId int32
 ---@field TechIndexToItemIndex TArray<int32>
-FTechStateDataFormat = {}
+local FTechStateDataFormat = {}
 
 
 
@@ -10672,7 +10672,7 @@ FTechStateDataFormat = {}
 ---@field TechStateID int32
 ---@field CompletedTimes TArray<int64>
 ---@field ActivityWeights TArray<float>
-FTechStateEndMessage = {}
+local FTechStateEndMessage = {}
 
 
 
@@ -10682,7 +10682,7 @@ FTechStateEndMessage = {}
 ---@field TeamId int8
 ---@field Territory int8
 ---@field bIsContested boolean
-FTechStateStartMessage = {}
+local FTechStateStartMessage = {}
 
 
 
@@ -10690,7 +10690,7 @@ FTechStateStartMessage = {}
 ---@field MapNames TArray<FString>
 ---@field TechNames TArray<FString>
 ---@field Formats TArray<FTechStateDataFormat>
-FTechStateToolData = {}
+local FTechStateToolData = {}
 
 
 
@@ -10698,20 +10698,20 @@ FTechStateToolData = {}
 ---@field TechStateID int32
 ---@field CompletedTimes TArray<int64>
 ---@field ActivityWeights TArray<float>
-FTechStateUpdateMessage = {}
+local FTechStateUpdateMessage = {}
 
 
 
 ---@class FTechTreeCategories
 ---@field Vehicles FTechTreeCategory
 ---@field Misc FTechTreeCategory
-FTechTreeCategories = {}
+local FTechTreeCategories = {}
 
 
 
 ---@class FTechTreeCategory
 ---@field Levels TArray<FTechTreeLevel>
-FTechTreeCategory = {}
+local FTechTreeCategory = {}
 
 
 
@@ -10721,21 +10721,21 @@ FTechTreeCategory = {}
 ---@field InfrastructureType EInfrastructureType
 ---@field Requirement int32
 ---@field ModRequirement int32
-FTechTreeComponentItem = {}
+local FTechTreeComponentItem = {}
 
 
 
 ---@class FTechTreeComponentItemProgress
 ---@field TechID ETechComponentID
 ---@field Amount float
-FTechTreeComponentItemProgress = {}
+local FTechTreeComponentItemProgress = {}
 
 
 
 ---@class FTechTreeComponentNetworkStatus
 ---@field ItemUnlockBits int32
 ---@field InfrastructureModCounts int32
-FTechTreeComponentNetworkStatus = {}
+local FTechTreeComponentNetworkStatus = {}
 
 
 
@@ -10745,21 +10745,21 @@ FTechTreeComponentNetworkStatus = {}
 ---@field FadedBrush FSlateBrush
 ---@field Brush FSlateBrush
 ---@field CodeNames TArray<FName>
-FTechTreeComponentUIItem = {}
+local FTechTreeComponentUIItem = {}
 
 
 
 ---@class FTechTreeComponentVotes
 ---@field StaticBaseVote EInfrastructureType
 ---@field ForwardBaseVote EInfrastructureType
-FTechTreeComponentVotes = {}
+local FTechTreeComponentVotes = {}
 
 
 
 ---@class FTechTreeItem
 ---@field CodeName FName
 ---@field TechID ETechID
-FTechTreeItem = {}
+local FTechTreeItem = {}
 
 
 
@@ -10767,7 +10767,7 @@ FTechTreeItem = {}
 ---@field BrushOverride FSlateBrush
 ---@field DisplayNameOverride FText
 ---@field DescriptionOverride FText
-FTechTreeItemInfo = {}
+local FTechTreeItemInfo = {}
 
 
 
@@ -10777,13 +10777,13 @@ FTechTreeItemInfo = {}
 ---@field TechRequired uint16
 ---@field Items TArray<FTechTreeItem>
 ---@field SecondaryItems TArray<FTechTreeItem>
-FTechTreeLevel = {}
+local FTechTreeLevel = {}
 
 
 
 ---@class FTechTreeLineStyle
 ---@field SolidColour FSlateBrush
-FTechTreeLineStyle = {}
+local FTechTreeLineStyle = {}
 
 
 
@@ -10798,7 +10798,7 @@ FTechTreeLineStyle = {}
 ---@field LevelBG FSlateBrush
 ---@field CurrentLevelBG FSlateBrush
 ---@field TechLevels FSlateBrush
-FTechTreeStyle = {}
+local FTechTreeStyle = {}
 
 
 
@@ -10816,7 +10816,7 @@ FTechTreeStyle = {}
 ---@field Italic10ptTextStyle FTextBlockStyle
 ---@field Italic12TextStyle FTextBlockStyle
 ---@field HighlightColor FLinearColor
-FTextStyles = {}
+local FTextStyles = {}
 
 
 
@@ -10827,20 +10827,20 @@ FTextStyles = {}
 ---@field YawPeneltyPct float
 ---@field DistancePeneltyPct float
 ---@field DistanceForMaxPenelty float
-FThrowingStabilityInfo = {}
+local FThrowingStabilityInfo = {}
 
 
 
 ---@class FToggleSquadPrivacyWarMessage
 ---@field SquadId int32
-FToggleSquadPrivacyWarMessage = {}
+local FToggleSquadPrivacyWarMessage = {}
 
 
 
 ---@class FTooltipDetailText
 ---@field TooltipDetailType ETooltipDetailType
 ---@field Text FText
-FTooltipDetailText = {}
+local FTooltipDetailText = {}
 
 
 
@@ -10848,19 +10848,19 @@ FTooltipDetailText = {}
 ---@field TeamId int8
 ---@field TownHallState ETownHallState
 ---@field Location FVector2D_NetQuantize
-FTownHallInfo = {}
+local FTownHallInfo = {}
 
 
 
 ---@class FTrainInfo
 ---@field Front ARailVehicle
 ---@field Back ARailVehicle
-FTrainInfo = {}
+local FTrainInfo = {}
 
 
 
 ---@class FTrainRepInfo
-FTrainRepInfo = {}
+local FTrainRepInfo = {}
 
 
 ---@class FTravelMapStyle
@@ -10873,27 +10873,27 @@ FTrainRepInfo = {}
 ---@field ReinforceActivityColor FLinearColor
 ---@field ActivityAnimationTime float
 ---@field ActivityTimeOffset float
-FTravelMapStyle = {}
+local FTravelMapStyle = {}
 
 
 
 ---@class FTreadActorInfo
 ---@field PhysicalMaterial UPhysicalMaterial
 ---@field TreadActor TSubclassOf<ADecalActor>
-FTreadActorInfo = {}
+local FTreadActorInfo = {}
 
 
 
 ---@class FTreadData
 ---@field TrackMaterialIndices int32
 ---@field TrackLength float
-FTreadData = {}
+local FTreadData = {}
 
 
 
 ---@class FTripodHeightConfig
 ---@field MaxHeight float
-FTripodHeightConfig = {}
+local FTripodHeightConfig = {}
 
 
 
@@ -10903,12 +10903,12 @@ FTripodHeightConfig = {}
 ---@field ControlsPage FControlsPage
 ---@field MiscControlsPage FControlsPage
 ---@field Arrow FSlateBrush
-FTutorialStyle = {}
+local FTutorialStyle = {}
 
 
 
 ---@class FTweakables
-FTweakables = {}
+local FTweakables = {}
 
 
 ---@class FUITargetingInfo
@@ -10924,14 +10924,14 @@ FTweakables = {}
 ---@field GroundReference FVector
 ---@field bMuzzleBlocked boolean
 ---@field bOverrideMouseAimDirection boolean
-FUITargetingInfo = {}
+local FUITargetingInfo = {}
 
 
 
 ---@class FUObjectHandle
 ---@field ObjectIndex int32
 ---@field ObjectSerialNumber int32
-FUObjectHandle = {}
+local FUObjectHandle = {}
 
 
 
@@ -10948,36 +10948,36 @@ FUObjectHandle = {}
 ---@field DamageMitigation TMap<EDamageType, FDamageMitigation>
 ---@field BleedChanceModifier float
 ---@field bAllowRegimentFriendlyFire boolean
-FUniform = {}
+local FUniform = {}
 
 
 
 ---@class FUniformRenderInfo
 ---@field Male FCharacterRenderInfo
 ---@field Female FCharacterRenderInfo
-FUniformRenderInfo = {}
+local FUniformRenderInfo = {}
 
 
 
 ---@class FVIPModeChangedMessage
 ---@field bIsVipMode boolean
-FVIPModeChangedMessage = {}
+local FVIPModeChangedMessage = {}
 
 
 
 ---@class FVector2D_Byte
 ---@field X int8
 ---@field Y int8
-FVector2D_Byte = {}
+local FVector2D_Byte = {}
 
 
 
 ---@class FVector2D_NetQuantize : FVector
-FVector2D_NetQuantize = {}
+local FVector2D_NetQuantize = {}
 
 
 ---@class FVector2D_NetQuantize10 : FVector2D
-FVector2D_NetQuantize10 = {}
+local FVector2D_NetQuantize10 = {}
 
 
 ---@class FVehicleDeploymentLogic
@@ -10990,7 +10990,7 @@ FVector2D_NetQuantize10 = {}
 ---@field MaxGroundAngleDeviation float
 ---@field HorizontalResetSpeed float
 ---@field DeploymentState EVehicleDeploymentState
-FVehicleDeploymentLogic = {}
+local FVehicleDeploymentLogic = {}
 
 
 
@@ -11023,7 +11023,7 @@ FVehicleDeploymentLogic = {}
 ---@field MinTankArmourPercent float
 ---@field TankArmourMinPenetrationChance float
 ---@field VehicleSubsystemDisableChances float
-FVehicleDynamicData = {}
+local FVehicleDynamicData = {}
 
 
 
@@ -11033,14 +11033,14 @@ FVehicleDynamicData = {}
 ---@field bIsFiring boolean
 ---@field AmmoAmount int32
 ---@field AmmoName FName
-FVehicleGunnerInfo = {}
+local FVehicleGunnerInfo = {}
 
 
 
 ---@class FVehicleMapIntelligenceProvider
 ---@field TransmitPeriodSeconds float
 ---@field DetectionRadius float
-FVehicleMapIntelligenceProvider = {}
+local FVehicleMapIntelligenceProvider = {}
 
 
 
@@ -11069,7 +11069,7 @@ FVehicleMapIntelligenceProvider = {}
 ---@field MassPerMuddyness float
 ---@field ExtinguishingDamageMultiplier float
 ---@field DamageToMuddyness float
-FVehicleMovementProfileData = {}
+local FVehicleMovementProfileData = {}
 
 
 
@@ -11085,7 +11085,7 @@ FVehicleMovementProfileData = {}
 ---@field DamageDrivingOverStructures float
 ---@field DamageDrivingOverIce float
 ---@field bIsAllowedToLoadMultiple boolean
-FVehicleProfileData = {}
+local FVehicleProfileData = {}
 
 
 
@@ -11104,12 +11104,12 @@ FVehicleProfileData = {}
 ---@field Rvd float
 ---@field Rnc int16
 ---@field Note FString
-FViolationEvent = {}
+local FViolationEvent = {}
 
 
 
 ---@class FViolationLog
-FViolationLog = {}
+local FViolationLog = {}
 
 
 ---@class FVoiceLoginInfo
@@ -11118,7 +11118,7 @@ FViolationLog = {}
 ---@field ChannelType EVoiceChannelType
 ---@field ChannelName FString
 ---@field ChannelJoinToken FString
-FVoiceLoginInfo = {}
+local FVoiceLoginInfo = {}
 
 
 
@@ -11133,18 +11133,18 @@ FVoiceLoginInfo = {}
 ---@field RecentFriendlyStructureDamage float
 ---@field RecentFriendlyVehicleDamage float
 ---@field RecentNameChanges int16
-FVoteKickRequest = {}
+local FVoteKickRequest = {}
 
 
 
 ---@class FWarAPIClient
-FWarAPIClient = {}
+local FWarAPIClient = {}
 
 
 ---@class FWarAPIRequestInfo
 ---@field LastRequestTime FDateTime
 ---@field ETag FString
-FWarAPIRequestInfo = {}
+local FWarAPIRequestInfo = {}
 
 
 
@@ -11152,14 +11152,14 @@ FWarAPIRequestInfo = {}
 ---@field DayOfWar int32
 ---@field ColonialCasualties int32
 ---@field WardenCasualties int32
-FWarAPIWarReportSummary = {}
+local FWarAPIWarReportSummary = {}
 
 
 
 ---@class FWarAchievementCompletedInfo
 ---@field Type EWarAchievementType
 ---@field FactionId EFactionId
-FWarAchievementCompletedInfo = {}
+local FWarAchievementCompletedInfo = {}
 
 
 
@@ -11168,40 +11168,40 @@ FWarAchievementCompletedInfo = {}
 ---@field Icon FSlateBrush
 ---@field DisplayName FText
 ---@field Description FText
-FWarAchievementConfig = {}
+local FWarAchievementConfig = {}
 
 
 
 ---@class FWarAchievementParamResponse
-FWarAchievementParamResponse = {}
+local FWarAchievementParamResponse = {}
 
 
 ---@class FWarAchievementProgress
 ---@field ColonialProgress TArray<float>
 ---@field WardenProgress TArray<float>
-FWarAchievementProgress = {}
+local FWarAchievementProgress = {}
 
 
 
 ---@class FWarAchievementTownNumbersResponse
-FWarAchievementTownNumbersResponse = {}
+local FWarAchievementTownNumbersResponse = {}
 
 
 ---@class FWarAchievements
-FWarAchievements = {}
+local FWarAchievements = {}
 
 
 ---@class FWarAchievementsStyle
 ---@field WarAchievementConfigList TArray<FWarAchievementConfig>
 ---@field ProgressBarFill FSlateBrush
-FWarAchievementsStyle = {}
+local FWarAchievementsStyle = {}
 
 
 
 ---@class FWarAlwaysRelevantActorInfo
 ---@field Connection UNetConnection
 ---@field LastActors TArray<AActor>
-FWarAlwaysRelevantActorInfo = {}
+local FWarAlwaysRelevantActorInfo = {}
 
 
 
@@ -11209,7 +11209,7 @@ FWarAlwaysRelevantActorInfo = {}
 ---@field NumImbalanceIterations int32
 ---@field RunningPopulationImbalancePercent float
 ---@field CurrentAbsoluteMaxPopulation int32
-FWarBalancer = {}
+local FWarBalancer = {}
 
 
 
@@ -11222,19 +11222,19 @@ FWarBalancer = {}
 ---@field bSpawnAtOfflineCharacter boolean
 ---@field TravelPoint FSpawnPoint
 ---@field DeviceID FString
-FWarBeaconJoinRequestData = {}
+local FWarBeaconJoinRequestData = {}
 
 
 
 ---@class FWarBenchmarkAlgorithmBase : FTickFunction
 ---@field SimulatedConnections TArray<USimulatedClientNetConnection>
 ---@field SimulatedControllers TArray<ASimPlayerController>
-FWarBenchmarkAlgorithmBase = {}
+local FWarBenchmarkAlgorithmBase = {}
 
 
 
 ---@class FWarBenchmarkMovementRecorderTickFunction : FTickFunction
-FWarBenchmarkMovementRecorderTickFunction = {}
+local FWarBenchmarkMovementRecorderTickFunction = {}
 
 
 ---@class FWarBlueprints
@@ -11243,7 +11243,7 @@ FWarBenchmarkMovementRecorderTickFunction = {}
 ---@field Modifications UObjectLibrary
 ---@field Structures UObjectLibrary
 ---@field Vehicles UObjectLibrary
-FWarBlueprints = {}
+local FWarBlueprints = {}
 
 
 
@@ -11252,7 +11252,7 @@ FWarBlueprints = {}
 ---@field GlobalShardConfig FGlobalShardConfig
 ---@field AvailableShardList TArray<FWarShardInfo>
 ---@field ConquestNews TArray<FString>
-FWarClientConfig = {}
+local FWarClientConfig = {}
 
 
 
@@ -11263,7 +11263,7 @@ FWarClientConfig = {}
 ---@field Package int32
 ---@field Retrieve int32
 ---@field Placement int32
-FWarDebugVariables = {}
+local FWarDebugVariables = {}
 
 
 
@@ -11272,12 +11272,12 @@ FWarDebugVariables = {}
 ---@field Number int16
 ---@field KeypadX int8
 ---@field KeypadY int8
-FWarGridCoordinate = {}
+local FWarGridCoordinate = {}
 
 
 
 ---@class FWarMapUI
-FWarMapUI = {}
+local FWarMapUI = {}
 
 
 ---@class FWarMenuStyle : FSlateWidgetStyle
@@ -11384,7 +11384,7 @@ FWarMapUI = {}
 ---@field NavigationButtonHeight float
 ---@field NavigationButtonBoxPadding FMargin
 ---@field NavigationButtonVerticalBoxPadding FMargin
-FWarMenuStyle = {}
+local FWarMenuStyle = {}
 
 
 
@@ -11394,7 +11394,7 @@ FWarMenuStyle = {}
 ---@field TestBool boolean
 ---@field TestStr FString
 ---@field TestEnum ETestEnum
-FWarMessageTest = {}
+local FWarMessageTest = {}
 
 
 
@@ -11402,7 +11402,7 @@ FWarMessageTest = {}
 ---@field Items TArray<FWarOpsItem>
 ---@field Structures TArray<FWarOpsStructure>
 ---@field Vehicles TArray<FWarOpsVehicle>
-FWarOpsContent = {}
+local FWarOpsContent = {}
 
 
 
@@ -11413,7 +11413,7 @@ FWarOpsContent = {}
 ---@field Content FWarOpsContent
 ---@field Maps TArray<FWarOpsMap>
 ---@field Techs TArray<FWarOpsTech>
-FWarOpsDataExport = {}
+local FWarOpsDataExport = {}
 
 
 
@@ -11422,7 +11422,7 @@ FWarOpsDataExport = {}
 ---@field FactionVariant EFactionId
 ---@field TechID ETechID
 ---@field bCanBePrototyped boolean
-FWarOpsItem = {}
+local FWarOpsItem = {}
 
 
 
@@ -11432,14 +11432,14 @@ FWarOpsItem = {}
 ---@field GridCoord FIntPoint
 ---@field MapMarkers TArray<FWarOpsMapMarkerInstance>
 ---@field Structures TArray<FWarOpsStructureInstance>
-FWarOpsMap = {}
+local FWarOpsMap = {}
 
 
 
 ---@class FWarOpsMapMarkerInstance
 ---@field MajorText FString
 ---@field Position FVector
-FWarOpsMapMarkerInstance = {}
+local FWarOpsMapMarkerInstance = {}
 
 
 
@@ -11449,7 +11449,7 @@ FWarOpsMapMarkerInstance = {}
 ---@field TechID ETechID
 ---@field MapIconType uint8
 ---@field bCanBePrototyped boolean
-FWarOpsStructure = {}
+local FWarOpsStructure = {}
 
 
 
@@ -11458,14 +11458,14 @@ FWarOpsStructure = {}
 ---@field Position FVector
 ---@field IncludedInLayers int32
 ---@field ExcludedByLayers int32
-FWarOpsStructureInstance = {}
+local FWarOpsStructureInstance = {}
 
 
 
 ---@class FWarOpsTech
 ---@field TechID ETechID
 ---@field CodeNames TArray<FName>
-FWarOpsTech = {}
+local FWarOpsTech = {}
 
 
 
@@ -11474,26 +11474,26 @@ FWarOpsTech = {}
 ---@field FactionVariant EFactionId
 ---@field TechID ETechID
 ---@field bCanBePrototyped boolean
-FWarOpsVehicle = {}
+local FWarOpsVehicle = {}
 
 
 
 ---@class FWarPlayerProfile
 ---@field GlobalShardProfile FGlobalShardProfile
 ---@field LocalShardProfile FLocalShardProfile
-FWarPlayerProfile = {}
+local FWarPlayerProfile = {}
 
 
 
 ---@class FWarPlayerProfileSerialized
 ---@field GlobalShardProfile FGlobalShardProfile
 ---@field LocalShardProfileSerialized FLocalShardProfileSerialized
-FWarPlayerProfileSerialized = {}
+local FWarPlayerProfileSerialized = {}
 
 
 
 ---@class FWarPropertyUtil
-FWarPropertyUtil = {}
+local FWarPropertyUtil = {}
 
 
 ---@class FWarRecord
@@ -11502,13 +11502,13 @@ FWarPropertyUtil = {}
 ---@field ColonialWarAchievementProgressList TArray<float>
 ---@field WardenWarAchievementProgressList TArray<float>
 ---@field bIsShortWar boolean
-FWarRecord = {}
+local FWarRecord = {}
 
 
 
 ---@class FWarRecordList
 ---@field WarRecordList TArray<FWarRecord>
-FWarRecordList = {}
+local FWarRecordList = {}
 
 
 
@@ -11564,7 +11564,7 @@ FWarRecordList = {}
 ---@field bIsFastBuild boolean
 ---@field AirCameraMode int32
 ---@field AirAssistMode int32
-FWarReplicatedTweakables = {}
+local FWarReplicatedTweakables = {}
 
 
 
@@ -11573,7 +11573,7 @@ FWarReplicatedTweakables = {}
 ---@field WorldLocation FVector
 ---@field GlobalCullDistance float
 ---@field ConnectionCullDistance float
-FWarReplicationGraphActorDebugInfo = {}
+local FWarReplicationGraphActorDebugInfo = {}
 
 
 
@@ -11583,7 +11583,7 @@ FWarReplicationGraphActorDebugInfo = {}
 ---@field WardenCasualties int32
 ---@field DayOfWar int32
 ---@field Version int32
-FWarReport = {}
+local FWarReport = {}
 
 
 
@@ -11591,12 +11591,12 @@ FWarReport = {}
 ---@field CasualtiesC int32
 ---@field CasualtiesW int32
 ---@field OnlineIDListOfAllPlayersJoined TSet<FString>
-FWarReporter = {}
+local FWarReporter = {}
 
 
 
 ---@class FWarRichTextStyle
-FWarRichTextStyle = {}
+local FWarRichTextStyle = {}
 
 
 ---@class FWarServerQueue
@@ -11604,13 +11604,13 @@ FWarRichTextStyle = {}
 ---@field PrioritizedQueue TArray<FQueuedPlayer>
 ---@field ModQueue TArray<FQueuedPlayer>
 ---@field ReservedList TArray<FQueuedPlayer>
-FWarServerQueue = {}
+local FWarServerQueue = {}
 
 
 
 ---@class FWarServiceReplicatedState
 ---@field SquadReplicatedState FSquadReplicatedState
-FWarServiceReplicatedState = {}
+local FWarServiceReplicatedState = {}
 
 
 
@@ -11633,7 +11633,7 @@ FWarServiceReplicatedState = {}
 ---@field NormalizedGlobalPopulation float
 ---@field DescriptionType EShardDescription
 ---@field bFactionLock boolean
-FWarShardInfo = {}
+local FWarShardInfo = {}
 
 
 
@@ -11645,13 +11645,13 @@ FWarShardInfo = {}
 ---@field Red FLinearColor
 ---@field Yellow FLinearColor
 ---@field Beige FLinearColor
-FWarStandardColour = {}
+local FWarStandardColour = {}
 
 
 
 ---@class FWarStartStyle
 ---@field FlavourImage FSlateBrush
-FWarStartStyle = {}
+local FWarStartStyle = {}
 
 
 
@@ -11660,7 +11660,7 @@ FWarStartStyle = {}
 ---@field MinTimeMargin float
 ---@field DriftAllowance float
 ---@field ResolutionRate float
-FWarTimeDiscrepancy = {}
+local FWarTimeDiscrepancy = {}
 
 
 
@@ -11994,7 +11994,7 @@ FWarTimeDiscrepancy = {}
 ---@field bUseDevVotesRequiredCount boolean
 ---@field bUseDevRestrictionDuration boolean
 ---@field bFactionLock boolean
-FWarTweakables = {}
+local FWarTweakables = {}
 
 
 
@@ -12023,7 +12023,7 @@ FWarTweakables = {}
 ---@field ArmourDamageModifier float
 ---@field TargetStabilityReductionPerShot float
 ---@field BreachingModifier float
-FWeaponDynamicData = {}
+local FWeaponDynamicData = {}
 
 
 
@@ -12035,14 +12035,14 @@ FWeaponDynamicData = {}
 ---@field StabilityFloorFromMovement float
 ---@field StabilityGainRate float
 ---@field StabilityGainRateFromCover float
-FWeaponFiringConeInfo = {}
+local FWeaponFiringConeInfo = {}
 
 
 
 ---@class FWeaponShotSFX
 ---@field FiringLoop USoundCue
 ---@field FiringStopped USoundCue
-FWeaponShotSFX = {}
+local FWeaponShotSFX = {}
 
 
 
@@ -12052,14 +12052,14 @@ FWeaponShotSFX = {}
 ---@field OffroadPenalty float
 ---@field MinVisibility float
 ---@field MaxVisibility float
-FWeatherEffects = {}
+local FWeatherEffects = {}
 
 
 
 ---@class FWeatherEffectsActorTrigger
 ---@field ActorClass TSubclassOf<AWeatherEffectsActor>
 ---@field IntensityThreshold float
-FWeatherEffectsActorTrigger = {}
+local FWeatherEffectsActorTrigger = {}
 
 
 
@@ -12073,7 +12073,7 @@ FWeatherEffectsActorTrigger = {}
 ---@field Delay int32
 ---@field Duration int32
 ---@field IntensityCurveIndex int32
-FWeatherEvent = {}
+local FWeatherEvent = {}
 
 
 
@@ -12081,7 +12081,7 @@ FWeatherEvent = {}
 ---@field MapIcon FSlateBrush
 ---@field Name FText
 ---@field Description FText
-FWeatherEventStyle = {}
+local FWeatherEventStyle = {}
 
 
 
@@ -12091,26 +12091,26 @@ FWeatherEventStyle = {}
 ---@field GridY uint16
 ---@field EnabledFlags uint32
 ---@field WorldLocationsZ TArray<float>
-FWeatherIceActorData = {}
+local FWeatherIceActorData = {}
 
 
 
 ---@class FWeatherIceMeshData
 ---@field Mesh UStaticMesh
-FWeatherIceMeshData = {}
+local FWeatherIceMeshData = {}
 
 
 
 ---@class FWeatherIceState
 ---@field Health uint16
-FWeatherIceState = {}
+local FWeatherIceState = {}
 
 
 
 ---@class FWeatherManagerState
 ---@field WorldState FWorldWeatherState
 ---@field StateTimes TArray<FScheduledWeatherState>
-FWeatherManagerState = {}
+local FWeatherManagerState = {}
 
 
 
@@ -12119,7 +12119,7 @@ FWeatherManagerState = {}
 ---@field PerWarSkipChance float
 ---@field MinPostEventsDuration int32
 ---@field MaxPostEventsDuration int32
-FWeatherPattern = {}
+local FWeatherPattern = {}
 
 
 
@@ -12134,13 +12134,13 @@ FWeatherPattern = {}
 ---@field OuterRadius float
 ---@field DryingStartTime float
 ---@field StartTime FDateTime
-FWeatherState = {}
+local FWeatherState = {}
 
 
 
 ---@class FWeatherStationGlobalMessage
 ---@field Entries TArray<FWeatherStationGlobalState>
-FWeatherStationGlobalMessage = {}
+local FWeatherStationGlobalMessage = {}
 
 
 
@@ -12148,28 +12148,28 @@ FWeatherStationGlobalMessage = {}
 ---@field GlobalID FWeatherStationIDValues
 ---@field ConnectionTo FWeatherStationIDValues
 ---@field bIsActive boolean
-FWeatherStationGlobalState = {}
+local FWeatherStationGlobalState = {}
 
 
 
 ---@class FWeatherStationID
 ---@field MapId EWorldConquestMapId
 ---@field LocalID uint8
-FWeatherStationID = {}
+local FWeatherStationID = {}
 
 
 
 ---@class FWeatherStationIDValues
 ---@field MapId int8
 ---@field LocalID int8
-FWeatherStationIDValues = {}
+local FWeatherStationIDValues = {}
 
 
 
 ---@class FWeatherStationRegionMessage
 ---@field MapId int8
 ---@field Entries TArray<FWeatherStationGlobalState>
-FWeatherStationRegionMessage = {}
+local FWeatherStationRegionMessage = {}
 
 
 
@@ -12185,7 +12185,7 @@ FWeatherStationRegionMessage = {}
 ---@field FreezingIcon FSlateBrush
 ---@field CriticalFreezingIcon FSlateBrush
 ---@field WeatherStationStatus FSlateBrush
-FWeatherStyle = {}
+local FWeatherStyle = {}
 
 
 
@@ -12196,21 +12196,21 @@ FWeatherStyle = {}
 ---@field ScorchedTownBrush FSlateBrush
 ---@field UprisingBrush FSlateBrush
 ---@field VictoryTownBrush FSlateBrush
-FWinConditionStyle = {}
+local FWinConditionStyle = {}
 
 
 
 ---@class FWindowMeshes
 ---@field Colonial UStaticMesh
 ---@field Warden UStaticMesh
-FWindowMeshes = {}
+local FWindowMeshes = {}
 
 
 
 ---@class FWorldMapRegionStyle
 ---@field Offset FVector2D
 ---@field ButtonStyle FButtonStyle
-FWorldMapRegionStyle = {}
+local FWorldMapRegionStyle = {}
 
 
 
@@ -12222,7 +12222,7 @@ FWorldMapRegionStyle = {}
 ---@field RegionFocusAlphaCurves TArray<UCurveFloat>
 ---@field RegionFocusScaleCurves TArray<UCurveFloat>
 ---@field TitleTextStyle FTextBlockStyle
-FWorldMapStyle = {}
+local FWorldMapStyle = {}
 
 
 
@@ -12231,14 +12231,14 @@ FWorldMapStyle = {}
 ---@field States TArray<FWeatherState>
 ---@field bIsWeatherVisibleC boolean
 ---@field bIsWeatherVisibleW boolean
-FWorldWeatherState = {}
+local FWorldWeatherState = {}
 
 
 
 ---@class FZombieFootPrintActorInfo
 ---@field Colonial FFootPrintActorInfo
 ---@field Warden FFootPrintActorInfo
-FZombieFootPrintActorInfo = {}
+local FZombieFootPrintActorInfo = {}
 
 
 
@@ -12250,48 +12250,48 @@ FZombieFootPrintActorInfo = {}
 ---@field SecondaryAttack EZombieSecondaryAttack
 ---@field ActivityState ECharacterActivityState
 ---@field Cooldown float
-FZombieWeaponInfo = {}
+local FZombieWeaponInfo = {}
 
 
 
 ---@class IAssignableSpawnPoint : IInterface
-IAssignableSpawnPoint = {}
+local IAssignableSpawnPoint = {}
 
 
 ---@class ICharacterInvokableInterface : IInterface
-ICharacterInvokableInterface = {}
+local ICharacterInvokableInterface = {}
 
 
 ---@class ICoalitionAssignable : IInterface
-ICoalitionAssignable = {}
+local ICoalitionAssignable = {}
 
 
 ---@class ICraneOperatorInterface : IInterface
-ICraneOperatorInterface = {}
+local ICraneOperatorInterface = {}
 
 
 ---@class IDamageableActor : IInterface
-IDamageableActor = {}
+local IDamageableActor = {}
 
 
 ---@class IDecayPreventer : IInterface
-IDecayPreventer = {}
+local IDecayPreventer = {}
 
 
 ---@class IFuelTanker : IInterface
-IFuelTanker = {}
+local IFuelTanker = {}
 
 
 ---@class IGenericActor : IInterface
-IGenericActor = {}
+local IGenericActor = {}
 
 
 ---@class IGenericInventory : IInterface
-IGenericInventory = {}
+local IGenericInventory = {}
 
 
 ---@class IGunnerSupport : IInterface
-IGunnerSupport = {}
+local IGunnerSupport = {}
 
 ---@param GunnerIndex int32
 ---@param YawAndPitch FVector2D
@@ -12352,41 +12352,41 @@ function IGunnerSupport:CanFire(GunnerIndex) end
 
 
 ---@class ILongRangeArtillerySupport : IInterface
-ILongRangeArtillerySupport = {}
+local ILongRangeArtillerySupport = {}
 
 
 ---@class IMapIntelligenceInterface : IInterface
-IMapIntelligenceInterface = {}
+local IMapIntelligenceInterface = {}
 
 
 ---@class IMaterialOverrideInterface : IInterface
-IMaterialOverrideInterface = {}
+local IMaterialOverrideInterface = {}
 
 
 ---@class IPayloadMeshGroup : IInterface
-IPayloadMeshGroup = {}
+local IPayloadMeshGroup = {}
 
 
 ---@class IPersistentActor : IInterface
-IPersistentActor = {}
+local IPersistentActor = {}
 
 
 ---@class IPowerGridNode : IInterface
-IPowerGridNode = {}
+local IPowerGridNode = {}
 
 
 ---@class ISeatSupport : IInterface
-ISeatSupport = {}
+local ISeatSupport = {}
 
 
 ---@class IWaterReloadSupport : IInterface
-IWaterReloadSupport = {}
+local IWaterReloadSupport = {}
 
 
 ---@class UAFKTimeoutComponent : UActorComponent
 ---@field TimeUntilTimeoutHours float
 ---@field LastUsageTime FDateTime
-UAFKTimeoutComponent = {}
+local UAFKTimeoutComponent = {}
 
 
 
@@ -12396,7 +12396,7 @@ UAFKTimeoutComponent = {}
 ---@field WarningShotRadius float
 ---@field bUseArtilleryTrace boolean
 ---@field AccuracyRadius float
-UAIArtilleryGunTurretComponent = {}
+local UAIArtilleryGunTurretComponent = {}
 
 
 
@@ -12405,7 +12405,7 @@ UAIArtilleryGunTurretComponent = {}
 ---@field FiringThreshold float
 ---@field DamageDelay float
 ---@field ExplosionTemplate TSubclassOf<AWarExplosionEffect>
-UAIGunTurretComponent = {}
+local UAIGunTurretComponent = {}
 
 ---@param HitResult FHitResult
 function UAIGunTurretComponent:MulticastPlayFiringFX(HitResult) end
@@ -12450,7 +12450,7 @@ function UAIGunTurretComponent:MulticastPlayFiringFX(HitResult) end
 ---@field bIsSuppressedOverride boolean
 ---@field NearbyFlares TSet<TWeakObjectPtr<AFlareExplosionEffect>>
 ---@field AITurretBlueprintCDO UAITurretComponent
-UAITurretComponent = {}
+local UAITurretComponent = {}
 
 function UAITurretComponent:OnRep_SimulatedHitNotify() end
 function UAITurretComponent:OnRep_IsEnemyObscured() end
@@ -12459,13 +12459,13 @@ function UAITurretComponent:OnRep_CurrentEnemy() end
 
 ---@class UAITurretsControllerComponent : UActorComponent
 ---@field AITurretComponents TArray<UAITurretComponent>
-UAITurretsControllerComponent = {}
+local UAITurretsControllerComponent = {}
 
 
 
 ---@class UATRifleComponent : UHitScanWeaponComponent
 ---@field bRequiresOpenVehiclePlatform boolean
-UATRifleComponent = {}
+local UATRifleComponent = {}
 
 
 
@@ -12473,13 +12473,13 @@ UATRifleComponent = {}
 ---@field Priority int8
 ---@field ItemHolderIndex int32
 ---@field StockpileIndex int32
-UAccessBoxComponent = {}
+local UAccessBoxComponent = {}
 
 
 
 ---@class UAmmoBackpackItemComponent : UMiscItemComponent
 ---@field ProvidedAmmoName FName
-UAmmoBackpackItemComponent = {}
+local UAmmoBackpackItemComponent = {}
 
 
 
@@ -12489,12 +12489,12 @@ UAmmoBackpackItemComponent = {}
 ---@field RaisedAnchorMeshComponent UStaticMeshComponent
 ---@field DroppedAnchorMeshComponent UStaticMeshComponent
 ---@field SoundComponent UAudioComponent
-UAnchorComponent = {}
+local UAnchorComponent = {}
 
 
 
 ---@class UAnchorUseComponent : UUseComponent
-UAnchorUseComponent = {}
+local UAnchorUseComponent = {}
 
 
 ---@class UArtilleryGunnerMountComponent : UMultiAmmoVehicleMountComponent
@@ -12517,7 +12517,7 @@ UAnchorUseComponent = {}
 ---@field DirectFireScopeRange float
 ---@field DirectFireMaxDistance float
 ---@field DirectFireDropOffset float
-UArtilleryGunnerMountComponent = {}
+local UArtilleryGunnerMountComponent = {}
 
 function UArtilleryGunnerMountComponent:ServerStopInvoke() end
 ---@param Pitch float
@@ -12540,14 +12540,14 @@ function UArtilleryGunnerMountComponent:MulticastPlayFiringFX(AmmoPickupCDO) end
 ---@field FiringActivityStateInfoSemiMode FActivityStateInfo
 ---@field SingleShotScopeRange float
 ---@field bIsInSingleShotMode boolean
-UAssaultRifleComponent = {}
+local UAssaultRifleComponent = {}
 
 function UAssaultRifleComponent:ServerToggleFireMode() end
 
 
 ---@class UAssemblyAreaAnimInstance : UAnimInstance
 ---@field AssemblyAreaState EAssemblyAreaState
-UAssemblyAreaAnimInstance = {}
+local UAssemblyAreaAnimInstance = {}
 
 
 
@@ -12572,7 +12572,7 @@ UAssemblyAreaAnimInstance = {}
 ---@field GeneralAnimationSFX UWarAudioComponent
 ---@field WaterState EAssemblyAreaWaterState
 ---@field WaterLevel uint8
-UAssemblyAreaComponent = {}
+local UAssemblyAreaComponent = {}
 
 function UAssemblyAreaComponent:OnRep_WaterState() end
 function UAssemblyAreaComponent:OnRep_WaterLevel() end
@@ -12580,21 +12580,21 @@ function UAssemblyAreaComponent:OnRep_WaterLevel() end
 
 ---@class UAssemblyStationAnimInstance : UAnimInstance
 ---@field bIsActive boolean
-UAssemblyStationAnimInstance = {}
+local UAssemblyStationAnimInstance = {}
 
 
 
 ---@class UBadWordFilter : UObject
 ---@field RegularMatch FString
 ---@field ExactMatch FString
-UBadWordFilter = {}
+local UBadWordFilter = {}
 
 
 
 ---@class UBallastMountComponent : UMountComponent
 ---@field BallastType EBallastType
 ---@field TargetFloodPercent float
-UBallastMountComponent = {}
+local UBallastMountComponent = {}
 
 ---@param InTargetFloodPercent float
 function UBallastMountComponent:ServerSetTargetFloodPercent(InTargetFloodPercent) end
@@ -12604,7 +12604,7 @@ function UBallastMountComponent:ServerSetTargetFloodPercent(InTargetFloodPercent
 ---@field BandagesMesh USkeletalMesh
 ---@field BanadagesSoundCue USoundCue
 ---@field bIsEquipped boolean
-UBandagesComponent = {}
+local UBandagesComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function UBandagesComponent:ServerUseBandages(ActivityStateChange) end
@@ -12613,12 +12613,12 @@ function UBandagesComponent:OnRep_IsEquipped() end
 
 ---@class UBannerAnimInstance : UAnimInstance
 ---@field WindSpeedNormalized float
-UBannerAnimInstance = {}
+local UBannerAnimInstance = {}
 
 
 
 ---@class UBarbedWireComponent : UBoxComponent
-UBarbedWireComponent = {}
+local UBarbedWireComponent = {}
 
 
 ---@class UBargeAnimInstance : USimVehicleAnimInstance
@@ -12627,19 +12627,19 @@ UBarbedWireComponent = {}
 ---@field PropellerSpeed float
 ---@field PropellerAnimIndex int32
 ---@field DockState EDockedState
-UBargeAnimInstance = {}
+local UBargeAnimInstance = {}
 
 
 
 ---@class UBaseWidgetStyle : USlateWidgetStyleContainerBase
 ---@field WidgetStyle FBaseStyle
-UBaseWidgetStyle = {}
+local UBaseWidgetStyle = {}
 
 
 
 ---@class UBicycleAnimInstance : USimVehicleAnimInstance
 ---@field bIsInUse boolean
-UBicycleAnimInstance = {}
+local UBicycleAnimInstance = {}
 
 
 
@@ -12647,7 +12647,7 @@ UBicycleAnimInstance = {}
 ---@field CameraArmLengthCurve UCurveFloat
 ---@field SkeletalMesh USkeletalMesh
 ---@field bIsEquipped boolean
-UBinocularsItemComponent = {}
+local UBinocularsItemComponent = {}
 
 ---@param IsStartScope boolean
 ---@param ActivityStateChange FActivityStateChange
@@ -12656,15 +12656,15 @@ function UBinocularsItemComponent:OnRep_IsEquipped() end
 
 
 ---@class UBoatHullComponent : UBoxComponent
-UBoatHullComponent = {}
+local UBoatHullComponent = {}
 
 
 ---@class UBoatHullMeshComponent : UStaticMeshComponent
-UBoatHullMeshComponent = {}
+local UBoatHullMeshComponent = {}
 
 
 ---@class UBorderBaseManager : UObject
-UBorderBaseManager = {}
+local UBorderBaseManager = {}
 
 
 ---@class UBuildArmAnimInstance : UAnimInstance
@@ -12683,13 +12683,13 @@ UBorderBaseManager = {}
 ---@field PulleyLength float
 ---@field Yaw float
 ---@field SideDistance float
-UBuildArmAnimInstance = {}
+local UBuildArmAnimInstance = {}
 
 
 
 ---@class UBuildFootprintBoxComponent : UBoxComponent
 ---@field Info FBuildFootprintInfo
-UBuildFootprintBoxComponent = {}
+local UBuildFootprintBoxComponent = {}
 
 
 
@@ -12720,7 +12720,7 @@ UBuildFootprintBoxComponent = {}
 ---@field bOnlyTestMinimumPathSeparationOnUnconnected boolean
 ---@field bAllowRotatedPlacement boolean
 ---@field bIgnoreOwnerConnectedActorsWhenSnapped boolean
-UBuildSocketComponent = {}
+local UBuildSocketComponent = {}
 
 
 
@@ -12736,19 +12736,19 @@ UBuildSocketComponent = {}
 ---@field InteractionVolume UBoxComponent
 ---@field ObstructionVolume UBoxComponent
 ---@field WaterSpreadFXInstance UParticleSystemComponent
-UBulkheadDoor = {}
+local UBulkheadDoor = {}
 
 function UBulkheadDoor:OnRep_DoorState() end
 
 
 ---@class UBulkheadDoorAnimInstance : UAnimInstance
 ---@field DoorState EDynamicState
-UBulkheadDoorAnimInstance = {}
+local UBulkheadDoorAnimInstance = {}
 
 
 
 ---@class UBulkheadDoorUseComponent : UUseComponent
-UBulkheadDoorUseComponent = {}
+local UBulkheadDoorUseComponent = {}
 
 
 ---@class UCalloutComponent : UActorComponent
@@ -12756,7 +12756,7 @@ UBulkheadDoorUseComponent = {}
 ---@field CalloutMarkerGhostClass TSubclassOf<ACalloutMarkerGhost>
 ---@field CalloutMarkerClass TSubclassOf<ACalloutMarker>
 ---@field WorldCalloutInfoList TArray<FCalloutInfo>
-UCalloutComponent = {}
+local UCalloutComponent = {}
 
 
 
@@ -12795,7 +12795,7 @@ UCalloutComponent = {}
 ---@field bHasRightHandIK boolean
 ---@field LeftHandIKTransform FTransform
 ---@field RightHandIKTransform FTransform
-UCharacterAnimInstance = {}
+local UCharacterAnimInstance = {}
 
 ---@param ActivityState ECharacterActivityState
 ---@return float
@@ -12814,14 +12814,14 @@ function UCharacterAnimInstance:AnimNotify_FootFallL(Notify) end
 
 
 ---@class UClientConfigManager : UObject
-UClientConfigManager = {}
+local UClientConfigManager = {}
 
 
 ---@class UClientStreamingManager : UObject
 ---@field StreamingCheckInterval float
 ---@field CullDistance float
 ---@field StreamingLevels TArray<ULevelStreamingHex>
-UClientStreamingManager = {}
+local UClientStreamingManager = {}
 
 ---@param LevelStreaming ULevelStreamingHex
 function UClientStreamingManager:OnLevelUnloaded(LevelStreaming) end
@@ -12835,14 +12835,14 @@ function UClientStreamingManager:OnLevelHidden(LevelStreaming) end
 
 ---@class UCoastalGunAnimInstance : UAnimInstance
 ---@field TrackingAngle float
-UCoastalGunAnimInstance = {}
+local UCoastalGunAnimInstance = {}
 
 
 
 ---@class UConnectionRulesComponent : UActorComponent
 ---@field Rules TArray<FConnectionRule>
 ---@field DefaultRule FConnectionRule
-UConnectionRulesComponent = {}
+local UConnectionRulesComponent = {}
 
 
 
@@ -12852,13 +12852,13 @@ UConnectionRulesComponent = {}
 ---@field Yaw float
 ---@field HorizontalDistance float
 ---@field VerticalDistance float
-UConstructionEquipmentAnimInstance = {}
+local UConstructionEquipmentAnimInstance = {}
 
 
 
 ---@class UConstructionGunnerComponent : UMountComponent
 ---@field bSupportsAdvancedConstruction boolean
-UConstructionGunnerComponent = {}
+local UConstructionGunnerComponent = {}
 
 
 
@@ -12867,7 +12867,7 @@ UConstructionGunnerComponent = {}
 ---@field RightTreadPlayrate float
 ---@field CabinYaw float
 ---@field bIsDoingWork boolean
-UConstructionVehicleAnimInstance = {}
+local UConstructionVehicleAnimInstance = {}
 
 
 
@@ -12886,7 +12886,7 @@ UConstructionVehicleAnimInstance = {}
 ---@field RelevantShippableTarget AActor
 ---@field SavedData FSavedShippableData
 ---@field DynamicMeshComponent UMeshComponent
-UCraneComponent = {}
+local UCraneComponent = {}
 
 ---@param HookRotation float
 function UCraneComponent:ServerUpdateHookRotation(HookRotation) end
@@ -12927,12 +12927,12 @@ function UCraneComponent:ClientShowShippableStatus(Status) end
 ---@field PulleyLength float
 ---@field bIsDestroyed boolean
 ---@field bIsEmplaced boolean
-UCraneComponentAnimInstance = {}
+local UCraneComponentAnimInstance = {}
 
 
 
 ---@class UCraneOperatorComponent : UMountComponent
-UCraneOperatorComponent = {}
+local UCraneOperatorComponent = {}
 
 ---@param HookRotation float
 function UCraneOperatorComponent:ServerUpdateHookRotation(HookRotation) end
@@ -12957,40 +12957,40 @@ function UCraneOperatorComponent:ClientShowShippableStatus(Status) end
 ---@field Crane AStructure
 ---@field UseAreaBox UBoxComponent
 ---@field bIsSpawned boolean
-UCraneSpawnLocationComponent = {}
+local UCraneSpawnLocationComponent = {}
 
 
 
 ---@class UCrossRegionActorManager : UObject
 ---@field AllRemoteActors TSet<AActor>
-UCrossRegionActorManager = {}
+local UCrossRegionActorManager = {}
 
 
 
 ---@class UCursorWidget : UUserWidget
-UCursorWidget = {}
+local UCursorWidget = {}
 
 ---@return FSlateBrush
 function UCursorWidget:GetCursorBrush() end
 
 
 ---@class UDecayDamageType : USimDamageType
-UDecayDamageType = {}
+local UDecayDamageType = {}
 
 
 ---@class UDecayPreventionUserComponent : UUserComponent
 ---@field StructureCounts FDecayPreventionStructureCounts
-UDecayPreventionUserComponent = {}
+local UDecayPreventionUserComponent = {}
 
 function UDecayPreventionUserComponent:ServerUpdateStructureCount() end
 
 
 ---@class UDeployUseComponent : UUseComponent
-UDeployUseComponent = {}
+local UDeployUseComponent = {}
 
 
 ---@class UDeployableItemComponent : ULargeItemComponent
-UDeployableItemComponent = {}
+local UDeployableItemComponent = {}
 
 
 ---@class UDeployedTripodAnimInstance : UAnimInstance
@@ -12998,12 +12998,12 @@ UDeployableItemComponent = {}
 ---@field Height float
 ---@field RelativeYaw float
 ---@field RelativePitch float
-UDeployedTripodAnimInstance = {}
+local UDeployedTripodAnimInstance = {}
 
 
 
 ---@class UDepthProjectileMovementComponent : UProjectileMovementComponent
-UDepthProjectileMovementComponent = {}
+local UDepthProjectileMovementComponent = {}
 
 
 ---@class UDockComponent : UBoxComponent
@@ -13011,24 +13011,24 @@ UDepthProjectileMovementComponent = {}
 ---@field MaximumAngle float
 ---@field SurfaceOffset float
 ---@field bUseComponentForwardVector boolean
-UDockComponent = {}
+local UDockComponent = {}
 
 
 
 ---@class UDrawStructureLayerComponent : UPrimitiveComponent
-UDrawStructureLayerComponent = {}
+local UDrawStructureLayerComponent = {}
 
 
 ---@class UDrawbridgeAnimInstance : UAnimInstance
 ---@field bIsSwitchOpen boolean
 ---@field OpenProgress float
-UDrawbridgeAnimInstance = {}
+local UDrawbridgeAnimInstance = {}
 
 
 
 ---@class UEmplacedFoundationAnimInstance : UAnimInstance
 ---@field Yaw float
-UEmplacedFoundationAnimInstance = {}
+local UEmplacedFoundationAnimInstance = {}
 
 
 
@@ -13037,7 +13037,7 @@ UEmplacedFoundationAnimInstance = {}
 ---@field Pitch float
 ---@field bIsCranking boolean
 ---@field bIsShooting boolean
-UEmplacedWeaponAnimInstance = {}
+local UEmplacedWeaponAnimInstance = {}
 
 function UEmplacedWeaponAnimInstance:OnFiringComplete() end
 ---@param Notify UAnimNotify
@@ -13049,7 +13049,7 @@ function UEmplacedWeaponAnimInstance:AnimNotify_OnFiringComplete(Notify) end
 ---@field MuzzleFlashPS UParticleSystem
 ---@field TelegraphDelay float
 ---@field MortarFlightTime float
-UEmplacementMortarMountComponent = {}
+local UEmplacementMortarMountComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 ---@param Distance float
@@ -13064,11 +13064,11 @@ function UEmplacementMortarMountComponent:MulticastDamageDebug(TraceStart, Trace
 
 
 ---@class UEnterVehicleUseComponent : UUseComponent
-UEnterVehicleUseComponent = {}
+local UEnterVehicleUseComponent = {}
 
 
 ---@class UEnvironmentDamageType : USimDamageType
-UEnvironmentDamageType = {}
+local UEnvironmentDamageType = {}
 
 
 ---@class UEnvironmentalModificationData : UObject
@@ -13106,16 +13106,16 @@ UEnvironmentDamageType = {}
 ---@field PuddleBlockingPhysicalMaterials TArray<UPhysicalMaterial>
 ---@field RainfallPerShovel float
 ---@field RainfallPerWaterBucket float
-UEnvironmentalModificationData = {}
+local UEnvironmentalModificationData = {}
 
 
 
 ---@class UEquipmentHolderComponent : UItemHolderComponent
-UEquipmentHolderComponent = {}
+local UEquipmentHolderComponent = {}
 
 
 ---@class UExitComponent : USceneComponent
-UExitComponent = {}
+local UExitComponent = {}
 
 
 ---@class UExplodeOnDeathComponent : UActorComponent
@@ -13123,7 +13123,7 @@ UExitComponent = {}
 ---@field ExplosiveCodeName FName
 ---@field ExplosionOffsetZ float
 ---@field AcceptDamageTypes TArray<EDamageType>
-UExplodeOnDeathComponent = {}
+local UExplodeOnDeathComponent = {}
 
 
 
@@ -13135,7 +13135,7 @@ UExplodeOnDeathComponent = {}
 ---@field bPreventBorderPlacement boolean
 ---@field ShouldDoLandscapeCheck boolean
 ---@field bIsEquipped boolean
-UExplosiveItemComponent = {}
+local UExplosiveItemComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function UExplosiveItemComponent:ServerStartInvoke(ActivityStateChange) end
@@ -13145,7 +13145,7 @@ function UExplosiveItemComponent:MulticastPlayDeploySFX() end
 
 ---@class UFacilityFuelLightComponent : USceneComponent
 ---@field MaterialIndex int32
-UFacilityFuelLightComponent = {}
+local UFacilityFuelLightComponent = {}
 
 
 
@@ -13153,7 +13153,7 @@ UFacilityFuelLightComponent = {}
 ---@field TargetTag FName
 ---@field Materials TArray<UMaterialInterface>
 ---@field RenderInfoArray TArray<FFacilityLightRenderInfo>
-UFacilityLightComponent = {}
+local UFacilityLightComponent = {}
 
 
 
@@ -13162,7 +13162,7 @@ UFacilityLightComponent = {}
 ---@field AnimatedMaterial UMaterialInterface
 ---@field AnimatedSocketName FName
 ---@field UVOffsetSpeed float
-UFacilityRefineryAnimInstance = {}
+local UFacilityRefineryAnimInstance = {}
 
 
 
@@ -13171,7 +13171,7 @@ UFacilityRefineryAnimInstance = {}
 ---@field PendingOrderCount uint8
 ---@field OrderCount uint8
 ---@field ItemInputBuffer int16
-UFacilityRefineryUserComponent = {}
+local UFacilityRefineryUserComponent = {}
 
 ---@param ItemsType EFacilityRefineryItemsType
 ---@param ItemIndex uint8
@@ -13201,7 +13201,7 @@ function UFacilityRefineryUserComponent:OnRep_ItemInputBuffer() end
 ---@class UFestivalFlagItemComponent : ULargeItemComponent
 ---@field WalkingSpeedScale float
 ---@field TeamId uint8
-UFestivalFlagItemComponent = {}
+local UFestivalFlagItemComponent = {}
 
 function UFestivalFlagItemComponent:OnRep_TeamID() end
 
@@ -13215,13 +13215,13 @@ function UFestivalFlagItemComponent:OnRep_TeamID() end
 ---@field Fire3ParticleSystem UParticleSystemComponent
 ---@field FireSFXLoop UWarAudioComponent
 ---@field DieselConsumptionRate float
-UFirePitComponent = {}
+local UFirePitComponent = {}
 
 
 
 ---@class UFiremanMountComponent : UMountComponent
 ---@field CoalPerBoost int32
-UFiremanMountComponent = {}
+local UFiremanMountComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function UFiremanMountComponent:ServerBoost(ActivityStateChange) end
@@ -13235,7 +13235,7 @@ function UFiremanMountComponent:MulticastBoostFX() end
 ---@field FirstAidKitMesh USkeletalMesh
 ---@field FirstAidApplicationSound USoundCue
 ---@field bIsEquipped boolean
-UFirstAidKitComponent = {}
+local UFirstAidKitComponent = {}
 
 function UFirstAidKitComponent:ServerUseFirstAidKit() end
 ---@param ActivityStateChange FActivityStateChange
@@ -13253,7 +13253,7 @@ function UFirstAidKitComponent:OnRep_IsEquipped() end
 ---@field FlameSpeedPredictionFactor float
 ---@field FlameStreamFXParam float
 ---@field FlameImpactFXInfo FFlameImpactFXInfo
-UFlameMountComponent = {}
+local UFlameMountComponent = {}
 
 function UFlameMountComponent:OnRep_FlameStreamFXParam() end
 function UFlameMountComponent:OnRep_FlameImpactFXInfo() end
@@ -13271,7 +13271,7 @@ function UFlameMountComponent:OnRep_FlameImpactFXInfo() end
 ---@field FlameImpactFXInfo FFlameImpactFXInfo
 ---@field CachedAmmoPickupCDO AAmmoPickup
 ---@field IdleFlameFXOffset FVector
-UFlamethrowerWeaponComponent = {}
+local UFlamethrowerWeaponComponent = {}
 
 function UFlamethrowerWeaponComponent:OnRep_FlameStreamFXParam() end
 function UFlamethrowerWeaponComponent:OnRep_FlameImpactFXInfo() end
@@ -13286,32 +13286,32 @@ function UFlamethrowerWeaponComponent:OnRep_FlameImpactFXInfo() end
 ---@field WaterStencilName FName
 ---@field MaxWaterLevel float
 ---@field MaxWaterHeight float
-UFloodableComponent = {}
+local UFloodableComponent = {}
 
 
 
 ---@class UFortFireSuppressionAnimInstance : UAnimInstance
 ---@field bIsDispensingWater boolean
-UFortFireSuppressionAnimInstance = {}
+local UFortFireSuppressionAnimInstance = {}
 
 
 
 ---@class UFortStaticArtilleryAnimInstance : UAnimInstance
 ---@field HorizontalAngle float
 ---@field VerticalAngle float
-UFortStaticArtilleryAnimInstance = {}
+local UFortStaticArtilleryAnimInstance = {}
 
 
 
 ---@class UFoxholeTurretAnimInstance : UAnimInstance
 ---@field TrackingAngle float
-UFoxholeTurretAnimInstance = {}
+local UFoxholeTurretAnimInstance = {}
 
 
 
 ---@class UFreighterAnimInstance : USimVehicleAnimInstance
 ---@field FreighterState EFreighterState
-UFreighterAnimInstance = {}
+local UFreighterAnimInstance = {}
 
 
 
@@ -13320,7 +13320,7 @@ UFreighterAnimInstance = {}
 ---@field FuelCapacity int32
 ---@field RefuelSound USoundCue
 ---@field bIsEquipped boolean
-UFuelItemComponent = {}
+local UFuelItemComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function UFuelItemComponent:ServerStartActivityState(ActivityStateChange) end
@@ -13340,7 +13340,7 @@ function UFuelItemComponent:OnRep_IsEquipped() end
 ---@field State ERampState
 ---@field RampAngle float
 ---@field DeployAudioComponent UAudioComponent
-UGangwayRamp = {}
+local UGangwayRamp = {}
 
 ---@param PrevState ERampState
 function UGangwayRamp:OnRep_State(PrevState) end
@@ -13349,34 +13349,34 @@ function UGangwayRamp:OnRep_State(PrevState) end
 ---@class UGangwayRampAnimInstance : UAnimInstance
 ---@field RampState ERampState
 ---@field RampAngle float
-UGangwayRampAnimInstance = {}
+local UGangwayRampAnimInstance = {}
 
 
 
 ---@class UGangwayRampUseComponent : UUseComponent
-UGangwayRampUseComponent = {}
+local UGangwayRampUseComponent = {}
 
 
 ---@class UGarrisonComponent : UActorComponent
 ---@field GarrisonSize float
 ---@field bIsGarrisonEnabled boolean
 ---@field bIsToggledDynamically boolean
-UGarrisonComponent = {}
+local UGarrisonComponent = {}
 
 
 
 ---@class UGateAnimInstance : UAnimInstance
 ---@field GateState EGateState
-UGateAnimInstance = {}
+local UGateAnimInstance = {}
 
 
 
 ---@class UGenericCrateStockpileComponent : UGenericStockpileComponent
-UGenericCrateStockpileComponent = {}
+local UGenericCrateStockpileComponent = {}
 
 
 ---@class UGenericItemStockpileComponent : UGenericStockpileComponent
-UGenericItemStockpileComponent = {}
+local UGenericItemStockpileComponent = {}
 
 
 ---@class UGenericStockpileComponent : UActorComponent
@@ -13399,7 +13399,7 @@ UGenericItemStockpileComponent = {}
 ---@field Structures TArray<FStockpileEntry>
 ---@field StructureCrates TArray<FStockpileEntry>
 ---@field Events FStockpileEvents
-UGenericStockpileComponent = {}
+local UGenericStockpileComponent = {}
 
 function UGenericStockpileComponent:OnRep_Items() end
 
@@ -13415,7 +13415,7 @@ function UGenericStockpileComponent:OnRep_Items() end
 ---@field GrenadeMultiAmmo FMultiAmmo
 ---@field bIsGrenadeMode boolean
 ---@field bIsBayonetMode boolean
-UGrenadeAdapterComponent = {}
+local UGrenadeAdapterComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function UGrenadeAdapterComponent:ServerToggleFireMode(ActivityStateChange) end
@@ -13437,7 +13437,7 @@ function UGrenadeAdapterComponent:ClientSetDesiredAmmoType(InDesiredAmmoType) en
 ---@class UGrenadeGunnerMountComponent : UProjectileGunnerMountComponent
 ---@field MultiAmmo FMultiAmmo
 ---@field GrenadeClasses TArray<TSubclassOf<AWarProjectile>>
-UGrenadeGunnerMountComponent = {}
+local UGrenadeGunnerMountComponent = {}
 
 ---@param InDesiredAmmoType FName
 function UGrenadeGunnerMountComponent:ServerSetDesiredAmmoType(InDesiredAmmoType) end
@@ -13451,7 +13451,7 @@ function UGrenadeGunnerMountComponent:ServerSetDesiredAmmoType(InDesiredAmmoType
 ---@field ThrowingStabilityInfo FThrowingStabilityInfo
 ---@field PinPullSound USoundCue
 ---@field bIsEquipped boolean
-UGrenadeItemComponent = {}
+local UGrenadeItemComponent = {}
 
 ---@param WeaponInvokeInfo FCharacterInvokeInfo
 ---@param SecondsOnFuse float
@@ -13467,18 +13467,18 @@ function UGrenadeItemComponent:OnRep_IsEquipped() end
 
 
 ---@class UGroundZeroDamageType : USimDamageType
-UGroundZeroDamageType = {}
+local UGroundZeroDamageType = {}
 
 
 ---@class UGunTurretAnimInstance : UAnimInstance
 ---@field TrackingAngle float
-UGunTurretAnimInstance = {}
+local UGunTurretAnimInstance = {}
 
 
 
 ---@class UHUDWidgetStyle : USlateWidgetStyleContainerBase
 ---@field WidgetStyle FHUDStyle
-UHUDWidgetStyle = {}
+local UHUDWidgetStyle = {}
 
 
 
@@ -13489,7 +13489,7 @@ UHUDWidgetStyle = {}
 ---@field bCanBuild boolean
 ---@field ResourceLevel int32
 ---@field GatherXPMultiplier int32
-UHammerComponent = {}
+local UHammerComponent = {}
 
 function UHammerComponent:MulticastPlayImpactFX() end
 ---@param Resource AResource
@@ -13499,13 +13499,13 @@ function UHammerComponent:MulticastOnGather(Resource, ImpactEffect, GatherResult
 
 
 ---@class UHarvestDamageType : USimDamageType
-UHarvestDamageType = {}
+local UHarvestDamageType = {}
 
 
 ---@class UHarvesterAnimInstance : USimVehicleAnimInstance
 ---@field bIsGrinding boolean
 ---@field bIsSplitting boolean
-UHarvesterAnimInstance = {}
+local UHarvesterAnimInstance = {}
 
 
 
@@ -13518,12 +13518,12 @@ UHarvesterAnimInstance = {}
 ---@field bIsPseudoLadder boolean
 ---@field bTeleportToClosestPoint boolean
 ---@field Exits TArray<UHatchComponent>
-UHatchComponent = {}
+local UHatchComponent = {}
 
 
 
 ---@class UHeadlessLocalPlayer : UWarLocalPlayer
-UHeadlessLocalPlayer = {}
+local UHeadlessLocalPlayer = {}
 
 
 ---@class UHeavyMachineGunItemComponent : UItemComponent
@@ -13543,7 +13543,7 @@ UHeadlessLocalPlayer = {}
 ---@field bCanFireFromVehicle boolean
 ---@field bIsEquipped boolean
 ---@field SimulatedHitNotify FHitNotify
-UHeavyMachineGunItemComponent = {}
+local UHeavyMachineGunItemComponent = {}
 
 function UHeavyMachineGunItemComponent:ServerStopInvoke() end
 ---@param InvokeInfo FCharacterInvokeInfo
@@ -13566,7 +13566,7 @@ function UHeavyMachineGunItemComponent:OnRep_IsEquipped() end
 ---@field MuzzleFlashPS UParticleSystem
 ---@field SimulatedHitNotify FHitNotify
 ---@field Ammo int32
-UHitScanMountComponent = {}
+local UHitScanMountComponent = {}
 
 function UHitScanMountComponent:ServerStopInvoke() end
 ---@param InvokeInfo FCharacterInvokeInfo
@@ -13592,7 +13592,7 @@ function UHitScanMountComponent:MulticastSpawnTracerFX() end
 ---@field bIsEquipped boolean
 ---@field AimAssistOffsetZ float
 ---@field SimulatedHitNotify FHitNotify
-UHitScanWeaponComponent = {}
+local UHitScanWeaponComponent = {}
 
 ---@param InvokeInfo FCharacterInvokeInfo
 ---@param ActivityStateChange FActivityStateChange
@@ -13608,7 +13608,7 @@ function UHitScanWeaponComponent:OnRep_IsEquipped() end
 ---@field Patients TArray<float>
 ---@field PatientVisuals TArray<uint8>
 ---@field RecoveredPatients TArray<int8>
-UHospitalComponent = {}
+local UHospitalComponent = {}
 
 
 
@@ -13624,7 +13624,7 @@ UHospitalComponent = {}
 ---@field MainGunnerYaw float
 ---@field MainGunnerPitch float
 ---@field bMainGunnerIsFiring boolean
-UInfantryRailVehicleAnimInstance = {}
+local UInfantryRailVehicleAnimInstance = {}
 
 ---@param Notify UAnimNotify
 function UInfantryRailVehicleAnimInstance:AnimNotify_OnFiringOver(Notify) end
@@ -13635,25 +13635,25 @@ function UInfantryRailVehicleAnimInstance:AnimNotify_OnAlt02FiringOver(Notify) e
 
 
 ---@class UInfraModificationSlotComponent : UModificationSlotComponent
-UInfraModificationSlotComponent = {}
+local UInfraModificationSlotComponent = {}
 
 
 ---@class UInfrastructureComponent : UActorComponent
 ---@field FilteredTypes EFortModificationType
 ---@field Effectiveness float
-UInfrastructureComponent = {}
+local UInfrastructureComponent = {}
 
 
 
 ---@class UIntelCenterAnimInstance : UAnimInstance
 ---@field Direction float
 ---@field Pitch float
-UIntelCenterAnimInstance = {}
+local UIntelCenterAnimInstance = {}
 
 
 
 ---@class UIntelCenterMountComponent : UMountComponent
-UIntelCenterMountComponent = {}
+local UIntelCenterMountComponent = {}
 
 ---@param Pitch float
 function UIntelCenterMountComponent:ServerSetDesiredPitch(Pitch) end
@@ -13662,7 +13662,7 @@ function UIntelCenterMountComponent:ServerFireListeningArea() end
 
 ---@class UInteractiveBlueprintComponent : UUseComponent
 ---@field BPOnUse FInteractiveBlueprintComponentBPOnUse
-UInteractiveBlueprintComponent = {}
+local UInteractiveBlueprintComponent = {}
 
 
 
@@ -13683,7 +13683,7 @@ UInteractiveBlueprintComponent = {}
 ---@field GroundItemOffset FVector
 ---@field bRequiresCoverOrLowStanceToInvoke boolean
 ---@field bAllowsMovementDuringReload boolean
-UItemComponent = {}
+local UItemComponent = {}
 
 ---@param CurrentAmmo int32
 function UItemComponent:ClientSyncAmmo(CurrentAmmo) end
@@ -13693,7 +13693,7 @@ function UItemComponent:ClientSyncAmmo(CurrentAmmo) end
 ---@field DataClass TSubclassOf<UItemGroupRenderData>
 ---@field StockpileIndex int32
 ---@field CurrentMaterial UMaterialInterface
-UItemGroupRenderComponent = {}
+local UItemGroupRenderComponent = {}
 
 
 
@@ -13701,7 +13701,7 @@ UItemGroupRenderComponent = {}
 ---@field Layouts TMap<FName, FItemGroupRenderLayout>
 ---@field bGenerateLayoutData boolean
 ---@field LayoutSize FVector
-UItemGroupRenderData = {}
+local UItemGroupRenderData = {}
 
 
 
@@ -13711,7 +13711,7 @@ UItemGroupRenderData = {}
 ---@field RestrictedItems TArray<FName>
 ---@field CustomStackableItems TArray<FName>
 ---@field bForceAllItemsAreStackable boolean
-UItemHolderComponent = {}
+local UItemHolderComponent = {}
 
 ---@param ItemCDO AItemPickup
 function UItemHolderComponent:ClientImportItem(ItemCDO) end
@@ -13721,19 +13721,19 @@ function UItemHolderComponent:ClientExportItem(SlotIndex) end
 
 ---@class UItemHolderUserComponent : UUserComponent
 ---@field Items TArray<FItemInstance>
-UItemHolderUserComponent = {}
+local UItemHolderUserComponent = {}
 
 function UItemHolderUserComponent:OnRep_Items() end
 
 
 ---@class UKarateDamageType : USimDamageType
-UKarateDamageType = {}
+local UKarateDamageType = {}
 
 
 ---@class ULRArtilleryCarAnimInstance : UInfantryRailVehicleAnimInstance
 ---@field bIsFiring boolean
 ---@field bIsCranking boolean
-ULRArtilleryCarAnimInstance = {}
+local ULRArtilleryCarAnimInstance = {}
 
 
 
@@ -13747,20 +13747,20 @@ ULRArtilleryCarAnimInstance = {}
 ---@field BlockingVolumeExtents FVector
 ---@field BlockingVolumeOffset FVector
 ---@field BlockingVolume UBoxComponent
-ULadderComponent = {}
+local ULadderComponent = {}
 
 
 
 ---@class ULadderModificationSlotComponent : UModificationSlotComponent
 ---@field LadderType TSubclassOf<ALadder>
 ---@field Ladder ALadder
-ULadderModificationSlotComponent = {}
+local ULadderModificationSlotComponent = {}
 
 
 
 ---@class ULandingCraftAnimInstance : USimVehicleGunnerSupportAnimInstance
 ---@field IsBackHatchOpen float
-ULandingCraftAnimInstance = {}
+local ULandingCraftAnimInstance = {}
 
 
 
@@ -13769,7 +13769,7 @@ ULandingCraftAnimInstance = {}
 ---@field EnvironmentalModifications TMap<FEnvironmentModificationKey, AEnvironmentModification>
 ---@field ModifiedFoliage TMap<UFoliageInstancedStaticMeshComponent, FModifiedFoliageInfo>
 ---@field InProgressTreeRebuilds TArray<UFoliageInstancedStaticMeshComponent>
-ULandscapeDeformationManager = {}
+local ULandscapeDeformationManager = {}
 
 ---@param X float
 ---@param Y float
@@ -13787,14 +13787,14 @@ function ULandscapeDeformationManager:DebugDrawEnvironmentalModification(Duratio
 ---@class ULargeItemComponent : UItemComponent
 ---@field Mesh USkeletalMesh
 ---@field bIsEquipped boolean
-ULargeItemComponent = {}
+local ULargeItemComponent = {}
 
 function ULargeItemComponent:OnRep_IsEquipped() end
 
 
 ---@class ULargeMaterialComponent : UTaskItemComponent
 ---@field ImpactEffect TSubclassOf<AImpactEffect>
-ULargeMaterialComponent = {}
+local ULargeMaterialComponent = {}
 
 function ULargeMaterialComponent:MulticastPlayFX() end
 
@@ -13849,7 +13849,7 @@ function ULargeMaterialComponent:MulticastPlayFX() end
 ---@field NormalizedRPM1 float
 ---@field bIsThrustReversed0 boolean
 ---@field bIsThrustReversed1 boolean
-ULargeShipAnimInstance = {}
+local ULargeShipAnimInstance = {}
 
 ---@param Notify UAnimNotify
 function ULargeShipAnimInstance:AnimNotify_OnAlt12FiringOver(Notify) end
@@ -13874,12 +13874,12 @@ function ULargeShipAnimInstance:AnimNotify_OnAlt05FiringOver(Notify) end
 ---@field DefaultPlayRate1 float
 ---@field PlayRate0 float
 ---@field PlayRate1 float
-ULargeShipEngineAnimInstance = {}
+local ULargeShipEngineAnimInstance = {}
 
 
 
 ---@class ULevelStreamingHex : ULevelStreamingDynamic
-ULevelStreamingHex = {}
+local ULevelStreamingHex = {}
 
 function ULevelStreamingHex:OnUnloaded() end
 function ULevelStreamingHex:OnShown() end
@@ -13890,14 +13890,14 @@ function ULevelStreamingHex:OnHidden() end
 ---@class UListeningAreaComponent : USceneComponent
 ---@field ListeningRadius float
 ---@field TeamId EMapTeamId
-UListeningAreaComponent = {}
+local UListeningAreaComponent = {}
 
 
 
 ---@class ULoadingAreaBoxComponent : UBoxComponent
 ---@field StorageType EStorageType
 ---@field bFlipSpawnOffsetY boolean
-ULoadingAreaBoxComponent = {}
+local ULoadingAreaBoxComponent = {}
 
 
 
@@ -13905,7 +13905,7 @@ ULoadingAreaBoxComponent = {}
 ---@field TargetTag FName
 ---@field MeshStops TArray<FLocationMeshStop>
 ---@field SkeletalMeshStops TArray<FLocationSkeletalMeshStop>
-ULocationMultiplexedMeshComponent = {}
+local ULocationMultiplexedMeshComponent = {}
 
 
 
@@ -13913,7 +13913,7 @@ ULocationMultiplexedMeshComponent = {}
 ---@field ExtendedMaxDistance float
 ---@field Ammo int8
 ---@field bCanDeploySelf boolean
-ULongRangeArtilleryMountComponent = {}
+local ULongRangeArtilleryMountComponent = {}
 
 ---@param Pitch float
 function ULongRangeArtilleryMountComponent:ServerSetDesiredPitch(Pitch) end
@@ -13928,13 +13928,13 @@ function ULongRangeArtilleryMountComponent:ServerDeploySelf() end
 ---@field AddedItemCodeName FName
 ---@field StepIncompleteCodeName FName
 ---@field StepCompletedCodeName FName
-ULoreKeyUseComponent = {}
+local ULoreKeyUseComponent = {}
 
 
 
 ---@class UMaintenanceTunnelUserComponent : UUserComponent
 ---@field StructureCounts FDecayPreventionStructureCounts
-UMaintenanceTunnelUserComponent = {}
+local UMaintenanceTunnelUserComponent = {}
 
 ---@param Range float
 ---@param Filter uint16
@@ -13949,19 +13949,19 @@ function UMaintenanceTunnelUserComponent:ServerApplySettings(Range, Filter) end
 ---@field DefaultViewDirectionOffset float
 ---@field HalfDetectionAngle float
 ---@field OverlapCheckInterval float
-UMapIntelligenceSourceComponent = {}
+local UMapIntelligenceSourceComponent = {}
 
 
 
 ---@class UMapWidgetStyle : USlateWidgetStyleContainerBase
 ---@field WidgetStyle FMapStyle
-UMapWidgetStyle = {}
+local UMapWidgetStyle = {}
 
 
 
 ---@class UMaterialOverrideBoxComponent : UBoxComponent
 ---@field Material UMaterialInterface
-UMaterialOverrideBoxComponent = {}
+local UMaterialOverrideBoxComponent = {}
 
 ---@param OverlappedComponent UPrimitiveComponent
 ---@param OtherActor AActor
@@ -13994,7 +13994,7 @@ function UMaterialOverrideBoxComponent:OnBeginOverlap(OverlappedComponent, Other
 ---@field LegAngleCurve UCurveFloat
 ---@field LastYaw float
 ---@field LastAngularVelocity float
-UMechAnimInstance = {}
+local UMechAnimInstance = {}
 
 
 
@@ -14010,7 +14010,7 @@ UMechAnimInstance = {}
 ---@field DefaultImpactEffectClass TSubclassOf<AImpactEffect>
 ---@field ChargedImpactEffectClass TSubclassOf<AImpactEffect>
 ---@field BlockedImpactEffectClass TSubclassOf<AImpactEffect>
-UMeleeWeaponComponent = {}
+local UMeleeWeaponComponent = {}
 
 function UMeleeWeaponComponent:ServerStopInvoke() end
 function UMeleeWeaponComponent:ServerStopCharging() end
@@ -14038,13 +14038,13 @@ function UMeleeWeaponComponent:ClientSetIsBlocking(bInIsblocking) end
 ---@field Meshes TArray<UMeshComponent>
 ---@field FloorMeshes TArray<UMeshComponent>
 ---@field FloorIGRComponents TArray<UItemGroupRenderComponent>
-UMeshVisibilityComponent = {}
+local UMeshVisibilityComponent = {}
 
 
 
 ---@class UMiscItemComponent : UItemComponent
 ---@field bIsEquipped boolean
-UMiscItemComponent = {}
+local UMiscItemComponent = {}
 
 function UMiscItemComponent:OnRep_IsEquipped() end
 
@@ -14072,24 +14072,24 @@ function UMiscItemComponent:OnRep_IsEquipped() end
 ---@field MaskStartBit int32
 ---@field LinkedSockets TArray<TWeakObjectPtr<UBuildSocketComponent>>
 ---@field SpawnedActorComponents TMap<FName, TWeakObjectPtr<UActorComponent>>
-UModificationSlotComponent = {}
+local UModificationSlotComponent = {}
 
 
 
 ---@class UModularMountAnimInstance : UDeployedTripodAnimInstance
-UModularMountAnimInstance = {}
+local UModularMountAnimInstance = {}
 
 
 ---@class UModularMountsComponent : UActorComponent
 ---@field ActiveModularMounts uint8
 ---@field GunnerInfo TArray<FGunnerInfo>
-UModularMountsComponent = {}
+local UModularMountsComponent = {}
 
 function UModularMountsComponent:OnRep_ActiveModularMounts() end
 
 
 ---@class UMonumentManager : UObject
-UMonumentManager = {}
+local UMonumentManager = {}
 
 
 ---@class UMortarItemComponent : UMultiAmmoItemComponent
@@ -14099,7 +14099,7 @@ UMonumentManager = {}
 ---@field MortarFlightTime float
 ---@field MinDistance float
 ---@field MaxDistance float
-UMortarItemComponent = {}
+local UMortarItemComponent = {}
 
 ---@param Distance float
 ---@param ActivityStateChange FActivityStateChange
@@ -14133,7 +14133,7 @@ function UMortarItemComponent:ClientDrawDamageDebug(HitLocation, Radius) end
 ---@field CameraLerpModifierOverride float
 ---@field MountIndex int8
 ---@field bIsEquipped boolean
-UMountComponent = {}
+local UMountComponent = {}
 
 function UMountComponent:OnRep_MountIndex() end
 function UMountComponent:OnRep_IsEquipped() end
@@ -14144,7 +14144,7 @@ function UMountComponent:ClientSyncAmmo(CurrentAmmo) end
 ---@class UMultiAmmoItemComponent : UItemComponent
 ---@field MultiAmmo FMultiAmmo
 ---@field bIsEquipped boolean
-UMultiAmmoItemComponent = {}
+local UMultiAmmoItemComponent = {}
 
 ---@param InDesiredAmmoType FName
 function UMultiAmmoItemComponent:ServerSetDesiredAmmoType(InDesiredAmmoType) end
@@ -14156,7 +14156,7 @@ function UMultiAmmoItemComponent:ClientSetDesiredAmmoType(InDesiredAmmoType) end
 
 ---@class UMultiAmmoStructureMountComponent : UMountComponent
 ---@field MultiAmmo FMultiAmmo
-UMultiAmmoStructureMountComponent = {}
+local UMultiAmmoStructureMountComponent = {}
 
 ---@param InDesiredAmmoType FName
 function UMultiAmmoStructureMountComponent:ServerSetDesiredAmmoType(InDesiredAmmoType) end
@@ -14165,7 +14165,7 @@ function UMultiAmmoStructureMountComponent:ServerSetDesiredAmmoType(InDesiredAmm
 ---@class UMultiAmmoVehicleMountComponent : UMountComponent
 ---@field bRequiresExternalReload boolean
 ---@field MultiAmmo FMultiAmmo
-UMultiAmmoVehicleMountComponent = {}
+local UMultiAmmoVehicleMountComponent = {}
 
 ---@param InDesiredAmmoType FName
 function UMultiAmmoVehicleMountComponent:ServerSetDesiredAmmoType(InDesiredAmmoType) end
@@ -14173,7 +14173,7 @@ function UMultiAmmoVehicleMountComponent:ServerSetDesiredAmmoType(InDesiredAmmoT
 
 ---@class UMultiFloorVisibilityToggleComponent : UVisibilityToggleAreaComponent
 ---@field FloorVisibilityBitmask uint8
-UMultiFloorVisibilityToggleComponent = {}
+local UMultiFloorVisibilityToggleComponent = {}
 
 
 
@@ -14186,7 +14186,7 @@ UMultiFloorVisibilityToggleComponent = {}
 ---@field TransitionUpSoundCue USoundCue
 ---@field Enabled boolean
 ---@field OnSelectedMeshChanged FMultiplexedSkeletalMeshComponentOnSelectedMeshChanged
-UMultiplexedSkeletalMeshComponent = {}
+local UMultiplexedSkeletalMeshComponent = {}
 
 ---@param IsEnabled boolean
 function UMultiplexedSkeletalMeshComponent:SetEnabled(IsEnabled) end
@@ -14204,7 +14204,7 @@ function UMultiplexedSkeletalMeshComponent:SetEnabled(IsEnabled) end
 ---@field OnSelectedMeshChanged FMultiplexedStaticMeshComponentOnSelectedMeshChanged
 ---@field Enabled boolean
 ---@field MaterialOverrides TArray<FMaterialOverride>
-UMultiplexedStaticMeshComponent = {}
+local UMultiplexedStaticMeshComponent = {}
 
 ---@param IsEnabled boolean
 function UMultiplexedStaticMeshComponent:SetEnabled(IsEnabled) end
@@ -14213,7 +14213,7 @@ function UMultiplexedStaticMeshComponent:SetEnabled(IsEnabled) end
 ---@class UNewsItemImageDownloadTask : UObject
 ---@field Owner AMainMenuPlayerController
 ---@field NewsItemInfo FNewsItemInfo
-UNewsItemImageDownloadTask = {}
+local UNewsItemImageDownloadTask = {}
 
 ---@param Texture UTexture2DDynamic
 function UNewsItemImageDownloadTask:OnImageDownloadSuccess(Texture) end
@@ -14222,21 +14222,21 @@ function UNewsItemImageDownloadTask:OnImageDownloadFailed(Texture) end
 
 
 ---@class UNonDamagingDamageType : USimDamageType
-UNonDamagingDamageType = {}
+local UNonDamagingDamageType = {}
 
 
 ---@class UObscuringSphereComponent : USphereComponent
 ---@field MinimumVisibilityRadius float
-UObscuringSphereComponent = {}
+local UObscuringSphereComponent = {}
 
 
 
 ---@class UObstructionCheckBoxComponent : UBoxComponent
-UObstructionCheckBoxComponent = {}
+local UObstructionCheckBoxComponent = {}
 
 
 ---@class UParkingSpotComponent : USceneComponent
-UParkingSpotComponent = {}
+local UParkingSpotComponent = {}
 
 
 ---@class UPayloadInstancedStaticMeshComponent : UInstancedStaticMeshComponent
@@ -14247,14 +14247,14 @@ UParkingSpotComponent = {}
 ---@field ColumnSpacing float
 ---@field GroupIndex uint8
 ---@field MeshInstanceRemovalDelay float
-UPayloadInstancedStaticMeshComponent = {}
+local UPayloadInstancedStaticMeshComponent = {}
 
 
 
 ---@class UPayloadParticleSystemComponent : UParticleSystemComponent
 ---@field SlotCount uint8
 ---@field GroupIndex uint8
-UPayloadParticleSystemComponent = {}
+local UPayloadParticleSystemComponent = {}
 
 
 
@@ -14262,7 +14262,7 @@ UPayloadParticleSystemComponent = {}
 ---@field GroupIndex uint8
 ---@field bLinkToSpecificGunnerIndex boolean
 ---@field GunnerIndex int32
-UPayloadStaticMeshComponent = {}
+local UPayloadStaticMeshComponent = {}
 
 
 
@@ -14271,17 +14271,17 @@ UPayloadStaticMeshComponent = {}
 ---@field ProxyLoadingDock TSubclassOf<APersistentProxy>
 ---@field bIsSpawned boolean
 ---@field SpawnedLoadingDock APersistentProxy
-UPersistentProxyComponent = {}
+local UPersistentProxyComponent = {}
 
 
 
 ---@class UPipelineManager : UObject
-UPipelineManager = {}
+local UPipelineManager = {}
 
 
 ---@class UPipelineUserComponent : UUserComponent
 ---@field RepPipelineSystem FRepPipelineSystem
-UPipelineUserComponent = {}
+local UPipelineUserComponent = {}
 
 ---@param DesiredCodeName FName
 function UPipelineUserComponent:ServerSetLiquidType(DesiredCodeName) end
@@ -14289,7 +14289,7 @@ function UPipelineUserComponent:OnRep_System() end
 
 
 ---@class UPlayerAnimInstance2 : UCharacterAnimInstance
-UPlayerAnimInstance2 = {}
+local UPlayerAnimInstance2 = {}
 
 
 ---@class UPlayerCameraRigComponent : USceneComponent
@@ -14299,7 +14299,7 @@ UPlayerAnimInstance2 = {}
 ---@field AimRadiusToViewRangeCurve UCurveFloat
 ---@field NormalizedAimCurve UCurveVector
 ---@field ViewRangeToMaxArmLengthCurve UCurveFloat
-UPlayerCameraRigComponent = {}
+local UPlayerCameraRigComponent = {}
 
 
 
@@ -14308,7 +14308,7 @@ UPlayerCameraRigComponent = {}
 ---@field MaxLadderClimbingSpeed float
 ---@field ImmersionDepthHeightBias float
 ---@field WaterFrictionCoefficient float
-UPlayerCharacterMovementComponent = {}
+local UPlayerCharacterMovementComponent = {}
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param Other AActor
@@ -14328,13 +14328,13 @@ function UPlayerCharacterMovementComponent:CapsuleBeginOverlap(OverlappedComp, O
 ---@field CharacterOutlineMaterial UMaterialInterface
 ---@field VisibilityIndicatorMaterial UMaterialInterface
 ---@field VisibilityIndicatorMaterialDynamic UMaterialInstanceDynamic
-UPlayerLOSRasterComponent = {}
+local UPlayerLOSRasterComponent = {}
 
 
 
 ---@class UPlayerProfileManager : UObject
 ---@field CachedWarProfileMap TMap<FString, FWarPlayerProfile>
-UPlayerProfileManager = {}
+local UPlayerProfileManager = {}
 
 
 
@@ -14380,7 +14380,7 @@ UPlayerProfileManager = {}
 ---@field bTrainHUDModeEnabled boolean
 ---@field DeploymentWarningCount uint8
 ---@field WarIdsJoinedList TArray<FString>
-UPlayerSaveGame = {}
+local UPlayerSaveGame = {}
 
 
 
@@ -14389,13 +14389,13 @@ UPlayerSaveGame = {}
 ---@field PowerConsumed float
 ---@field bAutoStart boolean
 ---@field bConsumeWhenVisibilityLimited boolean
-UPowerConsumerComponent = {}
+local UPowerConsumerComponent = {}
 
 
 
 ---@class UPowerPoleUserComponent : UUserComponent
 ---@field bIsDisabled boolean
-UPowerPoleUserComponent = {}
+local UPowerPoleUserComponent = {}
 
 ---@param bInIsDisabled boolean
 function UPowerPoleUserComponent:ServerSetIsDisabled(bInIsDisabled) end
@@ -14421,7 +14421,7 @@ function UPowerPoleUserComponent:OnRep_IsDisabled() end
 ---@field bIsAutomaticFire boolean
 ---@field bApplyVehicleAngleLimit boolean
 ---@field Ammo int8
-UProjectileGunnerMountComponent = {}
+local UProjectileGunnerMountComponent = {}
 
 function UProjectileGunnerMountComponent:ServerStopInvoke() end
 ---@param InvokeInfo FCharacterInvokeInfo
@@ -14445,7 +14445,7 @@ function UProjectileGunnerMountComponent:AllSpawnFiringEffects() end
 ---@field FallbackAngle float
 ---@field MinDistance float
 ---@field bIsSingleUse boolean
-UProjectileItemComponent = {}
+local UProjectileItemComponent = {}
 
 ---@param InvokeInfo FCharacterInvokeInfo
 ---@param ActivityStateChange FActivityStateChange
@@ -14454,13 +14454,13 @@ function UProjectileItemComponent:AllSpawnFiringEffects() end
 
 
 ---@class UPuddleComponent : USphereComponent
-UPuddleComponent = {}
+local UPuddleComponent = {}
 
 
 ---@class UQuadrilateralCoverComponent : UInstancedStaticMeshComponent
 ---@field EndOffset float
 ---@field SideOffset float
-UQuadrilateralCoverComponent = {}
+local UQuadrilateralCoverComponent = {}
 
 
 
@@ -14479,25 +14479,25 @@ UQuadrilateralCoverComponent = {}
 ---@field TowingEngineForceMultiplier float
 ---@field Tractor ARWDSimVehicle
 ---@field Trailer ARWDSimVehicle
-URWDVehicleMovementComponent = {}
+local URWDVehicleMovementComponent = {}
 
 
 
 ---@class URadioBackpackItemComponent : UMiscItemComponent
 ---@field DetectionCooldown float
 ---@field DetectionRadius float
-URadioBackpackItemComponent = {}
+local URadioBackpackItemComponent = {}
 
 
 
 ---@class URailCouplerUseComponent : UUseComponent
 ---@field ChainVisualOffset FVector
-URailCouplerUseComponent = {}
+local URailCouplerUseComponent = {}
 
 
 
 ---@class URailSwitchUseComponent : UUseComponent
-URailSwitchUseComponent = {}
+local URailSwitchUseComponent = {}
 
 
 ---@class URailVehicleAnimInstance : USimVehicleAnimInstance
@@ -14510,7 +14510,7 @@ URailSwitchUseComponent = {}
 ---@field BufferExtendFrontRight float
 ---@field BufferExtendBackLeft float
 ---@field BufferExtendBackRight float
-URailVehicleAnimInstance = {}
+local URailVehicleAnimInstance = {}
 
 
 
@@ -14518,7 +14518,7 @@ URailVehicleAnimInstance = {}
 ---@field GunnerYaw float
 ---@field GunnerPitch float
 ---@field bIsGunnerWorking boolean
-URailVehicleHospitalAnimInstance = {}
+local URailVehicleHospitalAnimInstance = {}
 
 
 
@@ -14532,41 +14532,41 @@ URailVehicleHospitalAnimInstance = {}
 ---@field BrakingFrictionForceCurve UCurveFloat
 ---@field MaxRailSpeed float
 ---@field MaxRailSpeedBoosted float
-URailVehicleMovementComponent = {}
+local URailVehicleMovementComponent = {}
 
 
 
 ---@class URampRoomComponent : URoomComponent
 ---@field RampOperationVolumeName FName
 ---@field RampOperationVolume UPrimitiveComponent
-URampRoomComponent = {}
+local URampRoomComponent = {}
 
 
 
 ---@class UReadableTextComponent : UUseComponent
 ---@field LoreCodeName FName
-UReadableTextComponent = {}
+local UReadableTextComponent = {}
 
 
 
 ---@class URefineryUserComponent : UUserComponent
 ---@field OrderInfo FRefinementOrderInfo
-URefineryUserComponent = {}
+local URefineryUserComponent = {}
 
 
 
 ---@class UReplicatedGenericStockpileComponent : UGenericStockpileComponent
-UReplicatedGenericStockpileComponent = {}
+local UReplicatedGenericStockpileComponent = {}
 
 
 ---@class UReplicatedStockpileUserComponent : UStockpileUserComponent
-UReplicatedStockpileUserComponent = {}
+local UReplicatedStockpileUserComponent = {}
 
 
 ---@class UReserveStockpileComponent : UActorComponent
 ---@field StockpileDataList TArray<FReserveStockpileData>
 ---@field ActivePassCodes TSet<uint16>
-UReserveStockpileComponent = {}
+local UReserveStockpileComponent = {}
 
 
 
@@ -14574,7 +14574,7 @@ UReserveStockpileComponent = {}
 ---@field StockpileDataList TArray<FReserveStockpileData>
 ---@field FailedPassCodeAttemptInfo FReserveStockpileFailedPassCodeInfo
 ---@field ReserveStockpileBeingUsed UReserveStockpileComponent
-UReserveStockpileUserComponent = {}
+local UReserveStockpileUserComponent = {}
 
 ---@param SourceStockpileName FString
 ---@param CodeName FName
@@ -14651,13 +14651,13 @@ function UReserveStockpileUserComponent:ClientShowStockpileResponse(Response) en
 ---@field LinkedGenericStockpile UGenericStockpileComponent
 ---@field ResourceNodes TArray<UStaticMeshComponent>
 ---@field CurrentMaterial UMaterialInterface
-UResourceGroupRenderComponent = {}
+local UResourceGroupRenderComponent = {}
 
 
 
 ---@class UResourceGroupRenderData : UObject
 ---@field Info TArray<FResourceRenderInfo>
-UResourceGroupRenderData = {}
+local UResourceGroupRenderData = {}
 
 
 
@@ -14665,7 +14665,7 @@ UResourceGroupRenderData = {}
 ---@field MineTypes TMap<FName, TSubclassOf<AResourceMine>>
 ---@field FieldTypes TMap<FName, TSubclassOf<AResourceField>>
 ---@field OilRigType TSubclassOf<AFacilityRefinery>
-UResourceMapping = {}
+local UResourceMapping = {}
 
 
 
@@ -14715,7 +14715,7 @@ UResourceMapping = {}
 ---@field WaterLevelTickHandle FTimerHandle
 ---@field UsableVolumes TArray<UPrimitiveComponent>
 ---@field FloodedSFXLoop UAudioComponent
-URoomComponent = {}
+local URoomComponent = {}
 
 function URoomComponent:OnRep_WaterLevel() end
 ---@param LocalLocation FVector
@@ -14724,27 +14724,27 @@ function URoomComponent:MulticastPlayLeakFX(LocalLocation) end
 
 ---@class URotatorMountComponent : UMountComponent
 ---@field PlayersRequiredToRotate int32
-URotatorMountComponent = {}
+local URotatorMountComponent = {}
 
 ---@param Val float
 function URotatorMountComponent:ServerOnMoveRight(Val) end
 
 
 ---@class URuinedComponent : USceneComponent
-URuinedComponent = {}
+local URuinedComponent = {}
 
 
 ---@class URuinedMeshComponent : UStaticMeshComponent
-URuinedMeshComponent = {}
+local URuinedMeshComponent = {}
 
 
 ---@class USafeHouseVisibilityToggleComponent : UVisibilityToggleAreaComponent
-USafeHouseVisibilityToggleComponent = {}
+local USafeHouseVisibilityToggleComponent = {}
 
 
 ---@class UScoutVehicleAnimInstance : USimVehicleAnimInstance
 ---@field bIsTransmitting boolean
-UScoutVehicleAnimInstance = {}
+local UScoutVehicleAnimInstance = {}
 
 
 
@@ -14768,21 +14768,21 @@ UScoutVehicleAnimInstance = {}
 ---@field bIsEnabled boolean
 ---@field PC APlayerController
 ---@field Character ASimCharacter
-USeatComponent = {}
+local USeatComponent = {}
 
 
 
 ---@class USeatExitComponent : USceneComponent
-USeatExitComponent = {}
+local USeatExitComponent = {}
 
 
 ---@class USeatTriggerComponent : UBoxComponent
-USeatTriggerComponent = {}
+local USeatTriggerComponent = {}
 
 
 ---@class USensorOperatorMountComponent : USubmarineMountComponent
 ---@field ElectricityCost float
-USensorOperatorMountComponent = {}
+local USensorOperatorMountComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 ---@param bIsOmnidirectional boolean
@@ -14813,16 +14813,16 @@ function USensorOperatorMountComponent:ServerStartInvoke(ActivityStateChange, bI
 ---@field WarTimeDiscrepancy FWarTimeDiscrepancy
 ---@field NextWarTime FDateTime
 ---@field NextWarMapOverride FString
-UServerSettings = {}
+local UServerSettings = {}
 
 
 
 ---@class UShipControlSurfaceVisComponent : UPrimitiveComponent
-UShipControlSurfaceVisComponent = {}
+local UShipControlSurfaceVisComponent = {}
 
 
 ---@class UShipEngineUseComponent : UShipFlagUseComponent
-UShipEngineUseComponent = {}
+local UShipEngineUseComponent = {}
 
 
 ---@class UShipFlagUseComponent : UUseComponent
@@ -14830,43 +14830,43 @@ UShipEngineUseComponent = {}
 ---@field bIsMovement boolean
 ---@field bRequiresWrench boolean
 ---@field WrenchingActivityState ECharacterActivityState
-UShipFlagUseComponent = {}
+local UShipFlagUseComponent = {}
 
 
 
 ---@class UShipMovementComponent : USimpleVehicleMovementComponent
 ---@field ThrustCurve UCurveFloat
 ---@field SubmergedThrustCurve UCurveFloat
-UShipMovementComponent = {}
+local UShipMovementComponent = {}
 
 
 
 ---@class UShipRammingDamageType : USimDamageType
-UShipRammingDamageType = {}
+local UShipRammingDamageType = {}
 
 
 ---@class UShippableUseComponent : UUseComponent
-UShippableUseComponent = {}
+local UShippableUseComponent = {}
 
 
 ---@class UShotgunComponent : UHitScanWeaponComponent
 ---@field SimulatedHitNotifies TArray<FHitNotify>
 ---@field ShotRadius float
 ---@field MaxHitsPerShot uint32
-UShotgunComponent = {}
+local UShotgunComponent = {}
 
 function UShotgunComponent:OnRep_SimulatedHitNotifies() end
 
 
 ---@class UShovelComponent : UTaskItemComponent
 ---@field ImpactEffect TSubclassOf<AImpactEffect>
-UShovelComponent = {}
+local UShovelComponent = {}
 
 function UShovelComponent:MulticastPlayFX() end
 
 
 ---@class USignPostDownVoteDamageType : USimDamageType
-USignPostDownVoteDamageType = {}
+local USignPostDownVoteDamageType = {}
 
 
 ---@class USimDamageType : UDamageType
@@ -14899,7 +14899,7 @@ USignPostDownVoteDamageType = {}
 ---@field Icon FSlateBrush
 ---@field DisplayName FText
 ---@field DescriptionDetails TArray<FTooltipDetailText>
-USimDamageType = {}
+local USimDamageType = {}
 
 
 
@@ -14919,7 +14919,7 @@ USimDamageType = {}
 ---@field LastAngularVelocity float
 ---@field TrackDisabledIntensity float
 ---@field bHasDriver boolean
-USimVehicleAnimInstance = {}
+local USimVehicleAnimInstance = {}
 
 
 
@@ -14954,7 +14954,7 @@ USimVehicleAnimInstance = {}
 ---@field bIsAltGunner04Firing boolean
 ---@field bIsAltGunner04Reloading boolean
 ---@field bIsAltGunner04Working boolean
-USimVehicleGunnerSupportAnimInstance = {}
+local USimVehicleGunnerSupportAnimInstance = {}
 
 ---@param Notify UAnimNotify
 function USimVehicleGunnerSupportAnimInstance:AnimNotify_OnFiringOver(Notify) end
@@ -14977,21 +14977,21 @@ function USimVehicleGunnerSupportAnimInstance:AnimNotify_OnAlt02FiringOver(Notif
 ---@field FloatVelocity float
 ---@field DepthOffset float
 ---@field MaxDepth float
-USimpleVehicleMovementComponent = {}
+local USimpleVehicleMovementComponent = {}
 
 
 
 ---@class USnapshotManager : UObject
-USnapshotManager = {}
+local USnapshotManager = {}
 
 
 ---@class USniperRifleComponent : UHitScanWeaponComponent
-USniperRifleComponent = {}
+local USniperRifleComponent = {}
 
 
 ---@class USoldierItemComponent : ULargeItemComponent
 ---@field SoldierVisualsPacked uint8
-USoldierItemComponent = {}
+local USoldierItemComponent = {}
 
 function USoldierItemComponent:OnRep_SoldierVisuals() end
 
@@ -14999,7 +14999,7 @@ function USoldierItemComponent:OnRep_SoldierVisuals() end
 ---@class USoulstoneComponent : UItemComponent
 ---@field TransformExplosionEffect TSubclassOf<AWarExplosionEffect>
 ---@field bIsEquipped boolean
-USoulstoneComponent = {}
+local USoulstoneComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function USoulstoneComponent:ServerUseSoulstone(ActivityStateChange) end
@@ -15008,7 +15008,7 @@ function USoulstoneComponent:OnRep_IsEquipped() end
 
 ---@class USpawnPointComponent : USceneComponent
 ---@field Priority ESpawnPointPriority
-USpawnPointComponent = {}
+local USpawnPointComponent = {}
 
 
 
@@ -15028,7 +15028,7 @@ USpawnPointComponent = {}
 ---@field bAutoAddStructureProductionCategory boolean
 ---@field Queues TArray<FFactoryQueue>
 ---@field bIsProducing boolean
-USpecializedFactoryComponent = {}
+local USpecializedFactoryComponent = {}
 
 ---@return boolean
 function USpecializedFactoryComponent:IsProducing() end
@@ -15036,7 +15036,7 @@ function USpecializedFactoryComponent:IsProducing() end
 
 ---@class USpecializedFactoryUserComponent : UUserComponent
 ---@field Queues TArray<FFactoryQueue>
-USpecializedFactoryUserComponent = {}
+local USpecializedFactoryUserComponent = {}
 
 
 
@@ -15045,7 +15045,7 @@ USpecializedFactoryUserComponent = {}
 ---@field AltGunnerYaw float
 ---@field AltGunnerPitch float
 ---@field bIsHatchOpen boolean
-USpiderMechAnimInstance = {}
+local USpiderMechAnimInstance = {}
 
 
 
@@ -15103,14 +15103,14 @@ USpiderMechAnimInstance = {}
 ---@field MeshConfigTransient TArray<FSplineConnectorMeshConfigTransient>
 ---@field BoxComponents TArray<UBoxComponent>
 ---@field Decals TArray<UDecalComponent>
-USplineConnectorComponent = {}
+local USplineConnectorComponent = {}
 
 
 
 ---@class USpotterMountComponent : UMountComponent
 ---@field CameraArmLengthOverride float
 ---@field CameraArmLengthCurve UCurveFloat
-USpotterMountComponent = {}
+local USpotterMountComponent = {}
 
 
 
@@ -15119,13 +15119,13 @@ USpotterMountComponent = {}
 ---@field Pitch float
 ---@field bIsMoving boolean
 ---@field bIsShooting boolean
-UStaticArtilleryAnimInstance = {}
+local UStaticArtilleryAnimInstance = {}
 
 
 
 ---@class UStaticMeshOverrideComponent : UActorComponent
 ---@field StaticMeshOverrides TArray<FStaticMeshOverride>
-UStaticMeshOverrideComponent = {}
+local UStaticMeshOverrideComponent = {}
 
 
 
@@ -15135,7 +15135,7 @@ UStaticMeshOverrideComponent = {}
 ---@field bUseViewerLocationAsViewLocation boolean
 ---@field OpacityParamName FName
 ---@field FiringOccupants TArray<UStealthComponent>
-UStealthComponent = {}
+local UStealthComponent = {}
 
 
 
@@ -15146,7 +15146,7 @@ UStealthComponent = {}
 ---@field VehicleCrates TArray<FStockpileEntry>
 ---@field Structures TArray<FStockpileEntry>
 ---@field StructureCrates TArray<FStockpileEntry>
-UStockpileUserComponent = {}
+local UStockpileUserComponent = {}
 
 function UStockpileUserComponent:OnRep_Vehicles() end
 function UStockpileUserComponent:OnRep_VehicleCrates() end
@@ -15159,7 +15159,7 @@ function UStockpileUserComponent:OnRep_Items() end
 ---@class UStructureLayerComponent : UActorComponent
 ---@field IncludedInLayers uint32
 ---@field ExcludedByLayers uint32
-UStructureLayerComponent = {}
+local UStructureLayerComponent = {}
 
 
 
@@ -15172,7 +15172,7 @@ UStructureLayerComponent = {}
 ---@field bCheckForPlayersOnOccupy boolean
 ---@field bOccupantCrouches boolean
 ---@field CurrentOccupant TWeakObjectPtr<ASimCharacter>
-UStructureSeatComponent = {}
+local UStructureSeatComponent = {}
 
 function UStructureSeatComponent:OnRep_CurrentOccupant() end
 
@@ -15185,25 +15185,25 @@ function UStructureSeatComponent:OnRep_CurrentOccupant() end
 ---@field MainBallastPlayRate float
 ---@field NegativeBallastPlayRate float
 ---@field SafteyBallastPlayRate float
-USubmarineAnimInstance = {}
+local USubmarineAnimInstance = {}
 
 
 
 ---@class USubmarineDivingMountComponent : USubmarineMountComponent
-USubmarineDivingMountComponent = {}
+local USubmarineDivingMountComponent = {}
 
 ---@param Input int8
 function USubmarineDivingMountComponent:ServerSetDivingPlaneInput(Input) end
 
 
 ---@class USubmarineDriverMountComponent : UMountComponent
-USubmarineDriverMountComponent = {}
+local USubmarineDriverMountComponent = {}
 
 
 ---@class USubmarineMountComponent : UMountComponent
 ---@field SensorReadingProxy TSubclassOf<ASensorReadingProxy>
 ---@field ResponseSoundCue USoundCue
-USubmarineMountComponent = {}
+local USubmarineMountComponent = {}
 
 ---@param Responses TArray<FSensorPingResponse>
 ---@param bIsIntel boolean
@@ -15213,23 +15213,23 @@ function USubmarineMountComponent:ClientSensorPingResponse(Responses, bIsIntel) 
 ---@class USubmarinePeriscopeMountComponent : USubmarineMountComponent
 ---@field MaxDepthForVisuals float
 ---@field CameraArmLengthCurve UCurveFloat
-USubmarinePeriscopeMountComponent = {}
+local USubmarinePeriscopeMountComponent = {}
 
 
 
 ---@class USubmarineTubeUseComponent : UShipFlagUseComponent
-USubmarineTubeUseComponent = {}
+local USubmarineTubeUseComponent = {}
 
 
 ---@class USubmarineVisibilityToggleComponent : UVisibilityToggleAreaComponent
-USubmarineVisibilityToggleComponent = {}
+local USubmarineVisibilityToggleComponent = {}
 
 
 ---@class UTankEngineerComponent : UMountComponent
 ---@field TargetMountIndex int32
 ---@field RepairAmount int32
 ---@field CompatibleAmmoNames TArray<FName>
-UTankEngineerComponent = {}
+local UTankEngineerComponent = {}
 
 ---@param InDesiredAmmoType FName
 function UTankEngineerComponent:ServerSetDesiredAmmoType(InDesiredAmmoType) end
@@ -15245,7 +15245,7 @@ function UTankEngineerComponent:ServerRepair(ActivityStateChange) end
 ---@field AimOffsetStartRange float
 ---@field AimRightOffsetAmount float
 ---@field AimDistanceOffsetAmount float
-UTankGunnerMountComponent = {}
+local UTankGunnerMountComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 ---@param InvokeInfo FCharacterInvokeInfo
@@ -15262,11 +15262,11 @@ function UTankGunnerMountComponent:MulticastPlayDebugTrace(TraceStart, TraceEnd,
 
 
 ---@class UTankZombieDamageType : USimDamageType
-UTankZombieDamageType = {}
+local UTankZombieDamageType = {}
 
 
 ---@class UTankZombieSecondaryDamageType : USimDamageType
-UTankZombieSecondaryDamageType = {}
+local UTankZombieSecondaryDamageType = {}
 
 
 ---@class UTaskItemComponent : UItemComponent
@@ -15281,7 +15281,7 @@ UTankZombieSecondaryDamageType = {}
 ---@field LoopDuration float
 ---@field TargetCheckMethod ETaskItemTargetCheckMethod
 ---@field bIsEquipped boolean
-UTaskItemComponent = {}
+local UTaskItemComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 function UTaskItemComponent:ServerTryStartTask(ActivityStateChange) end
@@ -15296,7 +15296,7 @@ function UTaskItemComponent:OnRep_IsEquipped() end
 ---@field MaterialDisconnected UMaterialInterface
 ---@field MaterialDisconnectedStarved UMaterialInterface
 ---@field bAllowWindRotation boolean
-UTeamFlagMeshComponent = {}
+local UTeamFlagMeshComponent = {}
 
 
 
@@ -15311,7 +15311,7 @@ UTeamFlagMeshComponent = {}
 ---@field CompletedTimes TArray<int64>
 ---@field ActivityWeights TArray<float>
 ---@field DynamicOnResearched FTechTreeComponentDynamicOnResearched
-UTechTreeComponent = {}
+local UTechTreeComponent = {}
 
 ---@param PreviousItemUnlockBits int32
 function UTechTreeComponent:OnRep_ItemUnlockBits(PreviousItemUnlockBits) end
@@ -15320,7 +15320,7 @@ function UTechTreeComponent:OnRep_ItemUnlockBits(PreviousItemUnlockBits) end
 ---@class UTechTreeComponentData : UActorComponent
 ---@field UniqueId int8
 ---@field Items TArray<FTechTreeComponentItem>
-UTechTreeComponentData = {}
+local UTechTreeComponentData = {}
 
 
 
@@ -15328,7 +15328,7 @@ UTechTreeComponentData = {}
 ---@field TechTreeVotes FTechTreeComponentVotes
 ---@field bIsSpawnPointSetHere boolean
 ---@field ActivityBonusState EActivityBonusState
-UTechTreeUserComponent = {}
+local UTechTreeUserComponent = {}
 
 ---@param SpawnPointCategory ESpawnPointCategory
 ---@param Vote EInfrastructureType
@@ -15337,7 +15337,7 @@ function UTechTreeUserComponent:OnRep_IsActivityBonusActive() end
 
 
 ---@class UTemperatureModifierBoxComponent : UBoxComponent
-UTemperatureModifierBoxComponent = {}
+local UTemperatureModifierBoxComponent = {}
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param OtherActor AActor
@@ -15354,7 +15354,7 @@ function UTemperatureModifierBoxComponent:OnBeginOverlap(OverlappedComponent, Ot
 
 
 ---@class UTemperatureModifierSphereComponent : USphereComponent
-UTemperatureModifierSphereComponent = {}
+local UTemperatureModifierSphereComponent = {}
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param OtherActor AActor
@@ -15377,7 +15377,7 @@ function UTemperatureModifierSphereComponent:OnBeginOverlap(OverlappedComponent,
 ---@field bUnidirectionalSockets boolean
 ---@field OnlyIncludeOn TSubclassOf<AActor>
 ---@field SpawnedComponents TArray<UActorComponent>
-UTemplateComponent = {}
+local UTemplateComponent = {}
 
 
 
@@ -15388,7 +15388,7 @@ UTemplateComponent = {}
 ---@field RangeIncrement float
 ---@field Ammo int8
 ---@field RangeIndex uint8
-UTorpedoGunnerMountComponent = {}
+local UTorpedoGunnerMountComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 ---@param TargetDirection FVector2D
@@ -15400,7 +15400,7 @@ function UTorpedoGunnerMountComponent:ServerCycleRange() end
 ---@class UTorpedoMovementComponent : UProjectileMovementComponent
 ---@field MaxHorizontalAccelerationCurve UCurveFloat
 ---@field PIDCurve UCurveVector
-UTorpedoMovementComponent = {}
+local UTorpedoMovementComponent = {}
 
 
 
@@ -15411,19 +15411,19 @@ UTorpedoMovementComponent = {}
 ---@field UnhitchCue USoundCue
 ---@field HitchIcon FSlateBrush
 ---@field UnhitchIcon FSlateBrush
-UTowHitchUseComponent = {}
+local UTowHitchUseComponent = {}
 
 
 
 ---@class UTrackSwitchAnimInstance : UAnimInstance
 ---@field Angle float
-UTrackSwitchAnimInstance = {}
+local UTrackSwitchAnimInstance = {}
 
 
 
 ---@class UTrainPassengerMountComponent : UMountComponent
 ---@field bAllowItemSubmission boolean
-UTrainPassengerMountComponent = {}
+local UTrainPassengerMountComponent = {}
 
 ---@param TargetActor AActor
 function UTrainPassengerMountComponent:ServerSubmitItems(TargetActor) end
@@ -15431,12 +15431,12 @@ function UTrainPassengerMountComponent:ServerSubmitItems(TargetActor) end
 
 ---@class UTransferLocationComponent : USceneComponent
 ---@field ValidShippables TArray<FName>
-UTransferLocationComponent = {}
+local UTransferLocationComponent = {}
 
 
 
 ---@class UTraumaKitComponent : UTaskItemComponent
-UTraumaKitComponent = {}
+local UTraumaKitComponent = {}
 
 
 ---@class UTravelManager : UObject
@@ -15453,7 +15453,7 @@ UTraumaKitComponent = {}
 ---@field OfflineCharacterSpacing float
 ---@field OfflineCharacterZOffset float
 ---@field ArrivalInvulnerabilityTime float
-UTravelManager = {}
+local UTravelManager = {}
 
 ---@param bSuccess boolean
 ---@param PendingTravelId uint32
@@ -15461,23 +15461,23 @@ function UTravelManager:ProfileSyncComplete(bSuccess, PendingTravelId) end
 
 
 ---@class UTravelPortalComponent : UUseComponent
-UTravelPortalComponent = {}
+local UTravelPortalComponent = {}
 
 
 ---@class UTurretLightComponent : USceneComponent
 ---@field RotatedSceneComponent USceneComponent
 ---@field LightComponent ULightComponentBase
-UTurretLightComponent = {}
+local UTurretLightComponent = {}
 
 
 
 ---@class UUnexplodedOrdnanceDamageType : USimDamageType
-UUnexplodedOrdnanceDamageType = {}
+local UUnexplodedOrdnanceDamageType = {}
 
 
 ---@class UUniforms : UObject
 ---@field Data FUniform
-UUniforms = {}
+local UUniforms = {}
 
 
 
@@ -15485,22 +15485,22 @@ UUniforms = {}
 ---@field HintText FText
 ---@field DisplayName FText
 ---@field Icon FSlateBrush
-UUseComponent = {}
+local UUseComponent = {}
 
 
 
 ---@class UUseMonumentComponent : UUseComponent
-UUseMonumentComponent = {}
+local UUseMonumentComponent = {}
 
 
 ---@class UUseWorldMapComponent : UUseComponent
-UUseWorldMapComponent = {}
+local UUseWorldMapComponent = {}
 
 
 ---@class UUserComponent : UActorComponent
 ---@field AssociatedActor TWeakObjectPtr<AActor>
 ---@field AssociatedComponent TWeakObjectPtr<UActorComponent>
-UUserComponent = {}
+local UUserComponent = {}
 
 function UUserComponent:OnRep_AssociatedComponent() end
 function UUserComponent:OnRep_AssociatedActor() end
@@ -15510,7 +15510,7 @@ function UUserComponent:OnRep_AssociatedActor() end
 ---@field BuiltVehicleCodeNameColonial FName
 ---@field BuiltVehicleCodeNameWarden FName
 ---@field BuildFootprintTag FName
-UVehicleBuildTriggerComponent = {}
+local UVehicleBuildTriggerComponent = {}
 
 
 
@@ -15522,13 +15522,13 @@ UVehicleBuildTriggerComponent = {}
 ---@field bIsWoundable boolean
 ---@field bOverrideAsPassenger boolean
 ---@field EnterSFX USoundCue
-UVehicleSeatComponent = {}
+local UVehicleSeatComponent = {}
 
 
 
 ---@class UVehicleSpawnLocationComponent : USceneComponent
 ---@field VehicleClass TSubclassOf<ASimVehicle>
-UVehicleSpawnLocationComponent = {}
+local UVehicleSpawnLocationComponent = {}
 
 
 
@@ -15537,7 +15537,7 @@ UVehicleSpawnLocationComponent = {}
 ---@field ShowComponentsTag FName
 ---@field bBlockVehicles boolean
 ---@field BonesForAimTraceToIgnore TArray<FName>
-UVisibilityToggleAreaComponent = {}
+local UVisibilityToggleAreaComponent = {}
 
 ---@param OverlappedComp UPrimitiveComponent
 ---@param OtherActor AActor
@@ -15554,26 +15554,26 @@ function UVisibilityToggleAreaComponent:OnBeginOverlap(OverlappedComponent, Othe
 
 
 ---@class UWarAssetManager : UAssetManager
-UWarAssetManager = {}
+local UWarAssetManager = {}
 
 
 ---@class UWarAudioComponent : UAudioComponent
-UWarAudioComponent = {}
+local UWarAudioComponent = {}
 
 
 ---@class UWarBenchmarkNetConnection : USimulatedClientNetConnection
-UWarBenchmarkNetConnection = {}
+local UWarBenchmarkNetConnection = {}
 
 
 ---@class UWarBoxComponent : UBoxComponent
 ---@field MovementIgnoreFlags uint8
-UWarBoxComponent = {}
+local UWarBoxComponent = {}
 
 
 
 ---@class UWarCapsuleComponent : UCapsuleComponent
 ---@field MovementIgnoreFlags uint8
-UWarCapsuleComponent = {}
+local UWarCapsuleComponent = {}
 
 
 
@@ -15614,7 +15614,7 @@ UWarCapsuleComponent = {}
 ---@field RegimentManager FRegimentManager
 ---@field ExternalWarServiceReplicatedState FExternalWarServiceReplicatedState
 ---@field WarServiceReplicatedState FWarServiceReplicatedState
-UWarGameInstance = {}
+local UWarGameInstance = {}
 
 function UWarGameInstance:ResetServerTravelStatusOnClient() end
 ---@return uint32
@@ -15635,28 +15635,28 @@ function UWarGameInstance:DumpCollisionProfiles(OutputFileName, Type, BaseClassF
 
 
 ---@class UWarGameUserSettings : UGameUserSettings
-UWarGameUserSettings = {}
+local UWarGameUserSettings = {}
 
 
 ---@class UWarGameViewportClient : UGameViewportClient
-UWarGameViewportClient = {}
+local UWarGameViewportClient = {}
 
 
 ---@class UWarLocalPlayer : ULocalPlayer
 ---@field PlayerSaveGame UPlayerSaveGame
-UWarLocalPlayer = {}
+local UWarLocalPlayer = {}
 
 
 
 ---@class UWarMenuWidgetStyle : USlateWidgetStyleContainerBase
 ---@field WidgetStyle FWarMenuStyle
-UWarMenuWidgetStyle = {}
+local UWarMenuWidgetStyle = {}
 
 
 
 ---@class UWarOpsMapData : UObject
 ---@field Map FWarOpsMap
-UWarOpsMapData = {}
+local UWarOpsMapData = {}
 
 
 
@@ -15668,7 +15668,7 @@ UWarOpsMapData = {}
 ---@field Characters TArray<FSavedRecoveryCharacter>
 ---@field Vehicles TArray<FSavedRecoveryVehicle>
 ---@field OriginatorVehicleNames TArray<FString>
-UWarRecoverySaveGame = {}
+local UWarRecoverySaveGame = {}
 
 
 
@@ -15677,27 +15677,27 @@ UWarRecoverySaveGame = {}
 ---@field GridNode UWarReplicationGraphNode_GridSpatialization2D
 ---@field RailVehicleNode UWarReplicationGraphNode_RailVehicleNode
 ---@field AlwaysRelevantNode UReplicationGraphNode_ActorList
-UWarReplicationGraph = {}
+local UWarReplicationGraph = {}
 
 
 
 ---@class UWarReplicationGraphNode_AlwaysRelevant_ForConnection : UReplicationGraphNode
 ---@field PastRelevantActors TArray<FWarAlwaysRelevantActorInfo>
-UWarReplicationGraphNode_AlwaysRelevant_ForConnection = {}
+local UWarReplicationGraphNode_AlwaysRelevant_ForConnection = {}
 
 
 
 ---@class UWarReplicationGraphNode_GridSpatialization2D : UReplicationGraphNode_GridSpatialization2D
-UWarReplicationGraphNode_GridSpatialization2D = {}
+local UWarReplicationGraphNode_GridSpatialization2D = {}
 
 
 ---@class UWarReplicationGraphNode_PlayerStateFrequencyLimiter : UReplicationGraphNode
-UWarReplicationGraphNode_PlayerStateFrequencyLimiter = {}
+local UWarReplicationGraphNode_PlayerStateFrequencyLimiter = {}
 
 
 ---@class UWarReplicationGraphNode_RailVehicleNode : UReplicationGraphNode
 ---@field Trains TMap<ARailVehicle, FTrainRepInfo>
-UWarReplicationGraphNode_RailVehicleNode = {}
+local UWarReplicationGraphNode_RailVehicleNode = {}
 
 
 
@@ -15728,16 +15728,16 @@ UWarReplicationGraphNode_RailVehicleNode = {}
 ---@field DestroyedDestructibleProps TSet<FName>
 ---@field NextTechStateID int32
 ---@field PipelineSystems TArray<FPipelineSystem>
-UWarSaveGame = {}
+local UWarSaveGame = {}
 
 
 
 ---@class UWarSessionSettings : UObject
-UWarSessionSettings = {}
+local UWarSessionSettings = {}
 
 
 ---@class UWarStatics : UObject
-UWarStatics = {}
+local UWarStatics = {}
 
 ---@param WorldContextObject UObject
 ---@return boolean
@@ -15745,28 +15745,28 @@ function UWarStatics:IsNight(WorldContextObject) end
 
 
 ---@class UWarVoiceClient : UObject
-UWarVoiceClient = {}
+local UWarVoiceClient = {}
 
 
 ---@class UWatchTowerAnimInstance : UAnimInstance
 ---@field ViewDirection float
-UWatchTowerAnimInstance = {}
+local UWatchTowerAnimInstance = {}
 
 
 
 ---@class UWatchTowerMountComponent : UMountComponent
-UWatchTowerMountComponent = {}
+local UWatchTowerMountComponent = {}
 
 ---@param Direction ERotationDirection
 function UWatchTowerMountComponent:ServerSetRotationDirection(Direction) end
 
 
 ---@class UWaterBucketItemComponent : UProjectileItemComponent
-UWaterBucketItemComponent = {}
+local UWaterBucketItemComponent = {}
 
 
 ---@class UWaterDamageType : USimDamageType
-UWaterDamageType = {}
+local UWaterDamageType = {}
 
 
 ---@class UWaterMineItemComponent : ULargeItemComponent
@@ -15777,7 +15777,7 @@ UWaterDamageType = {}
 ---@field MinDistanceBetweenMines float
 ---@field MaxDeploymentRange float
 ---@field DeployDuration float
-UWaterMineItemComponent = {}
+local UWaterMineItemComponent = {}
 
 ---@param ActivityStateChange FActivityStateChange
 ---@param MouseTraceStart FVector
@@ -15787,15 +15787,15 @@ function UWaterMineItemComponent:ServerStartInvoke(ActivityStateChange, MouseTra
 
 
 ---@class UWaterProjectileMovementComponent : UProjectileMovementComponent
-UWaterProjectileMovementComponent = {}
+local UWaterProjectileMovementComponent = {}
 
 
 ---@class UWaterReloadSourceComponent : UActorComponent
-UWaterReloadSourceComponent = {}
+local UWaterReloadSourceComponent = {}
 
 
 ---@class UWaterStencilComponent : UStaticMeshComponent
-UWaterStencilComponent = {}
+local UWaterStencilComponent = {}
 
 
 ---@class UWeaponAnimInstance : UAnimInstance
@@ -15805,30 +15805,30 @@ UWaterStencilComponent = {}
 ---@field AimOffsetYaw float
 ---@field AimOffsetPitch float
 ---@field bIsCharacterScoping boolean
-UWeaponAnimInstance = {}
+local UWeaponAnimInstance = {}
 
 
 
 ---@class UWeatherData : UObject
 ---@field WeatherPatterns TArray<FWeatherPattern>
-UWeatherData = {}
+local UWeatherData = {}
 
 
 
 ---@class UWeatherIceLimiterBox : UBoxComponent
 ---@field Type EWeatherIceLimiterType
-UWeatherIceLimiterBox = {}
+local UWeatherIceLimiterBox = {}
 
 
 
 ---@class UWeatherIceLimiterSphere : USphereComponent
 ---@field Type EWeatherIceLimiterType
-UWeatherIceLimiterSphere = {}
+local UWeatherIceLimiterSphere = {}
 
 
 
 ---@class UWeatherIceMeshComponent : UStaticMeshComponent
-UWeatherIceMeshComponent = {}
+local UWeatherIceMeshComponent = {}
 
 
 ---@class UWeatherManager : UObject
@@ -15847,7 +15847,7 @@ UWeatherIceMeshComponent = {}
 ---@field EffectsLookAheadScale float
 ---@field SnowyPhysicalMaterials TArray<UPhysicalMaterial>
 ---@field WeatherIceActors TArray<AWeatherIceActor>
-UWeatherManager = {}
+local UWeatherManager = {}
 
 
 
@@ -15856,18 +15856,18 @@ UWeatherManager = {}
 ---@field WindSpeedNormalized float
 ---@field ArrowRotationSpeed float
 ---@field ArrowStaticMeshComponent UStaticMeshComponent
-UWeatherStationAnimInstance = {}
+local UWeatherStationAnimInstance = {}
 
 
 
 ---@class UWeatherStationBaseAnimInstance : UAnimInstance
 ---@field bIsActive boolean
-UWeatherStationBaseAnimInstance = {}
+local UWeatherStationBaseAnimInstance = {}
 
 
 
 ---@class UWeatherStationMountComponent : UMountComponent
-UWeatherStationMountComponent = {}
+local UWeatherStationMountComponent = {}
 
 function UWeatherStationMountComponent:ServerStartPrediction() end
 
@@ -15876,7 +15876,7 @@ function UWeatherStationMountComponent:ServerStartPrediction() end
 ---@field UpcomingWeather EWeatherType
 ---@field UpcomingPeakIntensity uint8
 ---@field UpcomingStartTimeHours int8
-UWeatherStationUserComponent = {}
+local UWeatherStationUserComponent = {}
 
 ---@param bResetConnectionTo boolean
 function UWeatherStationUserComponent:ServerDisconnectFromNetwork(bResetConnectionTo) end
@@ -15888,13 +15888,13 @@ function UWeatherStationUserComponent:ServerConnectToNetwork(GlobalID) end
 ---@field T1 FWindowMeshes
 ---@field T2 FWindowMeshes
 ---@field T3 FWindowMeshes
-UWindowMeshSet = {}
+local UWindowMeshSet = {}
 
 
 
 ---@class UWindsockAnimInstance : UAnimInstance
 ---@field WindSpeedNormalized float
-UWindsockAnimInstance = {}
+local UWindsockAnimInstance = {}
 
 
 
@@ -15905,7 +15905,7 @@ UWindsockAnimInstance = {}
 ---@field QueryOffset float
 ---@field MaxRange int32
 ---@field bIsEquipped boolean
-UWorkItemComponent = {}
+local UWorkItemComponent = {}
 
 ---@param InTargetActor AActor
 ---@param InTargetActorComponent USceneComponent
@@ -15916,18 +15916,18 @@ function UWorkItemComponent:OnRep_IsEquipped() end
 
 ---@class UWorldResourceSpawner : UObject
 ---@field ResourceClass TSubclassOf<AWorldResource>
-UWorldResourceSpawner = {}
+local UWorldResourceSpawner = {}
 
 
 
 ---@class UWoundCausingDamageType : USimDamageType
-UWoundCausingDamageType = {}
+local UWoundCausingDamageType = {}
 
 
 ---@class UWoundedCarriedItemComponent : ULargeItemComponent
 ---@field CarriedCharacter ASimCharacter
 ---@field CapsuleOffset FVector
-UWoundedCarriedItemComponent = {}
+local UWoundedCarriedItemComponent = {}
 
 
 
@@ -15945,7 +15945,7 @@ UWoundedCarriedItemComponent = {}
 ---@field SmashBaseDamage float
 ---@field SmashRadius float
 ---@field bIsEquipped boolean
-UZombieWeaponComponent = {}
+local UZombieWeaponComponent = {}
 
 ---@param WeaponInvokeInfo FCharacterInvokeInfo
 ---@param ActivityStateChange FActivityStateChange

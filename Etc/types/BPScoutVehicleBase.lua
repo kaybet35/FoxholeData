@@ -11,7 +11,7 @@
 ---@field PassengerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field Camera UCameraComponent
-ABPScoutVehicleBase_C = {}
+local ABPScoutVehicleBase_C = {}
 
 
 

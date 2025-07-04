@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Audio UAudioComponent
 ---@field RadialForce URadialForceComponent
-AStaticArtilleryExplosion_C = {}
+local AStaticArtilleryExplosion_C = {}
 
 function AStaticArtilleryExplosion_C:BPDetonate() end
 function AStaticArtilleryExplosion_C:BPTelegraph() end

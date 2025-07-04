@@ -9,7 +9,7 @@
 ---@field AnimGraphNode_BlendListByBool_628EC86E479267C9C0D6FB8CE62E0C06 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_DBE3FF2C42E28D68BAD3EBB758A81537 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_8A1A1C454FF8E3F4504B4E953D6067E0 FAnimNode_BlendSpacePlayer
-UABP_TruckMultiC_C = {}
+local UABP_TruckMultiC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_TruckMultiC_C:AnimGraph(AnimGraph) end

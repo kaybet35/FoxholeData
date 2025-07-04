@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class FMagicLeapImageTrackerTarget
-FMagicLeapImageTrackerTarget = {}
+local FMagicLeapImageTrackerTarget = {}
 
 
 ---@class UMagicLeapImageTrackerComponent : USceneComponent
@@ -15,7 +15,7 @@ FMagicLeapImageTrackerTarget = {}
 ---@field OnImageTargetFound FMagicLeapImageTrackerComponentOnImageTargetFound
 ---@field OnImageTargetLost FMagicLeapImageTrackerComponentOnImageTargetLost
 ---@field OnImageTargetUnreliableTracking FMagicLeapImageTrackerComponentOnImageTargetUnreliableTracking
-UMagicLeapImageTrackerComponent = {}
+local UMagicLeapImageTrackerComponent = {}
 
 ---@param ImageTarget UTexture2D
 ---@return boolean
@@ -25,7 +25,7 @@ function UMagicLeapImageTrackerComponent:RemoveTargetAsync() end
 
 
 ---@class UMagicLeapImageTrackerFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapImageTrackerFunctionLibrary = {}
+local UMagicLeapImageTrackerFunctionLibrary = {}
 
 ---@param MaxSimultaneousTargets int32
 function UMagicLeapImageTrackerFunctionLibrary:SetMaxSimultaneousTargets(MaxSimultaneousTargets) end

@@ -59,7 +59,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_C6CF84C5402B7F7886F22F9202D845E4 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_56B22E6E4F66EE8F2159EAAB620930D5 FAnimNode_SequencePlayer
 ---@field ['is Radar On'] boolean
-UABP_DestroyerC_C = {}
+local UABP_DestroyerC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_DestroyerC_C:AnimGraph(AnimGraph) end

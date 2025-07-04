@@ -26,7 +26,7 @@
 ---@field AnimGraphNode_StateResult_061E00924F4CB10A278E87860828CB8F FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_A4E537154DD7C635E13831895FEDF5E8 FAnimNode_StateMachine
 ---@field AnimGraphNode_LayeredBoneBlend_CDCD30384111DE71FE9C80A3578BAB9B FAnimNode_LayeredBoneBlend
-UABP_ArmoredCarDefensive_tankette_C = {}
+local UABP_ArmoredCarDefensive_tankette_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ArmoredCarDefensive_tankette_C:AnimGraph(AnimGraph) end

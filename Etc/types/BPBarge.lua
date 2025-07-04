@@ -17,7 +17,7 @@
 ---@field ['Ramp Start (Editor Only)'] USceneComponent
 ---@field idle UAudioComponent
 ---@field Camera UCameraComponent
-ABPBarge_C = {}
+local ABPBarge_C = {}
 
 ---@param IsOn boolean
 function ABPBarge_C:BPOnVehicleOn(IsOn) end

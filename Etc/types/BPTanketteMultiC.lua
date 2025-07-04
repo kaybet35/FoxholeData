@@ -18,7 +18,7 @@
 ---@field CommanderExit USeatExitComponent
 ---@field CommanderTrigger USeatTriggerComponent
 ---@field chassis USkeletalMeshComponent
-ABPTanketteMultiC_C = {}
+local ABPTanketteMultiC_C = {}
 
 ---@param IsOn boolean
 function ABPTanketteMultiC_C:BPOnVehicleOn(IsOn) end

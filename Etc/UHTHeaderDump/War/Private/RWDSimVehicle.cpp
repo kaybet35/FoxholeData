@@ -26,12 +26,12 @@ ARWDSimVehicle::ARWDSimVehicle(const FObjectInitializer& ObjectInitializer) : Su
     this->GearShiftDownSoundCue = NULL;
     this->TowHitch = NULL;
     this->IdleLoop->SetupAttachment(RootComponent);
-    this->RearLeftTireDirtLowSpeedPS->SetupAttachment(RootComponent);
-    this->RearLeftTireDirtHighSpeedPS->SetupAttachment(RootComponent);
-    this->RearRightTireDirtLowSpeedPS->SetupAttachment(RootComponent);
-    this->RearRightTireDirtHighSpeedPS->SetupAttachment(RootComponent);
-    this->MainDirtLowSpeedPS->SetupAttachment(RootComponent);
     this->MainDirtHighSpeedPS->SetupAttachment(RootComponent);
+    this->MainDirtLowSpeedPS->SetupAttachment(RootComponent);
+    this->RearLeftTireDirtHighSpeedPS->SetupAttachment(RootComponent);
+    this->RearLeftTireDirtLowSpeedPS->SetupAttachment(RootComponent);
+    this->RearRightTireDirtHighSpeedPS->SetupAttachment(RootComponent);
+    this->RearRightTireDirtLowSpeedPS->SetupAttachment(RootComponent);
     this->SkiddingDirtPS->SetupAttachment(RootComponent);
 }
 

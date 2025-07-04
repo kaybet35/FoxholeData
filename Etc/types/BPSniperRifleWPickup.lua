@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSniperRifleWPickup_C : AFirearmPickup
-ABPSniperRifleWPickup_C = {}
+local ABPSniperRifleWPickup_C = {}
 
 

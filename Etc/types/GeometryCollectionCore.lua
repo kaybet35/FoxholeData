@@ -9,13 +9,13 @@
 ---@field Breakings TArray<FSolverBreakingData>
 ---@field Trailings TSet<FSolverTrailingData>
 ---@field Timestamp float
-FRecordedFrame = {}
+local FRecordedFrame = {}
 
 
 
 ---@class FRecordedTransformTrack
 ---@field Records TArray<FRecordedFrame>
-FRecordedTransformTrack = {}
+local FRecordedTransformTrack = {}
 
 
 
@@ -26,7 +26,7 @@ FRecordedTransformTrack = {}
 ---@field Mass float
 ---@field ParticleIndex int32
 ---@field ParticleIndexMesh int32
-FSolverBreakingData = {}
+local FSolverBreakingData = {}
 
 
 
@@ -44,7 +44,7 @@ FSolverBreakingData = {}
 ---@field LevelsetIndex int32
 ---@field ParticleIndexMesh int32
 ---@field LevelsetIndexMesh int32
-FSolverCollisionData = {}
+local FSolverCollisionData = {}
 
 
 
@@ -55,7 +55,7 @@ FSolverCollisionData = {}
 ---@field Mass float
 ---@field ParticleIndex int32
 ---@field ParticleIndexMesh int32
-FSolverTrailingData = {}
+local FSolverTrailingData = {}
 
 
 

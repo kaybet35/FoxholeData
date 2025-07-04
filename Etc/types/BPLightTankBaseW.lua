@@ -7,7 +7,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field lightR UStaticMeshComponent
 ---@field SpotLight USpotLightComponent
-ABPLightTankBaseW_C = {}
+local ABPLightTankBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPLightTankBaseW_C:BPOnVehicleOn(IsOn) end

@@ -10,7 +10,7 @@
 ---@field Decal2 UDecalComponent
 ---@field Decal3 UDecalComponent
 ---@field Floor UStaticMeshComponent
-ABPTrenchConnectorDestroyedT1_C = {}
+local ABPTrenchConnectorDestroyedT1_C = {}
 
 
 

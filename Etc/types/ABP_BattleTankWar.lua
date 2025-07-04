@@ -60,7 +60,7 @@
 ---@field AnimGraphNode_StateResult_538846024BCE7DDF333946B63732743A FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_32A32F364362B63AED5C1EBCD653082E FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_525C75D54B1C9B4765A6D685E3A3BCC8 FAnimNode_StateMachine
-UABP_BattleTankWar_C = {}
+local UABP_BattleTankWar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_BattleTankWar_C:AnimGraph(AnimGraph) end

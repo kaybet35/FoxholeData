@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_B61BBD01461570B1B1F477A7CEEB3340 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendListByBool_792D43714D458E8A13AB95AE1D0FBF3F FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_5E5B47D544764EBB0B7B3DB789550F5D FAnimNode_SequencePlayer
-UABP_MechWarden_C = {}
+local UABP_MechWarden_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_MechWarden_C:AnimGraph(AnimGraph) end

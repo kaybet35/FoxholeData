@@ -16,7 +16,7 @@
 ---@field Node00 UStaticMeshComponent
 ---@field BPResourceGroupRenderComponent UBPResourceGroupRenderComponent_C
 ---@field UseVolume UBoxComponent
-ABPTrainCoal_C = {}
+local ABPTrainCoal_C = {}
 
 
 

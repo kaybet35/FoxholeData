@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRevolverPickup_C : AFirearmPickup
-ABPRevolverPickup_C = {}
+local ABPRevolverPickup_C = {}
 
 

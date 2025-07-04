@@ -13,8 +13,8 @@ AConstructionSite::AConstructionSite(const FObjectInitializer& ObjectInitializer
     this->GarageFootprintComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("GarageFootprint"));
     this->CraneSpawnLocationComponent = CreateDefaultSubobject<UCraneSpawnLocationComponent>(TEXT("CraneSpawnLocationComponent"));
     this->FullRepairCost = 100;
-    this->GarageFootprintComponent->SetupAttachment(RootComponent);
     this->CraneSpawnLocationComponent->SetupAttachment(RootComponent);
+    this->GarageFootprintComponent->SetupAttachment(RootComponent);
 }
 
 bool AConstructionSite::ValidateMapBuildLocation() const {

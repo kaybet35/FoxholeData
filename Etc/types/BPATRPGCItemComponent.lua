@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATRPGCItemComponent_C : UProjectileItemComponent
-UBPATRPGCItemComponent_C = {}
+local UBPATRPGCItemComponent_C = {}
 
 

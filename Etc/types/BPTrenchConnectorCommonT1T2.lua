@@ -12,7 +12,7 @@
 ---@field DirtSplineLeft USplineConnectorComponent
 ---@field DirtSplineRight USplineConnectorComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchConnectorCommonT1T2_C = {}
+local ABPTrenchConnectorCommonT1T2_C = {}
 
 
 

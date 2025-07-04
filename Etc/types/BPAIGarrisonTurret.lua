@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPAIGarrisonTurret_C : UAITurretComponent
-UBPAIGarrisonTurret_C = {}
+local UBPAIGarrisonTurret_C = {}
 
 

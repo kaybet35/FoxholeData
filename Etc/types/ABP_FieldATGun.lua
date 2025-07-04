@@ -23,7 +23,7 @@
 ---@field AnimGraphNode_SequencePlayer_CDA6F17648A5524BE5B0CF88D158BCE2 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_4688C2234F93A3524CD6179A5E72A73A FAnimNode_BlendSpacePlayer
 ---@field WheelRotationSpeedFactor int32
-UABP_FieldATGun_C = {}
+local UABP_FieldATGun_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FieldATGun_C:AnimGraph(AnimGraph) end

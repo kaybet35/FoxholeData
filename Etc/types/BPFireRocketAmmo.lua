@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFireRocketAmmo_C : ULargeItemComponent
-UBPFireRocketAmmo_C = {}
+local UBPFireRocketAmmo_C = {}
 
 

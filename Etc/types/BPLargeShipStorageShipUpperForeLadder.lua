@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLargeShipStorageShipUpperForeLadder_C : ULadderComponent
-UBPLargeShipStorageShipUpperForeLadder_C = {}
+local UBPLargeShipStorageShipUpperForeLadder_C = {}
 
 

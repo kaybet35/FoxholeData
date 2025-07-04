@@ -4,7 +4,7 @@
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field TankStopSplineCommon UTemplateComponent
 ---@field SplineConnector USplineConnectorComponent
-ABPTankStopSplineT3_C = {}
+local ABPTankStopSplineT3_C = {}
 
 
 

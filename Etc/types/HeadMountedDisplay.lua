@@ -3,7 +3,7 @@
 ---@class FXRDeviceId
 ---@field SystemName FName
 ---@field DeviceID int32
-FXRDeviceId = {}
+local FXRDeviceId = {}
 
 
 
@@ -11,7 +11,7 @@ FXRDeviceId = {}
 ---@field OnModelLoaded FAsyncTask_LoadXRDeviceVisComponentOnModelLoaded
 ---@field OnLoadFailure FAsyncTask_LoadXRDeviceVisComponentOnLoadFailure
 ---@field SpawnedComponent UPrimitiveComponent
-UAsyncTask_LoadXRDeviceVisComponent = {}
+local UAsyncTask_LoadXRDeviceVisComponent = {}
 
 ---@param Target AActor
 ---@param SystemName FName
@@ -32,7 +32,7 @@ function UAsyncTask_LoadXRDeviceVisComponent:AddDeviceVisualizationComponentAsyn
 
 
 ---@class UHeadMountedDisplayFunctionLibrary : UBlueprintFunctionLibrary
-UHeadMountedDisplayFunctionLibrary = {}
+local UHeadMountedDisplayFunctionLibrary = {}
 
 ---@param ExternalTrackingTransform FTransform
 function UHeadMountedDisplayFunctionLibrary:UpdateExternalTrackingHMDPosition(ExternalTrackingTransform) end
@@ -153,7 +153,7 @@ function UHeadMountedDisplayFunctionLibrary:CalibrateExternalTrackingToHMD(Exter
 ---@field CustomDisplayMesh UStaticMesh
 ---@field DisplayMeshMaterialOverrides TArray<UMaterialInterface>
 ---@field DisplayComponent UPrimitiveComponent
-UMotionControllerComponent = {}
+local UMotionControllerComponent = {}
 
 ---@param NewSource EControllerHand
 function UMotionControllerComponent:SetTrackingSource(NewSource) end
@@ -183,7 +183,7 @@ function UMotionControllerComponent:GetHandJointPosition(jointIndex, bValueFound
 
 
 ---@class UMotionTrackedDeviceFunctionLibrary : UBlueprintFunctionLibrary
-UMotionTrackedDeviceFunctionLibrary = {}
+local UMotionTrackedDeviceFunctionLibrary = {}
 
 ---@param Enable boolean
 function UMotionTrackedDeviceFunctionLibrary:SetIsControllerMotionTrackingEnabledByDefault(Enable) end
@@ -246,12 +246,12 @@ function UMotionTrackedDeviceFunctionLibrary:DisableMotionTrackingForComponent(M
 ---@field HMDPutOnHeadDelegate FVRNotificationsComponentHMDPutOnHeadDelegate
 ---@field HMDRemovedFromHeadDelegate FVRNotificationsComponentHMDRemovedFromHeadDelegate
 ---@field VRControllerRecenteredDelegate FVRNotificationsComponentVRControllerRecenteredDelegate
-UVRNotificationsComponent = {}
+local UVRNotificationsComponent = {}
 
 
 
 ---@class UXRAssetFunctionLibrary : UBlueprintFunctionLibrary
-UXRAssetFunctionLibrary = {}
+local UXRAssetFunctionLibrary = {}
 
 ---@param Target AActor
 ---@param SystemName FName
@@ -270,7 +270,7 @@ function UXRAssetFunctionLibrary:AddDeviceVisualizationComponentBlocking(Target,
 
 
 ---@class UXRLoadingScreenFunctionLibrary : UBlueprintFunctionLibrary
-UXRLoadingScreenFunctionLibrary = {}
+local UXRLoadingScreenFunctionLibrary = {}
 
 function UXRLoadingScreenFunctionLibrary:ShowLoadingScreen() end
 ---@param Texture UTexture

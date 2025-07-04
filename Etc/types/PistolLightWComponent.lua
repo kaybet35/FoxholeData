@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPistolLightWComponent_C : UHitScanWeaponComponent
-UPistolLightWComponent_C = {}
+local UPistolLightWComponent_C = {}
 
 

@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class FWebJSCallbackBase
-FWebJSCallbackBase = {}
+local FWebJSCallbackBase = {}
 
 
 ---@class FWebJSFunction : FWebJSCallbackBase
-FWebJSFunction = {}
+local FWebJSFunction = {}
 
 
 ---@class FWebJSResponse : FWebJSCallbackBase
-FWebJSResponse = {}
+local FWebJSResponse = {}
 
 

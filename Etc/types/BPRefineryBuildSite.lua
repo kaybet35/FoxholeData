@@ -12,7 +12,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPRefineryBuildSite_C = {}
+local ABPRefineryBuildSite_C = {}
 
 
 

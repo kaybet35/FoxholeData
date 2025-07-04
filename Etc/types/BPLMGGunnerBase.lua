@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLMGGunnerBase_C : UHitScanMountComponent
-UBPLMGGunnerBase_C = {}
+local UBPLMGGunnerBase_C = {}
 
 

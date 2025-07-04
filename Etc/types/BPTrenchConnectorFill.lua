@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPTrenchConnectorFill_C : ABPTrenchConnectorT1_C
-ABPTrenchConnectorFill_C = {}
+local ABPTrenchConnectorFill_C = {}
 
 

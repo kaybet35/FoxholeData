@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPDefaultCalloutComponent_C : UCalloutComponent
-UBPDefaultCalloutComponent_C = {}
+local UBPDefaultCalloutComponent_C = {}
 
 

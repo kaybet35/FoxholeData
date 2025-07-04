@@ -98,7 +98,7 @@
 ---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWWarehouseG2_C = {}
+local AUniqueWWarehouseG2_C = {}
 
 function AUniqueWWarehouseG2_C:ReceiveBeginPlay() end
 ---@param TechTreeComponent UTechTreeComponent

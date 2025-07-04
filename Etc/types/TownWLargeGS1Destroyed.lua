@@ -5,7 +5,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field RoofMesh UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownWLargeGS1Destroyed_C = {}
+local ATownWLargeGS1Destroyed_C = {}
 
 
 

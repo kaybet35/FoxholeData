@@ -1,12 +1,12 @@
 ---@enum EClothingWindMethod
-EClothingWindMethod = {
+local EClothingWindMethod = {
     Legacy = 0,
     Accurate = 1,
     EClothingWindMethod_MAX = 2,
 }
 
 ---@enum MaskTarget_PhysMesh
-MaskTarget_PhysMesh = {
+local MaskTarget_PhysMesh = {
     None = 0,
     MaxDistance = 1,
     BackstopDistance = 2,

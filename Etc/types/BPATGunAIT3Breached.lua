@@ -5,7 +5,7 @@
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPATGunAIT3Breached_C = {}
+local ABPATGunAIT3Breached_C = {}
 
 
 

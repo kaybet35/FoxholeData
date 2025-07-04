@@ -5,7 +5,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriverSeat UVehicleSeatComponent
 ---@field Camera UCameraComponent
-ABPPlayerImposter_C = {}
+local ABPPlayerImposter_C = {}
 
 
 

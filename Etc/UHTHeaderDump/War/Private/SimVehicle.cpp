@@ -106,24 +106,24 @@ ASimVehicle::ASimVehicle(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->bCheckPassengerEncumbrance = true;
     this->bIsVisibleOnSonar = false;
     this->bDestroysIceWhenWaterTravelling = false;
-    this->RightSideTrackLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->PassengerArea->SetupAttachment(RootComponent);
+    this->BackUpSFXLoop->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
+    this->CameraRigComponent->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->DestroyedMesh->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->MinorDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->MajorDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->DisabledTurretFX->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->DisabledTurret2FX->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->DisabledTurret3FX->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->DisabledTurret4FX->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->DisabledTurret5FX->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
+    this->DisabledTurretFX->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->DriveLoop->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->BackUpSFXLoop->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->CameraRigComponent->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->FrontAxleCastLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
-    this->RearAxleCastLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->FrontLeftRollCastLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->FrontRightRollCastLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
     this->LeftSideTrackLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
+    this->MajorDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
+    this->MinorDamagePS->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
+    this->PassengerArea->SetupAttachment(RootComponent);
+    this->RearAxleCastLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
+    this->RightSideTrackLocation->SetupAttachment(p_CapsuleComponent_Parent->ContainerPtrToValuePtr<UCapsuleComponent>(this));
 }
 
 void ASimVehicle::VehicleCollisionTouched(UPrimitiveComponent* OverlappedComp, AActor* Other, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult) {

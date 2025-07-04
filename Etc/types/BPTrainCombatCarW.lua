@@ -21,7 +21,7 @@
 ---@field RearGunnerTrigger USeatTriggerComponent
 ---@field MainGunnerTrigger USeatTriggerComponent
 ---@field UseVolume UBoxComponent
-ABPTrainCombatCarW_C = {}
+local ABPTrainCombatCarW_C = {}
 
 
 

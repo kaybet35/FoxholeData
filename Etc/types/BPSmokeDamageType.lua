@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSmokeDamageType_C : UNonDamagingDamageType
-UBPSmokeDamageType_C = {}
+local UBPSmokeDamageType_C = {}
 
 

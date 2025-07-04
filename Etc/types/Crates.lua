@@ -4,7 +4,7 @@
 ---@field WoodenCrateBottom UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field Arrow UArrowComponent
-ACrates_C = {}
+local ACrates_C = {}
 
 
 

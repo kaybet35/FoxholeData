@@ -3,7 +3,7 @@
 ---@class ATankImpactExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-ATankImpactExplosion_C = {}
+local ATankImpactExplosion_C = {}
 
 function ATankImpactExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSmallRailTrackSplinePathSocket_C : UBuildSocketComponent
-UBPSmallRailTrackSplinePathSocket_C = {}
+local UBPSmallRailTrackSplinePathSocket_C = {}
 
 

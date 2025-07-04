@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEnvironmentalModificationData_C : UEnvironmentalModificationData
-UBPEnvironmentalModificationData_C = {}
+local UBPEnvironmentalModificationData_C = {}
 
 

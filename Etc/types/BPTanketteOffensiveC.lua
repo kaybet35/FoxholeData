@@ -5,7 +5,7 @@
 ---@field CommanderExit USeatExitComponent
 ---@field CommanderTrigger USeatTriggerComponent
 ---@field chassis USkeletalMeshComponent
-ABPTanketteOffensiveC_C = {}
+local ABPTanketteOffensiveC_C = {}
 
 
 

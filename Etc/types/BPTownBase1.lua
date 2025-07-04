@@ -94,7 +94,7 @@
 ---@field BPAIGarrisonTurret_Front UBPAIGarrisonTurret_C
 ---@field ViewTargetCamera UCameraComponent
 ---@field TownBaseMesh UStaticMeshComponent
-ABPTownBase1_C = {}
+local ABPTownBase1_C = {}
 
 ---@param VisualTeamId int32
 function ABPTownBase1_C:BPSetTeamVisuals(VisualTeamId) end

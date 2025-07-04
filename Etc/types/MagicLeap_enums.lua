@@ -1,12 +1,12 @@
 ---@enum CloudStatus
-CloudStatus = {
+local CloudStatus = {
     CloudStatus_NotDone = 0,
     CloudStatus_Done = 1,
     CloudStatus_MAX = 2,
 }
 
 ---@enum EMagicLeapHeadTrackingError
-EMagicLeapHeadTrackingError = {
+local EMagicLeapHeadTrackingError = {
     None = 0,
     NotEnoughFeatures = 1,
     LowLight = 2,
@@ -15,7 +15,7 @@ EMagicLeapHeadTrackingError = {
 }
 
 ---@enum EMagicLeapHeadTrackingMapEvent
-EMagicLeapHeadTrackingMapEvent = {
+local EMagicLeapHeadTrackingMapEvent = {
     Lost = 0,
     Recovered = 1,
     RecoveryFailed = 2,
@@ -24,7 +24,7 @@ EMagicLeapHeadTrackingMapEvent = {
 }
 
 ---@enum EMagicLeapHeadTrackingMode
-EMagicLeapHeadTrackingMode = {
+local EMagicLeapHeadTrackingMode = {
     PositionAndOrientation = 0,
     Unavailable = 1,
     Unknown = 2,
@@ -32,7 +32,7 @@ EMagicLeapHeadTrackingMode = {
 }
 
 ---@enum EMagicLeapMeshLOD
-EMagicLeapMeshLOD = {
+local EMagicLeapMeshLOD = {
     Minimum = 0,
     Medium = 1,
     Maximum = 2,
@@ -40,7 +40,7 @@ EMagicLeapMeshLOD = {
 }
 
 ---@enum EMagicLeapMeshState
-EMagicLeapMeshState = {
+local EMagicLeapMeshState = {
     New = 0,
     Updated = 1,
     Deleted = 2,
@@ -49,14 +49,14 @@ EMagicLeapMeshState = {
 }
 
 ---@enum EMagicLeapMeshType
-EMagicLeapMeshType = {
+local EMagicLeapMeshType = {
     Triangles = 0,
     PointCloud = 1,
     EMagicLeapMeshType_MAX = 2,
 }
 
 ---@enum EMagicLeapMeshVertexColorMode
-EMagicLeapMeshVertexColorMode = {
+local EMagicLeapMeshVertexColorMode = {
     None = 0,
     Confidence = 1,
     Block = 2,
@@ -65,7 +65,7 @@ EMagicLeapMeshVertexColorMode = {
 }
 
 ---@enum EMagicLeapRaycastResultState
-EMagicLeapRaycastResultState = {
+local EMagicLeapRaycastResultState = {
     RequestFailed = 0,
     NoCollision = 1,
     HitUnobserved = 2,
@@ -74,7 +74,7 @@ EMagicLeapRaycastResultState = {
 }
 
 ---@enum PurchaseType
-PurchaseType = {
+local PurchaseType = {
     Consumable = 0,
     Nonconsumable = 1,
     Undefined = 2,

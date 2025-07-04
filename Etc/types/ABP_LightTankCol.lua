@@ -25,7 +25,7 @@
 ---@field AnimGraphNode_SequencePlayer_195B0F59485B0079C3CD31A15452CA83 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_ApplyAdditive_69CDC84A4D65DC08E2E2AAA61CB960F2 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_BlendSpacePlayer_61B665A042BA9E42179301A0F0167C35 FAnimNode_BlendSpacePlayer
-UABP_LightTankCol_C = {}
+local UABP_LightTankCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LightTankCol_C:AnimGraph(AnimGraph) end

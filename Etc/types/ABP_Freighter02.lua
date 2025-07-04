@@ -21,7 +21,7 @@
 ---@field AnimGraphNode_StateMachine_F2BF68824C4B41CAE28D9F82E3341F46 FAnimNode_StateMachine
 ---@field AnimGraphNode_BlendSpacePlayer_02D53DF94B7CB4F4DCACF480AEBC3DA0 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_SequencePlayer_83FEF5C2485C40799D9635A69387EC41 FAnimNode_SequencePlayer
-UABP_Freighter02_C = {}
+local UABP_Freighter02_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Freighter02_C:AnimGraph(AnimGraph) end

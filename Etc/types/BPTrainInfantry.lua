@@ -12,7 +12,7 @@
 ---@field LeftGunnerSeat UVehicleSeatComponent
 ---@field RightGunnerSeat UVehicleSeatComponent
 ---@field UseVolume UBoxComponent
-ABPTrainInfantry_C = {}
+local ABPTrainInfantry_C = {}
 
 
 

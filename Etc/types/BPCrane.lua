@@ -8,7 +8,7 @@
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPCrane_C = {}
+local ABPCrane_C = {}
 
 
 

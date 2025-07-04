@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Audio UAudioComponent
 ---@field RadialForce URadialForceComponent
-AHeavyArtilleryExplosion_C = {}
+local AHeavyArtilleryExplosion_C = {}
 
 function AHeavyArtilleryExplosion_C:ReceiveBeginPlay() end
 function AHeavyArtilleryExplosion_C:BPTelegraph() end

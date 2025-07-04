@@ -23,7 +23,7 @@
 ---@field NoBuildZone UBoxComponent
 ---@field Decal UDecalComponent
 ---@field PointLight UPointLightComponent
-ABPForwardBase1_C = {}
+local ABPForwardBase1_C = {}
 
 
 

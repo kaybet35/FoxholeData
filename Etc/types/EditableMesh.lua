@@ -3,7 +3,7 @@
 ---@class FAdaptorPolygon
 ---@field PolygonGroupID FPolygonGroupID
 ---@field TriangulatedPolygonTriangleIndices TArray<FAdaptorTriangleID>
-FAdaptorPolygon = {}
+local FAdaptorPolygon = {}
 
 
 
@@ -11,32 +11,32 @@ FAdaptorPolygon = {}
 ---@field RenderingSectionIndex uint32
 ---@field MaterialIndex int32
 ---@field MaxTriangles int32
-FAdaptorPolygon2Group = {}
+local FAdaptorPolygon2Group = {}
 
 
 
 ---@class FAdaptorTriangleID : FElementID
-FAdaptorTriangleID = {}
+local FAdaptorTriangleID = {}
 
 
 ---@class FAttributesForEdge
 ---@field EdgeID FEdgeID
 ---@field EdgeAttributes FMeshElementAttributeList
-FAttributesForEdge = {}
+local FAttributesForEdge = {}
 
 
 
 ---@class FAttributesForVertex
 ---@field VertexID FVertexID
 ---@field VertexAttributes FMeshElementAttributeList
-FAttributesForVertex = {}
+local FAttributesForVertex = {}
 
 
 
 ---@class FAttributesForVertexInstance
 ---@field VertexInstanceID FVertexInstanceID
 ---@field VertexInstanceAttributes FMeshElementAttributeList
-FAttributesForVertexInstance = {}
+local FAttributesForVertexInstance = {}
 
 
 
@@ -44,7 +44,7 @@ FAttributesForVertexInstance = {}
 ---@field PolygonID FPolygonID
 ---@field PerimeterVertexIndicesAndInstanceIDs TArray<FVertexIndexAndInstanceID>
 ---@field VertexIndicesAndInstanceIDsForEachHole TArray<FVertexInstancesForPolygonHole>
-FChangeVertexInstancesForPolygon = {}
+local FChangeVertexInstancesForPolygon = {}
 
 
 
@@ -53,7 +53,7 @@ FChangeVertexInstancesForPolygon = {}
 ---@field VertexID1 FVertexID
 ---@field EdgeAttributes FMeshElementAttributeList
 ---@field OriginalEdgeID FEdgeID
-FEdgeToCreate = {}
+local FEdgeToCreate = {}
 
 
 
@@ -61,31 +61,31 @@ FEdgeToCreate = {}
 ---@field AttributeName FName
 ---@field AttributeIndex int32
 ---@field AttributeValue FMeshElementAttributeValue
-FMeshElementAttributeData = {}
+local FMeshElementAttributeData = {}
 
 
 
 ---@class FMeshElementAttributeList
 ---@field Attributes TArray<FMeshElementAttributeData>
-FMeshElementAttributeList = {}
+local FMeshElementAttributeList = {}
 
 
 
 ---@class FMeshElementAttributeValue
-FMeshElementAttributeValue = {}
+local FMeshElementAttributeValue = {}
 
 
 ---@class FPolygonGroupForPolygon
 ---@field PolygonID FPolygonID
 ---@field PolygonGroupID FPolygonGroupID
-FPolygonGroupForPolygon = {}
+local FPolygonGroupForPolygon = {}
 
 
 
 ---@class FPolygonGroupToCreate
 ---@field PolygonGroupAttributes FMeshElementAttributeList
 ---@field OriginalPolygonGroupID FPolygonGroupID
-FPolygonGroupToCreate = {}
+local FPolygonGroupToCreate = {}
 
 
 
@@ -94,21 +94,21 @@ FPolygonGroupToCreate = {}
 ---@field PerimeterVertices TArray<FVertexAndAttributes>
 ---@field OriginalPolygonID FPolygonID
 ---@field PolygonEdgeHardness EPolygonEdgeHardness
-FPolygonToCreate = {}
+local FPolygonToCreate = {}
 
 
 
 ---@class FPolygonToSplit
 ---@field PolygonID FPolygonID
 ---@field VertexPairsToSplitAt TArray<FVertexPair>
-FPolygonToSplit = {}
+local FPolygonToSplit = {}
 
 
 
 ---@class FRenderingPolygon
 ---@field PolygonGroupID FPolygonGroupID
 ---@field TriangulatedPolygonTriangleIndices TArray<FTriangleID>
-FRenderingPolygon = {}
+local FRenderingPolygon = {}
 
 
 
@@ -116,7 +116,7 @@ FRenderingPolygon = {}
 ---@field RenderingSectionIndex uint32
 ---@field MaterialIndex int32
 ---@field MaxTriangles int32
-FRenderingPolygonGroup = {}
+local FRenderingPolygonGroup = {}
 
 
 
@@ -125,7 +125,7 @@ FRenderingPolygonGroup = {}
 ---@field QuadVertex1 FSubdividedQuadVertex
 ---@field QuadVertex2 FSubdividedQuadVertex
 ---@field QuadVertex3 FSubdividedQuadVertex
-FSubdividedQuad = {}
+local FSubdividedQuad = {}
 
 
 
@@ -137,14 +137,14 @@ FSubdividedQuad = {}
 ---@field VertexNormal FVector
 ---@field VertexTangent FVector
 ---@field VertexBinormalSign float
-FSubdividedQuadVertex = {}
+local FSubdividedQuadVertex = {}
 
 
 
 ---@class FSubdividedWireEdge
 ---@field EdgeVertex0PositionIndex int32
 ---@field EdgeVertex1PositionIndex int32
-FSubdividedWireEdge = {}
+local FSubdividedWireEdge = {}
 
 
 
@@ -152,13 +152,13 @@ FSubdividedWireEdge = {}
 ---@field VertexPositions TArray<FVector>
 ---@field Sections TArray<FSubdivisionLimitSection>
 ---@field SubdividedWireEdges TArray<FSubdividedWireEdge>
-FSubdivisionLimitData = {}
+local FSubdivisionLimitData = {}
 
 
 
 ---@class FSubdivisionLimitSection
 ---@field SubdividedQuads TArray<FSubdividedQuad>
-FSubdivisionLimitSection = {}
+local FSubdivisionLimitSection = {}
 
 
 
@@ -166,7 +166,7 @@ FSubdivisionLimitSection = {}
 ---@field VertexInstanceID FVertexInstanceID
 ---@field VertexID FVertexID
 ---@field PolygonVertexAttributes FMeshElementAttributeList
-FVertexAndAttributes = {}
+local FVertexAndAttributes = {}
 
 
 
@@ -174,20 +174,20 @@ FVertexAndAttributes = {}
 ---@field PolygonID FPolygonID
 ---@field PerimeterVertexAttributeLists TArray<FMeshElementAttributeList>
 ---@field VertexAttributeListsForEachHole TArray<FVertexAttributesForPolygonHole>
-FVertexAttributesForPolygon = {}
+local FVertexAttributesForPolygon = {}
 
 
 
 ---@class FVertexAttributesForPolygonHole
 ---@field VertexAttributeList TArray<FMeshElementAttributeList>
-FVertexAttributesForPolygonHole = {}
+local FVertexAttributesForPolygonHole = {}
 
 
 
 ---@class FVertexIndexAndInstanceID
 ---@field ContourIndex int32
 ---@field VertexInstanceID FVertexInstanceID
-FVertexIndexAndInstanceID = {}
+local FVertexIndexAndInstanceID = {}
 
 
 
@@ -195,34 +195,34 @@ FVertexIndexAndInstanceID = {}
 ---@field VertexID FVertexID
 ---@field VertexInstanceAttributes FMeshElementAttributeList
 ---@field OriginalVertexInstanceID FVertexInstanceID
-FVertexInstanceToCreate = {}
+local FVertexInstanceToCreate = {}
 
 
 
 ---@class FVertexInstancesForPolygonHole
 ---@field VertexIndicesAndInstanceIDs TArray<FVertexIndexAndInstanceID>
-FVertexInstancesForPolygonHole = {}
+local FVertexInstancesForPolygonHole = {}
 
 
 
 ---@class FVertexPair
 ---@field VertexID0 FVertexID
 ---@field VertexID1 FVertexID
-FVertexPair = {}
+local FVertexPair = {}
 
 
 
 ---@class FVertexToCreate
 ---@field VertexAttributes FMeshElementAttributeList
 ---@field OriginalVertexID FVertexID
-FVertexToCreate = {}
+local FVertexToCreate = {}
 
 
 
 ---@class FVertexToMove
 ---@field VertexID FVertexID
 ---@field NewVertexPosition FVector
-FVertexToMove = {}
+local FVertexToMove = {}
 
 
 
@@ -230,7 +230,7 @@ FVertexToMove = {}
 ---@field GeometryCollection UGeometryCollection
 ---@field OriginalGeometryCollection UGeometryCollection
 ---@field GeometryCollectionLODIndex int32
-UEditableGeometryCollectionAdapter = {}
+local UEditableGeometryCollectionAdapter = {}
 
 
 
@@ -239,7 +239,7 @@ UEditableGeometryCollectionAdapter = {}
 ---@field TextureCoordinateCount int32
 ---@field PendingCompactCounter int32
 ---@field SubdivisionCount int32
-UEditableMesh = {}
+local UEditableMesh = {}
 
 ---@param VertexIDs TArray<FVertexID>
 ---@param OutNewVertexID FVertexID
@@ -630,11 +630,11 @@ function UEditableMesh:AnyChangesToUndo() end
 
 
 ---@class UEditableMeshAdapter : UObject
-UEditableMeshAdapter = {}
+local UEditableMeshAdapter = {}
 
 
 ---@class UEditableMeshFactory : UObject
-UEditableMeshFactory = {}
+local UEditableMeshFactory = {}
 
 ---@param PrimitiveComponent UPrimitiveComponent
 ---@param LODIndex int32
@@ -646,7 +646,7 @@ function UEditableMeshFactory:MakeEditableMesh(PrimitiveComponent, LODIndex) end
 ---@field StaticMesh UStaticMesh
 ---@field OriginalStaticMesh UStaticMesh
 ---@field StaticMeshLODIndex int32
-UEditableStaticMeshAdapter = {}
+local UEditableStaticMeshAdapter = {}
 
 
 

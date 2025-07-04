@@ -19,7 +19,7 @@
 ---@field FrontLightMesh UStaticMeshComponent
 ---@field FrontLight USpotLightComponent
 ---@field Camera UCameraComponent
-ABPRelicLightTank_C = {}
+local ABPRelicLightTank_C = {}
 
 ---@param IsOn boolean
 function ABPRelicLightTank_C:BPOnVehicleOn(IsOn) end

@@ -19,7 +19,7 @@
 ---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWBellTowerG1_C = {}
+local AUniqueWBellTowerG1_C = {}
 
 
 

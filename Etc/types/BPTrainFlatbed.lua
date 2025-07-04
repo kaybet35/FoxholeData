@@ -2,7 +2,7 @@
 
 ---@class ABPTrainFlatbed_C : AFlatbedRailVehicle
 ---@field UseVolume UBoxComponent
-ABPTrainFlatbed_C = {}
+local ABPTrainFlatbed_C = {}
 
 
 

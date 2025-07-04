@@ -61,7 +61,7 @@
 ---@field BPStructureInteriorArea1 UBPStructureInteriorArea_C
 ---@field UniqueCChurchG1Ruin UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
-AUniqueCChurchG1Destroyed_C = {}
+local AUniqueCChurchG1Destroyed_C = {}
 
 ---@param Enter boolean
 ---@param Actor AActor

@@ -65,7 +65,7 @@
 ---@field SeaportSideway UStaticMeshComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field Seaport UStaticMeshComponent
-ABPSeaport_C = {}
+local ABPSeaport_C = {}
 
 
 

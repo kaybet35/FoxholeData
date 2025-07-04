@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_SequencePlayer_AEB094064B5C06FF29543A9C97A5480D FAnimNode_SequencePlayer
 ---@field AnimGraphNode_ApplyAdditive_343AF1D8496B63C97CB298B9294EA223 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_SequencePlayer_43E06C6D4D00C506DD2DE5A33A1B6C76 FAnimNode_SequencePlayer
-UABP_RelicMediumTankCol_C = {}
+local UABP_RelicMediumTankCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RelicMediumTankCol_C:AnimGraph(AnimGraph) end

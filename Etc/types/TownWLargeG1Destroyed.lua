@@ -2,7 +2,7 @@
 
 ---@class ATownWLargeG1Destroyed_C : ATownWLargeGS1Destroyed_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
-ATownWLargeG1Destroyed_C = {}
+local ATownWLargeG1Destroyed_C = {}
 
 ---@param OtherActor AActor
 function ATownWLargeG1Destroyed_C:ReceiveActorBeginOverlap(OtherActor) end

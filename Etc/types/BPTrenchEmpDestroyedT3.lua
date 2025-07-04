@@ -21,7 +21,7 @@
 ---@field DirtBackRight UStaticMeshComponent
 ---@field DirtFrontRight UStaticMeshComponent
 ---@field DirtBackLeft UStaticMeshComponent
-ABPTrenchEmpDestroyedT3_C = {}
+local ABPTrenchEmpDestroyedT3_C = {}
 
 
 

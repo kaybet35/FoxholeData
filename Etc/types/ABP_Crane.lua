@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_FE2CC6D4422E27903E963586E5E8E5A1 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_B3FBBDCE4214DC745DFE8A9E2859982C FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_D3B0A1D1494E2BAAB02519B6A6AF4169 FAnimNode_RotationOffsetBlendSpace
-UABP_Crane_C = {}
+local UABP_Crane_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Crane_C:AnimGraph(AnimGraph) end

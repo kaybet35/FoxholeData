@@ -16,7 +16,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field StorageFaciltyDestoryed UStaticMeshComponent
-ABPDestroyedStorageFacility_C = {}
+local ABPDestroyedStorageFacility_C = {}
 
 
 

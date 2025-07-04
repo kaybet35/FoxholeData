@@ -4,7 +4,7 @@
 ---@field MultiplexedCenterMesh UMultiplexedStaticMeshComponent
 ---@field MultiplexedMainMesh UMultiplexedStaticMeshComponent
 ---@field RocketPartCenter UStaticMeshComponent
-ABPRocketPartBottom_C = {}
+local ABPRocketPartBottom_C = {}
 
 
 

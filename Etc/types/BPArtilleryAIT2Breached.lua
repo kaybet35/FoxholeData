@@ -6,7 +6,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPArtilleryAIT2Breached_C = {}
+local ABPArtilleryAIT2Breached_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHighExplosiveFalloffDamageType_C : USimDamageType
-UBPHighExplosiveFalloffDamageType_C = {}
+local UBPHighExplosiveFalloffDamageType_C = {}
 
 

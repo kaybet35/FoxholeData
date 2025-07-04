@@ -9,7 +9,7 @@
 ---@field BaseSmoke UParticleSystemComponent
 ---@field BaseMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityPowerOilBase_C = {}
+local ABPFacilityPowerOilBase_C = {}
 
 
 

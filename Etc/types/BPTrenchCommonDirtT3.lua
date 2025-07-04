@@ -12,7 +12,7 @@
 ---@field WallBack UStaticMeshComponent
 ---@field WallFront UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchCommonDirtT3_C = {}
+local ABPTrenchCommonDirtT3_C = {}
 
 
 

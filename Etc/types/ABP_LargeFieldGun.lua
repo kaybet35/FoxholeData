@@ -67,7 +67,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_63E10A7C404D5F22492E379D5752F542 FAnimNode_RotationOffsetBlendSpace
 ---@field WheelRotationSpeedFactor int32
 ---@field ['Reload Play Rate'] float
-UABP_LargeFieldGun_C = {}
+local UABP_LargeFieldGun_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeFieldGun_C:AnimGraph(AnimGraph) end

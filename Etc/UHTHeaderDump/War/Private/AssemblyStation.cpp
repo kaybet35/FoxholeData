@@ -36,15 +36,15 @@ AAssemblyStation::AAssemblyStation(const FObjectInitializer& ObjectInitializer) 
     this->LadderLocation2 = CreateDefaultSubobject<USceneComponent>(TEXT("LadderLocation2"));
     this->LadderLocation3 = CreateDefaultSubobject<USceneComponent>(TEXT("LadderLocation3"));
     this->LadderType = NULL;
+    this->GarageFootprintComponent->SetupAttachment(RootComponent);
     this->KillVolume->SetupAttachment(RootComponent);
     this->LadderLocation1->SetupAttachment(RootComponent);
     this->LadderLocation2->SetupAttachment(RootComponent);
     this->LadderLocation3->SetupAttachment(RootComponent);
-    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
     this->PowerSocket->SetupAttachment(RootComponent);
-    this->GarageFootprintComponent->SetupAttachment(RootComponent);
     this->TransferLocation->SetupAttachment(RootComponent);
     this->TransferLocation2->SetupAttachment(RootComponent);
+    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
 }
 
 void AAssemblyStation::OnRep_PowerGridInfo() {

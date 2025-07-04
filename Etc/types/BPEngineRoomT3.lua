@@ -15,7 +15,7 @@
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent
-ABPEngineRoomT3_C = {}
+local ABPEngineRoomT3_C = {}
 
 
 

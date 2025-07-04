@@ -4,7 +4,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field InstancedStaticMesh UInstancedStaticMeshComponent
 ---@field ItemGroupRender UItemGroupRenderComponent
-ABPMaterialPlatform_C = {}
+local ABPMaterialPlatform_C = {}
 
 
 

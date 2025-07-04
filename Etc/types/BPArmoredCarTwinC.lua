@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field PayloadStaticMesh1 UPayloadStaticMeshComponent
 ---@field PayloadStaticMesh0 UPayloadStaticMeshComponent
-ABPArmoredCarTwinC_C = {}
+local ABPArmoredCarTwinC_C = {}
 
 ---@param IsOn boolean
 function ABPArmoredCarTwinC_C:BPOnVehicleOn(IsOn) end

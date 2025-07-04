@@ -5,7 +5,7 @@
 ---@field SphereConnections TArray<FClothCollisionPrim_SphereConnection>
 ---@field Convexes TArray<FClothCollisionPrim_Convex>
 ---@field Boxes TArray<FClothCollisionPrim_Box>
-FClothCollisionData = {}
+local FClothCollisionData = {}
 
 
 
@@ -13,14 +13,14 @@ FClothCollisionData = {}
 ---@field BoneIndex int32
 ---@field LocalMin FVector
 ---@field LocalMax FVector
-FClothCollisionPrim_Box = {}
+local FClothCollisionPrim_Box = {}
 
 
 
 ---@class FClothCollisionPrim_Convex
 ---@field Planes TArray<FPlane>
 ---@field BoneIndex int32
-FClothCollisionPrim_Convex = {}
+local FClothCollisionPrim_Convex = {}
 
 
 
@@ -28,13 +28,13 @@ FClothCollisionPrim_Convex = {}
 ---@field BoneIndex int32
 ---@field Radius float
 ---@field LocalPosition FVector
-FClothCollisionPrim_Sphere = {}
+local FClothCollisionPrim_Sphere = {}
 
 
 
 ---@class FClothCollisionPrim_SphereConnection
 ---@field SphereIndices int32
-FClothCollisionPrim_SphereConnection = {}
+local FClothCollisionPrim_SphereConnection = {}
 
 
 
@@ -42,7 +42,7 @@ FClothCollisionPrim_SphereConnection = {}
 ---@field NumInfluences int32
 ---@field BoneIndices uint16
 ---@field BoneWeights float
-FClothVertBoneData = {}
+local FClothVertBoneData = {}
 
 
 
@@ -51,12 +51,12 @@ FClothVertBoneData = {}
 ---@field CurrentTarget uint8
 ---@field Values TArray<float>
 ---@field bEnabled boolean
-FPointWeightMap = {}
+local FPointWeightMap = {}
 
 
 
 ---@class UClothConfigBase : UObject
-UClothConfigBase = {}
+local UClothConfigBase = {}
 
 
 ---@class UClothPhysicalMeshDataBase : UObject
@@ -68,23 +68,23 @@ UClothConfigBase = {}
 ---@field NumFixedVerts int32
 ---@field MaxBoneWeights int32
 ---@field SelfCollisionIndices TArray<uint32>
-UClothPhysicalMeshDataBase = {}
+local UClothPhysicalMeshDataBase = {}
 
 
 
 ---@class UClothingAssetBase : UObject
 ---@field ImportedFilePath FString
 ---@field AssetGuid FGuid
-UClothingAssetBase = {}
+local UClothingAssetBase = {}
 
 
 
 ---@class UClothingSimulationFactory : UObject
-UClothingSimulationFactory = {}
+local UClothingSimulationFactory = {}
 
 
 ---@class UClothingSimulationInteractor : UObject
-UClothingSimulationInteractor = {}
+local UClothingSimulationInteractor = {}
 
 function UClothingSimulationInteractor:PhysicsAssetUpdated() end
 function UClothingSimulationInteractor:ClothConfigUpdated() end

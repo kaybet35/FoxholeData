@@ -22,7 +22,7 @@
 ---@field ConveyerTranslation float
 ---@field ConveyerMaterial UMaterialInstanceDynamic
 ---@field bIsProducingSFXActive boolean
-ABPComponentMine_C = {}
+local ABPComponentMine_C = {}
 
 function ABPComponentMine_C:ReceiveBeginPlay() end
 function ABPComponentMine_C:UpdateVisuals_FastTick() end
@@ -32,6 +32,6 @@ function ABPComponentMine_C:ExecuteUbergraph_BPComponentMine(EntryPoint) end
 
 
 ---@class UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482258
-UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482258 = {}
+local UPLACEHOLDER-CLASS__ABP_ComponentMine_C_2147482258 = {}
 
 

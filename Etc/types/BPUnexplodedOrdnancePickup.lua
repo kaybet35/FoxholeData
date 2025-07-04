@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPUnexplodedOrdnancePickup_C : AGearPickup
-ABPUnexplodedOrdnancePickup_C = {}
+local ABPUnexplodedOrdnancePickup_C = {}
 
 

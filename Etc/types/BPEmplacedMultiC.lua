@@ -7,7 +7,7 @@
 ---@field OccupiableComponent UStructureSeatComponent
 ---@field PayloadInstancedStaticMesh UPayloadInstancedStaticMeshComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPEmplacedMultiC_C = {}
+local ABPEmplacedMultiC_C = {}
 
 
 

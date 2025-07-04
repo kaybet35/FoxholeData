@@ -14,7 +14,7 @@
 ---@field LeftSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
 ---@field FacilityCatwalkRamp UStaticMeshComponent
-ABPFacilityCatwalkPlatform_C = {}
+local ABPFacilityCatwalkPlatform_C = {}
 
 
 

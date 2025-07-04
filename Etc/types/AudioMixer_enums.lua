@@ -1,12 +1,12 @@
 ---@enum EAudioSpectrumType
-EAudioSpectrumType = {
+local EAudioSpectrumType = {
     MagnitudeSpectrum = 0,
     PowerSpectrum = 1,
     EAudioSpectrumType_MAX = 2,
 }
 
 ---@enum EFFTPeakInterpolationMethod
-EFFTPeakInterpolationMethod = {
+local EFFTPeakInterpolationMethod = {
     NearestNeighbor = 0,
     Linear = 1,
     Quadratic = 2,
@@ -14,7 +14,7 @@ EFFTPeakInterpolationMethod = {
 }
 
 ---@enum EFFTSize
-EFFTSize = {
+local EFFTSize = {
     DefaultSize = 0,
     Min = 1,
     Small = 2,
@@ -24,7 +24,7 @@ EFFTSize = {
 }
 
 ---@enum EFFTWindowType
-EFFTWindowType = {
+local EFFTWindowType = {
     None = 0,
     Hamming = 1,
     Hann = 2,
@@ -33,7 +33,7 @@ EFFTWindowType = {
 }
 
 ---@enum ESubmixEffectDynamicsPeakMode
-ESubmixEffectDynamicsPeakMode = {
+local ESubmixEffectDynamicsPeakMode = {
     MeanSquared = 0,
     RootMeanSquared = 1,
     Peak = 2,
@@ -42,7 +42,7 @@ ESubmixEffectDynamicsPeakMode = {
 }
 
 ---@enum ESubmixEffectDynamicsProcessorType
-ESubmixEffectDynamicsProcessorType = {
+local ESubmixEffectDynamicsProcessorType = {
     Compressor = 0,
     Limiter = 1,
     Expander = 2,

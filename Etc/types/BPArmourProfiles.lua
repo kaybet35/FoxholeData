@@ -2,7 +2,7 @@
 
 ---@class ABPArmourProfiles_C : AArmourProfiles
 ---@field DefaultSceneRoot USceneComponent
-ABPArmourProfiles_C = {}
+local ABPArmourProfiles_C = {}
 
 
 

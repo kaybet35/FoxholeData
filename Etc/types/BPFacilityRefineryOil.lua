@@ -18,7 +18,7 @@
 ---@field InputMesh0 UStaticMeshComponent
 ---@field PipeInput0 UBPStructurePipelineInput_C
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityRefineryOil_C = {}
+local ABPFacilityRefineryOil_C = {}
 
 
 

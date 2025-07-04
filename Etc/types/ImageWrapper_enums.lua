@@ -1,5 +1,5 @@
 ---@enum EBitmapCSType
-EBitmapCSType = {
+local EBitmapCSType = {
     BCST_BLCS_CALIBRATED_RGB = 0,
     BCST_LCS_sRGB = 1934772034,
     BCST_LCS_WINDOWS_COLOR_SPACE = 1466527264,
@@ -9,7 +9,7 @@ EBitmapCSType = {
 }
 
 ---@enum EBitmapHeaderVersion
-EBitmapHeaderVersion = {
+local EBitmapHeaderVersion = {
     BHV_BITMAPINFOHEADER = 0,
     BHV_BITMAPV2INFOHEADER = 1,
     BHV_BITMAPV3INFOHEADER = 2,

@@ -7,7 +7,7 @@
 ---@field MainMesh USkeletalMeshComponent
 ---@field FoundationDecal UDecalComponent
 ---@field PowerLineConnector UStaticMeshComponent
-ABPFacilityVehicleFactory2_C = {}
+local ABPFacilityVehicleFactory2_C = {}
 
 
 

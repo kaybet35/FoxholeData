@@ -4,7 +4,7 @@
 ---@field BuildSocket UBuildSocketComponent
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPDeployedListeningKitGhost_C = {}
+local ABPDeployedListeningKitGhost_C = {}
 
 
 

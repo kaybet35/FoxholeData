@@ -11,7 +11,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field DockingVolume UDockComponent
 ---@field Factory UStaticMeshComponent
-ABPShipyard_C = {}
+local ABPShipyard_C = {}
 
 ---@param VisualTeamId int32
 function ABPShipyard_C:BPSetTeamVisuals(VisualTeamId) end

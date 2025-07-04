@@ -3,7 +3,7 @@
 ---@class ABPFortT2Wall_C : AModificationTemplate
 ---@field StaticMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortT2Wall_C = {}
+local ABPFortT2Wall_C = {}
 
 
 

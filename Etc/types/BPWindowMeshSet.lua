@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWindowMeshSet_C : UWindowMeshSet
-UBPWindowMeshSet_C = {}
+local UBPWindowMeshSet_C = {}
 
 

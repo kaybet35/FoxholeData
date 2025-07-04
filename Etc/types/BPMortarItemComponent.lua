@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMortarItemComponent_C : UMortarItemComponent
-UBPMortarItemComponent_C = {}
+local UBPMortarItemComponent_C = {}
 
 

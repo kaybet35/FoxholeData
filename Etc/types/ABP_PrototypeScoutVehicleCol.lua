@@ -14,7 +14,7 @@
 ---@field AnimGraphNode_BlendListByBool_260785B54765BE80A06C93A6786731AE FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_D45CE65F4F79DB67660505BBE11CEB0E FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_F156F87E4DD515B44A48C18C9A16569D FAnimNode_SequencePlayer
-UABP_PrototypeScoutVehicleCol_C = {}
+local UABP_PrototypeScoutVehicleCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_PrototypeScoutVehicleCol_C:AnimGraph(AnimGraph) end

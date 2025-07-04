@@ -8,7 +8,7 @@
 ---@field LandscapeCheck UBuildSocketComponent
 ---@field Decal UDecalComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPFirePitT1_C = {}
+local ABPFirePitT1_C = {}
 
 
 

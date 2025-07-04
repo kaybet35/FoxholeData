@@ -32,7 +32,7 @@
 ---@field FVFBarrel01 UStaticMeshComponent
 ---@field FacilityAmmoFactoryBaseRoof UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityFactoryAmmoBase_C = {}
+local ABPFacilityFactoryAmmoBase_C = {}
 
 
 

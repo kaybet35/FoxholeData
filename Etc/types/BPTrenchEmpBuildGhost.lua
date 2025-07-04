@@ -13,7 +13,7 @@
 ---@field Back UStaticMeshComponent
 ---@field Front UStaticMeshComponent
 ---@field Right UStaticMeshComponent
-ABPTrenchEmpBuildGhost_C = {}
+local ABPTrenchEmpBuildGhost_C = {}
 
 
 

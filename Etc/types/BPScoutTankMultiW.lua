@@ -16,7 +16,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field chassis USkeletalMeshComponent
-ABPScoutTankMultiW_C = {}
+local ABPScoutTankMultiW_C = {}
 
 ---@param IsOn boolean
 function ABPScoutTankMultiW_C:BPOnVehicleOn(IsOn) end

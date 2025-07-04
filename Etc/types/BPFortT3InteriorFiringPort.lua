@@ -5,7 +5,7 @@
 ---@field CornerRight UStaticMeshComponent
 ---@field Wall UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortT3InteriorFiringPort_C = {}
+local ABPFortT3InteriorFiringPort_C = {}
 
 
 

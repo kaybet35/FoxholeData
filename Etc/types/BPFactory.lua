@@ -25,7 +25,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field Workshop UStaticMeshComponent
 ---@field bIsProducingSFXActive boolean
-ABPFactory_C = {}
+local ABPFactory_C = {}
 
 function ABPFactory_C:UpdateVisuals_SlowTick() end
 function ABPFactory_C:ReceiveBeginPlay() end

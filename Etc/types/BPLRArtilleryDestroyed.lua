@@ -7,7 +7,7 @@
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPLRArtilleryDestroyed_C = {}
+local ABPLRArtilleryDestroyed_C = {}
 
 
 

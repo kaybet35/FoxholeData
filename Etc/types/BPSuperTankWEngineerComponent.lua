@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSuperTankWEngineerComponent_C : UTankEngineerComponent
-UBPSuperTankWEngineerComponent_C = {}
+local UBPSuperTankWEngineerComponent_C = {}
 
 

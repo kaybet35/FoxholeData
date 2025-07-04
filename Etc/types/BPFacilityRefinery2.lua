@@ -10,7 +10,7 @@
 ---@field PointLight1 UPointLightComponent
 ---@field FoundationDecal UDecalComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityRefinery2_C = {}
+local ABPFacilityRefinery2_C = {}
 
 
 

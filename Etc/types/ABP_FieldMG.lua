@@ -15,7 +15,7 @@
 ---@field AnimGraphNode_SequencePlayer_F6F00BDD40E500B7B285BE92EFE3CA75 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_4B4277FD45337DBCAD8914B34F98E4EC FAnimNode_RotationOffsetBlendSpace
 ---@field WheelRotationSpeedFactor int32
-UABP_FieldMG_C = {}
+local UABP_FieldMG_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FieldMG_C:AnimGraph(AnimGraph) end

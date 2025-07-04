@@ -19,7 +19,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field Decal UDecalComponent
 ---@field FlagMesh UStaticMeshComponent
-ABPBorderBase_C = {}
+local ABPBorderBase_C = {}
 
 ---@param VisualTeamId int32
 function ABPBorderBase_C:BPSetTeamVisuals(VisualTeamId) end

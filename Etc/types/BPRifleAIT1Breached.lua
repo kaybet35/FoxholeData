@@ -6,7 +6,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPRifleAIT1Breached_C = {}
+local ABPRifleAIT1Breached_C = {}
 
 
 

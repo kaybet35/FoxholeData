@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEmplacedATLargeMount_C : UHitScanMountComponent
-UBPEmplacedATLargeMount_C = {}
+local UBPEmplacedATLargeMount_C = {}
 
 

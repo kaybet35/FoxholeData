@@ -3,7 +3,7 @@
 ---@class AATGrenadeWExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AATGrenadeWExplosion_C = {}
+local AATGrenadeWExplosion_C = {}
 
 function AATGrenadeWExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

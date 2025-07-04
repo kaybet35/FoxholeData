@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRadioPickup_C : ARadioPickup
-ABPRadioPickup_C = {}
+local ABPRadioPickup_C = {}
 
 

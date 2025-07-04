@@ -45,7 +45,7 @@
 ---@field MultiplexedRoof UMultiplexedStaticMeshComponent
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownWLargeGS1_C = {}
+local ATownWLargeGS1_C = {}
 
 function ATownWLargeGS1_C:ReceiveBeginPlay() end
 ---@param TechTreeComponent UTechTreeComponent

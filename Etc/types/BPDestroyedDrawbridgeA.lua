@@ -9,7 +9,7 @@
 ---@field SuspendedBuildSurfaceA UBoxComponent
 ---@field SideB UStaticMeshComponent
 ---@field SideA UStaticMeshComponent
-ABPDestroyedDrawbridgeA_C = {}
+local ABPDestroyedDrawbridgeA_C = {}
 
 
 

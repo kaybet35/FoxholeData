@@ -60,7 +60,7 @@
 ---@field BPWaterStencilComponent UBPWaterStencilComponent_C
 ---@field AssemblyArea UAssemblyAreaComponent
 ---@field PowerLineConnector UStaticMeshComponent
-ABPFacilityVehicleFactory3_C = {}
+local ABPFacilityVehicleFactory3_C = {}
 
 
 

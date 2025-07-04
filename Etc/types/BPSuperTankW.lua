@@ -13,7 +13,7 @@
 ---@field EngineerSeat4 UVehicleSeatComponent
 ---@field GunnerSeat3 UVehicleSeatComponent
 ---@field CommanderSeat5 UVehicleSeatComponent
-ABPSuperTankW_C = {}
+local ABPSuperTankW_C = {}
 
 ---@param IsOn boolean
 function ABPSuperTankW_C:BPOnVehicleOn(IsOn) end

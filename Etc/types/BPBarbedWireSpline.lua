@@ -7,7 +7,7 @@
 ---@field WireTarget USceneComponent
 ---@field Wire USplineConnectorComponent
 ---@field BackSocket UBuildSocketComponent
-ABPBarbedWireSpline_C = {}
+local ABPBarbedWireSpline_C = {}
 
 
 

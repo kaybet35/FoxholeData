@@ -9,7 +9,7 @@
 ---@field PassengerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field Camera UCameraComponent
-ABPFieldMortarBase_C = {}
+local ABPFieldMortarBase_C = {}
 
 
 

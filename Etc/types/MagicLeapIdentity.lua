@@ -3,12 +3,12 @@
 ---@class FMagicLeapIdentityAttribute
 ---@field Attribute EMagicLeapIdentityKey
 ---@field Value FString
-FMagicLeapIdentityAttribute = {}
+local FMagicLeapIdentityAttribute = {}
 
 
 
 ---@class UMagicLeapIdentity : UObject
-UMagicLeapIdentity = {}
+local UMagicLeapIdentity = {}
 
 ---@param ResultCode EMagicLeapIdentityError
 ---@param AttributeValue TArray<FMagicLeapIdentityAttribute>

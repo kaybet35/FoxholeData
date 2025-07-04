@@ -6,7 +6,7 @@
 ---@field SpotLightTurret USpotLightComponent
 ---@field LightTurret UStaticMeshComponent
 ---@field Exhaust2 UParticleSystemComponent
-ABPMediumTank2W_C = {}
+local ABPMediumTank2W_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2W_C:BPOnVehicleOn(IsOn) end

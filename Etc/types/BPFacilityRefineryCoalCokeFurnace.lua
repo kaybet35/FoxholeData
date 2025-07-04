@@ -8,7 +8,7 @@
 ---@field ProducingFX2 UParticleSystemComponent
 ---@field ModMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefineryCoalCokeFurnace_C = {}
+local ABPFacilityRefineryCoalCokeFurnace_C = {}
 
 
 

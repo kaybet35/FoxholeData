@@ -132,7 +132,7 @@
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field DriverSeatTrigger USeatTriggerComponent
 ---@field Deck USkeletalMeshComponent
-ABPLargeShipStorageShip_C = {}
+local ABPLargeShipStorageShip_C = {}
 
 function ABPLargeShipStorageShip_C:BPOnClientBeginPlay() end
 ---@param EntryPoint int32

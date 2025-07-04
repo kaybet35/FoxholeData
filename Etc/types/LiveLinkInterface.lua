@@ -1,44 +1,44 @@
 ---@meta
 
 ---@class FCachedSubjectFrame
-FCachedSubjectFrame = {}
+local FCachedSubjectFrame = {}
 
 
 ---@class FLiveLinkAnimationFrameData : FLiveLinkBaseFrameData
 ---@field Transforms TArray<FTransform>
-FLiveLinkAnimationFrameData = {}
+local FLiveLinkAnimationFrameData = {}
 
 
 
 ---@class FLiveLinkBaseBlueprintData
-FLiveLinkBaseBlueprintData = {}
+local FLiveLinkBaseBlueprintData = {}
 
 
 ---@class FLiveLinkBaseFrameData
 ---@field WorldTime FLiveLinkWorldTime
 ---@field MetaData FLiveLinkMetaData
 ---@field PropertyValues TArray<float>
-FLiveLinkBaseFrameData = {}
+local FLiveLinkBaseFrameData = {}
 
 
 
 ---@class FLiveLinkBaseStaticData
 ---@field PropertyNames TArray<FName>
-FLiveLinkBaseStaticData = {}
+local FLiveLinkBaseStaticData = {}
 
 
 
 ---@class FLiveLinkBasicBlueprintData : FLiveLinkBaseBlueprintData
 ---@field StaticData FLiveLinkBaseStaticData
 ---@field FrameData FLiveLinkBaseFrameData
-FLiveLinkBasicBlueprintData = {}
+local FLiveLinkBasicBlueprintData = {}
 
 
 
 ---@class FLiveLinkCameraBlueprintData : FLiveLinkBaseBlueprintData
 ---@field StaticData FLiveLinkCameraStaticData
 ---@field FrameData FLiveLinkCameraFrameData
-FLiveLinkCameraBlueprintData = {}
+local FLiveLinkCameraBlueprintData = {}
 
 
 
@@ -49,7 +49,7 @@ FLiveLinkCameraBlueprintData = {}
 ---@field Aperture float
 ---@field FocusDistance float
 ---@field ProjectionMode ELiveLinkCameraProjectionMode
-FLiveLinkCameraFrameData = {}
+local FLiveLinkCameraFrameData = {}
 
 
 
@@ -62,20 +62,20 @@ FLiveLinkCameraFrameData = {}
 ---@field FilmBackHeight float
 ---@field bIsApertureSupported boolean
 ---@field bIsFocusDistanceSupported boolean
-FLiveLinkCameraStaticData = {}
+local FLiveLinkCameraStaticData = {}
 
 
 
 ---@class FLiveLinkCurveConversionSettings
 ---@field CurveConversionAssetMap TMap<FString, FSoftObjectPath>
-FLiveLinkCurveConversionSettings = {}
+local FLiveLinkCurveConversionSettings = {}
 
 
 
 ---@class FLiveLinkCurveElement
 ---@field CurveName FName
 ---@field CurveValue float
-FLiveLinkCurveElement = {}
+local FLiveLinkCurveElement = {}
 
 
 
@@ -84,25 +84,25 @@ FLiveLinkCurveElement = {}
 ---@field CurveElements TArray<FLiveLinkCurveElement>
 ---@field WorldTime FLiveLinkWorldTime
 ---@field MetaData FLiveLinkMetaData
-FLiveLinkFrameData = {}
+local FLiveLinkFrameData = {}
 
 
 
 ---@class FLiveLinkFrameRate : FFrameRate
-FLiveLinkFrameRate = {}
+local FLiveLinkFrameRate = {}
 
 
 ---@class FLiveLinkInterpolationSettings
 ---@field bUseInterpolation boolean
 ---@field InterpolationOffset float
-FLiveLinkInterpolationSettings = {}
+local FLiveLinkInterpolationSettings = {}
 
 
 
 ---@class FLiveLinkLightBlueprintData : FLiveLinkBaseBlueprintData
 ---@field StaticData FLiveLinkLightStaticData
 ---@field FrameData FLiveLinkLightFrameData
-FLiveLinkLightBlueprintData = {}
+local FLiveLinkLightBlueprintData = {}
 
 
 
@@ -116,7 +116,7 @@ FLiveLinkLightBlueprintData = {}
 ---@field SourceRadius float
 ---@field SoftSourceRadius float
 ---@field SourceLength float
-FLiveLinkLightFrameData = {}
+local FLiveLinkLightFrameData = {}
 
 
 
@@ -130,28 +130,28 @@ FLiveLinkLightFrameData = {}
 ---@field bIsSourceLenghtSupported boolean
 ---@field bIsSourceRadiusSupported boolean
 ---@field bIsSoftSourceRadiusSupported boolean
-FLiveLinkLightStaticData = {}
+local FLiveLinkLightStaticData = {}
 
 
 
 ---@class FLiveLinkMetaData
 ---@field StringMetadata TMap<FName, FString>
 ---@field SceneTime FQualifiedFrameTime
-FLiveLinkMetaData = {}
+local FLiveLinkMetaData = {}
 
 
 
 ---@class FLiveLinkRefSkeleton
 ---@field BoneNames TArray<FName>
 ---@field BoneParents TArray<int32>
-FLiveLinkRefSkeleton = {}
+local FLiveLinkRefSkeleton = {}
 
 
 
 ---@class FLiveLinkSkeletonStaticData : FLiveLinkBaseStaticData
 ---@field BoneNames TArray<FName>
 ---@field BoneParents TArray<int32>
-FLiveLinkSkeletonStaticData = {}
+local FLiveLinkSkeletonStaticData = {}
 
 
 
@@ -166,7 +166,7 @@ FLiveLinkSkeletonStaticData = {}
 ---@field LatestOffset int32
 ---@field MaxNumberOfFrameToBuffered int32
 ---@field bKeepAtLeastOneFrame boolean
-FLiveLinkSourceBufferManagementSettings = {}
+local FLiveLinkSourceBufferManagementSettings = {}
 
 
 
@@ -174,31 +174,31 @@ FLiveLinkSourceBufferManagementSettings = {}
 ---@field SubjectName FLiveLinkSubjectName
 ---@field SnapshotIndex int32
 ---@field NumberOfBufferAtSnapshot int32
-FLiveLinkSourceDebugInfo = {}
+local FLiveLinkSourceDebugInfo = {}
 
 
 
 ---@class FLiveLinkSourceHandle
-FLiveLinkSourceHandle = {}
+local FLiveLinkSourceHandle = {}
 
 
 ---@class FLiveLinkSourcePreset
 ---@field Guid FGuid
 ---@field Settings ULiveLinkSourceSettings
-FLiveLinkSourcePreset = {}
+local FLiveLinkSourcePreset = {}
 
 
 
 ---@class FLiveLinkSubjectKey
 ---@field Source FGuid
 ---@field SubjectName FLiveLinkSubjectName
-FLiveLinkSubjectKey = {}
+local FLiveLinkSubjectKey = {}
 
 
 
 ---@class FLiveLinkSubjectName
 ---@field Name FName
-FLiveLinkSubjectName = {}
+local FLiveLinkSubjectName = {}
 
 
 
@@ -208,127 +208,127 @@ FLiveLinkSubjectName = {}
 ---@field Settings ULiveLinkSubjectSettings
 ---@field VirtualSubject ULiveLinkVirtualSubject
 ---@field bEnabled boolean
-FLiveLinkSubjectPreset = {}
+local FLiveLinkSubjectPreset = {}
 
 
 
 ---@class FLiveLinkSubjectRepresentation
 ---@field Subject FLiveLinkSubjectName
 ---@field Role TSubclassOf<ULiveLinkRole>
-FLiveLinkSubjectRepresentation = {}
+local FLiveLinkSubjectRepresentation = {}
 
 
 
 ---@class FLiveLinkTime
 ---@field WorldTime double
 ---@field SceneTime FQualifiedFrameTime
-FLiveLinkTime = {}
+local FLiveLinkTime = {}
 
 
 
 ---@class FLiveLinkTimeCode : FLiveLinkTimeCode_Base_DEPRECATED
-FLiveLinkTimeCode = {}
+local FLiveLinkTimeCode = {}
 
 
 ---@class FLiveLinkTimeCode_Base_DEPRECATED
 ---@field Seconds int32
 ---@field Frames int32
 ---@field FrameRate FLiveLinkFrameRate
-FLiveLinkTimeCode_Base_DEPRECATED = {}
+local FLiveLinkTimeCode_Base_DEPRECATED = {}
 
 
 
 ---@class FLiveLinkTimeSynchronizationSettings
 ---@field FrameRate FFrameRate
 ---@field FrameOffset FFrameNumber
-FLiveLinkTimeSynchronizationSettings = {}
+local FLiveLinkTimeSynchronizationSettings = {}
 
 
 
 ---@class FLiveLinkTransform
-FLiveLinkTransform = {}
+local FLiveLinkTransform = {}
 
 
 ---@class FLiveLinkTransformBlueprintData : FLiveLinkBaseBlueprintData
 ---@field StaticData FLiveLinkTransformStaticData
 ---@field FrameData FLiveLinkTransformFrameData
-FLiveLinkTransformBlueprintData = {}
+local FLiveLinkTransformBlueprintData = {}
 
 
 
 ---@class FLiveLinkTransformFrameData : FLiveLinkBaseFrameData
 ---@field Transform FTransform
-FLiveLinkTransformFrameData = {}
+local FLiveLinkTransformFrameData = {}
 
 
 
 ---@class FLiveLinkTransformStaticData : FLiveLinkBaseStaticData
-FLiveLinkTransformStaticData = {}
+local FLiveLinkTransformStaticData = {}
 
 
 ---@class FLiveLinkWorldTime
 ---@field Time double
 ---@field Offset double
-FLiveLinkWorldTime = {}
+local FLiveLinkWorldTime = {}
 
 
 
 ---@class FSubjectFrameHandle : FLiveLinkBaseBlueprintData
-FSubjectFrameHandle = {}
+local FSubjectFrameHandle = {}
 
 
 ---@class FSubjectMetadata
 ---@field StringMetadata TMap<FName, FString>
 ---@field SceneTimecode FTimecode
 ---@field SceneFramerate FFrameRate
-FSubjectMetadata = {}
+local FSubjectMetadata = {}
 
 
 
 ---@class ULiveLinkAnimationRole : ULiveLinkBasicRole
-ULiveLinkAnimationRole = {}
+local ULiveLinkAnimationRole = {}
 
 
 ---@class ULiveLinkBasicRole : ULiveLinkRole
-ULiveLinkBasicRole = {}
+local ULiveLinkBasicRole = {}
 
 
 ---@class ULiveLinkCameraRole : ULiveLinkTransformRole
-ULiveLinkCameraRole = {}
+local ULiveLinkCameraRole = {}
 
 
 ---@class ULiveLinkController : UObject
-ULiveLinkController = {}
+local ULiveLinkController = {}
 
 
 ---@class ULiveLinkCurveRemapSettings : ULiveLinkSourceSettings
 ---@field CurveConversionSettings FLiveLinkCurveConversionSettings
-ULiveLinkCurveRemapSettings = {}
+local ULiveLinkCurveRemapSettings = {}
 
 
 
 ---@class ULiveLinkFrameInterpolationProcessor : UObject
-ULiveLinkFrameInterpolationProcessor = {}
+local ULiveLinkFrameInterpolationProcessor = {}
 
 
 ---@class ULiveLinkFramePreProcessor : UObject
-ULiveLinkFramePreProcessor = {}
+local ULiveLinkFramePreProcessor = {}
 
 
 ---@class ULiveLinkFrameTranslator : UObject
-ULiveLinkFrameTranslator = {}
+local ULiveLinkFrameTranslator = {}
 
 
 ---@class ULiveLinkLightRole : ULiveLinkTransformRole
-ULiveLinkLightRole = {}
+local ULiveLinkLightRole = {}
 
 
 ---@class ULiveLinkRole : UObject
-ULiveLinkRole = {}
+local ULiveLinkRole = {}
 
 
 ---@class ULiveLinkSourceFactory : UObject
-ULiveLinkSourceFactory = {}
+local ULiveLinkSourceFactory = {}
 
 
 ---@class ULiveLinkSourceSettings : UObject
@@ -336,7 +336,7 @@ ULiveLinkSourceFactory = {}
 ---@field BufferSettings FLiveLinkSourceBufferManagementSettings
 ---@field ConnectionString FString
 ---@field Factory TSubclassOf<ULiveLinkSourceFactory>
-ULiveLinkSourceSettings = {}
+local ULiveLinkSourceSettings = {}
 
 
 
@@ -345,19 +345,19 @@ ULiveLinkSourceSettings = {}
 ---@field InterpolationProcessor ULiveLinkFrameInterpolationProcessor
 ---@field Translators TArray<ULiveLinkFrameTranslator>
 ---@field Role TSubclassOf<ULiveLinkRole>
-ULiveLinkSubjectSettings = {}
+local ULiveLinkSubjectSettings = {}
 
 
 
 ---@class ULiveLinkTransformRole : ULiveLinkBasicRole
-ULiveLinkTransformRole = {}
+local ULiveLinkTransformRole = {}
 
 
 ---@class ULiveLinkVirtualSubject : UObject
 ---@field Role TSubclassOf<ULiveLinkRole>
 ---@field Subjects TArray<FLiveLinkSubjectName>
 ---@field FrameTranslators TArray<ULiveLinkFrameTranslator>
-ULiveLinkVirtualSubject = {}
+local ULiveLinkVirtualSubject = {}
 
 
 

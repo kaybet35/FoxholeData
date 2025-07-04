@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFlameBackpackAmmoPickup_C : AAmmoPickup
-ABPFlameBackpackAmmoPickup_C = {}
+local ABPFlameBackpackAmmoPickup_C = {}
 
 

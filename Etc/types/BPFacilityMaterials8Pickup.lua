@@ -2,7 +2,7 @@
 
 ---@class ABPFacilityMaterials8Pickup_C : ABasicItemPickup
 ---@field StaticMesh UStaticMeshComponent
-ABPFacilityMaterials8Pickup_C = {}
+local ABPFacilityMaterials8Pickup_C = {}
 
 
 

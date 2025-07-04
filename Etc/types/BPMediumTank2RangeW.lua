@@ -9,7 +9,7 @@
 ---@field Gunner2Trigger USeatTriggerComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
 ---@field CommanderSeat3 UVehicleSeatComponent
-ABPMediumTank2RangeW_C = {}
+local ABPMediumTank2RangeW_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2RangeW_C:BPOnVehicleOn(IsOn) end

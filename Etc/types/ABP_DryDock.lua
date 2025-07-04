@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_SequencePlayer_423E15BB41CBB8F34D5BC1B310A47364 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_337ED80943E10F52D75BC5BE4719EE20 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_F8B0F2424BBCDEC7C1954D816818B3E0 FAnimNode_StateMachine
-UABP_DryDock_C = {}
+local UABP_DryDock_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_DryDock_C:AnimGraph(AnimGraph) end

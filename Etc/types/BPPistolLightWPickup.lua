@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPPistolLightWPickup_C : AFirearmPickup
-ABPPistolLightWPickup_C = {}
+local ABPPistolLightWPickup_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFacilityCoal1Pickup_C : ABasicItemPickup
-ABPFacilityCoal1Pickup_C = {}
+local ABPFacilityCoal1Pickup_C = {}
 
 

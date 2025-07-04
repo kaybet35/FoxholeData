@@ -6,7 +6,7 @@
 ---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field LandscapeHole UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPLargeFortCommon_C = {}
+local ABPLargeFortCommon_C = {}
 
 
 

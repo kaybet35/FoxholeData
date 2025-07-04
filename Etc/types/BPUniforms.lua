@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPUniforms_C : UUniforms
-UBPUniforms_C = {}
+local UBPUniforms_C = {}
 
 

@@ -11,7 +11,7 @@
 ---@field BPFuelLightTemplate UTemplateComponent
 ---@field PipeInput0 UBPStructurePipelineInput_C
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityTransferLiquid_C = {}
+local ABPFacilityTransferLiquid_C = {}
 
 
 

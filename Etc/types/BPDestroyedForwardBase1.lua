@@ -6,7 +6,7 @@
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
 ---@field TownHallMesh UStaticMeshComponent
-ABPDestroyedForwardBase1_C = {}
+local ABPDestroyedForwardBase1_C = {}
 
 
 

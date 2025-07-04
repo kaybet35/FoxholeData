@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_SequencePlayer_AE5949C94813BB6F1269F48BACA97F52 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_CA76AD1D49B8AA3FED3468866B8B5F88 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_0CE672564171C67EF33292BC41E58B86 FAnimNode_SequencePlayer
-UABP_LargeShipEngine0_C = {}
+local UABP_LargeShipEngine0_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeShipEngine0_C:AnimGraph(AnimGraph) end

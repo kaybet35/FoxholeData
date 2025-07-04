@@ -11,7 +11,7 @@
 ---@field BackFortSocket UBPBackFortSocket_C
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortGarrisonStationCommon_C = {}
+local ABPFortGarrisonStationCommon_C = {}
 
 
 

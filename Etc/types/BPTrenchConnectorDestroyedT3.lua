@@ -19,7 +19,7 @@
 ---@field DirtFront UStaticMeshComponent
 ---@field DirtBack UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPTrenchConnectorDestroyedT3_C = {}
+local ABPTrenchConnectorDestroyedT3_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWorldResourceSpawner_C : UWorldResourceSpawner
-UBPWorldResourceSpawner_C = {}
+local UBPWorldResourceSpawner_C = {}
 
 

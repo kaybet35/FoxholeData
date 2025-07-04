@@ -24,7 +24,7 @@
 ---@field StaticMesh4 UStaticMeshComponent
 ---@field StaticMesh3 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPConstructionYardBuildSite_C = {}
+local ABPConstructionYardBuildSite_C = {}
 
 
 

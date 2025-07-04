@@ -32,7 +32,7 @@
 ---@field Decal5 UDecalComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWCoalPlantG1Destroyed_C = {}
+local AUniqueWCoalPlantG1Destroyed_C = {}
 
 
 

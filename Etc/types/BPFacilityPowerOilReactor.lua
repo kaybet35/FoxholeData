@@ -11,7 +11,7 @@
 ---@field BaseSmoke1 UParticleSystemComponent
 ---@field ModMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityPowerOilReactor_C = {}
+local ABPFacilityPowerOilReactor_C = {}
 
 
 

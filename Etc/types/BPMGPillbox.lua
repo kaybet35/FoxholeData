@@ -12,7 +12,7 @@
 ---@field LandscapeCheck UBuildSocketComponent
 ---@field ExtendedRepairBox UBoxComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPMGPillbox_C = {}
+local ABPMGPillbox_C = {}
 
 
 

@@ -9,7 +9,7 @@
 ---@field WorkVolume UBoxComponent
 ---@field RoofMesh UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownWLargeGS1BuildSite_C = {}
+local ATownWLargeGS1BuildSite_C = {}
 
 ---@param Enter boolean
 ---@param Actor AActor

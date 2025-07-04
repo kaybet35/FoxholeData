@@ -5,7 +5,7 @@
 ---@field BridgeMesh UStaticMeshComponent
 ---@field Reference UStaticMeshComponent
 ---@field Box UBoxComponent
-ABPConcreteBridgeBuildSite_C = {}
+local ABPConcreteBridgeBuildSite_C = {}
 
 
 

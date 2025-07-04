@@ -7,7 +7,7 @@
 ---@field FrontMeshConnected UStaticMeshComponent
 ---@field FrontMesh UStaticMeshComponent
 ---@field BackMesh UStaticMeshComponent
-ABPFacilityPipeOverhead_C = {}
+local ABPFacilityPipeOverhead_C = {}
 
 
 

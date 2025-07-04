@@ -5,7 +5,7 @@
 ---@field ProducingFX1 UParticleSystemComponent
 ---@field ModMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefineryOilPetrochemicalPlant_C = {}
+local ABPFacilityRefineryOilPetrochemicalPlant_C = {}
 
 
 

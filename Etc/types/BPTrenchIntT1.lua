@@ -24,7 +24,7 @@
 ---@field WallLeft UStaticMeshComponent
 ---@field WallBack UStaticMeshComponent
 ---@field WallFront UStaticMeshComponent
-ABPTrenchIntT1_C = {}
+local ABPTrenchIntT1_C = {}
 
 
 

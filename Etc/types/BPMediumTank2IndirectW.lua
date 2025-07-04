@@ -16,7 +16,7 @@
 ---@field Gunner2Exit USeatExitComponent
 ---@field Gunner2Trigger USeatTriggerComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
-ABPMediumTank2IndirectW_C = {}
+local ABPMediumTank2IndirectW_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2IndirectW_C:BPOnVehicleOn(IsOn) end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPScoutVehicleOffensiveCGunner_C : UProjectileGunnerMountComponent
-UBPScoutVehicleOffensiveCGunner_C = {}
+local UBPScoutVehicleOffensiveCGunner_C = {}
 
 

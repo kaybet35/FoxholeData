@@ -76,7 +76,7 @@
 ---@field OnEndPlay FActorOnEndPlay
 ---@field InstanceComponents TArray<UActorComponent>
 ---@field BlueprintCreatedComponents TArray<UActorComponent>
-AActor = {}
+local AActor = {}
 
 ---@param Tolerance float
 ---@return boolean
@@ -442,7 +442,7 @@ function AActor:ActorHasTag(Tag) end
 
 ---@class AAmbientSound : AActor
 ---@field AudioComponent UAudioComponent
-AAmbientSound = {}
+local AAmbientSound = {}
 
 function AAmbientSound:Stop() end
 ---@param StartTime float
@@ -460,7 +460,7 @@ function AAmbientSound:AdjustVolume(AdjustVolumeDuration, AdjustVolumeLevel) end
 
 ---@class AAtmosphericFog : AInfo
 ---@field AtmosphericFogComponent UAtmosphericFogComponent
-AAtmosphericFog = {}
+local AAtmosphericFog = {}
 
 
 
@@ -469,7 +469,7 @@ AAtmosphericFog = {}
 ---@field bEnabled boolean
 ---@field Settings FReverbSettings
 ---@field AmbientZoneSettings FInteriorSettings
-AAudioVolume = {}
+local AAudioVolume = {}
 
 ---@param NewReverbSettings FReverbSettings
 function AAudioVolume:SetReverbSettings(NewReverbSettings) end
@@ -484,16 +484,16 @@ function AAudioVolume:OnRep_bEnabled() end
 
 ---@class ABandwidthTestActor : AActor
 ---@field BandwidthGenerator FBandwidthTestGenerator
-ABandwidthTestActor = {}
+local ABandwidthTestActor = {}
 
 
 
 ---@class ABlockingVolume : AVolume
-ABlockingVolume = {}
+local ABlockingVolume = {}
 
 
 ---@class ABoxReflectionCapture : AReflectionCapture
-ABoxReflectionCapture = {}
+local ABoxReflectionCapture = {}
 
 
 ---@class ABrush : AActor
@@ -508,12 +508,12 @@ ABoxReflectionCapture = {}
 ---@field BrushComponent UBrushComponent
 ---@field bInManipulation boolean
 ---@field SavedSelections TArray<FGeomSelection>
-ABrush = {}
+local ABrush = {}
 
 
 
 ---@class ABrushShape : ABrush
-ABrushShape = {}
+local ABrushShape = {}
 
 
 ---@class ACameraActor : AActor
@@ -525,14 +525,14 @@ ABrushShape = {}
 ---@field FOVAngle float
 ---@field PostProcessBlendWeight float
 ---@field PostProcessSettings FPostProcessSettings
-ACameraActor = {}
+local ACameraActor = {}
 
 ---@return int32
 function ACameraActor:GetAutoActivatePlayerIndex() end
 
 
 ---@class ACameraBlockingVolume : AVolume
-ACameraBlockingVolume = {}
+local ACameraBlockingVolume = {}
 
 
 ---@class ACharacter : APawn
@@ -573,7 +573,7 @@ ACameraBlockingVolume = {}
 ---@field ClientRootMotionParams FRootMotionMovementParams
 ---@field RootMotionRepMoves TArray<FSimulatedRootMotionReplicatedMove>
 ---@field RepRootMotion FRepRootMotionMontage
-ACharacter = {}
+local ACharacter = {}
 
 ---@param bClientSimulation boolean
 function ACharacter:UnCrouch(bClientSimulation) end
@@ -770,7 +770,7 @@ function ACharacter:CacheInitialMeshOffset(MeshRelativeLocation, MeshRelativeRot
 ---@field TransformComponent USceneComponent
 ---@field ControlRotation FRotator
 ---@field bAttachToPawn boolean
-AController = {}
+local AController = {}
 
 function AController:UnPossess() end
 function AController:StopMovement() end
@@ -835,7 +835,7 @@ function AController:CastToPlayerController() end
 ---@class ACullDistanceVolume : AVolume
 ---@field CullDistances TArray<FCullDistanceSizePair>
 ---@field bEnabled boolean
-ACullDistanceVolume = {}
+local ACullDistanceVolume = {}
 
 
 
@@ -858,7 +858,7 @@ ACullDistanceVolume = {}
 ---@field InitialMaxSpeed float
 ---@field InitialAccel float
 ---@field InitialDecel float
-ADebugCameraController = {}
+local ADebugCameraController = {}
 
 function ADebugCameraController:ToggleDisplay() end
 function ADebugCameraController:ShowDebugSelectedInfo() end
@@ -878,12 +878,12 @@ function ADebugCameraController:GetSelectedActor() end
 
 
 ---@class ADebugCameraHUD : AHUD
-ADebugCameraHUD = {}
+local ADebugCameraHUD = {}
 
 
 ---@class ADecalActor : AActor
 ---@field Decal UDecalComponent
-ADecalActor = {}
+local ADecalActor = {}
 
 ---@param NewDecalMaterial UMaterialInterface
 function ADecalActor:SetDecalMaterial(NewDecalMaterial) end
@@ -900,7 +900,7 @@ function ADecalActor:CreateDynamicMaterialInstance() end
 ---@field CollisionComponent USphereComponent
 ---@field MeshComponent UStaticMeshComponent
 ---@field bAddDefaultMovementBindings boolean
-ADefaultPawn = {}
+local ADefaultPawn = {}
 
 ---@param Rate float
 function ADefaultPawn:TurnAtRate(Rate) end
@@ -915,15 +915,15 @@ function ADefaultPawn:LookUpAtRate(Rate) end
 
 
 ---@class ADefaultPhysicsVolume : APhysicsVolume
-ADefaultPhysicsVolume = {}
+local ADefaultPhysicsVolume = {}
 
 
 ---@class ADirectionalLight : ALight
-ADirectionalLight = {}
+local ADirectionalLight = {}
 
 
 ---@class ADocumentationActor : AActor
-ADocumentationActor = {}
+local ADocumentationActor = {}
 
 
 ---@class AEmitter : AActor
@@ -935,7 +935,7 @@ ADocumentationActor = {}
 ---@field OnParticleBurst FEmitterOnParticleBurst
 ---@field OnParticleDeath FEmitterOnParticleDeath
 ---@field OnParticleCollide FEmitterOnParticleCollide
-AEmitter = {}
+local AEmitter = {}
 
 function AEmitter:ToggleActive() end
 ---@param ParameterName FName
@@ -974,14 +974,14 @@ function AEmitter:Activate() end
 ---@field bResetWhenRetriggered boolean
 ---@field EmittersToTreatAsSame TArray<TSubclassOf<AEmitterCameraLensEffectBase>>
 ---@field DistFromCamera float
-AEmitterCameraLensEffectBase = {}
+local AEmitterCameraLensEffectBase = {}
 
 
 
 ---@class AExponentialHeightFog : AInfo
 ---@field Component UExponentialHeightFogComponent
 ---@field bEnabled boolean
-AExponentialHeightFog = {}
+local AExponentialHeightFog = {}
 
 function AExponentialHeightFog:OnRep_bEnabled() end
 
@@ -999,7 +999,7 @@ function AExponentialHeightFog:OnRep_bEnabled() end
 ---@field InactivePlayerStateLifeSpan float
 ---@field MaxInactivePlayers int32
 ---@field bHandleDedicatedServerReplays boolean
-AGameMode = {}
+local AGameMode = {}
 
 function AGameMode:StartMatch() end
 ---@param AsyncIOBandwidthLimit float
@@ -1041,7 +1041,7 @@ function AGameMode:AbortMatch() end
 ---@field bUseSeamlessTravel boolean
 ---@field bStartPlayersAsSpectators boolean
 ---@field bPauseable boolean
-AGameModeBase = {}
+local AGameModeBase = {}
 
 function AGameModeBase:StartPlay() end
 ---@param NewPlayer AController
@@ -1166,7 +1166,7 @@ function AGameModeBase:CanSpectate(Viewer, ViewTarget) end
 ---@field MovementTimeDiscrepancyDriftAllowance float
 ---@field bMovementTimeDiscrepancyForceCorrectionsDuringResolution boolean
 ---@field bUseDistanceBasedRelevancy boolean
-AGameNetworkManager = {}
+local AGameNetworkManager = {}
 
 
 
@@ -1177,7 +1177,7 @@ AGameNetworkManager = {}
 ---@field MaxSplitscreensPerConnection uint8
 ---@field bRequiresPushToTalk boolean
 ---@field SessionName FName
-AGameSession = {}
+local AGameSession = {}
 
 
 
@@ -1185,7 +1185,7 @@ AGameSession = {}
 ---@field MatchState FName
 ---@field PreviousMatchState FName
 ---@field ElapsedTime int32
-AGameState = {}
+local AGameState = {}
 
 function AGameState:OnRep_MatchState() end
 function AGameState:OnRep_ElapsedTime() end
@@ -1200,7 +1200,7 @@ function AGameState:OnRep_ElapsedTime() end
 ---@field ReplicatedWorldTimeSeconds float
 ---@field ServerWorldTimeSecondsDelta float
 ---@field ServerWorldTimeSecondsUpdateFrequency float
-AGameStateBase = {}
+local AGameStateBase = {}
 
 function AGameStateBase:OnRep_SpectatorClass() end
 function AGameStateBase:OnRep_ReplicatedWorldTimeSeconds() end
@@ -1221,7 +1221,7 @@ function AGameStateBase:GetPlayerRespawnDelay(Controller) end
 
 
 ---@class AGeneratedMeshAreaLight : ASpotLight
-AGeneratedMeshAreaLight = {}
+local AGeneratedMeshAreaLight = {}
 
 
 ---@class AHUD : AActor
@@ -1241,7 +1241,7 @@ AGeneratedMeshAreaLight = {}
 ---@field DebugTextList TArray<FDebugTextInfo>
 ---@field ShowDebugTargetDesiredClass TSubclassOf<AActor>
 ---@field ShowDebugTargetActor AActor
-AHUD = {}
+local AHUD = {}
 
 function AHUD:ShowHUD() end
 ---@param Category FName
@@ -1390,11 +1390,11 @@ function AHUD:AddDebugText(DebugText, SrcActor, Duration, Offset, DesiredOffset,
 
 
 ---@class AInfo : AActor
-AInfo = {}
+local AInfo = {}
 
 
 ---@class AKillZVolume : APhysicsVolume
-AKillZVolume = {}
+local AKillZVolume = {}
 
 
 ---@class ALODActor : AActor
@@ -1406,19 +1406,19 @@ AKillZVolume = {}
 ---@field LODLevel int32
 ---@field SubActors TArray<AActor>
 ---@field CachedNumHLODLevels uint8
-ALODActor = {}
+local ALODActor = {}
 
 
 
 ---@class ALevelBounds : AActor
 ---@field bAutoUpdateBounds boolean
-ALevelBounds = {}
+local ALevelBounds = {}
 
 
 
 ---@class ALevelScriptActor : AActor
 ---@field bInputEnabled boolean
-ALevelScriptActor = {}
+local ALevelScriptActor = {}
 
 ---@param OldOriginLocation FIntVector
 ---@param NewOriginLocation FIntVector
@@ -1440,14 +1440,14 @@ function ALevelScriptActor:LevelReset() end
 ---@field bEditorPreVisOnly boolean
 ---@field bDisabled boolean
 ---@field StreamingUsage EStreamingVolumeUsage
-ALevelStreamingVolume = {}
+local ALevelStreamingVolume = {}
 
 
 
 ---@class ALight : AActor
 ---@field LightComponent ULightComponent
 ---@field bEnabled boolean
-ALight = {}
+local ALight = {}
 
 function ALight:ToggleEnabled() end
 ---@param NewLightFunctionScale FVector
@@ -1476,22 +1476,22 @@ function ALight:GetBrightness() end
 
 
 ---@class ALightmassCharacterIndirectDetailVolume : AVolume
-ALightmassCharacterIndirectDetailVolume = {}
+local ALightmassCharacterIndirectDetailVolume = {}
 
 
 ---@class ALightmassImportanceVolume : AVolume
-ALightmassImportanceVolume = {}
+local ALightmassImportanceVolume = {}
 
 
 ---@class ALightmassPortal : AActor
 ---@field PortalComponent ULightmassPortalComponent
-ALightmassPortal = {}
+local ALightmassPortal = {}
 
 
 
 ---@class AMaterialInstanceActor : AActor
 ---@field TargetActors TArray<AActor>
-AMaterialInstanceActor = {}
+local AMaterialInstanceActor = {}
 
 
 
@@ -1528,7 +1528,7 @@ AMaterialInstanceActor = {}
 ---@field OnPlay FMatineeActorOnPlay
 ---@field OnStop FMatineeActorOnStop
 ---@field OnPause FMatineeActorOnPause
-AMatineeActor = {}
+local AMatineeActor = {}
 
 function AMatineeActor:Stop() end
 ---@param NewPosition float
@@ -1547,12 +1547,12 @@ function AMatineeActor:ChangePlaybackDirection() end
 
 ---@class AMatineeActorCameraAnim : AMatineeActor
 ---@field CameraAnim UCameraAnim
-AMatineeActorCameraAnim = {}
+local AMatineeActorCameraAnim = {}
 
 
 
 ---@class AMeshMergeCullingVolume : AVolume
-AMeshMergeCullingVolume = {}
+local AMeshMergeCullingVolume = {}
 
 
 ---@class ANavigationObjectBase : AActor
@@ -1560,12 +1560,12 @@ AMeshMergeCullingVolume = {}
 ---@field GoodSprite UBillboardComponent
 ---@field BadSprite UBillboardComponent
 ---@field bIsPIEPlayerStart boolean
-ANavigationObjectBase = {}
+local ANavigationObjectBase = {}
 
 
 
 ---@class ANote : AActor
-ANote = {}
+local ANote = {}
 
 
 ---@class APainCausingVolume : APhysicsVolume
@@ -1576,12 +1576,12 @@ ANote = {}
 ---@field bEntryPain boolean
 ---@field BACKUP_bPainCausing boolean
 ---@field DamageInstigator AController
-APainCausingVolume = {}
+local APainCausingVolume = {}
 
 
 
 ---@class AParticleEventManager : AActor
-AParticleEventManager = {}
+local AParticleEventManager = {}
 
 
 ---@class APawn : AActor
@@ -1599,7 +1599,7 @@ AParticleEventManager = {}
 ---@field Controller AController
 ---@field ControlInputVector FVector
 ---@field LastControlInputVector FVector
-APawn = {}
+local APawn = {}
 
 function APawn:SpawnDefaultController() end
 ---@param bNewValue boolean
@@ -1671,13 +1671,13 @@ function APawn:AddControllerPitchInput(Val) end
 ---@field ConstraintActor1 AActor
 ---@field ConstraintActor2 AActor
 ---@field bDisableCollision boolean
-APhysicsConstraintActor = {}
+local APhysicsConstraintActor = {}
 
 
 
 ---@class APhysicsThruster : ARigidBodyBase
 ---@field ThrusterComponent UPhysicsThrusterComponent
-APhysicsThruster = {}
+local APhysicsThruster = {}
 
 
 
@@ -1687,21 +1687,21 @@ APhysicsThruster = {}
 ---@field FluidFriction float
 ---@field bWaterVolume boolean
 ---@field bPhysicsOnContact boolean
-APhysicsVolume = {}
+local APhysicsVolume = {}
 
 
 
 ---@class APlanarReflection : ASceneCapture
 ---@field PlanarReflectionComponent UPlanarReflectionComponent
 ---@field bShowPreviewPlane boolean
-APlanarReflection = {}
+local APlanarReflection = {}
 
 ---@param bEnable boolean
 function APlanarReflection:OnInterpToggle(bEnable) end
 
 
 ---@class APlaneReflectionCapture : AReflectionCapture
-APlaneReflectionCapture = {}
+local APlaneReflectionCapture = {}
 
 
 ---@class APlayerCameraManager : AActor
@@ -1740,7 +1740,7 @@ APlaneReflectionCapture = {}
 ---@field ViewRollMin float
 ---@field ViewRollMax float
 ---@field ServerUpdateCameraTimeout float
-APlayerCameraManager = {}
+local APlayerCameraManager = {}
 
 ---@param ShakeInstance UCameraShake
 ---@param bImmediately boolean
@@ -1877,7 +1877,7 @@ function APlayerCameraManager:AddCameraLensEffect(LensEffectEmitterClass) end
 ---@field SpectatorPawn ASpectatorPawn
 ---@field bIsLocalPlayerController boolean
 ---@field SpawnLocation FVector
-APlayerController = {}
+local APlayerController = {}
 
 ---@param Key FKey
 ---@return boolean
@@ -2260,12 +2260,12 @@ function APlayerController:ActivateTouchInterface(NewTouchInterface) end
 
 ---@class APlayerStart : ANavigationObjectBase
 ---@field PlayerStartTag FName
-APlayerStart = {}
+local APlayerStart = {}
 
 
 
 ---@class APlayerStartPIE : APlayerStart
-APlayerStartPIE = {}
+local APlayerStartPIE = {}
 
 
 ---@class APlayerState : AInfo
@@ -2286,7 +2286,7 @@ APlayerStartPIE = {}
 ---@field VoiceAudioComponent UAudioComponent
 ---@field PawnPrivate APawn
 ---@field PlayerNamePrivate FString
-APlayerState = {}
+local APlayerState = {}
 
 ---@param OldPlayerState APlayerState
 function APlayerState:ReceiveOverrideWith(OldPlayerState) end
@@ -2303,7 +2303,7 @@ function APlayerState:GetPlayerName() end
 
 ---@class APointLight : ALight
 ---@field PointLightComponent UPointLightComponent
-APointLight = {}
+local APointLight = {}
 
 ---@param NewRadius float
 function APointLight:SetRadius(NewRadius) end
@@ -2318,7 +2318,7 @@ function APointLight:SetLightFalloffExponent(NewLightFalloffExponent) end
 ---@field BlendWeight float
 ---@field bEnabled boolean
 ---@field bUnbound boolean
-APostProcessVolume = {}
+local APostProcessVolume = {}
 
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
@@ -2329,17 +2329,17 @@ function APostProcessVolume:AddOrUpdateBlendable(InBlendableObject, InWeight) en
 ---@field OverrideVisibleActors TArray<AActor>
 ---@field OverrideInvisibleActors TArray<AActor>
 ---@field OverrideInvisibleLevels TArray<FName>
-APrecomputedVisibilityOverrideVolume = {}
+local APrecomputedVisibilityOverrideVolume = {}
 
 
 
 ---@class APrecomputedVisibilityVolume : AVolume
-APrecomputedVisibilityVolume = {}
+local APrecomputedVisibilityVolume = {}
 
 
 ---@class ARadialForceActor : ARigidBodyBase
 ---@field ForceComponent URadialForceComponent
-ARadialForceActor = {}
+local ARadialForceActor = {}
 
 function ARadialForceActor:ToggleForce() end
 function ARadialForceActor:FireImpulse() end
@@ -2349,36 +2349,36 @@ function ARadialForceActor:DisableForce() end
 
 ---@class ARectLight : ALight
 ---@field RectLightComponent URectLightComponent
-ARectLight = {}
+local ARectLight = {}
 
 
 
 ---@class AReflectionCapture : AActor
 ---@field CaptureComponent UReflectionCaptureComponent
-AReflectionCapture = {}
+local AReflectionCapture = {}
 
 
 
 ---@class ARigidBodyBase : AActor
-ARigidBodyBase = {}
+local ARigidBodyBase = {}
 
 
 ---@class ARuntimeVirtualTextureVolume : AActor
 ---@field VirtualTextureComponent URuntimeVirtualTextureComponent
-ARuntimeVirtualTextureVolume = {}
+local ARuntimeVirtualTextureVolume = {}
 
 
 
 ---@class ASceneCapture : AActor
 ---@field MeshComp UStaticMeshComponent
 ---@field SceneComponent USceneComponent
-ASceneCapture = {}
+local ASceneCapture = {}
 
 
 
 ---@class ASceneCapture2D : ASceneCapture
 ---@field CaptureComponent2D USceneCaptureComponent2D
-ASceneCapture2D = {}
+local ASceneCapture2D = {}
 
 ---@param bEnable boolean
 function ASceneCapture2D:OnInterpToggle(bEnable) end
@@ -2386,7 +2386,7 @@ function ASceneCapture2D:OnInterpToggle(bEnable) end
 
 ---@class ASceneCaptureCube : ASceneCapture
 ---@field CaptureComponentCube USceneCaptureComponentCube
-ASceneCaptureCube = {}
+local ASceneCaptureCube = {}
 
 ---@param bEnable boolean
 function ASceneCaptureCube:OnInterpToggle(bEnable) end
@@ -2443,7 +2443,7 @@ function ASceneCaptureCube:OnInterpToggle(bEnable) end
 ---@field NetGUIDOutRate uint32
 ---@field NetGUIDInRate uint32
 ---@field NetSaturated uint32
-AServerStatReplicator = {}
+local AServerStatReplicator = {}
 
 
 
@@ -2455,7 +2455,7 @@ AServerStatReplicator = {}
 ---@field ReplicatedPhysAsset UPhysicsAsset
 ---@field ReplicatedMaterial0 UMaterialInterface
 ---@field ReplicatedMaterial1 UMaterialInterface
-ASkeletalMeshActor = {}
+local ASkeletalMeshActor = {}
 
 function ASkeletalMeshActor:OnRep_ReplicatedPhysAsset() end
 function ASkeletalMeshActor:OnRep_ReplicatedMesh() end
@@ -2465,37 +2465,37 @@ function ASkeletalMeshActor:OnRep_ReplicatedMaterial0() end
 
 ---@class ASkyAtmosphere : AInfo
 ---@field SkyAtmosphereComponent USkyAtmosphereComponent
-ASkyAtmosphere = {}
+local ASkyAtmosphere = {}
 
 
 
 ---@class ASkyLight : AInfo
 ---@field LightComponent USkyLightComponent
 ---@field bEnabled boolean
-ASkyLight = {}
+local ASkyLight = {}
 
 function ASkyLight:OnRep_bEnabled() end
 
 
 ---@class ASpectatorPawn : ADefaultPawn
-ASpectatorPawn = {}
+local ASpectatorPawn = {}
 
 
 ---@class ASphereReflectionCapture : AReflectionCapture
 ---@field DrawCaptureRadius UDrawSphereComponent
-ASphereReflectionCapture = {}
+local ASphereReflectionCapture = {}
 
 
 
 ---@class ASplineMeshActor : AActor
 ---@field SplineMeshComponent USplineMeshComponent
-ASplineMeshActor = {}
+local ASplineMeshActor = {}
 
 
 
 ---@class ASpotLight : ALight
 ---@field SpotLightComponent USpotLightComponent
-ASpotLight = {}
+local ASpotLight = {}
 
 ---@param NewOuterConeAngle float
 function ASpotLight:SetOuterConeAngle(NewOuterConeAngle) end
@@ -2507,63 +2507,63 @@ function ASpotLight:SetInnerConeAngle(NewInnerConeAngle) end
 ---@field StaticMeshComponent UStaticMeshComponent
 ---@field bStaticMeshReplicateMovement boolean
 ---@field NavigationGeometryGatheringMode ENavDataGatheringMode
-AStaticMeshActor = {}
+local AStaticMeshActor = {}
 
 ---@param InMobility EComponentMobility::Type
 function AStaticMeshActor:SetMobility(InMobility) end
 
 
 ---@class ATargetPoint : AActor
-ATargetPoint = {}
+local ATargetPoint = {}
 
 
 ---@class ATextRenderActor : AActor
 ---@field TextRender UTextRenderComponent
-ATextRenderActor = {}
+local ATextRenderActor = {}
 
 
 
 ---@class ATriggerBase : AActor
 ---@field CollisionComponent UShapeComponent
-ATriggerBase = {}
+local ATriggerBase = {}
 
 
 
 ---@class ATriggerBox : ATriggerBase
-ATriggerBox = {}
+local ATriggerBox = {}
 
 
 ---@class ATriggerCapsule : ATriggerBase
-ATriggerCapsule = {}
+local ATriggerCapsule = {}
 
 
 ---@class ATriggerSphere : ATriggerBase
-ATriggerSphere = {}
+local ATriggerSphere = {}
 
 
 ---@class ATriggerVolume : AVolume
-ATriggerVolume = {}
+local ATriggerVolume = {}
 
 
 ---@class AVectorFieldVolume : AActor
 ---@field VectorFieldComponent UVectorFieldComponent
-AVectorFieldVolume = {}
+local AVectorFieldVolume = {}
 
 
 
 ---@class AVolume : ABrush
-AVolume = {}
+local AVolume = {}
 
 
 ---@class AVolumetricLightmapDensityVolume : AVolume
 ---@field AllowedMipLevelRange FInt32Interval
-AVolumetricLightmapDensityVolume = {}
+local AVolumetricLightmapDensityVolume = {}
 
 
 
 ---@class AWindDirectionalSource : AInfo
 ---@field Component UWindDirectionalSourceComponent
-AWindDirectionalSource = {}
+local AWindDirectionalSource = {}
 
 
 
@@ -2621,37 +2621,37 @@ AWindDirectionalSource = {}
 ---@field DefaultBookmarkClass TSubclassOf<UBookmarkBase>
 ---@field BookmarkArray TArray<UBookmarkBase>
 ---@field LastBookmarkClass TSubclassOf<UBookmarkBase>
-AWorldSettings = {}
+local AWorldSettings = {}
 
 function AWorldSettings:OnRep_WorldGravityZ() end
 
 
 ---@class FA2CSPose : FA2Pose
 ---@field ComponentSpaceFlags TArray<uint8>
-FA2CSPose = {}
+local FA2CSPose = {}
 
 
 
 ---@class FA2Pose
 ---@field Bones TArray<FTransform>
-FA2Pose = {}
+local FA2Pose = {}
 
 
 
 ---@class FActiveForceFeedbackEffect
 ---@field ForceFeedbackEffect UForceFeedbackEffect
-FActiveForceFeedbackEffect = {}
+local FActiveForceFeedbackEffect = {}
 
 
 
 ---@class FActiveHapticFeedbackEffect
 ---@field HapticEffect UHapticFeedbackEffect_Base
-FActiveHapticFeedbackEffect = {}
+local FActiveHapticFeedbackEffect = {}
 
 
 
 ---@class FActorComponentDuplicatedObjectData
-FActorComponentDuplicatedObjectData = {}
+local FActorComponentDuplicatedObjectData = {}
 
 
 ---@class FActorComponentInstanceData
@@ -2662,23 +2662,23 @@ FActorComponentDuplicatedObjectData = {}
 ---@field DuplicatedObjects TArray<FActorComponentDuplicatedObjectData>
 ---@field ReferencedObjects TArray<UObject>
 ---@field ReferencedNames TArray<FName>
-FActorComponentInstanceData = {}
+local FActorComponentInstanceData = {}
 
 
 
 ---@class FActorComponentTickFunction : FTickFunction
-FActorComponentTickFunction = {}
+local FActorComponentTickFunction = {}
 
 
 ---@class FActorTickFunction : FTickFunction
-FActorTickFunction = {}
+local FActorTickFunction = {}
 
 
 ---@class FAlphaBlend
 ---@field CustomCurve UCurveFloat
 ---@field BlendTime float
 ---@field BlendOption EAlphaBlendOption
-FAlphaBlend = {}
+local FAlphaBlend = {}
 
 
 
@@ -2689,12 +2689,12 @@ FAlphaBlend = {}
 ---@field OrientationTarget FRotator
 ---@field AngularVelocityTarget FVector
 ---@field AngularDriveMode EAngularDriveMode::Type
-FAngularDriveConstraint = {}
+local FAngularDriveConstraint = {}
 
 
 
 ---@class FAnimBlueprintDebugData
-FAnimBlueprintDebugData = {}
+local FAnimBlueprintDebugData = {}
 
 
 ---@class FAnimBlueprintFunction
@@ -2707,7 +2707,7 @@ FAnimBlueprintDebugData = {}
 ---@field InputPoseNodeProperties TArray<UStructProperty>
 ---@field InputProperties TArray<UProperty>
 ---@field bImplemented boolean
-FAnimBlueprintFunction = {}
+local FAnimBlueprintFunction = {}
 
 
 
@@ -2719,7 +2719,7 @@ FAnimBlueprintFunction = {}
 ---@field AnimPlayRate float
 ---@field bLooping boolean
 ---@field bReverse boolean
-FAnimControlTrackKey = {}
+local FAnimControlTrackKey = {}
 
 
 
@@ -2727,40 +2727,40 @@ FAnimControlTrackKey = {}
 ---@field LastObservedName FName
 ---@field Name FSmartName
 ---@field CurveTypeFlags int32
-FAnimCurveBase = {}
+local FAnimCurveBase = {}
 
 
 
 ---@class FAnimCurveParam
 ---@field Name FName
-FAnimCurveParam = {}
+local FAnimCurveParam = {}
 
 
 
 ---@class FAnimCurveType
-FAnimCurveType = {}
+local FAnimCurveType = {}
 
 
 ---@class FAnimGraphBlendOptions
 ---@field BlendInTime float
 ---@field BlendOutTime float
-FAnimGraphBlendOptions = {}
+local FAnimGraphBlendOptions = {}
 
 
 
 ---@class FAnimGroupInfo
 ---@field Name FName
 ---@field Color FLinearColor
-FAnimGroupInfo = {}
+local FAnimGroupInfo = {}
 
 
 
 ---@class FAnimGroupInstance
-FAnimGroupInstance = {}
+local FAnimGroupInstance = {}
 
 
 ---@class FAnimInstanceProxy
-FAnimInstanceProxy = {}
+local FAnimInstanceProxy = {}
 
 
 ---@class FAnimLinkableElement
@@ -2773,7 +2773,7 @@ FAnimInstanceProxy = {}
 ---@field SegmentLength float
 ---@field LinkValue float
 ---@field LinkedSequence UAnimSequenceBase
-FAnimLinkableElement = {}
+local FAnimLinkableElement = {}
 
 
 
@@ -2788,7 +2788,7 @@ FAnimLinkableElement = {}
 ---@field PlayRate float
 ---@field Blend FAlphaBlend
 ---@field DisableRootMotionCount int32
-FAnimMontageInstance = {}
+local FAnimMontageInstance = {}
 
 
 
@@ -2798,7 +2798,7 @@ FAnimMontageInstance = {}
 ---@field Alpha float
 ---@field AlphaScaleBias FInputScaleBias
 ---@field LODThreshold int32
-FAnimNode_ApplyMeshSpaceAdditive = {}
+local FAnimNode_ApplyMeshSpaceAdditive = {}
 
 
 
@@ -2808,23 +2808,23 @@ FAnimNode_ApplyMeshSpaceAdditive = {}
 ---@field bIgnoreForRelevancyTest boolean
 ---@field BlendWeight float
 ---@field InternalTimeAccumulator float
-FAnimNode_AssetPlayerBase = {}
+local FAnimNode_AssetPlayerBase = {}
 
 
 
 ---@class FAnimNode_Base
-FAnimNode_Base = {}
+local FAnimNode_Base = {}
 
 
 ---@class FAnimNode_ConvertComponentToLocalSpace : FAnimNode_Base
 ---@field ComponentPose FComponentSpacePoseLink
-FAnimNode_ConvertComponentToLocalSpace = {}
+local FAnimNode_ConvertComponentToLocalSpace = {}
 
 
 
 ---@class FAnimNode_ConvertLocalToComponentSpace : FAnimNode_Base
 ---@field LocalPose FPoseLink
-FAnimNode_ConvertLocalToComponentSpace = {}
+local FAnimNode_ConvertLocalToComponentSpace = {}
 
 
 
@@ -2834,13 +2834,13 @@ FAnimNode_ConvertLocalToComponentSpace = {}
 ---@field TargetInstance UObject
 ---@field SourceProperties TArray<UProperty>
 ---@field DestProperties TArray<UProperty>
-FAnimNode_CustomProperty = {}
+local FAnimNode_CustomProperty = {}
 
 
 
 ---@class FAnimNode_Inertialization : FAnimNode_Base
 ---@field Source FPoseLink
-FAnimNode_Inertialization = {}
+local FAnimNode_Inertialization = {}
 
 
 
@@ -2849,14 +2849,14 @@ FAnimNode_Inertialization = {}
 ---@field InputPoseNames TArray<FName>
 ---@field InstanceClass TSubclassOf<UAnimInstance>
 ---@field Tag FName
-FAnimNode_LinkedAnimGraph = {}
+local FAnimNode_LinkedAnimGraph = {}
 
 
 
 ---@class FAnimNode_LinkedAnimLayer : FAnimNode_LinkedAnimGraph
 ---@field Interface TSubclassOf<UAnimLayerInterface>
 ---@field Layer FName
-FAnimNode_LinkedAnimLayer = {}
+local FAnimNode_LinkedAnimLayer = {}
 
 
 
@@ -2864,7 +2864,7 @@ FAnimNode_LinkedAnimLayer = {}
 ---@field Name FName
 ---@field Graph FName
 ---@field InputPose FPoseLink
-FAnimNode_LinkedInputPose = {}
+local FAnimNode_LinkedInputPose = {}
 
 
 
@@ -2872,14 +2872,14 @@ FAnimNode_LinkedInputPose = {}
 ---@field Result FPoseLink
 ---@field Name FName
 ---@field Group FName
-FAnimNode_Root = {}
+local FAnimNode_Root = {}
 
 
 
 ---@class FAnimNode_SaveCachedPose : FAnimNode_Base
 ---@field Pose FPoseLink
 ---@field CachePoseName FName
-FAnimNode_SaveCachedPose = {}
+local FAnimNode_SaveCachedPose = {}
 
 
 
@@ -2890,13 +2890,13 @@ FAnimNode_SaveCachedPose = {}
 ---@field PlayRateScaleBiasClamp FInputScaleBiasClamp
 ---@field StartPosition float
 ---@field bLoopAnimation boolean
-FAnimNode_SequencePlayer = {}
+local FAnimNode_SequencePlayer = {}
 
 
 
 ---@class FAnimNode_SingleNode : FAnimNode_Base
 ---@field SourcePose FPoseLink
-FAnimNode_SingleNode = {}
+local FAnimNode_SingleNode = {}
 
 
 
@@ -2905,7 +2905,7 @@ FAnimNode_SingleNode = {}
 ---@field MaxTransitionsPerFrame int32
 ---@field bSkipFirstUpdateTransition boolean
 ---@field bReinitializeOnBecomingRelevant boolean
-FAnimNode_StateMachine = {}
+local FAnimNode_StateMachine = {}
 
 
 
@@ -2913,26 +2913,26 @@ FAnimNode_StateMachine = {}
 ---@field FramesToCachePose int32
 ---@field DataSource EEvaluatorDataSource::Type
 ---@field EvaluatorMode EEvaluatorMode::Type
-FAnimNode_TransitionPoseEvaluator = {}
+local FAnimNode_TransitionPoseEvaluator = {}
 
 
 
 ---@class FAnimNode_TransitionResult : FAnimNode_Base
 ---@field bCanEnterTransition boolean
-FAnimNode_TransitionResult = {}
+local FAnimNode_TransitionResult = {}
 
 
 
 ---@class FAnimNode_UseCachedPose : FAnimNode_Base
 ---@field LinkToCachingNode FPoseLink
 ---@field CachePoseName FName
-FAnimNode_UseCachedPose = {}
+local FAnimNode_UseCachedPose = {}
 
 
 
 ---@class FAnimNotifyArray
 ---@field Notifies TArray<FAnimNotifyEventReference>
-FAnimNotifyArray = {}
+local FAnimNotifyArray = {}
 
 
 
@@ -2954,34 +2954,34 @@ FAnimNotifyArray = {}
 ---@field bTriggerOnDedicatedServer boolean
 ---@field bTriggerOnFollower boolean
 ---@field TrackIndex int32
-FAnimNotifyEvent = {}
+local FAnimNotifyEvent = {}
 
 
 
 ---@class FAnimNotifyEventReference
 ---@field NotifySource UObject
-FAnimNotifyEventReference = {}
+local FAnimNotifyEventReference = {}
 
 
 
 ---@class FAnimNotifyQueue
 ---@field AnimNotifies TArray<FAnimNotifyEventReference>
 ---@field UnfilteredMontageAnimNotifies TMap<FName, FAnimNotifyArray>
-FAnimNotifyQueue = {}
+local FAnimNotifyQueue = {}
 
 
 
 ---@class FAnimNotifyTrack
 ---@field TrackName FName
 ---@field TrackColor FLinearColor
-FAnimNotifyTrack = {}
+local FAnimNotifyTrack = {}
 
 
 
 ---@class FAnimParentNodeAssetOverride
 ---@field NewAsset UAnimationAsset
 ---@field ParentNodeGuid FGuid
-FAnimParentNodeAssetOverride = {}
+local FAnimParentNodeAssetOverride = {}
 
 
 
@@ -2992,64 +2992,64 @@ FAnimParentNodeAssetOverride = {}
 ---@field AnimEndTime float
 ---@field AnimPlayRate float
 ---@field LoopingCount int32
-FAnimSegment = {}
+local FAnimSegment = {}
 
 
 
 ---@class FAnimSequenceTrackContainer
 ---@field AnimationTracks TArray<FRawAnimSequenceTrack>
 ---@field TrackNames TArray<FName>
-FAnimSequenceTrackContainer = {}
+local FAnimSequenceTrackContainer = {}
 
 
 
 ---@class FAnimSetMeshLinkup
 ---@field BoneToTrackTable TArray<int32>
-FAnimSetMeshLinkup = {}
+local FAnimSetMeshLinkup = {}
 
 
 
 ---@class FAnimSingleNodeInstanceProxy : FAnimInstanceProxy
-FAnimSingleNodeInstanceProxy = {}
+local FAnimSingleNodeInstanceProxy = {}
 
 
 ---@class FAnimSlotDesc
 ---@field SlotName FName
 ---@field NumChannels int32
-FAnimSlotDesc = {}
+local FAnimSlotDesc = {}
 
 
 
 ---@class FAnimSlotGroup
 ---@field GroupName FName
 ---@field SlotNames TArray<FName>
-FAnimSlotGroup = {}
+local FAnimSlotGroup = {}
 
 
 
 ---@class FAnimSlotInfo
 ---@field SlotName FName
 ---@field ChannelWeights TArray<float>
-FAnimSlotInfo = {}
+local FAnimSlotInfo = {}
 
 
 
 ---@class FAnimSyncMarker
 ---@field MarkerName FName
 ---@field Time float
-FAnimSyncMarker = {}
+local FAnimSyncMarker = {}
 
 
 
 ---@class FAnimTickRecord
 ---@field SourceAsset UAnimationAsset
-FAnimTickRecord = {}
+local FAnimTickRecord = {}
 
 
 
 ---@class FAnimTrack
 ---@field AnimSegments TArray<FAnimSegment>
-FAnimTrack = {}
+local FAnimTrack = {}
 
 
 
@@ -3070,29 +3070,29 @@ FAnimTrack = {}
 ---@field LODToFrameSkipMap TMap<int32, int32>
 ---@field SkippedUpdateFrames int32
 ---@field SkippedEvalFrames int32
-FAnimUpdateRateParameters = {}
+local FAnimUpdateRateParameters = {}
 
 
 
 ---@class FAnimationActiveTransitionEntry
 ---@field BlendProfile UBlendProfile
-FAnimationActiveTransitionEntry = {}
+local FAnimationActiveTransitionEntry = {}
 
 
 
 ---@class FAnimationFrameSnapshot
-FAnimationFrameSnapshot = {}
+local FAnimationFrameSnapshot = {}
 
 
 ---@class FAnimationGroupReference
 ---@field GroupName FName
 ---@field GroupRole EAnimGroupRole::Type
-FAnimationGroupReference = {}
+local FAnimationGroupReference = {}
 
 
 
 ---@class FAnimationPotentialTransition
-FAnimationPotentialTransition = {}
+local FAnimationPotentialTransition = {}
 
 
 ---@class FAnimationRecordingSettings
@@ -3103,7 +3103,7 @@ FAnimationPotentialTransition = {}
 ---@field Length float
 ---@field InterpMode ERichCurveInterpMode
 ---@field TangentMode ERichCurveTangentMode
-FAnimationRecordingSettings = {}
+local FAnimationRecordingSettings = {}
 
 
 
@@ -3113,13 +3113,13 @@ FAnimationRecordingSettings = {}
 ---@field StartNotify int32
 ---@field EndNotify int32
 ---@field FullyBlendedNotify int32
-FAnimationState = {}
+local FAnimationState = {}
 
 
 
 ---@class FAnimationStateBase
 ---@field StateName FName
-FAnimationStateBase = {}
+local FAnimationStateBase = {}
 
 
 
@@ -3134,7 +3134,7 @@ FAnimationStateBase = {}
 ---@field CustomCurve UCurveFloat
 ---@field BlendProfile UBlendProfile
 ---@field LogicType ETransitionLogicType::Type
-FAnimationTransitionBetweenStates = {}
+local FAnimationTransitionBetweenStates = {}
 
 
 
@@ -3142,7 +3142,7 @@ FAnimationTransitionBetweenStates = {}
 ---@field RuleToExecute FName
 ---@field TransitionReturnVal boolean
 ---@field TransitionIndex int32
-FAnimationTransitionRule = {}
+local FAnimationTransitionRule = {}
 
 
 
@@ -3151,30 +3151,30 @@ FAnimationTransitionRule = {}
 ---@field CamOrbitPoint FVector
 ---@field CamOrbitZoom FVector
 ---@field CamOrbitRotation FRotator
-FAssetEditorOrbitCameraPosition = {}
+local FAssetEditorOrbitCameraPosition = {}
 
 
 
 ---@class FAssetImportInfo
-FAssetImportInfo = {}
+local FAssetImportInfo = {}
 
 
 ---@class FAssetManagerRedirect
 ---@field Old FString
 ---@field New FString
-FAssetManagerRedirect = {}
+local FAssetManagerRedirect = {}
 
 
 
 ---@class FAssetMapping
 ---@field SourceAsset UAnimationAsset
 ---@field TargetAsset UAnimationAsset
-FAssetMapping = {}
+local FAssetMapping = {}
 
 
 
 ---@class FAtmospherePrecomputeInstanceData : FSceneComponentInstanceData
-FAtmospherePrecomputeInstanceData = {}
+local FAtmospherePrecomputeInstanceData = {}
 
 
 ---@class FAtmospherePrecomputeParameters
@@ -3189,7 +3189,7 @@ FAtmospherePrecomputeInstanceData = {}
 ---@field InscatterMuNum int32
 ---@field InscatterMuSNum int32
 ---@field InscatterNuNum int32
-FAtmospherePrecomputeParameters = {}
+local FAtmospherePrecomputeParameters = {}
 
 
 
@@ -3199,7 +3199,7 @@ FAtmospherePrecomputeParameters = {}
 ---@field BoolParam boolean
 ---@field IntParam int32
 ---@field SoundWaveParam USoundWave
-FAudioComponentParam = {}
+local FAudioComponentParam = {}
 
 
 
@@ -3216,28 +3216,28 @@ FAudioComponentParam = {}
 ---@field FrequencyCenter3 float
 ---@field Gain3 float
 ---@field Bandwidth3 float
-FAudioEQEffect = {}
+local FAudioEQEffect = {}
 
 
 
 ---@class FAudioQualitySettings
 ---@field DisplayName FText
 ---@field MaxChannels int32
-FAudioQualitySettings = {}
+local FAudioQualitySettings = {}
 
 
 
 ---@class FAutoCompleteNode
 ---@field IndexChar int32
 ---@field AutoCompleteListIndices TArray<int32>
-FAutoCompleteNode = {}
+local FAutoCompleteNode = {}
 
 
 
 ---@class FBPComponentClassOverride
 ---@field ComponentName FName
 ---@field ComponentClass UClass
-FBPComponentClassOverride = {}
+local FBPComponentClassOverride = {}
 
 
 
@@ -3245,14 +3245,14 @@ FBPComponentClassOverride = {}
 ---@field NodeGuid FGuid
 ---@field ParentGuid FGuid
 ---@field DisplayName FText
-FBPEditorBookmarkNode = {}
+local FBPEditorBookmarkNode = {}
 
 
 
 ---@class FBPInterfaceDescription
 ---@field Interface TSubclassOf<UInterface>
 ---@field Graphs TArray<UEdGraph>
-FBPInterfaceDescription = {}
+local FBPInterfaceDescription = {}
 
 
 
@@ -3267,14 +3267,14 @@ FBPInterfaceDescription = {}
 ---@field ReplicationCondition ELifetimeCondition
 ---@field MetaDataArray TArray<FBPVariableMetaDataEntry>
 ---@field DefaultValue FString
-FBPVariableDescription = {}
+local FBPVariableDescription = {}
 
 
 
 ---@class FBPVariableMetaDataEntry
 ---@field DataKey FName
 ---@field DataValue FString
-FBPVariableMetaDataEntry = {}
+local FBPVariableMetaDataEntry = {}
 
 
 
@@ -3290,7 +3290,7 @@ FBPVariableMetaDataEntry = {}
 ---@field PlayerNodeIndices TArray<int32>
 ---@field LayerNodeIndices TArray<int32>
 ---@field bAlwaysResetOnEntry boolean
-FBakedAnimationState = {}
+local FBakedAnimationState = {}
 
 
 
@@ -3299,7 +3299,7 @@ FBakedAnimationState = {}
 ---@field InitialState int32
 ---@field States TArray<FBakedAnimationState>
 ---@field Transitions TArray<FAnimationTransitionBetweenStates>
-FBakedAnimationStateMachine = {}
+local FBakedAnimationStateMachine = {}
 
 
 
@@ -3310,19 +3310,19 @@ FBakedAnimationStateMachine = {}
 ---@field bDesiredTransitionReturnValue boolean
 ---@field bAutomaticRemainingTimeRule boolean
 ---@field PoseEvaluatorLinks TArray<int32>
-FBakedStateExitTransition = {}
+local FBakedStateExitTransition = {}
 
 
 
 ---@class FBandwidthTestGenerator
 ---@field ReplicatedBuffers TArray<FBandwidthTestItem>
-FBandwidthTestGenerator = {}
+local FBandwidthTestGenerator = {}
 
 
 
 ---@class FBandwidthTestItem
 ---@field Kilobyte TArray<uint8>
-FBandwidthTestItem = {}
+local FBandwidthTestItem = {}
 
 
 
@@ -3334,7 +3334,7 @@ FBandwidthTestItem = {}
 ---@field ConeOffset float
 ---@field FalloffDistance float
 ---@field CustomAttenuationCurve FRuntimeFloatCurve
-FBaseAttenuationSettings = {}
+local FBaseAttenuationSettings = {}
 
 
 
@@ -3346,7 +3346,7 @@ FBaseAttenuationSettings = {}
 ---@field bServerHasBaseComponent boolean
 ---@field bRelativeRotation boolean
 ---@field bServerHasVelocity boolean
-FBasedMovementInfo = {}
+local FBasedMovementInfo = {}
 
 
 
@@ -3356,7 +3356,7 @@ FBasedMovementInfo = {}
 ---@field CachedBaseLocation FVector
 ---@field CachedBaseRotation FRotator
 ---@field CachedTransPosition FVector
-FBasedPosition = {}
+local FBasedPosition = {}
 
 
 
@@ -3367,7 +3367,7 @@ FBasedPosition = {}
 ---@field Thickness float
 ---@field RemainingLifeTime float
 ---@field DepthPriority uint8
-FBatchedLine = {}
+local FBatchedLine = {}
 
 
 
@@ -3377,7 +3377,7 @@ FBatchedLine = {}
 ---@field PointSize float
 ---@field RemainingLifeTime float
 ---@field DepthPriority uint8
-FBatchedPoint = {}
+local FBatchedPoint = {}
 
 
 
@@ -3385,19 +3385,19 @@ FBatchedPoint = {}
 ---@field bModify boolean
 ---@field bScale boolean
 ---@field bLock boolean
-FBeamModifierOptions = {}
+local FBeamModifierOptions = {}
 
 
 
 ---@class FBeamTargetData
 ---@field TargetName FName
 ---@field TargetPercentage float
-FBeamTargetData = {}
+local FBeamTargetData = {}
 
 
 
 ---@class FBlendFilter
-FBlendFilter = {}
+local FBlendFilter = {}
 
 
 ---@class FBlendParameter
@@ -3405,14 +3405,14 @@ FBlendFilter = {}
 ---@field Min float
 ---@field Max float
 ---@field GridNum int32
-FBlendParameter = {}
+local FBlendParameter = {}
 
 
 
 ---@class FBlendProfileBoneEntry
 ---@field BoneReference FBoneReference
 ---@field BlendScale float
-FBlendProfileBoneEntry = {}
+local FBlendProfileBoneEntry = {}
 
 
 
@@ -3420,7 +3420,7 @@ FBlendProfileBoneEntry = {}
 ---@field Animation UAnimSequence
 ---@field SampleValue FVector
 ---@field RateScale float
-FBlendSample = {}
+local FBlendSample = {}
 
 
 
@@ -3431,7 +3431,7 @@ FBlendSample = {}
 ---@field Time float
 ---@field PreviousTime float
 ---@field SamplePlayRate float
-FBlendSampleData = {}
+local FBlendSampleData = {}
 
 
 
@@ -3439,7 +3439,7 @@ FBlendSampleData = {}
 ---@field PropertyName FName
 ---@field ArrayIndex int32
 ---@field PropertyScope UStruct
-FBlueprintComponentChangedPropertyInfo = {}
+local FBlueprintComponentChangedPropertyInfo = {}
 
 
 
@@ -3447,26 +3447,26 @@ FBlueprintComponentChangedPropertyInfo = {}
 ---@field ComponentPropertyName FName
 ---@field DelegatePropertyName FName
 ---@field FunctionNameToBind FName
-FBlueprintComponentDelegateBinding = {}
+local FBlueprintComponentDelegateBinding = {}
 
 
 
 ---@class FBlueprintCookedComponentInstancingData
 ---@field ChangedPropertyList TArray<FBlueprintComponentChangedPropertyInfo>
 ---@field bHasValidCookedData boolean
-FBlueprintCookedComponentInstancingData = {}
+local FBlueprintCookedComponentInstancingData = {}
 
 
 
 ---@class FBlueprintDebugData
-FBlueprintDebugData = {}
+local FBlueprintDebugData = {}
 
 
 ---@class FBlueprintEditorPromotionSettings
 ---@field FirstMeshPath FFilePath
 ---@field SecondMeshPath FFilePath
 ---@field DefaultParticleAsset FFilePath
-FBlueprintEditorPromotionSettings = {}
+local FBlueprintEditorPromotionSettings = {}
 
 
 
@@ -3474,21 +3474,21 @@ FBlueprintEditorPromotionSettings = {}
 ---@field InputActionName FName
 ---@field InputKeyEvent EInputEvent
 ---@field FunctionNameToBind FName
-FBlueprintInputActionDelegateBinding = {}
+local FBlueprintInputActionDelegateBinding = {}
 
 
 
 ---@class FBlueprintInputAxisDelegateBinding : FBlueprintInputDelegateBinding
 ---@field InputAxisName FName
 ---@field FunctionNameToBind FName
-FBlueprintInputAxisDelegateBinding = {}
+local FBlueprintInputAxisDelegateBinding = {}
 
 
 
 ---@class FBlueprintInputAxisKeyDelegateBinding : FBlueprintInputDelegateBinding
 ---@field AxisKey FKey
 ---@field FunctionNameToBind FName
-FBlueprintInputAxisKeyDelegateBinding = {}
+local FBlueprintInputAxisKeyDelegateBinding = {}
 
 
 
@@ -3496,7 +3496,7 @@ FBlueprintInputAxisKeyDelegateBinding = {}
 ---@field bConsumeInput boolean
 ---@field bExecuteWhenPaused boolean
 ---@field bOverrideParentBinding boolean
-FBlueprintInputDelegateBinding = {}
+local FBlueprintInputDelegateBinding = {}
 
 
 
@@ -3504,19 +3504,19 @@ FBlueprintInputDelegateBinding = {}
 ---@field InputChord FInputChord
 ---@field InputKeyEvent EInputEvent
 ---@field FunctionNameToBind FName
-FBlueprintInputKeyDelegateBinding = {}
+local FBlueprintInputKeyDelegateBinding = {}
 
 
 
 ---@class FBlueprintInputTouchDelegateBinding : FBlueprintInputDelegateBinding
 ---@field InputKeyEvent EInputEvent
 ---@field FunctionNameToBind FName
-FBlueprintInputTouchDelegateBinding = {}
+local FBlueprintInputTouchDelegateBinding = {}
 
 
 
 ---@class FBlueprintMacroCosmeticInfo
-FBlueprintMacroCosmeticInfo = {}
+local FBlueprintMacroCosmeticInfo = {}
 
 
 ---@class FBodyInstance
@@ -3563,14 +3563,14 @@ FBlueprintMacroCosmeticInfo = {}
 ---@field CustomSleepThresholdMultiplier float
 ---@field StabilizationThresholdMultiplier float
 ---@field PhysicsBlendWeight float
-FBodyInstance = {}
+local FBodyInstance = {}
 
 
 
 ---@class FBoneFilter
 ---@field bExcludeSelf boolean
 ---@field BoneName FName
-FBoneFilter = {}
+local FBoneFilter = {}
 
 
 
@@ -3578,14 +3578,14 @@ FBoneFilter = {}
 ---@field BoneName FName
 ---@field SourceBoneName FName
 ---@field BoneFlipAxis EAxis::Type
-FBoneMirrorExport = {}
+local FBoneMirrorExport = {}
 
 
 
 ---@class FBoneMirrorInfo
 ---@field SourceIndex int32
 ---@field BoneFlipAxis EAxis::Type
-FBoneMirrorInfo = {}
+local FBoneMirrorInfo = {}
 
 
 
@@ -3593,45 +3593,45 @@ FBoneMirrorInfo = {}
 ---@field Name FName
 ---@field ParentIndex int32
 ---@field TranslationRetargetingMode EBoneTranslationRetargetingMode::Type
-FBoneNode = {}
+local FBoneNode = {}
 
 
 
 ---@class FBoneReductionSetting
 ---@field BonesToRemove TArray<FName>
-FBoneReductionSetting = {}
+local FBoneReductionSetting = {}
 
 
 
 ---@class FBoneReference
 ---@field BoneName FName
-FBoneReference = {}
+local FBoneReference = {}
 
 
 
 ---@class FBookmark2DJumpToSettings
-FBookmark2DJumpToSettings = {}
+local FBookmark2DJumpToSettings = {}
 
 
 ---@class FBookmarkBaseJumpToSettings
-FBookmarkBaseJumpToSettings = {}
+local FBookmarkBaseJumpToSettings = {}
 
 
 ---@class FBookmarkJumpToSettings : FBookmarkBaseJumpToSettings
-FBookmarkJumpToSettings = {}
+local FBookmarkJumpToSettings = {}
 
 
 ---@class FBoolTrackKey
 ---@field Time float
 ---@field Value boolean
-FBoolTrackKey = {}
+local FBoolTrackKey = {}
 
 
 
 ---@class FBranchFilter
 ---@field BoneName FName
 ---@field BlendDepth int32
-FBranchFilter = {}
+local FBranchFilter = {}
 
 
 
@@ -3639,7 +3639,7 @@ FBranchFilter = {}
 ---@field EventName FName
 ---@field DisplayTime float
 ---@field TriggerTimeOffset float
-FBranchingPoint = {}
+local FBranchingPoint = {}
 
 
 
@@ -3647,12 +3647,12 @@ FBranchingPoint = {}
 ---@field NotifyIndex int32
 ---@field TriggerTime float
 ---@field NotifyEventType EAnimNotifyEventType::Type
-FBranchingPointMarker = {}
+local FBranchingPointMarker = {}
 
 
 
 ---@class FBranchingPointNotifyPayload
-FBranchingPointNotifyPayload = {}
+local FBranchingPointNotifyPayload = {}
 
 
 ---@class FBroadphaseSettings
@@ -3662,7 +3662,7 @@ FBranchingPointNotifyPayload = {}
 ---@field MBPBounds FBox
 ---@field MBPOuterBounds FBox
 ---@field MBPNumSubdivs uint32
-FBroadphaseSettings = {}
+local FBroadphaseSettings = {}
 
 
 
@@ -3678,14 +3678,14 @@ FBroadphaseSettings = {}
 ---@field Sound FEditorImportWorkflowDefinition
 ---@field SurroundSound FEditorImportWorkflowDefinition
 ---@field OtherAssetsToImport TArray<FEditorImportWorkflowDefinition>
-FBuildPromotionImportWorkflowSettings = {}
+local FBuildPromotionImportWorkflowSettings = {}
 
 
 
 ---@class FBuildPromotionNewProjectSettings
 ---@field NewProjectFolderOverride FDirectoryPath
 ---@field NewProjectNameOverride FString
-FBuildPromotionNewProjectSettings = {}
+local FBuildPromotionNewProjectSettings = {}
 
 
 
@@ -3696,7 +3696,7 @@ FBuildPromotionNewProjectSettings = {}
 ---@field SkeletalMeshAsset FFilePath
 ---@field StaticMeshAsset FFilePath
 ---@field TextureAsset FFilePath
-FBuildPromotionOpenAssetSettings = {}
+local FBuildPromotionOpenAssetSettings = {}
 
 
 
@@ -3706,7 +3706,7 @@ FBuildPromotionOpenAssetSettings = {}
 ---@field OpenAssets FBuildPromotionOpenAssetSettings
 ---@field NewProjectSettings FBuildPromotionNewProjectSettings
 ---@field SourceControlMaterial FFilePath
-FBuildPromotionTestSettings = {}
+local FBuildPromotionTestSettings = {}
 
 
 
@@ -3715,34 +3715,34 @@ FBuildPromotionTestSettings = {}
 ---@field Direction int32
 ---@field ItemName FName
 ---@field PolyFlags int32
-FBuilderPoly = {}
+local FBuilderPoly = {}
 
 
 
 ---@class FCachedAnimAssetPlayerData
 ---@field StateMachineName FName
 ---@field StateName FName
-FCachedAnimAssetPlayerData = {}
+local FCachedAnimAssetPlayerData = {}
 
 
 
 ---@class FCachedAnimRelevancyData
 ---@field StateMachineName FName
 ---@field StateName FName
-FCachedAnimRelevancyData = {}
+local FCachedAnimRelevancyData = {}
 
 
 
 ---@class FCachedAnimStateArray
 ---@field States TArray<FCachedAnimStateData>
-FCachedAnimStateArray = {}
+local FCachedAnimStateArray = {}
 
 
 
 ---@class FCachedAnimStateData
 ---@field StateMachineName FName
 ---@field StateName FName
-FCachedAnimStateData = {}
+local FCachedAnimStateData = {}
 
 
 
@@ -3750,33 +3750,33 @@ FCachedAnimStateData = {}
 ---@field StateMachineName FName
 ---@field FromStateName FName
 ---@field ToStateName FName
-FCachedAnimTransitionData = {}
+local FCachedAnimTransitionData = {}
 
 
 
 ---@class FCachedKeyToActionInfo
 ---@field PlayerInput UPlayerInput
-FCachedKeyToActionInfo = {}
+local FCachedKeyToActionInfo = {}
 
 
 
 ---@class FCachedPoseIndices
 ---@field OrderedSavedPoseNodeIndices TArray<int32>
-FCachedPoseIndices = {}
+local FCachedPoseIndices = {}
 
 
 
 ---@class FCameraCacheEntry
 ---@field Timestamp float
 ---@field POV FMinimalViewInfo
-FCameraCacheEntry = {}
+local FCameraCacheEntry = {}
 
 
 
 ---@class FCameraCutInfo
 ---@field Location FVector
 ---@field Timestamp float
-FCameraCutInfo = {}
+local FCameraCutInfo = {}
 
 
 
@@ -3793,7 +3793,7 @@ FCameraCutInfo = {}
 ---@field HistogramLogMin float
 ---@field HistogramLogMax float
 ---@field CalibrationConstant float
-FCameraExposureSettings = {}
+local FCameraExposureSettings = {}
 
 
 
@@ -3803,7 +3803,7 @@ FCameraExposureSettings = {}
 ---@field Location FVector
 ---@field Rotation FRotator
 ---@field PawnInst APawn
-FCameraPreviewInfo = {}
+local FCameraPreviewInfo = {}
 
 
 
@@ -3813,7 +3813,7 @@ FCameraPreviewInfo = {}
 ---@field V float
 ---@field UL float
 ---@field VL float
-FCanvasIcon = {}
+local FCanvasIcon = {}
 
 
 
@@ -3827,7 +3827,7 @@ FCanvasIcon = {}
 ---@field V2_Pos FVector2D
 ---@field V2_UV FVector2D
 ---@field V2_Color FLinearColor
-FCanvasUVTri = {}
+local FCanvasUVTri = {}
 
 
 
@@ -3841,7 +3841,7 @@ FCanvasUVTri = {}
 ---@field bClientOpen boolean
 ---@field bInitialServer boolean
 ---@field bInitialClient boolean
-FChannelDefinition = {}
+local FChannelDefinition = {}
 
 
 
@@ -3849,26 +3849,26 @@ FChannelDefinition = {}
 ---@field DefaultThreadingModel EChaosThreadingMode
 ---@field DedicatedThreadTickMode EChaosSolverTickMode
 ---@field DedicatedThreadBufferMode EChaosBufferMode
-FChaosPhysicsSettings = {}
+local FChaosPhysicsSettings = {}
 
 
 
 ---@class FCharacterMovementComponentPostPhysicsTickFunction : FTickFunction
-FCharacterMovementComponentPostPhysicsTickFunction = {}
+local FCharacterMovementComponentPostPhysicsTickFunction = {}
 
 
 ---@class FChildActorAttachedActorInfo
 ---@field Actor TWeakObjectPtr<AActor>
 ---@field SocketName FName
 ---@field RelativeTransform FTransform
-FChildActorAttachedActorInfo = {}
+local FChildActorAttachedActorInfo = {}
 
 
 
 ---@class FChildActorComponentInstanceData : FSceneComponentInstanceData
 ---@field ChildActorName FName
 ---@field AttachedActors TArray<FChildActorAttachedActorInfo>
-FChildActorComponentInstanceData = {}
+local FChildActorComponentInstanceData = {}
 
 
 
@@ -3881,7 +3881,7 @@ FChildActorComponentInstanceData = {}
 ---@field NewClassClass FName
 ---@field NewClassPackage FName
 ---@field InstanceOnly boolean
-FClassRedirect = {}
+local FClassRedirect = {}
 
 
 
@@ -3893,7 +3893,7 @@ FClassRedirect = {}
 ---@field RelatedPlayerState_1 APlayerState
 ---@field RelatedPlayerState_2 APlayerState
 ---@field OptionalObject UObject
-FClientReceiveData = {}
+local FClientReceiveData = {}
 
 
 
@@ -3918,7 +3918,7 @@ FClientReceiveData = {}
 ---@field FiberCompression float
 ---@field FiberExpansion float
 ---@field FiberResistance float
-FClothPhysicsProperties_Legacy = {}
+local FClothPhysicsProperties_Legacy = {}
 
 
 
@@ -3927,7 +3927,7 @@ FClothPhysicsProperties_Legacy = {}
 ---@field ApexFileName FString
 ---@field bClothPropertiesChanged boolean
 ---@field PhysicsProperties FClothPhysicsProperties_Legacy
-FClothingAssetData_Legacy = {}
+local FClothingAssetData_Legacy = {}
 
 
 
@@ -3940,7 +3940,7 @@ FClothingAssetData_Legacy = {}
 ---@field LastInstance int32
 ---@field MinInstanceScale FVector
 ---@field MaxInstanceScale FVector
-FClusterNode = {}
+local FClusterNode = {}
 
 
 
@@ -3951,32 +3951,32 @@ FClusterNode = {}
 ---@field LastChild int32
 ---@field FirstInstance int32
 ---@field LastInstance int32
-FClusterNode_DEPRECATED = {}
+local FClusterNode_DEPRECATED = {}
 
 
 
 ---@class FCollectionParameterBase
 ---@field ParameterName FName
 ---@field ID FGuid
-FCollectionParameterBase = {}
+local FCollectionParameterBase = {}
 
 
 
 ---@class FCollectionReference
 ---@field CollectionName FName
-FCollectionReference = {}
+local FCollectionReference = {}
 
 
 
 ---@class FCollectionScalarParameter : FCollectionParameterBase
 ---@field DefaultValue float
-FCollectionScalarParameter = {}
+local FCollectionScalarParameter = {}
 
 
 
 ---@class FCollectionVectorParameter : FCollectionParameterBase
 ---@field DefaultValue FLinearColor
-FCollectionVectorParameter = {}
+local FCollectionVectorParameter = {}
 
 
 
@@ -3984,20 +3984,20 @@ FCollectionVectorParameter = {}
 ---@field ContactInfos TArray<FRigidBodyContactInfo>
 ---@field TotalNormalImpulse FVector
 ---@field TotalFrictionImpulse FVector
-FCollisionImpactData = {}
+local FCollisionImpactData = {}
 
 
 
 ---@class FCollisionProfileName
 ---@field Name FName
-FCollisionProfileName = {}
+local FCollisionProfileName = {}
 
 
 
 ---@class FCollisionResponse
 ---@field ResponseToChannels FCollisionResponseContainer
 ---@field ResponseArray TArray<FResponseChannel>
-FCollisionResponse = {}
+local FCollisionResponse = {}
 
 
 
@@ -4034,7 +4034,7 @@ FCollisionResponse = {}
 ---@field GameTraceChannel16 ECollisionResponse
 ---@field GameTraceChannel17 ECollisionResponse
 ---@field GameTraceChannel18 ECollisionResponse
-FCollisionResponseContainer = {}
+local FCollisionResponseContainer = {}
 
 
 
@@ -4044,7 +4044,7 @@ FCollisionResponseContainer = {}
 ---@field bCanModify boolean
 ---@field ObjectTypeName FName
 ---@field CustomResponses TArray<FResponseChannel>
-FCollisionResponseTemplate = {}
+local FCollisionResponseTemplate = {}
 
 
 
@@ -4054,7 +4054,7 @@ FCollisionResponseTemplate = {}
 ---@field Gamma FVector4
 ---@field Gain FVector4
 ---@field Offset FVector4
-FColorGradePerRangeSettings = {}
+local FColorGradePerRangeSettings = {}
 
 
 
@@ -4065,12 +4065,12 @@ FColorGradePerRangeSettings = {}
 ---@field Highlights FColorGradePerRangeSettings
 ---@field ShadowsMax float
 ---@field HighlightsMin float
-FColorGradingSettings = {}
+local FColorGradingSettings = {}
 
 
 
 ---@class FColorMaterialInput : FMaterialInput
-FColorMaterialInput = {}
+local FColorMaterialInput = {}
 
 
 ---@class FCompilerNativizationOptions
@@ -4081,7 +4081,7 @@ FColorMaterialInput = {}
 ---@field ExcludedModules TArray<FName>
 ---@field ExcludedAssets TSet<FSoftObjectPath>
 ---@field ExcludedFolderPaths TArray<FString>
-FCompilerNativizationOptions = {}
+local FCompilerNativizationOptions = {}
 
 
 
@@ -4089,7 +4089,7 @@ FCompilerNativizationOptions = {}
 ---@field OwnerClass UClass
 ---@field SCSVariableName FName
 ---@field AssociatedGuid FGuid
-FComponentKey = {}
+local FComponentKey = {}
 
 
 
@@ -4098,7 +4098,7 @@ FComponentKey = {}
 ---@field ComponentTemplate UActorComponent
 ---@field ComponentKey FComponentKey
 ---@field CookedComponentInstancingData FBlueprintCookedComponentInstancingData
-FComponentOverrideRecord = {}
+local FComponentOverrideRecord = {}
 
 
 
@@ -4106,19 +4106,19 @@ FComponentOverrideRecord = {}
 ---@field OtherActor AActor
 ---@field ComponentProperty FName
 ---@field PathToComponent FString
-FComponentReference = {}
+local FComponentReference = {}
 
 
 
 ---@class FComponentSpacePose
 ---@field Transforms TArray<FTransform>
 ---@field Names TArray<FName>
-FComponentSpacePose = {}
+local FComponentSpacePose = {}
 
 
 
 ---@class FComponentSpacePoseLink : FPoseLinkBase
-FComponentSpacePoseLink = {}
+local FComponentSpacePoseLink = {}
 
 
 ---@class FCompositeSection : FAnimLinkableElement
@@ -4126,16 +4126,16 @@ FComponentSpacePoseLink = {}
 ---@field StartTime float
 ---@field NextSectionName FName
 ---@field MetaData TArray<UAnimMetaData>
-FCompositeSection = {}
+local FCompositeSection = {}
 
 
 
 ---@class FCompressedRichCurve
-FCompressedRichCurve = {}
+local FCompressedRichCurve = {}
 
 
 ---@class FCompressedSegment
-FCompressedSegment = {}
+local FCompressedSegment = {}
 
 
 ---@class FCompressedTrack
@@ -4143,7 +4143,7 @@ FCompressedSegment = {}
 ---@field Times TArray<float>
 ---@field Mins float
 ---@field Ranges float
-FCompressedTrack = {}
+local FCompressedTrack = {}
 
 
 
@@ -4152,13 +4152,13 @@ FCompressedTrack = {}
 ---@field Swing2LimitDegrees float
 ---@field Swing1Motion EAngularConstraintMotion
 ---@field Swing2Motion EAngularConstraintMotion
-FConeConstraint = {}
+local FConeConstraint = {}
 
 
 
 ---@class FConstrainComponentPropName
 ---@field ComponentName FName
-FConstrainComponentPropName = {}
+local FConstrainComponentPropName = {}
 
 
 
@@ -4168,7 +4168,7 @@ FConstrainComponentPropName = {}
 ---@field Restitution float
 ---@field ContactDistance float
 ---@field bSoftConstraint boolean
-FConstraintBaseParams = {}
+local FConstraintBaseParams = {}
 
 
 
@@ -4178,7 +4178,7 @@ FConstraintBaseParams = {}
 ---@field MaxForce float
 ---@field bEnablePositionDrive boolean
 ---@field bEnableVelocityDrive boolean
-FConstraintDrive = {}
+local FConstraintDrive = {}
 
 
 
@@ -4195,7 +4195,7 @@ FConstraintDrive = {}
 ---@field AngularRotationOffset FRotator
 ---@field bScaleLinearLimits boolean
 ---@field ProfileInstance FConstraintProfileProperties
-FConstraintInstance = {}
+local FConstraintInstance = {}
 
 
 
@@ -4214,7 +4214,7 @@ FConstraintInstance = {}
 ---@field bEnableProjection boolean
 ---@field bAngularBreakable boolean
 ---@field bLinearBreakable boolean
-FConstraintProfileProperties = {}
+local FConstraintProfileProperties = {}
 
 
 
@@ -4226,14 +4226,14 @@ FConstraintProfileProperties = {}
 ---@field PreFilterMax float
 ---@field PreFilterMult float
 ---@field BufferScale float
-FConvolutionBloomSettings = {}
+local FConvolutionBloomSettings = {}
 
 
 
 ---@class FCullDistanceSizePair
 ---@field Size float
 ---@field CullDistance float
-FCullDistanceSizePair = {}
+local FCullDistanceSizePair = {}
 
 
 
@@ -4247,7 +4247,7 @@ FCullDistanceSizePair = {}
 ---@field bClamp int32
 ---@field ClampLow float
 ---@field ClampHigh float
-FCurveEdEntry = {}
+local FCurveEdEntry = {}
 
 
 
@@ -4258,25 +4258,25 @@ FCurveEdEntry = {}
 ---@field ViewEndInput float
 ---@field ViewStartOutput float
 ---@field ViewEndOutput float
-FCurveEdTab = {}
+local FCurveEdTab = {}
 
 
 
 ---@class FCurveMetaData
-FCurveMetaData = {}
+local FCurveMetaData = {}
 
 
 ---@class FCurveTableRowHandle
 ---@field CurveTable UCurveTable
 ---@field RowName FName
-FCurveTableRowHandle = {}
+local FCurveTableRowHandle = {}
 
 
 
 ---@class FCurveTrack
 ---@field CurveName FName
 ---@field CurveWeights TArray<float>
-FCurveTrack = {}
+local FCurveTrack = {}
 
 
 
@@ -4286,33 +4286,33 @@ FCurveTrack = {}
 ---@field bTraceType boolean
 ---@field bStaticObject boolean
 ---@field Name FName
-FCustomChannelSetup = {}
+local FCustomChannelSetup = {}
 
 
 
 ---@class FCustomInput
 ---@field InputName FName
 ---@field Input FExpressionInput
-FCustomInput = {}
+local FCustomInput = {}
 
 
 
 ---@class FCustomPrimitiveData
 ---@field Data TArray<float>
-FCustomPrimitiveData = {}
+local FCustomPrimitiveData = {}
 
 
 
 ---@class FCustomProfile
 ---@field Name FName
 ---@field CustomResponses TArray<FResponseChannel>
-FCustomProfile = {}
+local FCustomProfile = {}
 
 
 
 ---@class FDamageEvent
 ---@field DamageTypeClass TSubclassOf<UDamageType>
-FDamageEvent = {}
+local FDamageEvent = {}
 
 
 
@@ -4320,27 +4320,27 @@ FDamageEvent = {}
 ---@field DataTable UDataTable
 ---@field ColumnName FName
 ---@field RowContents FName
-FDataTableCategoryHandle = {}
+local FDataTableCategoryHandle = {}
 
 
 
 ---@class FDataTableRowHandle
 ---@field DataTable UDataTable
 ---@field RowName FName
-FDataTableRowHandle = {}
+local FDataTableRowHandle = {}
 
 
 
 ---@class FDebugCameraControllerSettingsViewModeIndex
 ---@field ViewModeIndex EViewModeIndex
-FDebugCameraControllerSettingsViewModeIndex = {}
+local FDebugCameraControllerSettingsViewModeIndex = {}
 
 
 
 ---@class FDebugDisplayProperty
 ---@field Obj UObject
 ---@field WithinClass UClass
-FDebugDisplayProperty = {}
+local FDebugDisplayProperty = {}
 
 
 
@@ -4350,7 +4350,7 @@ FDebugDisplayProperty = {}
 ---@field MinValue float
 ---@field MaxValue float
 ---@field bAutoAdjustMinMax boolean
-FDebugFloatHistory = {}
+local FDebugFloatHistory = {}
 
 
 
@@ -4368,21 +4368,21 @@ FDebugFloatHistory = {}
 ---@field OrigActorLocation FVector
 ---@field Font UFont
 ---@field FontScale float
-FDebugTextInfo = {}
+local FDebugTextInfo = {}
 
 
 
 ---@class FDebuggingInfoForSingleFunction
-FDebuggingInfoForSingleFunction = {}
+local FDebuggingInfoForSingleFunction = {}
 
 
 ---@class FDefault__UserDefinedStruct
-FDefault__UserDefinedStruct = {}
+local FDefault__UserDefinedStruct = {}
 
 
 ---@class FDelegateArray
 ---@field Delegates TArray<FDelegateArrayDelegates>
-FDelegateArray = {}
+local FDelegateArray = {}
 
 
 
@@ -4391,14 +4391,14 @@ FDelegateArray = {}
 ---@field GlowColor FLinearColor
 ---@field GlowOuterRadius FVector2D
 ---@field GlowInnerRadius FVector2D
-FDepthFieldGlowInfo = {}
+local FDepthFieldGlowInfo = {}
 
 
 
 ---@class FDialogueContext
 ---@field Speaker UDialogueVoice
 ---@field Targets TArray<UDialogueVoice>
-FDialogueContext = {}
+local FDialogueContext = {}
 
 
 
@@ -4407,14 +4407,14 @@ FDialogueContext = {}
 ---@field SoundWave USoundWave
 ---@field LocalizationKeyFormat FString
 ---@field Proxy UDialogueSoundWaveProxy
-FDialogueContextMapping = {}
+local FDialogueContextMapping = {}
 
 
 
 ---@class FDialogueWaveParameter
 ---@field DialogueWave UDialogueWave
 ---@field Context FDialogueContext
-FDialogueWaveParameter = {}
+local FDialogueWaveParameter = {}
 
 
 
@@ -4423,13 +4423,13 @@ FDialogueWaveParameter = {}
 ---@field TransitionTime float
 ---@field TargetCamGroup FName
 ---@field ShotNumber int32
-FDirectorTrackCut = {}
+local FDirectorTrackCut = {}
 
 
 
 ---@class FDirectoryPath
 ---@field Path FString
-FDirectoryPath = {}
+local FDirectoryPath = {}
 
 
 
@@ -4439,7 +4439,7 @@ FDirectoryPath = {}
 ---@field FadeOutDistanceStart float
 ---@field FadeOutDistanceEnd float
 ---@field Volume float
-FDistanceDatum = {}
+local FDistanceDatum = {}
 
 
 
@@ -4452,13 +4452,13 @@ FDistanceDatum = {}
 ---@field EntryStride uint8
 ---@field SubEntryStride uint8
 ---@field LockFlag uint8
-FDistributionLookupTable = {}
+local FDistributionLookupTable = {}
 
 
 
 ---@class FDrawToRenderTargetContext
 ---@field RenderTarget UTextureRenderTarget2D
-FDrawToRenderTargetContext = {}
+local FDrawToRenderTargetContext = {}
 
 
 
@@ -4466,26 +4466,26 @@ FDrawToRenderTargetContext = {}
 ---@field Location FVector
 ---@field Rotation FRotator
 ---@field Comment FString
-FDropNoteInfo = {}
+local FDropNoteInfo = {}
 
 
 
 ---@class FDummySpacerCameraTypes
-FDummySpacerCameraTypes = {}
+local FDummySpacerCameraTypes = {}
 
 
 ---@class FDynamicTextureInstance : FStreamableTextureInstance
 ---@field Texture UTexture2D
 ---@field bAttached boolean
 ---@field OriginalRadius float
-FDynamicTextureInstance = {}
+local FDynamicTextureInstance = {}
 
 
 
 ---@class FEdGraphPinReference
 ---@field OwningNode TWeakObjectPtr<UEdGraphNode>
 ---@field PinID FGuid
-FEdGraphPinReference = {}
+local FEdGraphPinReference = {}
 
 
 
@@ -4500,7 +4500,7 @@ FEdGraphPinReference = {}
 ---@field bIsReference boolean
 ---@field bIsConst boolean
 ---@field bIsWeakPointer boolean
-FEdGraphPinType = {}
+local FEdGraphPinType = {}
 
 
 
@@ -4520,13 +4520,13 @@ FEdGraphPinType = {}
 ---@field LocalizedFullSearchKeywordsArray TArray<FString>
 ---@field LocalizedFullSearchCategoryArray TArray<FString>
 ---@field SearchText FString
-FEdGraphSchemaAction = {}
+local FEdGraphSchemaAction = {}
 
 
 
 ---@class FEdGraphSchemaAction_NewNode : FEdGraphSchemaAction
 ---@field NodeTemplate UEdGraphNode
-FEdGraphSchemaAction_NewNode = {}
+local FEdGraphSchemaAction_NewNode = {}
 
 
 
@@ -4536,7 +4536,7 @@ FEdGraphSchemaAction_NewNode = {}
 ---@field TerminalSubCategoryObject TWeakObjectPtr<UObject>
 ---@field bTerminalIsConst boolean
 ---@field bTerminalIsWeakPointer boolean
-FEdGraphTerminalType = {}
+local FEdGraphTerminalType = {}
 
 
 
@@ -4545,14 +4545,14 @@ FEdGraphTerminalType = {}
 ---@field SavedViewOffset FVector2D
 ---@field SavedZoomAmount float
 ---@field EditedObject UObject
-FEditedDocumentInfo = {}
+local FEditedDocumentInfo = {}
 
 
 
 ---@class FEditorElement
 ---@field Indices int32
 ---@field Weights float
-FEditorElement = {}
+local FEditorElement = {}
 
 
 
@@ -4561,21 +4561,21 @@ FEditorElement = {}
 ---@field ExportFileExtension FString
 ---@field bSkipExport boolean
 ---@field FactorySettings TArray<FImportFactorySettingValues>
-FEditorImportExportTestDefinition = {}
+local FEditorImportExportTestDefinition = {}
 
 
 
 ---@class FEditorImportWorkflowDefinition
 ---@field ImportFilePath FFilePath
 ---@field FactorySettings TArray<FImportFactorySettingValues>
-FEditorImportWorkflowDefinition = {}
+local FEditorImportWorkflowDefinition = {}
 
 
 
 ---@class FEditorMapPerformanceTestDefinition
 ---@field PerformanceTestmap FSoftObjectPath
 ---@field TestTimer int32
-FEditorMapPerformanceTestDefinition = {}
+local FEditorMapPerformanceTestDefinition = {}
 
 
 
@@ -4586,18 +4586,18 @@ FEditorMapPerformanceTestDefinition = {}
 ---@field ValueMethod EEmitterDynamicParameterValue
 ---@field bScaleVelocityByParamValue boolean
 ---@field ParamValue FRawDistributionFloat
-FEmitterDynamicParameter = {}
+local FEmitterDynamicParameter = {}
 
 
 
 ---@class FEndPhysicsTickFunction : FTickFunction
-FEndPhysicsTickFunction = {}
+local FEndPhysicsTickFunction = {}
 
 
 ---@class FEngineShowFlagsSetting
 ---@field ShowFlagName FString
 ---@field Enabled boolean
-FEngineShowFlagsSetting = {}
+local FEngineShowFlagsSetting = {}
 
 
 
@@ -4608,21 +4608,21 @@ FEngineShowFlagsSetting = {}
 ---@field RightScale FVector2D
 ---@field LeftBias FVector2D
 ---@field RightBias FVector2D
-FEquirectProps = {}
+local FEquirectProps = {}
 
 
 
 ---@class FEventGraphFastCallPair
 ---@field FunctionToPatch UFunction
 ---@field EventGraphCallOffset int32
-FEventGraphFastCallPair = {}
+local FEventGraphFastCallPair = {}
 
 
 
 ---@class FEventTrackKey
 ---@field Time float
 ---@field EventName FName
-FEventTrackKey = {}
+local FEventTrackKey = {}
 
 
 
@@ -4630,7 +4630,7 @@ FEventTrackKey = {}
 ---@field FogDensity float
 ---@field FogHeightFalloff float
 ---@field FogHeightOffset float
-FExponentialHeightFogData = {}
+local FExponentialHeightFogData = {}
 
 
 
@@ -4646,7 +4646,7 @@ FExponentialHeightFogData = {}
 ---@field Size int32
 ---@field CachedSourceProperty UProperty
 ---@field CachedSourceStructSubProperty UProperty
-FExposedValueCopyRecord = {}
+local FExposedValueCopyRecord = {}
 
 
 
@@ -4655,27 +4655,27 @@ FExposedValueCopyRecord = {}
 ---@field CopyRecords TArray<FExposedValueCopyRecord>
 ---@field Function UFunction
 ---@field ValueHandlerNodeProperty UStructProperty
-FExposedValueHandler = {}
+local FExposedValueHandler = {}
 
 
 
 ---@class FExposureSettings
 ---@field FixedEV100 float
 ---@field bFixed boolean
-FExposureSettings = {}
+local FExposureSettings = {}
 
 
 
 ---@class FExpressionInput
 ---@field OutputIndex int32
 ---@field ExpressionName FName
-FExpressionInput = {}
+local FExpressionInput = {}
 
 
 
 ---@class FExpressionOutput
 ---@field OutputName FName
-FExpressionOutput = {}
+local FExpressionOutput = {}
 
 
 
@@ -4686,7 +4686,7 @@ FExpressionOutput = {}
 ---@field WorkingDirectory FDirectoryPath
 ---@field ScriptExtension FString
 ---@field ScriptDirectory FDirectoryPath
-FExternalToolDefinition = {}
+local FExternalToolDefinition = {}
 
 
 
@@ -4695,14 +4695,14 @@ FExternalToolDefinition = {}
 ---@field Frequency float
 ---@field InitialOffset EInitialOscillatorOffset
 ---@field Waveform EOscillatorWaveform
-FFOscillator = {}
+local FFOscillator = {}
 
 
 
 ---@class FFastArraySerializer
 ---@field ArrayReplicationKey int32
 ---@field DeltaFlags EFastArraySerializerDeltaFlags
-FFastArraySerializer = {}
+local FFastArraySerializer = {}
 
 
 
@@ -4710,13 +4710,13 @@ FFastArraySerializer = {}
 ---@field ReplicationID int32
 ---@field ReplicationKey int32
 ---@field MostRecentArrayReplicationKey int32
-FFastArraySerializerItem = {}
+local FFastArraySerializerItem = {}
 
 
 
 ---@class FFilePath
 ---@field FilePath FString
-FFilePath = {}
+local FFilePath = {}
 
 
 
@@ -4726,7 +4726,7 @@ FFilePath = {}
 ---@field Shoulder float
 ---@field BlackClip float
 ---@field WhiteClip float
-FFilmStockSettings = {}
+local FFilmStockSettings = {}
 
 
 
@@ -4737,31 +4737,31 @@ FFilmStockSettings = {}
 ---@field FloorDist float
 ---@field LineDist float
 ---@field HitResult FHitResult
-FFindFloorResult = {}
+local FFindFloorResult = {}
 
 
 
 ---@class FFloatCurve : FAnimCurveBase
 ---@field FloatCurve FRichCurve
-FFloatCurve = {}
+local FFloatCurve = {}
 
 
 
 ---@class FFloatDistribution
 ---@field Table FDistributionLookupTable
-FFloatDistribution = {}
+local FFloatDistribution = {}
 
 
 
 ---@class FFloatRK4SpringInterpolator
 ---@field StiffnessConstant float
 ---@field DampeningRatio float
-FFloatRK4SpringInterpolator = {}
+local FFloatRK4SpringInterpolator = {}
 
 
 
 ---@class FFloatSpringState
-FFloatSpringState = {}
+local FFloatSpringState = {}
 
 
 ---@class FFontCharacter
@@ -4771,7 +4771,7 @@ FFloatSpringState = {}
 ---@field VSize int32
 ---@field TextureIndex uint8
 ---@field VerticalOffset int32
-FFontCharacter = {}
+local FFontCharacter = {}
 
 
 
@@ -4805,7 +4805,7 @@ FFontCharacter = {}
 ---@field bUseDistanceFieldAlpha boolean
 ---@field DistanceFieldScaleFactor int32
 ---@field DistanceFieldScanRadiusScale float
-FFontImportOptionsData = {}
+local FFontImportOptionsData = {}
 
 
 
@@ -4814,7 +4814,7 @@ FFontImportOptionsData = {}
 ---@field FontValue UFont
 ---@field FontPage int32
 ---@field ExpressionGUID FGuid
-FFontParameterValue = {}
+local FFontParameterValue = {}
 
 
 
@@ -4822,12 +4822,12 @@ FFontParameterValue = {}
 ---@field bClipText boolean
 ---@field bEnableShadow boolean
 ---@field GlowInfo FDepthFieldGlowInfo
-FFontRenderInfo = {}
+local FFontRenderInfo = {}
 
 
 
 ---@class FForceFeedbackAttenuationSettings : FBaseAttenuationSettings
-FForceFeedbackAttenuationSettings = {}
+local FForceFeedbackAttenuationSettings = {}
 
 
 ---@class FForceFeedbackChannelDetails
@@ -4836,7 +4836,7 @@ FForceFeedbackAttenuationSettings = {}
 ---@field bAffectsRightLarge boolean
 ---@field bAffectsRightSmall boolean
 ---@field Curve FRuntimeFloatCurve
-FForceFeedbackChannelDetails = {}
+local FForceFeedbackChannelDetails = {}
 
 
 
@@ -4845,7 +4845,7 @@ FForceFeedbackChannelDetails = {}
 ---@field bLooping boolean
 ---@field bIgnoreTimeDilation boolean
 ---@field bPlayWhilePaused boolean
-FForceFeedbackParameters = {}
+local FForceFeedbackParameters = {}
 
 
 
@@ -4856,14 +4856,14 @@ FForceFeedbackParameters = {}
 ---@field ArgumentValueInt int32
 ---@field ArgumentValueFloat float
 ---@field ArgumentValueGender ETextGender
-FFormatArgumentData = {}
+local FFormatArgumentData = {}
 
 
 
 ---@class FFractureEffect
 ---@field ParticleSystem UParticleSystem
 ---@field Sound USoundBase
-FFractureEffect = {}
+local FFractureEffect = {}
 
 
 
@@ -4872,7 +4872,7 @@ FFractureEffect = {}
 ---@field Tag FString
 ---@field PackagesToLoad TArray<FName>
 ---@field LoadedObjects TArray<UObject>
-FFullyLoadedPackagesInfo = {}
+local FFullyLoadedPackagesInfo = {}
 
 
 
@@ -4880,7 +4880,7 @@ FFullyLoadedPackagesInfo = {}
 ---@field ExpressionInput UMaterialExpressionFunctionInput
 ---@field ExpressionInputId FGuid
 ---@field Input FExpressionInput
-FFunctionExpressionInput = {}
+local FFunctionExpressionInput = {}
 
 
 
@@ -4888,7 +4888,7 @@ FFunctionExpressionInput = {}
 ---@field ExpressionOutput UMaterialExpressionFunctionOutput
 ---@field ExpressionOutputId FGuid
 ---@field Output FExpressionOutput
-FFunctionExpressionOutput = {}
+local FFunctionExpressionOutput = {}
 
 
 
@@ -4922,7 +4922,7 @@ FFunctionExpressionOutput = {}
 ---@field DynamicAlpha FRawDistributionFloat
 ---@field DynamicColorScale FRawDistributionVector
 ---@field DynamicAlphaScale FRawDistributionFloat
-FGPUSpriteEmitterInfo = {}
+local FGPUSpriteEmitterInfo = {}
 
 
 
@@ -4939,7 +4939,7 @@ FGPUSpriteEmitterInfo = {}
 ---@field bTileY boolean
 ---@field bTileZ boolean
 ---@field bUseFixDT boolean
-FGPUSpriteLocalVectorFieldInfo = {}
+local FGPUSpriteLocalVectorFieldInfo = {}
 
 
 
@@ -4984,14 +4984,14 @@ FGPUSpriteLocalVectorFieldInfo = {}
 ---@field bRemoveHMDRoll boolean
 ---@field MinFacingCameraBlendDistance float
 ---@field MaxFacingCameraBlendDistance float
-FGPUSpriteResourceData = {}
+local FGPUSpriteResourceData = {}
 
 
 
 ---@class FGameNameRedirect
 ---@field OldGameName FName
 ---@field NewGameName FName
-FGameNameRedirect = {}
+local FGameNameRedirect = {}
 
 
 
@@ -5011,13 +5011,13 @@ FGameNameRedirect = {}
 ---@field Filter4Tint FLinearColor
 ---@field Filter5Tint FLinearColor
 ---@field Filter6Tint FLinearColor
-FGaussianSumBloomSettings = {}
+local FGaussianSumBloomSettings = {}
 
 
 
 ---@class FGenericStruct
 ---@field Data int32
-FGenericStruct = {}
+local FGenericStruct = {}
 
 
 
@@ -5025,13 +5025,13 @@ FGenericStruct = {}
 ---@field Type int32
 ---@field Index int32
 ---@field SelectionIndex int32
-FGeomSelection = {}
+local FGeomSelection = {}
 
 
 
 ---@class FGraphAssetPlayerInformation
 ---@field PlayerNodeIndices TArray<int32>
-FGraphAssetPlayerInformation = {}
+local FGraphAssetPlayerInformation = {}
 
 
 
@@ -5039,14 +5039,14 @@ FGraphAssetPlayerInformation = {}
 ---@field MacroGraph UEdGraph
 ---@field GraphBlueprint UBlueprint
 ---@field GraphGuid FGuid
-FGraphReference = {}
+local FGraphReference = {}
 
 
 
 ---@class FGridBlendSample
 ---@field GridElement FEditorElement
 ---@field BlendWeight float
-FGridBlendSample = {}
+local FGridBlendSample = {}
 
 
 
@@ -5054,21 +5054,21 @@ FGridBlendSample = {}
 ---@field LODActor TLazyObjectPtr<ALODActor>
 ---@field StaticMesh UStaticMesh
 ---@field Key FName
-FHLODProxyMesh = {}
+local FHLODProxyMesh = {}
 
 
 
 ---@class FHapticFeedbackDetails_Curve
 ---@field Frequency FRuntimeFloatCurve
 ---@field Amplitude FRuntimeFloatCurve
-FHapticFeedbackDetails_Curve = {}
+local FHapticFeedbackDetails_Curve = {}
 
 
 
 ---@class FHardwareCursorReference
 ---@field CursorPath FName
 ---@field HotSpot FVector2D
-FHardwareCursorReference = {}
+local FHardwareCursorReference = {}
 
 
 
@@ -5085,7 +5085,7 @@ FHardwareCursorReference = {}
 ---@field DesiredBoundRadius float
 ---@field DesiredFillingPercentage float
 ---@field MinNumberOfActorsToBuild int32
-FHierarchicalSimplification = {}
+local FHierarchicalSimplification = {}
 
 
 
@@ -5108,14 +5108,14 @@ FHierarchicalSimplification = {}
 ---@field Component TWeakObjectPtr<UPrimitiveComponent>
 ---@field BoneName FName
 ---@field MyBoneName FName
-FHitResult = {}
+local FHitResult = {}
 
 
 
 ---@class FImportFactorySettingValues
 ---@field SettingName FString
 ---@field Value FString
-FImportFactorySettingValues = {}
+local FImportFactorySettingValues = {}
 
 
 
@@ -5127,30 +5127,30 @@ FImportFactorySettingValues = {}
 ---@field TextureData TArray<FColor>
 ---@field Texture TWeakObjectPtr<UTexture2D>
 ---@field Weighting EImportanceWeight::Type
-FImportanceTexture = {}
+local FImportanceTexture = {}
 
 
 
 ---@class FIndexedCurve
 ---@field KeyHandlesToIndices FKeyHandleMap
-FIndexedCurve = {}
+local FIndexedCurve = {}
 
 
 
 ---@class FInertializationBoneDiff
-FInertializationBoneDiff = {}
+local FInertializationBoneDiff = {}
 
 
 ---@class FInertializationCurveDiff
-FInertializationCurveDiff = {}
+local FInertializationCurveDiff = {}
 
 
 ---@class FInertializationPose
-FInertializationPose = {}
+local FInertializationPose = {}
 
 
 ---@class FInertializationPoseDiff
-FInertializationPoseDiff = {}
+local FInertializationPoseDiff = {}
 
 
 ---@class FInputActionKeyMapping
@@ -5160,14 +5160,14 @@ FInertializationPoseDiff = {}
 ---@field bAlt boolean
 ---@field bCmd boolean
 ---@field Key FKey
-FInputActionKeyMapping = {}
+local FInputActionKeyMapping = {}
 
 
 
 ---@class FInputActionSpeechMapping
 ---@field ActionName FName
 ---@field SpeechKeyword FName
-FInputActionSpeechMapping = {}
+local FInputActionSpeechMapping = {}
 
 
 
@@ -5178,14 +5178,14 @@ FInputActionSpeechMapping = {}
 ---@field bInitialized boolean
 ---@field CustomCurve UCurveFloat
 ---@field AlphaBlend FAlphaBlend
-FInputAlphaBoolBlend = {}
+local FInputAlphaBoolBlend = {}
 
 
 
 ---@class FInputAxisConfigEntry
 ---@field AxisKeyName FName
 ---@field AxisProperties FInputAxisProperties
-FInputAxisConfigEntry = {}
+local FInputAxisConfigEntry = {}
 
 
 
@@ -5193,7 +5193,7 @@ FInputAxisConfigEntry = {}
 ---@field AxisName FName
 ---@field Scale float
 ---@field Key FKey
-FInputAxisKeyMapping = {}
+local FInputAxisKeyMapping = {}
 
 
 
@@ -5202,27 +5202,27 @@ FInputAxisKeyMapping = {}
 ---@field Sensitivity float
 ---@field Exponent float
 ---@field bInvert boolean
-FInputAxisProperties = {}
+local FInputAxisProperties = {}
 
 
 
 ---@class FInputBlendPose
 ---@field BranchFilters TArray<FBranchFilter>
-FInputBlendPose = {}
+local FInputBlendPose = {}
 
 
 
 ---@class FInputRange
 ---@field Min float
 ---@field Max float
-FInputRange = {}
+local FInputRange = {}
 
 
 
 ---@class FInputScaleBias
 ---@field Scale float
 ---@field Bias float
-FInputScaleBias = {}
+local FInputScaleBias = {}
 
 
 
@@ -5238,7 +5238,7 @@ FInputScaleBias = {}
 ---@field ClampMax float
 ---@field InterpSpeedIncreasing float
 ---@field InterpSpeedDecreasing float
-FInputScaleBiasClamp = {}
+local FInputScaleBiasClamp = {}
 
 
 
@@ -5247,39 +5247,39 @@ FInputScaleBiasClamp = {}
 ---@field CachedStaticLighting FInstancedStaticMeshLightMapInstanceData
 ---@field PerInstanceSMData TArray<FInstancedStaticMeshInstanceData>
 ---@field InstancingRandomSeed int32
-FInstancedStaticMeshComponentInstanceData = {}
+local FInstancedStaticMeshComponentInstanceData = {}
 
 
 
 ---@class FInstancedStaticMeshInstanceData
 ---@field Transform FMatrix
-FInstancedStaticMeshInstanceData = {}
+local FInstancedStaticMeshInstanceData = {}
 
 
 
 ---@class FInstancedStaticMeshLightMapInstanceData
 ---@field Transform FTransform
 ---@field MapBuildDataIds TArray<FGuid>
-FInstancedStaticMeshLightMapInstanceData = {}
+local FInstancedStaticMeshLightMapInstanceData = {}
 
 
 
 ---@class FInstancedStaticMeshMappingInfo
-FInstancedStaticMeshMappingInfo = {}
+local FInstancedStaticMeshMappingInfo = {}
 
 
 ---@class FIntegralCurve : FIndexedCurve
 ---@field Keys TArray<FIntegralKey>
 ---@field DefaultValue int32
 ---@field bUseDefaultValueBeforeFirstKey boolean
-FIntegralCurve = {}
+local FIntegralCurve = {}
 
 
 
 ---@class FIntegralKey
 ---@field Time float
 ---@field Value int32
-FIntegralKey = {}
+local FIntegralKey = {}
 
 
 
@@ -5293,14 +5293,14 @@ FIntegralKey = {}
 ---@field InteriorTime float
 ---@field InteriorLPF float
 ---@field InteriorLPFTime float
-FInteriorSettings = {}
+local FInteriorSettings = {}
 
 
 
 ---@class FInterpControlPoint
 ---@field PositionControlPoint FVector
 ---@field bPositionIsRelative boolean
-FInterpControlPoint = {}
+local FInterpControlPoint = {}
 
 
 
@@ -5309,34 +5309,34 @@ FInterpControlPoint = {}
 ---@field Track UInterpTrack
 ---@field KeyIndex int32
 ---@field UnsnappedPosition float
-FInterpEdSelKey = {}
+local FInterpEdSelKey = {}
 
 
 
 ---@class FInterpGroupActorInfo
 ---@field ObjectName FName
 ---@field Actors TArray<AActor>
-FInterpGroupActorInfo = {}
+local FInterpGroupActorInfo = {}
 
 
 
 ---@class FInterpLookupPoint
 ---@field GroupName FName
 ---@field Time float
-FInterpLookupPoint = {}
+local FInterpLookupPoint = {}
 
 
 
 ---@class FInterpLookupTrack
 ---@field Points TArray<FInterpLookupPoint>
-FInterpLookupTrack = {}
+local FInterpLookupTrack = {}
 
 
 
 ---@class FInterpolationParameter
 ---@field InterpolationTime float
 ---@field InterpolationType EFilterInterpolationType
-FInterpolationParameter = {}
+local FInterpolationParameter = {}
 
 
 
@@ -5346,7 +5346,7 @@ FInterpolationParameter = {}
 ---@field SphylElems TArray<FKSphylElem>
 ---@field ConvexElems TArray<FKConvexElem>
 ---@field TaperedCapsuleElems TArray<FKTaperedCapsuleElem>
-FKAggregateGeom = {}
+local FKAggregateGeom = {}
 
 
 
@@ -5356,7 +5356,7 @@ FKAggregateGeom = {}
 ---@field X float
 ---@field Y float
 ---@field Z float
-FKBoxElem = {}
+local FKBoxElem = {}
 
 
 
@@ -5364,7 +5364,7 @@ FKBoxElem = {}
 ---@field VertexData TArray<FVector>
 ---@field ElemBox FBox
 ---@field Transform FTransform
-FKConvexElem = {}
+local FKConvexElem = {}
 
 
 
@@ -5372,14 +5372,14 @@ FKConvexElem = {}
 ---@field RestOffset float
 ---@field Name FName
 ---@field bContributeToMass boolean
-FKShapeElem = {}
+local FKShapeElem = {}
 
 
 
 ---@class FKSphereElem : FKShapeElem
 ---@field Center FVector
 ---@field Radius float
-FKSphereElem = {}
+local FKSphereElem = {}
 
 
 
@@ -5388,7 +5388,7 @@ FKSphereElem = {}
 ---@field Rotation FRotator
 ---@field Radius float
 ---@field Length float
-FKSphylElem = {}
+local FKSphylElem = {}
 
 
 
@@ -5398,7 +5398,7 @@ FKSphylElem = {}
 ---@field Radius0 float
 ---@field Radius1 float
 ---@field Length float
-FKTaperedCapsuleElem = {}
+local FKTaperedCapsuleElem = {}
 
 
 
@@ -5414,21 +5414,21 @@ FKTaperedCapsuleElem = {}
 ---@field bIgnoreAlt boolean
 ---@field bIgnoreCmd boolean
 ---@field bDisabled boolean
-FKeyBind = {}
+local FKeyBind = {}
 
 
 
 ---@class FKeyHandleLookupTable
-FKeyHandleLookupTable = {}
+local FKeyHandleLookupTable = {}
 
 
 ---@class FKeyHandleMap
-FKeyHandleMap = {}
+local FKeyHandleMap = {}
 
 
 ---@class FLODSoloTrack
 ---@field SoloEnableSetting TArray<uint8>
-FLODSoloTrack = {}
+local FLODSoloTrack = {}
 
 
 
@@ -5437,25 +5437,25 @@ FLODSoloTrack = {}
 ---@field UUID int32
 ---@field ExecutionFunction FName
 ---@field CallbackTarget UObject
-FLatentActionInfo = {}
+local FLatentActionInfo = {}
 
 
 
 ---@class FLatentActionManager
-FLatentActionManager = {}
+local FLatentActionManager = {}
 
 
 ---@class FLaunchOnTestSettings
 ---@field LaunchOnTestmap FFilePath
 ---@field DeviceID FString
-FLaunchOnTestSettings = {}
+local FLaunchOnTestSettings = {}
 
 
 
 ---@class FLayerActorStats
 ---@field Type UClass
 ---@field Total int32
-FLayerActorStats = {}
+local FLayerActorStats = {}
 
 
 
@@ -5463,7 +5463,7 @@ FLayerActorStats = {}
 ---@field GaussianSum FGaussianSumBloomSettings
 ---@field Convolution FConvolutionBloomSettings
 ---@field Method EBloomMethod
-FLensBloomSettings = {}
+local FLensBloomSettings = {}
 
 
 
@@ -5471,7 +5471,7 @@ FLensBloomSettings = {}
 ---@field Dirtmask UTexture
 ---@field DirtMaskIntensity float
 ---@field DirtMaskTint FLinearColor
-FLensImperfectionSettings = {}
+local FLensImperfectionSettings = {}
 
 
 
@@ -5479,7 +5479,7 @@ FLensImperfectionSettings = {}
 ---@field Bloom FLensBloomSettings
 ---@field Imperfections FLensImperfectionSettings
 ---@field ChromaticAberration float
-FLensSettings = {}
+local FLensSettings = {}
 
 
 
@@ -5489,14 +5489,14 @@ FLensSettings = {}
 ---@field DemoNetDriver UDemoNetDriver
 ---@field PersistentLevel ULevel
 ---@field Levels TSet<ULevel>
-FLevelCollection = {}
+local FLevelCollection = {}
 
 
 
 ---@class FLevelNameAndTime
 ---@field LevelName FString
 ---@field LevelChangeTimeInMS uint32
-FLevelNameAndTime = {}
+local FLevelNameAndTime = {}
 
 
 
@@ -5517,7 +5517,7 @@ FLevelNameAndTime = {}
 ---@field bGenerateLandscapeMetallicMap boolean
 ---@field bGenerateLandscapeRoughnessMap boolean
 ---@field bGenerateLandscapeSpecularMap boolean
-FLevelSimplificationDetails = {}
+local FLevelSimplificationDetails = {}
 
 
 
@@ -5526,13 +5526,13 @@ FLevelSimplificationDetails = {}
 ---@field bShouldBeLoaded boolean
 ---@field bShouldBeVisible boolean
 ---@field LODIndex uint32
-FLevelStreamingStatus = {}
+local FLevelStreamingStatus = {}
 
 
 
 ---@class FLevelStreamingWrapper
 ---@field StreamingLevel ULevelStreaming
-FLevelStreamingWrapper = {}
+local FLevelStreamingWrapper = {}
 
 
 
@@ -5541,7 +5541,7 @@ FLevelStreamingWrapper = {}
 ---@field CamRotation FRotator
 ---@field CamOrthoZoom float
 ---@field CamUpdated boolean
-FLevelViewportInfo = {}
+local FLevelViewportInfo = {}
 
 
 
@@ -5549,7 +5549,7 @@ FLevelViewportInfo = {}
 ---@field bChannel0 boolean
 ---@field bChannel1 boolean
 ---@field bChannel2 boolean
-FLightingChannels = {}
+local FLightingChannels = {}
 
 
 
@@ -5570,13 +5570,13 @@ FLightingChannels = {}
 ---@field bColorBordersGreen boolean
 ---@field bColorByExecutionTime boolean
 ---@field ExecutionTimeDivisor float
-FLightmassDebugOptions = {}
+local FLightmassDebugOptions = {}
 
 
 
 ---@class FLightmassDirectionalLightSettings : FLightmassLightSettings
 ---@field LightSourceAngle float
-FLightmassDirectionalLightSettings = {}
+local FLightmassDirectionalLightSettings = {}
 
 
 
@@ -5584,7 +5584,7 @@ FLightmassDirectionalLightSettings = {}
 ---@field IndirectLightingSaturation float
 ---@field ShadowExponent float
 ---@field bUseAreaShadowsForStationaryLight boolean
-FLightmassLightSettings = {}
+local FLightmassLightSettings = {}
 
 
 
@@ -5597,12 +5597,12 @@ FLightmassLightSettings = {}
 ---@field bOverrideEmissiveBoost boolean
 ---@field bOverrideDiffuseBoost boolean
 ---@field bOverrideExportResolutionScale boolean
-FLightmassMaterialInterfaceSettings = {}
+local FLightmassMaterialInterfaceSettings = {}
 
 
 
 ---@class FLightmassPointLightSettings : FLightmassLightSettings
-FLightmassPointLightSettings = {}
+local FLightmassPointLightSettings = {}
 
 
 ---@class FLightmassPrimitiveSettings
@@ -5615,7 +5615,7 @@ FLightmassPointLightSettings = {}
 ---@field EmissiveBoost float
 ---@field DiffuseBoost float
 ---@field FullyOccludedSamplesFraction float
-FLightmassPrimitiveSettings = {}
+local FLightmassPrimitiveSettings = {}
 
 
 
@@ -5644,7 +5644,7 @@ FLightmassPrimitiveSettings = {}
 ---@field OcclusionExponent float
 ---@field FullyOccludedSamplesFraction float
 ---@field MaxOcclusionDistance float
-FLightmassWorldInfoSettings = {}
+local FLightmassWorldInfoSettings = {}
 
 
 
@@ -5653,7 +5653,7 @@ FLightmassWorldInfoSettings = {}
 ---@field XMotion ELinearConstraintMotion
 ---@field YMotion ELinearConstraintMotion
 ---@field ZMotion ELinearConstraintMotion
-FLinearConstraint = {}
+local FLinearConstraint = {}
 
 
 
@@ -5664,28 +5664,28 @@ FLinearConstraint = {}
 ---@field YDrive FConstraintDrive
 ---@field ZDrive FConstraintDrive
 ---@field bEnablePositionDrive boolean
-FLinearDriveConstraint = {}
+local FLinearDriveConstraint = {}
 
 
 
 ---@class FLocalSpacePose
 ---@field Transforms TArray<FTransform>
 ---@field Names TArray<FName>
-FLocalSpacePose = {}
+local FLocalSpacePose = {}
 
 
 
 ---@class FLocationBoneSocketInfo
 ---@field BoneSocketName FName
 ---@field Offset FVector
-FLocationBoneSocketInfo = {}
+local FLocationBoneSocketInfo = {}
 
 
 
 ---@class FMTDResult
 ---@field Direction FVector
 ---@field Distance float
-FMTDResult = {}
+local FMTDResult = {}
 
 
 
@@ -5693,19 +5693,19 @@ FMTDResult = {}
 ---@field PreviousMarkerName FName
 ---@field NextMarkerName FName
 ---@field PositionBetweenMarkers float
-FMarkerSyncAnimPosition = {}
+local FMarkerSyncAnimPosition = {}
 
 
 
 ---@class FMarkerSyncData
 ---@field AuthoredSyncMarkers TArray<FAnimSyncMarker>
-FMarkerSyncData = {}
+local FMarkerSyncData = {}
 
 
 
 ---@class FMaterialAttributesInput : FExpressionInput
 ---@field PropertyConnectedBitmask int32
-FMaterialAttributesInput = {}
+local FMaterialAttributesInput = {}
 
 
 
@@ -5713,21 +5713,21 @@ FMaterialAttributesInput = {}
 ---@field DefaultMaterialAsset FFilePath
 ---@field DefaultDiffuseTexture FFilePath
 ---@field DefaultNormalTexture FFilePath
-FMaterialEditorPromotionSettings = {}
+local FMaterialEditorPromotionSettings = {}
 
 
 
 ---@class FMaterialFunctionInfo
 ---@field StateId FGuid
 ---@field Function UMaterialFunctionInterface
-FMaterialFunctionInfo = {}
+local FMaterialFunctionInfo = {}
 
 
 
 ---@class FMaterialInput
 ---@field OutputIndex int32
 ---@field ExpressionName FName
-FMaterialInput = {}
+local FMaterialInput = {}
 
 
 
@@ -5744,7 +5744,7 @@ FMaterialInput = {}
 ---@field BlendMode EBlendMode
 ---@field ShadingModel EMaterialShadingModel
 ---@field OpacityMaskClipValue float
-FMaterialInstanceBasePropertyOverrides = {}
+local FMaterialInstanceBasePropertyOverrides = {}
 
 
 
@@ -5753,14 +5753,14 @@ FMaterialInstanceBasePropertyOverrides = {}
 ---@field Blends TArray<UMaterialFunctionInterface>
 ---@field LayerStates TArray<boolean>
 ---@field KeyString FString
-FMaterialLayersFunctions = {}
+local FMaterialLayersFunctions = {}
 
 
 
 ---@class FMaterialParameterCollectionInfo
 ---@field StateId FGuid
 ---@field ParameterCollection UMaterialParameterCollection
-FMaterialParameterCollectionInfo = {}
+local FMaterialParameterCollectionInfo = {}
 
 
 
@@ -5768,7 +5768,7 @@ FMaterialParameterCollectionInfo = {}
 ---@field Name FName
 ---@field Association EMaterialParameterAssociation
 ---@field Index int32
-FMaterialParameterInfo = {}
+local FMaterialParameterInfo = {}
 
 
 
@@ -5802,20 +5802,20 @@ FMaterialParameterInfo = {}
 ---@field OpacityTextureSize FIntPoint
 ---@field OpacityMaskTextureSize FIntPoint
 ---@field AmbientOcclusionTextureSize FIntPoint
-FMaterialProxySettings = {}
+local FMaterialProxySettings = {}
 
 
 
 ---@class FMaterialRemapIndex
 ---@field ImportVersionKey uint32
 ---@field MaterialRemap TArray<int32>
-FMaterialRemapIndex = {}
+local FMaterialRemapIndex = {}
 
 
 
 ---@class FMaterialShadingModelField
 ---@field ShadingModelField uint16
-FMaterialShadingModelField = {}
+local FMaterialShadingModelField = {}
 
 
 
@@ -5826,7 +5826,7 @@ FMaterialShadingModelField = {}
 ---@field BaseSizeX float
 ---@field BaseSizeY float
 ---@field DistanceToSizeCurve UCurveFloat
-FMaterialSpriteElement = {}
+local FMaterialSpriteElement = {}
 
 
 
@@ -5834,7 +5834,7 @@ FMaterialSpriteElement = {}
 ---@field SamplingScale float
 ---@field UVChannelIndex int32
 ---@field TextureName FName
-FMaterialTextureInfo = {}
+local FMaterialTextureInfo = {}
 
 
 
@@ -5845,7 +5845,7 @@ FMaterialTextureInfo = {}
 ---@field MemberGuid FGuid
 ---@field bSelfContext boolean
 ---@field bWasDeprecated boolean
-FMemberReference = {}
+local FMemberReference = {}
 
 
 
@@ -5868,7 +5868,7 @@ FMemberReference = {}
 ---@field BuildScale3D FVector
 ---@field DistanceFieldResolutionScale float
 ---@field DistanceFieldReplacementMesh UStaticMesh
-FMeshBuildSettings = {}
+local FMeshBuildSettings = {}
 
 
 
@@ -5879,7 +5879,7 @@ FMeshBuildSettings = {}
 ---@field bSkipMeshesWithVertexColors boolean
 ---@field bUseHLODVolumes boolean
 ---@field ISMComponentToUse TSubclassOf<UInstancedStaticMeshComponent>
-FMeshInstancingSettings = {}
+local FMeshInstancingSettings = {}
 
 
 
@@ -5904,7 +5904,7 @@ FMeshInstancingSettings = {}
 ---@field bUseLandscapeCulling boolean
 ---@field bIncludeImposters boolean
 ---@field bAllowDistanceField boolean
-FMeshMergingSettings = {}
+local FMeshMergingSettings = {}
 
 
 
@@ -5932,7 +5932,7 @@ FMeshMergingSettings = {}
 ---@field bCreateCollision boolean
 ---@field bAllowVertexColors boolean
 ---@field bGenerateLightmapUVs boolean
-FMeshProxySettings = {}
+local FMeshProxySettings = {}
 
 
 
@@ -5955,7 +5955,7 @@ FMeshProxySettings = {}
 ---@field TerminationCriterion EStaticMeshReductionTerimationCriterion
 ---@field VisibilityAggressiveness EMeshFeatureImportance::Type
 ---@field VertexColorImportance EMeshFeatureImportance::Type
-FMeshReductionSettings = {}
+local FMeshReductionSettings = {}
 
 
 
@@ -5963,13 +5963,13 @@ FMeshReductionSettings = {}
 ---@field MaterialIndex int32
 ---@field bEnableCollision boolean
 ---@field bCastShadow boolean
-FMeshSectionInfo = {}
+local FMeshSectionInfo = {}
 
 
 
 ---@class FMeshSectionInfoMap
 ---@field Map TMap<uint32, FMeshSectionInfo>
-FMeshSectionInfoMap = {}
+local FMeshSectionInfoMap = {}
 
 
 
@@ -5977,7 +5977,7 @@ FMeshSectionInfoMap = {}
 ---@field bInitialized boolean
 ---@field bOverrideDensities boolean
 ---@field LocalUVDensities float
-FMeshUVChannelInfo = {}
+local FMeshUVChannelInfo = {}
 
 
 
@@ -5996,7 +5996,7 @@ FMeshUVChannelInfo = {}
 ---@field PostProcessBlendWeight float
 ---@field PostProcessSettings FPostProcessSettings
 ---@field OffCenterProjectionOffset FVector2D
-FMinimalViewInfo = {}
+local FMinimalViewInfo = {}
 
 
 
@@ -6008,7 +6008,7 @@ FMinimalViewInfo = {}
 ---@field MinOutput float
 ---@field MaxOutput float
 ---@field ParamMode ModulationParamMode
-FModulatorContinuousParams = {}
+local FModulatorContinuousParams = {}
 
 
 
@@ -6018,7 +6018,7 @@ FModulatorContinuousParams = {}
 ---@field bCanWalk boolean
 ---@field bCanSwim boolean
 ---@field bCanFly boolean
-FMovementProperties = {}
+local FMovementProperties = {}
 
 
 
@@ -6026,75 +6026,75 @@ FMovementProperties = {}
 ---@field FuncPathName FString
 ---@field bServerSkip boolean
 ---@field bClientSkip boolean
-FMulticastRecordOptions = {}
+local FMulticastRecordOptions = {}
 
 
 
 ---@class FNameCurve : FIndexedCurve
 ---@field Keys TArray<FNameCurveKey>
-FNameCurve = {}
+local FNameCurve = {}
 
 
 
 ---@class FNameCurveKey
 ---@field Time float
 ---@field Value FName
-FNameCurveKey = {}
+local FNameCurveKey = {}
 
 
 
 ---@class FNameMapping
 ---@field NodeName FName
 ---@field BoneName FName
-FNameMapping = {}
+local FNameMapping = {}
 
 
 
 ---@class FNamedColor
 ---@field Value FColor
 ---@field Name FName
-FNamedColor = {}
+local FNamedColor = {}
 
 
 
 ---@class FNamedCurveValue
 ---@field Name FName
 ---@field Value float
-FNamedCurveValue = {}
+local FNamedCurveValue = {}
 
 
 
 ---@class FNamedEmitterMaterial
 ---@field Name FName
 ---@field Material UMaterialInterface
-FNamedEmitterMaterial = {}
+local FNamedEmitterMaterial = {}
 
 
 
 ---@class FNamedFloat
 ---@field Value float
 ---@field Name FName
-FNamedFloat = {}
+local FNamedFloat = {}
 
 
 
 ---@class FNamedNetDriver
 ---@field NetDriver UNetDriver
-FNamedNetDriver = {}
+local FNamedNetDriver = {}
 
 
 
 ---@class FNamedTransform
 ---@field Value FTransform
 ---@field Name FName
-FNamedTransform = {}
+local FNamedTransform = {}
 
 
 
 ---@class FNamedVector
 ---@field Value FVector
 ---@field Name FName
-FNamedVector = {}
+local FNamedVector = {}
 
 
 
@@ -6104,7 +6104,7 @@ FNamedVector = {}
 ---@field AgentStepHeight float
 ---@field NavWalkingSearchHeightScale float
 ---@field PreferredNavData FSoftClassPath
-FNavAgentProperties = {}
+local FNavAgentProperties = {}
 
 
 
@@ -6125,12 +6125,12 @@ FNavAgentProperties = {}
 ---@field bSupportsAgent13 boolean
 ---@field bSupportsAgent14 boolean
 ---@field bSupportsAgent15 boolean
-FNavAgentSelector = {}
+local FNavAgentSelector = {}
 
 
 
 ---@class FNavAvoidanceData
-FNavAvoidanceData = {}
+local FNavAvoidanceData = {}
 
 
 ---@class FNavAvoidanceMask
@@ -6166,7 +6166,7 @@ FNavAvoidanceData = {}
 ---@field bGroup29 boolean
 ---@field bGroup30 boolean
 ---@field bGroup31 boolean
-FNavAvoidanceMask = {}
+local FNavAvoidanceMask = {}
 
 
 
@@ -6176,14 +6176,14 @@ FNavAvoidanceMask = {}
 ---@field DefaultQueryExtent FVector
 ---@field NavigationDataClass TSubclassOf<AActor>
 ---@field NavDataClass TSoftClassPtr<AActor>
-FNavDataConfig = {}
+local FNavDataConfig = {}
 
 
 
 ---@class FNavigationLink : FNavigationLinkBase
 ---@field Left FVector
 ---@field Right FVector
-FNavigationLink = {}
+local FNavigationLink = {}
 
 
 
@@ -6221,7 +6221,7 @@ FNavigationLink = {}
 ---@field bCustomFlag6 boolean
 ---@field bCustomFlag7 boolean
 ---@field AreaClass TSubclassOf<UNavAreaBase>
-FNavigationLinkBase = {}
+local FNavigationLinkBase = {}
 
 
 
@@ -6230,7 +6230,7 @@ FNavigationLinkBase = {}
 ---@field LeftEnd FVector
 ---@field RightStart FVector
 ---@field RightEnd FVector
-FNavigationSegmentLink = {}
+local FNavigationSegmentLink = {}
 
 
 
@@ -6238,7 +6238,7 @@ FNavigationSegmentLink = {}
 ---@field DefName FName
 ---@field DriverClassName FName
 ---@field DriverClassNameFallback FName
-FNetDriverDefinition = {}
+local FNetDriverDefinition = {}
 
 
 
@@ -6248,14 +6248,14 @@ FNetDriverDefinition = {}
 ---@field ViewTarget AActor
 ---@field ViewLocation FVector
 ---@field ViewDir FVector
-FNetViewer = {}
+local FNetViewer = {}
 
 
 
 ---@class FNetworkEmulationProfileDescription
 ---@field ProfileName FString
 ---@field ToolTip FString
-FNetworkEmulationProfileDescription = {}
+local FNetworkEmulationProfileDescription = {}
 
 
 
@@ -6265,26 +6265,26 @@ FNetworkEmulationProfileDescription = {}
 ---@field Transform FTransform
 ---@field DisplayName FString
 ---@field bAdvanced boolean
-FNode = {}
+local FNode = {}
 
 
 
 ---@class FNodeItem
 ---@field ParentName FName
 ---@field Transform FTransform
-FNodeItem = {}
+local FNodeItem = {}
 
 
 
 ---@class FNodeToCodeAssociation
-FNodeToCodeAssociation = {}
+local FNodeToCodeAssociation = {}
 
 
 ---@class FOrbitOptions
 ---@field bProcessDuringSpawn boolean
 ---@field bProcessDuringUpdate boolean
 ---@field bUseEmitterTime boolean
-FOrbitOptions = {}
+local FOrbitOptions = {}
 
 
 
@@ -6292,7 +6292,7 @@ FOrbitOptions = {}
 ---@field Actor TWeakObjectPtr<AActor>
 ---@field Component TWeakObjectPtr<UPrimitiveComponent>
 ---@field bBlockingHit boolean
-FOverlapResult = {}
+local FOverlapResult = {}
 
 
 
@@ -6300,7 +6300,7 @@ FOverlapResult = {}
 ---@field Location FVector
 ---@field Rotation FRotator
 ---@field FOV float
-FPOV = {}
+local FPOV = {}
 
 
 
@@ -6308,13 +6308,13 @@ FPOV = {}
 ---@field FreeElements TArray<FPSCPoolElem>
 ---@field InUseComponents_Auto TArray<UParticleSystemComponent>
 ---@field InUseComponents_Manual TArray<UParticleSystemComponent>
-FPSCPool = {}
+local FPSCPool = {}
 
 
 
 ---@class FPSCPoolElem
 ---@field PSC UParticleSystemComponent
-FPSCPoolElem = {}
+local FPSCPoolElem = {}
 
 
 
@@ -6331,7 +6331,7 @@ FPSCPoolElem = {}
 ---@field PktIncomingLagMin int32
 ---@field PktIncomingLagMax int32
 ---@field PktIncomingLoss int32
-FPacketSimulationSettings = {}
+local FPacketSimulationSettings = {}
 
 
 
@@ -6339,7 +6339,7 @@ FPacketSimulationSettings = {}
 ---@field Position FVector
 ---@field Color FColor
 ---@field Normal FVector4
-FPaintedVertex = {}
+local FPaintedVertex = {}
 
 
 
@@ -6348,14 +6348,14 @@ FPaintedVertex = {}
 ---@field G FText
 ---@field B FText
 ---@field A FText
-FParameterChannelNames = {}
+local FParameterChannelNames = {}
 
 
 
 ---@class FParameterGroupData
 ---@field GroupName FString
 ---@field GroupSortPriority int32
-FParameterGroupData = {}
+local FParameterGroupData = {}
 
 
 
@@ -6363,25 +6363,25 @@ FParameterGroupData = {}
 ---@field Count int32
 ---@field CountLow int32
 ---@field Time float
-FParticleBurst = {}
+local FParticleBurst = {}
 
 
 
 ---@class FParticleCurvePair
 ---@field CurveName FString
 ---@field CurveObject UObject
-FParticleCurvePair = {}
+local FParticleCurvePair = {}
 
 
 
 ---@class FParticleEditorPromotionSettings
 ---@field DefaultParticleAsset FFilePath
-FParticleEditorPromotionSettings = {}
+local FParticleEditorPromotionSettings = {}
 
 
 
 ---@class FParticleEmitterReplayFrame
-FParticleEmitterReplayFrame = {}
+local FParticleEmitterReplayFrame = {}
 
 
 ---@class FParticleEvent_GenerateInfo
@@ -6394,7 +6394,7 @@ FParticleEmitterReplayFrame = {}
 ---@field bUseOrbitOffset boolean
 ---@field CustomName FName
 ---@field ParticleModuleEventsToSendToGame TArray<UParticleModuleEventSendToGame>
-FParticleEvent_GenerateInfo = {}
+local FParticleEvent_GenerateInfo = {}
 
 
 
@@ -6405,7 +6405,7 @@ FParticleEvent_GenerateInfo = {}
 ---@field bResetSeedOnEmitterLooping boolean
 ---@field bRandomlySelectSeedArray boolean
 ---@field RandomSeeds TArray<int32>
-FParticleRandomSeedInfo = {}
+local FParticleRandomSeedInfo = {}
 
 
 
@@ -6413,7 +6413,7 @@ FParticleRandomSeedInfo = {}
 ---@field Time float
 ---@field Duration float
 ---@field ClipIDNumber int32
-FParticleReplayTrackKey = {}
+local FParticleReplayTrackKey = {}
 
 
 
@@ -6427,65 +6427,65 @@ FParticleReplayTrackKey = {}
 ---@field Color FColor
 ---@field Actor AActor
 ---@field Material UMaterialInterface
-FParticleSysParam = {}
+local FParticleSysParam = {}
 
 
 
 ---@class FParticleSystemLOD
-FParticleSystemLOD = {}
+local FParticleSystemLOD = {}
 
 
 ---@class FParticleSystemReplayFrame
-FParticleSystemReplayFrame = {}
+local FParticleSystemReplayFrame = {}
 
 
 ---@class FParticleSystemWorldManagerTickFunction : FTickFunction
-FParticleSystemWorldManagerTickFunction = {}
+local FParticleSystemWorldManagerTickFunction = {}
 
 
 ---@class FPassiveSoundMixModifier
 ---@field SoundMix USoundMix
 ---@field MinVolumeThreshold float
 ---@field MaxVolumeThreshold float
-FPassiveSoundMixModifier = {}
+local FPassiveSoundMixModifier = {}
 
 
 
 ---@class FPerBoneBlendWeight
 ---@field SourceIndex int32
 ---@field BlendWeight float
-FPerBoneBlendWeight = {}
+local FPerBoneBlendWeight = {}
 
 
 
 ---@class FPerBoneBlendWeights
 ---@field BoneBlendWeights TArray<FPerBoneBlendWeight>
-FPerBoneBlendWeights = {}
+local FPerBoneBlendWeights = {}
 
 
 
 ---@class FPerBoneInterpolation
 ---@field BoneReference FBoneReference
 ---@field InterpolationSpeedPerSec float
-FPerBoneInterpolation = {}
+local FPerBoneInterpolation = {}
 
 
 
 ---@class FPerPlatformBool
 ---@field Default boolean
-FPerPlatformBool = {}
+local FPerPlatformBool = {}
 
 
 
 ---@class FPerPlatformFloat
 ---@field Default float
-FPerPlatformFloat = {}
+local FPerPlatformFloat = {}
 
 
 
 ---@class FPerPlatformInt
 ---@field Default int32
-FPerPlatformInt = {}
+local FPerPlatformInt = {}
 
 
 
@@ -6498,28 +6498,28 @@ FPerPlatformInt = {}
 ---@field VelocityStrength float
 ---@field MaxLinearForce float
 ---@field MaxAngularForce float
-FPhysicalAnimationData = {}
+local FPhysicalAnimationData = {}
 
 
 
 ---@class FPhysicalAnimationProfile
 ---@field ProfileName FName
 ---@field PhysicalAnimationData FPhysicalAnimationData
-FPhysicalAnimationProfile = {}
+local FPhysicalAnimationProfile = {}
 
 
 
 ---@class FPhysicalSurfaceName
 ---@field Type EPhysicalSurface
 ---@field Name FName
-FPhysicalSurfaceName = {}
+local FPhysicalSurfaceName = {}
 
 
 
 ---@class FPhysicsConstraintProfileHandle
 ---@field ProfileProperties FConstraintProfileProperties
 ---@field ProfileName FName
-FPhysicsConstraintProfileHandle = {}
+local FPhysicsConstraintProfileHandle = {}
 
 
 
@@ -6530,28 +6530,28 @@ FPhysicsConstraintProfileHandle = {}
 ---@field FloatValue float
 ---@field StringValue FString
 ---@field ObjectValue UObject
-FPlatformInterfaceData = {}
+local FPlatformInterfaceData = {}
 
 
 
 ---@class FPlatformInterfaceDelegateResult
 ---@field bSuccessful boolean
 ---@field Data FPlatformInterfaceData
-FPlatformInterfaceDelegateResult = {}
+local FPlatformInterfaceDelegateResult = {}
 
 
 
 ---@class FPlayerMuteList
 ---@field bHasVoiceHandshakeCompleted boolean
 ---@field VoiceChannelIdx int32
-FPlayerMuteList = {}
+local FPlayerMuteList = {}
 
 
 
 ---@class FPluginRedirect
 ---@field OldPluginName FString
 ---@field NewPluginName FString
-FPluginRedirect = {}
+local FPluginRedirect = {}
 
 
 
@@ -6559,17 +6559,17 @@ FPluginRedirect = {}
 ---@field Damage float
 ---@field ShotDirection FVector_NetQuantizeNormal
 ---@field HitInfo FHitResult
-FPointDamageEvent = {}
+local FPointDamageEvent = {}
 
 
 
 ---@class FPointerToUberGraphFrame
-FPointerToUberGraphFrame = {}
+local FPointerToUberGraphFrame = {}
 
 
 ---@class FPooledCameraShakes
 ---@field PooledShakes TArray<UCameraShake>
-FPooledCameraShakes = {}
+local FPooledCameraShakes = {}
 
 
 
@@ -6577,7 +6577,7 @@ FPooledCameraShakes = {}
 ---@field LocalSpacePose TArray<FTransform>
 ---@field TrackToBufferIndex TMap<int32, int32>
 ---@field CurveData TArray<float>
-FPoseData = {}
+local FPoseData = {}
 
 
 
@@ -6587,17 +6587,17 @@ FPoseData = {}
 ---@field TrackMap TMap<FName, int32>
 ---@field Poses TArray<FPoseData>
 ---@field Curves TArray<FAnimCurveBase>
-FPoseDataContainer = {}
+local FPoseDataContainer = {}
 
 
 
 ---@class FPoseLink : FPoseLinkBase
-FPoseLink = {}
+local FPoseLink = {}
 
 
 ---@class FPoseLinkBase
 ---@field LinkID int32
-FPoseLinkBase = {}
+local FPoseLinkBase = {}
 
 
 
@@ -6607,7 +6607,7 @@ FPoseLinkBase = {}
 ---@field SkeletalMeshName FName
 ---@field SnapshotName FName
 ---@field bIsValid boolean
-FPoseSnapshot = {}
+local FPoseSnapshot = {}
 
 
 
@@ -6962,7 +6962,7 @@ FPoseSnapshot = {}
 ---@field LPVDirectionalOcclusionFadeRange float
 ---@field ScreenPercentage float
 ---@field WeightedBlendables FWeightedBlendables
-FPostProcessSettings = {}
+local FPostProcessSettings = {}
 
 
 
@@ -6970,14 +6970,14 @@ FPostProcessSettings = {}
 ---@field Transform FTransform
 ---@field LightGuid FGuid
 ---@field PreviewShadowMapChannel int32
-FPrecomputedLightInstanceData = {}
+local FPrecomputedLightInstanceData = {}
 
 
 
 ---@class FPrecomputedSkyLightInstanceData : FSceneComponentInstanceData
 ---@field LightGuid FGuid
 ---@field AverageBrightness float
-FPrecomputedSkyLightInstanceData = {}
+local FPrecomputedSkyLightInstanceData = {}
 
 
 
@@ -6996,7 +6996,7 @@ FPrecomputedSkyLightInstanceData = {}
 ---@field DrawDebugType EDrawDebugTrace::Type
 ---@field DrawDebugTime float
 ---@field bTraceComplex boolean
-FPredictProjectilePathParams = {}
+local FPredictProjectilePathParams = {}
 
 
 
@@ -7004,7 +7004,7 @@ FPredictProjectilePathParams = {}
 ---@field Location FVector
 ---@field Velocity FVector
 ---@field Time float
-FPredictProjectilePathPointData = {}
+local FPredictProjectilePathPointData = {}
 
 
 
@@ -7012,13 +7012,13 @@ FPredictProjectilePathPointData = {}
 ---@field PathData TArray<FPredictProjectilePathPointData>
 ---@field LastTraceDestination FPredictProjectilePathPointData
 ---@field HitResult FHitResult
-FPredictProjectilePathResult = {}
+local FPredictProjectilePathResult = {}
 
 
 
 ---@class FPreviewAssetAttachContainer
 ---@field AttachedObjects TArray<FPreviewAttachedObjectPair>
-FPreviewAssetAttachContainer = {}
+local FPreviewAssetAttachContainer = {}
 
 
 
@@ -7026,13 +7026,13 @@ FPreviewAssetAttachContainer = {}
 ---@field AttachedObject TSoftObjectPtr<UObject>
 ---@field Object UObject
 ---@field AttachedTo FName
-FPreviewAttachedObjectPair = {}
+local FPreviewAttachedObjectPair = {}
 
 
 
 ---@class FPreviewMeshCollectionEntry
 ---@field SkeletalMesh TSoftObjectPtr<USkeletalMesh>
-FPreviewMeshCollectionEntry = {}
+local FPreviewMeshCollectionEntry = {}
 
 
 
@@ -7041,7 +7041,7 @@ FPreviewMeshCollectionEntry = {}
 ---@field ChunkId int32
 ---@field bApplyRecursively boolean
 ---@field CookRule EPrimaryAssetCookRule
-FPrimaryAssetRules = {}
+local FPrimaryAssetRules = {}
 
 
 
@@ -7050,14 +7050,14 @@ FPrimaryAssetRules = {}
 ---@field FilterDirectory FDirectoryPath
 ---@field FilterString FString
 ---@field Rules FPrimaryAssetRules
-FPrimaryAssetRulesCustomOverride = {}
+local FPrimaryAssetRulesCustomOverride = {}
 
 
 
 ---@class FPrimaryAssetRulesOverride
 ---@field PrimaryAssetId FPrimaryAssetId
 ---@field Rules FPrimaryAssetRules
-FPrimaryAssetRulesOverride = {}
+local FPrimaryAssetRulesOverride = {}
 
 
 
@@ -7073,7 +7073,7 @@ FPrimaryAssetRulesOverride = {}
 ---@field AssetScanPaths TArray<FString>
 ---@field bIsDynamicAsset boolean
 ---@field NumberOfAssets int32
-FPrimaryAssetTypeInfo = {}
+local FPrimaryAssetTypeInfo = {}
 
 
 
@@ -7081,7 +7081,7 @@ FPrimaryAssetTypeInfo = {}
 ---@field ComponentTransform FTransform
 ---@field VisibilityId int32
 ---@field LODParent UPrimitiveComponent
-FPrimitiveComponentInstanceData = {}
+local FPrimitiveComponentInstanceData = {}
 
 
 
@@ -7089,7 +7089,7 @@ FPrimitiveComponentInstanceData = {}
 ---@field Primitive UPrimitiveComponent
 ---@field Decal UDecalComponent
 ---@field ElementIndex int32
-FPrimitiveMaterialRef = {}
+local FPrimitiveMaterialRef = {}
 
 
 
@@ -7098,7 +7098,7 @@ FPrimitiveMaterialRef = {}
 ---@field DisplayName FString
 ---@field DisplayDescription FString
 ---@field DisplayPrice FString
-FPurchaseInfo = {}
+local FPurchaseInfo = {}
 
 
 
@@ -7117,7 +7117,7 @@ FPurchaseInfo = {}
 ---@field Thickness float
 ---@field Message FString
 ---@field TextScale FVector2D
-FQueuedDrawDebugItem = {}
+local FQueuedDrawDebugItem = {}
 
 
 
@@ -7125,7 +7125,7 @@ FQueuedDrawDebugItem = {}
 ---@field Pitch FFOscillator
 ---@field Yaw FFOscillator
 ---@field Roll FFOscillator
-FROscillator = {}
+local FROscillator = {}
 
 
 
@@ -7133,7 +7133,7 @@ FROscillator = {}
 ---@field Params FRadialDamageParams
 ---@field Origin FVector
 ---@field ComponentHits TArray<FHitResult>
-FRadialDamageEvent = {}
+local FRadialDamageEvent = {}
 
 
 
@@ -7143,7 +7143,7 @@ FRadialDamageEvent = {}
 ---@field InnerRadius float
 ---@field OuterRadius float
 ---@field DamageFalloff float
-FRadialDamageParams = {}
+local FRadialDamageParams = {}
 
 
 
@@ -7151,19 +7151,19 @@ FRadialDamageParams = {}
 ---@field PosKeys TArray<FVector>
 ---@field RotKeys TArray<FQuat>
 ---@field ScaleKeys TArray<FVector>
-FRawAnimSequenceTrack = {}
+local FRawAnimSequenceTrack = {}
 
 
 
 ---@class FRawCurveTracks
 ---@field FloatCurves TArray<FFloatCurve>
-FRawCurveTracks = {}
+local FRawCurveTracks = {}
 
 
 
 ---@class FRawDistribution
 ---@field Table FDistributionLookupTable
-FRawDistribution = {}
+local FRawDistribution = {}
 
 
 
@@ -7171,7 +7171,7 @@ FRawDistribution = {}
 ---@field MinValue float
 ---@field MaxValue float
 ---@field Distribution UDistributionFloat
-FRawDistributionFloat = {}
+local FRawDistributionFloat = {}
 
 
 
@@ -7181,7 +7181,7 @@ FRawDistributionFloat = {}
 ---@field MinValueVec FVector
 ---@field MaxValueVec FVector
 ---@field Distribution UDistributionVector
-FRawDistributionVector = {}
+local FRawDistributionVector = {}
 
 
 
@@ -7189,21 +7189,21 @@ FRawDistributionVector = {}
 ---@field DefaultValue float
 ---@field PreInfinityExtrap ERichCurveExtrapolation
 ---@field PostInfinityExtrap ERichCurveExtrapolation
-FRealCurve = {}
+local FRealCurve = {}
 
 
 
 ---@class FRedirector
 ---@field OldName FName
 ---@field NewName FName
-FRedirector = {}
+local FRedirector = {}
 
 
 
 ---@class FReferencePose
 ---@field PoseName FName
 ---@field ReferencePose TArray<FTransform>
-FReferencePose = {}
+local FReferencePose = {}
 
 
 
@@ -7214,7 +7214,7 @@ FReferencePose = {}
 ---@field RotationOffset FRotator
 ---@field AttachSocket FName
 ---@field AttachComponent USceneComponent
-FRepAttachment = {}
+local FRepAttachment = {}
 
 
 
@@ -7228,7 +7228,7 @@ FRepAttachment = {}
 ---@field LocationQuantizationLevel EVectorQuantization
 ---@field VelocityQuantizationLevel EVectorQuantization
 ---@field RotationQuantizationLevel ERotatorQuantization
-FRepMovement = {}
+local FRepMovement = {}
 
 
 
@@ -7245,20 +7245,20 @@ FRepMovement = {}
 ---@field AuthoritativeRootMotion FRootMotionSourceGroup
 ---@field Acceleration FVector_NetQuantize10
 ---@field LinearVelocity FVector_NetQuantize10
-FRepRootMotionMontage = {}
+local FRepRootMotionMontage = {}
 
 
 
 ---@class FReplicatedStaticActorDestructionInfo
 ---@field ObjClass UClass
-FReplicatedStaticActorDestructionInfo = {}
+local FReplicatedStaticActorDestructionInfo = {}
 
 
 
 ---@class FResponseChannel
 ---@field Channel FName
 ---@field Response ECollisionResponse
-FResponseChannel = {}
+local FResponseChannel = {}
 
 
 
@@ -7268,13 +7268,13 @@ FResponseChannel = {}
 ---@field ReverbPluginEffect USoundEffectSubmixPreset
 ---@field Volume float
 ---@field FadeTime float
-FReverbSettings = {}
+local FReverbSettings = {}
 
 
 
 ---@class FRichCurve : FRealCurve
 ---@field Keys TArray<FRichCurveKey>
-FRichCurve = {}
+local FRichCurve = {}
 
 
 
@@ -7288,14 +7288,14 @@ FRichCurve = {}
 ---@field ArriveTangentWeight float
 ---@field LeaveTangent float
 ---@field LeaveTangentWeight float
-FRichCurveKey = {}
+local FRichCurveKey = {}
 
 
 
 ---@class FRigConfiguration
 ---@field Rig URig
 ---@field BoneMappingTable TArray<FNameMapping>
-FRigConfiguration = {}
+local FRigConfiguration = {}
 
 
 
@@ -7303,7 +7303,7 @@ FRigConfiguration = {}
 ---@field TranformType EConstraintTransform::Type
 ---@field ParentSpace FName
 ---@field Weight float
-FRigTransformConstraint = {}
+local FRigTransformConstraint = {}
 
 
 
@@ -7312,7 +7312,7 @@ FRigTransformConstraint = {}
 ---@field ContactNormal FVector
 ---@field ContactPenetration float
 ---@field PhysMaterial UPhysicalMaterial
-FRigidBodyContactInfo = {}
+local FRigidBodyContactInfo = {}
 
 
 
@@ -7330,7 +7330,7 @@ FRigidBodyContactInfo = {}
 ---@field ErrorAccumulationSeconds float
 ---@field ErrorAccumulationDistanceSq float
 ---@field ErrorAccumulationSimilarity float
-FRigidBodyErrorCorrection = {}
+local FRigidBodyErrorCorrection = {}
 
 
 
@@ -7340,7 +7340,7 @@ FRigidBodyErrorCorrection = {}
 ---@field LinVel FVector_NetQuantize100
 ---@field AngVel FVector_NetQuantize100
 ---@field Flags uint8
-FRigidBodyState = {}
+local FRigidBodyState = {}
 
 
 
@@ -7348,7 +7348,7 @@ FRigidBodyState = {}
 ---@field Archetype UObject
 ---@field Level ULevel
 ---@field ObjReferences TArray<UObject>
-FRollbackNetStartupActorInfo = {}
+local FRollbackNetStartupActorInfo = {}
 
 
 
@@ -7356,7 +7356,7 @@ FRollbackNetStartupActorInfo = {}
 ---@field AnimSequence UAnimSequence
 ---@field StartPosition float
 ---@field EndPosition float
-FRootMotionExtractionStep = {}
+local FRootMotionExtractionStep = {}
 
 
 
@@ -7364,7 +7364,7 @@ FRootMotionExtractionStep = {}
 ---@field Mode ERootMotionFinishVelocityMode
 ---@field SetVelocity FVector
 ---@field ClampVelocity float
-FRootMotionFinishVelocitySettings = {}
+local FRootMotionFinishVelocitySettings = {}
 
 
 
@@ -7372,7 +7372,7 @@ FRootMotionFinishVelocitySettings = {}
 ---@field bHasRootMotion boolean
 ---@field BlendWeight float
 ---@field RootMotionTransform FTransform
-FRootMotionMovementParams = {}
+local FRootMotionMovementParams = {}
 
 
 
@@ -7390,7 +7390,7 @@ FRootMotionMovementParams = {}
 ---@field bInLocalSpace boolean
 ---@field RootMotionParams FRootMotionMovementParams
 ---@field FinishVelocityParams FRootMotionFinishVelocitySettings
-FRootMotionSource = {}
+local FRootMotionSource = {}
 
 
 
@@ -7400,26 +7400,26 @@ FRootMotionSource = {}
 ---@field bIsAdditiveVelocityApplied boolean
 ---@field LastAccumulatedSettings FRootMotionSourceSettings
 ---@field LastPreAdditiveVelocity FVector_NetQuantize10
-FRootMotionSourceGroup = {}
+local FRootMotionSourceGroup = {}
 
 
 
 ---@class FRootMotionSourceSettings
 ---@field Flags uint8
-FRootMotionSourceSettings = {}
+local FRootMotionSourceSettings = {}
 
 
 
 ---@class FRootMotionSourceStatus
 ---@field Flags uint8
-FRootMotionSourceStatus = {}
+local FRootMotionSourceStatus = {}
 
 
 
 ---@class FRootMotionSource_ConstantForce : FRootMotionSource
 ---@field Force FVector
 ---@field StrengthOverTime UCurveFloat
-FRootMotionSource_ConstantForce = {}
+local FRootMotionSource_ConstantForce = {}
 
 
 
@@ -7430,7 +7430,7 @@ FRootMotionSource_ConstantForce = {}
 ---@field bDisableTimeout boolean
 ---@field PathOffsetCurve UCurveVector
 ---@field TimeMappingCurve UCurveFloat
-FRootMotionSource_JumpForce = {}
+local FRootMotionSource_JumpForce = {}
 
 
 
@@ -7441,7 +7441,7 @@ FRootMotionSource_JumpForce = {}
 ---@field bRestrictSpeedToExpected boolean
 ---@field PathOffsetCurve UCurveVector
 ---@field TimeMappingCurve UCurveFloat
-FRootMotionSource_MoveToDynamicForce = {}
+local FRootMotionSource_MoveToDynamicForce = {}
 
 
 
@@ -7450,7 +7450,7 @@ FRootMotionSource_MoveToDynamicForce = {}
 ---@field TargetLocation FVector
 ---@field bRestrictSpeedToExpected boolean
 ---@field PathOffsetCurve UCurveVector
-FRootMotionSource_MoveToForce = {}
+local FRootMotionSource_MoveToForce = {}
 
 
 
@@ -7465,28 +7465,28 @@ FRootMotionSource_MoveToForce = {}
 ---@field StrengthOverTime UCurveFloat
 ---@field bUseFixedWorldDirection boolean
 ---@field FixedWorldDirection FRotator
-FRootMotionSource_RadialForce = {}
+local FRootMotionSource_RadialForce = {}
 
 
 
 ---@class FRotationTrack
 ---@field RotKeys TArray<FQuat>
 ---@field Times TArray<float>
-FRotationTrack = {}
+local FRotationTrack = {}
 
 
 
 ---@class FRuntimeCurveLinearColor
 ---@field ColorCurves FRichCurve
 ---@field ExternalCurve UCurveLinearColor
-FRuntimeCurveLinearColor = {}
+local FRuntimeCurveLinearColor = {}
 
 
 
 ---@class FRuntimeFloatCurve
 ---@field EditorCurveData FRichCurve
 ---@field ExternalCurve UCurveFloat
-FRuntimeFloatCurve = {}
+local FRuntimeFloatCurve = {}
 
 
 
@@ -7494,19 +7494,19 @@ FRuntimeFloatCurve = {}
 ---@field ParameterInfo FMaterialParameterInfo
 ---@field ParameterValue URuntimeVirtualTexture
 ---@field ExpressionGUID FGuid
-FRuntimeVirtualTextureParameterValue = {}
+local FRuntimeVirtualTextureParameterValue = {}
 
 
 
 ---@class FScalarMaterialInput : FMaterialInput
-FScalarMaterialInput = {}
+local FScalarMaterialInput = {}
 
 
 ---@class FScalarParameterAtlasInstanceData
 ---@field bIsUsedAsAtlasPosition boolean
 ---@field Curve TSoftObjectPtr<UCurveLinearColor>
 ---@field Atlas TSoftObjectPtr<UCurveLinearColorAtlas>
-FScalarParameterAtlasInstanceData = {}
+local FScalarParameterAtlasInstanceData = {}
 
 
 
@@ -7514,20 +7514,20 @@ FScalarParameterAtlasInstanceData = {}
 ---@field ParameterInfo FMaterialParameterInfo
 ---@field ParameterValue float
 ---@field ExpressionGUID FGuid
-FScalarParameterValue = {}
+local FScalarParameterValue = {}
 
 
 
 ---@class FScaleTrack
 ---@field ScaleKeys TArray<FVector>
 ---@field Times TArray<float>
-FScaleTrack = {}
+local FScaleTrack = {}
 
 
 
 ---@class FSceneComponentInstanceData : FActorComponentInstanceData
 ---@field AttachedInstanceComponents TMap<USceneComponent, FTransform>
-FSceneComponentInstanceData = {}
+local FSceneComponentInstanceData = {}
 
 
 
@@ -7538,25 +7538,25 @@ FSceneComponentInstanceData = {}
 ---@field TimeToDisplay float
 ---@field CurrentTimeDisplayed float
 ---@field TextScale FVector2D
-FScreenMessageString = {}
+local FScreenMessageString = {}
 
 
 
 ---@class FShadingModelMaterialInput : FMaterialInput
-FShadingModelMaterialInput = {}
+local FShadingModelMaterialInput = {}
 
 
 ---@class FSimpleCurve : FRealCurve
 ---@field InterpMode ERichCurveInterpMode
 ---@field Keys TArray<FSimpleCurveKey>
-FSimpleCurve = {}
+local FSimpleCurve = {}
 
 
 
 ---@class FSimpleCurveKey
 ---@field Time float
 ---@field Value float
-FSimpleCurveKey = {}
+local FSimpleCurveKey = {}
 
 
 
@@ -7564,14 +7564,14 @@ FSimpleCurveKey = {}
 ---@field MemberParent UObject
 ---@field MemberName FName
 ---@field MemberGuid FGuid
-FSimpleMemberReference = {}
+local FSimpleMemberReference = {}
 
 
 
 ---@class FSimulatedRootMotionReplicatedMove
 ---@field Time float
 ---@field RootMotion FRepRootMotionMontage
-FSimulatedRootMotionReplicatedMove = {}
+local FSimulatedRootMotionReplicatedMove = {}
 
 
 
@@ -7581,20 +7581,20 @@ FSimulatedRootMotionReplicatedMove = {}
 ---@field bSavedPlaying boolean
 ---@field SavedPosition float
 ---@field SavedPlayRate float
-FSingleAnimationPlayData = {}
+local FSingleAnimationPlayData = {}
 
 
 
 ---@class FSkelMeshComponentLODInfo
 ---@field HiddenMaterials TArray<boolean>
-FSkelMeshComponentLODInfo = {}
+local FSkelMeshComponentLODInfo = {}
 
 
 
 ---@class FSkelMeshSkinWeightInfo
 ---@field Bones int32
 ---@field Weights uint8
-FSkelMeshSkinWeightInfo = {}
+local FSkelMeshSkinWeightInfo = {}
 
 
 
@@ -7602,7 +7602,7 @@ FSkelMeshSkinWeightInfo = {}
 ---@field MaterialInterface UMaterialInterface
 ---@field MaterialSlotName FName
 ---@field UVChannelData FMeshUVChannelInfo
-FSkeletalMaterial = {}
+local FSkeletalMaterial = {}
 
 
 
@@ -7618,7 +7618,7 @@ FSkeletalMaterial = {}
 ---@field ThresholdPosition float
 ---@field ThresholdTangentNormal float
 ---@field ThresholdUV float
-FSkeletalMeshBuildSettings = {}
+local FSkeletalMeshBuildSettings = {}
 
 
 
@@ -7631,16 +7631,16 @@ FSkeletalMeshBuildSettings = {}
 ---@field SourceSection int32
 ---@field bRemoveFromMesh boolean
 ---@field PhysicsAsset TSoftObjectPtr<UPhysicsAsset>
-FSkeletalMeshClothBuildParams = {}
+local FSkeletalMeshClothBuildParams = {}
 
 
 
 ---@class FSkeletalMeshComponentClothTickFunction : FTickFunction
-FSkeletalMeshComponentClothTickFunction = {}
+local FSkeletalMeshComponentClothTickFunction = {}
 
 
 ---@class FSkeletalMeshComponentEndPhysicsTickFunction : FTickFunction
-FSkeletalMeshComponentEndPhysicsTickFunction = {}
+local FSkeletalMeshComponentEndPhysicsTickFunction = {}
 
 
 ---@class FSkeletalMeshLODGroupSettings
@@ -7652,7 +7652,7 @@ FSkeletalMeshComponentEndPhysicsTickFunction = {}
 ---@field WeightOfPrioritization float
 ---@field BakePose UAnimSequence
 ---@field ReductionSettings FSkeletalMeshOptimizationSettings
-FSkeletalMeshLODGroupSettings = {}
+local FSkeletalMeshLODGroupSettings = {}
 
 
 
@@ -7672,7 +7672,7 @@ FSkeletalMeshLODGroupSettings = {}
 ---@field bHasPerLODVertexColors boolean
 ---@field bAllowCPUAccess boolean
 ---@field bSupportUniformlyDistributedSampling boolean
-FSkeletalMeshLODInfo = {}
+local FSkeletalMeshLODInfo = {}
 
 
 
@@ -7697,26 +7697,26 @@ FSkeletalMeshLODInfo = {}
 ---@field VolumeImportance float
 ---@field bLockEdges boolean
 ---@field BaseLOD int32
-FSkeletalMeshOptimizationSettings = {}
+local FSkeletalMeshOptimizationSettings = {}
 
 
 
 ---@class FSkeletalMeshSamplingBuiltData
 ---@field WholeMeshBuiltData TArray<FSkeletalMeshSamplingLODBuiltData>
 ---@field RegionBuiltData TArray<FSkeletalMeshSamplingRegionBuiltData>
-FSkeletalMeshSamplingBuiltData = {}
+local FSkeletalMeshSamplingBuiltData = {}
 
 
 
 ---@class FSkeletalMeshSamplingInfo
 ---@field Regions TArray<FSkeletalMeshSamplingRegion>
 ---@field BuiltData FSkeletalMeshSamplingBuiltData
-FSkeletalMeshSamplingInfo = {}
+local FSkeletalMeshSamplingInfo = {}
 
 
 
 ---@class FSkeletalMeshSamplingLODBuiltData
-FSkeletalMeshSamplingLODBuiltData = {}
+local FSkeletalMeshSamplingLODBuiltData = {}
 
 
 ---@class FSkeletalMeshSamplingRegion
@@ -7725,7 +7725,7 @@ FSkeletalMeshSamplingLODBuiltData = {}
 ---@field bSupportUniformlyDistributedSampling boolean
 ---@field MaterialFilters TArray<FSkeletalMeshSamplingRegionMaterialFilter>
 ---@field BoneFilters TArray<FSkeletalMeshSamplingRegionBoneFilter>
-FSkeletalMeshSamplingRegion = {}
+local FSkeletalMeshSamplingRegion = {}
 
 
 
@@ -7733,24 +7733,24 @@ FSkeletalMeshSamplingRegion = {}
 ---@field BoneName FName
 ---@field bIncludeOrExclude boolean
 ---@field bApplyToChildren boolean
-FSkeletalMeshSamplingRegionBoneFilter = {}
+local FSkeletalMeshSamplingRegionBoneFilter = {}
 
 
 
 ---@class FSkeletalMeshSamplingRegionBuiltData
-FSkeletalMeshSamplingRegionBuiltData = {}
+local FSkeletalMeshSamplingRegionBuiltData = {}
 
 
 ---@class FSkeletalMeshSamplingRegionMaterialFilter
 ---@field MaterialName FName
-FSkeletalMeshSamplingRegionMaterialFilter = {}
+local FSkeletalMeshSamplingRegionMaterialFilter = {}
 
 
 
 ---@class FSkeletonToMeshLinkup
 ---@field SkeletonToMeshTable TArray<int32>
 ---@field MeshToSkeletonTable TArray<int32>
-FSkeletonToMeshLinkup = {}
+local FSkeletonToMeshLinkup = {}
 
 
 
@@ -7758,43 +7758,43 @@ FSkeletonToMeshLinkup = {}
 ---@field Name FName
 ---@field DefaultProfile FPerPlatformBool
 ---@field DefaultProfileFromLODIndex FPerPlatformInt
-FSkinWeightProfileInfo = {}
+local FSkinWeightProfileInfo = {}
 
 
 
 ---@class FSlotAnimationTrack
 ---@field SlotName FName
 ---@field AnimTrack FAnimTrack
-FSlotAnimationTrack = {}
+local FSlotAnimationTrack = {}
 
 
 
 ---@class FSlotEvaluationPose
 ---@field AdditiveType EAdditiveAnimationType
 ---@field Weight float
-FSlotEvaluationPose = {}
+local FSlotEvaluationPose = {}
 
 
 
 ---@class FSmartName
 ---@field DisplayName FName
-FSmartName = {}
+local FSmartName = {}
 
 
 
 ---@class FSmartNameContainer
-FSmartNameContainer = {}
+local FSmartNameContainer = {}
 
 
 ---@class FSmartNameMapping
-FSmartNameMapping = {}
+local FSmartNameMapping = {}
 
 
 ---@class FSoundAttenuationPluginSettings
 ---@field SpatializationPluginSettingsArray TArray<USpatializationPluginSourceSettingsBase>
 ---@field OcclusionPluginSettingsArray TArray<UOcclusionPluginSourceSettingsBase>
 ---@field ReverbPluginSettingsArray TArray<UReverbPluginSourceSettingsBase>
-FSoundAttenuationPluginSettings = {}
+local FSoundAttenuationPluginSettings = {}
 
 
 
@@ -7844,7 +7844,7 @@ FSoundAttenuationPluginSettings = {}
 ---@field ManualReverbSendLevel float
 ---@field CustomReverbSendCurve FRuntimeFloatCurve
 ---@field PluginSettings FSoundAttenuationPluginSettings
-FSoundAttenuationSettings = {}
+local FSoundAttenuationSettings = {}
 
 
 
@@ -7855,12 +7855,12 @@ FSoundAttenuationSettings = {}
 ---@field LowPassFilterFrequency float
 ---@field bApplyToChildren boolean
 ---@field VoiceCenterChannelVolumeAdjuster float
-FSoundClassAdjuster = {}
+local FSoundClassAdjuster = {}
 
 
 
 ---@class FSoundClassEditorData
-FSoundClassEditorData = {}
+local FSoundClassEditorData = {}
 
 
 ---@class FSoundClassProperties
@@ -7882,7 +7882,7 @@ FSoundClassEditorData = {}
 ---@field bApplyAmbientVolumes boolean
 ---@field OutputTarget EAudioOutputTarget::Type
 ---@field LoadingBehavior ESoundWaveLoadingBehavior
-FSoundClassProperties = {}
+local FSoundClassProperties = {}
 
 
 
@@ -7895,7 +7895,7 @@ FSoundClassProperties = {}
 ---@field bVolumeScaleCanRelease boolean
 ---@field VolumeScaleReleaseTime float
 ---@field VoiceStealReleaseTime float
-FSoundConcurrencySettings = {}
+local FSoundConcurrencySettings = {}
 
 
 
@@ -7904,25 +7904,25 @@ FSoundConcurrencySettings = {}
 ---@field DisplayName FString
 ---@field bAlwaysDecompressOnLoad boolean
 ---@field DecompressedDuration float
-FSoundGroup = {}
+local FSoundGroup = {}
 
 
 
 ---@class FSoundModulation
 ---@field Settings TArray<USoundModulationPluginSourceSettingsBase>
-FSoundModulation = {}
+local FSoundModulation = {}
 
 
 
 ---@class FSoundModulationParameter
 ---@field Control FName
 ---@field Value float
-FSoundModulationParameter = {}
+local FSoundModulationParameter = {}
 
 
 
 ---@class FSoundNodeEditorData
-FSoundNodeEditorData = {}
+local FSoundNodeEditorData = {}
 
 
 ---@class FSoundSourceBusSendInfo
@@ -7934,7 +7934,7 @@ FSoundNodeEditorData = {}
 ---@field MinSendDistance float
 ---@field MaxSendDistance float
 ---@field CustomSendLevelCurve FRuntimeFloatCurve
-FSoundSourceBusSendInfo = {}
+local FSoundSourceBusSendInfo = {}
 
 
 
@@ -7947,7 +7947,7 @@ FSoundSourceBusSendInfo = {}
 ---@field MinSendDistance float
 ---@field MaxSendDistance float
 ---@field CustomSendLevelCurve FRuntimeFloatCurve
-FSoundSubmixSendInfo = {}
+local FSoundSubmixSendInfo = {}
 
 
 
@@ -7956,7 +7956,7 @@ FSoundSubmixSendInfo = {}
 ---@field Volume float
 ---@field Pitch float
 ---@field Sound USoundBase
-FSoundTrackKey = {}
+local FSoundTrackKey = {}
 
 
 
@@ -7964,14 +7964,14 @@ FSoundTrackKey = {}
 ---@field Envelope float
 ---@field PlaybackTime float
 ---@field SoundWave USoundWave
-FSoundWaveEnvelopeDataPerSound = {}
+local FSoundWaveEnvelopeDataPerSound = {}
 
 
 
 ---@class FSoundWaveEnvelopeTimeData
 ---@field Amplitude float
 ---@field TimeSec float
-FSoundWaveEnvelopeTimeData = {}
+local FSoundWaveEnvelopeTimeData = {}
 
 
 
@@ -7979,14 +7979,14 @@ FSoundWaveEnvelopeTimeData = {}
 ---@field FrequencyHz float
 ---@field Magnitude float
 ---@field NormalizedMagnitude float
-FSoundWaveSpectralData = {}
+local FSoundWaveSpectralData = {}
 
 
 
 ---@class FSoundWaveSpectralDataEntry
 ---@field Magnitude float
 ---@field NormalizedMagnitude float
-FSoundWaveSpectralDataEntry = {}
+local FSoundWaveSpectralDataEntry = {}
 
 
 
@@ -7994,21 +7994,21 @@ FSoundWaveSpectralDataEntry = {}
 ---@field SpectralData TArray<FSoundWaveSpectralData>
 ---@field PlaybackTime float
 ---@field SoundWave USoundWave
-FSoundWaveSpectralDataPerSound = {}
+local FSoundWaveSpectralDataPerSound = {}
 
 
 
 ---@class FSoundWaveSpectralTimeData
 ---@field Data TArray<FSoundWaveSpectralDataEntry>
 ---@field TimeSec float
-FSoundWaveSpectralTimeData = {}
+local FSoundWaveSpectralTimeData = {}
 
 
 
 ---@class FSourceEffectChainEntry
 ---@field Preset USoundEffectSourcePreset
 ---@field bBypass boolean
-FSourceEffectChainEntry = {}
+local FSourceEffectChainEntry = {}
 
 
 
@@ -8018,7 +8018,7 @@ FSourceEffectChainEntry = {}
 ---@field Scale FInterpCurveVector
 ---@field ReparamTable FInterpCurveFloat
 ---@field MetaData USplineMetadata
-FSplineCurves = {}
+local FSplineCurves = {}
 
 
 
@@ -8026,7 +8026,7 @@ FSplineCurves = {}
 ---@field bSplineHasBeenEdited boolean
 ---@field SplineCurves FSplineCurves
 ---@field SplineCurvesPreUCS FSplineCurves
-FSplineInstanceData = {}
+local FSplineInstanceData = {}
 
 
 
@@ -8035,7 +8035,7 @@ FSplineInstanceData = {}
 ---@field EndPos FVector
 ---@field StartTangent FVector
 ---@field EndTangent FVector
-FSplineMeshInstanceData = {}
+local FSplineMeshInstanceData = {}
 
 
 
@@ -8050,7 +8050,7 @@ FSplineMeshInstanceData = {}
 ---@field EndTangent FVector
 ---@field EndRoll float
 ---@field EndOffset FVector2D
-FSplineMeshParams = {}
+local FSplineMeshParams = {}
 
 
 
@@ -8062,7 +8062,7 @@ FSplineMeshParams = {}
 ---@field Rotation FRotator
 ---@field Scale FVector
 ---@field Type ESplinePointType::Type
-FSplinePoint = {}
+local FSplinePoint = {}
 
 
 
@@ -8070,18 +8070,18 @@ FSplinePoint = {}
 ---@field Category FName
 ---@field DisplayName FText
 ---@field Description FText
-FSpriteCategoryInfo = {}
+local FSpriteCategoryInfo = {}
 
 
 
 ---@class FStartPhysicsTickFunction : FTickFunction
-FStartPhysicsTickFunction = {}
+local FStartPhysicsTickFunction = {}
 
 
 ---@class FStatColorMapEntry
 ---@field In float
 ---@field Out FColor
-FStatColorMapEntry = {}
+local FStatColorMapEntry = {}
 
 
 
@@ -8089,12 +8089,12 @@ FStatColorMapEntry = {}
 ---@field StatName FString
 ---@field ColorMap TArray<FStatColorMapEntry>
 ---@field DisableBlend boolean
-FStatColorMapping = {}
+local FStatColorMapping = {}
 
 
 
 ---@class FStateMachineDebugData
-FStateMachineDebugData = {}
+local FStateMachineDebugData = {}
 
 
 ---@class FStaticComponentMaskParameter : FStaticParameterBase
@@ -8102,7 +8102,7 @@ FStateMachineDebugData = {}
 ---@field G boolean
 ---@field B boolean
 ---@field A boolean
-FStaticComponentMaskParameter = {}
+local FStaticComponentMaskParameter = {}
 
 
 
@@ -8111,13 +8111,13 @@ FStaticComponentMaskParameter = {}
 ---@field MaterialSlotName FName
 ---@field ImportedMaterialSlotName FName
 ---@field UVChannelData FMeshUVChannelInfo
-FStaticMaterial = {}
+local FStaticMaterial = {}
 
 
 
 ---@class FStaticMaterialLayersParameter : FStaticParameterBase
 ---@field Value FMaterialLayersFunctions
-FStaticMaterialLayersParameter = {}
+local FStaticMaterialLayersParameter = {}
 
 
 
@@ -8126,12 +8126,12 @@ FStaticMaterialLayersParameter = {}
 ---@field VertexColorLODs TArray<FStaticMeshVertexColorLODData>
 ---@field CachedStaticLighting TArray<FGuid>
 ---@field StreamingTextureData TArray<FStreamingTextureBuildInfo>
-FStaticMeshComponentInstanceData = {}
+local FStaticMeshComponentInstanceData = {}
 
 
 
 ---@class FStaticMeshComponentLODInfo
-FStaticMeshComponentLODInfo = {}
+local FStaticMeshComponentLODInfo = {}
 
 
 ---@class FStaticMeshOptimizationSettings
@@ -8144,7 +8144,7 @@ FStaticMeshComponentLODInfo = {}
 ---@field SilhouetteImportance uint8
 ---@field TextureImportance uint8
 ---@field ShadingImportance uint8
-FStaticMeshOptimizationSettings = {}
+local FStaticMeshOptimizationSettings = {}
 
 
 
@@ -8154,7 +8154,7 @@ FStaticMeshOptimizationSettings = {}
 ---@field LODDistance float
 ---@field ScreenSize FPerPlatformFloat
 ---@field SourceImportFilename FString
-FStaticMeshSourceModel = {}
+local FStaticMeshSourceModel = {}
 
 
 
@@ -8162,7 +8162,7 @@ FStaticMeshSourceModel = {}
 ---@field PaintedVertices TArray<FPaintedVertex>
 ---@field VertexBufferColors TArray<FColor>
 ---@field LODIndex uint32
-FStaticMeshVertexColorLODData = {}
+local FStaticMeshVertexColorLODData = {}
 
 
 
@@ -8170,7 +8170,7 @@ FStaticMeshVertexColorLODData = {}
 ---@field ParameterInfo FMaterialParameterInfo
 ---@field bOverride boolean
 ---@field ExpressionGUID FGuid
-FStaticParameterBase = {}
+local FStaticParameterBase = {}
 
 
 
@@ -8179,34 +8179,34 @@ FStaticParameterBase = {}
 ---@field StaticComponentMaskParameters TArray<FStaticComponentMaskParameter>
 ---@field TerrainLayerWeightParameters TArray<FStaticTerrainLayerWeightParameter>
 ---@field MaterialLayersParameters TArray<FStaticMaterialLayersParameter>
-FStaticParameterSet = {}
+local FStaticParameterSet = {}
 
 
 
 ---@class FStaticSwitchParameter : FStaticParameterBase
 ---@field Value boolean
-FStaticSwitchParameter = {}
+local FStaticSwitchParameter = {}
 
 
 
 ---@class FStaticTerrainLayerWeightParameter : FStaticParameterBase
 ---@field WeightmapIndex int32
 ---@field bWeightBasedBlend boolean
-FStaticTerrainLayerWeightParameter = {}
+local FStaticTerrainLayerWeightParameter = {}
 
 
 
 ---@class FStreamableTextureInstance
-FStreamableTextureInstance = {}
+local FStreamableTextureInstance = {}
 
 
 ---@class FStreamedAudioPlatformData
-FStreamedAudioPlatformData = {}
+local FStreamedAudioPlatformData = {}
 
 
 ---@class FStreamingLevelsToConsider
 ---@field StreamingLevels TArray<FLevelStreamingWrapper>
-FStreamingLevelsToConsider = {}
+local FStreamingLevelsToConsider = {}
 
 
 
@@ -8216,7 +8216,7 @@ FStreamingLevelsToConsider = {}
 ---@field TexelFactor float
 ---@field PackedRelativeBox uint32
 ---@field bAllowInvalidTexelFactorWhenUnregistered boolean
-FStreamingRenderAssetPrimitiveInfo = {}
+local FStreamingRenderAssetPrimitiveInfo = {}
 
 
 
@@ -8224,28 +8224,28 @@ FStreamingRenderAssetPrimitiveInfo = {}
 ---@field PackedRelativeBox uint32
 ---@field TextureLevelIndex int32
 ---@field TexelFactor float
-FStreamingTextureBuildInfo = {}
+local FStreamingTextureBuildInfo = {}
 
 
 
 ---@class FStringCurve : FIndexedCurve
 ---@field DefaultValue FString
 ---@field Keys TArray<FStringCurveKey>
-FStringCurve = {}
+local FStringCurve = {}
 
 
 
 ---@class FStringCurveKey
 ---@field Time float
 ---@field Value FString
-FStringCurveKey = {}
+local FStringCurveKey = {}
 
 
 
 ---@class FStructRedirect
 ---@field OldStructName FName
 ---@field NewStructName FName
-FStructRedirect = {}
+local FStructRedirect = {}
 
 
 
@@ -8254,7 +8254,7 @@ FStructRedirect = {}
 ---@field TrackIndices TArray<int32>
 ---@field bIsCollapsed boolean
 ---@field bIsSelected boolean
-FSubTrackGroup = {}
+local FSubTrackGroup = {}
 
 
 
@@ -8276,14 +8276,14 @@ FSubTrackGroup = {}
 ---@field Roughness1 float
 ---@field LobeMix float
 ---@field TransmissionTintColor FLinearColor
-FSubsurfaceProfileStruct = {}
+local FSubsurfaceProfileStruct = {}
 
 
 
 ---@class FSubtitleCue
 ---@field Text FText
 ---@field Time float
-FSubtitleCue = {}
+local FSubtitleCue = {}
 
 
 
@@ -8291,7 +8291,7 @@ FSubtitleCue = {}
 ---@field SupportedClass TSubclassOf<UInterpTrack>
 ---@field SubTrackName FString
 ---@field GroupIndex int32
-FSupportedSubTrackInfo = {}
+local FSupportedSubTrackInfo = {}
 
 
 
@@ -8299,45 +8299,45 @@ FSupportedSubTrackInfo = {}
 ---@field bDistributionEnabled boolean
 ---@field bForceContentExport boolean
 ---@field bInitialized boolean
-FSwarmDebugOptions = {}
+local FSwarmDebugOptions = {}
 
 
 
 ---@class FTTEventTrack : FTTTrackBase
 ---@field FunctionName FName
 ---@field CurveKeys UCurveFloat
-FTTEventTrack = {}
+local FTTEventTrack = {}
 
 
 
 ---@class FTTFloatTrack : FTTPropertyTrack
 ---@field CurveFloat UCurveFloat
-FTTFloatTrack = {}
+local FTTFloatTrack = {}
 
 
 
 ---@class FTTLinearColorTrack : FTTPropertyTrack
 ---@field CurveLinearColor UCurveLinearColor
-FTTLinearColorTrack = {}
+local FTTLinearColorTrack = {}
 
 
 
 ---@class FTTPropertyTrack : FTTTrackBase
 ---@field PropertyName FName
-FTTPropertyTrack = {}
+local FTTPropertyTrack = {}
 
 
 
 ---@class FTTTrackBase
 ---@field TrackName FName
 ---@field bIsExternalCurve boolean
-FTTTrackBase = {}
+local FTTTrackBase = {}
 
 
 
 ---@class FTTVectorTrack : FTTPropertyTrack
 ---@field CurveVector UCurveVector
-FTTVectorTrack = {}
+local FTTVectorTrack = {}
 
 
 
@@ -8345,19 +8345,19 @@ FTTVectorTrack = {}
 ---@field Target AActor
 ---@field POV FMinimalViewInfo
 ---@field PlayerState APlayerState
-FTViewTarget = {}
+local FTViewTarget = {}
 
 
 
 ---@class FTableRowBase
-FTableRowBase = {}
+local FTableRowBase = {}
 
 
 ---@class FTentDistribution
 ---@field TipAltitude float
 ---@field TipValue float
 ---@field Width float
-FTentDistribution = {}
+local FTentDistribution = {}
 
 
 
@@ -8369,7 +8369,7 @@ FTentDistribution = {}
 ---@field Scaling FVector2D
 ---@field DrawFont UFont
 ---@field SpacingAdjust FVector2D
-FTextSizingParameters = {}
+local FTextSizingParameters = {}
 
 
 
@@ -8379,7 +8379,7 @@ FTextSizingParameters = {}
 ---@field CompressionNone boolean
 ---@field CompressionYCoCg boolean
 ---@field SRGB boolean
-FTextureFormatSettings = {}
+local FTextureFormatSettings = {}
 
 
 
@@ -8400,7 +8400,7 @@ FTextureFormatSettings = {}
 ---@field MipFilter FName
 ---@field MipLoadOptions ETextureMipLoadOptions
 ---@field DuplicateNonOptionalMips boolean
-FTextureLODGroup = {}
+local FTextureLODGroup = {}
 
 
 
@@ -8408,16 +8408,16 @@ FTextureLODGroup = {}
 ---@field ParameterInfo FMaterialParameterInfo
 ---@field ParameterValue UTexture
 ---@field ExpressionGUID FGuid
-FTextureParameterValue = {}
+local FTextureParameterValue = {}
 
 
 
 ---@class FTexturePlatformData
-FTexturePlatformData = {}
+local FTexturePlatformData = {}
 
 
 ---@class FTextureSource
-FTextureSource = {}
+local FTextureSource = {}
 
 
 ---@class FTextureSourceBlock
@@ -8427,7 +8427,7 @@ FTextureSource = {}
 ---@field SizeY int32
 ---@field NumSlices int32
 ---@field NumMips int32
-FTextureSourceBlock = {}
+local FTextureSourceBlock = {}
 
 
 
@@ -8439,12 +8439,12 @@ FTextureSourceBlock = {}
 ---@field bStartWithTickEnabled boolean
 ---@field bAllowTickOnDedicatedServer boolean
 ---@field TickInterval float
-FTickFunction = {}
+local FTickFunction = {}
 
 
 
 ---@class FTickPrerequisite
-FTickPrerequisite = {}
+local FTickPrerequisite = {}
 
 
 ---@class FTimeStretchCurve
@@ -8452,20 +8452,20 @@ FTickPrerequisite = {}
 ---@field CurveValueMinPrecision float
 ---@field Markers TArray<FTimeStretchCurveMarker>
 ---@field Sum_dT_i_by_C_i float
-FTimeStretchCurve = {}
+local FTimeStretchCurve = {}
 
 
 
 ---@class FTimeStretchCurveInstance
 ---@field bHasValidData boolean
-FTimeStretchCurveInstance = {}
+local FTimeStretchCurveInstance = {}
 
 
 
 ---@class FTimeStretchCurveMarker
 ---@field Time float
 ---@field Alpha float
-FTimeStretchCurveMarker = {}
+local FTimeStretchCurveMarker = {}
 
 
 
@@ -8486,14 +8486,14 @@ FTimeStretchCurveMarker = {}
 ---@field PropertySetObject TWeakObjectPtr<UObject>
 ---@field DirectionPropertyName FName
 ---@field DirectionProperty UProperty
-FTimeline = {}
+local FTimeline = {}
 
 
 
 ---@class FTimelineEventEntry
 ---@field Time float
 ---@field EventFunc FTimelineEventEntryEventFunc
-FTimelineEventEntry = {}
+local FTimelineEventEntry = {}
 
 
 
@@ -8503,7 +8503,7 @@ FTimelineEventEntry = {}
 ---@field TrackName FName
 ---@field FloatPropertyName FName
 ---@field FloatProperty UFloatProperty
-FTimelineFloatTrack = {}
+local FTimelineFloatTrack = {}
 
 
 
@@ -8513,7 +8513,7 @@ FTimelineFloatTrack = {}
 ---@field TrackName FName
 ---@field LinearColorPropertyName FName
 ---@field LinearColorProperty UStructProperty
-FTimelineLinearColorTrack = {}
+local FTimelineLinearColorTrack = {}
 
 
 
@@ -8523,27 +8523,27 @@ FTimelineLinearColorTrack = {}
 ---@field TrackName FName
 ---@field VectorPropertyName FName
 ---@field VectorProperty UStructProperty
-FTimelineVectorTrack = {}
+local FTimelineVectorTrack = {}
 
 
 
 ---@class FTimerHandle
 ---@field Handle uint64
-FTimerHandle = {}
+local FTimerHandle = {}
 
 
 
 ---@class FTireFrictionScalePair
 ---@field TireType UTireType
 ---@field FrictionScale float
-FTireFrictionScalePair = {}
+local FTireFrictionScalePair = {}
 
 
 
 ---@class FToggleTrackKey
 ---@field Time float
 ---@field ToggleAction ETrackToggleAction
-FToggleTrackKey = {}
+local FToggleTrackKey = {}
 
 
 
@@ -8557,26 +8557,26 @@ FToggleTrackKey = {}
 ---@field InputScale FVector2D
 ---@field MainInputKey FKey
 ---@field AltInputKey FKey
-FTouchInputControl = {}
+local FTouchInputControl = {}
 
 
 
 ---@class FTrackToSkeletonMap
 ---@field BoneTreeIndex int32
-FTrackToSkeletonMap = {}
+local FTrackToSkeletonMap = {}
 
 
 
 ---@class FTransformBase
 ---@field Node FName
 ---@field Constraints FTransformBaseConstraint
-FTransformBase = {}
+local FTransformBase = {}
 
 
 
 ---@class FTransformBaseConstraint
 ---@field TransformConstraints TArray<FRigTransformConstraint>
-FTransformBaseConstraint = {}
+local FTransformBaseConstraint = {}
 
 
 
@@ -8584,21 +8584,21 @@ FTransformBaseConstraint = {}
 ---@field TranslationCurve FVectorCurve
 ---@field RotationCurve FVectorCurve
 ---@field ScaleCurve FVectorCurve
-FTransformCurve = {}
+local FTransformCurve = {}
 
 
 
 ---@class FTranslationTrack
 ---@field PosKeys TArray<FVector>
 ---@field Times TArray<float>
-FTranslationTrack = {}
+local FTranslationTrack = {}
 
 
 
 ---@class FTwistConstraint : FConstraintBaseParams
 ---@field TwistLimitDegrees float
 ---@field TwistMotion EAngularConstraintMotion
-FTwistConstraint = {}
+local FTwistConstraint = {}
 
 
 
@@ -8611,13 +8611,13 @@ FTwistConstraint = {}
 ---@field RedirectURL FString
 ---@field Op TArray<FString>
 ---@field Portal FString
-FURL = {}
+local FURL = {}
 
 
 
 ---@class FUniqueNetIdRepl : FUniqueNetIdWrapper
 ---@field ReplicationBytes TArray<uint8>
-FUniqueNetIdRepl = {}
+local FUniqueNetIdRepl = {}
 
 
 
@@ -8627,7 +8627,7 @@ FUniqueNetIdRepl = {}
 ---@field bNewShouldBeLoaded boolean
 ---@field bNewShouldBeVisible boolean
 ---@field bNewShouldBlockOnLoad boolean
-FUpdateLevelStreamingLevelStatus = {}
+local FUpdateLevelStreamingLevelStatus = {}
 
 
 
@@ -8635,13 +8635,13 @@ FUpdateLevelStreamingLevelStatus = {}
 ---@field PackageName FName
 ---@field Filename FName
 ---@field bIsVisible boolean
-FUpdateLevelVisibilityLevelInfo = {}
+local FUpdateLevelVisibilityLevelInfo = {}
 
 
 
 ---@class FUserActivity
 ---@field ActionName FString
-FUserActivity = {}
+local FUserActivity = {}
 
 
 
@@ -8649,69 +8649,69 @@ FUserActivity = {}
 ---@field X FFOscillator
 ---@field Y FFOscillator
 ---@field Z FFOscillator
-FVOscillator = {}
+local FVOscillator = {}
 
 
 
 ---@class FVector2MaterialInput : FMaterialInput
-FVector2MaterialInput = {}
+local FVector2MaterialInput = {}
 
 
 ---@class FVector4Distribution
 ---@field Table FDistributionLookupTable
-FVector4Distribution = {}
+local FVector4Distribution = {}
 
 
 
 ---@class FVectorCurve : FAnimCurveBase
 ---@field FloatCurves FRichCurve
-FVectorCurve = {}
+local FVectorCurve = {}
 
 
 
 ---@class FVectorDistribution
 ---@field Table FDistributionLookupTable
-FVectorDistribution = {}
+local FVectorDistribution = {}
 
 
 
 ---@class FVectorMaterialInput : FMaterialInput
-FVectorMaterialInput = {}
+local FVectorMaterialInput = {}
 
 
 ---@class FVectorParameterValue
 ---@field ParameterInfo FMaterialParameterInfo
 ---@field ParameterValue FLinearColor
 ---@field ExpressionGUID FGuid
-FVectorParameterValue = {}
+local FVectorParameterValue = {}
 
 
 
 ---@class FVectorRK4SpringInterpolator
 ---@field StiffnessConstant float
 ---@field DampeningRatio float
-FVectorRK4SpringInterpolator = {}
+local FVectorRK4SpringInterpolator = {}
 
 
 
 ---@class FVectorSpringState
-FVectorSpringState = {}
+local FVectorSpringState = {}
 
 
 ---@class FVector_NetQuantize : FVector
-FVector_NetQuantize = {}
+local FVector_NetQuantize = {}
 
 
 ---@class FVector_NetQuantize10 : FVector
-FVector_NetQuantize10 = {}
+local FVector_NetQuantize10 = {}
 
 
 ---@class FVector_NetQuantize100 : FVector
-FVector_NetQuantize100 = {}
+local FVector_NetQuantize100 = {}
 
 
 ---@class FVector_NetQuantizeNormal : FVector
-FVector_NetQuantizeNormal = {}
+local FVector_NetQuantizeNormal = {}
 
 
 ---@class FViewTargetTransitionParams
@@ -8719,7 +8719,7 @@ FVector_NetQuantizeNormal = {}
 ---@field BlendFunction EViewTargetBlendFunction
 ---@field BlendExp float
 ---@field bLockOutgoing boolean
-FViewTargetTransitionParams = {}
+local FViewTargetTransitionParams = {}
 
 
 
@@ -8727,7 +8727,7 @@ FViewTargetTransitionParams = {}
 ---@field SourceBoneName FName
 ---@field TargetBoneName FName
 ---@field VirtualBoneName FName
-FVirtualBone = {}
+local FVirtualBone = {}
 
 
 
@@ -8736,7 +8736,7 @@ FVirtualBone = {}
 ---@field TileBorderSize int32
 ---@field bEnableCompressCrunch boolean
 ---@field bEnableCompressZlib boolean
-FVirtualTextureBuildSettings = {}
+local FVirtualTextureBuildSettings = {}
 
 
 
@@ -8746,7 +8746,7 @@ FVirtualTextureBuildSettings = {}
 ---@field Formats TArray<EPixelFormat>
 ---@field SizeInMegabyte int32
 ---@field bAllowSizeScale boolean
-FVirtualTextureSpacePoolConfig = {}
+local FVirtualTextureSpacePoolConfig = {}
 
 
 
@@ -8754,7 +8754,7 @@ FVirtualTextureSpacePoolConfig = {}
 ---@field Time float
 ---@field Action EVisibilityTrackAction
 ---@field ActiveCondition EVisibilityTrackCondition
-FVisibilityTrackKey = {}
+local FVisibilityTrackKey = {}
 
 
 
@@ -8762,27 +8762,27 @@ FVisibilityTrackKey = {}
 ---@field ComponentToAttachTo USceneComponent
 ---@field AttenuationSettings USoundAttenuation
 ---@field SourceEffectChain USoundEffectSourcePresetChain
-FVoiceSettings = {}
+local FVoiceSettings = {}
 
 
 
 ---@class FWalkableSlopeOverride
 ---@field WalkableSlopeBehavior EWalkableSlopeBehavior
 ---@field WalkableSlopeAngle float
-FWalkableSlopeOverride = {}
+local FWalkableSlopeOverride = {}
 
 
 
 ---@class FWeightedBlendable
 ---@field Weight float
 ---@field Object UObject
-FWeightedBlendable = {}
+local FWeightedBlendable = {}
 
 
 
 ---@class FWeightedBlendables
 ---@field Array TArray<FWeightedBlendable>
-FWeightedBlendables = {}
+local FWeightedBlendables = {}
 
 
 
@@ -8797,37 +8797,37 @@ FWeightedBlendables = {}
 ---@field GameViewport UGameViewportClient
 ---@field OwningGameInstance UGameInstance
 ---@field ActiveNetDrivers TArray<FNamedNetDriver>
-FWorldContext = {}
+local FWorldContext = {}
 
 
 
 ---@class FWorldPSCPool
 ---@field WorldParticleSystemPools TMap<UParticleSystem, FPSCPool>
-FWorldPSCPool = {}
+local FWorldPSCPool = {}
 
 
 
 ---@class FWrappedStringElement
 ---@field Value FString
 ---@field LineExtent FVector2D
-FWrappedStringElement = {}
+local FWrappedStringElement = {}
 
 
 
 ---@class IAnimClassInterface : IInterface
-IAnimClassInterface = {}
+local IAnimClassInterface = {}
 
 
 ---@class IAnimLayerInterface : IInterface
-IAnimLayerInterface = {}
+local IAnimLayerInterface = {}
 
 
 ---@class IBlendableInterface : IInterface
-IBlendableInterface = {}
+local IBlendableInterface = {}
 
 
 ---@class ICurveSourceInterface : IInterface
-ICurveSourceInterface = {}
+local ICurveSourceInterface = {}
 
 ---@param CurveName FName
 ---@return float
@@ -8839,97 +8839,97 @@ function ICurveSourceInterface:GetBindingName() end
 
 
 ---@class IDestructibleInterface : IInterface
-IDestructibleInterface = {}
+local IDestructibleInterface = {}
 
 
 ---@class IImportantToggleSettingInterface : IInterface
-IImportantToggleSettingInterface = {}
+local IImportantToggleSettingInterface = {}
 
 
 ---@class IInterface_AssetUserData : IInterface
-IInterface_AssetUserData = {}
+local IInterface_AssetUserData = {}
 
 
 ---@class IInterface_CollisionDataProvider : IInterface
-IInterface_CollisionDataProvider = {}
+local IInterface_CollisionDataProvider = {}
 
 
 ---@class IInterface_PostProcessVolume : IInterface
-IInterface_PostProcessVolume = {}
+local IInterface_PostProcessVolume = {}
 
 
 ---@class IInterface_PreviewMeshProvider : IInterface
-IInterface_PreviewMeshProvider = {}
+local IInterface_PreviewMeshProvider = {}
 
 
 ---@class IMatineeAnimInterface : IInterface
-IMatineeAnimInterface = {}
+local IMatineeAnimInterface = {}
 
 
 ---@class IMatineeInterface : IInterface
-IMatineeInterface = {}
+local IMatineeInterface = {}
 
 
 ---@class INavAgentInterface : IInterface
-INavAgentInterface = {}
+local INavAgentInterface = {}
 
 
 ---@class INavEdgeProviderInterface : IInterface
-INavEdgeProviderInterface = {}
+local INavEdgeProviderInterface = {}
 
 
 ---@class INavPathObserverInterface : IInterface
-INavPathObserverInterface = {}
+local INavPathObserverInterface = {}
 
 
 ---@class INavRelevantInterface : IInterface
-INavRelevantInterface = {}
+local INavRelevantInterface = {}
 
 
 ---@class INavigationDataInterface : IInterface
-INavigationDataInterface = {}
+local INavigationDataInterface = {}
 
 
 ---@class INetworkPredictionInterface : IInterface
-INetworkPredictionInterface = {}
+local INetworkPredictionInterface = {}
 
 
 ---@class INodeMappingProviderInterface : IInterface
-INodeMappingProviderInterface = {}
+local INodeMappingProviderInterface = {}
 
 
 ---@class IPathFollowingAgentInterface : IInterface
-IPathFollowingAgentInterface = {}
+local IPathFollowingAgentInterface = {}
 
 
 ---@class IPreviewCollectionInterface : IInterface
-IPreviewCollectionInterface = {}
+local IPreviewCollectionInterface = {}
 
 
 ---@class IRVOAvoidanceInterface : IInterface
-IRVOAvoidanceInterface = {}
+local IRVOAvoidanceInterface = {}
 
 
 ---@class ISlateTextureAtlasInterface : IInterface
-ISlateTextureAtlasInterface = {}
+local ISlateTextureAtlasInterface = {}
 
 
 ---@class IVisualLoggerDebugSnapshotInterface : IInterface
-IVisualLoggerDebugSnapshotInterface = {}
+local IVisualLoggerDebugSnapshotInterface = {}
 
 
 ---@class UAISystemBase : UObject
 ---@field AISystemClassName FSoftClassPath
 ---@field AISystemModuleName FName
 ---@field bInstantiateAISystemOnClient boolean
-UAISystemBase = {}
+local UAISystemBase = {}
 
 
 
 ---@class UActorChannel : UChannel
 ---@field Actor AActor
 ---@field CreateSubObjects TArray<UObject>
-UActorChannel = {}
+local UActorChannel = {}
 
 
 
@@ -8948,7 +8948,7 @@ UActorChannel = {}
 ---@field OnComponentActivated FActorComponentOnComponentActivated
 ---@field OnComponentDeactivated FActorComponentOnComponentDeactivated
 ---@field UCSModifiedProperties TArray<FSimpleMemberReference>
-UActorComponent = {}
+local UActorComponent = {}
 
 function UActorComponent:ToggleActive() end
 ---@param NewTickGroup ETickingGroup
@@ -9001,15 +9001,15 @@ function UActorComponent:Activate(bReset) end
 
 
 ---@class UAimOffsetBlendSpace : UBlendSpace
-UAimOffsetBlendSpace = {}
+local UAimOffsetBlendSpace = {}
 
 
 ---@class UAimOffsetBlendSpace1D : UBlendSpace1D
-UAimOffsetBlendSpace1D = {}
+local UAimOffsetBlendSpace1D = {}
 
 
 ---@class UAmbisonicsSubmixSettingsBase : UObject
-UAmbisonicsSubmixSettingsBase = {}
+local UAmbisonicsSubmixSettingsBase = {}
 
 
 ---@class UAnimBlueprint : UBlueprint
@@ -9017,7 +9017,7 @@ UAmbisonicsSubmixSettingsBase = {}
 ---@field Groups TArray<FAnimGroupInfo>
 ---@field bUseMultiThreadedAnimationUpdate boolean
 ---@field bWarnAboutBlueprintUsage boolean
-UAnimBlueprint = {}
+local UAnimBlueprint = {}
 
 
 
@@ -9030,7 +9030,7 @@ UAnimBlueprint = {}
 ---@field EvaluateGraphExposedInputs TArray<FExposedValueHandler>
 ---@field GraphAssetPlayerInformation TMap<FName, FGraphAssetPlayerInformation>
 ---@field GraphBlendOptions TMap<FName, FAnimGraphBlendOptions>
-UAnimBlueprintGeneratedClass = {}
+local UAnimBlueprintGeneratedClass = {}
 
 
 
@@ -9051,18 +9051,18 @@ UAnimBlueprintGeneratedClass = {}
 ---@field SyncGroupNames TArray<FName>
 ---@field EvaluateGraphExposedInputs TArray<FExposedValueHandler>
 ---@field GraphBlendOptions TMap<FName, FAnimGraphBlendOptions>
-UAnimClassData = {}
+local UAnimClassData = {}
 
 
 
 ---@class UAnimComposite : UAnimCompositeBase
 ---@field AnimationTrack FAnimTrack
-UAnimComposite = {}
+local UAnimComposite = {}
 
 
 
 ---@class UAnimCompositeBase : UAnimSequenceBase
-UAnimCompositeBase = {}
+local UAnimCompositeBase = {}
 
 
 ---@class UAnimCompress : UObject
@@ -9075,7 +9075,7 @@ UAnimCompositeBase = {}
 ---@field RotationCompressionFormat AnimationCompressionFormat
 ---@field ScaleCompressionFormat AnimationCompressionFormat
 ---@field MaxCurveError float
-UAnimCompress = {}
+local UAnimCompress = {}
 
 
 
@@ -9085,16 +9085,16 @@ UAnimCompress = {}
 ---@field bAutoReplaceIfExistingErrorTooGreat boolean
 ---@field bRaiseMaxErrorToExisting boolean
 ---@field bTryExhaustiveSearch boolean
-UAnimCompress_Automatic = {}
+local UAnimCompress_Automatic = {}
 
 
 
 ---@class UAnimCompress_BitwiseCompressOnly : UAnimCompress
-UAnimCompress_BitwiseCompressOnly = {}
+local UAnimCompress_BitwiseCompressOnly = {}
 
 
 ---@class UAnimCompress_LeastDestructive : UAnimCompress
-UAnimCompress_LeastDestructive = {}
+local UAnimCompress_LeastDestructive = {}
 
 
 ---@class UAnimCompress_PerTrackCompression : UAnimCompress_RemoveLinearKeys
@@ -9119,14 +9119,14 @@ UAnimCompress_LeastDestructive = {}
 ---@field ScaleErrorSourceRatio float
 ---@field MaxErrorPerTrackRatio float
 ---@field PerturbationProbeSize float
-UAnimCompress_PerTrackCompression = {}
+local UAnimCompress_PerTrackCompression = {}
 
 
 
 ---@class UAnimCompress_RemoveEverySecondKey : UAnimCompress
 ---@field MinKeys int32
 ---@field bStartAtSecondKey boolean
-UAnimCompress_RemoveEverySecondKey = {}
+local UAnimCompress_RemoveEverySecondKey = {}
 
 
 
@@ -9143,7 +9143,7 @@ UAnimCompress_RemoveEverySecondKey = {}
 ---@field bOptimizeForForwardPlayback boolean
 ---@field bUseDecompression boolean
 ---@field bUseMultithreading boolean
-UAnimCompress_RemoveLinearKeys = {}
+local UAnimCompress_RemoveLinearKeys = {}
 
 
 
@@ -9151,29 +9151,29 @@ UAnimCompress_RemoveLinearKeys = {}
 ---@field MaxPosDiff float
 ---@field MaxAngleDiff float
 ---@field MaxScaleDiff float
-UAnimCompress_RemoveTrivialKeys = {}
+local UAnimCompress_RemoveTrivialKeys = {}
 
 
 
 ---@class UAnimCurveCompressionCodec : UObject
-UAnimCurveCompressionCodec = {}
+local UAnimCurveCompressionCodec = {}
 
 
 ---@class UAnimCurveCompressionCodec_CompressedRichCurve : UAnimCurveCompressionCodec
-UAnimCurveCompressionCodec_CompressedRichCurve = {}
+local UAnimCurveCompressionCodec_CompressedRichCurve = {}
 
 
 ---@class UAnimCurveCompressionCodec_UniformIndexable : UAnimCurveCompressionCodec
-UAnimCurveCompressionCodec_UniformIndexable = {}
+local UAnimCurveCompressionCodec_UniformIndexable = {}
 
 
 ---@class UAnimCurveCompressionCodec_UniformlySampled : UAnimCurveCompressionCodec
-UAnimCurveCompressionCodec_UniformlySampled = {}
+local UAnimCurveCompressionCodec_UniformlySampled = {}
 
 
 ---@class UAnimCurveCompressionSettings : UObject
 ---@field Codec UAnimCurveCompressionCodec
-UAnimCurveCompressionSettings = {}
+local UAnimCurveCompressionSettings = {}
 
 
 
@@ -9189,7 +9189,7 @@ UAnimCurveCompressionSettings = {}
 ---@field OnAllMontageInstancesEnded FAnimInstanceOnAllMontageInstancesEnded
 ---@field NotifyQueue FAnimNotifyQueue
 ---@field ActiveAnimNotifyState TArray<FAnimNotifyEvent>
-UAnimInstance = {}
+local UAnimInstance = {}
 
 ---@param bUnlockMovement boolean
 ---@param UnlockAILogic boolean
@@ -9412,7 +9412,7 @@ function UAnimInstance:BlueprintBeginPlay() end
 
 
 ---@class UAnimMetaData : UObject
-UAnimMetaData = {}
+local UAnimMetaData = {}
 
 
 ---@class UAnimMontage : UAnimCompositeBase
@@ -9435,14 +9435,14 @@ UAnimMetaData = {}
 ---@field BranchingPointStateNotifyIndices TArray<int32>
 ---@field TimeStretchCurve FTimeStretchCurve
 ---@field TimeStretchCurveName FName
-UAnimMontage = {}
+local UAnimMontage = {}
 
 ---@return float
 function UAnimMontage:GetDefaultBlendOutTime() end
 
 
 ---@class UAnimNotify : UObject
-UAnimNotify = {}
+local UAnimNotify = {}
 
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
@@ -9453,7 +9453,7 @@ function UAnimNotify:GetNotifyName() end
 
 
 ---@class UAnimNotifyState : UObject
-UAnimNotifyState = {}
+local UAnimNotifyState = {}
 
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
@@ -9474,7 +9474,7 @@ function UAnimNotifyState:GetNotifyName() end
 
 
 ---@class UAnimNotifyState_DisableRootMotion : UAnimNotifyState
-UAnimNotifyState_DisableRootMotion = {}
+local UAnimNotifyState_DisableRootMotion = {}
 
 
 ---@class UAnimNotifyState_TimedParticleEffect : UAnimNotifyState
@@ -9483,7 +9483,7 @@ UAnimNotifyState_DisableRootMotion = {}
 ---@field LocationOffset FVector
 ---@field RotationOffset FRotator
 ---@field bDestroyAtEnd boolean
-UAnimNotifyState_TimedParticleEffect = {}
+local UAnimNotifyState_TimedParticleEffect = {}
 
 
 
@@ -9494,7 +9494,7 @@ UAnimNotifyState_TimedParticleEffect = {}
 ---@field WidthScaleMode ETrailWidthMode
 ---@field WidthScaleCurve FName
 ---@field bRecycleSpawnedSystems boolean
-UAnimNotifyState_Trail = {}
+local UAnimNotifyState_Trail = {}
 
 ---@param MeshComp USkeletalMeshComponent
 ---@param Animation UAnimSequenceBase
@@ -9503,7 +9503,7 @@ function UAnimNotifyState_Trail:OverridePSTemplate(MeshComp, Animation) end
 
 
 ---@class UAnimNotify_PauseClothingSimulation : UAnimNotify
-UAnimNotify_PauseClothingSimulation = {}
+local UAnimNotify_PauseClothingSimulation = {}
 
 
 ---@class UAnimNotify_PlayParticleEffect : UAnimNotify
@@ -9513,7 +9513,7 @@ UAnimNotify_PauseClothingSimulation = {}
 ---@field Scale FVector
 ---@field Attached boolean
 ---@field SocketName FName
-UAnimNotify_PlayParticleEffect = {}
+local UAnimNotify_PlayParticleEffect = {}
 
 
 
@@ -9523,20 +9523,20 @@ UAnimNotify_PlayParticleEffect = {}
 ---@field PitchMultiplier float
 ---@field bFollow boolean
 ---@field AttachName FName
-UAnimNotify_PlaySound = {}
+local UAnimNotify_PlaySound = {}
 
 
 
 ---@class UAnimNotify_ResetClothingSimulation : UAnimNotify
-UAnimNotify_ResetClothingSimulation = {}
+local UAnimNotify_ResetClothingSimulation = {}
 
 
 ---@class UAnimNotify_ResetDynamics : UAnimNotify
-UAnimNotify_ResetDynamics = {}
+local UAnimNotify_ResetDynamics = {}
 
 
 ---@class UAnimNotify_ResumeClothingSimulation : UAnimNotify
-UAnimNotify_ResumeClothingSimulation = {}
+local UAnimNotify_ResumeClothingSimulation = {}
 
 
 ---@class UAnimSequence : UAnimSequenceBase
@@ -9555,7 +9555,7 @@ UAnimNotify_ResumeClothingSimulation = {}
 ---@field bUseNormalizedRootMotionScale boolean
 ---@field bRootMotionSettingsCopiedFromMontage boolean
 ---@field AuthoredSyncMarkers TArray<FAnimSyncMarker>
-UAnimSequence = {}
+local UAnimSequence = {}
 
 
 
@@ -9564,7 +9564,7 @@ UAnimSequence = {}
 ---@field SequenceLength float
 ---@field RateScale float
 ---@field RawCurveData FRawCurveTracks
-UAnimSequenceBase = {}
+local UAnimSequenceBase = {}
 
 ---@return float
 function UAnimSequenceBase:GetPlayLength() end
@@ -9580,14 +9580,14 @@ function UAnimSequenceBase:GetPlayLength() end
 ---@field ForceMeshTranslationBoneNames TArray<FName>
 ---@field PreviewSkelMeshName FName
 ---@field BestRatioSkelMeshName FName
-UAnimSet = {}
+local UAnimSet = {}
 
 
 
 ---@class UAnimSingleNodeInstance : UAnimInstance
 ---@field CurrentAsset UAnimationAsset
 ---@field PostEvaluateAnimEvent FAnimSingleNodeInstancePostEvaluateAnimEvent
-UAnimSingleNodeInstance = {}
+local UAnimSingleNodeInstance = {}
 
 function UAnimSingleNodeInstance:StopAnim() end
 ---@param bInReverse boolean
@@ -9626,7 +9626,7 @@ function UAnimSingleNodeInstance:GetAnimationAsset() end
 
 
 ---@class UAnimStateMachineTypes : UObject
-UAnimStateMachineTypes = {}
+local UAnimStateMachineTypes = {}
 
 
 ---@class UAnimStreamable : UAnimSequenceBase
@@ -9638,7 +9638,7 @@ UAnimStateMachineTypes = {}
 ---@field RootMotionRootLock ERootMotionRootLock::Type
 ---@field bForceRootLock boolean
 ---@field bUseNormalizedRootMotionScale boolean
-UAnimStreamable = {}
+local UAnimStreamable = {}
 
 
 
@@ -9646,7 +9646,7 @@ UAnimStreamable = {}
 ---@field Skeleton USkeleton
 ---@field MetaData TArray<UAnimMetaData>
 ---@field AssetUserData TArray<UAssetUserData>
-UAnimationAsset = {}
+local UAnimationAsset = {}
 
 
 
@@ -9668,7 +9668,7 @@ UAnimationAsset = {}
 ---@field bEnablePerformanceLog boolean
 ---@field bStripAnimationDataOnDedicatedServer boolean
 ---@field bTickAnimationOnSkeletalMeshInit boolean
-UAnimationSettings = {}
+local UAnimationSettings = {}
 
 
 
@@ -9682,7 +9682,7 @@ UAnimationSettings = {}
 ---@field ApplicationReceivedStartupArgumentsDelegate FApplicationLifecycleComponentApplicationReceivedStartupArgumentsDelegate
 ---@field OnTemperatureChangeDelegate FApplicationLifecycleComponentOnTemperatureChangeDelegate
 ---@field OnLowPowerModeDelegate FApplicationLifecycleComponentOnLowPowerModeDelegate
-UApplicationLifecycleComponent = {}
+local UApplicationLifecycleComponent = {}
 
 
 
@@ -9692,7 +9692,7 @@ UApplicationLifecycleComponent = {}
 ---@field ScreenSize float
 ---@field bIsScreenSizeScaled boolean
 ---@field bTreatAsASprite boolean
-UArrowComponent = {}
+local UArrowComponent = {}
 
 ---@param NewColor FLinearColor
 function UArrowComponent:SetArrowColor(NewColor) end
@@ -9711,12 +9711,12 @@ function UArrowComponent:SetArrowColor(NewColor) end
 ---@field IgnoreObjectList TArray<UObject>
 ---@field Options UObject
 ---@field Errors TArray<FString>
-UAssetExportTask = {}
+local UAssetExportTask = {}
 
 
 
 ---@class UAssetImportData : UObject
-UAssetImportData = {}
+local UAssetImportData = {}
 
 
 ---@class UAssetManager : UObject
@@ -9733,7 +9733,7 @@ UAssetImportData = {}
 ---@field bUpdateManagementDatabaseAfterScan boolean
 ---@field bIncludeOnlyOnDiskAssets boolean
 ---@field NumberOfSpawnedNotifications int32
-UAssetManager = {}
+local UAssetManager = {}
 
 
 
@@ -9750,23 +9750,23 @@ UAssetManager = {}
 ---@field PrimaryAssetTypeRedirects TArray<FAssetManagerRedirect>
 ---@field AssetPathRedirects TArray<FAssetManagerRedirect>
 ---@field MetaDataTagsForAssetRegistry TSet<FName>
-UAssetManagerSettings = {}
+local UAssetManagerSettings = {}
 
 
 
 ---@class UAssetMappingTable : UObject
 ---@field MappedAssets TArray<FAssetMapping>
-UAssetMappingTable = {}
+local UAssetMappingTable = {}
 
 
 
 ---@class UAssetUserData : UObject
-UAssetUserData = {}
+local UAssetUserData = {}
 
 
 ---@class UAsyncActionChangePrimaryAssetBundles : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionChangePrimaryAssetBundlesCompleted
-UAsyncActionChangePrimaryAssetBundles = {}
+local UAsyncActionChangePrimaryAssetBundles = {}
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
@@ -9784,7 +9784,7 @@ function UAsyncActionChangePrimaryAssetBundles:AsyncChangeBundleStateForMatching
 ---@class UAsyncActionHandleSaveGame : UBlueprintAsyncActionBase
 ---@field Completed FAsyncActionHandleSaveGameCompleted
 ---@field SaveGameObject USaveGame
-UAsyncActionHandleSaveGame = {}
+local UAsyncActionHandleSaveGame = {}
 
 ---@param WorldContextObject UObject
 ---@param SaveGameObject USaveGame
@@ -9801,7 +9801,7 @@ function UAsyncActionHandleSaveGame:AsyncLoadGameFromSlot(WorldContextObject, Sl
 
 ---@class UAsyncActionLoadPrimaryAsset : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetCompleted
-UAsyncActionLoadPrimaryAsset = {}
+local UAsyncActionLoadPrimaryAsset = {}
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAsset FPrimaryAssetId
@@ -9811,12 +9811,12 @@ function UAsyncActionLoadPrimaryAsset:AsyncLoadPrimaryAsset(WorldContextObject, 
 
 
 ---@class UAsyncActionLoadPrimaryAssetBase : UBlueprintAsyncActionBase
-UAsyncActionLoadPrimaryAssetBase = {}
+local UAsyncActionLoadPrimaryAssetBase = {}
 
 
 ---@class UAsyncActionLoadPrimaryAssetClass : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetClassCompleted
-UAsyncActionLoadPrimaryAssetClass = {}
+local UAsyncActionLoadPrimaryAssetClass = {}
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAsset FPrimaryAssetId
@@ -9827,7 +9827,7 @@ function UAsyncActionLoadPrimaryAssetClass:AsyncLoadPrimaryAssetClass(WorldConte
 
 ---@class UAsyncActionLoadPrimaryAssetClassList : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetClassListCompleted
-UAsyncActionLoadPrimaryAssetClassList = {}
+local UAsyncActionLoadPrimaryAssetClassList = {}
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
@@ -9838,7 +9838,7 @@ function UAsyncActionLoadPrimaryAssetClassList:AsyncLoadPrimaryAssetClassList(Wo
 
 ---@class UAsyncActionLoadPrimaryAssetList : UAsyncActionLoadPrimaryAssetBase
 ---@field Completed FAsyncActionLoadPrimaryAssetListCompleted
-UAsyncActionLoadPrimaryAssetList = {}
+local UAsyncActionLoadPrimaryAssetList = {}
 
 ---@param WorldContextObject UObject
 ---@param PrimaryAssetList TArray<FPrimaryAssetId>
@@ -9866,7 +9866,7 @@ function UAsyncActionLoadPrimaryAssetList:AsyncLoadPrimaryAssetList(WorldContext
 ---@field PrecomputeParams FAtmospherePrecomputeParameters
 ---@field TransmittanceTexture UTexture2D
 ---@field IrradianceTexture UTexture2D
-UAtmosphericFogComponent = {}
+local UAtmosphericFogComponent = {}
 
 function UAtmosphericFogComponent:StartPrecompute() end
 ---@param NewSunMultiplier float
@@ -9942,7 +9942,7 @@ function UAtmosphericFogComponent:DisableGroundScattering(NewGroundScattering) e
 ---@field OnQueueSubtitles FAudioComponentOnQueueSubtitles
 ---@field AutoAttachParent TWeakObjectPtr<USceneComponent>
 ---@field AutoAttachSocketName FName
-UAudioComponent = {}
+local UAudioComponent = {}
 
 ---@param DelayTime float
 function UAudioComponent:StopDelayed(DelayTime) end
@@ -10046,7 +10046,7 @@ function UAudioComponent:AdjustAttenuation(InAttenuationSettings) end
 ---@field PanningMethod EPanningMethod
 ---@field MonoChannelUpmixMethod EMonoChannelUpmixMethod
 ---@field DialogueFilenameFormat FString
-UAudioSettings = {}
+local UAudioSettings = {}
 
 
 
@@ -10065,7 +10065,7 @@ UAudioSettings = {}
 ---@field ImportExportTestDefinitions TArray<FEditorImportExportTestDefinition>
 ---@field LaunchOnSettings TArray<FLaunchOnTestSettings>
 ---@field DefaultScreenshotResolution FIntPoint
-UAutomationTestSettings = {}
+local UAutomationTestSettings = {}
 
 
 
@@ -10077,7 +10077,7 @@ UAutomationTestSettings = {}
 ---@field ArtificialRadiusExpansion float
 ---@field TestHeightDifference float
 ---@field HeightCheckMargin float
-UAvoidanceManager = {}
+local UAvoidanceManager = {}
 
 ---@param MovementComp UMovementComponent
 ---@param AvoidanceWeight float
@@ -10100,7 +10100,7 @@ function UAvoidanceManager:GetAvoidanceVelocityForComponent(MovementComp) end
 ---@field UL float
 ---@field V float
 ---@field VL float
-UBillboardComponent = {}
+local UBillboardComponent = {}
 
 ---@param NewU int32
 ---@param NewUL int32
@@ -10120,19 +10120,19 @@ function UBillboardComponent:SetSprite(NewSprite) end
 ---@class UBlendProfile : UObject
 ---@field OwningSkeleton USkeleton
 ---@field ProfileEntries TArray<FBlendProfileBoneEntry>
-UBlendProfile = {}
+local UBlendProfile = {}
 
 
 
 ---@class UBlendSpace : UBlendSpaceBase
 ---@field AxisToScaleAnimation EBlendSpaceAxis
-UBlendSpace = {}
+local UBlendSpace = {}
 
 
 
 ---@class UBlendSpace1D : UBlendSpaceBase
 ---@field bScaleAnimation boolean
-UBlendSpace1D = {}
+local UBlendSpace1D = {}
 
 
 
@@ -10147,7 +10147,7 @@ UBlendSpace1D = {}
 ---@field SampleData TArray<FBlendSample>
 ---@field GridSamples TArray<FEditorElement>
 ---@field BlendParameters FBlendParameter
-UBlendSpaceBase = {}
+local UBlendSpaceBase = {}
 
 
 
@@ -10163,12 +10163,12 @@ UBlendSpaceBase = {}
 ---@field Timelines TArray<UTimelineTemplate>
 ---@field ComponentClassOverrides TArray<FBPComponentClassOverride>
 ---@field InheritableComponentHandler UInheritableComponentHandler
-UBlueprint = {}
+local UBlueprint = {}
 
 
 
 ---@class UBlueprintAsyncActionBase : UObject
-UBlueprintAsyncActionBase = {}
+local UBlueprintAsyncActionBase = {}
 
 function UBlueprintAsyncActionBase:Activate() end
 
@@ -10178,16 +10178,16 @@ function UBlueprintAsyncActionBase:Activate() end
 ---@field GeneratedClass UClass
 ---@field bLegacyNeedToPurgeSkelRefs boolean
 ---@field BlueprintGuid FGuid
-UBlueprintCore = {}
+local UBlueprintCore = {}
 
 
 
 ---@class UBlueprintExtension : UObject
-UBlueprintExtension = {}
+local UBlueprintExtension = {}
 
 
 ---@class UBlueprintFunctionLibrary : UObject
-UBlueprintFunctionLibrary = {}
+local UBlueprintFunctionLibrary = {}
 
 
 ---@class UBlueprintGeneratedClass : UClass
@@ -10203,12 +10203,12 @@ UBlueprintFunctionLibrary = {}
 ---@field UberGraphFramePointerProperty UStructProperty
 ---@field UberGraphFunction UFunction
 ---@field CookedComponentInstancingData TMap<FName, FBlueprintCookedComponentInstancingData>
-UBlueprintGeneratedClass = {}
+local UBlueprintGeneratedClass = {}
 
 
 
 ---@class UBlueprintMapLibrary : UBlueprintFunctionLibrary
-UBlueprintMapLibrary = {}
+local UBlueprintMapLibrary = {}
 
 ---@param Object UObject
 ---@param PropertyName FName
@@ -10245,7 +10245,7 @@ function UBlueprintMapLibrary:Map_Add(TargetMap, Key, Value) end
 
 
 ---@class UBlueprintPathsLibrary : UBlueprintFunctionLibrary
-UBlueprintPathsLibrary = {}
+local UBlueprintPathsLibrary = {}
 
 ---@return FString
 function UBlueprintPathsLibrary:VideoCaptureDir() end
@@ -10458,7 +10458,7 @@ function UBlueprintPathsLibrary:AutomationDir() end
 
 
 ---@class UBlueprintPlatformLibrary : UBlueprintFunctionLibrary
-UBlueprintPlatformLibrary = {}
+local UBlueprintPlatformLibrary = {}
 
 ---@param inSecondsFromNow int32
 ---@param Title FText
@@ -10497,7 +10497,7 @@ function UBlueprintPlatformLibrary:CancelLocalNotification(ActivationEvent) end
 
 
 ---@class UBlueprintSetLibrary : UBlueprintFunctionLibrary
-UBlueprintSetLibrary = {}
+local UBlueprintSetLibrary = {}
 
 ---@param Object UObject
 ---@param PropertyName FName
@@ -10559,13 +10559,13 @@ function UBlueprintSetLibrary:Set_Add(TargetSet, NewItem) end
 ---@field WalkableSlopeOverride FWalkableSlopeOverride
 ---@field DefaultInstance FBodyInstance
 ---@field BuildScale3D FVector
-UBodySetup = {}
+local UBodySetup = {}
 
 
 
 ---@class UBoneMaskFilter : UObject
 ---@field BlendPoses TArray<FInputBlendPose>
-UBoneMaskFilter = {}
+local UBoneMaskFilter = {}
 
 
 
@@ -10573,25 +10573,25 @@ UBoneMaskFilter = {}
 ---@field Location FVector
 ---@field Rotation FRotator
 ---@field HiddenLevels TArray<FString>
-UBookMark = {}
+local UBookMark = {}
 
 
 
 ---@class UBookMark2D : UBookmarkBase
 ---@field Zoom2D float
 ---@field Location FIntPoint
-UBookMark2D = {}
+local UBookMark2D = {}
 
 
 
 ---@class UBookmarkBase : UObject
-UBookmarkBase = {}
+local UBookmarkBase = {}
 
 
 ---@class UBoxComponent : UShapeComponent
 ---@field BoxExtent FVector
 ---@field LineThickness float
-UBoxComponent = {}
+local UBoxComponent = {}
 
 ---@param InBoxExtent FVector
 ---@param bUpdateOverlaps boolean
@@ -10606,7 +10606,7 @@ function UBoxComponent:GetScaledBoxExtent() end
 ---@field BoxTransitionDistance float
 ---@field PreviewInfluenceBox UBoxComponent
 ---@field PreviewCaptureBox UBoxComponent
-UBoxReflectionCaptureComponent = {}
+local UBoxReflectionCaptureComponent = {}
 
 
 
@@ -10616,7 +10616,7 @@ UBoxReflectionCaptureComponent = {}
 ---@field bStepOnce boolean
 ---@field bStepOnce_WasPreviouslyDisabled boolean
 ---@field bStepOnce_RemoveAfterHit boolean
-UBreakpoint = {}
+local UBreakpoint = {}
 
 
 
@@ -10628,20 +10628,20 @@ UBreakpoint = {}
 ---@field Polys TArray<FBuilderPoly>
 ---@field Layer FName
 ---@field MergeCoplanars boolean
-UBrushBuilder = {}
+local UBrushBuilder = {}
 
 
 
 ---@class UBrushComponent : UPrimitiveComponent
 ---@field Brush UModel
 ---@field BrushBodySetup UBodySetup
-UBrushComponent = {}
+local UBrushComponent = {}
 
 
 
 ---@class UButtonStyleAsset : UObject
 ---@field ButtonStyle FButtonStyle
-UButtonStyleAsset = {}
+local UButtonStyleAsset = {}
 
 
 
@@ -10654,7 +10654,7 @@ UButtonStyleAsset = {}
 ---@field BaseFOV float
 ---@field BasePostProcessSettings FPostProcessSettings
 ---@field BasePostProcessBlendWeight float
-UCameraAnim = {}
+local UCameraAnim = {}
 
 
 
@@ -10665,7 +10665,7 @@ UCameraAnim = {}
 ---@field MoveTrack UInterpTrackMove
 ---@field MoveInst UInterpTrackInstMove
 ---@field PlaySpace ECameraAnimPlaySpace::Type
-UCameraAnimInst = {}
+local UCameraAnimInst = {}
 
 ---@param bImmediate boolean
 function UCameraAnimInst:Stop(bImmediate) end
@@ -10688,7 +10688,7 @@ function UCameraAnimInst:SetDuration(NewDuration) end
 ---@field ProjectionMode ECameraProjectionMode::Type
 ---@field PostProcessBlendWeight float
 ---@field PostProcessSettings FPostProcessSettings
-UCameraComponent = {}
+local UCameraComponent = {}
 
 ---@param bInUseFieldOfViewForLOD boolean
 function UCameraComponent:SetUseFieldOfViewForLOD(bInUseFieldOfViewForLOD) end
@@ -10727,7 +10727,7 @@ function UCameraComponent:AddOrUpdateBlendable(InBlendableObject, InWeight) end
 ---@field AlphaInTime float
 ---@field AlphaOutTime float
 ---@field Alpha float
-UCameraModifier = {}
+local UCameraModifier = {}
 
 ---@return boolean
 function UCameraModifier:IsDisabled() end
@@ -10754,7 +10754,7 @@ function UCameraModifier:BlueprintModifyCamera(DeltaTime, ViewLocation, ViewRota
 ---@field ActiveShakes TArray<UCameraShake>
 ---@field ExpiredPooledShakesMap TMap<TSubclassOf<UCameraShake>, FPooledCameraShakes>
 ---@field SplitScreenShakeScale float
-UCameraModifier_CameraShake = {}
+local UCameraModifier_CameraShake = {}
 
 
 
@@ -10777,7 +10777,7 @@ UCameraModifier_CameraShake = {}
 ---@field ShakeScale float
 ---@field OscillatorTimeRemaining float
 ---@field AnimInst UCameraAnimInst
-UCameraShake = {}
+local UCameraShake = {}
 
 ---@param bImmediately boolean
 function UCameraShake:ReceiveStopShake(bImmediately) end
@@ -10807,7 +10807,7 @@ function UCameraShake:BlueprintUpdateCameraShake(DeltaTime, Alpha, POV, Modified
 ---@field DefaultTexture UTexture2D
 ---@field GradientTexture0 UTexture2D
 ---@field ReporterGraph UReporterGraph
-UCanvas = {}
+local UCanvas = {}
 
 ---@param RenderFont UFont
 ---@param RenderText FString
@@ -10901,7 +10901,7 @@ function UCanvas:K2_Deproject(ScreenPosition, WorldOrigin, WorldDirection) end
 ---@field OnCanvasRenderTargetUpdate FCanvasRenderTarget2DOnCanvasRenderTargetUpdate
 ---@field World TWeakObjectPtr<UWorld>
 ---@field bShouldClearRenderTargetOnReceiveUpdate boolean
-UCanvasRenderTarget2D = {}
+local UCanvasRenderTarget2D = {}
 
 function UCanvasRenderTarget2D:UpdateResource() end
 ---@param Canvas UCanvas
@@ -10922,7 +10922,7 @@ function UCanvasRenderTarget2D:CreateCanvasRenderTarget2D(WorldContextObject, Ca
 ---@class UCapsuleComponent : UShapeComponent
 ---@field CapsuleHalfHeight float
 ---@field CapsuleRadius float
-UCapsuleComponent = {}
+local UCapsuleComponent = {}
 
 ---@param InRadius float
 ---@param InHalfHeight float
@@ -10964,7 +10964,7 @@ function UCapsuleComponent:GetScaledCapsuleHalfHeight() end
 
 ---@class UChannel : UObject
 ---@field Connection UNetConnection
-UChannel = {}
+local UChannel = {}
 
 
 
@@ -10973,7 +10973,7 @@ UChannel = {}
 ---@field Restitution float
 ---@field SleepingLinearVelocityThreshold float
 ---@field SleepingAngularVelocityThreshold float
-UChaosPhysicalMaterial = {}
+local UChaosPhysicalMaterial = {}
 
 
 
@@ -11130,7 +11130,7 @@ UChaosPhysicalMaterial = {}
 ---@field CurrentRootMotion FRootMotionSourceGroup
 ---@field RootMotionParams FRootMotionMovementParams
 ---@field AnimRootMotionVelocity FVector
-UCharacterMovementComponent = {}
+local UCharacterMovementComponent = {}
 
 ---@param InWalkableFloorZ float
 function UCharacterMovementComponent:SetWalkableFloorZ(InWalkableFloorZ) end
@@ -11227,7 +11227,7 @@ function UCharacterMovementComponent:AddForce(Force) end
 ---@class UCheatManager : UObject
 ---@field DebugCameraControllerRef ADebugCameraController
 ---@field DebugCameraControllerClass TSubclassOf<ADebugCameraController>
-UCheatManager = {}
+local UCheatManager = {}
 
 function UCheatManager:Walk() end
 function UCheatManager:ViewSelf() end
@@ -11317,7 +11317,7 @@ function UCheatManager:BugIt(ScreenShotDescription) end
 
 ---@class UCheckBoxStyleAsset : UObject
 ---@field CheckBoxStyle FCheckBoxStyle
-UCheckBoxStyleAsset = {}
+local UCheckBoxStyleAsset = {}
 
 
 
@@ -11325,7 +11325,7 @@ UCheckBoxStyleAsset = {}
 ---@field ChildActorClass TSubclassOf<AActor>
 ---@field ChildActor AActor
 ---@field ChildActorTemplate AActor
-UChildActorComponent = {}
+local UChildActorComponent = {}
 
 ---@param InClass TSubclassOf<AActor>
 function UChildActorComponent:SetChildActorClass(InClass) end
@@ -11333,14 +11333,14 @@ function UChildActorComponent:SetChildActorClass(InClass) end
 
 ---@class UChildConnection : UNetConnection
 ---@field Parent UNetConnection
-UChildConnection = {}
+local UChildConnection = {}
 
 
 
 ---@class UCloudStorageBase : UPlatformInterfaceBase
 ---@field LocalCloudFiles TArray<FString>
 ---@field bSuppressDelegateCalls boolean
-UCloudStorageBase = {}
+local UCloudStorageBase = {}
 
 
 
@@ -11350,7 +11350,7 @@ UCloudStorageBase = {}
 ---@field EditProfiles TArray<FCustomProfile>
 ---@field ProfileRedirects TArray<FRedirector>
 ---@field CollisionChannelRedirects TArray<FRedirector>
-UCollisionProfile = {}
+local UCollisionProfile = {}
 
 
 
@@ -11366,27 +11366,27 @@ UCollisionProfile = {}
 ---@field LogToConsole boolean
 ---@field ShowErrorCount boolean
 ---@field ShowProgress boolean
-UCommandlet = {}
+local UCommandlet = {}
 
 
 
 ---@class UComponentDelegateBinding : UDynamicBlueprintBinding
 ---@field ComponentDelegateBindings TArray<FBlueprintComponentDelegateBinding>
-UComponentDelegateBinding = {}
+local UComponentDelegateBinding = {}
 
 
 
 ---@class UCompositeCurveTable : UCurveTable
 ---@field ParentTables TArray<UCurveTable>
 ---@field OldParentTables TArray<UCurveTable>
-UCompositeCurveTable = {}
+local UCompositeCurveTable = {}
 
 
 
 ---@class UCompositeDataTable : UDataTable
 ---@field ParentTables TArray<UDataTable>
 ---@field OldParentTables TArray<UDataTable>
-UCompositeDataTable = {}
+local UCompositeDataTable = {}
 
 
 
@@ -11395,16 +11395,16 @@ UCompositeDataTable = {}
 ---@field DefaultTexture_Black UTexture2D
 ---@field DefaultTexture_White UTexture2D
 ---@field HistoryBuffer TArray<FString>
-UConsole = {}
+local UConsole = {}
 
 
 
 ---@class UControlChannel : UChannel
-UControlChannel = {}
+local UControlChannel = {}
 
 
 ---@class UCurveBase : UObject
-UCurveBase = {}
+local UCurveBase = {}
 
 ---@param MinValue float
 ---@param MaxValue float
@@ -11417,7 +11417,7 @@ function UCurveBase:GetTimeRange(MinTime, MaxTime) end
 ---@class UCurveFloat : UCurveBase
 ---@field FloatCurve FRichCurve
 ---@field bIsEventCurve boolean
-UCurveFloat = {}
+local UCurveFloat = {}
 
 ---@param InTime float
 ---@return float
@@ -11433,7 +11433,7 @@ function UCurveFloat:GetFloatValue(InTime) end
 ---@field AdjustVibrance float
 ---@field AdjustMinAlpha float
 ---@field AdjustMaxAlpha float
-UCurveLinearColor = {}
+local UCurveLinearColor = {}
 
 ---@param InTime float
 ---@return FLinearColor
@@ -11446,7 +11446,7 @@ function UCurveLinearColor:GetClampedLinearColorValue(InTime) end
 ---@class UCurveLinearColorAtlas : UTexture2D
 ---@field TextureSize uint32
 ---@field GradientCurves TArray<UCurveLinearColor>
-UCurveLinearColorAtlas = {}
+local UCurveLinearColorAtlas = {}
 
 ---@param InCurve UCurveLinearColor
 ---@param Position float
@@ -11455,12 +11455,12 @@ function UCurveLinearColorAtlas:GetCurvePosition(InCurve, Position) end
 
 
 ---@class UCurveTable : UObject
-UCurveTable = {}
+local UCurveTable = {}
 
 
 ---@class UCurveVector : UCurveBase
 ---@field FloatCurves FRichCurve
-UCurveVector = {}
+local UCurveVector = {}
 
 ---@param InTime float
 ---@return FVector
@@ -11468,15 +11468,15 @@ function UCurveVector:GetVectorValue(InTime) end
 
 
 ---@class UDEPRECATED_CurveEdPresetCurve : UObject
-UDEPRECATED_CurveEdPresetCurve = {}
+local UDEPRECATED_CurveEdPresetCurve = {}
 
 
 ---@class UDEPRECATED_PhysicalMaterialPropertyBase : UObject
-UDEPRECATED_PhysicalMaterialPropertyBase = {}
+local UDEPRECATED_PhysicalMaterialPropertyBase = {}
 
 
 ---@class UDPICustomScalingRule : UObject
-UDPICustomScalingRule = {}
+local UDPICustomScalingRule = {}
 
 
 ---@class UDamageType : UObject
@@ -11487,13 +11487,13 @@ UDPICustomScalingRule = {}
 ---@field DestructibleImpulse float
 ---@field DestructibleDamageSpreadScale float
 ---@field DamageFalloff float
-UDamageType = {}
+local UDamageType = {}
 
 
 
 ---@class UDataAsset : UObject
 ---@field NativeClass TSubclassOf<UDataAsset>
-UDataAsset = {}
+local UDataAsset = {}
 
 
 
@@ -11503,12 +11503,12 @@ UDataAsset = {}
 ---@field bIgnoreExtraFields boolean
 ---@field bIgnoreMissingFields boolean
 ---@field ImportKeyField FString
-UDataTable = {}
+local UDataTable = {}
 
 
 
 ---@class UDataTableFunctionLibrary : UBlueprintFunctionLibrary
-UDataTableFunctionLibrary = {}
+local UDataTableFunctionLibrary = {}
 
 ---@param Table UDataTable
 ---@param OutRowNames TArray<FName>
@@ -11537,12 +11537,12 @@ function UDataTableFunctionLibrary:DoesDataTableRowExist(Table, RowName) end
 
 ---@class UDebugCameraControllerSettings : UDeveloperSettings
 ---@field CycleViewModes TArray<FDebugCameraControllerSettingsViewModeIndex>
-UDebugCameraControllerSettings = {}
+local UDebugCameraControllerSettings = {}
 
 
 
 ---@class UDebugDrawService : UBlueprintFunctionLibrary
-UDebugDrawService = {}
+local UDebugDrawService = {}
 
 
 ---@class UDecalComponent : USceneComponent
@@ -11555,7 +11555,7 @@ UDebugDrawService = {}
 ---@field FadeInStartDelay float
 ---@field bDestroyOwnerAfterFade boolean
 ---@field DecalSize FVector
-UDecalComponent = {}
+local UDecalComponent = {}
 
 ---@param Value int32
 function UDecalComponent:SetSortOrder(Value) end
@@ -11585,15 +11585,15 @@ function UDecalComponent:CreateDynamicMaterialInstance() end
 
 
 ---@class UDefault__AnimBlueprintGeneratedClass
-UDefault__AnimBlueprintGeneratedClass = {}
+local UDefault__AnimBlueprintGeneratedClass = {}
 
 
 ---@class UDefault__BlueprintGeneratedClass
-UDefault__BlueprintGeneratedClass = {}
+local UDefault__BlueprintGeneratedClass = {}
 
 
 ---@class UDemoNetConnection : UNetConnection
-UDemoNetConnection = {}
+local UDemoNetConnection = {}
 
 
 ---@class UDemoNetDriver : UNetDriver
@@ -11602,16 +11602,16 @@ UDemoNetConnection = {}
 ---@field MulticastRecordOptions TArray<FMulticastRecordOptions>
 ---@field bIsLocalReplay boolean
 ---@field SpectatorControllers TArray<APlayerController>
-UDemoNetDriver = {}
+local UDemoNetDriver = {}
 
 
 
 ---@class UDemoPendingNetGame : UPendingNetGame
-UDemoPendingNetGame = {}
+local UDemoPendingNetGame = {}
 
 
 ---@class UDeveloperSettings : UObject
-UDeveloperSettings = {}
+local UDeveloperSettings = {}
 
 
 ---@class UDeviceProfile : UTextureLODSettings
@@ -11619,25 +11619,25 @@ UDeveloperSettings = {}
 ---@field BaseProfileName FString
 ---@field Parent UObject
 ---@field CVars TArray<FString>
-UDeviceProfile = {}
+local UDeviceProfile = {}
 
 
 
 ---@class UDeviceProfileManager : UObject
 ---@field Profiles TArray<UObject>
-UDeviceProfileManager = {}
+local UDeviceProfileManager = {}
 
 
 
 ---@class UDialogueSoundWaveProxy : USoundBase
-UDialogueSoundWaveProxy = {}
+local UDialogueSoundWaveProxy = {}
 
 
 ---@class UDialogueVoice : UObject
 ---@field Gender EGrammaticalGender::Type
 ---@field Plurality EGrammaticalNumber::Type
 ---@field LocalizationGUID FGuid
-UDialogueVoice = {}
+local UDialogueVoice = {}
 
 
 
@@ -11648,7 +11648,7 @@ UDialogueVoice = {}
 ---@field SubtitleOverride FString
 ---@field ContextMappings TArray<FDialogueContextMapping>
 ---@field LocalizationGUID FGuid
-UDialogueWave = {}
+local UDialogueWave = {}
 
 
 
@@ -11678,7 +11678,7 @@ UDialogueWave = {}
 ---@field ShadowAmount float
 ---@field bUsedAsAtmosphereSunLight boolean
 ---@field AtmosphereSunLightIndex int32
-UDirectionalLightComponent = {}
+local UDirectionalLightComponent = {}
 
 ---@param NewValue float
 function UDirectionalLightComponent:SetShadowDistanceFadeoutFraction(NewValue) end
@@ -11703,25 +11703,25 @@ function UDirectionalLightComponent:SetCascadeDistributionExponent(NewValue) end
 
 
 ---@class UDistribution : UObject
-UDistribution = {}
+local UDistribution = {}
 
 
 ---@class UDistributionFloat : UDistribution
 ---@field bCanBeBaked boolean
 ---@field bBakedDataSuccesfully boolean
-UDistributionFloat = {}
+local UDistributionFloat = {}
 
 
 
 ---@class UDistributionFloatConstant : UDistributionFloat
 ---@field Constant float
-UDistributionFloatConstant = {}
+local UDistributionFloatConstant = {}
 
 
 
 ---@class UDistributionFloatConstantCurve : UDistributionFloat
 ---@field ConstantCurve FInterpCurveFloat
-UDistributionFloatConstantCurve = {}
+local UDistributionFloatConstantCurve = {}
 
 
 
@@ -11732,24 +11732,24 @@ UDistributionFloatConstantCurve = {}
 ---@field MinOutput float
 ---@field MaxOutput float
 ---@field ParamMode DistributionParamMode
-UDistributionFloatParameterBase = {}
+local UDistributionFloatParameterBase = {}
 
 
 
 ---@class UDistributionFloatParticleParameter : UDistributionFloatParameterBase
-UDistributionFloatParticleParameter = {}
+local UDistributionFloatParticleParameter = {}
 
 
 ---@class UDistributionFloatUniform : UDistributionFloat
 ---@field Min float
 ---@field Max float
-UDistributionFloatUniform = {}
+local UDistributionFloatUniform = {}
 
 
 
 ---@class UDistributionFloatUniformCurve : UDistributionFloat
 ---@field ConstantCurve FInterpCurveVector2D
-UDistributionFloatUniformCurve = {}
+local UDistributionFloatUniformCurve = {}
 
 
 
@@ -11757,7 +11757,7 @@ UDistributionFloatUniformCurve = {}
 ---@field bCanBeBaked boolean
 ---@field bIsDirty boolean
 ---@field bBakedDataSuccesfully boolean
-UDistributionVector = {}
+local UDistributionVector = {}
 
 
 
@@ -11765,7 +11765,7 @@ UDistributionVector = {}
 ---@field Constant FVector
 ---@field bLockAxes boolean
 ---@field LockedAxes EDistributionVectorLockFlags
-UDistributionVectorConstant = {}
+local UDistributionVectorConstant = {}
 
 
 
@@ -11773,7 +11773,7 @@ UDistributionVectorConstant = {}
 ---@field ConstantCurve FInterpCurveVector
 ---@field bLockAxes boolean
 ---@field LockedAxes EDistributionVectorLockFlags
-UDistributionVectorConstantCurve = {}
+local UDistributionVectorConstantCurve = {}
 
 
 
@@ -11784,12 +11784,12 @@ UDistributionVectorConstantCurve = {}
 ---@field MinOutput FVector
 ---@field MaxOutput FVector
 ---@field ParamModes DistributionParamMode
-UDistributionVectorParameterBase = {}
+local UDistributionVectorParameterBase = {}
 
 
 
 ---@class UDistributionVectorParticleParameter : UDistributionVectorParameterBase
-UDistributionVectorParticleParameter = {}
+local UDistributionVectorParticleParameter = {}
 
 
 ---@class UDistributionVectorUniform : UDistributionVector
@@ -11799,7 +11799,7 @@ UDistributionVectorParticleParameter = {}
 ---@field LockedAxes EDistributionVectorLockFlags
 ---@field MirrorFlags EDistributionVectorMirrorFlags
 ---@field bUseExtremes boolean
-UDistributionVectorUniform = {}
+local UDistributionVectorUniform = {}
 
 
 
@@ -11810,7 +11810,7 @@ UDistributionVectorUniform = {}
 ---@field LockedAxes EDistributionVectorLockFlags
 ---@field MirrorFlags EDistributionVectorMirrorFlags
 ---@field bUseExtremes boolean
-UDistributionVectorUniformCurve = {}
+local UDistributionVectorUniformCurve = {}
 
 
 
@@ -11821,20 +11821,20 @@ UDistributionVectorUniformCurve = {}
 ---@field FrustumStartDist float
 ---@field FrustumEndDist float
 ---@field Texture UTexture
-UDrawFrustumComponent = {}
+local UDrawFrustumComponent = {}
 
 
 
 ---@class UDrawSphereComponent : USphereComponent
-UDrawSphereComponent = {}
+local UDrawSphereComponent = {}
 
 
 ---@class UDynamicBlueprintBinding : UObject
-UDynamicBlueprintBinding = {}
+local UDynamicBlueprintBinding = {}
 
 
 ---@class UDynamicSubsystem : USubsystem
-UDynamicSubsystem = {}
+local UDynamicSubsystem = {}
 
 
 ---@class UEdGraph : UObject
@@ -11843,7 +11843,7 @@ UDynamicSubsystem = {}
 ---@field bEditable boolean
 ---@field bAllowDeletion boolean
 ---@field bAllowRenaming boolean
-UEdGraph = {}
+local UEdGraph = {}
 
 
 
@@ -11863,14 +11863,14 @@ UEdGraph = {}
 ---@field ErrorType int32
 ---@field ErrorMsg FString
 ---@field NodeGuid FGuid
-UEdGraphNode = {}
+local UEdGraphNode = {}
 
 
 
 ---@class UEdGraphNode_Documentation : UEdGraphNode
 ---@field Link FString
 ---@field Excerpt FString
-UEdGraphNode_Documentation = {}
+local UEdGraphNode_Documentation = {}
 
 
 
@@ -11887,12 +11887,12 @@ UEdGraphNode_Documentation = {}
 ---@field SubPins TArray<UEdGraphPin_Deprecated>
 ---@field ParentPin UEdGraphPin_Deprecated
 ---@field ReferencePassThroughConnection UEdGraphPin_Deprecated
-UEdGraphPin_Deprecated = {}
+local UEdGraphPin_Deprecated = {}
 
 
 
 ---@class UEdGraphSchema : UObject
-UEdGraphSchema = {}
+local UEdGraphSchema = {}
 
 
 ---@class UEngine : UObject
@@ -12116,20 +12116,20 @@ UEdGraphSchema = {}
 ---@field NetErrorLogInterval float
 ---@field bStartedLoadMapMovie boolean
 ---@field NextWorldContextHandle int32
-UEngine = {}
+local UEngine = {}
 
 
 
 ---@class UEngineBaseTypes : UObject
-UEngineBaseTypes = {}
+local UEngineBaseTypes = {}
 
 
 ---@class UEngineCustomTimeStep : UObject
-UEngineCustomTimeStep = {}
+local UEngineCustomTimeStep = {}
 
 
 ---@class UEngineHandlerComponentFactory : UHandlerComponentFactory
-UEngineHandlerComponentFactory = {}
+local UEngineHandlerComponentFactory = {}
 
 
 ---@class UEngineMessage : ULocalMessage
@@ -12141,16 +12141,16 @@ UEngineHandlerComponentFactory = {}
 ---@field SpecEnteredMessage FString
 ---@field NewPlayerMessage FString
 ---@field NewSpecMessage FString
-UEngineMessage = {}
+local UEngineMessage = {}
 
 
 
 ---@class UEngineSubsystem : UDynamicSubsystem
-UEngineSubsystem = {}
+local UEngineSubsystem = {}
 
 
 ---@class UEngineTypes : UObject
-UEngineTypes = {}
+local UEngineTypes = {}
 
 
 ---@class UExponentialHeightFogComponent : USceneComponent
@@ -12177,7 +12177,7 @@ UEngineTypes = {}
 ---@field VolumetricFogDistance float
 ---@field VolumetricFogStaticLightingScatteringIntensity float
 ---@field bOverrideLightColorsWithFogInscatteringColors boolean
-UExponentialHeightFogComponent = {}
+local UExponentialHeightFogComponent = {}
 
 ---@param NewValue float
 function UExponentialHeightFogComponent:SetVolumetricFogScatteringDistribution(NewValue) end
@@ -12232,7 +12232,7 @@ function UExponentialHeightFogComponent:SetDirectionalInscatteringColor(Value) e
 ---@field bSelectedOnly boolean
 ---@field bForceFileOperations boolean
 ---@field ExportTask UAssetExportTask
-UExporter = {}
+local UExporter = {}
 
 ---@param Task UAssetExportTask
 ---@return boolean
@@ -12247,12 +12247,12 @@ function UExporter:RunAssetExportTask(Task) end
 
 ---@class UFXSystemAsset : UObject
 ---@field MaxPoolSize uint32
-UFXSystemAsset = {}
+local UFXSystemAsset = {}
 
 
 
 ---@class UFXSystemComponent : UPrimitiveComponent
-UFXSystemComponent = {}
+local UFXSystemComponent = {}
 
 ---@param ParameterName FName
 ---@param Param FVector
@@ -12288,7 +12288,7 @@ function UFXSystemComponent:GetFXSystemAsset() end
 ---@field Deceleration float
 ---@field TurningBoost float
 ---@field bPositionCorrected boolean
-UFloatingPawnMovement = {}
+local UFloatingPawnMovement = {}
 
 
 
@@ -12309,7 +12309,7 @@ UFloatingPawnMovement = {}
 ---@field LegacyFontSize int32
 ---@field LegacyFontName FName
 ---@field CompositeFont FCompositeFont
-UFont = {}
+local UFont = {}
 
 
 
@@ -12318,19 +12318,19 @@ UFont = {}
 ---@field Hinting EFontHinting
 ---@field LoadingPolicy EFontLoadingPolicy
 ---@field LayoutMethod EFontLayoutMethod
-UFontFace = {}
+local UFontFace = {}
 
 
 
 ---@class UFontImportOptions : UObject
 ---@field Data FFontImportOptionsData
-UFontImportOptions = {}
+local UFontImportOptions = {}
 
 
 
 ---@class UForceFeedbackAttenuation : UObject
 ---@field Attenuation FForceFeedbackAttenuationSettings
-UForceFeedbackAttenuation = {}
+local UForceFeedbackAttenuation = {}
 
 
 
@@ -12345,7 +12345,7 @@ UForceFeedbackAttenuation = {}
 ---@field AttenuationSettings UForceFeedbackAttenuation
 ---@field AttenuationOverrides FForceFeedbackAttenuationSettings
 ---@field OnForceFeedbackFinished FForceFeedbackComponentOnForceFeedbackFinished
-UForceFeedbackComponent = {}
+local UForceFeedbackComponent = {}
 
 function UForceFeedbackComponent:Stop() end
 ---@param NewIntensityMultiplier float
@@ -12364,7 +12364,7 @@ function UForceFeedbackComponent:AdjustAttenuation(InAttenuationSettings) end
 ---@class UForceFeedbackEffect : UObject
 ---@field ChannelDetails TArray<FForceFeedbackChannelDetails>
 ---@field Duration float
-UForceFeedbackEffect = {}
+local UForceFeedbackEffect = {}
 
 
 
@@ -12372,7 +12372,7 @@ UForceFeedbackEffect = {}
 ---@field MaxDeltaTime float
 ---@field ServerFlushLogInterval float
 ---@field GameInstance UGameInstance
-UGameEngine = {}
+local UGameEngine = {}
 
 
 
@@ -12380,7 +12380,7 @@ UGameEngine = {}
 ---@field LocalPlayers TArray<ULocalPlayer>
 ---@field OnlineSession UOnlineSession
 ---@field ReferencedObjects TArray<UObject>
-UGameInstance = {}
+local UGameInstance = {}
 
 function UGameInstance:ReceiveShutdown() end
 function UGameInstance:ReceiveInit() end
@@ -12396,7 +12396,7 @@ function UGameInstance:DebugCreatePlayer(ControllerId) end
 
 
 ---@class UGameInstanceSubsystem : USubsystem
-UGameInstanceSubsystem = {}
+local UGameInstanceSubsystem = {}
 
 
 ---@class UGameUserSettings : UObject
@@ -12430,7 +12430,7 @@ UGameInstanceSubsystem = {}
 ---@field bUseHDRDisplayOutput boolean
 ---@field HDRDisplayOutputNits int32
 ---@field OnGameUserSettingsUINeedsUpdate FGameUserSettingsOnGameUserSettingsUINeedsUpdate
-UGameUserSettings = {}
+local UGameUserSettings = {}
 
 function UGameUserSettings:ValidateSettings() end
 ---@return boolean
@@ -12577,7 +12577,7 @@ function UGameUserSettings:ApplyHardwareBenchmarkResults() end
 ---@field DebugProperties TArray<FDebugDisplayProperty>
 ---@field World UWorld
 ---@field GameInstance UGameInstance
-UGameViewportClient = {}
+local UGameViewportClient = {}
 
 function UGameViewportClient:SSSwapControllers() end
 function UGameViewportClient:ShowTitleSafeArea() end
@@ -12586,7 +12586,7 @@ function UGameViewportClient:SetConsoleTarget(PlayerIndex) end
 
 
 ---@class UGameplayStatics : UBlueprintFunctionLibrary
-UGameplayStatics = {}
+local UGameplayStatics = {}
 
 ---@param WorldContextObject UObject
 ---@param LevelName FName
@@ -13274,7 +13274,7 @@ function UGameplayStatics:ActivateReverbEffect(WorldContextObject, ReverbEffect,
 ---@field SizeOfPermanentObjectPool int32
 ---@field MaxObjectsInGame int32
 ---@field MaxObjectsInEditor int32
-UGarbageCollectionSettings = {}
+local UGarbageCollectionSettings = {}
 
 
 
@@ -13283,41 +13283,41 @@ UGarbageCollectionSettings = {}
 ---@field Graph UEdGraph
 ---@field Node UEdGraphNode
 ---@field bIsDebugging boolean
-UGraphNodeContextMenuContext = {}
+local UGraphNodeContextMenuContext = {}
 
 
 
 ---@class UHLODProxy : UObject
 ---@field ProxyMeshes TArray<FHLODProxyMesh>
-UHLODProxy = {}
+local UHLODProxy = {}
 
 
 
 ---@class UHapticFeedbackEffect_Base : UObject
-UHapticFeedbackEffect_Base = {}
+local UHapticFeedbackEffect_Base = {}
 
 
 ---@class UHapticFeedbackEffect_Buffer : UHapticFeedbackEffect_Base
 ---@field Amplitudes TArray<uint8>
 ---@field SampleRate int32
-UHapticFeedbackEffect_Buffer = {}
+local UHapticFeedbackEffect_Buffer = {}
 
 
 
 ---@class UHapticFeedbackEffect_Curve : UHapticFeedbackEffect_Base
 ---@field HapticDetails FHapticFeedbackDetails_Curve
-UHapticFeedbackEffect_Curve = {}
+local UHapticFeedbackEffect_Curve = {}
 
 
 
 ---@class UHapticFeedbackEffect_SoundWave : UHapticFeedbackEffect_Base
 ---@field SoundWave USoundWave
-UHapticFeedbackEffect_SoundWave = {}
+local UHapticFeedbackEffect_SoundWave = {}
 
 
 
 ---@class UHealthSnapshotBlueprintLibrary : UBlueprintFunctionLibrary
-UHealthSnapshotBlueprintLibrary = {}
+local UHealthSnapshotBlueprintLibrary = {}
 
 function UHealthSnapshotBlueprintLibrary:StopPerformanceSnapshots() end
 function UHealthSnapshotBlueprintLibrary:StartPerformanceSnapshots() end
@@ -13337,7 +13337,7 @@ function UHealthSnapshotBlueprintLibrary:LogPerformanceSnapshot(SnapshotTitle, b
 ---@field CacheMeshExtendedBounds FBoxSphereBounds
 ---@field bDisableCollision boolean
 ---@field InstanceCountToRender int32
-UHierarchicalInstancedStaticMeshComponent = {}
+local UHierarchicalInstancedStaticMeshComponent = {}
 
 ---@param InstancesToRemove TArray<int32>
 ---@return boolean
@@ -13347,12 +13347,12 @@ function UHierarchicalInstancedStaticMeshComponent:RemoveInstances(InstancesToRe
 ---@class UHierarchicalLODSetup : UObject
 ---@field HierarchicalLODSetup TArray<FHierarchicalSimplification>
 ---@field OverrideBaseMaterial TSoftObjectPtr<UMaterialInterface>
-UHierarchicalLODSetup = {}
+local UHierarchicalLODSetup = {}
 
 
 
 ---@class UImportanceSamplingLibrary : UBlueprintFunctionLibrary
-UImportanceSamplingLibrary = {}
+local UImportanceSamplingLibrary = {}
 
 ---@param Index int32
 ---@param Dimension int32
@@ -13409,38 +13409,38 @@ function UImportanceSamplingLibrary:BreakImportanceTexture(ImportanceTexture, Te
 ---@field bShouldPauseWhileAdOpen boolean
 ---@field ClickedBannerDelegates TArray<FInGameAdManagerClickedBannerDelegates>
 ---@field ClosedAdDelegates TArray<FInGameAdManagerClosedAdDelegates>
-UInGameAdManager = {}
+local UInGameAdManager = {}
 
 
 
 ---@class UInheritableComponentHandler : UObject
 ---@field Records TArray<FComponentOverrideRecord>
 ---@field UnnecessaryComponents TArray<UActorComponent>
-UInheritableComponentHandler = {}
+local UInheritableComponentHandler = {}
 
 
 
 ---@class UInputActionDelegateBinding : UInputDelegateBinding
 ---@field InputActionDelegateBindings TArray<FBlueprintInputActionDelegateBinding>
-UInputActionDelegateBinding = {}
+local UInputActionDelegateBinding = {}
 
 
 
 ---@class UInputAxisDelegateBinding : UInputDelegateBinding
 ---@field InputAxisDelegateBindings TArray<FBlueprintInputAxisDelegateBinding>
-UInputAxisDelegateBinding = {}
+local UInputAxisDelegateBinding = {}
 
 
 
 ---@class UInputAxisKeyDelegateBinding : UInputDelegateBinding
 ---@field InputAxisKeyDelegateBindings TArray<FBlueprintInputAxisKeyDelegateBinding>
-UInputAxisKeyDelegateBinding = {}
+local UInputAxisKeyDelegateBinding = {}
 
 
 
 ---@class UInputComponent : UActorComponent
 ---@field CachedKeyToActionInfo TArray<FCachedKeyToActionInfo>
-UInputComponent = {}
+local UInputComponent = {}
 
 ---@param Key FKey
 ---@return boolean
@@ -13475,12 +13475,12 @@ function UInputComponent:GetControllerAnalogKeyState(Key) end
 
 
 ---@class UInputDelegateBinding : UDynamicBlueprintBinding
-UInputDelegateBinding = {}
+local UInputDelegateBinding = {}
 
 
 ---@class UInputKeyDelegateBinding : UInputDelegateBinding
 ---@field InputKeyDelegateBindings TArray<FBlueprintInputKeyDelegateBinding>
-UInputKeyDelegateBinding = {}
+local UInputKeyDelegateBinding = {}
 
 
 
@@ -13510,7 +13510,7 @@ UInputKeyDelegateBinding = {}
 ---@field DefaultTouchInterface FSoftObjectPath
 ---@field ConsoleKey FKey
 ---@field ConsoleKeys TArray<FKey>
-UInputSettings = {}
+local UInputSettings = {}
 
 function UInputSettings:SaveKeyMappings() end
 ---@param KeyMapping FInputAxisKeyMapping
@@ -13542,12 +13542,12 @@ function UInputSettings:AddActionMapping(KeyMapping, bForceRebuildKeymaps) end
 
 ---@class UInputTouchDelegateBinding : UInputDelegateBinding
 ---@field InputTouchDelegateBindings TArray<FBlueprintInputTouchDelegateBinding>
-UInputTouchDelegateBinding = {}
+local UInputTouchDelegateBinding = {}
 
 
 
 ---@class UInputVectorAxisDelegateBinding : UInputAxisKeyDelegateBinding
-UInputVectorAxisDelegateBinding = {}
+local UInputVectorAxisDelegateBinding = {}
 
 
 ---@class UInstancedStaticMeshComponent : UStaticMeshComponent
@@ -13558,7 +13558,7 @@ UInputVectorAxisDelegateBinding = {}
 ---@field InstanceReorderTable TArray<int32>
 ---@field NumPendingLightmaps int32
 ---@field CachedMappings TArray<FInstancedStaticMeshMappingInfo>
-UInstancedStaticMeshComponent = {}
+local UInstancedStaticMeshComponent = {}
 
 ---@param InstanceIndex int32
 ---@param NewInstanceTransform FTransform
@@ -13622,14 +13622,14 @@ function UInstancedStaticMeshComponent:AddInstance(InstanceTransform) end
 ---@field SignedInt64Variable int64
 ---@field UnsignedInt8Variable uint8
 ---@field SignedInt32Variable int32
-UIntSerialization = {}
+local UIntSerialization = {}
 
 
 
 ---@class UInterpCurveEdSetup : UObject
 ---@field Tabs TArray<FCurveEdTab>
 ---@field ActiveTab int32
-UInterpCurveEdSetup = {}
+local UInterpCurveEdSetup = {}
 
 
 
@@ -13643,22 +13643,22 @@ UInterpCurveEdSetup = {}
 ---@field bShouldBakeAndPrune boolean
 ---@field CachedDirectorGroup UInterpGroupDirector
 ---@field AllEventNames TArray<FName>
-UInterpData = {}
+local UInterpData = {}
 
 
 
 ---@class UInterpFilter : UObject
 ---@field Caption FString
-UInterpFilter = {}
+local UInterpFilter = {}
 
 
 
 ---@class UInterpFilter_Classes : UInterpFilter
-UInterpFilter_Classes = {}
+local UInterpFilter_Classes = {}
 
 
 ---@class UInterpFilter_Custom : UInterpFilter
-UInterpFilter_Custom = {}
+local UInterpFilter_Custom = {}
 
 
 ---@class UInterpGroup : UObject
@@ -13670,35 +13670,35 @@ UInterpFilter_Custom = {}
 ---@field bIsFolder boolean
 ---@field bIsParented boolean
 ---@field bIsSelected boolean
-UInterpGroup = {}
+local UInterpGroup = {}
 
 
 
 ---@class UInterpGroupCamera : UInterpGroup
 ---@field CameraAnimInst UCameraAnim
 ---@field CompressTolerance float
-UInterpGroupCamera = {}
+local UInterpGroupCamera = {}
 
 
 
 ---@class UInterpGroupDirector : UInterpGroup
-UInterpGroupDirector = {}
+local UInterpGroupDirector = {}
 
 
 ---@class UInterpGroupInst : UObject
 ---@field Group UInterpGroup
 ---@field GroupActor AActor
 ---@field TrackInst TArray<UInterpTrackInst>
-UInterpGroupInst = {}
+local UInterpGroupInst = {}
 
 
 
 ---@class UInterpGroupInstCamera : UInterpGroupInst
-UInterpGroupInstCamera = {}
+local UInterpGroupInstCamera = {}
 
 
 ---@class UInterpGroupInstDirector : UInterpGroupInst
-UInterpGroupInstDirector = {}
+local UInterpGroupInstDirector = {}
 
 
 ---@class UInterpToMovementComponent : UMovementComponent
@@ -13717,7 +13717,7 @@ UInterpGroupInstDirector = {}
 ---@field MaxSimulationTimeStep float
 ---@field MaxSimulationIterations int32
 ---@field ControlPoints TArray<FInterpControlPoint>
-UInterpToMovementComponent = {}
+local UInterpToMovementComponent = {}
 
 ---@param HitResult FHitResult
 function UInterpToMovementComponent:StopSimulating(HitResult) end
@@ -13754,7 +13754,7 @@ function UInterpToMovementComponent:FinaliseControlPoints() end
 ---@field bSubTrackOnly boolean
 ---@field bVisible boolean
 ---@field bIsRecording boolean
-UInterpTrack = {}
+local UInterpTrack = {}
 
 
 
@@ -13762,35 +13762,35 @@ UInterpTrack = {}
 ---@field SlotName FName
 ---@field AnimSeqs TArray<FAnimControlTrackKey>
 ---@field bSkipAnimNotifiers boolean
-UInterpTrackAnimControl = {}
+local UInterpTrackAnimControl = {}
 
 
 
 ---@class UInterpTrackAudioMaster : UInterpTrackVectorBase
-UInterpTrackAudioMaster = {}
+local UInterpTrackAudioMaster = {}
 
 
 ---@class UInterpTrackBoolProp : UInterpTrack
 ---@field BoolTrack TArray<FBoolTrackKey>
 ---@field PropertyName FName
-UInterpTrackBoolProp = {}
+local UInterpTrackBoolProp = {}
 
 
 
 ---@class UInterpTrackColorProp : UInterpTrackVectorBase
 ---@field PropertyName FName
-UInterpTrackColorProp = {}
+local UInterpTrackColorProp = {}
 
 
 
 ---@class UInterpTrackColorScale : UInterpTrackVectorBase
-UInterpTrackColorScale = {}
+local UInterpTrackColorScale = {}
 
 
 ---@class UInterpTrackDirector : UInterpTrack
 ---@field CutTrack TArray<FDirectorTrackCut>
 ---@field bSimulateCameraCutsOnClients boolean
-UInterpTrackDirector = {}
+local UInterpTrackDirector = {}
 
 
 
@@ -13800,7 +13800,7 @@ UInterpTrackDirector = {}
 ---@field bFireEventsWhenBackwards boolean
 ---@field bFireEventsWhenJumpingForwards boolean
 ---@field bUseCustomEventName boolean
-UInterpTrackEvent = {}
+local UInterpTrackEvent = {}
 
 
 
@@ -13808,7 +13808,7 @@ UInterpTrackEvent = {}
 ---@field bPersistFade boolean
 ---@field bFadeAudio boolean
 ---@field FadeColor FLinearColor
-UInterpTrackFade = {}
+local UInterpTrackFade = {}
 
 
 
@@ -13816,87 +13816,87 @@ UInterpTrackFade = {}
 ---@field AnimBlueprintClass UClass
 ---@field AnimClass TSubclassOf<UAnimInstance>
 ---@field ParamName FName
-UInterpTrackFloatAnimBPParam = {}
+local UInterpTrackFloatAnimBPParam = {}
 
 
 
 ---@class UInterpTrackFloatBase : UInterpTrack
 ---@field FloatTrack FInterpCurveFloat
 ---@field CurveTension float
-UInterpTrackFloatBase = {}
+local UInterpTrackFloatBase = {}
 
 
 
 ---@class UInterpTrackFloatMaterialParam : UInterpTrackFloatBase
 ---@field TargetMaterials TArray<UMaterialInterface>
 ---@field ParamName FName
-UInterpTrackFloatMaterialParam = {}
+local UInterpTrackFloatMaterialParam = {}
 
 
 
 ---@class UInterpTrackFloatParticleParam : UInterpTrackFloatBase
 ---@field ParamName FName
-UInterpTrackFloatParticleParam = {}
+local UInterpTrackFloatParticleParam = {}
 
 
 
 ---@class UInterpTrackFloatProp : UInterpTrackFloatBase
 ---@field PropertyName FName
-UInterpTrackFloatProp = {}
+local UInterpTrackFloatProp = {}
 
 
 
 ---@class UInterpTrackInst : UObject
-UInterpTrackInst = {}
+local UInterpTrackInst = {}
 
 
 ---@class UInterpTrackInstAnimControl : UInterpTrackInst
 ---@field LastUpdatePosition float
-UInterpTrackInstAnimControl = {}
+local UInterpTrackInstAnimControl = {}
 
 
 
 ---@class UInterpTrackInstAudioMaster : UInterpTrackInst
-UInterpTrackInstAudioMaster = {}
+local UInterpTrackInstAudioMaster = {}
 
 
 ---@class UInterpTrackInstBoolProp : UInterpTrackInstProperty
 ---@field BoolProperty UBoolProperty
 ---@field ResetBool boolean
-UInterpTrackInstBoolProp = {}
+local UInterpTrackInstBoolProp = {}
 
 
 
 ---@class UInterpTrackInstColorProp : UInterpTrackInstProperty
 ---@field ResetColor FColor
-UInterpTrackInstColorProp = {}
+local UInterpTrackInstColorProp = {}
 
 
 
 ---@class UInterpTrackInstColorScale : UInterpTrackInst
-UInterpTrackInstColorScale = {}
+local UInterpTrackInstColorScale = {}
 
 
 ---@class UInterpTrackInstDirector : UInterpTrackInst
 ---@field OldViewTarget AActor
-UInterpTrackInstDirector = {}
+local UInterpTrackInstDirector = {}
 
 
 
 ---@class UInterpTrackInstEvent : UInterpTrackInst
 ---@field LastUpdatePosition float
-UInterpTrackInstEvent = {}
+local UInterpTrackInstEvent = {}
 
 
 
 ---@class UInterpTrackInstFade : UInterpTrackInst
-UInterpTrackInstFade = {}
+local UInterpTrackInstFade = {}
 
 
 ---@class UInterpTrackInstFloatAnimBPParam : UInterpTrackInst
 ---@field AnimScriptInstance UAnimInstance
 ---@field ResetFloat float
-UInterpTrackInstFloatAnimBPParam = {}
+local UInterpTrackInstFloatAnimBPParam = {}
 
 
 
@@ -13905,58 +13905,58 @@ UInterpTrackInstFloatAnimBPParam = {}
 ---@field ResetFloats TArray<float>
 ---@field PrimitiveMaterialRefs TArray<FPrimitiveMaterialRef>
 ---@field InstancedTrack UInterpTrackFloatMaterialParam
-UInterpTrackInstFloatMaterialParam = {}
+local UInterpTrackInstFloatMaterialParam = {}
 
 
 
 ---@class UInterpTrackInstFloatParticleParam : UInterpTrackInst
 ---@field ResetFloat float
-UInterpTrackInstFloatParticleParam = {}
+local UInterpTrackInstFloatParticleParam = {}
 
 
 
 ---@class UInterpTrackInstFloatProp : UInterpTrackInstProperty
 ---@field ResetFloat float
-UInterpTrackInstFloatProp = {}
+local UInterpTrackInstFloatProp = {}
 
 
 
 ---@class UInterpTrackInstLinearColorProp : UInterpTrackInstProperty
 ---@field ResetColor FLinearColor
-UInterpTrackInstLinearColorProp = {}
+local UInterpTrackInstLinearColorProp = {}
 
 
 
 ---@class UInterpTrackInstMove : UInterpTrackInst
 ---@field ResetLocation FVector
 ---@field ResetRotation FRotator
-UInterpTrackInstMove = {}
+local UInterpTrackInstMove = {}
 
 
 
 ---@class UInterpTrackInstParticleReplay : UInterpTrackInst
 ---@field LastUpdatePosition float
-UInterpTrackInstParticleReplay = {}
+local UInterpTrackInstParticleReplay = {}
 
 
 
 ---@class UInterpTrackInstProperty : UInterpTrackInst
 ---@field InterpProperty UProperty
 ---@field PropertyOuterObjectInst UObject
-UInterpTrackInstProperty = {}
+local UInterpTrackInstProperty = {}
 
 
 
 ---@class UInterpTrackInstSlomo : UInterpTrackInst
 ---@field OldTimeDilation float
-UInterpTrackInstSlomo = {}
+local UInterpTrackInstSlomo = {}
 
 
 
 ---@class UInterpTrackInstSound : UInterpTrackInst
 ---@field LastUpdatePosition float
 ---@field PlayAudioComp UAudioComponent
-UInterpTrackInstSound = {}
+local UInterpTrackInstSound = {}
 
 
 
@@ -13964,7 +13964,7 @@ UInterpTrackInstSound = {}
 ---@field Action ETrackToggleAction
 ---@field LastUpdatePosition float
 ---@field bSavedActiveState boolean
-UInterpTrackInstToggle = {}
+local UInterpTrackInstToggle = {}
 
 
 
@@ -13973,33 +13973,33 @@ UInterpTrackInstToggle = {}
 ---@field ResetVectors TArray<FVector>
 ---@field PrimitiveMaterialRefs TArray<FPrimitiveMaterialRef>
 ---@field InstancedTrack UInterpTrackVectorMaterialParam
-UInterpTrackInstVectorMaterialParam = {}
+local UInterpTrackInstVectorMaterialParam = {}
 
 
 
 ---@class UInterpTrackInstVectorProp : UInterpTrackInstProperty
 ---@field ResetVector FVector
-UInterpTrackInstVectorProp = {}
+local UInterpTrackInstVectorProp = {}
 
 
 
 ---@class UInterpTrackInstVisibility : UInterpTrackInst
 ---@field Action EVisibilityTrackAction
 ---@field LastUpdatePosition float
-UInterpTrackInstVisibility = {}
+local UInterpTrackInstVisibility = {}
 
 
 
 ---@class UInterpTrackLinearColorBase : UInterpTrack
 ---@field LinearColorTrack FInterpCurveLinearColor
 ---@field CurveTension float
-UInterpTrackLinearColorBase = {}
+local UInterpTrackLinearColorBase = {}
 
 
 
 ---@class UInterpTrackLinearColorProp : UInterpTrackLinearColorBase
 ---@field PropertyName FName
-UInterpTrackLinearColorProp = {}
+local UInterpTrackLinearColorProp = {}
 
 
 
@@ -14017,25 +14017,25 @@ UInterpTrackLinearColorProp = {}
 ---@field bShowRotationOnCurveEd boolean
 ---@field bHide3DTrack boolean
 ---@field RotMode EInterpTrackMoveRotMode
-UInterpTrackMove = {}
+local UInterpTrackMove = {}
 
 
 
 ---@class UInterpTrackMoveAxis : UInterpTrackFloatBase
 ---@field MoveAxis EInterpMoveAxis
 ---@field LookupTrack FInterpLookupTrack
-UInterpTrackMoveAxis = {}
+local UInterpTrackMoveAxis = {}
 
 
 
 ---@class UInterpTrackParticleReplay : UInterpTrack
 ---@field TrackKeys TArray<FParticleReplayTrackKey>
-UInterpTrackParticleReplay = {}
+local UInterpTrackParticleReplay = {}
 
 
 
 ---@class UInterpTrackSlomo : UInterpTrackFloatBase
-UInterpTrackSlomo = {}
+local UInterpTrackSlomo = {}
 
 
 ---@class UInterpTrackSound : UInterpTrackVectorBase
@@ -14045,7 +14045,7 @@ UInterpTrackSlomo = {}
 ---@field bSuppressSubtitles boolean
 ---@field bTreatAsDialogue boolean
 ---@field bAttach boolean
-UInterpTrackSound = {}
+local UInterpTrackSound = {}
 
 
 
@@ -14056,27 +14056,27 @@ UInterpTrackSound = {}
 ---@field bFireEventsWhenForwards boolean
 ---@field bFireEventsWhenBackwards boolean
 ---@field bFireEventsWhenJumpingForwards boolean
-UInterpTrackToggle = {}
+local UInterpTrackToggle = {}
 
 
 
 ---@class UInterpTrackVectorBase : UInterpTrack
 ---@field VectorTrack FInterpCurveVector
 ---@field CurveTension float
-UInterpTrackVectorBase = {}
+local UInterpTrackVectorBase = {}
 
 
 
 ---@class UInterpTrackVectorMaterialParam : UInterpTrackVectorBase
 ---@field TargetMaterials TArray<UMaterialInterface>
 ---@field ParamName FName
-UInterpTrackVectorMaterialParam = {}
+local UInterpTrackVectorMaterialParam = {}
 
 
 
 ---@class UInterpTrackVectorProp : UInterpTrackVectorBase
 ---@field PropertyName FName
-UInterpTrackVectorProp = {}
+local UInterpTrackVectorProp = {}
 
 
 
@@ -14085,12 +14085,12 @@ UInterpTrackVectorProp = {}
 ---@field bFireEventsWhenForwards boolean
 ---@field bFireEventsWhenBackwards boolean
 ---@field bFireEventsWhenJumpingForwards boolean
-UInterpTrackVisibility = {}
+local UInterpTrackVisibility = {}
 
 
 
 ---@class UKismetArrayLibrary : UBlueprintFunctionLibrary
-UKismetArrayLibrary = {}
+local UKismetArrayLibrary = {}
 
 ---@param Object UObject
 ---@param PropertyName FName
@@ -14167,7 +14167,7 @@ function UKismetArrayLibrary:Array_Add(TargetArray, NewItem) end
 
 
 ---@class UKismetGuidLibrary : UBlueprintFunctionLibrary
-UKismetGuidLibrary = {}
+local UKismetGuidLibrary = {}
 
 ---@param GuidString FString
 ---@param OutGuid FGuid
@@ -14194,7 +14194,7 @@ function UKismetGuidLibrary:Conv_GuidToString(InGuid) end
 
 
 ---@class UKismetInputLibrary : UBlueprintFunctionLibrary
-UKismetInputLibrary = {}
+local UKismetInputLibrary = {}
 
 ---@param Input FPointerEvent
 ---@return boolean
@@ -14332,7 +14332,7 @@ function UKismetInputLibrary:CalibrateTilt() end
 
 
 ---@class UKismetInternationalizationLibrary : UBlueprintFunctionLibrary
-UKismetInternationalizationLibrary = {}
+local UKismetInternationalizationLibrary = {}
 
 ---@param Culture FString
 ---@param SaveToConfig boolean
@@ -14388,7 +14388,7 @@ function UKismetInternationalizationLibrary:ClearCurrentAssetGroupCulture(AssetG
 
 
 ---@class UKismetMaterialLibrary : UBlueprintFunctionLibrary
-UKismetMaterialLibrary = {}
+local UKismetMaterialLibrary = {}
 
 ---@param WorldContextObject UObject
 ---@param Collection UMaterialParameterCollection
@@ -14418,7 +14418,7 @@ function UKismetMaterialLibrary:CreateDynamicMaterialInstance(WorldContextObject
 
 
 ---@class UKismetMathLibrary : UBlueprintFunctionLibrary
-UKismetMathLibrary = {}
+local UKismetMathLibrary = {}
 
 ---@param A int32
 ---@param B int32
@@ -16940,7 +16940,7 @@ function UKismetMathLibrary:Abs(A) end
 
 
 ---@class UKismetNodeHelperLibrary : UBlueprintFunctionLibrary
-UKismetNodeHelperLibrary = {}
+local UKismetNodeHelperLibrary = {}
 
 ---@param Data int32
 ---@param Index int32
@@ -16997,7 +16997,7 @@ function UKismetNodeHelperLibrary:BitIsMarked(Data, Index) end
 
 
 ---@class UKismetRenderingLibrary : UBlueprintFunctionLibrary
-UKismetRenderingLibrary = {}
+local UKismetRenderingLibrary = {}
 
 ---@param PrimitiveComponent UPrimitiveComponent
 ---@param bCastInsetShadow boolean
@@ -17105,7 +17105,7 @@ function UKismetRenderingLibrary:BeginDrawCanvasToRenderTarget(WorldContextObjec
 
 
 ---@class UKismetStringLibrary : UBlueprintFunctionLibrary
-UKismetStringLibrary = {}
+local UKismetStringLibrary = {}
 
 ---@param SourceString FString
 ---@return FString
@@ -17380,7 +17380,7 @@ function UKismetStringLibrary:BuildString_Bool(AppendTo, Prefix, InBool, Suffix)
 
 
 ---@class UKismetStringTableLibrary : UBlueprintFunctionLibrary
-UKismetStringTableLibrary = {}
+local UKismetStringTableLibrary = {}
 
 ---@param TableId FName
 ---@return boolean
@@ -17413,7 +17413,7 @@ function UKismetStringTableLibrary:GetKeysFromStringTable(TableId) end
 
 
 ---@class UKismetSystemLibrary : UBlueprintFunctionLibrary
-UKismetSystemLibrary = {}
+local UKismetSystemLibrary = {}
 
 function UKismetSystemLibrary:UnregisterForRemoteNotifications() end
 ---@param PrimaryAssetIdList TArray<FPrimaryAssetId>
@@ -18578,7 +18578,7 @@ function UKismetSystemLibrary:AddFloatHistorySample(Value, FloatHistory) end
 
 
 ---@class UKismetTextLibrary : UBlueprintFunctionLibrary
-UKismetTextLibrary = {}
+local UKismetTextLibrary = {}
 
 ---@param InText FText
 ---@return FText
@@ -18773,7 +18773,7 @@ function UKismetTextLibrary:AsCurrency_Float(Value, RoundingMode, bAlwaysSign, b
 ---@field LayerName FName
 ---@field bIsVisible boolean
 ---@field ActorStats TArray<FLayerActorStats>
-ULayer = {}
+local ULayer = {}
 
 
 
@@ -18802,18 +18802,18 @@ ULayer = {}
 ---@field WorldSettings AWorldSettings
 ---@field AssetUserData TArray<UAssetUserData>
 ---@field DestroyedReplicatedStaticActors TArray<FReplicatedStaticActorDestructionInfo>
-ULevel = {}
+local ULevel = {}
 
 
 
 ---@class ULevelActorContainer : UObject
 ---@field Actors TArray<AActor>
-ULevelActorContainer = {}
+local ULevelActorContainer = {}
 
 
 
 ---@class ULevelScriptBlueprint : UBlueprint
-ULevelScriptBlueprint = {}
+local ULevelScriptBlueprint = {}
 
 
 ---@class ULevelStreaming : UObject
@@ -18840,7 +18840,7 @@ ULevelScriptBlueprint = {}
 ---@field OnLevelHidden FLevelStreamingOnLevelHidden
 ---@field LoadedLevel ULevel
 ---@field PendingUnloadLevel ULevel
-ULevelStreaming = {}
+local ULevelStreaming = {}
 
 ---@return boolean
 function ULevelStreaming:ShouldBeLoaded() end
@@ -18870,13 +18870,13 @@ function ULevelStreaming:CreateInstance(UniqueInstanceName) end
 
 
 ---@class ULevelStreamingAlwaysLoaded : ULevelStreaming
-ULevelStreamingAlwaysLoaded = {}
+local ULevelStreamingAlwaysLoaded = {}
 
 
 ---@class ULevelStreamingDynamic : ULevelStreaming
 ---@field bInitiallyLoaded boolean
 ---@field bInitiallyVisible boolean
-ULevelStreamingDynamic = {}
+local ULevelStreamingDynamic = {}
 
 ---@param WorldContextObject UObject
 ---@param Level TSoftObjectPtr<UWorld>
@@ -18895,7 +18895,7 @@ function ULevelStreamingDynamic:LoadLevelInstance(WorldContextObject, LevelName,
 
 
 ---@class ULevelStreamingPersistent : ULevelStreaming
-ULevelStreamingPersistent = {}
+local ULevelStreamingPersistent = {}
 
 
 ---@class ULightComponent : ULightComponentBase
@@ -18932,7 +18932,7 @@ ULevelStreamingPersistent = {}
 ---@field BloomTint FColor
 ---@field bUseRayTracedDistanceFieldShadows boolean
 ---@field RayStartOffsetDepthScale float
-ULightComponent = {}
+local ULightComponent = {}
 
 ---@param NewIntensity float
 function ULightComponent:SetVolumetricScatteringIntensity(NewIntensity) end
@@ -19004,7 +19004,7 @@ function ULightComponent:SetAffectDynamicIndirectLighting(bNewValue) end
 ---@field IndirectLightingIntensity float
 ---@field VolumetricScatteringIntensity float
 ---@field SamplesPerPixel int32
-ULightComponentBase = {}
+local ULightComponentBase = {}
 
 ---@param NewValue int32
 function ULightComponentBase:SetSamplesPerPixel(NewValue) end
@@ -19025,40 +19025,40 @@ function ULightComponentBase:GetLightColor() end
 
 
 ---@class ULightMapTexture2D : UTexture2D
-ULightMapTexture2D = {}
+local ULightMapTexture2D = {}
 
 
 ---@class ULightMapVirtualTexture : UVirtualTexture
-ULightMapVirtualTexture = {}
+local ULightMapVirtualTexture = {}
 
 
 ---@class ULightMapVirtualTexture2D : UTexture2D
 ---@field TypeToLayer TArray<int8>
-ULightMapVirtualTexture2D = {}
+local ULightMapVirtualTexture2D = {}
 
 
 
 ---@class ULightmappedSurfaceCollection : UObject
 ---@field SourceModel UModel
 ---@field Surfaces TArray<int32>
-ULightmappedSurfaceCollection = {}
+local ULightmappedSurfaceCollection = {}
 
 
 
 ---@class ULightmassPortalComponent : USceneComponent
 ---@field PreviewBox UBoxComponent
-ULightmassPortalComponent = {}
+local ULightmassPortalComponent = {}
 
 
 
 ---@class ULightmassPrimitiveSettingsObject : UObject
 ---@field LightmassSettings FLightmassPrimitiveSettings
-ULightmassPrimitiveSettingsObject = {}
+local ULightmassPrimitiveSettingsObject = {}
 
 
 
 ---@class ULineBatchComponent : UPrimitiveComponent
-ULineBatchComponent = {}
+local ULineBatchComponent = {}
 
 
 ---@class ULocalLightComponent : ULightComponent
@@ -19066,7 +19066,7 @@ ULineBatchComponent = {}
 ---@field Radius float
 ---@field AttenuationRadius float
 ---@field LightmassSettings FLightmassPointLightSettings
-ULocalLightComponent = {}
+local ULocalLightComponent = {}
 
 ---@param NewIntensityUnits ELightUnits
 function ULocalLightComponent:SetIntensityUnits(NewIntensityUnits) end
@@ -19080,7 +19080,7 @@ function ULocalLightComponent:GetUnitsConversionFactor(SrcUnits, TargetUnits, Co
 
 
 ---@class ULocalMessage : UObject
-ULocalMessage = {}
+local ULocalMessage = {}
 
 
 ---@class ULocalPlayer : UPlayer
@@ -19089,17 +19089,17 @@ ULocalMessage = {}
 ---@field PendingLevelPlayerControllerClass TSubclassOf<APlayerController>
 ---@field bSentSplitJoin boolean
 ---@field ControllerId int32
-ULocalPlayer = {}
+local ULocalPlayer = {}
 
 
 
 ---@class ULocalPlayerSubsystem : USubsystem
-ULocalPlayerSubsystem = {}
+local ULocalPlayerSubsystem = {}
 
 
 ---@class UMapBuildDataRegistry : UObject
 ---@field LevelLightingQuality ELightingBuildQuality
-UMapBuildDataRegistry = {}
+local UMapBuildDataRegistry = {}
 
 
 
@@ -19208,13 +19208,13 @@ UMapBuildDataRegistry = {}
 ---@field MaxDisplacement float
 ---@field CachedQualityLevelsUsed TArray<boolean>
 ---@field ExpressionTextureReferences TArray<UObject>
-UMaterial = {}
+local UMaterial = {}
 
 
 
 ---@class UMaterialBillboardComponent : UPrimitiveComponent
 ---@field Elements TArray<FMaterialSpriteElement>
-UMaterialBillboardComponent = {}
+local UMaterialBillboardComponent = {}
 
 ---@param NewElements TArray<FMaterialSpriteElement>
 function UMaterialBillboardComponent:SetElements(NewElements) end
@@ -19231,18 +19231,18 @@ function UMaterialBillboardComponent:AddElement(Material, DistanceToOpacityCurve
 ---@field Material UMaterial
 ---@field Function UMaterialFunction
 ---@field bIsParameterExpression boolean
-UMaterialExpression = {}
+local UMaterialExpression = {}
 
 
 
 ---@class UMaterialExpressionAbs : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionAbs = {}
+local UMaterialExpressionAbs = {}
 
 
 
 ---@class UMaterialExpressionActorPositionWS : UMaterialExpression
-UMaterialExpressionActorPositionWS = {}
+local UMaterialExpressionActorPositionWS = {}
 
 
 ---@class UMaterialExpressionAdd : UMaterialExpression
@@ -19250,97 +19250,97 @@ UMaterialExpressionActorPositionWS = {}
 ---@field B FExpressionInput
 ---@field ConstA float
 ---@field ConstB float
-UMaterialExpressionAdd = {}
+local UMaterialExpressionAdd = {}
 
 
 
 ---@class UMaterialExpressionAntialiasedTextureMask : UMaterialExpressionTextureSampleParameter2D
 ---@field Threshold float
 ---@field Channel ETextureColorChannel
-UMaterialExpressionAntialiasedTextureMask = {}
+local UMaterialExpressionAntialiasedTextureMask = {}
 
 
 
 ---@class UMaterialExpressionAppendVector : UMaterialExpression
 ---@field A FExpressionInput
 ---@field B FExpressionInput
-UMaterialExpressionAppendVector = {}
+local UMaterialExpressionAppendVector = {}
 
 
 
 ---@class UMaterialExpressionArccosine : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionArccosine = {}
+local UMaterialExpressionArccosine = {}
 
 
 
 ---@class UMaterialExpressionArccosineFast : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionArccosineFast = {}
+local UMaterialExpressionArccosineFast = {}
 
 
 
 ---@class UMaterialExpressionArcsine : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionArcsine = {}
+local UMaterialExpressionArcsine = {}
 
 
 
 ---@class UMaterialExpressionArcsineFast : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionArcsineFast = {}
+local UMaterialExpressionArcsineFast = {}
 
 
 
 ---@class UMaterialExpressionArctangent : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionArctangent = {}
+local UMaterialExpressionArctangent = {}
 
 
 
 ---@class UMaterialExpressionArctangent2 : UMaterialExpression
 ---@field Y FExpressionInput
 ---@field X FExpressionInput
-UMaterialExpressionArctangent2 = {}
+local UMaterialExpressionArctangent2 = {}
 
 
 
 ---@class UMaterialExpressionArctangent2Fast : UMaterialExpression
 ---@field Y FExpressionInput
 ---@field X FExpressionInput
-UMaterialExpressionArctangent2Fast = {}
+local UMaterialExpressionArctangent2Fast = {}
 
 
 
 ---@class UMaterialExpressionArctangentFast : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionArctangentFast = {}
+local UMaterialExpressionArctangentFast = {}
 
 
 
 ---@class UMaterialExpressionAtmosphericFogColor : UMaterialExpression
 ---@field WorldPosition FExpressionInput
-UMaterialExpressionAtmosphericFogColor = {}
+local UMaterialExpressionAtmosphericFogColor = {}
 
 
 
 ---@class UMaterialExpressionAtmosphericLightColor : UMaterialExpression
-UMaterialExpressionAtmosphericLightColor = {}
+local UMaterialExpressionAtmosphericLightColor = {}
 
 
 ---@class UMaterialExpressionAtmosphericLightVector : UMaterialExpression
-UMaterialExpressionAtmosphericLightVector = {}
+local UMaterialExpressionAtmosphericLightVector = {}
 
 
 ---@class UMaterialExpressionBentNormalCustomOutput : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
-UMaterialExpressionBentNormalCustomOutput = {}
+local UMaterialExpressionBentNormalCustomOutput = {}
 
 
 
 ---@class UMaterialExpressionBlackBody : UMaterialExpression
 ---@field Temp FExpressionInput
-UMaterialExpressionBlackBody = {}
+local UMaterialExpressionBlackBody = {}
 
 
 
@@ -19350,13 +19350,13 @@ UMaterialExpressionBlackBody = {}
 ---@field Alpha FExpressionInput
 ---@field PixelAttributeBlendType EMaterialAttributeBlend::Type
 ---@field VertexAttributeBlendType EMaterialAttributeBlend::Type
-UMaterialExpressionBlendMaterialAttributes = {}
+local UMaterialExpressionBlendMaterialAttributes = {}
 
 
 
 ---@class UMaterialExpressionBreakMaterialAttributes : UMaterialExpression
 ---@field MaterialAttributes FMaterialAttributesInput
-UMaterialExpressionBreakMaterialAttributes = {}
+local UMaterialExpressionBreakMaterialAttributes = {}
 
 
 
@@ -19367,28 +19367,28 @@ UMaterialExpressionBreakMaterialAttributes = {}
 ---@field HeightRatio float
 ---@field ReferencePlane float
 ---@field ConstCoordinate uint32
-UMaterialExpressionBumpOffset = {}
+local UMaterialExpressionBumpOffset = {}
 
 
 
 ---@class UMaterialExpressionCameraPositionWS : UMaterialExpression
-UMaterialExpressionCameraPositionWS = {}
+local UMaterialExpressionCameraPositionWS = {}
 
 
 ---@class UMaterialExpressionCameraVectorWS : UMaterialExpression
-UMaterialExpressionCameraVectorWS = {}
+local UMaterialExpressionCameraVectorWS = {}
 
 
 ---@class UMaterialExpressionCeil : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionCeil = {}
+local UMaterialExpressionCeil = {}
 
 
 
 ---@class UMaterialExpressionChannelMaskParameter : UMaterialExpressionVectorParameter
 ---@field MaskChannel EChannelMaskParameterColor::Type
 ---@field Input FExpressionInput
-UMaterialExpressionChannelMaskParameter = {}
+local UMaterialExpressionChannelMaskParameter = {}
 
 
 
@@ -19399,13 +19399,13 @@ UMaterialExpressionChannelMaskParameter = {}
 ---@field ClampMode EClampMode
 ---@field MinDefault float
 ---@field MaxDefault float
-UMaterialExpressionClamp = {}
+local UMaterialExpressionClamp = {}
 
 
 
 ---@class UMaterialExpressionClearCoatNormalCustomOutput : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
-UMaterialExpressionClearCoatNormalCustomOutput = {}
+local UMaterialExpressionClearCoatNormalCustomOutput = {}
 
 
 
@@ -19413,7 +19413,7 @@ UMaterialExpressionClearCoatNormalCustomOutput = {}
 ---@field Collection UMaterialParameterCollection
 ---@field ParameterName FName
 ---@field ParameterId FGuid
-UMaterialExpressionCollectionParameter = {}
+local UMaterialExpressionCollectionParameter = {}
 
 
 
@@ -19423,7 +19423,7 @@ UMaterialExpressionCollectionParameter = {}
 ---@field Text FString
 ---@field CommentColor FLinearColor
 ---@field FontSize int32
-UMaterialExpressionComment = {}
+local UMaterialExpressionComment = {}
 
 
 
@@ -19433,32 +19433,32 @@ UMaterialExpressionComment = {}
 ---@field G boolean
 ---@field B boolean
 ---@field A boolean
-UMaterialExpressionComponentMask = {}
+local UMaterialExpressionComponentMask = {}
 
 
 
 ---@class UMaterialExpressionConstant : UMaterialExpression
 ---@field R float
-UMaterialExpressionConstant = {}
+local UMaterialExpressionConstant = {}
 
 
 
 ---@class UMaterialExpressionConstant2Vector : UMaterialExpression
 ---@field R float
 ---@field G float
-UMaterialExpressionConstant2Vector = {}
+local UMaterialExpressionConstant2Vector = {}
 
 
 
 ---@class UMaterialExpressionConstant3Vector : UMaterialExpression
 ---@field Constant FLinearColor
-UMaterialExpressionConstant3Vector = {}
+local UMaterialExpressionConstant3Vector = {}
 
 
 
 ---@class UMaterialExpressionConstant4Vector : UMaterialExpression
 ---@field Constant FLinearColor
-UMaterialExpressionConstant4Vector = {}
+local UMaterialExpressionConstant4Vector = {}
 
 
 
@@ -19466,21 +19466,21 @@ UMaterialExpressionConstant4Vector = {}
 ---@field Input FExpressionInput
 ---@field Bias float
 ---@field Scale float
-UMaterialExpressionConstantBiasScale = {}
+local UMaterialExpressionConstantBiasScale = {}
 
 
 
 ---@class UMaterialExpressionCosine : UMaterialExpression
 ---@field Input FExpressionInput
 ---@field Period float
-UMaterialExpressionCosine = {}
+local UMaterialExpressionCosine = {}
 
 
 
 ---@class UMaterialExpressionCrossProduct : UMaterialExpression
 ---@field A FExpressionInput
 ---@field B FExpressionInput
-UMaterialExpressionCrossProduct = {}
+local UMaterialExpressionCrossProduct = {}
 
 
 
@@ -19488,7 +19488,7 @@ UMaterialExpressionCrossProduct = {}
 ---@field Curve UCurveLinearColor
 ---@field Atlas UCurveLinearColorAtlas
 ---@field InputTime FExpressionInput
-UMaterialExpressionCurveAtlasRowParameter = {}
+local UMaterialExpressionCurveAtlasRowParameter = {}
 
 
 
@@ -19497,44 +19497,44 @@ UMaterialExpressionCurveAtlasRowParameter = {}
 ---@field OutputType ECustomMaterialOutputType
 ---@field Description FString
 ---@field Inputs TArray<FCustomInput>
-UMaterialExpressionCustom = {}
+local UMaterialExpressionCustom = {}
 
 
 
 ---@class UMaterialExpressionCustomOutput : UMaterialExpression
-UMaterialExpressionCustomOutput = {}
+local UMaterialExpressionCustomOutput = {}
 
 
 ---@class UMaterialExpressionDDX : UMaterialExpression
 ---@field Value FExpressionInput
-UMaterialExpressionDDX = {}
+local UMaterialExpressionDDX = {}
 
 
 
 ---@class UMaterialExpressionDDY : UMaterialExpression
 ---@field Value FExpressionInput
-UMaterialExpressionDDY = {}
+local UMaterialExpressionDDY = {}
 
 
 
 ---@class UMaterialExpressionDecalDerivative : UMaterialExpression
-UMaterialExpressionDecalDerivative = {}
+local UMaterialExpressionDecalDerivative = {}
 
 
 ---@class UMaterialExpressionDecalLifetimeOpacity : UMaterialExpression
-UMaterialExpressionDecalLifetimeOpacity = {}
+local UMaterialExpressionDecalLifetimeOpacity = {}
 
 
 ---@class UMaterialExpressionDecalMipmapLevel : UMaterialExpression
 ---@field TextureSize FExpressionInput
 ---@field ConstWidth float
 ---@field ConstHeight float
-UMaterialExpressionDecalMipmapLevel = {}
+local UMaterialExpressionDecalMipmapLevel = {}
 
 
 
 ---@class UMaterialExpressionDeltaTime : UMaterialExpression
-UMaterialExpressionDeltaTime = {}
+local UMaterialExpressionDeltaTime = {}
 
 
 ---@class UMaterialExpressionDepthFade : UMaterialExpression
@@ -19542,20 +19542,20 @@ UMaterialExpressionDeltaTime = {}
 ---@field FadeDistance FExpressionInput
 ---@field OpacityDefault float
 ---@field FadeDistanceDefault float
-UMaterialExpressionDepthFade = {}
+local UMaterialExpressionDepthFade = {}
 
 
 
 ---@class UMaterialExpressionDepthOfFieldFunction : UMaterialExpression
 ---@field FunctionValue EDepthOfFieldFunctionValue
 ---@field Depth FExpressionInput
-UMaterialExpressionDepthOfFieldFunction = {}
+local UMaterialExpressionDepthOfFieldFunction = {}
 
 
 
 ---@class UMaterialExpressionDeriveNormalZ : UMaterialExpression
 ---@field InXY FExpressionInput
-UMaterialExpressionDeriveNormalZ = {}
+local UMaterialExpressionDeriveNormalZ = {}
 
 
 
@@ -19563,30 +19563,30 @@ UMaterialExpressionDeriveNormalZ = {}
 ---@field Input FExpressionInput
 ---@field Fraction FExpressionInput
 ---@field LuminanceFactors FLinearColor
-UMaterialExpressionDesaturation = {}
+local UMaterialExpressionDesaturation = {}
 
 
 
 ---@class UMaterialExpressionDistance : UMaterialExpression
 ---@field A FExpressionInput
 ---@field B FExpressionInput
-UMaterialExpressionDistance = {}
+local UMaterialExpressionDistance = {}
 
 
 
 ---@class UMaterialExpressionDistanceCullFade : UMaterialExpression
-UMaterialExpressionDistanceCullFade = {}
+local UMaterialExpressionDistanceCullFade = {}
 
 
 ---@class UMaterialExpressionDistanceFieldGradient : UMaterialExpression
 ---@field Position FExpressionInput
-UMaterialExpressionDistanceFieldGradient = {}
+local UMaterialExpressionDistanceFieldGradient = {}
 
 
 
 ---@class UMaterialExpressionDistanceToNearestSurface : UMaterialExpression
 ---@field Position FExpressionInput
-UMaterialExpressionDistanceToNearestSurface = {}
+local UMaterialExpressionDistanceToNearestSurface = {}
 
 
 
@@ -19595,14 +19595,14 @@ UMaterialExpressionDistanceToNearestSurface = {}
 ---@field B FExpressionInput
 ---@field ConstA float
 ---@field ConstB float
-UMaterialExpressionDivide = {}
+local UMaterialExpressionDivide = {}
 
 
 
 ---@class UMaterialExpressionDotProduct : UMaterialExpression
 ---@field A FExpressionInput
 ---@field B FExpressionInput
-UMaterialExpressionDotProduct = {}
+local UMaterialExpressionDotProduct = {}
 
 
 
@@ -19610,38 +19610,38 @@ UMaterialExpressionDotProduct = {}
 ---@field ParamNames TArray<FString>
 ---@field DefaultValue FLinearColor
 ---@field ParameterIndex uint32
-UMaterialExpressionDynamicParameter = {}
+local UMaterialExpressionDynamicParameter = {}
 
 
 
 ---@class UMaterialExpressionEyeAdaptation : UMaterialExpression
-UMaterialExpressionEyeAdaptation = {}
+local UMaterialExpressionEyeAdaptation = {}
 
 
 ---@class UMaterialExpressionFeatureLevelSwitch : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field Inputs FExpressionInput
-UMaterialExpressionFeatureLevelSwitch = {}
+local UMaterialExpressionFeatureLevelSwitch = {}
 
 
 
 ---@class UMaterialExpressionFloor : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionFloor = {}
+local UMaterialExpressionFloor = {}
 
 
 
 ---@class UMaterialExpressionFmod : UMaterialExpression
 ---@field A FExpressionInput
 ---@field B FExpressionInput
-UMaterialExpressionFmod = {}
+local UMaterialExpressionFmod = {}
 
 
 
 ---@class UMaterialExpressionFontSample : UMaterialExpression
 ---@field Font UFont
 ---@field FontTexturePage int32
-UMaterialExpressionFontSample = {}
+local UMaterialExpressionFontSample = {}
 
 
 
@@ -19649,13 +19649,13 @@ UMaterialExpressionFontSample = {}
 ---@field ParameterName FName
 ---@field ExpressionGUID FGuid
 ---@field Group FName
-UMaterialExpressionFontSampleParameter = {}
+local UMaterialExpressionFontSampleParameter = {}
 
 
 
 ---@class UMaterialExpressionFrac : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionFrac = {}
+local UMaterialExpressionFrac = {}
 
 
 
@@ -19665,7 +19665,7 @@ UMaterialExpressionFrac = {}
 ---@field BaseReflectFractionIn FExpressionInput
 ---@field BaseReflectFraction float
 ---@field Normal FExpressionInput
-UMaterialExpressionFresnel = {}
+local UMaterialExpressionFresnel = {}
 
 
 
@@ -19679,7 +19679,7 @@ UMaterialExpressionFresnel = {}
 ---@field bUsePreviewValueAsDefault boolean
 ---@field SortPriority int32
 ---@field bCompilingFunctionPreview boolean
-UMaterialExpressionFunctionInput = {}
+local UMaterialExpressionFunctionInput = {}
 
 
 
@@ -19690,7 +19690,7 @@ UMaterialExpressionFunctionInput = {}
 ---@field A FExpressionInput
 ---@field bLastPreviewed boolean
 ---@field ID FGuid
-UMaterialExpressionFunctionOutput = {}
+local UMaterialExpressionFunctionOutput = {}
 
 
 
@@ -19698,19 +19698,19 @@ UMaterialExpressionFunctionOutput = {}
 ---@field Default FExpressionInput
 ---@field StaticIndirect FExpressionInput
 ---@field DynamicIndirect FExpressionInput
-UMaterialExpressionGIReplace = {}
+local UMaterialExpressionGIReplace = {}
 
 
 
 ---@class UMaterialExpressionGetMaterialAttributes : UMaterialExpression
 ---@field MaterialAttributes FMaterialAttributesInput
 ---@field AttributeGetTypes TArray<FGuid>
-UMaterialExpressionGetMaterialAttributes = {}
+local UMaterialExpressionGetMaterialAttributes = {}
 
 
 
 ---@class UMaterialExpressionHairAttributes : UMaterialExpression
-UMaterialExpressionHairAttributes = {}
+local UMaterialExpressionHairAttributes = {}
 
 
 ---@class UMaterialExpressionIf : UMaterialExpression
@@ -19722,22 +19722,22 @@ UMaterialExpressionHairAttributes = {}
 ---@field EqualsThreshold float
 ---@field ConstB float
 ---@field ConstAEqualsB float
-UMaterialExpressionIf = {}
+local UMaterialExpressionIf = {}
 
 
 
 ---@class UMaterialExpressionLightVector : UMaterialExpression
-UMaterialExpressionLightVector = {}
+local UMaterialExpressionLightVector = {}
 
 
 ---@class UMaterialExpressionLightmapUVs : UMaterialExpression
-UMaterialExpressionLightmapUVs = {}
+local UMaterialExpressionLightmapUVs = {}
 
 
 ---@class UMaterialExpressionLightmassReplace : UMaterialExpression
 ---@field Realtime FExpressionInput
 ---@field Lightmass FExpressionInput
-UMaterialExpressionLightmassReplace = {}
+local UMaterialExpressionLightmassReplace = {}
 
 
 
@@ -19748,19 +19748,19 @@ UMaterialExpressionLightmassReplace = {}
 ---@field ConstA float
 ---@field ConstB float
 ---@field ConstAlpha float
-UMaterialExpressionLinearInterpolate = {}
+local UMaterialExpressionLinearInterpolate = {}
 
 
 
 ---@class UMaterialExpressionLogarithm10 : UMaterialExpression
 ---@field X FExpressionInput
-UMaterialExpressionLogarithm10 = {}
+local UMaterialExpressionLogarithm10 = {}
 
 
 
 ---@class UMaterialExpressionLogarithm2 : UMaterialExpression
 ---@field X FExpressionInput
-UMaterialExpressionLogarithm2 = {}
+local UMaterialExpressionLogarithm2 = {}
 
 
 
@@ -19784,13 +19784,13 @@ UMaterialExpressionLogarithm2 = {}
 ---@field CustomizedUVs FExpressionInput
 ---@field PixelDepthOffset FExpressionInput
 ---@field ShadingModel FExpressionInput
-UMaterialExpressionMakeMaterialAttributes = {}
+local UMaterialExpressionMakeMaterialAttributes = {}
 
 
 
 ---@class UMaterialExpressionMapARPassthroughCameraUV : UMaterialExpression
 ---@field Coordinates FExpressionInput
-UMaterialExpressionMapARPassthroughCameraUV = {}
+local UMaterialExpressionMapARPassthroughCameraUV = {}
 
 
 
@@ -19804,25 +19804,25 @@ UMaterialExpressionMapARPassthroughCameraUV = {}
 ---@field BlendCallers TArray<UMaterialExpressionMaterialFunctionCall>
 ---@field NumActiveBlendCallers int32
 ---@field bIsLayerGraphBuilt boolean
-UMaterialExpressionMaterialAttributeLayers = {}
+local UMaterialExpressionMaterialAttributeLayers = {}
 
 
 
 ---@class UMaterialExpressionMaterialFunctionCall : UMaterialExpression
 ---@field MaterialFunction UMaterialFunctionInterface
 ---@field FunctionParameterInfo FMaterialParameterInfo
-UMaterialExpressionMaterialFunctionCall = {}
+local UMaterialExpressionMaterialFunctionCall = {}
 
 
 
 ---@class UMaterialExpressionMaterialLayerOutput : UMaterialExpressionFunctionOutput
-UMaterialExpressionMaterialLayerOutput = {}
+local UMaterialExpressionMaterialLayerOutput = {}
 
 
 ---@class UMaterialExpressionMaterialProxyReplace : UMaterialExpression
 ---@field Realtime FExpressionInput
 ---@field MaterialProxy FExpressionInput
-UMaterialExpressionMaterialProxyReplace = {}
+local UMaterialExpressionMaterialProxyReplace = {}
 
 
 
@@ -19831,7 +19831,7 @@ UMaterialExpressionMaterialProxyReplace = {}
 ---@field B FExpressionInput
 ---@field ConstA float
 ---@field ConstB float
-UMaterialExpressionMax = {}
+local UMaterialExpressionMax = {}
 
 
 
@@ -19840,7 +19840,7 @@ UMaterialExpressionMax = {}
 ---@field B FExpressionInput
 ---@field ConstA float
 ---@field ConstB float
-UMaterialExpressionMin = {}
+local UMaterialExpressionMin = {}
 
 
 
@@ -19849,7 +19849,7 @@ UMaterialExpressionMin = {}
 ---@field B FExpressionInput
 ---@field ConstA float
 ---@field ConstB float
-UMaterialExpressionMultiply = {}
+local UMaterialExpressionMultiply = {}
 
 
 
@@ -19866,35 +19866,35 @@ UMaterialExpressionMultiply = {}
 ---@field LevelScale float
 ---@field bTiling boolean
 ---@field RepeatSize uint32
-UMaterialExpressionNoise = {}
+local UMaterialExpressionNoise = {}
 
 
 
 ---@class UMaterialExpressionNormalize : UMaterialExpression
 ---@field VectorInput FExpressionInput
-UMaterialExpressionNormalize = {}
+local UMaterialExpressionNormalize = {}
 
 
 
 ---@class UMaterialExpressionObjectBounds : UMaterialExpression
-UMaterialExpressionObjectBounds = {}
+local UMaterialExpressionObjectBounds = {}
 
 
 ---@class UMaterialExpressionObjectOrientation : UMaterialExpression
-UMaterialExpressionObjectOrientation = {}
+local UMaterialExpressionObjectOrientation = {}
 
 
 ---@class UMaterialExpressionObjectPositionWS : UMaterialExpression
-UMaterialExpressionObjectPositionWS = {}
+local UMaterialExpressionObjectPositionWS = {}
 
 
 ---@class UMaterialExpressionObjectRadius : UMaterialExpression
-UMaterialExpressionObjectRadius = {}
+local UMaterialExpressionObjectRadius = {}
 
 
 ---@class UMaterialExpressionOneMinus : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionOneMinus = {}
+local UMaterialExpressionOneMinus = {}
 
 
 
@@ -19906,138 +19906,138 @@ UMaterialExpressionOneMinus = {}
 ---@field SpeedY float
 ---@field ConstCoordinate uint32
 ---@field bFractionalPart boolean
-UMaterialExpressionPanner = {}
+local UMaterialExpressionPanner = {}
 
 
 
 ---@class UMaterialExpressionParameter : UMaterialExpression
 ---@field ParameterName FName
 ---@field ExpressionGUID FGuid
-UMaterialExpressionParameter = {}
+local UMaterialExpressionParameter = {}
 
 
 
 ---@class UMaterialExpressionParticleColor : UMaterialExpression
-UMaterialExpressionParticleColor = {}
+local UMaterialExpressionParticleColor = {}
 
 
 ---@class UMaterialExpressionParticleDirection : UMaterialExpression
-UMaterialExpressionParticleDirection = {}
+local UMaterialExpressionParticleDirection = {}
 
 
 ---@class UMaterialExpressionParticleMacroUV : UMaterialExpression
-UMaterialExpressionParticleMacroUV = {}
+local UMaterialExpressionParticleMacroUV = {}
 
 
 ---@class UMaterialExpressionParticleMotionBlurFade : UMaterialExpression
-UMaterialExpressionParticleMotionBlurFade = {}
+local UMaterialExpressionParticleMotionBlurFade = {}
 
 
 ---@class UMaterialExpressionParticlePositionWS : UMaterialExpression
-UMaterialExpressionParticlePositionWS = {}
+local UMaterialExpressionParticlePositionWS = {}
 
 
 ---@class UMaterialExpressionParticleRadius : UMaterialExpression
-UMaterialExpressionParticleRadius = {}
+local UMaterialExpressionParticleRadius = {}
 
 
 ---@class UMaterialExpressionParticleRandom : UMaterialExpression
-UMaterialExpressionParticleRandom = {}
+local UMaterialExpressionParticleRandom = {}
 
 
 ---@class UMaterialExpressionParticleRelativeTime : UMaterialExpression
-UMaterialExpressionParticleRelativeTime = {}
+local UMaterialExpressionParticleRelativeTime = {}
 
 
 ---@class UMaterialExpressionParticleSize : UMaterialExpression
-UMaterialExpressionParticleSize = {}
+local UMaterialExpressionParticleSize = {}
 
 
 ---@class UMaterialExpressionParticleSpeed : UMaterialExpression
-UMaterialExpressionParticleSpeed = {}
+local UMaterialExpressionParticleSpeed = {}
 
 
 ---@class UMaterialExpressionParticleSubUV : UMaterialExpressionTextureSample
 ---@field bBlend boolean
-UMaterialExpressionParticleSubUV = {}
+local UMaterialExpressionParticleSubUV = {}
 
 
 
 ---@class UMaterialExpressionParticleSubUVProperties : UMaterialExpression
-UMaterialExpressionParticleSubUVProperties = {}
+local UMaterialExpressionParticleSubUVProperties = {}
 
 
 ---@class UMaterialExpressionPerInstanceFadeAmount : UMaterialExpression
-UMaterialExpressionPerInstanceFadeAmount = {}
+local UMaterialExpressionPerInstanceFadeAmount = {}
 
 
 ---@class UMaterialExpressionPerInstanceRandom : UMaterialExpression
-UMaterialExpressionPerInstanceRandom = {}
+local UMaterialExpressionPerInstanceRandom = {}
 
 
 ---@class UMaterialExpressionPixelDepth : UMaterialExpression
-UMaterialExpressionPixelDepth = {}
+local UMaterialExpressionPixelDepth = {}
 
 
 ---@class UMaterialExpressionPixelNormalWS : UMaterialExpression
-UMaterialExpressionPixelNormalWS = {}
+local UMaterialExpressionPixelNormalWS = {}
 
 
 ---@class UMaterialExpressionPower : UMaterialExpression
 ---@field Base FExpressionInput
 ---@field Exponent FExpressionInput
 ---@field ConstExponent float
-UMaterialExpressionPower = {}
+local UMaterialExpressionPower = {}
 
 
 
 ---@class UMaterialExpressionPreSkinnedLocalBounds : UMaterialExpression
-UMaterialExpressionPreSkinnedLocalBounds = {}
+local UMaterialExpressionPreSkinnedLocalBounds = {}
 
 
 ---@class UMaterialExpressionPreSkinnedNormal : UMaterialExpression
-UMaterialExpressionPreSkinnedNormal = {}
+local UMaterialExpressionPreSkinnedNormal = {}
 
 
 ---@class UMaterialExpressionPreSkinnedPosition : UMaterialExpression
-UMaterialExpressionPreSkinnedPosition = {}
+local UMaterialExpressionPreSkinnedPosition = {}
 
 
 ---@class UMaterialExpressionPrecomputedAOMask : UMaterialExpression
-UMaterialExpressionPrecomputedAOMask = {}
+local UMaterialExpressionPrecomputedAOMask = {}
 
 
 ---@class UMaterialExpressionPreviousFrameSwitch : UMaterialExpression
 ---@field CurrentFrame FExpressionInput
 ---@field PreviousFrame FExpressionInput
-UMaterialExpressionPreviousFrameSwitch = {}
+local UMaterialExpressionPreviousFrameSwitch = {}
 
 
 
 ---@class UMaterialExpressionQualitySwitch : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field Inputs FExpressionInput
-UMaterialExpressionQualitySwitch = {}
+local UMaterialExpressionQualitySwitch = {}
 
 
 
 ---@class UMaterialExpressionRayTracingQualitySwitch : UMaterialExpression
 ---@field Normal FExpressionInput
 ---@field RayTraced FExpressionInput
-UMaterialExpressionRayTracingQualitySwitch = {}
+local UMaterialExpressionRayTracingQualitySwitch = {}
 
 
 
 ---@class UMaterialExpressionReflectionVectorWS : UMaterialExpression
 ---@field CustomWorldNormal FExpressionInput
 ---@field bNormalizeCustomWorldNormal boolean
-UMaterialExpressionReflectionVectorWS = {}
+local UMaterialExpressionReflectionVectorWS = {}
 
 
 
 ---@class UMaterialExpressionReroute : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionReroute = {}
+local UMaterialExpressionReroute = {}
 
 
 
@@ -20047,7 +20047,7 @@ UMaterialExpressionReroute = {}
 ---@field PivotPoint FExpressionInput
 ---@field Position FExpressionInput
 ---@field Period float
-UMaterialExpressionRotateAboutAxis = {}
+local UMaterialExpressionRotateAboutAxis = {}
 
 
 
@@ -20058,13 +20058,13 @@ UMaterialExpressionRotateAboutAxis = {}
 ---@field CenterY float
 ---@field Speed float
 ---@field ConstCoordinate uint32
-UMaterialExpressionRotator = {}
+local UMaterialExpressionRotator = {}
 
 
 
 ---@class UMaterialExpressionRound : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionRound = {}
+local UMaterialExpressionRound = {}
 
 
 
@@ -20075,14 +20075,14 @@ UMaterialExpressionRound = {}
 ---@field Normal FExpressionInput
 ---@field WorldHeight FExpressionInput
 ---@field Opacity FExpressionInput
-UMaterialExpressionRuntimeVirtualTextureOutput = {}
+local UMaterialExpressionRuntimeVirtualTextureOutput = {}
 
 
 
 ---@class UMaterialExpressionRuntimeVirtualTextureReplace : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field VirtualTextureOutput FExpressionInput
-UMaterialExpressionRuntimeVirtualTextureReplace = {}
+local UMaterialExpressionRuntimeVirtualTextureReplace = {}
 
 
 
@@ -20093,7 +20093,7 @@ UMaterialExpressionRuntimeVirtualTextureReplace = {}
 ---@field MaterialType ERuntimeVirtualTextureMaterialType
 ---@field bSinglePhysicalSpace boolean
 ---@field MipValueMode ERuntimeVirtualTextureMipValueMode
-UMaterialExpressionRuntimeVirtualTextureSample = {}
+local UMaterialExpressionRuntimeVirtualTextureSample = {}
 
 
 
@@ -20101,13 +20101,13 @@ UMaterialExpressionRuntimeVirtualTextureSample = {}
 ---@field ParameterName FName
 ---@field ExpressionGUID FGuid
 ---@field Group FName
-UMaterialExpressionRuntimeVirtualTextureSampleParameter = {}
+local UMaterialExpressionRuntimeVirtualTextureSampleParameter = {}
 
 
 
 ---@class UMaterialExpressionSaturate : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionSaturate = {}
+local UMaterialExpressionSaturate = {}
 
 
 
@@ -20115,7 +20115,7 @@ UMaterialExpressionSaturate = {}
 ---@field DefaultValue float
 ---@field bUseCustomPrimitiveData boolean
 ---@field PrimitiveDataIndex uint8
-UMaterialExpressionScalarParameter = {}
+local UMaterialExpressionScalarParameter = {}
 
 
 
@@ -20124,7 +20124,7 @@ UMaterialExpressionScalarParameter = {}
 ---@field Input FExpressionInput
 ---@field OffsetFraction FExpressionInput
 ---@field ConstInput FVector2D
-UMaterialExpressionSceneColor = {}
+local UMaterialExpressionSceneColor = {}
 
 
 
@@ -20133,70 +20133,70 @@ UMaterialExpressionSceneColor = {}
 ---@field Input FExpressionInput
 ---@field Coordinates FExpressionInput
 ---@field ConstInput FVector2D
-UMaterialExpressionSceneDepth = {}
+local UMaterialExpressionSceneDepth = {}
 
 
 
 ---@class UMaterialExpressionSceneTexelSize : UMaterialExpression
-UMaterialExpressionSceneTexelSize = {}
+local UMaterialExpressionSceneTexelSize = {}
 
 
 ---@class UMaterialExpressionSceneTexture : UMaterialExpression
 ---@field Coordinates FExpressionInput
 ---@field SceneTextureId ESceneTextureId
 ---@field bFiltered boolean
-UMaterialExpressionSceneTexture = {}
+local UMaterialExpressionSceneTexture = {}
 
 
 
 ---@class UMaterialExpressionScreenPosition : UMaterialExpression
-UMaterialExpressionScreenPosition = {}
+local UMaterialExpressionScreenPosition = {}
 
 
 ---@class UMaterialExpressionSetMaterialAttributes : UMaterialExpression
 ---@field Inputs TArray<FExpressionInput>
 ---@field AttributeSetTypes TArray<FGuid>
-UMaterialExpressionSetMaterialAttributes = {}
+local UMaterialExpressionSetMaterialAttributes = {}
 
 
 
 ---@class UMaterialExpressionShaderStageSwitch : UMaterialExpression
 ---@field PixelShader FExpressionInput
 ---@field VertexShader FExpressionInput
-UMaterialExpressionShaderStageSwitch = {}
+local UMaterialExpressionShaderStageSwitch = {}
 
 
 
 ---@class UMaterialExpressionShadingModel : UMaterialExpression
 ---@field ShadingModel EMaterialShadingModel
-UMaterialExpressionShadingModel = {}
+local UMaterialExpressionShadingModel = {}
 
 
 
 ---@class UMaterialExpressionShadingPathSwitch : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field Inputs FExpressionInput
-UMaterialExpressionShadingPathSwitch = {}
+local UMaterialExpressionShadingPathSwitch = {}
 
 
 
 ---@class UMaterialExpressionShadowReplace : UMaterialExpression
 ---@field Default FExpressionInput
 ---@field Shadow FExpressionInput
-UMaterialExpressionShadowReplace = {}
+local UMaterialExpressionShadowReplace = {}
 
 
 
 ---@class UMaterialExpressionSign : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionSign = {}
+local UMaterialExpressionSign = {}
 
 
 
 ---@class UMaterialExpressionSine : UMaterialExpression
 ---@field Input FExpressionInput
 ---@field Period float
-UMaterialExpressionSine = {}
+local UMaterialExpressionSine = {}
 
 
 
@@ -20204,41 +20204,41 @@ UMaterialExpressionSine = {}
 ---@field ScatteringCoefficients FExpressionInput
 ---@field AbsorptionCoefficients FExpressionInput
 ---@field PhaseG FExpressionInput
-UMaterialExpressionSingleLayerWaterMaterialOutput = {}
+local UMaterialExpressionSingleLayerWaterMaterialOutput = {}
 
 
 
 ---@class UMaterialExpressionSkyAtmosphereAerialPerspective : UMaterialExpression
 ---@field WorldPosition FExpressionInput
-UMaterialExpressionSkyAtmosphereAerialPerspective = {}
+local UMaterialExpressionSkyAtmosphereAerialPerspective = {}
 
 
 
 ---@class UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance : UMaterialExpression
-UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance = {}
+local UMaterialExpressionSkyAtmosphereDistantLightScatteredLuminance = {}
 
 
 ---@class UMaterialExpressionSkyAtmosphereLightDirection : UMaterialExpression
 ---@field LightIndex int32
-UMaterialExpressionSkyAtmosphereLightDirection = {}
+local UMaterialExpressionSkyAtmosphereLightDirection = {}
 
 
 
 ---@class UMaterialExpressionSkyAtmosphereLightDiskLuminance : UMaterialExpression
 ---@field LightIndex int32
-UMaterialExpressionSkyAtmosphereLightDiskLuminance = {}
+local UMaterialExpressionSkyAtmosphereLightDiskLuminance = {}
 
 
 
 ---@class UMaterialExpressionSkyAtmosphereLightIlluminance : UMaterialExpression
 ---@field LightIndex int32
 ---@field WorldPosition FExpressionInput
-UMaterialExpressionSkyAtmosphereLightIlluminance = {}
+local UMaterialExpressionSkyAtmosphereLightIlluminance = {}
 
 
 
 ---@class UMaterialExpressionSkyAtmosphereViewLuminance : UMaterialExpression
-UMaterialExpressionSkyAtmosphereViewLuminance = {}
+local UMaterialExpressionSkyAtmosphereViewLuminance = {}
 
 
 ---@class UMaterialExpressionSobol : UMaterialExpression
@@ -20247,7 +20247,7 @@ UMaterialExpressionSkyAtmosphereViewLuminance = {}
 ---@field Seed FExpressionInput
 ---@field ConstIndex uint32
 ---@field ConstSeed FVector2D
-UMaterialExpressionSobol = {}
+local UMaterialExpressionSobol = {}
 
 
 
@@ -20261,7 +20261,7 @@ UMaterialExpressionSobol = {}
 ---@field LODType ESpeedTreeLODType
 ---@field BillboardThreshold float
 ---@field bAccurateWindVelocities boolean
-UMaterialExpressionSpeedTree = {}
+local UMaterialExpressionSpeedTree = {}
 
 
 
@@ -20272,32 +20272,32 @@ UMaterialExpressionSpeedTree = {}
 ---@field Hardness FExpressionInput
 ---@field AttenuationRadius float
 ---@field HardnessPercent float
-UMaterialExpressionSphereMask = {}
+local UMaterialExpressionSphereMask = {}
 
 
 
 ---@class UMaterialExpressionSphericalParticleOpacity : UMaterialExpression
 ---@field Density FExpressionInput
 ---@field ConstantDensity float
-UMaterialExpressionSphericalParticleOpacity = {}
+local UMaterialExpressionSphericalParticleOpacity = {}
 
 
 
 ---@class UMaterialExpressionSquareRoot : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionSquareRoot = {}
+local UMaterialExpressionSquareRoot = {}
 
 
 
 ---@class UMaterialExpressionStaticBool : UMaterialExpression
 ---@field Value boolean
-UMaterialExpressionStaticBool = {}
+local UMaterialExpressionStaticBool = {}
 
 
 
 ---@class UMaterialExpressionStaticBoolParameter : UMaterialExpressionParameter
 ---@field DefaultValue boolean
-UMaterialExpressionStaticBoolParameter = {}
+local UMaterialExpressionStaticBoolParameter = {}
 
 
 
@@ -20307,7 +20307,7 @@ UMaterialExpressionStaticBoolParameter = {}
 ---@field DefaultG boolean
 ---@field DefaultB boolean
 ---@field DefaultA boolean
-UMaterialExpressionStaticComponentMaskParameter = {}
+local UMaterialExpressionStaticComponentMaskParameter = {}
 
 
 
@@ -20316,14 +20316,14 @@ UMaterialExpressionStaticComponentMaskParameter = {}
 ---@field A FExpressionInput
 ---@field B FExpressionInput
 ---@field Value FExpressionInput
-UMaterialExpressionStaticSwitch = {}
+local UMaterialExpressionStaticSwitch = {}
 
 
 
 ---@class UMaterialExpressionStaticSwitchParameter : UMaterialExpressionStaticBoolParameter
 ---@field A FExpressionInput
 ---@field B FExpressionInput
-UMaterialExpressionStaticSwitchParameter = {}
+local UMaterialExpressionStaticSwitchParameter = {}
 
 
 
@@ -20332,20 +20332,20 @@ UMaterialExpressionStaticSwitchParameter = {}
 ---@field B FExpressionInput
 ---@field ConstA float
 ---@field ConstB float
-UMaterialExpressionSubtract = {}
+local UMaterialExpressionSubtract = {}
 
 
 
 ---@class UMaterialExpressionTangent : UMaterialExpression
 ---@field Input FExpressionInput
 ---@field Period float
-UMaterialExpressionTangent = {}
+local UMaterialExpressionTangent = {}
 
 
 
 ---@class UMaterialExpressionTangentOutput : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
-UMaterialExpressionTangentOutput = {}
+local UMaterialExpressionTangentOutput = {}
 
 
 
@@ -20354,7 +20354,7 @@ UMaterialExpressionTangentOutput = {}
 ---@field Seed FExpressionInput
 ---@field ConstIndex uint32
 ---@field ConstSeed FVector2D
-UMaterialExpressionTemporalSobol = {}
+local UMaterialExpressionTemporalSobol = {}
 
 
 
@@ -20362,7 +20362,7 @@ UMaterialExpressionTemporalSobol = {}
 ---@field Texture UTexture
 ---@field SamplerType EMaterialSamplerType
 ---@field IsDefaultMeshpaintTexture boolean
-UMaterialExpressionTextureBase = {}
+local UMaterialExpressionTextureBase = {}
 
 
 
@@ -20372,22 +20372,22 @@ UMaterialExpressionTextureBase = {}
 ---@field VTiling float
 ---@field UnMirrorU boolean
 ---@field UnMirrorV boolean
-UMaterialExpressionTextureCoordinate = {}
+local UMaterialExpressionTextureCoordinate = {}
 
 
 
 ---@class UMaterialExpressionTextureObject : UMaterialExpressionTextureBase
-UMaterialExpressionTextureObject = {}
+local UMaterialExpressionTextureObject = {}
 
 
 ---@class UMaterialExpressionTextureObjectParameter : UMaterialExpressionTextureSampleParameter
-UMaterialExpressionTextureObjectParameter = {}
+local UMaterialExpressionTextureObjectParameter = {}
 
 
 ---@class UMaterialExpressionTextureProperty : UMaterialExpression
 ---@field TextureObject FExpressionInput
 ---@field Property EMaterialExposedTextureProperty
-UMaterialExpressionTextureProperty = {}
+local UMaterialExpressionTextureProperty = {}
 
 
 
@@ -20403,7 +20403,7 @@ UMaterialExpressionTextureProperty = {}
 ---@field AutomaticViewMipBias boolean
 ---@field ConstCoordinate uint8
 ---@field ConstMipValue int32
-UMaterialExpressionTextureSample = {}
+local UMaterialExpressionTextureSample = {}
 
 
 
@@ -20411,37 +20411,37 @@ UMaterialExpressionTextureSample = {}
 ---@field ParameterName FName
 ---@field ExpressionGUID FGuid
 ---@field Group FName
-UMaterialExpressionTextureSampleParameter = {}
+local UMaterialExpressionTextureSampleParameter = {}
 
 
 
 ---@class UMaterialExpressionTextureSampleParameter2D : UMaterialExpressionTextureSampleParameter
-UMaterialExpressionTextureSampleParameter2D = {}
+local UMaterialExpressionTextureSampleParameter2D = {}
 
 
 ---@class UMaterialExpressionTextureSampleParameter2DArray : UMaterialExpressionTextureSampleParameter
-UMaterialExpressionTextureSampleParameter2DArray = {}
+local UMaterialExpressionTextureSampleParameter2DArray = {}
 
 
 ---@class UMaterialExpressionTextureSampleParameterCube : UMaterialExpressionTextureSampleParameter
-UMaterialExpressionTextureSampleParameterCube = {}
+local UMaterialExpressionTextureSampleParameterCube = {}
 
 
 ---@class UMaterialExpressionTextureSampleParameterSubUV : UMaterialExpressionTextureSampleParameter2D
 ---@field bBlend boolean
-UMaterialExpressionTextureSampleParameterSubUV = {}
+local UMaterialExpressionTextureSampleParameterSubUV = {}
 
 
 
 ---@class UMaterialExpressionTextureSampleParameterVolume : UMaterialExpressionTextureSampleParameter
-UMaterialExpressionTextureSampleParameterVolume = {}
+local UMaterialExpressionTextureSampleParameterVolume = {}
 
 
 ---@class UMaterialExpressionTime : UMaterialExpression
 ---@field bIgnorePause boolean
 ---@field bOverride_Period boolean
 ---@field Period float
-UMaterialExpressionTime = {}
+local UMaterialExpressionTime = {}
 
 
 
@@ -20449,7 +20449,7 @@ UMaterialExpressionTime = {}
 ---@field Input FExpressionInput
 ---@field TransformSourceType EMaterialVectorCoordTransformSource
 ---@field TransformType EMaterialVectorCoordTransform
-UMaterialExpressionTransform = {}
+local UMaterialExpressionTransform = {}
 
 
 
@@ -20457,18 +20457,18 @@ UMaterialExpressionTransform = {}
 ---@field Input FExpressionInput
 ---@field TransformSourceType EMaterialPositionTransformSource
 ---@field TransformType EMaterialPositionTransformSource
-UMaterialExpressionTransformPosition = {}
+local UMaterialExpressionTransformPosition = {}
 
 
 
 ---@class UMaterialExpressionTruncate : UMaterialExpression
 ---@field Input FExpressionInput
-UMaterialExpressionTruncate = {}
+local UMaterialExpressionTruncate = {}
 
 
 
 ---@class UMaterialExpressionTwoSidedSign : UMaterialExpression
-UMaterialExpressionTwoSidedSign = {}
+local UMaterialExpressionTwoSidedSign = {}
 
 
 ---@class UMaterialExpressionVectorNoise : UMaterialExpression
@@ -20477,7 +20477,7 @@ UMaterialExpressionTwoSidedSign = {}
 ---@field Quality int32
 ---@field bTiling boolean
 ---@field TileSize uint32
-UMaterialExpressionVectorNoise = {}
+local UMaterialExpressionVectorNoise = {}
 
 
 
@@ -20485,44 +20485,44 @@ UMaterialExpressionVectorNoise = {}
 ---@field DefaultValue FLinearColor
 ---@field bUseCustomPrimitiveData boolean
 ---@field PrimitiveDataIndex uint8
-UMaterialExpressionVectorParameter = {}
+local UMaterialExpressionVectorParameter = {}
 
 
 
 ---@class UMaterialExpressionVertexColor : UMaterialExpression
-UMaterialExpressionVertexColor = {}
+local UMaterialExpressionVertexColor = {}
 
 
 ---@class UMaterialExpressionVertexInterpolator : UMaterialExpressionCustomOutput
 ---@field Input FExpressionInput
-UMaterialExpressionVertexInterpolator = {}
+local UMaterialExpressionVertexInterpolator = {}
 
 
 
 ---@class UMaterialExpressionVertexNormalWS : UMaterialExpression
-UMaterialExpressionVertexNormalWS = {}
+local UMaterialExpressionVertexNormalWS = {}
 
 
 ---@class UMaterialExpressionViewProperty : UMaterialExpression
 ---@field Property EMaterialExposedViewProperty
-UMaterialExpressionViewProperty = {}
+local UMaterialExpressionViewProperty = {}
 
 
 
 ---@class UMaterialExpressionViewSize : UMaterialExpression
-UMaterialExpressionViewSize = {}
+local UMaterialExpressionViewSize = {}
 
 
 ---@class UMaterialExpressionVirtualTextureFeatureSwitch : UMaterialExpression
 ---@field No FExpressionInput
 ---@field Yes FExpressionInput
-UMaterialExpressionVirtualTextureFeatureSwitch = {}
+local UMaterialExpressionVirtualTextureFeatureSwitch = {}
 
 
 
 ---@class UMaterialExpressionWorldPosition : UMaterialExpression
 ---@field WorldPositionShaderOffset EWorldPositionIncludedOffsets
-UMaterialExpressionWorldPosition = {}
+local UMaterialExpressionWorldPosition = {}
 
 
 
@@ -20532,7 +20532,7 @@ UMaterialExpressionWorldPosition = {}
 ---@field bExposeToLibrary boolean
 ---@field bPrefixParameterNames boolean
 ---@field bReentrantFlag boolean
-UMaterialFunction = {}
+local UMaterialFunction = {}
 
 
 
@@ -20546,31 +20546,31 @@ UMaterialFunction = {}
 ---@field StaticSwitchParameterValues TArray<FStaticSwitchParameter>
 ---@field StaticComponentMaskParameterValues TArray<FStaticComponentMaskParameter>
 ---@field RuntimeVirtualTextureParameterValues TArray<FRuntimeVirtualTextureParameterValue>
-UMaterialFunctionInstance = {}
+local UMaterialFunctionInstance = {}
 
 
 
 ---@class UMaterialFunctionInterface : UObject
 ---@field StateId FGuid
 ---@field MaterialFunctionUsage EMaterialFunctionUsage
-UMaterialFunctionInterface = {}
+local UMaterialFunctionInterface = {}
 
 
 
 ---@class UMaterialFunctionMaterialLayer : UMaterialFunction
-UMaterialFunctionMaterialLayer = {}
+local UMaterialFunctionMaterialLayer = {}
 
 
 ---@class UMaterialFunctionMaterialLayerBlend : UMaterialFunction
-UMaterialFunctionMaterialLayerBlend = {}
+local UMaterialFunctionMaterialLayerBlend = {}
 
 
 ---@class UMaterialFunctionMaterialLayerBlendInstance : UMaterialFunctionInstance
-UMaterialFunctionMaterialLayerBlendInstance = {}
+local UMaterialFunctionMaterialLayerBlendInstance = {}
 
 
 ---@class UMaterialFunctionMaterialLayerInstance : UMaterialFunctionInstance
-UMaterialFunctionMaterialLayerInstance = {}
+local UMaterialFunctionMaterialLayerInstance = {}
 
 
 ---@class UMaterialInstance : UMaterialInterface
@@ -20586,12 +20586,12 @@ UMaterialFunctionMaterialLayerInstance = {}
 ---@field BasePropertyOverrides FMaterialInstanceBasePropertyOverrides
 ---@field PermutationTextureReferences TArray<UObject>
 ---@field StaticParameters FStaticParameterSet
-UMaterialInstance = {}
+local UMaterialInstance = {}
 
 
 
 ---@class UMaterialInstanceConstant : UMaterialInstance
-UMaterialInstanceConstant = {}
+local UMaterialInstanceConstant = {}
 
 ---@param ParameterName FName
 ---@return FLinearColor
@@ -20605,7 +20605,7 @@ function UMaterialInstanceConstant:K2_GetScalarParameterValue(ParameterName) end
 
 
 ---@class UMaterialInstanceDynamic : UMaterialInstance
-UMaterialInstanceDynamic = {}
+local UMaterialInstanceDynamic = {}
 
 ---@param ParameterName FName
 ---@param Value FLinearColor
@@ -20643,7 +20643,7 @@ function UMaterialInstanceDynamic:CopyInterpParameters(Source) end
 ---@field LightmassSettings FLightmassMaterialInterfaceSettings
 ---@field TextureStreamingData TArray<FMaterialTextureInfo>
 ---@field AssetUserData TArray<UAssetUserData>
-UMaterialInterface = {}
+local UMaterialInterface = {}
 
 ---@param OverrideForceMiplevelsToBeResident boolean
 ---@param bForceMiplevelsToBeResidentValue boolean
@@ -20661,20 +20661,20 @@ function UMaterialInterface:GetBaseMaterial() end
 ---@field StateId FGuid
 ---@field ScalarParameters TArray<FCollectionScalarParameter>
 ---@field VectorParameters TArray<FCollectionVectorParameter>
-UMaterialParameterCollection = {}
+local UMaterialParameterCollection = {}
 
 
 
 ---@class UMaterialParameterCollectionInstance : UObject
 ---@field Collection UMaterialParameterCollection
-UMaterialParameterCollectionInstance = {}
+local UMaterialParameterCollectionInstance = {}
 
 
 
 ---@class UMeshComponent : UPrimitiveComponent
 ---@field OverrideMaterials TArray<UMaterialInterface>
 ---@field bEnableMaterialParameterCaching boolean
-UMeshComponent = {}
+local UMeshComponent = {}
 
 ---@param ParameterName FName
 ---@param ParameterValue FVector
@@ -20700,12 +20700,12 @@ function UMeshComponent:GetMaterialIndex(MaterialSlotName) end
 
 ---@class UMeshSimplificationSettings : UDeveloperSettings
 ---@field MeshReductionModuleName FName
-UMeshSimplificationSettings = {}
+local UMeshSimplificationSettings = {}
 
 
 
 ---@class UMeshVertexPainterKismetLibrary : UBlueprintFunctionLibrary
-UMeshVertexPainterKismetLibrary = {}
+local UMeshVertexPainterKismetLibrary = {}
 
 ---@param StaticMeshComponent UStaticMeshComponent
 function UMeshVertexPainterKismetLibrary:RemovePaintedVertices(StaticMeshComponent) end
@@ -20725,23 +20725,23 @@ function UMeshVertexPainterKismetLibrary:PaintVerticesLerpAlongAxis(StaticMeshCo
 ---@field AvailableProducts TArray<FPurchaseInfo>
 ---@field LastError FString
 ---@field LastErrorSolution FString
-UMicroTransactionBase = {}
+local UMicroTransactionBase = {}
 
 
 
 ---@class UModel : UObject
-UModel = {}
+local UModel = {}
 
 
 ---@class UModelComponent : UPrimitiveComponent
 ---@field ModelBodySetup UBodySetup
-UModelComponent = {}
+local UModelComponent = {}
 
 
 
 ---@class UMorphTarget : UObject
 ---@field BaseSkelMesh USkeletalMesh
-UMorphTarget = {}
+local UMorphTarget = {}
 
 
 
@@ -20760,7 +20760,7 @@ UMorphTarget = {}
 ---@field bAutoRegisterPhysicsVolumeUpdates boolean
 ---@field bComponentShouldUpdatePhysicsVolume boolean
 ---@field PlaneConstraintAxisSetting EPlaneConstraintAxisSetting
-UMovementComponent = {}
+local UMovementComponent = {}
 
 function UMovementComponent:StopMovementImmediately() end
 function UMovementComponent:SnapUpdatedComponentToPlane() end
@@ -20817,19 +20817,19 @@ function UMovementComponent:ConstrainDirectionToPlane(Direction) end
 
 
 ---@class UNavAreaBase : UObject
-UNavAreaBase = {}
+local UNavAreaBase = {}
 
 
 ---@class UNavCollisionBase : UObject
 ---@field bIsDynamicObstacle boolean
-UNavCollisionBase = {}
+local UNavCollisionBase = {}
 
 
 
 ---@class UNavLinkDefinition : UObject
 ---@field Links TArray<FNavigationLink>
 ---@field SegmentLinks TArray<FNavigationSegmentLink>
-UNavLinkDefinition = {}
+local UNavLinkDefinition = {}
 
 
 
@@ -20841,7 +20841,7 @@ UNavLinkDefinition = {}
 ---@field bUseFixedBrakingDistanceForPaths boolean
 ---@field MovementState FMovementProperties
 ---@field PathFollowingComp UObject
-UNavMovementComponent = {}
+local UNavMovementComponent = {}
 
 function UNavMovementComponent:StopMovementKeepPathing() end
 function UNavMovementComponent:StopActiveMovement() end
@@ -20859,12 +20859,12 @@ function UNavMovementComponent:IsCrouching() end
 
 ---@class UNavigationDataChunk : UObject
 ---@field NavigationDataName FName
-UNavigationDataChunk = {}
+local UNavigationDataChunk = {}
 
 
 
 ---@class UNavigationSystemBase : UObject
-UNavigationSystemBase = {}
+local UNavigationSystemBase = {}
 
 
 ---@class UNavigationSystemConfig : UObject
@@ -20872,7 +20872,7 @@ UNavigationSystemBase = {}
 ---@field SupportedAgentsMask FNavAgentSelector
 ---@field DefaultAgentName FName
 ---@field bIsOverriden boolean
-UNavigationSystemConfig = {}
+local UNavigationSystemConfig = {}
 
 
 
@@ -20890,7 +20890,7 @@ UNavigationSystemConfig = {}
 ---@field PlayerId FUniqueNetIdRepl
 ---@field LastReceiveTime double
 ---@field ChannelsToTick TArray<UChannel>
-UNetConnection = {}
+local UNetConnection = {}
 
 
 
@@ -20927,7 +20927,7 @@ UNetConnection = {}
 ---@field ActorChannelPool TArray<UChannel>
 ---@field Time float
 ---@field ReplicationDriver UReplicationDriver
-UNetDriver = {}
+local UNetDriver = {}
 
 
 
@@ -20937,7 +20937,7 @@ UNetDriver = {}
 ---@field MaxRepArraySize int32
 ---@field MaxRepArrayMemory int32
 ---@field NetworkEmulationProfiles TArray<FNetworkEmulationProfileDescription>
-UNetworkSettings = {}
+local UNetworkSettings = {}
 
 
 
@@ -20947,12 +20947,12 @@ UNetworkSettings = {}
 ---@field SourceToTarget TMap<FName, FName>
 ---@field SourceAsset TSoftObjectPtr<UObject>
 ---@field TargetAsset TSoftObjectPtr<UObject>
-UNodeMappingContainer = {}
+local UNodeMappingContainer = {}
 
 
 
 ---@class UNullNavSysConfig : UNavigationSystemConfig
-UNullNavSysConfig = {}
+local UNullNavSysConfig = {}
 
 
 ---@class UObjectLibrary : UObject
@@ -20962,36 +20962,36 @@ UNullNavSysConfig = {}
 ---@field WeakObjects TArray<TWeakObjectPtr<UObject>>
 ---@field bUseWeakReferences boolean
 ---@field bIsFullyLoaded boolean
-UObjectLibrary = {}
+local UObjectLibrary = {}
 
 
 
 ---@class UObjectReferencer : UObject
 ---@field ReferencedObjects TArray<UObject>
-UObjectReferencer = {}
+local UObjectReferencer = {}
 
 
 
 ---@class UOcclusionPluginSourceSettingsBase : UObject
-UOcclusionPluginSourceSettingsBase = {}
+local UOcclusionPluginSourceSettingsBase = {}
 
 
 ---@class UOnlineBlueprintCallProxyBase : UObject
-UOnlineBlueprintCallProxyBase = {}
+local UOnlineBlueprintCallProxyBase = {}
 
 function UOnlineBlueprintCallProxyBase:Activate() end
 
 
 ---@class UOnlineEngineInterface : UObject
-UOnlineEngineInterface = {}
+local UOnlineEngineInterface = {}
 
 
 ---@class UOnlineSession : UObject
-UOnlineSession = {}
+local UOnlineSession = {}
 
 
 ---@class UPackageMapClient : UPackageMap
-UPackageMapClient = {}
+local UPackageMapClient = {}
 
 
 ---@class UParticleEmitter : UObject
@@ -21010,7 +21010,7 @@ UPackageMapClient = {}
 ---@field InitialAllocationCount int32
 ---@field QualityLevelSpawnRateScale float
 ---@field DetailModeBitmask uint32
-UParticleEmitter = {}
+local UParticleEmitter = {}
 
 
 
@@ -21029,7 +21029,7 @@ UParticleEmitter = {}
 ---@field EventReceiverModules TArray<UParticleModuleEventReceiverBase>
 ---@field ConvertedModules boolean
 ---@field PeakActiveParticles int32
-UParticleLODLevel = {}
+local UParticleLODLevel = {}
 
 
 
@@ -21047,51 +21047,51 @@ UParticleLODLevel = {}
 ---@field bSupportsRandomSeed boolean
 ---@field bRequiresLoopingNotification boolean
 ---@field LODValidity uint8
-UParticleModule = {}
+local UParticleModule = {}
 
 
 
 ---@class UParticleModuleAcceleration : UParticleModuleAccelerationBase
 ---@field Acceleration FRawDistributionVector
 ---@field bApplyOwnerScale boolean
-UParticleModuleAcceleration = {}
+local UParticleModuleAcceleration = {}
 
 
 
 ---@class UParticleModuleAccelerationBase : UParticleModule
 ---@field bAlwaysInWorldSpace boolean
-UParticleModuleAccelerationBase = {}
+local UParticleModuleAccelerationBase = {}
 
 
 
 ---@class UParticleModuleAccelerationConstant : UParticleModuleAccelerationBase
 ---@field Acceleration FVector
-UParticleModuleAccelerationConstant = {}
+local UParticleModuleAccelerationConstant = {}
 
 
 
 ---@class UParticleModuleAccelerationDrag : UParticleModuleAccelerationBase
 ---@field DragCoefficient UDistributionFloat
 ---@field DragCoefficientRaw FRawDistributionFloat
-UParticleModuleAccelerationDrag = {}
+local UParticleModuleAccelerationDrag = {}
 
 
 
 ---@class UParticleModuleAccelerationDragScaleOverLife : UParticleModuleAccelerationBase
 ---@field DragScale UDistributionFloat
 ---@field DragScaleRaw FRawDistributionFloat
-UParticleModuleAccelerationDragScaleOverLife = {}
+local UParticleModuleAccelerationDragScaleOverLife = {}
 
 
 
 ---@class UParticleModuleAccelerationOverLifetime : UParticleModuleAccelerationBase
 ---@field AccelOverLife FRawDistributionVector
-UParticleModuleAccelerationOverLifetime = {}
+local UParticleModuleAccelerationOverLifetime = {}
 
 
 
 ---@class UParticleModuleAttractorBase : UParticleModule
-UParticleModuleAttractorBase = {}
+local UParticleModuleAttractorBase = {}
 
 
 ---@class UParticleModuleAttractorLine : UParticleModuleAttractorBase
@@ -21099,7 +21099,7 @@ UParticleModuleAttractorBase = {}
 ---@field EndPoint1 FVector
 ---@field Range FRawDistributionFloat
 ---@field Strength FRawDistributionFloat
-UParticleModuleAttractorLine = {}
+local UParticleModuleAttractorLine = {}
 
 
 
@@ -21113,7 +21113,7 @@ UParticleModuleAttractorLine = {}
 ---@field bRenewSource boolean
 ---@field bInheritSourceVel boolean
 ---@field LastSelIndex int32
-UParticleModuleAttractorParticle = {}
+local UParticleModuleAttractorParticle = {}
 
 
 
@@ -21131,7 +21131,7 @@ UParticleModuleAttractorParticle = {}
 ---@field Negative_X boolean
 ---@field Negative_Y boolean
 ---@field Negative_Z boolean
-UParticleModuleAttractorPoint = {}
+local UParticleModuleAttractorPoint = {}
 
 
 
@@ -21140,12 +21140,12 @@ UParticleModuleAttractorPoint = {}
 ---@field Radius float
 ---@field Strength UDistributionFloat
 ---@field StrengthRaw FRawDistributionFloat
-UParticleModuleAttractorPointGravity = {}
+local UParticleModuleAttractorPointGravity = {}
 
 
 
 ---@class UParticleModuleBeamBase : UParticleModule
-UParticleModuleBeamBase = {}
+local UParticleModuleBeamBase = {}
 
 
 ---@class UParticleModuleBeamModifier : UParticleModuleBeamBase
@@ -21157,7 +21157,7 @@ UParticleModuleBeamBase = {}
 ---@field bAbsoluteTangent boolean
 ---@field StrengthOptions FBeamModifierOptions
 ---@field Strength FRawDistributionFloat
-UParticleModuleBeamModifier = {}
+local UParticleModuleBeamModifier = {}
 
 
 
@@ -21182,7 +21182,7 @@ UParticleModuleBeamModifier = {}
 ---@field FrequencyDistance float
 ---@field bApplyNoiseScale boolean
 ---@field NoiseScale FRawDistributionFloat
-UParticleModuleBeamNoise = {}
+local UParticleModuleBeamNoise = {}
 
 
 
@@ -21197,7 +21197,7 @@ UParticleModuleBeamNoise = {}
 ---@field bLockSourceTangent boolean
 ---@field SourceStrength FRawDistributionFloat
 ---@field bLockSourceStength boolean
-UParticleModuleBeamSource = {}
+local UParticleModuleBeamSource = {}
 
 
 
@@ -21213,19 +21213,19 @@ UParticleModuleBeamSource = {}
 ---@field TargetStrength FRawDistributionFloat
 ---@field bLockTargetStength boolean
 ---@field LockRadius float
-UParticleModuleBeamTarget = {}
+local UParticleModuleBeamTarget = {}
 
 
 
 ---@class UParticleModuleCameraBase : UParticleModule
-UParticleModuleCameraBase = {}
+local UParticleModuleCameraBase = {}
 
 
 ---@class UParticleModuleCameraOffset : UParticleModuleCameraBase
 ---@field CameraOffset FRawDistributionFloat
 ---@field bSpawnTimeOnly boolean
 ---@field UpdateMethod EParticleCameraOffsetUpdateMethod
-UParticleModuleCameraOffset = {}
+local UParticleModuleCameraOffset = {}
 
 
 
@@ -21249,12 +21249,12 @@ UParticleModuleCameraOffset = {}
 ---@field bCollideOnlyIfVisible boolean
 ---@field bIgnoreSourceActor boolean
 ---@field MaxCollisionDistance float
-UParticleModuleCollision = {}
+local UParticleModuleCollision = {}
 
 
 
 ---@class UParticleModuleCollisionBase : UParticleModule
-UParticleModuleCollisionBase = {}
+local UParticleModuleCollisionBase = {}
 
 
 ---@class UParticleModuleCollisionGPU : UParticleModuleCollisionBase
@@ -21267,7 +21267,7 @@ UParticleModuleCollisionBase = {}
 ---@field RadiusBias float
 ---@field Response EParticleCollisionResponse::Type
 ---@field CollisionMode EParticleCollisionMode::Type
-UParticleModuleCollisionGPU = {}
+local UParticleModuleCollisionGPU = {}
 
 
 
@@ -21275,19 +21275,19 @@ UParticleModuleCollisionGPU = {}
 ---@field StartColor FRawDistributionVector
 ---@field StartAlpha FRawDistributionFloat
 ---@field bClampAlpha boolean
-UParticleModuleColor = {}
+local UParticleModuleColor = {}
 
 
 
 ---@class UParticleModuleColorBase : UParticleModule
-UParticleModuleColorBase = {}
+local UParticleModuleColorBase = {}
 
 
 ---@class UParticleModuleColorOverLife : UParticleModuleColorBase
 ---@field ColorOverLife FRawDistributionVector
 ---@field AlphaOverLife FRawDistributionFloat
 ---@field bClampAlpha boolean
-UParticleModuleColorOverLife = {}
+local UParticleModuleColorOverLife = {}
 
 
 
@@ -21295,36 +21295,36 @@ UParticleModuleColorOverLife = {}
 ---@field ColorScaleOverLife FRawDistributionVector
 ---@field AlphaScaleOverLife FRawDistributionFloat
 ---@field bEmitterTime boolean
-UParticleModuleColorScaleOverLife = {}
+local UParticleModuleColorScaleOverLife = {}
 
 
 
 ---@class UParticleModuleColor_Seeded : UParticleModuleColor
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleColor_Seeded = {}
+local UParticleModuleColor_Seeded = {}
 
 
 
 ---@class UParticleModuleEventBase : UParticleModule
-UParticleModuleEventBase = {}
+local UParticleModuleEventBase = {}
 
 
 ---@class UParticleModuleEventGenerator : UParticleModuleEventBase
 ---@field Events TArray<FParticleEvent_GenerateInfo>
-UParticleModuleEventGenerator = {}
+local UParticleModuleEventGenerator = {}
 
 
 
 ---@class UParticleModuleEventReceiverBase : UParticleModuleEventBase
 ---@field EventGeneratorType EParticleEventType
 ---@field EventName FName
-UParticleModuleEventReceiverBase = {}
+local UParticleModuleEventReceiverBase = {}
 
 
 
 ---@class UParticleModuleEventReceiverKillParticles : UParticleModuleEventReceiverBase
 ---@field bStopSpawning boolean
-UParticleModuleEventReceiverKillParticles = {}
+local UParticleModuleEventReceiverKillParticles = {}
 
 
 
@@ -21336,16 +21336,16 @@ UParticleModuleEventReceiverKillParticles = {}
 ---@field InheritVelocityScale FRawDistributionVector
 ---@field PhysicalMaterials TArray<UPhysicalMaterial>
 ---@field bBanPhysicalMaterials boolean
-UParticleModuleEventReceiverSpawn = {}
+local UParticleModuleEventReceiverSpawn = {}
 
 
 
 ---@class UParticleModuleEventSendToGame : UObject
-UParticleModuleEventSendToGame = {}
+local UParticleModuleEventSendToGame = {}
 
 
 ---@class UParticleModuleKillBase : UParticleModule
-UParticleModuleKillBase = {}
+local UParticleModuleKillBase = {}
 
 
 ---@class UParticleModuleKillBox : UParticleModuleKillBase
@@ -21354,7 +21354,7 @@ UParticleModuleKillBase = {}
 ---@field bAbsolute boolean
 ---@field bKillInside boolean
 ---@field bAxisAlignedAndFixedSize boolean
-UParticleModuleKillBox = {}
+local UParticleModuleKillBox = {}
 
 
 
@@ -21363,23 +21363,23 @@ UParticleModuleKillBox = {}
 ---@field bAbsolute boolean
 ---@field bFloor boolean
 ---@field bApplyPSysScale boolean
-UParticleModuleKillHeight = {}
+local UParticleModuleKillHeight = {}
 
 
 
 ---@class UParticleModuleLifetime : UParticleModuleLifetimeBase
 ---@field LifeTime FRawDistributionFloat
-UParticleModuleLifetime = {}
+local UParticleModuleLifetime = {}
 
 
 
 ---@class UParticleModuleLifetimeBase : UParticleModule
-UParticleModuleLifetimeBase = {}
+local UParticleModuleLifetimeBase = {}
 
 
 ---@class UParticleModuleLifetime_Seeded : UParticleModuleLifetime
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleLifetime_Seeded = {}
+local UParticleModuleLifetime_Seeded = {}
 
 
 
@@ -21396,17 +21396,17 @@ UParticleModuleLifetime_Seeded = {}
 ---@field VolumetricScatteringIntensity float
 ---@field bHighQualityLights boolean
 ---@field bShadowCastingLights boolean
-UParticleModuleLight = {}
+local UParticleModuleLight = {}
 
 
 
 ---@class UParticleModuleLightBase : UParticleModule
-UParticleModuleLightBase = {}
+local UParticleModuleLightBase = {}
 
 
 ---@class UParticleModuleLight_Seeded : UParticleModuleLight
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleLight_Seeded = {}
+local UParticleModuleLight_Seeded = {}
 
 
 
@@ -21414,12 +21414,12 @@ UParticleModuleLight_Seeded = {}
 ---@field StartLocation FRawDistributionVector
 ---@field DistributeOverNPoints float
 ---@field DistributeThreshold float
-UParticleModuleLocation = {}
+local UParticleModuleLocation = {}
 
 
 
 ---@class UParticleModuleLocationBase : UParticleModule
-UParticleModuleLocationBase = {}
+local UParticleModuleLocationBase = {}
 
 
 ---@class UParticleModuleLocationBoneSocket : UParticleModuleLocationBase
@@ -21433,7 +21433,7 @@ UParticleModuleLocationBase = {}
 ---@field InheritVelocityScale float
 ---@field SkelMeshActorParamName FName
 ---@field NumPreSelectedIndices int32
-UParticleModuleLocationBoneSocket = {}
+local UParticleModuleLocationBoneSocket = {}
 
 
 
@@ -21442,7 +21442,7 @@ UParticleModuleLocationBoneSocket = {}
 ---@field LocationOffset FRawDistributionVector
 ---@field ScaleFactor FRawDistributionVector
 ---@field Direction FRawDistributionVector
-UParticleModuleLocationDirect = {}
+local UParticleModuleLocationDirect = {}
 
 
 
@@ -21453,13 +21453,13 @@ UParticleModuleLocationDirect = {}
 ---@field InheritSourceVelocityScale float
 ---@field bInheritSourceRotation boolean
 ---@field InheritSourceRotationScale float
-UParticleModuleLocationEmitter = {}
+local UParticleModuleLocationEmitter = {}
 
 
 
 ---@class UParticleModuleLocationEmitterDirect : UParticleModuleLocationBase
 ---@field EmitterName FName
-UParticleModuleLocationEmitterDirect = {}
+local UParticleModuleLocationEmitterDirect = {}
 
 
 
@@ -21474,7 +21474,7 @@ UParticleModuleLocationEmitterDirect = {}
 ---@field Velocity boolean
 ---@field VelocityScale FRawDistributionFloat
 ---@field StartLocation FRawDistributionVector
-UParticleModuleLocationPrimitiveBase = {}
+local UParticleModuleLocationPrimitiveBase = {}
 
 
 
@@ -21483,25 +21483,25 @@ UParticleModuleLocationPrimitiveBase = {}
 ---@field StartRadius FRawDistributionFloat
 ---@field StartHeight FRawDistributionFloat
 ---@field HeightAxis CylinderHeightAxis
-UParticleModuleLocationPrimitiveCylinder = {}
+local UParticleModuleLocationPrimitiveCylinder = {}
 
 
 
 ---@class UParticleModuleLocationPrimitiveCylinder_Seeded : UParticleModuleLocationPrimitiveCylinder
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleLocationPrimitiveCylinder_Seeded = {}
+local UParticleModuleLocationPrimitiveCylinder_Seeded = {}
 
 
 
 ---@class UParticleModuleLocationPrimitiveSphere : UParticleModuleLocationPrimitiveBase
 ---@field StartRadius FRawDistributionFloat
-UParticleModuleLocationPrimitiveSphere = {}
+local UParticleModuleLocationPrimitiveSphere = {}
 
 
 
 ---@class UParticleModuleLocationPrimitiveSphere_Seeded : UParticleModuleLocationPrimitiveSphere
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleLocationPrimitiveSphere_Seeded = {}
+local UParticleModuleLocationPrimitiveSphere_Seeded = {}
 
 
 
@@ -21510,7 +21510,7 @@ UParticleModuleLocationPrimitiveSphere_Seeded = {}
 ---@field Height FRawDistributionFloat
 ---@field Angle FRawDistributionFloat
 ---@field Thickness FRawDistributionFloat
-UParticleModuleLocationPrimitiveTriangle = {}
+local UParticleModuleLocationPrimitiveTriangle = {}
 
 
 
@@ -21531,71 +21531,71 @@ UParticleModuleLocationPrimitiveTriangle = {}
 ---@field bInheritVertexColor boolean
 ---@field bInheritUV boolean
 ---@field InheritUVChannel uint32
-UParticleModuleLocationSkelVertSurface = {}
+local UParticleModuleLocationSkelVertSurface = {}
 
 
 
 ---@class UParticleModuleLocationWorldOffset : UParticleModuleLocation
-UParticleModuleLocationWorldOffset = {}
+local UParticleModuleLocationWorldOffset = {}
 
 
 ---@class UParticleModuleLocationWorldOffset_Seeded : UParticleModuleLocationWorldOffset
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleLocationWorldOffset_Seeded = {}
+local UParticleModuleLocationWorldOffset_Seeded = {}
 
 
 
 ---@class UParticleModuleLocation_Seeded : UParticleModuleLocation
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleLocation_Seeded = {}
+local UParticleModuleLocation_Seeded = {}
 
 
 
 ---@class UParticleModuleMaterialBase : UParticleModule
-UParticleModuleMaterialBase = {}
+local UParticleModuleMaterialBase = {}
 
 
 ---@class UParticleModuleMeshMaterial : UParticleModuleMaterialBase
 ---@field MeshMaterials TArray<UMaterialInterface>
-UParticleModuleMeshMaterial = {}
+local UParticleModuleMeshMaterial = {}
 
 
 
 ---@class UParticleModuleMeshRotation : UParticleModuleRotationBase
 ---@field StartRotation FRawDistributionVector
 ---@field bInheritParent boolean
-UParticleModuleMeshRotation = {}
+local UParticleModuleMeshRotation = {}
 
 
 
 ---@class UParticleModuleMeshRotationRate : UParticleModuleRotationRateBase
 ---@field StartRotationRate FRawDistributionVector
-UParticleModuleMeshRotationRate = {}
+local UParticleModuleMeshRotationRate = {}
 
 
 
 ---@class UParticleModuleMeshRotationRateMultiplyLife : UParticleModuleRotationRateBase
 ---@field LifeMultiplier FRawDistributionVector
-UParticleModuleMeshRotationRateMultiplyLife = {}
+local UParticleModuleMeshRotationRateMultiplyLife = {}
 
 
 
 ---@class UParticleModuleMeshRotationRateOverLife : UParticleModuleRotationRateBase
 ---@field RotRate FRawDistributionVector
 ---@field bScaleRotRate boolean
-UParticleModuleMeshRotationRateOverLife = {}
+local UParticleModuleMeshRotationRateOverLife = {}
 
 
 
 ---@class UParticleModuleMeshRotationRate_Seeded : UParticleModuleMeshRotationRate
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleMeshRotationRate_Seeded = {}
+local UParticleModuleMeshRotationRate_Seeded = {}
 
 
 
 ---@class UParticleModuleMeshRotation_Seeded : UParticleModuleMeshRotation
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleMeshRotation_Seeded = {}
+local UParticleModuleMeshRotation_Seeded = {}
 
 
 
@@ -21607,47 +21607,47 @@ UParticleModuleMeshRotation_Seeded = {}
 ---@field RotationOptions FOrbitOptions
 ---@field RotationRateAmount FRawDistributionVector
 ---@field RotationRateOptions FOrbitOptions
-UParticleModuleOrbit = {}
+local UParticleModuleOrbit = {}
 
 
 
 ---@class UParticleModuleOrbitBase : UParticleModule
 ---@field bUseEmitterTime boolean
-UParticleModuleOrbitBase = {}
+local UParticleModuleOrbitBase = {}
 
 
 
 ---@class UParticleModuleOrientationAxisLock : UParticleModuleOrientationBase
 ---@field LockAxisFlags EParticleAxisLock
-UParticleModuleOrientationAxisLock = {}
+local UParticleModuleOrientationAxisLock = {}
 
 
 
 ---@class UParticleModuleOrientationBase : UParticleModule
-UParticleModuleOrientationBase = {}
+local UParticleModuleOrientationBase = {}
 
 
 ---@class UParticleModuleParameterBase : UParticleModule
-UParticleModuleParameterBase = {}
+local UParticleModuleParameterBase = {}
 
 
 ---@class UParticleModuleParameterDynamic : UParticleModuleParameterBase
 ---@field DynamicParams TArray<FEmitterDynamicParameter>
 ---@field UpdateFlags int32
 ---@field bUsesVelocity boolean
-UParticleModuleParameterDynamic = {}
+local UParticleModuleParameterDynamic = {}
 
 
 
 ---@class UParticleModuleParameterDynamic_Seeded : UParticleModuleParameterDynamic
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleParameterDynamic_Seeded = {}
+local UParticleModuleParameterDynamic_Seeded = {}
 
 
 
 ---@class UParticleModulePivotOffset : UParticleModuleLocationBase
 ---@field PivotOffset FVector2D
-UParticleModulePivotOffset = {}
+local UParticleModulePivotOffset = {}
 
 
 
@@ -21697,63 +21697,63 @@ UParticleModulePivotOffset = {}
 ---@field EmitterDurationLow float
 ---@field NormalsCylinderDirection FVector
 ---@field NamedMaterialOverrides TArray<FName>
-UParticleModuleRequired = {}
+local UParticleModuleRequired = {}
 
 
 
 ---@class UParticleModuleRotation : UParticleModuleRotationBase
 ---@field StartRotation FRawDistributionFloat
-UParticleModuleRotation = {}
+local UParticleModuleRotation = {}
 
 
 
 ---@class UParticleModuleRotationBase : UParticleModule
-UParticleModuleRotationBase = {}
+local UParticleModuleRotationBase = {}
 
 
 ---@class UParticleModuleRotationOverLifetime : UParticleModuleRotationBase
 ---@field RotationOverLife FRawDistributionFloat
 ---@field Scale boolean
-UParticleModuleRotationOverLifetime = {}
+local UParticleModuleRotationOverLifetime = {}
 
 
 
 ---@class UParticleModuleRotationRate : UParticleModuleRotationRateBase
 ---@field StartRotationRate FRawDistributionFloat
-UParticleModuleRotationRate = {}
+local UParticleModuleRotationRate = {}
 
 
 
 ---@class UParticleModuleRotationRateBase : UParticleModule
-UParticleModuleRotationRateBase = {}
+local UParticleModuleRotationRateBase = {}
 
 
 ---@class UParticleModuleRotationRateMultiplyLife : UParticleModuleRotationRateBase
 ---@field LifeMultiplier FRawDistributionFloat
-UParticleModuleRotationRateMultiplyLife = {}
+local UParticleModuleRotationRateMultiplyLife = {}
 
 
 
 ---@class UParticleModuleRotationRate_Seeded : UParticleModuleRotationRate
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleRotationRate_Seeded = {}
+local UParticleModuleRotationRate_Seeded = {}
 
 
 
 ---@class UParticleModuleRotation_Seeded : UParticleModuleRotation
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleRotation_Seeded = {}
+local UParticleModuleRotation_Seeded = {}
 
 
 
 ---@class UParticleModuleSize : UParticleModuleSizeBase
 ---@field StartSize FRawDistributionVector
-UParticleModuleSize = {}
+local UParticleModuleSize = {}
 
 
 
 ---@class UParticleModuleSizeBase : UParticleModule
-UParticleModuleSizeBase = {}
+local UParticleModuleSizeBase = {}
 
 
 ---@class UParticleModuleSizeMultiplyLife : UParticleModuleSizeBase
@@ -21761,7 +21761,7 @@ UParticleModuleSizeBase = {}
 ---@field MultiplyX boolean
 ---@field MultiplyY boolean
 ---@field MultiplyZ boolean
-UParticleModuleSizeMultiplyLife = {}
+local UParticleModuleSizeMultiplyLife = {}
 
 
 
@@ -21770,26 +21770,26 @@ UParticleModuleSizeMultiplyLife = {}
 ---@field EnableX boolean
 ---@field EnableY boolean
 ---@field EnableZ boolean
-UParticleModuleSizeScale = {}
+local UParticleModuleSizeScale = {}
 
 
 
 ---@class UParticleModuleSizeScaleBySpeed : UParticleModuleSizeBase
 ---@field SpeedScale FVector2D
 ---@field MaxScale FVector2D
-UParticleModuleSizeScaleBySpeed = {}
+local UParticleModuleSizeScaleBySpeed = {}
 
 
 
 ---@class UParticleModuleSize_Seeded : UParticleModuleSize
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleSize_Seeded = {}
+local UParticleModuleSize_Seeded = {}
 
 
 
 ---@class UParticleModuleSourceMovement : UParticleModuleLocationBase
 ---@field SourceMovementScale FRawDistributionVector
-UParticleModuleSourceMovement = {}
+local UParticleModuleSourceMovement = {}
 
 
 
@@ -21800,14 +21800,14 @@ UParticleModuleSourceMovement = {}
 ---@field BurstList TArray<FParticleBurst>
 ---@field BurstScale FRawDistributionFloat
 ---@field bApplyGlobalSpawnRateScale boolean
-UParticleModuleSpawn = {}
+local UParticleModuleSpawn = {}
 
 
 
 ---@class UParticleModuleSpawnBase : UParticleModule
 ---@field bProcessSpawnRate boolean
 ---@field bProcessBurstList boolean
-UParticleModuleSpawnBase = {}
+local UParticleModuleSpawnBase = {}
 
 
 
@@ -21820,7 +21820,7 @@ UParticleModuleSpawnBase = {}
 ---@field bIgnoreMovementAlongX boolean
 ---@field bIgnoreMovementAlongY boolean
 ---@field bIgnoreMovementAlongZ boolean
-UParticleModuleSpawnPerUnit = {}
+local UParticleModuleSpawnPerUnit = {}
 
 
 
@@ -21828,24 +21828,24 @@ UParticleModuleSpawnPerUnit = {}
 ---@field Animation USubUVAnimation
 ---@field SubImageIndex FRawDistributionFloat
 ---@field bUseRealTime boolean
-UParticleModuleSubUV = {}
+local UParticleModuleSubUV = {}
 
 
 
 ---@class UParticleModuleSubUVBase : UParticleModule
-UParticleModuleSubUVBase = {}
+local UParticleModuleSubUVBase = {}
 
 
 ---@class UParticleModuleSubUVMovie : UParticleModuleSubUV
 ---@field bUseEmitterTime boolean
 ---@field FrameRate FRawDistributionFloat
 ---@field StartingFrame int32
-UParticleModuleSubUVMovie = {}
+local UParticleModuleSubUVMovie = {}
 
 
 
 ---@class UParticleModuleTrailBase : UParticleModule
-UParticleModuleTrailBase = {}
+local UParticleModuleTrailBase = {}
 
 
 ---@class UParticleModuleTrailSource : UParticleModuleTrailBase
@@ -21857,7 +21857,7 @@ UParticleModuleTrailBase = {}
 ---@field SourceOffsetDefaults TArray<FVector>
 ---@field SelectionMethod EParticleSourceSelectionMethod
 ---@field bInheritRotation boolean
-UParticleModuleTrailSource = {}
+local UParticleModuleTrailSource = {}
 
 
 
@@ -21869,12 +21869,12 @@ UParticleModuleTrailSource = {}
 ---@field DistanceTessellationStepSize float
 ---@field TangentTessellationStepSize float
 ---@field WidthTessellationStepSize float
-UParticleModuleTypeDataAnimTrail = {}
+local UParticleModuleTypeDataAnimTrail = {}
 
 
 
 ---@class UParticleModuleTypeDataBase : UParticleModule
-UParticleModuleTypeDataBase = {}
+local UParticleModuleTypeDataBase = {}
 
 
 ---@class UParticleModuleTypeDataBeam2 : UParticleModuleTypeDataBase
@@ -21896,7 +21896,7 @@ UParticleModuleTypeDataBase = {}
 ---@field RenderDirectLine boolean
 ---@field RenderLines boolean
 ---@field RenderTessellation boolean
-UParticleModuleTypeDataBeam2 = {}
+local UParticleModuleTypeDataBeam2 = {}
 
 
 
@@ -21905,7 +21905,7 @@ UParticleModuleTypeDataBeam2 = {}
 ---@field ResourceData FGPUSpriteResourceData
 ---@field CameraMotionBlurAmount float
 ---@field bClearExistingParticlesOnInit boolean
-UParticleModuleTypeDataGpu = {}
+local UParticleModuleTypeDataGpu = {}
 
 
 
@@ -21927,7 +21927,7 @@ UParticleModuleTypeDataGpu = {}
 ---@field bApplyParticleRotationAsSpin boolean
 ---@field bFaceCameraDirectionRatherThanPosition boolean
 ---@field bCollisionsConsiderPartilceSize boolean
-UParticleModuleTypeDataMesh = {}
+local UParticleModuleTypeDataMesh = {}
 
 
 
@@ -21952,19 +21952,19 @@ UParticleModuleTypeDataMesh = {}
 ---@field DistanceTessellationStepSize float
 ---@field bEnableTangentDiffInterpScale boolean
 ---@field TangentTessellationScalar float
-UParticleModuleTypeDataRibbon = {}
+local UParticleModuleTypeDataRibbon = {}
 
 
 
 ---@class UParticleModuleVectorFieldBase : UParticleModule
-UParticleModuleVectorFieldBase = {}
+local UParticleModuleVectorFieldBase = {}
 
 
 ---@class UParticleModuleVectorFieldGlobal : UParticleModuleVectorFieldBase
 ---@field bOverrideGlobalVectorFieldTightness boolean
 ---@field GlobalVectorFieldScale float
 ---@field GlobalVectorFieldTightness float
-UParticleModuleVectorFieldGlobal = {}
+local UParticleModuleVectorFieldGlobal = {}
 
 
 
@@ -21980,48 +21980,48 @@ UParticleModuleVectorFieldGlobal = {}
 ---@field bTileY boolean
 ---@field bTileZ boolean
 ---@field bUseFixDT boolean
-UParticleModuleVectorFieldLocal = {}
+local UParticleModuleVectorFieldLocal = {}
 
 
 
 ---@class UParticleModuleVectorFieldRotation : UParticleModuleVectorFieldBase
 ---@field MinInitialRotation FVector
 ---@field MaxInitialRotation FVector
-UParticleModuleVectorFieldRotation = {}
+local UParticleModuleVectorFieldRotation = {}
 
 
 
 ---@class UParticleModuleVectorFieldRotationRate : UParticleModuleVectorFieldBase
 ---@field RotationRate FVector
-UParticleModuleVectorFieldRotationRate = {}
+local UParticleModuleVectorFieldRotationRate = {}
 
 
 
 ---@class UParticleModuleVectorFieldScale : UParticleModuleVectorFieldBase
 ---@field VectorFieldScale UDistributionFloat
 ---@field VectorFieldScaleRaw FRawDistributionFloat
-UParticleModuleVectorFieldScale = {}
+local UParticleModuleVectorFieldScale = {}
 
 
 
 ---@class UParticleModuleVectorFieldScaleOverLife : UParticleModuleVectorFieldBase
 ---@field VectorFieldScaleOverLife UDistributionFloat
 ---@field VectorFieldScaleOverLifeRaw FRawDistributionFloat
-UParticleModuleVectorFieldScaleOverLife = {}
+local UParticleModuleVectorFieldScaleOverLife = {}
 
 
 
 ---@class UParticleModuleVelocity : UParticleModuleVelocityBase
 ---@field StartVelocity FRawDistributionVector
 ---@field StartVelocityRadial FRawDistributionFloat
-UParticleModuleVelocity = {}
+local UParticleModuleVelocity = {}
 
 
 
 ---@class UParticleModuleVelocityBase : UParticleModule
 ---@field bInWorldSpace boolean
 ---@field bApplyOwnerScale boolean
-UParticleModuleVelocityBase = {}
+local UParticleModuleVelocityBase = {}
 
 
 
@@ -22029,31 +22029,31 @@ UParticleModuleVelocityBase = {}
 ---@field Angle FRawDistributionFloat
 ---@field Velocity FRawDistributionFloat
 ---@field Direction FVector
-UParticleModuleVelocityCone = {}
+local UParticleModuleVelocityCone = {}
 
 
 
 ---@class UParticleModuleVelocityInheritParent : UParticleModuleVelocityBase
 ---@field Scale FRawDistributionVector
-UParticleModuleVelocityInheritParent = {}
+local UParticleModuleVelocityInheritParent = {}
 
 
 
 ---@class UParticleModuleVelocityOverLifetime : UParticleModuleVelocityBase
 ---@field VelOverLife FRawDistributionVector
 ---@field Absolute boolean
-UParticleModuleVelocityOverLifetime = {}
+local UParticleModuleVelocityOverLifetime = {}
 
 
 
 ---@class UParticleModuleVelocity_Seeded : UParticleModuleVelocity
 ---@field RandomSeedInfo FParticleRandomSeedInfo
-UParticleModuleVelocity_Seeded = {}
+local UParticleModuleVelocity_Seeded = {}
 
 
 
 ---@class UParticleSpriteEmitter : UParticleEmitter
-UParticleSpriteEmitter = {}
+local UParticleSpriteEmitter = {}
 
 
 ---@class UParticleSystem : UFXSystemAsset
@@ -22093,7 +22093,7 @@ UParticleSpriteEmitter = {}
 ---@field CustomOcclusionBounds FBox
 ---@field SoloTracking TArray<FLODSoloTrack>
 ---@field NamedMaterialSlots TArray<FNamedEmitterMaterial>
-UParticleSystem = {}
+local UParticleSystem = {}
 
 ---@param TypeData UClass
 ---@return boolean
@@ -22132,7 +22132,7 @@ function UParticleSystem:ContainsEmitterType(TypeData) end
 ---@field AutoAttachRotationRule EAttachmentRule
 ---@field AutoAttachScaleRule EAttachmentRule
 ---@field OnSystemFinished FParticleSystemComponentOnSystemFinished
-UParticleSystemComponent = {}
+local UParticleSystemComponent = {}
 
 ---@param InFirstSocketName FName
 ---@param InSecondSocketName FName
@@ -22234,13 +22234,13 @@ function UParticleSystemComponent:BeginTrails(InFirstSocketName, InSecondSocketN
 
 ---@class UParticleSystemReplay : UObject
 ---@field ClipIDNumber int32
-UParticleSystemReplay = {}
+local UParticleSystemReplay = {}
 
 
 
 ---@class UPawnMovementComponent : UNavMovementComponent
 ---@field PawnOwner APawn
-UPawnMovementComponent = {}
+local UPawnMovementComponent = {}
 
 ---@return FVector
 function UPawnMovementComponent:K2_GetInputVector() end
@@ -22267,7 +22267,7 @@ function UPawnMovementComponent:AddInputVector(WorldVector, bForce) end
 ---@field LastRemoteNoiseTime float
 ---@field LastLocalNoiseVolume float
 ---@field LastLocalNoiseTime float
-UPawnNoiseEmitterComponent = {}
+local UPawnNoiseEmitterComponent = {}
 
 ---@param NoiseMaker AActor
 ---@param Loudness float
@@ -22278,14 +22278,14 @@ function UPawnNoiseEmitterComponent:MakeNoise(NoiseMaker, Loudness, NoiseLocatio
 ---@class UPendingNetGame : UObject
 ---@field NetDriver UNetDriver
 ---@field DemoNetDriver UDemoNetDriver
-UPendingNetGame = {}
+local UPendingNetGame = {}
 
 
 
 ---@class UPhysicalAnimationComponent : UActorComponent
 ---@field StrengthMultiplyer float
 ---@field SkeletalMeshComponent USkeletalMeshComponent
-UPhysicalAnimationComponent = {}
+local UPhysicalAnimationComponent = {}
 
 ---@param InStrengthMultiplyer float
 function UPhysicalAnimationComponent:SetStrengthMultiplyer(InStrengthMultiplyer) end
@@ -22322,7 +22322,7 @@ function UPhysicalAnimationComponent:ApplyPhysicalAnimationProfileBelow(BodyName
 ---@field SurfaceType EPhysicalSurface
 ---@field TireFrictionScale float
 ---@field TireFrictionScales TArray<FTireFrictionScalePair>
-UPhysicalMaterial = {}
+local UPhysicalMaterial = {}
 
 
 
@@ -22333,7 +22333,7 @@ UPhysicalMaterial = {}
 ---@field bNotForDedicatedServer boolean
 ---@field ThumbnailInfo UThumbnailInfo
 ---@field BodySetup TArray<UBodySetup>
-UPhysicsAsset = {}
+local UPhysicsAsset = {}
 
 
 
@@ -22342,7 +22342,7 @@ UPhysicsAsset = {}
 ---@field ImpactReFireDelay float
 ---@field DefaultImpactSound USoundBase
 ---@field LastImpactSoundTime float
-UPhysicsCollisionHandler = {}
+local UPhysicsCollisionHandler = {}
 
 
 
@@ -22354,7 +22354,7 @@ UPhysicsCollisionHandler = {}
 ---@field ConstraintSetup UPhysicsConstraintTemplate
 ---@field OnConstraintBroken FPhysicsConstraintComponentOnConstraintBroken
 ---@field ConstraintInstance FConstraintInstance
-UPhysicsConstraintComponent = {}
+local UPhysicsConstraintComponent = {}
 
 ---@param bEnableTwistDrive boolean
 ---@param bEnableSwingDrive boolean
@@ -22457,7 +22457,7 @@ function UPhysicsConstraintComponent:BreakConstraint() end
 ---@field DefaultInstance FConstraintInstance
 ---@field ProfileHandles TArray<FPhysicsConstraintProfileHandle>
 ---@field DefaultProfile FConstraintProfileProperties
-UPhysicsConstraintTemplate = {}
+local UPhysicsConstraintTemplate = {}
 
 
 
@@ -22471,7 +22471,7 @@ UPhysicsConstraintTemplate = {}
 ---@field AngularDamping float
 ---@field AngularStiffness float
 ---@field InterpolationSpeed float
-UPhysicsHandleComponent = {}
+local UPhysicsHandleComponent = {}
 
 ---@param NewRotation FRotator
 function UPhysicsHandleComponent:SetTargetRotation(NewRotation) end
@@ -22558,7 +22558,7 @@ function UPhysicsHandleComponent:GetGrabbedComponent() end
 ---@field PhysicalSurfaces TArray<FPhysicalSurfaceName>
 ---@field DefaultBroadphaseSettings FBroadphaseSettings
 ---@field ChaosSettings FChaosPhysicsSettings
-UPhysicsSettings = {}
+local UPhysicsSettings = {}
 
 
 
@@ -22570,7 +22570,7 @@ UPhysicsSettings = {}
 ---@field SpringChannel ECollisionChannel
 ---@field bIgnoreSelf boolean
 ---@field SpringCompression float
-UPhysicsSpringComponent = {}
+local UPhysicsSpringComponent = {}
 
 ---@return FVector
 function UPhysicsSpringComponent:GetSpringRestingPoint() end
@@ -22584,7 +22584,7 @@ function UPhysicsSpringComponent:GetNormalizedCompressionScalar() end
 
 ---@class UPhysicsThrusterComponent : USceneComponent
 ---@field ThrustStrength float
-UPhysicsThrusterComponent = {}
+local UPhysicsThrusterComponent = {}
 
 
 
@@ -22603,7 +22603,7 @@ UPhysicsThrusterComponent = {}
 ---@field AngleFromPlaneFadeEnd float
 ---@field bShowPreviewPlane boolean
 ---@field bRenderSceneTwoSided boolean
-UPlanarReflectionComponent = {}
+local UPlanarReflectionComponent = {}
 
 
 
@@ -22611,14 +22611,14 @@ UPlanarReflectionComponent = {}
 ---@field InfluenceRadiusScale float
 ---@field PreviewInfluenceRadius UDrawSphereComponent
 ---@field PreviewCaptureBox UBoxComponent
-UPlaneReflectionCaptureComponent = {}
+local UPlaneReflectionCaptureComponent = {}
 
 
 
 ---@class UPlatformEventsComponent : UActorComponent
 ---@field PlatformChangedToLaptopModeDelegate FPlatformEventsComponentPlatformChangedToLaptopModeDelegate
 ---@field PlatformChangedToTabletModeDelegate FPlatformEventsComponentPlatformChangedToTabletModeDelegate
-UPlatformEventsComponent = {}
+local UPlatformEventsComponent = {}
 
 ---@return boolean
 function UPlatformEventsComponent:SupportsConvertibleLaptops() end
@@ -22643,13 +22643,13 @@ function UPlatformEventsComponent:IsInLaptopMode() end
 ---@field ApplicationReceivedRemoteNotificationDelegate FPlatformGameInstanceApplicationReceivedRemoteNotificationDelegate
 ---@field ApplicationReceivedLocalNotificationDelegate FPlatformGameInstanceApplicationReceivedLocalNotificationDelegate
 ---@field ApplicationReceivedScreenOrientationChangedNotificationDelegate FPlatformGameInstanceApplicationReceivedScreenOrientationChangedNotificationDelegate
-UPlatformGameInstance = {}
+local UPlatformGameInstance = {}
 
 
 
 ---@class UPlatformInterfaceBase : UObject
 ---@field AllDelegates TArray<FDelegateArray>
-UPlatformInterfaceBase = {}
+local UPlatformInterfaceBase = {}
 
 
 
@@ -22659,7 +22659,7 @@ UPlatformInterfaceBase = {}
 ---@field Tag int32
 ---@field StringResponse FString
 ---@field BinaryResponse TArray<uint8>
-UPlatformInterfaceWebResponse = {}
+local UPlatformInterfaceWebResponse = {}
 
 ---@return int32
 function UPlatformInterfaceWebResponse:GetNumHeaders() end
@@ -22677,14 +22677,14 @@ function UPlatformInterfaceWebResponse:GetHeader(HeaderIndex, Header, Value) end
 ---@field CurrentNetSpeed int32
 ---@field ConfiguredInternetSpeed int32
 ---@field ConfiguredLanSpeed int32
-UPlayer = {}
+local UPlayer = {}
 
 
 
 ---@class UPlayerInput : UObject
 ---@field DebugExecBindings TArray<FKeyBind>
 ---@field InvertedAxis TArray<FName>
-UPlayerInput = {}
+local UPlayerInput = {}
 
 ---@param Sensitivity float
 function UPlayerInput:SetMouseSensitivity(Sensitivity) end
@@ -22699,7 +22699,7 @@ function UPlayerInput:ClearSmoothing() end
 
 
 ---@class UPluginCommandlet : UCommandlet
-UPluginCommandlet = {}
+local UPluginCommandlet = {}
 
 
 ---@class UPointLightComponent : ULocalLightComponent
@@ -22708,7 +22708,7 @@ UPluginCommandlet = {}
 ---@field SourceRadius float
 ---@field SoftSourceRadius float
 ---@field SourceLength float
-UPointLightComponent = {}
+local UPointLightComponent = {}
 
 ---@param bNewValue float
 function UPointLightComponent:SetSourceRadius(bNewValue) end
@@ -22721,7 +22721,7 @@ function UPointLightComponent:SetLightFalloffExponent(NewLightFalloffExponent) e
 
 
 ---@class UPolys : UObject
-UPolys = {}
+local UPolys = {}
 
 
 ---@class UPoseAsset : UAnimationAsset
@@ -22729,19 +22729,19 @@ UPolys = {}
 ---@field bAdditivePose boolean
 ---@field BasePoseIndex int32
 ---@field RetargetSource FName
-UPoseAsset = {}
+local UPoseAsset = {}
 
 
 
 ---@class UPoseWatch : UObject
 ---@field Node UEdGraphNode
 ---@field PoseWatchColour FColor
-UPoseWatch = {}
+local UPoseWatch = {}
 
 
 
 ---@class UPoseableMeshComponent : USkinnedMeshComponent
-UPoseableMeshComponent = {}
+local UPoseableMeshComponent = {}
 
 ---@param BoneName FName
 ---@param InTransform FTransform
@@ -22788,7 +22788,7 @@ function UPoseableMeshComponent:CopyPoseFromSkeletalComponent(InComponentToCopy)
 ---@field BlendWeight float
 ---@field bEnabled boolean
 ---@field bUnbound boolean
-UPostProcessComponent = {}
+local UPostProcessComponent = {}
 
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
 ---@param InWeight float
@@ -22798,7 +22798,7 @@ function UPostProcessComponent:AddOrUpdateBlendable(InBlendableObject, InWeight)
 ---@class UPreviewMeshCollection : UDataAsset
 ---@field Skeleton USkeleton
 ---@field SkeletalMeshes TArray<FPreviewMeshCollectionEntry>
-UPreviewMeshCollection = {}
+local UPreviewMeshCollection = {}
 
 
 
@@ -22809,12 +22809,12 @@ UPreviewMeshCollection = {}
 ---@field ExplicitAssets TArray<TSoftObjectPtr<UObject>>
 ---@field ExplicitBlueprints TArray<TSoftClassPtr<UObject>>
 ---@field AssetCollection FCollectionReference
-UPrimaryAssetLabel = {}
+local UPrimaryAssetLabel = {}
 
 
 
 ---@class UPrimaryDataAsset : UDataAsset
-UPrimaryDataAsset = {}
+local UPrimaryDataAsset = {}
 
 
 ---@class UPrimitiveComponent : USceneComponent
@@ -22905,7 +22905,7 @@ UPrimaryDataAsset = {}
 ---@field OnInputTouchEnter FPrimitiveComponentOnInputTouchEnter
 ---@field OnInputTouchLeave FPrimitiveComponentOnInputTouchLeave
 ---@field LODParentPrimitive UPrimitiveComponent
-UPrimitiveComponent = {}
+local UPrimitiveComponent = {}
 
 ---@param BoneName FName
 function UPrimitiveComponent:WakeRigidBody(BoneName) end
@@ -23290,7 +23290,7 @@ function UPrimitiveComponent:AddAngularImpulse(Impulse, BoneName, bVelChange) en
 ---@field InterpRotationTime float
 ---@field InterpLocationMaxLagDistance float
 ---@field InterpLocationSnapToTargetDistance float
-UProjectileMovementComponent = {}
+local UProjectileMovementComponent = {}
 
 ---@param HitResult FHitResult
 function UProjectileMovementComponent:StopSimulating(HitResult) end
@@ -23318,7 +23318,7 @@ function UProjectileMovementComponent:IsInterpolationComplete() end
 
 ---@class UProxyLODMeshSimplificationSettings : UDeveloperSettings
 ---@field ProxyLODMeshReductionModuleName FName
-UProxyLODMeshSimplificationSettings = {}
+local UProxyLODMeshSimplificationSettings = {}
 
 
 
@@ -23331,7 +23331,7 @@ UProxyLODMeshSimplificationSettings = {}
 ---@field ForceStrength float
 ---@field DestructibleDamage float
 ---@field ObjectTypesToAffect TArray<EObjectTypeQuery>
-URadialForceComponent = {}
+local URadialForceComponent = {}
 
 ---@param ObjectType EObjectTypeQuery
 function URadialForceComponent:RemoveObjectTypeToAffect(ObjectType) end
@@ -23346,7 +23346,7 @@ function URadialForceComponent:AddObjectTypeToAffect(ObjectType) end
 ---@field BarnDoorAngle float
 ---@field BarnDoorLength float
 ---@field SourceTexture UTexture
-URectLightComponent = {}
+local URectLightComponent = {}
 
 ---@param bNewValue float
 function URectLightComponent:SetSourceWidth(bNewValue) end
@@ -23368,14 +23368,14 @@ function URectLightComponent:SetBarnDoorAngle(NewValue) end
 ---@field Brightness float
 ---@field CaptureOffset FVector
 ---@field MapBuildDataId FGuid
-UReflectionCaptureComponent = {}
+local UReflectionCaptureComponent = {}
 
 
 
 ---@class URendererOverrideSettings : UDeveloperSettings
 ---@field bSupportAllShaderPermutations boolean
 ---@field bForceRecomputeTangents boolean
-URendererOverrideSettings = {}
+local URendererOverrideSettings = {}
 
 
 
@@ -23480,24 +23480,24 @@ URendererOverrideSettings = {}
 ---@field bSupportReversedIndexBuffers boolean
 ---@field bSupportMaterialLayers boolean
 ---@field bLPV boolean
-URendererSettings = {}
+local URendererSettings = {}
 
 
 
 ---@class UReplicationConnectionDriver : UObject
-UReplicationConnectionDriver = {}
+local UReplicationConnectionDriver = {}
 
 
 ---@class UReplicationDriver : UObject
-UReplicationDriver = {}
+local UReplicationDriver = {}
 
 
 ---@class UReporterBase : UObject
-UReporterBase = {}
+local UReporterBase = {}
 
 
 ---@class UReporterGraph : UReporterBase
-UReporterGraph = {}
+local UReporterGraph = {}
 
 
 ---@class UReverbEffect : UObject
@@ -23513,18 +23513,18 @@ UReporterGraph = {}
 ---@field LateDelay float
 ---@field AirAbsorptionGainHF float
 ---@field RoomRolloffFactor float
-UReverbEffect = {}
+local UReverbEffect = {}
 
 
 
 ---@class UReverbPluginSourceSettingsBase : UObject
-UReverbPluginSourceSettingsBase = {}
+local UReverbPluginSourceSettingsBase = {}
 
 
 ---@class URig : UObject
 ---@field TransformBases TArray<FTransformBase>
 ---@field Nodes TArray<FNode>
-URig = {}
+local URig = {}
 
 
 
@@ -23532,12 +23532,12 @@ URig = {}
 ---@field RotationRate FRotator
 ---@field PivotTranslation FVector
 ---@field bRotationInLocalSpace boolean
-URotatingMovementComponent = {}
+local URotatingMovementComponent = {}
 
 
 
 ---@class URuntimeOptionsBase : UObject
-URuntimeOptionsBase = {}
+local URuntimeOptionsBase = {}
 
 
 ---@class URuntimeVirtualTexture : UObject
@@ -23555,7 +23555,7 @@ URuntimeOptionsBase = {}
 ---@field RemoveLowMips int32
 ---@field StreamLowMips int32
 ---@field StreamingTexture URuntimeVirtualTextureStreamingProxy
-URuntimeVirtualTexture = {}
+local URuntimeVirtualTexture = {}
 
 
 
@@ -23563,7 +23563,7 @@ URuntimeVirtualTexture = {}
 ---@field VirtualTexture URuntimeVirtualTexture
 ---@field bUseStreamingLowMipsInEditor boolean
 ---@field BoundsSourceActor AActor
-URuntimeVirtualTextureComponent = {}
+local URuntimeVirtualTextureComponent = {}
 
 ---@param WorldBounds FBoxSphereBounds
 function URuntimeVirtualTextureComponent:Invalidate(WorldBounds) end
@@ -23573,7 +23573,7 @@ function URuntimeVirtualTextureComponent:Invalidate(WorldBounds) end
 ---@field Settings FVirtualTextureBuildSettings
 ---@field bSinglePhysicalSpace boolean
 ---@field BuildHash uint32
-URuntimeVirtualTextureStreamingProxy = {}
+local URuntimeVirtualTextureStreamingProxy = {}
 
 
 
@@ -23589,16 +23589,16 @@ URuntimeVirtualTextureStreamingProxy = {}
 ---@field MetaDataArray TArray<FBPVariableMetaDataEntry>
 ---@field VariableGuid FGuid
 ---@field InternalVariableName FName
-USCS_Node = {}
+local USCS_Node = {}
 
 
 
 ---@class USaveGame : UObject
-USaveGame = {}
+local USaveGame = {}
 
 
 ---@class UScene : UObject
-UScene = {}
+local UScene = {}
 
 
 ---@class USceneCaptureComponent : USceneComponent
@@ -23616,7 +23616,7 @@ UScene = {}
 ---@field CaptureSortPriority int32
 ---@field ShowFlagSettings TArray<FEngineShowFlagsSetting>
 ---@field ProfilingEventName FString
-USceneCaptureComponent = {}
+local USceneCaptureComponent = {}
 
 ---@param InComponent UPrimitiveComponent
 function USceneCaptureComponent:ShowOnlyComponent(InComponent) end
@@ -23653,7 +23653,7 @@ function USceneCaptureComponent:ClearHiddenComponents() end
 ---@field ClipPlaneNormal FVector
 ---@field bCameraCutThisFrame boolean
 ---@field bConsiderUnrenderedOpaquePixelAsFullyTranslucent boolean
-USceneCaptureComponent2D = {}
+local USceneCaptureComponent2D = {}
 
 function USceneCaptureComponent2D:CaptureScene() end
 ---@param InBlendableObject TScriptInterface<IBlendableInterface>
@@ -23668,7 +23668,7 @@ function USceneCaptureComponent2D:AddOrUpdateBlendable(InBlendableObject, InWeig
 ---@field TextureTargetRight UTextureRenderTargetCube
 ---@field TextureTargetODS UTextureRenderTarget2D
 ---@field IPD float
-USceneCaptureComponentCube = {}
+local USceneCaptureComponentCube = {}
 
 function USceneCaptureComponentCube:CaptureScene() end
 
@@ -23698,7 +23698,7 @@ function USceneCaptureComponentCube:CaptureScene() end
 ---@field Mobility EComponentMobility::Type
 ---@field DetailMode EDetailMode
 ---@field PhysicsVolumeChangedDelegate FSceneComponentPhysicsVolumeChangedDelegate
-USceneComponent = {}
+local USceneComponent = {}
 
 ---@param bPropagateToChildren boolean
 function USceneComponent:ToggleVisibility(bPropagateToChildren) end
@@ -23899,16 +23899,16 @@ function USceneComponent:DetachFromParent(bMaintainWorldPosition, bCallModify) e
 
 
 ---@class UScriptViewportClient : UObject
-UScriptViewportClient = {}
+local UScriptViewportClient = {}
 
 
 ---@class USelection : UObject
-USelection = {}
+local USelection = {}
 
 
 ---@class UShadowMapTexture2D : UTexture2D
 ---@field ShadowmapFlags EShadowMapFlags
-UShadowMapTexture2D = {}
+local UShadowMapTexture2D = {}
 
 
 
@@ -23919,7 +23919,7 @@ UShadowMapTexture2D = {}
 ---@field bDrawOnlyIfSelected boolean
 ---@field bShouldCollideWhenPlacing boolean
 ---@field bDynamicObstacle boolean
-UShapeComponent = {}
+local UShapeComponent = {}
 
 
 
@@ -23927,18 +23927,18 @@ UShapeComponent = {}
 ---@field RootNodes TArray<USCS_Node>
 ---@field AllNodes TArray<USCS_Node>
 ---@field DefaultSceneRootNode USCS_Node
-USimpleConstructionScript = {}
+local USimpleConstructionScript = {}
 
 
 
 ---@class USimulatedClientNetConnection : UNetConnection
-USimulatedClientNetConnection = {}
+local USimulatedClientNetConnection = {}
 
 
 ---@class USkeletalBodySetup : UBodySetup
 ---@field bSkipScaleFromAnimation boolean
 ---@field PhysicalAnimationData TArray<FPhysicalAnimationProfile>
-USkeletalBodySetup = {}
+local USkeletalBodySetup = {}
 
 
 
@@ -23971,7 +23971,7 @@ USkeletalBodySetup = {}
 ---@field AssetUserData TArray<UAssetUserData>
 ---@field Sockets TArray<USkeletalMeshSocket>
 ---@field SkinWeightProfiles TArray<FSkinWeightProfileInfo>
-USkeletalMesh = {}
+local USkeletalMesh = {}
 
 ---@param InLODSettings USkeletalMeshLODSettings
 function USkeletalMesh:SetLODSettings(InLODSettings) end
@@ -24081,7 +24081,7 @@ function USkeletalMesh:FindSocket(InSocketName) end
 ---@field LastPoseTickFrame uint32
 ---@field ClothingInteractor UClothingSimulationInteractor
 ---@field OnAnimInitialized FSkeletalMeshComponentOnAnimInitialized
-USkeletalMeshComponent = {}
+local USkeletalMeshComponent = {}
 
 ---@param InClass TSubclassOf<UAnimInstance>
 function USkeletalMeshComponent:UnlinkAnimClassLayers(InClass) end
@@ -24310,13 +24310,13 @@ function USkeletalMeshComponent:AccumulateAllBodiesBelowPhysicsBlendWeight(InBon
 ---@field MaxNumStreamedLODs FPerPlatformInt
 ---@field MaxNumOptionalLODs FPerPlatformInt
 ---@field LODGroups TArray<FSkeletalMeshLODGroupSettings>
-USkeletalMeshLODSettings = {}
+local USkeletalMeshLODSettings = {}
 
 
 
 ---@class USkeletalMeshSimplificationSettings : UDeveloperSettings
 ---@field SkeletalMeshReductionModuleName FName
-USkeletalMeshSimplificationSettings = {}
+local USkeletalMeshSimplificationSettings = {}
 
 
 
@@ -24327,7 +24327,7 @@ USkeletalMeshSimplificationSettings = {}
 ---@field RelativeRotation FRotator
 ---@field RelativeScale FVector
 ---@field bForceAlwaysAnimated boolean
-USkeletalMeshSocket = {}
+local USkeletalMeshSocket = {}
 
 ---@param SkelComp USkeletalMeshComponent
 ---@param WorldLocation FVector
@@ -24348,7 +24348,7 @@ function USkeletalMeshSocket:GetSocketLocation(SkelComp) end
 ---@field BlendProfiles TArray<UBlendProfile>
 ---@field SlotGroups TArray<FAnimSlotGroup>
 ---@field AssetUserData TArray<UAssetUserData>
-USkeleton = {}
+local USkeleton = {}
 
 
 
@@ -24385,7 +24385,7 @@ USkeleton = {}
 ---@field CapsuleIndirectShadowMinVisibility float
 ---@field CachedWorldSpaceBounds FBoxSphereBounds
 ---@field CachedWorldToLocalTransform FMatrix
-USkinnedMeshComponent = {}
+local USkinnedMeshComponent = {}
 
 ---@param InProfileName FName
 function USkinnedMeshComponent:UnloadSkinWeightProfile(InProfileName) end
@@ -24523,7 +24523,7 @@ function USkinnedMeshComponent:BoneIsChildOf(BoneName, ParentBoneName) end
 ---@field HeightFogContribution float
 ---@field TransmittanceMinLightElevationAngle float
 ---@field bStaticLightingBuiltGUID FGuid
-USkyAtmosphereComponent = {}
+local USkyAtmosphereComponent = {}
 
 ---@param NewValue FLinearColor
 function USkyAtmosphereComponent:SetSkyLuminanceFactor(NewValue) end
@@ -24574,7 +24574,7 @@ function USkyAtmosphereComponent:OverrideAtmosphereLightDirection(AtmosphereLigh
 ---@field OcclusionTint FColor
 ---@field OcclusionCombineMode EOcclusionCombineMode
 ---@field BlendDestinationCubemap UTextureCube
-USkyLightComponent = {}
+local USkyLightComponent = {}
 
 ---@param NewIntensity float
 function USkyLightComponent:SetVolumetricScatteringIntensity(NewIntensity) end
@@ -24605,17 +24605,17 @@ function USkyLightComponent:RecaptureSky() end
 
 ---@class USlateBrushAsset : UObject
 ---@field Brush FSlateBrush
-USlateBrushAsset = {}
+local USlateBrushAsset = {}
 
 
 
 ---@class USmokeTestCommandlet : UCommandlet
-USmokeTestCommandlet = {}
+local USmokeTestCommandlet = {}
 
 
 ---@class USoundAttenuation : UObject
 ---@field Attenuation FSoundAttenuationSettings
-USoundAttenuation = {}
+local USoundAttenuation = {}
 
 
 
@@ -24641,7 +24641,7 @@ USoundAttenuation = {}
 ---@field SourceEffectChain USoundEffectSourcePresetChain
 ---@field BusSends TArray<FSoundSourceBusSendInfo>
 ---@field PreEffectBusSends TArray<FSoundSourceBusSendInfo>
-USoundBase = {}
+local USoundBase = {}
 
 
 
@@ -24651,13 +24651,13 @@ USoundBase = {}
 ---@field PassiveSoundMixModifiers TArray<FPassiveSoundMixModifier>
 ---@field Modulation FSoundModulation
 ---@field ParentClass USoundClass
-USoundClass = {}
+local USoundClass = {}
 
 
 
 ---@class USoundConcurrency : UObject
 ---@field Concurrency FSoundConcurrencySettings
-USoundConcurrency = {}
+local USoundConcurrency = {}
 
 
 
@@ -24671,36 +24671,36 @@ USoundConcurrency = {}
 ---@field bOverrideAttenuation boolean
 ---@field bExcludeFromRandomNodeBranchCulling boolean
 ---@field bHasPlayWhenSilent boolean
-USoundCue = {}
+local USoundCue = {}
 
 
 
 ---@class USoundCueTemplate : USoundCue
-USoundCueTemplate = {}
+local USoundCueTemplate = {}
 
 
 ---@class USoundEffectPreset : UObject
-USoundEffectPreset = {}
+local USoundEffectPreset = {}
 
 
 ---@class USoundEffectSourcePreset : USoundEffectPreset
-USoundEffectSourcePreset = {}
+local USoundEffectSourcePreset = {}
 
 
 ---@class USoundEffectSourcePresetChain : UObject
 ---@field Chain TArray<FSourceEffectChainEntry>
 ---@field bPlayEffectChainTails boolean
-USoundEffectSourcePresetChain = {}
+local USoundEffectSourcePresetChain = {}
 
 
 
 ---@class USoundEffectSubmixPreset : USoundEffectPreset
-USoundEffectSubmixPreset = {}
+local USoundEffectSubmixPreset = {}
 
 
 ---@class USoundGroups : UObject
 ---@field SoundGroupProfiles TArray<FSoundGroup>
-USoundGroups = {}
+local USoundGroups = {}
 
 
 
@@ -24713,61 +24713,61 @@ USoundGroups = {}
 ---@field FadeInTime float
 ---@field Duration float
 ---@field FadeOutTime float
-USoundMix = {}
+local USoundMix = {}
 
 
 
 ---@class USoundModulationPluginSourceSettingsBase : UObject
-USoundModulationPluginSourceSettingsBase = {}
+local USoundModulationPluginSourceSettingsBase = {}
 
 
 ---@class USoundNode : UObject
 ---@field ChildNodes TArray<USoundNode>
-USoundNode = {}
+local USoundNode = {}
 
 
 
 ---@class USoundNodeAssetReferencer : USoundNode
-USoundNodeAssetReferencer = {}
+local USoundNodeAssetReferencer = {}
 
 
 ---@class USoundNodeAttenuation : USoundNode
 ---@field AttenuationSettings USoundAttenuation
 ---@field AttenuationOverrides FSoundAttenuationSettings
 ---@field bOverrideAttenuation boolean
-USoundNodeAttenuation = {}
+local USoundNodeAttenuation = {}
 
 
 
 ---@class USoundNodeBranch : USoundNode
 ---@field BoolParameterName FName
-USoundNodeBranch = {}
+local USoundNodeBranch = {}
 
 
 
 ---@class USoundNodeConcatenator : USoundNode
 ---@field InputVolume TArray<float>
-USoundNodeConcatenator = {}
+local USoundNodeConcatenator = {}
 
 
 
 ---@class USoundNodeDelay : USoundNode
 ---@field DelayMin float
 ---@field DelayMax float
-USoundNodeDelay = {}
+local USoundNodeDelay = {}
 
 
 
 ---@class USoundNodeDialoguePlayer : USoundNode
 ---@field DialogueWaveParameter FDialogueWaveParameter
 ---@field bLooping boolean
-USoundNodeDialoguePlayer = {}
+local USoundNodeDialoguePlayer = {}
 
 
 
 ---@class USoundNodeDistanceCrossFade : USoundNode
 ---@field CrossFadeInput TArray<FDistanceDatum>
-USoundNodeDistanceCrossFade = {}
+local USoundNodeDistanceCrossFade = {}
 
 
 
@@ -24775,7 +24775,7 @@ USoundNodeDistanceCrossFade = {}
 ---@field DopplerIntensity float
 ---@field bUseSmoothing boolean
 ---@field SmoothingInterpSpeed float
-USoundNodeDoppler = {}
+local USoundNodeDoppler = {}
 
 
 
@@ -24794,30 +24794,30 @@ USoundNodeDoppler = {}
 ---@field PitchMax float
 ---@field VolumeMin float
 ---@field VolumeMax float
-USoundNodeEnveloper = {}
+local USoundNodeEnveloper = {}
 
 
 
 ---@class USoundNodeGroupControl : USoundNode
 ---@field GroupSizes TArray<int32>
-USoundNodeGroupControl = {}
+local USoundNodeGroupControl = {}
 
 
 
 ---@class USoundNodeLooping : USoundNode
 ---@field LoopCount int32
 ---@field bLoopIndefinitely boolean
-USoundNodeLooping = {}
+local USoundNodeLooping = {}
 
 
 
 ---@class USoundNodeMature : USoundNode
-USoundNodeMature = {}
+local USoundNodeMature = {}
 
 
 ---@class USoundNodeMixer : USoundNode
 ---@field InputVolume TArray<float>
-USoundNodeMixer = {}
+local USoundNodeMixer = {}
 
 
 
@@ -24826,14 +24826,14 @@ USoundNodeMixer = {}
 ---@field PitchMax float
 ---@field VolumeMin float
 ---@field VolumeMax float
-USoundNodeModulator = {}
+local USoundNodeModulator = {}
 
 
 
 ---@class USoundNodeModulatorContinuous : USoundNode
 ---@field PitchModulationParams FModulatorContinuousParams
 ---@field VolumeModulationParams FModulatorContinuousParams
-USoundNodeModulatorContinuous = {}
+local USoundNodeModulatorContinuous = {}
 
 
 
@@ -24848,18 +24848,18 @@ USoundNodeModulatorContinuous = {}
 ---@field OffsetMax float
 ---@field CenterMin float
 ---@field CenterMax float
-USoundNodeOscillator = {}
+local USoundNodeOscillator = {}
 
 
 
 ---@class USoundNodeParamCrossFade : USoundNodeDistanceCrossFade
 ---@field ParamName FName
-USoundNodeParamCrossFade = {}
+local USoundNodeParamCrossFade = {}
 
 
 
 ---@class USoundNodeQualityLevel : USoundNode
-USoundNodeQualityLevel = {}
+local USoundNodeQualityLevel = {}
 
 
 ---@class USoundNodeRandom : USoundNode
@@ -24870,25 +24870,25 @@ USoundNodeQualityLevel = {}
 ---@field bShouldExcludeFromBranchCulling boolean
 ---@field bSoundCueExcludedFromBranchCulling boolean
 ---@field bRandomizeWithoutReplacement boolean
-USoundNodeRandom = {}
+local USoundNodeRandom = {}
 
 
 
 ---@class USoundNodeSoundClass : USoundNode
 ---@field SoundClassOverride USoundClass
-USoundNodeSoundClass = {}
+local USoundNodeSoundClass = {}
 
 
 
 ---@class USoundNodeSwitch : USoundNode
 ---@field IntParameterName FName
-USoundNodeSwitch = {}
+local USoundNodeSwitch = {}
 
 
 
 ---@class USoundNodeWaveParam : USoundNode
 ---@field WaveParameterName FName
-USoundNodeWaveParam = {}
+local USoundNodeWaveParam = {}
 
 
 
@@ -24896,7 +24896,7 @@ USoundNodeWaveParam = {}
 ---@field SoundWaveAssetPtr TSoftObjectPtr<USoundWave>
 ---@field SoundWave USoundWave
 ---@field bLooping boolean
-USoundNodeWavePlayer = {}
+local USoundNodeWavePlayer = {}
 
 
 
@@ -24904,7 +24904,7 @@ USoundNodeWavePlayer = {}
 ---@field SourceBusChannels ESourceBusChannels
 ---@field SourceBusDuration float
 ---@field bAutoDeactivateWhenSilent boolean
-USoundSourceBus = {}
+local USoundSourceBus = {}
 
 
 
@@ -24919,7 +24919,7 @@ USoundSourceBus = {}
 ---@field EnvelopeFollowerReleaseTime int32
 ---@field OutputVolume float
 ---@field OnSubmixRecordedFileDone FSoundSubmixOnSubmixRecordedFileDone
-USoundSubmix = {}
+local USoundSubmix = {}
 
 ---@param WorldContextObject UObject
 ---@param ExportType EAudioRecordingExportType
@@ -24968,27 +24968,27 @@ function USoundSubmix:AddEnvelopeFollowerDelegate(WorldContextObject, OnSubmixEn
 ---@field Subtitles TArray<FSubtitleCue>
 ---@field Curves UCurveTable
 ---@field InternalCurves UCurveTable
-USoundWave = {}
+local USoundWave = {}
 
 
 
 ---@class USoundWaveProcedural : USoundWave
-USoundWaveProcedural = {}
+local USoundWaveProcedural = {}
 
 
 ---@class USpatializationPluginSourceSettingsBase : UObject
-USpatializationPluginSourceSettingsBase = {}
+local USpatializationPluginSourceSettingsBase = {}
 
 
 ---@class USpectatorPawnMovement : UFloatingPawnMovement
 ---@field bIgnoreTimeDilation boolean
-USpectatorPawnMovement = {}
+local USpectatorPawnMovement = {}
 
 
 
 ---@class USphereComponent : UShapeComponent
 ---@field SphereRadius float
-USphereComponent = {}
+local USphereComponent = {}
 
 ---@param InSphereRadius float
 ---@param bUpdateOverlaps boolean
@@ -25005,7 +25005,7 @@ function USphereComponent:GetScaledSphereRadius() end
 ---@field InfluenceRadius float
 ---@field CaptureDistanceScale float
 ---@field PreviewInfluenceRadius UDrawSphereComponent
-USphereReflectionCaptureComponent = {}
+local USphereReflectionCaptureComponent = {}
 
 
 
@@ -25027,7 +25027,7 @@ USphereReflectionCaptureComponent = {}
 ---@field bLoopPositionOverride boolean
 ---@field LoopPosition float
 ---@field DefaultUpVector FVector
-USplineComponent = {}
+local USplineComponent = {}
 
 function USplineComponent:UpdateSpline() end
 ---@param PointIndex int32
@@ -25395,7 +25395,7 @@ function USplineComponent:AddPoint(Point, bUpdateSpline) end
 ---@field bMeshDirty boolean
 ---@field ForwardAxis ESplineMeshAxis::Type
 ---@field VirtualTextureMainPassMaxDrawDistance float
-USplineMeshComponent = {}
+local USplineMeshComponent = {}
 
 function USplineMeshComponent:UpdateMesh() end
 ---@param StartTangent FVector
@@ -25477,14 +25477,14 @@ function USplineMeshComponent:GetBoundaryMax() end
 
 
 ---@class USplineMetadata : UObject
-USplineMetadata = {}
+local USplineMetadata = {}
 
 
 ---@class USpotLightComponent : UPointLightComponent
 ---@field InnerConeAngle float
 ---@field OuterConeAngle float
 ---@field LightShaftConeAngle float
-USpotLightComponent = {}
+local USpotLightComponent = {}
 
 ---@param NewOuterConeAngle float
 function USpotLightComponent:SetOuterConeAngle(NewOuterConeAngle) end
@@ -25511,7 +25511,7 @@ function USpotLightComponent:SetInnerConeAngle(NewInnerConeAngle) end
 ---@field CameraRotationLagSpeed float
 ---@field CameraLagMaxTimeStep float
 ---@field CameraLagMaxDistance float
-USpringArmComponent = {}
+local USpringArmComponent = {}
 
 ---@return boolean
 function USpringArmComponent:IsCollisionFixApplied() end
@@ -25546,7 +25546,7 @@ function USpringArmComponent:GetTargetRotation() end
 ---@field AssetUserData TArray<UAssetUserData>
 ---@field EditableMesh UObject
 ---@field NavCollision UNavCollisionBase
-UStaticMesh = {}
+local UStaticMesh = {}
 
 ---@param Socket UStaticMeshSocket
 function UStaticMesh:RemoveSocket(Socket) end
@@ -25612,7 +25612,7 @@ function UStaticMesh:AddMaterial(Material) end
 ---@field LODData TArray<FStaticMeshComponentLODInfo>
 ---@field StreamingTextureData TArray<FStreamingTextureBuildInfo>
 ---@field LightmassSettings FLightmassPrimitiveSettings
-UStaticMeshComponent = {}
+local UStaticMeshComponent = {}
 
 ---@param NewMesh UStaticMesh
 ---@return boolean
@@ -25636,7 +25636,7 @@ function UStaticMeshComponent:GetLocalBounds(Min, Max) end
 ---@field RelativeRotation FRotator
 ---@field RelativeScale FVector
 ---@field Tag FString
-UStaticMeshSocket = {}
+local UStaticMeshSocket = {}
 
 
 
@@ -25656,7 +25656,7 @@ UStaticMeshSocket = {}
 ---@field StereoLayerType EStereoLayerType
 ---@field StereoLayerShape EStereoLayerShape
 ---@field Priority int32
-UStereoLayerComponent = {}
+local UStereoLayerComponent = {}
 
 ---@param InUVRect FBox2D
 function UStereoLayerComponent:SetUVRect(InUVRect) end
@@ -25684,7 +25684,7 @@ function UStereoLayerComponent:GetLeftTexture() end
 
 
 ---@class UStereoLayerFunctionLibrary : UBlueprintFunctionLibrary
-UStereoLayerFunctionLibrary = {}
+local UStereoLayerFunctionLibrary = {}
 
 function UStereoLayerFunctionLibrary:ShowSplashScreen() end
 ---@param Texture UTexture
@@ -25712,7 +25712,7 @@ function UStereoLayerFunctionLibrary:EnableAutoLoadingSplashScreen(InAutoShowEna
 ---@field bForceMiplevelsToBeResident boolean
 ---@field bIgnoreStreamingMipBias boolean
 ---@field bUseCinematicMipLevels boolean
-UStreamableRenderAsset = {}
+local UStreamableRenderAsset = {}
 
 
 
@@ -25733,12 +25733,12 @@ UStreamableRenderAsset = {}
 ---@field LevelStreamingComponentsUnregistrationGranularity int32
 ---@field EventDrivenLoaderEnabled boolean
 ---@field FlushStreamingOnExit boolean
-UStreamingSettings = {}
+local UStreamingSettings = {}
 
 
 
 ---@class UStringTable : UObject
-UStringTable = {}
+local UStringTable = {}
 
 
 ---@class USubUVAnimation : UObject
@@ -25748,22 +25748,22 @@ UStringTable = {}
 ---@field BoundingMode ESubUVBoundingVertexCount
 ---@field OpacitySourceMode EOpacitySourceMode
 ---@field AlphaThreshold float
-USubUVAnimation = {}
+local USubUVAnimation = {}
 
 
 
 ---@class USubsurfaceProfile : UObject
 ---@field Settings FSubsurfaceProfileStruct
-USubsurfaceProfile = {}
+local USubsurfaceProfile = {}
 
 
 
 ---@class USubsystem : UObject
-USubsystem = {}
+local USubsystem = {}
 
 
 ---@class USubsystemBlueprintLibrary : UBlueprintFunctionLibrary
-USubsystemBlueprintLibrary = {}
+local USubsystemBlueprintLibrary = {}
 
 ---@param ContextObject UObject
 ---@param Class TSubclassOf<UWorldSubsystem>
@@ -25788,7 +25788,7 @@ function USubsystemBlueprintLibrary:GetEngineSubsystem(Class) end
 
 ---@class USystemTimeTimecodeProvider : UTimecodeProvider
 ---@field FrameRate FFrameRate
-USystemTimeTimecodeProvider = {}
+local USystemTimeTimecodeProvider = {}
 
 ---@param InFrameRate FFrameRate
 function USystemTimeTimecodeProvider:SetFrameRate(InFrameRate) end
@@ -25798,7 +25798,7 @@ function USystemTimeTimecodeProvider:SetFrameRate(InFrameRate) end
 ---@field DefaultedText FText
 ---@field UndefaultedText FText
 ---@field TransientText FText
-UTextPropertyTestObject = {}
+local UTextPropertyTestObject = {}
 
 
 
@@ -25816,7 +25816,7 @@ UTextPropertyTestObject = {}
 ---@field HorizSpacingAdjust float
 ---@field VertSpacingAdjust float
 ---@field bAlwaysRenderAsText boolean
-UTextRenderComponent = {}
+local UTextRenderComponent = {}
 
 ---@param Value float
 function UTextRenderComponent:SetYScale(Value) end
@@ -25861,7 +25861,7 @@ function UTextRenderComponent:GetTextLocalSize() end
 ---@field CompressionYCoCg boolean
 ---@field bAsyncResourceReleaseHasBeenStarted boolean
 ---@field AssetUserData TArray<UAssetUserData>
-UTexture = {}
+local UTexture = {}
 
 
 
@@ -25872,7 +25872,7 @@ UTexture = {}
 ---@field AddressX TextureAddress
 ---@field AddressY TextureAddress
 ---@field ImportedSize FIntPoint
-UTexture2D = {}
+local UTexture2D = {}
 
 ---@return int32
 function UTexture2D:Blueprint_GetSizeY() end
@@ -25881,35 +25881,35 @@ function UTexture2D:Blueprint_GetSizeX() end
 
 
 ---@class UTexture2DArray : UTexture
-UTexture2DArray = {}
+local UTexture2DArray = {}
 
 
 ---@class UTexture2DDynamic : UTexture
 ---@field Format EPixelFormat
-UTexture2DDynamic = {}
+local UTexture2DDynamic = {}
 
 
 
 ---@class UTextureCube : UTexture
-UTextureCube = {}
+local UTextureCube = {}
 
 
 ---@class UTextureLODSettings : UObject
 ---@field TextureLODGroups TArray<FTextureLODGroup>
-UTextureLODSettings = {}
+local UTextureLODSettings = {}
 
 
 
 ---@class UTextureLightProfile : UTexture2D
 ---@field Brightness float
 ---@field TextureMultiplier float
-UTextureLightProfile = {}
+local UTextureLightProfile = {}
 
 
 
 ---@class UTextureRenderTarget : UTexture
 ---@field TargetGamma float
-UTextureRenderTarget = {}
+local UTextureRenderTarget = {}
 
 
 
@@ -25928,7 +25928,7 @@ UTextureRenderTarget = {}
 ---@field MipsAddressU TextureAddress
 ---@field MipsAddressV TextureAddress
 ---@field OverrideFormat EPixelFormat
-UTextureRenderTarget2D = {}
+local UTextureRenderTarget2D = {}
 
 
 
@@ -25938,17 +25938,17 @@ UTextureRenderTarget2D = {}
 ---@field OverrideFormat EPixelFormat
 ---@field bHDR boolean
 ---@field bForceLinearGamma boolean
-UTextureRenderTargetCube = {}
+local UTextureRenderTargetCube = {}
 
 
 
 ---@class UThumbnailInfo : UObject
-UThumbnailInfo = {}
+local UThumbnailInfo = {}
 
 
 ---@class UTimecodeProvider : UObject
 ---@field FrameDelay int32
-UTimecodeProvider = {}
+local UTimecodeProvider = {}
 
 ---@return FTimecode
 function UTimecodeProvider:GetTimecode() end
@@ -25963,7 +25963,7 @@ function UTimecodeProvider:GetDelayedTimecode() end
 ---@class UTimelineComponent : UActorComponent
 ---@field TheTimeline FTimeline
 ---@field bIgnoreTimeDilation boolean
-UTimelineComponent = {}
+local UTimelineComponent = {}
 
 function UTimelineComponent:Stop() end
 ---@param NewVectorCurve UCurveVector
@@ -26029,13 +26029,13 @@ function UTimelineComponent:GetIgnoreTimeDilation() end
 ---@field DirectionPropertyName FName
 ---@field UpdateFunctionName FName
 ---@field FinishedFunctionName FName
-UTimelineTemplate = {}
+local UTimelineTemplate = {}
 
 
 
 ---@class UTireType : UDataAsset
 ---@field FrictionScale float
-UTireType = {}
+local UTireType = {}
 
 
 
@@ -26048,12 +26048,12 @@ UTireType = {}
 ---@field ActivationDelay float
 ---@field bPreventRecenter boolean
 ---@field StartupDelay float
-UTouchInterface = {}
+local UTouchInterface = {}
 
 
 
 ---@class UTwitterIntegrationBase : UPlatformInterfaceBase
-UTwitterIntegrationBase = {}
+local UTwitterIntegrationBase = {}
 
 ---@param URL FString
 ---@param ParamKeysAndValues TArray<FString>
@@ -26080,14 +26080,14 @@ function UTwitterIntegrationBase:AuthorizeAccounts() end
 
 ---@class UUserDefinedEnum : UEnum
 ---@field DisplayNameMap TMap<FName, FText>
-UUserDefinedEnum = {}
+local UUserDefinedEnum = {}
 
 
 
 ---@class UUserDefinedStruct : UScriptStruct
 ---@field Status EUserDefinedStructureStatus
 ---@field Guid FGuid
-UUserDefinedStruct = {}
+local UUserDefinedStruct = {}
 
 
 
@@ -26111,12 +26111,12 @@ UUserDefinedStruct = {}
 ---@field CursorClasses TArray<UObject>
 ---@field CustomScalingRuleClassInstance UClass
 ---@field CustomScalingRule UDPICustomScalingRule
-UUserInterfaceSettings = {}
+local UUserInterfaceSettings = {}
 
 
 
 ---@class UVOIPStatics : UBlueprintFunctionLibrary
-UVOIPStatics = {}
+local UVOIPStatics = {}
 
 ---@param InThreshold float
 function UVOIPStatics:SetMicThreshold(InThreshold) end
@@ -26124,7 +26124,7 @@ function UVOIPStatics:SetMicThreshold(InThreshold) end
 
 ---@class UVOIPTalker : UActorComponent
 ---@field Settings FVoiceSettings
-UVOIPTalker = {}
+local UVOIPTalker = {}
 
 ---@param OwningState APlayerState
 function UVOIPTalker:RegisterWithPlayerState(OwningState) end
@@ -26141,7 +26141,7 @@ function UVOIPTalker:BPOnTalkingBegin(AudioComponent) end
 ---@class UVectorField : UObject
 ---@field Bounds FBox
 ---@field Intensity float
-UVectorField = {}
+local UVectorField = {}
 
 
 
@@ -26159,7 +26159,7 @@ UVectorField = {}
 ---@field NoiseField UVectorFieldStatic
 ---@field NoiseScale float
 ---@field NoiseMax float
-UVectorFieldAnimated = {}
+local UVectorFieldAnimated = {}
 
 
 
@@ -26168,7 +26168,7 @@ UVectorFieldAnimated = {}
 ---@field Intensity float
 ---@field Tightness float
 ---@field bPreviewVectorField boolean
-UVectorFieldComponent = {}
+local UVectorFieldComponent = {}
 
 ---@param NewIntensity float
 function UVectorFieldComponent:SetIntensity(NewIntensity) end
@@ -26180,27 +26180,27 @@ function UVectorFieldComponent:SetIntensity(NewIntensity) end
 ---@field SizeZ int32
 ---@field bAllowCPUAccess boolean
 ---@field CPUData TArray<FVector4>
-UVectorFieldStatic = {}
+local UVectorFieldStatic = {}
 
 
 
 ---@class UVirtualTexture : UObject
-UVirtualTexture = {}
+local UVirtualTexture = {}
 
 
 ---@class UVirtualTexturePoolConfig : UObject
 ---@field DefaultSizeInMegabyte int32
 ---@field Pools TArray<FVirtualTextureSpacePoolConfig>
-UVirtualTexturePoolConfig = {}
+local UVirtualTexturePoolConfig = {}
 
 
 
 ---@class UVisualLoggerAutomationTests : UObject
-UVisualLoggerAutomationTests = {}
+local UVisualLoggerAutomationTests = {}
 
 
 ---@class UVisualLoggerKismetLibrary : UBlueprintFunctionLibrary
-UVisualLoggerKismetLibrary = {}
+local UVisualLoggerKismetLibrary = {}
 
 ---@param SourceOwner UObject
 ---@param DestinationOwner UObject
@@ -26239,11 +26239,11 @@ function UVisualLoggerKismetLibrary:EnableRecording(bEnabled) end
 
 
 ---@class UVoiceChannel : UChannel
-UVoiceChannel = {}
+local UVoiceChannel = {}
 
 
 ---@class UVolumeTexture : UTexture
-UVolumeTexture = {}
+local UVolumeTexture = {}
 
 
 ---@class UWindDirectionalSourceComponent : USceneComponent
@@ -26253,7 +26253,7 @@ UVolumeTexture = {}
 ---@field MaxGustAmount float
 ---@field Radius float
 ---@field bPointWind boolean
-UWindDirectionalSourceComponent = {}
+local UWindDirectionalSourceComponent = {}
 
 ---@param InNewType EWindSourceType
 function UWindDirectionalSourceComponent:SetWindType(InNewType) end
@@ -26304,7 +26304,7 @@ function UWindDirectionalSourceComponent:SetMaximumGustAmount(InNewMaxGust) end
 ---@field ComponentsThatNeedEndOfFrameUpdate_OnGameThread TArray<UActorComponent>
 ---@field WorldComposition UWorldComposition
 ---@field PSCPool FWorldPSCPool
-UWorld = {}
+local UWorld = {}
 
 ---@return AWorldSettings
 function UWorld:K2_GetWorldSettings() end
@@ -26317,11 +26317,11 @@ function UWorld:HandleTimelineScrubbed() end
 ---@field bLoadAllTilesDuringCinematic boolean
 ---@field bRebaseOriginIn3DSpace boolean
 ---@field RebaseOriginDistance float
-UWorldComposition = {}
+local UWorldComposition = {}
 
 
 
 ---@class UWorldSubsystem : USubsystem
-UWorldSubsystem = {}
+local UWorldSubsystem = {}
 
 

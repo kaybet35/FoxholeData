@@ -12,7 +12,7 @@
 ---@field BPWaterStencilComponent UBPWaterStencilComponent_C
 ---@field idle UAudioComponent
 ---@field Camera UCameraComponent
-ABPLandingCraftBase_C = {}
+local ABPLandingCraftBase_C = {}
 
 ---@param IsOn boolean
 function ABPLandingCraftBase_C:BPOnVehicleOn(IsOn) end

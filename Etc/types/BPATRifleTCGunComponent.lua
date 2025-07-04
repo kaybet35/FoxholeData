@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATRifleTCGunComponent_C : UDeployableItemComponent
-UBPATRifleTCGunComponent_C = {}
+local UBPATRifleTCGunComponent_C = {}
 
 

@@ -6,7 +6,7 @@
 ---@field RightDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field LeftDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchConnectorCommonMods_C = {}
+local ABPTrenchConnectorCommonMods_C = {}
 
 
 

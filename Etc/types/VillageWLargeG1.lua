@@ -89,7 +89,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AVillageWLargeG1_C = {}
+local AVillageWLargeG1_C = {}
 
 function AVillageWLargeG1_C:ReceiveBeginPlay() end
 function AVillageWLargeG1_C:UpdateLights() end

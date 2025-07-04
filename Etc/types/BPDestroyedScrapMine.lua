@@ -6,7 +6,7 @@
 ---@field NoBuildArea UBoxComponent
 ---@field Decal UDecalComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPDestroyedScrapMine_C = {}
+local ABPDestroyedScrapMine_C = {}
 
 
 

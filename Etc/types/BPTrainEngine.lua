@@ -18,7 +18,7 @@
 ---@field DriverSeat UVehicleSeatComponent
 ---@field DriverExit USeatExitComponent
 ---@field DriverTrigger USeatTriggerComponent
-ABPTrainEngine_C = {}
+local ABPTrainEngine_C = {}
 
 ---@param IsOn boolean
 function ABPTrainEngine_C:BPOnVehicleOn(IsOn) end

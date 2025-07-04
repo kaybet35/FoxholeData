@@ -71,7 +71,7 @@
 ---@field AnimGraphNode_StateMachine_8903CEDA4CBDF267C9ED17A65B47A285 FAnimNode_StateMachine
 ---@field AnimGraphNode_SequencePlayer_592746A04A7D0C365A26E8A2AB020D51 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_70A1C81B42613BB03964B7872C63AA1B FAnimNode_BlendSpacePlayer
-UABP_LargeShipStorageShip_C = {}
+local UABP_LargeShipStorageShip_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeShipStorageShip_C:AnimGraph(AnimGraph) end

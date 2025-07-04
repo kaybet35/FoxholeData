@@ -3,7 +3,7 @@
 ---@class ABattleTankAmmoExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-ABattleTankAmmoExplosion_C = {}
+local ABattleTankAmmoExplosion_C = {}
 
 function ABattleTankAmmoExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

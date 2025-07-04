@@ -15,7 +15,7 @@
 ---@field FortCommon UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPFortFirePitT1_C = {}
+local ABPFortFirePitT1_C = {}
 
 
 

@@ -14,7 +14,7 @@
 ---@field TrenchEmpCommon UTemplateComponent
 ---@field TrenchT1Destroyed01 UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPTrenchEmpDestroyedT2_C = {}
+local ABPTrenchEmpDestroyedT2_C = {}
 
 
 

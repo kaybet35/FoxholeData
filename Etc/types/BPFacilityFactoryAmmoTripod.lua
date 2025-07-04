@@ -15,7 +15,7 @@
 ---@field FacilityFactoryAmmoTripodBoxs03 UStaticMeshComponent
 ---@field FacilityAmmoFactoryRocketRoof UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityFactoryAmmoTripod_C = {}
+local ABPFacilityFactoryAmmoTripod_C = {}
 
 
 

@@ -11,7 +11,7 @@
 ---@field LandscapeCheck UBuildSocketComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field ATPillbox UStaticMeshComponent
-ABPATPillbox_C = {}
+local ABPATPillbox_C = {}
 
 
 

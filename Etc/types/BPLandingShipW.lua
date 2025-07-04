@@ -6,7 +6,7 @@
 ---@field Passenger1 UVehicleSeatComponent
 ---@field Passenger1Trigger USeatTriggerComponent
 ---@field Passenger1Exit USeatExitComponent
-ABPLandingShipW_C = {}
+local ABPLandingShipW_C = {}
 
 
 

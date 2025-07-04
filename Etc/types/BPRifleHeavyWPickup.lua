@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRifleHeavyWPickup_C : AFirearmPickup
-ABPRifleHeavyWPickup_C = {}
+local ABPRifleHeavyWPickup_C = {}
 
 

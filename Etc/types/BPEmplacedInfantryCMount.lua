@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEmplacedInfantryCMount_C : UHitScanMountComponent
-UBPEmplacedInfantryCMount_C = {}
+local UBPEmplacedInfantryCMount_C = {}
 
 

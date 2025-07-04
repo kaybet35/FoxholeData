@@ -4,12 +4,12 @@
 ---@field DeviceName FName
 ---@field NumInputChannels int32
 ---@field SampleRate int32
-FAudioCaptureDeviceInfo = {}
+local FAudioCaptureDeviceInfo = {}
 
 
 
 ---@class UAudioCapture : UAudioGenerator
-UAudioCapture = {}
+local UAudioCapture = {}
 
 function UAudioCapture:StopCapturingAudio() end
 function UAudioCapture:StartCapturingAudio() end
@@ -22,12 +22,12 @@ function UAudioCapture:GetAudioCaptureDeviceInfo(OutInfo) end
 
 ---@class UAudioCaptureComponent : USynthComponent
 ---@field JitterLatencyFrames int32
-UAudioCaptureComponent = {}
+local UAudioCaptureComponent = {}
 
 
 
 ---@class UAudioCaptureFunctionLibrary : UBlueprintFunctionLibrary
-UAudioCaptureFunctionLibrary = {}
+local UAudioCaptureFunctionLibrary = {}
 
 ---@return UAudioCapture
 function UAudioCaptureFunctionLibrary:CreateAudioCapture() end

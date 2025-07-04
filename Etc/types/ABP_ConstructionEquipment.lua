@@ -12,7 +12,7 @@
 ---@field NewVar_1 float
 ---@field NewVar_2 float
 ---@field NewVar_3 float
-UABP_ConstructionEquipment_C = {}
+local UABP_ConstructionEquipment_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ConstructionEquipment_C:AnimGraph(AnimGraph) end

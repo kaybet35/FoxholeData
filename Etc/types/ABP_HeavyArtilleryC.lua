@@ -19,7 +19,7 @@
 ---@field AnimGraphNode_StateResult_DE557BD545FED33BC4C3D7B4E4A6B7B0 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_AED157D7476EC512644CD088809A9CF9 FAnimNode_StateMachine
 ---@field AnimGraphNode_RotationOffsetBlendSpace_2DDE83D246B2EBE215714A89F1E0001A FAnimNode_RotationOffsetBlendSpace
-UABP_HeavyArtilleryC_C = {}
+local UABP_HeavyArtilleryC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_HeavyArtilleryC_C:AnimGraph(AnimGraph) end

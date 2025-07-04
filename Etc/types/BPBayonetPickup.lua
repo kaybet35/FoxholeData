@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPBayonetPickup_C : AAccessoryPickup
-ABPBayonetPickup_C = {}
+local ABPBayonetPickup_C = {}
 
 

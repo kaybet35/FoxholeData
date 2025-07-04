@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UStaticMeshDescription : UMeshDescriptionBase
-UStaticMeshDescription = {}
+local UStaticMeshDescription = {}
 
 ---@param VertexInstanceID FVertexInstanceID
 ---@param UV FVector2D

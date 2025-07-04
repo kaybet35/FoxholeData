@@ -12,7 +12,7 @@
 ---@field BelowBlockingA UBoxComponent
 ---@field SideB UStaticMeshComponent
 ---@field SideA UStaticMeshComponent
-ABPDestroyedTrainBridgeC_C = {}
+local ABPDestroyedTrainBridgeC_C = {}
 
 
 

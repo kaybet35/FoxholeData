@@ -64,7 +64,7 @@
 ---@field RoofMesh UStaticMeshComponent
 ---@field ArtilleryShelterWeakPoint UBoxComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownCLargeGarrisonGS1_C = {}
+local ATownCLargeGarrisonGS1_C = {}
 
 function ATownCLargeGarrisonGS1_C:ReceiveBeginPlay() end
 ---@param TechTreeComponent UTechTreeComponent

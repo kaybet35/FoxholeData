@@ -7,7 +7,7 @@
 ---@field NoMansLandSplinter UParticleSystemComponent
 ---@field Splinter UAudioComponent
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPPine01DeadReplacement_C = {}
+local ABPPine01DeadReplacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPPine01DeadReplacement_C:OnStateChanged(State) end

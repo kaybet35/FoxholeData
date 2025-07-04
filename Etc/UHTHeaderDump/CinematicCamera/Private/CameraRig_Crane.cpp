@@ -12,8 +12,8 @@ ACameraRig_Crane::ACameraRig_Crane(const FObjectInitializer& ObjectInitializer) 
     this->CraneYawControl = CreateDefaultSubobject<USceneComponent>(TEXT("CraneYawControl"));
     this->CranePitchControl = CreateDefaultSubobject<USceneComponent>(TEXT("CranePitchControl"));
     this->CraneCameraMount = CreateDefaultSubobject<USceneComponent>(TEXT("CraneCameraMount"));
-    this->CranePitchControl->SetupAttachment(CraneYawControl);
     this->CraneCameraMount->SetupAttachment(CranePitchControl);
+    this->CranePitchControl->SetupAttachment(CraneYawControl);
     this->CraneYawControl->SetupAttachment(RootComponent);
 }
 

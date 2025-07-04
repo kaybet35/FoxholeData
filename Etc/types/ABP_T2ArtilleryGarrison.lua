@@ -13,7 +13,7 @@
 ---@field AnimGraphNode_SequencePlayer_319998A84C4B5844D2C21AB1C3188D28 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_12E417B142E6451E5DEC429CB921CD67 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_A01DA6FF42CEBB5EA0ED22881BDC909A FAnimNode_StateMachine
-UABP_T2ArtilleryGarrison_C = {}
+local UABP_T2ArtilleryGarrison_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_T2ArtilleryGarrison_C:AnimGraph(AnimGraph) end

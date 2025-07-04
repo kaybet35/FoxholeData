@@ -13,7 +13,7 @@
 ---@field Decal UDecalComponent
 ---@field FVFLargeStorageContainer UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory1RocketAssembly_C = {}
+local ABPFacilityVehicleFactory1RocketAssembly_C = {}
 
 
 

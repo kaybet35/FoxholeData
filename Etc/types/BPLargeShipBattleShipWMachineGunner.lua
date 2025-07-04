@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLargeShipBattleShipWMachineGunner_C : UBPWarVehicleMachineGunnerComponent_C
-UBPLargeShipBattleShipWMachineGunner_C = {}
+local UBPLargeShipBattleShipWMachineGunner_C = {}
 
 

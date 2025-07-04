@@ -5,7 +5,7 @@
 ---@field FortCommon UTemplateComponent
 ---@field FloorMesh UStaticMeshComponent
 ---@field RoofMesh UStaticMeshComponent
-ABPFortEmpT3_C = {}
+local ABPFortEmpT3_C = {}
 
 
 

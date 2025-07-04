@@ -3,7 +3,7 @@
 ---@class AMortarSHExplosionDirectFire_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AMortarSHExplosionDirectFire_C = {}
+local AMortarSHExplosionDirectFire_C = {}
 
 function AMortarSHExplosionDirectFire_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

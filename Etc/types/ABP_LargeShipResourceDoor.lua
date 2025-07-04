@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_SequencePlayer_DED15B16444B916647913488EA5EDD11 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_3382CECE4930A2FC793A64A8DA877BF7 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_1C8B61FD4FD50041E0A16D91D069505D FAnimNode_StateMachine
-UABP_LargeShipResourceDoor_C = {}
+local UABP_LargeShipResourceDoor_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeShipResourceDoor_C:AnimGraph(AnimGraph) end

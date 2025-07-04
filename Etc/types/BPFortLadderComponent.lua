@@ -4,7 +4,7 @@
 ---@field Ladder ULadderComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortLadderComponent_C = {}
+local ABPFortLadderComponent_C = {}
 
 
 

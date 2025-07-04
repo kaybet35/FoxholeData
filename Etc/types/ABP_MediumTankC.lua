@@ -23,7 +23,7 @@
 ---@field AnimGraphNode_StateResult_A4E9B6EF418A4A07DA4CC59311B743BD FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_8921F8AC4D5C5B8A9B0440968F64DF7F FAnimNode_StateMachine
 ---@field AnimGraphNode_BlendSpacePlayer_3E56F9204CD2DD906F2633B44C8D36FD FAnimNode_BlendSpacePlayer
-UABP_MediumTankC_C = {}
+local UABP_MediumTankC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_MediumTankC_C:AnimGraph(AnimGraph) end

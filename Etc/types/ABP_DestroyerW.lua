@@ -35,7 +35,7 @@
 ---@field AnimGraphNode_SequencePlayer_0789DD3841D312A83D79BEB211FB020E FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_1B0117954A266D88A7E40E8DBEDF3AF8 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_Root_C86BA8DA4EA0BC6D8CED28A121289CAB FAnimNode_Root
-UABP_DestroyerW_C = {}
+local UABP_DestroyerW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_DestroyerW_C:AnimGraph(AnimGraph) end

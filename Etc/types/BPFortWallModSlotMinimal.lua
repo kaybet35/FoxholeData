@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFortWallModSlotMinimal_C : UModificationSlotComponent
-UBPFortWallModSlotMinimal_C = {}
+local UBPFortWallModSlotMinimal_C = {}
 
 

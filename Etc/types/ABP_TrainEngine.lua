@@ -7,7 +7,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_51E3A4014A3A665D12443F8C6A3166A7 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendListByBool_E728639640A658DF92E77F92E2181AAD FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_F91C2BB942516193F9D6B5B69E0C881B FAnimNode_SequencePlayer
-UABP_TrainEngine_C = {}
+local UABP_TrainEngine_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_TrainEngine_C:AnimGraph(AnimGraph) end

@@ -18,7 +18,7 @@
 ---@field CivicMaterial UStaticMeshComponent
 ---@field RefinedMaterialPickup UStaticMeshComponent
 ---@field RefineryBuildingDestroyed UStaticMeshComponent
-ABPDestroyedRefinery_C = {}
+local ABPDestroyedRefinery_C = {}
 
 
 

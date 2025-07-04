@@ -6,7 +6,7 @@
 ---@field GunnerSeat6 UVehicleSeatComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
 ---@field MainBodyTop USkeletalMeshComponent
-ABPHalftrackTwinW_C = {}
+local ABPHalftrackTwinW_C = {}
 
 
 

@@ -12,7 +12,7 @@
 ---@field FortCommonDirtT2 UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field FortT1GunAI UStaticMeshComponent
-ABPRifleAIT2_C = {}
+local ABPRifleAIT2_C = {}
 
 
 

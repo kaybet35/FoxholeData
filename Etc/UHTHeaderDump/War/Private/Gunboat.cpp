@@ -8,8 +8,8 @@ AGunboat::AGunboat(const FObjectInitializer& ObjectInitializer) : Super(ObjectIn
     this->ServerAnimTickMode = EServerAnimTickMode::TickWhenOccupied;
     this->WorkVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("WorkVolume"));
     this->KillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("KillVolume"));
-    this->WorkVolume->SetupAttachment(RootComponent);
     this->KillVolume->SetupAttachment(RootComponent);
+    this->WorkVolume->SetupAttachment(RootComponent);
 }
 
 void AGunboat::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

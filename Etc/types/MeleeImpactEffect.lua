@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
 ---@field DefaultSceneRoot USceneComponent
-AMeleeImpactEffect_C = {}
+local AMeleeImpactEffect_C = {}
 
 function AMeleeImpactEffect_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

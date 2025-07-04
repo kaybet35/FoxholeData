@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPATAmmoPickup_C : ATankAmmoPickup
-ABPATAmmoPickup_C = {}
+local ABPATAmmoPickup_C = {}
 
 

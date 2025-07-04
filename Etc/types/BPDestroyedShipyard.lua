@@ -2,7 +2,7 @@
 
 ---@class ABPDestroyedShipyard_C : ADestroyedVehicleFactory
 ---@field StaticMesh UStaticMeshComponent
-ABPDestroyedShipyard_C = {}
+local ABPDestroyedShipyard_C = {}
 
 
 

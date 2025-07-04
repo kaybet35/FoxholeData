@@ -29,7 +29,7 @@
 ---@field LPVSpecularOcclusionIntensity float
 ---@field LPVFadeRange float
 ---@field LPVDirectionalOcclusionFadeRange float
-FLightPropagationVolumeSettings = {}
+local FLightPropagationVolumeSettings = {}
 
 
 

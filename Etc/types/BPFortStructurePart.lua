@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFortStructurePart_C : ABPFortPartBase_C
-ABPFortStructurePart_C = {}
+local ABPFortStructurePart_C = {}
 
 

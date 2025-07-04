@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSmallRailTrackSplineBiarc_C : ABPSmallRailTrackSpline_C
-ABPSmallRailTrackSplineBiarc_C = {}
+local ABPSmallRailTrackSplineBiarc_C = {}
 
 

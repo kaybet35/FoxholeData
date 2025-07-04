@@ -9,19 +9,19 @@
 ---@field bForceLQReflections boolean
 ---@field bDisableMaterialNormalCalculation boolean
 ---@field MobileCSMQuality EMobileCSMQuality
-FMaterialQualityOverrides = {}
+local FMaterialQualityOverrides = {}
 
 
 
 ---@class UMaterialShaderQualitySettings : UObject
 ---@field ForwardSettingMap TMap<FName, UShaderPlatformQualitySettings>
-UMaterialShaderQualitySettings = {}
+local UMaterialShaderQualitySettings = {}
 
 
 
 ---@class UShaderPlatformQualitySettings : UObject
 ---@field QualityOverrides FMaterialQualityOverrides
-UShaderPlatformQualitySettings = {}
+local UShaderPlatformQualitySettings = {}
 
 
 

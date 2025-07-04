@@ -1,41 +1,41 @@
 ---@meta
 
 ---@class FEdgeID : FElementID
-FEdgeID = {}
+local FEdgeID = {}
 
 
 ---@class FElementID
 ---@field IDValue int32
-FElementID = {}
+local FElementID = {}
 
 
 
 ---@class FPolygonGroupID : FElementID
-FPolygonGroupID = {}
+local FPolygonGroupID = {}
 
 
 ---@class FPolygonID : FElementID
-FPolygonID = {}
+local FPolygonID = {}
 
 
 ---@class FTriangleID : FElementID
-FTriangleID = {}
+local FTriangleID = {}
 
 
 ---@class FVertexID : FElementID
-FVertexID = {}
+local FVertexID = {}
 
 
 ---@class FVertexInstanceID : FElementID
-FVertexInstanceID = {}
+local FVertexInstanceID = {}
 
 
 ---@class UDEPRECATED_MeshDescription : UObject
-UDEPRECATED_MeshDescription = {}
+local UDEPRECATED_MeshDescription = {}
 
 
 ---@class UMeshDescriptionBase : UObject
-UMeshDescriptionBase = {}
+local UMeshDescriptionBase = {}
 
 ---@param VertexID FVertexID
 ---@param Position FVector

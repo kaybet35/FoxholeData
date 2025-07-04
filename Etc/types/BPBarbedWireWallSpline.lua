@@ -5,7 +5,7 @@
 ---@field BarbedWire USplineConnectorComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
-ABPBarbedWireWallSpline_C = {}
+local ABPBarbedWireWallSpline_C = {}
 
 
 

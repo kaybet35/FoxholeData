@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHighExplosiveBreachingLeakDamageType_C : USimDamageType
-UBPHighExplosiveBreachingLeakDamageType_C = {}
+local UBPHighExplosiveBreachingLeakDamageType_C = {}
 
 

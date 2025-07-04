@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRpgAmmoPickup_C : AAmmoPickup
-ABPRpgAmmoPickup_C = {}
+local ABPRpgAmmoPickup_C = {}
 
 

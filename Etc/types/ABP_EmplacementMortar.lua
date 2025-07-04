@@ -15,7 +15,7 @@
 ---@field isCannonCrankMoving boolean
 ---@field CannonYaw float
 ---@field CannonPitch float
-UABP_EmplacementMortar_C = {}
+local UABP_EmplacementMortar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacementMortar_C:AnimGraph(AnimGraph) end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMediumTank2IndirectWRackRPGGunner_C : UProjectileGunnerMountComponent
-UBPMediumTank2IndirectWRackRPGGunner_C = {}
+local UBPMediumTank2IndirectWRackRPGGunner_C = {}
 
 

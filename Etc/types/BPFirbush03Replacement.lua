@@ -3,7 +3,7 @@
 ---@class ABPFirbush03Replacement_C : AClientFoliageReplacement
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPFirbush03Replacement_C = {}
+local ABPFirbush03Replacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPFirbush03Replacement_C:OnStateChanged(State) end

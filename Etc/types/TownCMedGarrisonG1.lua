@@ -60,7 +60,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownCMedGarrisonG1_C = {}
+local ATownCMedGarrisonG1_C = {}
 
 
 

@@ -87,7 +87,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ABPGarrisonBarn_C = {}
+local ABPGarrisonBarn_C = {}
 
 function ABPGarrisonBarn_C:ReceiveBeginPlay() end
 function ABPGarrisonBarn_C:UpdateLights() end

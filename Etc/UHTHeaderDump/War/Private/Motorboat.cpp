@@ -8,8 +8,8 @@ AMotorboat::AMotorboat(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->FrontWaterEmitter = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("FrontWaterEmitter"));
     const FProperty* p_Mesh_Parent = GetClass()->FindPropertyByName("Mesh");
     this->BackWaterEmitter = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("BackWaterEmitter"));
-    this->FrontWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->BackWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->FrontWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
 }
 
 

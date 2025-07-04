@@ -26,12 +26,12 @@ AOfflineCharacter::AOfflineCharacter(const FObjectInitializer& ObjectInitializer
     this->CurrentHealth = 0.00f;
     this->MaxHealth = 100.00f;
     this->DeathDuration = 0.00f;
-    this->CharacterMesh->SetupAttachment(RootComponent);
-    this->Head->SetupAttachment(CharacterMesh);
-    this->Hands->SetupAttachment(CharacterMesh);
-    this->Legs->SetupAttachment(CharacterMesh);
     this->Back->SetupAttachment(CharacterMesh);
+    this->CharacterMesh->SetupAttachment(RootComponent);
+    this->Hands->SetupAttachment(CharacterMesh);
+    this->Head->SetupAttachment(CharacterMesh);
     this->Helmet->SetupAttachment(CharacterMesh);
+    this->Legs->SetupAttachment(CharacterMesh);
 }
 
 void AOfflineCharacter::MulticastApplyFatalHit_Implementation() {

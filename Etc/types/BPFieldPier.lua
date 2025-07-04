@@ -14,7 +14,7 @@
 ---@field Spline USplineConnectorComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
-ABPFieldPier_C = {}
+local ABPFieldPier_C = {}
 
 
 

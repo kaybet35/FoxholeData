@@ -17,7 +17,7 @@
 ---@field RoofDirt UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPFortRampT2_C = {}
+local ABPFortRampT2_C = {}
 
 
 

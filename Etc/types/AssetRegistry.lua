@@ -9,13 +9,13 @@
 ---@field bRecursivePaths boolean
 ---@field bRecursiveClasses boolean
 ---@field bIncludeOnlyOnDiskAssets boolean
-FARFilter = {}
+local FARFilter = {}
 
 
 
 ---@class FAssetBundleData
 ---@field Bundles TArray<FAssetBundleEntry>
-FAssetBundleData = {}
+local FAssetBundleData = {}
 
 
 
@@ -23,7 +23,7 @@ FAssetBundleData = {}
 ---@field BundleScope FPrimaryAssetId
 ---@field BundleName FName
 ---@field BundleAssets TArray<FSoftObjectPath>
-FAssetBundleEntry = {}
+local FAssetBundleEntry = {}
 
 
 
@@ -33,7 +33,7 @@ FAssetBundleEntry = {}
 ---@field PackagePath FName
 ---@field AssetName FName
 ---@field AssetClass FName
-FAssetData = {}
+local FAssetData = {}
 
 
 
@@ -43,19 +43,19 @@ FAssetData = {}
 ---@field bIncludeSearchableNames boolean
 ---@field bIncludeSoftManagementReferences boolean
 ---@field bIncludeHardManagementReferences boolean
-FAssetRegistryDependencyOptions = {}
+local FAssetRegistryDependencyOptions = {}
 
 
 
 ---@class FTagAndValue
 ---@field Tag FName
 ---@field Value FString
-FTagAndValue = {}
+local FTagAndValue = {}
 
 
 
 ---@class IAssetRegistry : IInterface
-IAssetRegistry = {}
+local IAssetRegistry = {}
 
 ---@param AssetDataList TArray<FAssetData>
 ---@param Filter FARFilter
@@ -128,7 +128,7 @@ function IAssetRegistry:GetAllAssets(OutAssetData, bIncludeOnlyOnDiskAssets) end
 
 
 ---@class UAssetRegistryHelpers : UObject
-UAssetRegistryHelpers = {}
+local UAssetRegistryHelpers = {}
 
 ---@param InAssetData FAssetData
 ---@return FSoftObjectPath
@@ -175,6 +175,6 @@ function UAssetRegistryHelpers:CreateAssetData(InAsset, bAllowBlueprintClass) en
 
 
 ---@class UAssetRegistryImpl : UObject
-UAssetRegistryImpl = {}
+local UAssetRegistryImpl = {}
 
 

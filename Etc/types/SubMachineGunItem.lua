@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USubMachineGunItem_C : UHeavyMachineGunItemComponent
-USubMachineGunItem_C = {}
+local USubMachineGunItem_C = {}
 
 

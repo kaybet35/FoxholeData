@@ -13,7 +13,7 @@
 ---@field Decal3 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field BridgeMesh UStaticMeshComponent
-ABPConcreteBridge_C = {}
+local ABPConcreteBridge_C = {}
 
 
 

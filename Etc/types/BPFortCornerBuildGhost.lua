@@ -8,7 +8,7 @@
 ---@field TrenchBuildsite02Side04 UStaticMeshComponent
 ---@field TrenchBuildsite02SideRope03 UStaticMeshComponent
 ---@field TrenchBuildsite02Side03 UStaticMeshComponent
-ABPFortCornerBuildGhost_C = {}
+local ABPFortCornerBuildGhost_C = {}
 
 
 

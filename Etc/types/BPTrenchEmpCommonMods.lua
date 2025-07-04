@@ -10,7 +10,7 @@
 ---@field BackLeftDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field FrontDefenseModSlot UBPTrenchDefenseModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchEmpCommonMods_C = {}
+local ABPTrenchEmpCommonMods_C = {}
 
 
 

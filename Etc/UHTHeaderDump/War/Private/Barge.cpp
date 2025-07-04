@@ -32,18 +32,18 @@ ABarge::ABarge(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitia
     this->TransferLocation = CreateDefaultSubobject<USceneComponent>(TEXT("TransferLocation"));
     this->GlobalShippableInfo = NULL;
     this->ShippableUseComponent = NULL;
-    this->WakeWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->WaterDriveLoop->SetupAttachment(RootComponent);
-    this->KillVolume->SetupAttachment(RootComponent);
-    this->WorkVolume->SetupAttachment(RootComponent);
+    this->BackLeftWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->BackRightWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->BaseMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->RopeMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->TransferLocation->SetupAttachment(RootComponent);
-    this->RampDriveVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->FrontLeftWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
     this->FrontRightWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->BackRightWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
-    this->BackLeftWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->KillVolume->SetupAttachment(RootComponent);
+    this->RampDriveVolume->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->RopeMesh->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->TransferLocation->SetupAttachment(RootComponent);
+    this->WakeWaterEmitter->SetupAttachment(p_Mesh_Parent->ContainerPtrToValuePtr<USkeletalMeshComponent>(this));
+    this->WaterDriveLoop->SetupAttachment(RootComponent);
+    this->WorkVolume->SetupAttachment(RootComponent);
 }
 
 void ABarge::ServerToggleRamp_Implementation() {

@@ -2,7 +2,7 @@
 
 ---@class AWaterExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
-AWaterExplosion_C = {}
+local AWaterExplosion_C = {}
 
 function AWaterExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

@@ -19,7 +19,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_B3CA4869400FE21A0EECA096B200480C FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_1617551C472B6AC3E08B038D565163C1 FAnimNode_RotationOffsetBlendSpace
 ---@field Test float
-UABP_EmplacedATLargeW_C = {}
+local UABP_EmplacedATLargeW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacedATLargeW_C:AnimGraph(AnimGraph) end

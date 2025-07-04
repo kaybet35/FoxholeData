@@ -6,7 +6,7 @@
 ---@field DecalFront UDecalComponent
 ---@field DecalRight UDecalComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchDirtDecals_C = {}
+local ABPTrenchDirtDecals_C = {}
 
 
 

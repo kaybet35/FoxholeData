@@ -10,7 +10,7 @@
 ---@field AnimGraphNode_BlendListByBool_A1EBE9C14379E1D4118862B554BE47DA FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_BDFE916C4BFD6891484BB583A4AF6176 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_61C451BB48160AFA4974F39B9CE78602 FAnimNode_RotationOffsetBlendSpace
-UABP_ArmoredCar_C = {}
+local UABP_ArmoredCar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ArmoredCar_C:AnimGraph(AnimGraph) end

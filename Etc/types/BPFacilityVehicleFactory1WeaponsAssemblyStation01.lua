@@ -15,7 +15,7 @@
 ---@field FVFBarrel03 UStaticMeshComponent
 ---@field FVFBarrel02 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory1WeaponsAssemblyStation01_C = {}
+local ABPFacilityVehicleFactory1WeaponsAssemblyStation01_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPGasMaskPickup_C : AWearablePickup
-ABPGasMaskPickup_C = {}
+local ABPGasMaskPickup_C = {}
 
 

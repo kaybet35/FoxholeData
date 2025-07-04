@@ -3,7 +3,7 @@
 ---@class ATracerFireATFX_C : AWeaponFireFX
 ---@field ParticleSystem UParticleSystemComponent
 ---@field StaticMesh UStaticMeshComponent
-ATracerFireATFX_C = {}
+local ATracerFireATFX_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AIn07k_C : ALorePickup
-AIn07k_C = {}
+local AIn07k_C = {}
 
 

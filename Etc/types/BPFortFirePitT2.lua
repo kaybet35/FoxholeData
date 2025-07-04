@@ -17,7 +17,7 @@
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPFortFirePitT2_C = {}
+local ABPFortFirePitT2_C = {}
 
 
 

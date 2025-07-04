@@ -17,7 +17,7 @@
 ---@field Decal3 UDecalComponent
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
-ABPTrenchDestroyedT1_C = {}
+local ABPTrenchDestroyedT1_C = {}
 
 
 

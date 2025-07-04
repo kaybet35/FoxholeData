@@ -4,7 +4,7 @@
 ---@field Decal UDecalComponent
 ---@field Decal1 UDecalComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityTransferResourceDestroyed_C = {}
+local ABPFacilityTransferResourceDestroyed_C = {}
 
 
 

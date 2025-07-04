@@ -6,7 +6,7 @@
 ---@field FrontLeftLandscapeCheck UBuildSocketComponent
 ---@field FrontRightLandscapeCheck UBuildSocketComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchConnectorBuildGhostSockets_C = {}
+local ABPTrenchConnectorBuildGhostSockets_C = {}
 
 
 

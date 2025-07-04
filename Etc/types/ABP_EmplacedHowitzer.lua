@@ -19,7 +19,7 @@
 ---@field AnimGraphNode_StateResult_8D27232145B4CC2CD955AF8FB4905735 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_D06C988D40FE21AD4ABF96A9AE0A0574 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_1D8A256F44FD5DC293D04A9D17708DEA FAnimNode_StateMachine
-UABP_EmplacedHowitzer_C = {}
+local UABP_EmplacedHowitzer_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacedHowitzer_C:AnimGraph(AnimGraph) end

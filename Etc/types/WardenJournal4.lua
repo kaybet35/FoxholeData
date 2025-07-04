@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AWardenJournal4_C : ALorePickup
-AWardenJournal4_C = {}
+local AWardenJournal4_C = {}
 
 

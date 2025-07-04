@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFacilityTransferMaterialLayout_C : UBPBaseResourceLayout_C
-UBPFacilityTransferMaterialLayout_C = {}
+local UBPFacilityTransferMaterialLayout_C = {}
 
 

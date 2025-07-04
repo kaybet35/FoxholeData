@@ -28,10 +28,10 @@ AFacilityRefinery::AFacilityRefinery(const FObjectInitializer& ObjectInitializer
     this->bReplicatedIsActive = false;
     this->MaxOrders = 5;
     this->ItemInputBuffer = 0;
-    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
     this->CraneSpawnLocationComponent->SetupAttachment(RootComponent);
     this->PowerSocket->SetupAttachment(RootComponent);
     this->TransferLocation->SetupAttachment(RootComponent);
+    this->UpgradeSlotComponent->SetupAttachment(RootComponent);
 }
 
 void AFacilityRefinery::OnRep_ReplicatedIsActive() {

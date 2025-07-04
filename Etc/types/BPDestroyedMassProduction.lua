@@ -12,7 +12,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field MassProductionFactory UStaticMeshComponent
-ABPDestroyedMassProduction_C = {}
+local ABPDestroyedMassProduction_C = {}
 
 
 

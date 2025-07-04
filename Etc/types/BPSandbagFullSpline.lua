@@ -5,7 +5,7 @@
 ---@field Sandbag USplineConnectorComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
-ABPSandbagFullSpline_C = {}
+local ABPSandbagFullSpline_C = {}
 
 
 

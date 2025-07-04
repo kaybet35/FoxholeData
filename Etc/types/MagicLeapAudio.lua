@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class FMagicLeapAudioDummyStruct
-FMagicLeapAudioDummyStruct = {}
+local FMagicLeapAudioDummyStruct = {}
 
 
 ---@class UMagicLeapAudioFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapAudioFunctionLibrary = {}
+local UMagicLeapAudioFunctionLibrary = {}
 
 ---@param ResultDelegate FSetOnAudioJackUnpluggedDelegateResultDelegate
 ---@return boolean

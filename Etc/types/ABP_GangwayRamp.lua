@@ -22,7 +22,7 @@
 ---@field AnimGraphNode_SequencePlayer_97241DB3464735869DF201BC4E985401 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_6B906A834C16540F08C326BEA8E1F0C6 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_9EA897A346B0160641DB4491C9E85AAC FAnimNode_StateMachine
-UABP_GangwayRamp_C = {}
+local UABP_GangwayRamp_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_GangwayRamp_C:AnimGraph(AnimGraph) end

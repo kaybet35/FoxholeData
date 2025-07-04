@@ -3,7 +3,7 @@
 ---@class AWaterSurfaceTorpedoHitExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AWaterSurfaceTorpedoHitExplosion_C = {}
+local AWaterSurfaceTorpedoHitExplosion_C = {}
 
 function AWaterSurfaceTorpedoHitExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

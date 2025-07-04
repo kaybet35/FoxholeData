@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMGTCGunComponent_C : UDeployableItemComponent
-UBPMGTCGunComponent_C = {}
+local UBPMGTCGunComponent_C = {}
 
 

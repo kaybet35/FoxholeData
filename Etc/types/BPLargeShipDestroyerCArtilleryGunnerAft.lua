@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLargeShipDestroyerCArtilleryGunnerAft_C : UArtilleryGunnerMountComponent
-UBPLargeShipDestroyerCArtilleryGunnerAft_C = {}
+local UBPLargeShipDestroyerCArtilleryGunnerAft_C = {}
 
 

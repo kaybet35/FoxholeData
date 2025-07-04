@@ -190,7 +190,7 @@
 ---@field BarracksRoom URoomComponent
 ---@field EngineRoom URoomComponent
 ---@field Floodable UFloodableComponent
-ABPLargeShipDestroyerC_C = {}
+local ABPLargeShipDestroyerC_C = {}
 
 function ABPLargeShipDestroyerC_C:BPOnClientBeginPlay() end
 ---@param EntryPoint int32

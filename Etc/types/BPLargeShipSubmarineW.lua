@@ -174,7 +174,7 @@
 ---@field DriverExit USeatExitComponent
 ---@field Camera UCameraComponent
 ---@field DriverSeat0 UVehicleSeatComponent
-ABPLargeShipSubmarineW_C = {}
+local ABPLargeShipSubmarineW_C = {}
 
 
 

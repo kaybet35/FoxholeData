@@ -16,7 +16,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_B18F18234A495F82B86B4298BA7F1D68 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendListByBool_895BDA984428A5CC8844D3A6F2CF016F FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_BCEF608F44F6E8CD7C755D838868CB24 FAnimNode_SequencePlayer
-UABP_ConstructionVehicle_C = {}
+local UABP_ConstructionVehicle_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ConstructionVehicle_C:AnimGraph(AnimGraph) end

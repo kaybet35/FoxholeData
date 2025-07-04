@@ -9,7 +9,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_58E28579423AC6E8946FA7A89E3A5C31 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_E37033F6444C4132481CDCBC80F24EFF FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_LayeredBoneBlend_550E1D124B5DCB680436A2BB5401EC0F FAnimNode_LayeredBoneBlend
-UABP_LargeShipResource_C = {}
+local UABP_LargeShipResource_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeShipResource_C:AnimGraph(AnimGraph) end

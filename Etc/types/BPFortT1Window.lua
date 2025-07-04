@@ -7,7 +7,7 @@
 ---@field MovementBlocker UBoxComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortT1Window_C = {}
+local ABPFortT1Window_C = {}
 
 
 

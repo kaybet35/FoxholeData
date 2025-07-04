@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPGrenadeWItemComponent_C : UGrenadeItemComponent
-UBPGrenadeWItemComponent_C = {}
+local UBPGrenadeWItemComponent_C = {}
 
 

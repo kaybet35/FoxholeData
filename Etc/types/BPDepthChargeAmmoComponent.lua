@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPDepthChargeAmmoComponent_C : ULargeItemComponent
-UBPDepthChargeAmmoComponent_C = {}
+local UBPDepthChargeAmmoComponent_C = {}
 
 

@@ -25,7 +25,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriveIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPMechW_C = {}
+local ABPMechW_C = {}
 
 ---@param IsOn boolean
 function ABPMechW_C:BPOnVehicleOn(IsOn) end

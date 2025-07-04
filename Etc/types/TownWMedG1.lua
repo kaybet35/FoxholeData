@@ -88,7 +88,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownWMedG1_C = {}
+local ATownWMedG1_C = {}
 
 
 

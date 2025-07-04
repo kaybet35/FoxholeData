@@ -15,7 +15,7 @@
 ---@field RightFortSocket UBPRightFortSocket_C
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortFlameCommon_C = {}
+local ABPFortFlameCommon_C = {}
 
 
 

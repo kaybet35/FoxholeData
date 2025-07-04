@@ -2,7 +2,7 @@
 
 ---@class ABPATRifleTCPickup_C : AGearPickup
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPATRifleTCPickup_C = {}
+local ABPATRifleTCPickup_C = {}
 
 
 

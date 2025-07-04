@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPReservePowerPickup_C : AGearPickup
-ABPReservePowerPickup_C = {}
+local ABPReservePowerPickup_C = {}
 
 

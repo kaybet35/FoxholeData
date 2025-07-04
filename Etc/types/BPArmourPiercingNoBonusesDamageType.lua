@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPArmourPiercingNoBonusesDamageType_C : USimDamageType
-UBPArmourPiercingNoBonusesDamageType_C = {}
+local UBPArmourPiercingNoBonusesDamageType_C = {}
 
 

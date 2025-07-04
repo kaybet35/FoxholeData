@@ -24,7 +24,7 @@
 ---@field FrontLightLeftHeadlight UStaticMeshComponent
 ---@field FrontLightRightHeadlight UStaticMeshComponent
 ---@field Camera UCameraComponent
-ABPMech_C = {}
+local ABPMech_C = {}
 
 ---@param IsOn boolean
 function ABPMech_C:BPOnVehicleOn(IsOn) end

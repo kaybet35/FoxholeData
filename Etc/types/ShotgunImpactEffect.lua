@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
 ---@field DefaultSceneRoot USceneComponent
-AShotgunImpactEffect_C = {}
+local AShotgunImpactEffect_C = {}
 
 function AShotgunImpactEffect_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

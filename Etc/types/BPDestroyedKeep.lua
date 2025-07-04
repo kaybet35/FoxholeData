@@ -15,7 +15,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field Box UBoxComponent
 ---@field ['Keep Mesh'] UStaticMeshComponent
-ABPDestroyedKeep_C = {}
+local ABPDestroyedKeep_C = {}
 
 
 

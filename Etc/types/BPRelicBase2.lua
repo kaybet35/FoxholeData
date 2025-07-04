@@ -77,7 +77,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field RoofMesh UStaticMeshComponent
 ---@field RelicBaseMesh UStaticMeshComponent
-ABPRelicBase2_C = {}
+local ABPRelicBase2_C = {}
 
 
 

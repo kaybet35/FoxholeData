@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class AGizmoActor : AInternalToolFrameworkActor
-AGizmoActor = {}
+local AGizmoActor = {}
 
 
 ---@class AInternalToolFrameworkActor : AActor
-AInternalToolFrameworkActor = {}
+local AInternalToolFrameworkActor = {}
 
 
 ---@class ATransformGizmoActor : AGizmoActor
@@ -18,40 +18,40 @@ AInternalToolFrameworkActor = {}
 ---@field RotateX UPrimitiveComponent
 ---@field RotateY UPrimitiveComponent
 ---@field RotateZ UPrimitiveComponent
-ATransformGizmoActor = {}
+local ATransformGizmoActor = {}
 
 
 
 ---@class FActiveGizmo
-FActiveGizmo = {}
+local FActiveGizmo = {}
 
 
 ---@class FBehaviorInfo
 ---@field Behavior UInputBehavior
-FBehaviorInfo = {}
+local FBehaviorInfo = {}
 
 
 
 ---@class FGizmoFloatParameterChange
 ---@field InitialValue float
 ---@field CurrentValue float
-FGizmoFloatParameterChange = {}
+local FGizmoFloatParameterChange = {}
 
 
 
 ---@class FGizmoVec2ParameterChange
 ---@field InitialValue FVector2D
 ---@field CurrentValue FVector2D
-FGizmoVec2ParameterChange = {}
+local FGizmoVec2ParameterChange = {}
 
 
 
 ---@class FInputRayHit
-FInputRayHit = {}
+local FInputRayHit = {}
 
 
 ---@class IGizmoAxisSource : IInterface
-IGizmoAxisSource = {}
+local IGizmoAxisSource = {}
 
 ---@return boolean
 function IGizmoAxisSource:HasTangentVectors() end
@@ -65,14 +65,14 @@ function IGizmoAxisSource:GetDirection() end
 
 
 ---@class IGizmoClickTarget : IInterface
-IGizmoClickTarget = {}
+local IGizmoClickTarget = {}
 
 ---@param bHovering boolean
 function IGizmoClickTarget:UpdateHoverState(bHovering) end
 
 
 ---@class IGizmoFloatParameterSource : IInterface
-IGizmoFloatParameterSource = {}
+local IGizmoFloatParameterSource = {}
 
 ---@param NewValue float
 function IGizmoFloatParameterSource:SetParameter(NewValue) end
@@ -83,14 +83,14 @@ function IGizmoFloatParameterSource:BeginModify() end
 
 
 ---@class IGizmoStateTarget : IInterface
-IGizmoStateTarget = {}
+local IGizmoStateTarget = {}
 
 function IGizmoStateTarget:EndUpdate() end
 function IGizmoStateTarget:BeginUpdate() end
 
 
 ---@class IGizmoTransformSource : IInterface
-IGizmoTransformSource = {}
+local IGizmoTransformSource = {}
 
 ---@param NewTransform FTransform
 function IGizmoTransformSource:SetTransform(NewTransform) end
@@ -99,7 +99,7 @@ function IGizmoTransformSource:GetTransform() end
 
 
 ---@class IGizmoVec2ParameterSource : IInterface
-IGizmoVec2ParameterSource = {}
+local IGizmoVec2ParameterSource = {}
 
 ---@param NewValue FVector2D
 function IGizmoVec2ParameterSource:SetParameter(NewValue) end
@@ -110,20 +110,20 @@ function IGizmoVec2ParameterSource:BeginModify() end
 
 
 ---@class IInputBehaviorSource : IInterface
-IInputBehaviorSource = {}
+local IInputBehaviorSource = {}
 
 
 ---@class IToolContextTransactionProvider : IInterface
-IToolContextTransactionProvider = {}
+local IToolContextTransactionProvider = {}
 
 
 ---@class IToolFrameworkComponent : IInterface
-IToolFrameworkComponent = {}
+local IToolFrameworkComponent = {}
 
 
 ---@class UAnyButtonInputBehavior : UInputBehavior
 ---@field ButtonNumber int32
-UAnyButtonInputBehavior = {}
+local UAnyButtonInputBehavior = {}
 
 
 
@@ -141,12 +141,12 @@ UAnyButtonInputBehavior = {}
 ---@field InteractionCurPoint FVector
 ---@field InteractionStartAngle float
 ---@field InteractionCurAngle float
-UAxisAngleGizmo = {}
+local UAxisAngleGizmo = {}
 
 
 
 ---@class UAxisAngleGizmoBuilder : UInteractiveGizmoBuilder
-UAxisAngleGizmoBuilder = {}
+local UAxisAngleGizmoBuilder = {}
 
 
 ---@class UAxisPositionGizmo : UInteractiveGizmo
@@ -161,24 +161,24 @@ UAxisAngleGizmoBuilder = {}
 ---@field InteractionCurPoint FVector
 ---@field InteractionStartParameter float
 ---@field InteractionCurParameter float
-UAxisPositionGizmo = {}
+local UAxisPositionGizmo = {}
 
 
 
 ---@class UAxisPositionGizmoBuilder : UInteractiveGizmoBuilder
-UAxisPositionGizmoBuilder = {}
+local UAxisPositionGizmoBuilder = {}
 
 
 ---@class UClickDragInputBehavior : UAnyButtonInputBehavior
-UClickDragInputBehavior = {}
+local UClickDragInputBehavior = {}
 
 
 ---@class UClickDragTool : UInteractiveTool
-UClickDragTool = {}
+local UClickDragTool = {}
 
 
 ---@class UClickDragToolBuilder : UInteractiveToolBuilder
-UClickDragToolBuilder = {}
+local UClickDragToolBuilder = {}
 
 
 ---@class UGizmoArrowComponent : UGizmoBaseComponent
@@ -186,7 +186,7 @@ UClickDragToolBuilder = {}
 ---@field Gap float
 ---@field Length float
 ---@field Thickness float
-UGizmoArrowComponent = {}
+local UGizmoArrowComponent = {}
 
 
 
@@ -198,7 +198,7 @@ UGizmoArrowComponent = {}
 ---@field CurRotationAxis FVector
 ---@field CurRotationOrigin FVector
 ---@field InitialTransform FTransform
-UGizmoAxisRotationParameterSource = {}
+local UGizmoAxisRotationParameterSource = {}
 
 
 
@@ -210,7 +210,7 @@ UGizmoAxisRotationParameterSource = {}
 ---@field CurTranslationAxis FVector
 ---@field CurTranslationOrigin FVector
 ---@field InitialTransform FTransform
-UGizmoAxisTranslationParameterSource = {}
+local UGizmoAxisTranslationParameterSource = {}
 
 
 
@@ -218,7 +218,7 @@ UGizmoAxisTranslationParameterSource = {}
 ---@field Color FLinearColor
 ---@field HoverSizeMultiplier float
 ---@field PixelHitDistanceThreshold float
-UGizmoBaseComponent = {}
+local UGizmoBaseComponent = {}
 
 ---@param bWorldIn boolean
 function UGizmoBaseComponent:UpdateWorldLocalState(bWorldIn) end
@@ -227,15 +227,15 @@ function UGizmoBaseComponent:UpdateHoverState(bHoveringIn) end
 
 
 ---@class UGizmoBaseFloatParameterSource : UObject
-UGizmoBaseFloatParameterSource = {}
+local UGizmoBaseFloatParameterSource = {}
 
 
 ---@class UGizmoBaseTransformSource : UObject
-UGizmoBaseTransformSource = {}
+local UGizmoBaseTransformSource = {}
 
 
 ---@class UGizmoBaseVec2ParameterSource : UObject
-UGizmoBaseVec2ParameterSource = {}
+local UGizmoBaseVec2ParameterSource = {}
 
 
 ---@class UGizmoCircleComponent : UGizmoBaseComponent
@@ -245,7 +245,7 @@ UGizmoBaseVec2ParameterSource = {}
 ---@field NumSides int32
 ---@field bViewAligned boolean
 ---@field bOnlyAllowFrontFacingHits boolean
-UGizmoCircleComponent = {}
+local UGizmoCircleComponent = {}
 
 
 
@@ -253,58 +253,58 @@ UGizmoCircleComponent = {}
 ---@field Component USceneComponent
 ---@field AxisIndex int32
 ---@field bLocalAxes boolean
-UGizmoComponentAxisSource = {}
+local UGizmoComponentAxisSource = {}
 
 
 
 ---@class UGizmoComponentHitTarget : UObject
 ---@field Component UPrimitiveComponent
-UGizmoComponentHitTarget = {}
+local UGizmoComponentHitTarget = {}
 
 
 
 ---@class UGizmoComponentWorldTransformSource : UGizmoBaseTransformSource
 ---@field Component USceneComponent
 ---@field bModifyComponentOnTransform boolean
-UGizmoComponentWorldTransformSource = {}
+local UGizmoComponentWorldTransformSource = {}
 
 
 
 ---@class UGizmoConstantAxisSource : UObject
 ---@field Origin FVector
 ---@field Direction FVector
-UGizmoConstantAxisSource = {}
+local UGizmoConstantAxisSource = {}
 
 
 
 ---@class UGizmoLambdaHitTarget : UObject
-UGizmoLambdaHitTarget = {}
+local UGizmoLambdaHitTarget = {}
 
 
 ---@class UGizmoLambdaStateTarget : UObject
-UGizmoLambdaStateTarget = {}
+local UGizmoLambdaStateTarget = {}
 
 
 ---@class UGizmoLocalFloatParameterSource : UGizmoBaseFloatParameterSource
 ---@field Value float
 ---@field LastChange FGizmoFloatParameterChange
-UGizmoLocalFloatParameterSource = {}
+local UGizmoLocalFloatParameterSource = {}
 
 
 
 ---@class UGizmoLocalVec2ParameterSource : UGizmoBaseVec2ParameterSource
 ---@field Value FVector2D
 ---@field LastChange FGizmoVec2ParameterChange
-UGizmoLocalVec2ParameterSource = {}
+local UGizmoLocalVec2ParameterSource = {}
 
 
 
 ---@class UGizmoNilStateTarget : UObject
-UGizmoNilStateTarget = {}
+local UGizmoNilStateTarget = {}
 
 
 ---@class UGizmoObjectModifyStateTarget : UObject
-UGizmoObjectModifyStateTarget = {}
+local UGizmoObjectModifyStateTarget = {}
 
 
 ---@class UGizmoPlaneTranslationParameterSource : UGizmoBaseVec2ParameterSource
@@ -317,7 +317,7 @@ UGizmoObjectModifyStateTarget = {}
 ---@field CurTranslationAxisX FVector
 ---@field CurTranslationAxisY FVector
 ---@field InitialTransform FTransform
-UGizmoPlaneTranslationParameterSource = {}
+local UGizmoPlaneTranslationParameterSource = {}
 
 
 
@@ -329,36 +329,36 @@ UGizmoPlaneTranslationParameterSource = {}
 ---@field LengthX float
 ---@field LengthY float
 ---@field Thickness float
-UGizmoRectangleComponent = {}
+local UGizmoRectangleComponent = {}
 
 
 
 ---@class UGizmoTransformChangeStateTarget : UObject
 ---@field TransactionManager TScriptInterface<IToolContextTransactionProvider>
-UGizmoTransformChangeStateTarget = {}
+local UGizmoTransformChangeStateTarget = {}
 
 
 
 ---@class UGizmoTransformProxyTransformSource : UGizmoBaseTransformSource
 ---@field Proxy UTransformProxy
-UGizmoTransformProxyTransformSource = {}
+local UGizmoTransformProxyTransformSource = {}
 
 
 
 ---@class UGizmoWorldAxisSource : UObject
 ---@field Origin FVector
 ---@field AxisIndex int32
-UGizmoWorldAxisSource = {}
+local UGizmoWorldAxisSource = {}
 
 
 
 ---@class UInputBehavior : UObject
-UInputBehavior = {}
+local UInputBehavior = {}
 
 
 ---@class UInputBehaviorSet : UObject
 ---@field Behaviors TArray<FBehaviorInfo>
-UInputBehaviorSet = {}
+local UInputBehaviorSet = {}
 
 
 
@@ -366,49 +366,49 @@ UInputBehaviorSet = {}
 ---@field bAutoInvalidateOnHover boolean
 ---@field bAutoInvalidateOnCapture boolean
 ---@field ActiveInputBehaviors UInputBehaviorSet
-UInputRouter = {}
+local UInputRouter = {}
 
 
 
 ---@class UInteractiveGizmo : UObject
 ---@field InputBehaviors UInputBehaviorSet
-UInteractiveGizmo = {}
+local UInteractiveGizmo = {}
 
 
 
 ---@class UInteractiveGizmoBuilder : UObject
-UInteractiveGizmoBuilder = {}
+local UInteractiveGizmoBuilder = {}
 
 
 ---@class UInteractiveGizmoManager : UObject
 ---@field ActiveGizmos TArray<FActiveGizmo>
 ---@field GizmoBuilders TMap<FString, UInteractiveGizmoBuilder>
-UInteractiveGizmoManager = {}
+local UInteractiveGizmoManager = {}
 
 
 
 ---@class UInteractiveTool : UObject
 ---@field InputBehaviors UInputBehaviorSet
 ---@field ToolPropertyObjects TArray<UObject>
-UInteractiveTool = {}
+local UInteractiveTool = {}
 
 
 
 ---@class UInteractiveToolBuilder : UObject
-UInteractiveToolBuilder = {}
+local UInteractiveToolBuilder = {}
 
 
 ---@class UInteractiveToolManager : UObject
 ---@field ActiveLeftTool UInteractiveTool
 ---@field ActiveRightTool UInteractiveTool
 ---@field ToolBuilders TMap<FString, UInteractiveToolBuilder>
-UInteractiveToolManager = {}
+local UInteractiveToolManager = {}
 
 
 
 ---@class UInteractiveToolPropertySet : UObject
 ---@field CachedProperties UObject
-UInteractiveToolPropertySet = {}
+local UInteractiveToolPropertySet = {}
 
 
 
@@ -416,12 +416,12 @@ UInteractiveToolPropertySet = {}
 ---@field InputRouter UInputRouter
 ---@field ToolManager UInteractiveToolManager
 ---@field GizmoManager UInteractiveGizmoManager
-UInteractiveToolsContext = {}
+local UInteractiveToolsContext = {}
 
 
 
 ---@class UKeyAsModifierInputBehavior : UInputBehavior
-UKeyAsModifierInputBehavior = {}
+local UKeyAsModifierInputBehavior = {}
 
 
 ---@class UMeshSelectionSet : USelectionSet
@@ -429,32 +429,32 @@ UKeyAsModifierInputBehavior = {}
 ---@field Edges TArray<int32>
 ---@field Faces TArray<int32>
 ---@field Groups TArray<int32>
-UMeshSelectionSet = {}
+local UMeshSelectionSet = {}
 
 
 
 ---@class UMeshSurfacePointTool : USingleSelectionTool
-UMeshSurfacePointTool = {}
+local UMeshSurfacePointTool = {}
 
 
 ---@class UMeshSurfacePointToolBuilder : UInteractiveToolBuilder
-UMeshSurfacePointToolBuilder = {}
+local UMeshSurfacePointToolBuilder = {}
 
 
 ---@class UMeshSurfacePointToolMouseBehavior : UAnyButtonInputBehavior
-UMeshSurfacePointToolMouseBehavior = {}
+local UMeshSurfacePointToolMouseBehavior = {}
 
 
 ---@class UMouseHoverBehavior : UInputBehavior
-UMouseHoverBehavior = {}
+local UMouseHoverBehavior = {}
 
 
 ---@class UMultiClickSequenceInputBehavior : UAnyButtonInputBehavior
-UMultiClickSequenceInputBehavior = {}
+local UMultiClickSequenceInputBehavior = {}
 
 
 ---@class UMultiSelectionTool : UInteractiveTool
-UMultiSelectionTool = {}
+local UMultiSelectionTool = {}
 
 
 ---@class UPlanePositionGizmo : UInteractiveGizmo
@@ -471,34 +471,34 @@ UMultiSelectionTool = {}
 ---@field InteractionCurPoint FVector
 ---@field InteractionStartParameter FVector2D
 ---@field InteractionCurParameter FVector2D
-UPlanePositionGizmo = {}
+local UPlanePositionGizmo = {}
 
 
 
 ---@class UPlanePositionGizmoBuilder : UInteractiveGizmoBuilder
-UPlanePositionGizmoBuilder = {}
+local UPlanePositionGizmoBuilder = {}
 
 
 ---@class USelectionSet : UObject
-USelectionSet = {}
+local USelectionSet = {}
 
 
 ---@class USingleClickInputBehavior : UAnyButtonInputBehavior
 ---@field HitTestOnRelease boolean
-USingleClickInputBehavior = {}
+local USingleClickInputBehavior = {}
 
 
 
 ---@class USingleClickTool : UInteractiveTool
-USingleClickTool = {}
+local USingleClickTool = {}
 
 
 ---@class USingleClickToolBuilder : UInteractiveToolBuilder
-USingleClickToolBuilder = {}
+local USingleClickToolBuilder = {}
 
 
 ---@class USingleSelectionTool : UInteractiveTool
-USingleSelectionTool = {}
+local USingleSelectionTool = {}
 
 
 ---@class UTransformGizmo : UInteractiveGizmo
@@ -509,12 +509,12 @@ USingleSelectionTool = {}
 ---@field AxisYSource UGizmoComponentAxisSource
 ---@field AxisZSource UGizmoComponentAxisSource
 ---@field StateTarget UGizmoTransformChangeStateTarget
-UTransformGizmo = {}
+local UTransformGizmo = {}
 
 
 
 ---@class UTransformGizmoBuilder : UInteractiveGizmoBuilder
-UTransformGizmoBuilder = {}
+local UTransformGizmoBuilder = {}
 
 
 ---@class UTransformProxy : UObject
@@ -522,7 +522,7 @@ UTransformGizmoBuilder = {}
 ---@field bSetPivotMode boolean
 ---@field SharedTransform FTransform
 ---@field InitialSharedTransform FTransform
-UTransformProxy = {}
+local UTransformProxy = {}
 
 
 

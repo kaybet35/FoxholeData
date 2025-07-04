@@ -30,7 +30,7 @@
 ---@field AnimGraphNode_SequencePlayer_7E152EB547CA1CD8E73F72AAF795C5E9 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_0C243C63413BC99DE23E689C6FE5AC92 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_B22BE2E745D1708EBD23629EFF2E5538 FAnimNode_StateMachine
-UABP_LargeShipBaseShip_C = {}
+local UABP_LargeShipBaseShip_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeShipBaseShip_C:AnimGraph(AnimGraph) end

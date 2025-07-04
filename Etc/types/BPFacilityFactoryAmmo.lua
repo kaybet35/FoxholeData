@@ -13,7 +13,7 @@
 ---@field PointLight UPointLightComponent
 ---@field FoundationDecal UDecalComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityFactoryAmmo_C = {}
+local ABPFacilityFactoryAmmo_C = {}
 
 
 

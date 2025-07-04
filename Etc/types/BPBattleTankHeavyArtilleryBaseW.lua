@@ -19,7 +19,7 @@
 ---@field CommanderSeat2 UVehicleSeatComponent
 ---@field GunnerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
-ABPBattleTankHeavyArtilleryBaseW_C = {}
+local ABPBattleTankHeavyArtilleryBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPBattleTankHeavyArtilleryBaseW_C:BPOnVehicleOn(IsOn) end

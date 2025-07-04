@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AGrassTireWide_C : ADecalActor
-AGrassTireWide_C = {}
+local AGrassTireWide_C = {}
 
 

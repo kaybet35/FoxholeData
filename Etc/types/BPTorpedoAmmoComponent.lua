@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTorpedoAmmoComponent_C : ULargeItemComponent
-UBPTorpedoAmmoComponent_C = {}
+local UBPTorpedoAmmoComponent_C = {}
 
 

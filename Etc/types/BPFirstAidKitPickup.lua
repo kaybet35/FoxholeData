@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFirstAidKitPickup_C : AGearPickup
-ABPFirstAidKitPickup_C = {}
+local ABPFirstAidKitPickup_C = {}
 
 

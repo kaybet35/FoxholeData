@@ -11,7 +11,7 @@
 ---@field Decal UDecalComponent
 ---@field TownRubbleFlat02 UStaticMeshComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityRefinery1Destroyed_C = {}
+local ABPFacilityRefinery1Destroyed_C = {}
 
 
 

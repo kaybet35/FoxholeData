@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSmokeGrenadePickup_C : AGearPickup
-ABPSmokeGrenadePickup_C = {}
+local ABPSmokeGrenadePickup_C = {}
 
 

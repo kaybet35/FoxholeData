@@ -14,7 +14,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPATGunAIT1Destroyed_C = {}
+local ABPATGunAIT1Destroyed_C = {}
 
 
 

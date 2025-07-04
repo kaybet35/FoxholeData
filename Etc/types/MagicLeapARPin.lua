@@ -11,7 +11,7 @@
 ---@field PinnedCFUID FGuid
 ---@field PinnedSceneComponent USceneComponent
 ---@field PinData UMagicLeapARPinSaveGame
-UMagicLeapARPinComponent = {}
+local UMagicLeapARPinComponent = {}
 
 function UMagicLeapARPinComponent:UnPin() end
 ---@param ComponentToPin USceneComponent
@@ -36,7 +36,7 @@ function UMagicLeapARPinComponent:GetPinData(PinDataClass) end
 
 
 ---@class UMagicLeapARPinFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapARPinFunctionLibrary = {}
+local UMagicLeapARPinFunctionLibrary = {}
 
 ---@return boolean
 function UMagicLeapARPinFunctionLibrary:IsTrackerValid() end
@@ -67,7 +67,7 @@ function UMagicLeapARPinFunctionLibrary:CreateTracker() end
 ---@field PinnedID FGuid
 ---@field ComponentWorldTransform FTransform
 ---@field PinTransform FTransform
-UMagicLeapARPinSaveGame = {}
+local UMagicLeapARPinSaveGame = {}
 
 
 

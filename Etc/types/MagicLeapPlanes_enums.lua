@@ -1,5 +1,5 @@
 ---@enum EMagicLeapPlaneQueryFlags
-EMagicLeapPlaneQueryFlags = {
+local EMagicLeapPlaneQueryFlags = {
     Vertical = 0,
     Horizontal = 1,
     Arbitrary = 2,

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ADirtTire_C : ADecalActor
-ADirtTire_C = {}
+local ADirtTire_C = {}
 
 

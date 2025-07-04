@@ -4,7 +4,7 @@
 ---@field BelowBlockingB UBoxComponent
 ---@field BelowBlockingA UBoxComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPDrawbridgeC_C = {}
+local ABPDrawbridgeC_C = {}
 
 
 

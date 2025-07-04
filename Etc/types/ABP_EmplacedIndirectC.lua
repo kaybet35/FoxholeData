@@ -13,7 +13,7 @@
 ---@field AnimGraphNode_StateResult_6757259942549ECD5E7BD7AF623EF1DB FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_C6113066481064FF58DFB09A3200595C FAnimNode_StateMachine
 ---@field EmplacedIndirectC float
-UABP_EmplacedIndirectC_C = {}
+local UABP_EmplacedIndirectC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacedIndirectC_C:AnimGraph(AnimGraph) end

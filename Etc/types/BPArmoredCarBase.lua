@@ -7,7 +7,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field VehicleIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPArmoredCarBase_C = {}
+local ABPArmoredCarBase_C = {}
 
 
 

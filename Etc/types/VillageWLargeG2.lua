@@ -83,7 +83,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AVillageWLargeG2_C = {}
+local AVillageWLargeG2_C = {}
 
 
 

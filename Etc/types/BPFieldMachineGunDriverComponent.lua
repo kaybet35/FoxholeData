@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFieldMachineGunDriverComponent_C : UMountComponent
-UBPFieldMachineGunDriverComponent_C = {}
+local UBPFieldMachineGunDriverComponent_C = {}
 
 

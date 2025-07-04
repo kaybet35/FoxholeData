@@ -9,7 +9,7 @@
 ---@field FortT1AngleDestroyedLeft UStaticMeshComponent
 ---@field FortCornerBreachCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPFortCornerDestroyedT1_C = {}
+local ABPFortCornerDestroyedT1_C = {}
 
 
 

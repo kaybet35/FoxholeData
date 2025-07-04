@@ -7,7 +7,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_69F83B154B07D344B830F9A4E7B499B8 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendListByBool_69F265FC4826D5092DAD69A93149687D FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_D3BFD4C046D818683B8CA1935F00E369 FAnimNode_SequencePlayer
-UABP_SmallGaugeFlatbedCar_C = {}
+local UABP_SmallGaugeFlatbedCar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_SmallGaugeFlatbedCar_C:AnimGraph(AnimGraph) end

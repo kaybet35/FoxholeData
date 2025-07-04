@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBattleTankHeavyArtilleryEngineerCComponent_C : UTankEngineerComponent
-UBPBattleTankHeavyArtilleryEngineerCComponent_C = {}
+local UBPBattleTankHeavyArtilleryEngineerCComponent_C = {}
 
 

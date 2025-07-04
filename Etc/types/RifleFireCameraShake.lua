@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URifleFireCameraShake_C : UCameraShake
-URifleFireCameraShake_C = {}
+local URifleFireCameraShake_C = {}
 
 

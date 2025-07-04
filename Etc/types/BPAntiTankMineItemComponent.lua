@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPAntiTankMineItemComponent_C : ULargeMaterialComponent
-UBPAntiTankMineItemComponent_C = {}
+local UBPAntiTankMineItemComponent_C = {}
 
 

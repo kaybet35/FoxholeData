@@ -1,12 +1,12 @@
 ---@enum EInputCaptureRequestType
-EInputCaptureRequestType = {
+local EInputCaptureRequestType = {
     Begin = 1,
     Ignore = 2,
     EInputCaptureRequestType_MAX = 3,
 }
 
 ---@enum EInputCaptureSide
-EInputCaptureSide = {
+local EInputCaptureSide = {
     None = 0,
     Left = 1,
     Right = 2,
@@ -16,7 +16,7 @@ EInputCaptureSide = {
 }
 
 ---@enum EInputCaptureState
-EInputCaptureState = {
+local EInputCaptureState = {
     Begin = 1,
     Continue = 2,
     End = 3,
@@ -25,7 +25,7 @@ EInputCaptureState = {
 }
 
 ---@enum EInputDevices
-EInputDevices = {
+local EInputDevices = {
     None = 0,
     Keyboard = 1,
     Mouse = 2,
@@ -38,7 +38,7 @@ EInputDevices = {
 }
 
 ---@enum ESceneSnapQueryTargetType
-ESceneSnapQueryTargetType = {
+local ESceneSnapQueryTargetType = {
     None = 0,
     MeshVertex = 1,
     MeshEdge = 2,
@@ -47,13 +47,13 @@ ESceneSnapQueryTargetType = {
 }
 
 ---@enum ESceneSnapQueryType
-ESceneSnapQueryType = {
+local ESceneSnapQueryType = {
     Position = 1,
     ESceneSnapQueryType_MAX = 2,
 }
 
 ---@enum ESelectedObjectsModificationType
-ESelectedObjectsModificationType = {
+local ESelectedObjectsModificationType = {
     Replace = 0,
     Add = 1,
     Remove = 2,
@@ -62,20 +62,20 @@ ESelectedObjectsModificationType = {
 }
 
 ---@enum EStandardToolContextMaterials
-EStandardToolContextMaterials = {
+local EStandardToolContextMaterials = {
     VertexColorMaterial = 1,
     EStandardToolContextMaterials_MAX = 2,
 }
 
 ---@enum EToolContextCoordinateSystem
-EToolContextCoordinateSystem = {
+local EToolContextCoordinateSystem = {
     World = 0,
     Local = 1,
     EToolContextCoordinateSystem_MAX = 2,
 }
 
 ---@enum EToolMessageLevel
-EToolMessageLevel = {
+local EToolMessageLevel = {
     Internal = 0,
     UserMessage = 1,
     UserNotification = 2,
@@ -85,7 +85,7 @@ EToolMessageLevel = {
 }
 
 ---@enum EToolSide
-EToolSide = {
+local EToolSide = {
     Left = 1,
     Mouse = 1,
     Right = 2,
@@ -93,7 +93,7 @@ EToolSide = {
 }
 
 ---@enum ETransformGizmoSubElements
-ETransformGizmoSubElements = {
+local ETransformGizmoSubElements = {
     None = 0,
     TranslateAxisX = 1,
     TranslateAxisY = 2,

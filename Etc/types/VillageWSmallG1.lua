@@ -21,7 +21,7 @@
 ---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AVillageWSmallG1_C = {}
+local AVillageWSmallG1_C = {}
 
 
 

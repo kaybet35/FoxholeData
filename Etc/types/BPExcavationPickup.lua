@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPExcavationPickup_C : AGearPickup
-ABPExcavationPickup_C = {}
+local ABPExcavationPickup_C = {}
 
 

@@ -13,7 +13,7 @@
 ---@field PassengerExit USeatExitComponent
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field PassengerSeat0 UVehicleSeatComponent
-ABPTrainCaboose_C = {}
+local ABPTrainCaboose_C = {}
 
 
 

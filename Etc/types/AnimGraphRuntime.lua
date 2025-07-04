@@ -4,12 +4,12 @@
 ---@field LimitMin FVector
 ---@field LimitMax FVector
 ---@field Bone FBoneReference
-FAngularRangeLimit = {}
+local FAngularRangeLimit = {}
 
 
 
 ---@class FAnimLegIKData
-FAnimLegIKData = {}
+local FAnimLegIKData = {}
 
 
 ---@class FAnimLegIKDefinition
@@ -21,7 +21,7 @@ FAnimLegIKData = {}
 ---@field HingeRotationAxis EAxis::Type
 ---@field bEnableRotationLimit boolean
 ---@field bEnableKneeTwistCorrection boolean
-FAnimLegIKDefinition = {}
+local FAnimLegIKDefinition = {}
 
 
 
@@ -33,7 +33,7 @@ FAnimLegIKDefinition = {}
 ---@field LookAtLocation FVector
 ---@field SocketAxis FVector
 ---@field Alpha float
-FAnimNode_AimOffsetLookAt = {}
+local FAnimNode_AimOffsetLookAt = {}
 
 
 
@@ -76,7 +76,7 @@ FAnimNode_AimOffsetLookAt = {}
 ---@field bAngularSpring boolean
 ---@field bChain boolean
 ---@field RetargetingSettings FRotationRetargetingInfo
-FAnimNode_AnimDynamics = {}
+local FAnimNode_AnimDynamics = {}
 
 
 
@@ -91,14 +91,14 @@ FAnimNode_AnimDynamics = {}
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
 ---@field AlphaInputType EAnimAlphaInputType
 ---@field bAlphaBoolEnabled boolean
-FAnimNode_ApplyAdditive = {}
+local FAnimNode_ApplyAdditive = {}
 
 
 
 ---@class FAnimNode_ApplyLimits : FAnimNode_SkeletalControlBase
 ---@field AngularRangeLimits TArray<FAngularRangeLimit>
 ---@field AngularOffsets TArray<FVector>
-FAnimNode_ApplyLimits = {}
+local FAnimNode_ApplyLimits = {}
 
 
 
@@ -109,7 +109,7 @@ FAnimNode_ApplyLimits = {}
 ---@field Alpha float
 ---@field AlphaScaleBias FInputScaleBias
 ---@field TransformsSpace EBoneControlSpace
-FAnimNode_BlendBoneByChannel = {}
+local FAnimNode_BlendBoneByChannel = {}
 
 
 
@@ -121,32 +121,32 @@ FAnimNode_BlendBoneByChannel = {}
 ---@field bResetChildOnActivation boolean
 ---@field CustomBlendCurve UCurveFloat
 ---@field BlendProfile UBlendProfile
-FAnimNode_BlendListBase = {}
+local FAnimNode_BlendListBase = {}
 
 
 
 ---@class FAnimNode_BlendListByBool : FAnimNode_BlendListBase
 ---@field bActiveValue boolean
-FAnimNode_BlendListByBool = {}
+local FAnimNode_BlendListByBool = {}
 
 
 
 ---@class FAnimNode_BlendListByEnum : FAnimNode_BlendListBase
 ---@field EnumToPoseIndex TArray<int32>
 ---@field ActiveEnumValue uint8
-FAnimNode_BlendListByEnum = {}
+local FAnimNode_BlendListByEnum = {}
 
 
 
 ---@class FAnimNode_BlendListByInt : FAnimNode_BlendListBase
 ---@field ActiveChildIndex int32
-FAnimNode_BlendListByInt = {}
+local FAnimNode_BlendListByInt = {}
 
 
 
 ---@class FAnimNode_BlendSpaceEvaluator : FAnimNode_BlendSpacePlayer
 ---@field NormalizedTime float
-FAnimNode_BlendSpaceEvaluator = {}
+local FAnimNode_BlendSpaceEvaluator = {}
 
 
 
@@ -160,7 +160,7 @@ FAnimNode_BlendSpaceEvaluator = {}
 ---@field StartPosition float
 ---@field BlendSpace UBlendSpaceBase
 ---@field PreviousBlendSpace UBlendSpaceBase
-FAnimNode_BlendSpacePlayer = {}
+local FAnimNode_BlendSpacePlayer = {}
 
 
 
@@ -187,7 +187,7 @@ FAnimNode_BlendSpacePlayer = {}
 ---@field bAffectTargetScaleX boolean
 ---@field bAffectTargetScaleY boolean
 ---@field bAffectTargetScaleZ boolean
-FAnimNode_BoneDrivenController = {}
+local FAnimNode_BoneDrivenController = {}
 
 
 
@@ -202,7 +202,7 @@ FAnimNode_BoneDrivenController = {}
 ---@field bStartFromTail boolean
 ---@field bEnableRotationLimit boolean
 ---@field RotationLimitPerJoints TArray<float>
-FAnimNode_CCDIK = {}
+local FAnimNode_CCDIK = {}
 
 
 
@@ -210,7 +210,7 @@ FAnimNode_CCDIK = {}
 ---@field BoneToModify FBoneReference
 ---@field ConstraintSetup TArray<FConstraint>
 ---@field ConstraintWeights TArray<float>
-FAnimNode_Constraint = {}
+local FAnimNode_Constraint = {}
 
 
 
@@ -221,7 +221,7 @@ FAnimNode_Constraint = {}
 ---@field bCopyRotation boolean
 ---@field bCopyScale boolean
 ---@field ControlSpace EBoneControlSpace
-FAnimNode_CopyBone = {}
+local FAnimNode_CopyBone = {}
 
 
 
@@ -235,7 +235,7 @@ FAnimNode_CopyBone = {}
 ---@field TranslationMultiplier float
 ---@field RotationMultiplier float
 ---@field ScaleMultiplier float
-FAnimNode_CopyBoneDelta = {}
+local FAnimNode_CopyBoneDelta = {}
 
 
 
@@ -243,7 +243,7 @@ FAnimNode_CopyBoneDelta = {}
 ---@field SourceMeshComponent TWeakObjectPtr<USkeletalMeshComponent>
 ---@field bUseAttachedParent boolean
 ---@field bCopyCurves boolean
-FAnimNode_CopyPoseFromMesh = {}
+local FAnimNode_CopyPoseFromMesh = {}
 
 
 
@@ -252,7 +252,7 @@ FAnimNode_CopyPoseFromMesh = {}
 ---@field SourceBinding FName
 ---@field Alpha float
 ---@field CurveSource TScriptInterface<ICurveSourceInterface>
-FAnimNode_CurveSource = {}
+local FAnimNode_CurveSource = {}
 
 
 
@@ -265,7 +265,7 @@ FAnimNode_CurveSource = {}
 ---@field MaxIterations int32
 ---@field EffectorTransformSpace EBoneControlSpace
 ---@field EffectorRotationSource EBoneRotationSource
-FAnimNode_Fabrik = {}
+local FAnimNode_Fabrik = {}
 
 
 
@@ -276,7 +276,7 @@ FAnimNode_Fabrik = {}
 ---@field LeftHandIK FBoneReference
 ---@field IKBonesToMove TArray<FBoneReference>
 ---@field HandFKWeight float
-FAnimNode_HandIKRetargeting = {}
+local FAnimNode_HandIKRetargeting = {}
 
 
 
@@ -293,7 +293,7 @@ FAnimNode_HandIKRetargeting = {}
 ---@field PerBoneBlendWeights TArray<FPerBoneBlendWeight>
 ---@field SkeletonGuid FGuid
 ---@field VirtualBoneGuid FGuid
-FAnimNode_LayeredBoneBlend = {}
+local FAnimNode_LayeredBoneBlend = {}
 
 
 
@@ -301,7 +301,7 @@ FAnimNode_LayeredBoneBlend = {}
 ---@field ReachPrecision float
 ---@field MaxIterations int32
 ---@field LegsDefinition TArray<FAnimLegIKDefinition>
-FAnimNode_LegIK = {}
+local FAnimNode_LegIK = {}
 
 
 
@@ -316,7 +316,7 @@ FAnimNode_LegIK = {}
 ---@field LookAtClamp float
 ---@field InterpolationTime float
 ---@field InterpolationTriggerThreashold float
-FAnimNode_LookAt = {}
+local FAnimNode_LookAt = {}
 
 
 
@@ -324,12 +324,12 @@ FAnimNode_LookAt = {}
 ---@field Base FPoseLink
 ---@field Additive FPoseLink
 ---@field bMeshSpaceAdditive boolean
-FAnimNode_MakeDynamicAdditive = {}
+local FAnimNode_MakeDynamicAdditive = {}
 
 
 
 ---@class FAnimNode_MeshSpaceRefPose : FAnimNode_Base
-FAnimNode_MeshSpaceRefPose = {}
+local FAnimNode_MeshSpaceRefPose = {}
 
 
 ---@class FAnimNode_ModifyBone : FAnimNode_SkeletalControlBase
@@ -343,7 +343,7 @@ FAnimNode_MeshSpaceRefPose = {}
 ---@field TranslationSpace EBoneControlSpace
 ---@field RotationSpace EBoneControlSpace
 ---@field ScaleSpace EBoneControlSpace
-FAnimNode_ModifyBone = {}
+local FAnimNode_ModifyBone = {}
 
 
 
@@ -353,7 +353,7 @@ FAnimNode_ModifyBone = {}
 ---@field CurveNames TArray<FName>
 ---@field Alpha float
 ---@field ApplyMode EModifyCurveApplyMode
-FAnimNode_ModifyCurve = {}
+local FAnimNode_ModifyCurve = {}
 
 
 
@@ -363,7 +363,7 @@ FAnimNode_ModifyCurve = {}
 ---@field AlphaScaleBias FInputScaleBias
 ---@field bAdditiveNode boolean
 ---@field bNormalizeAlpha boolean
-FAnimNode_MultiWayBlend = {}
+local FAnimNode_MultiWayBlend = {}
 
 
 
@@ -374,7 +374,7 @@ FAnimNode_MultiWayBlend = {}
 ---@field Translation FVector
 ---@field Rotation FRotator
 ---@field Scale FVector
-FAnimNode_ObserveBone = {}
+local FAnimNode_ObserveBone = {}
 
 
 
@@ -382,14 +382,14 @@ FAnimNode_ObserveBone = {}
 ---@field SourcePose FPoseLink
 ---@field BlendOption EAlphaBlendOption
 ---@field CustomCurve UCurveFloat
-FAnimNode_PoseBlendNode = {}
+local FAnimNode_PoseBlendNode = {}
 
 
 
 ---@class FAnimNode_PoseByName : FAnimNode_PoseHandler
 ---@field PoseName FName
 ---@field PoseWeight float
-FAnimNode_PoseByName = {}
+local FAnimNode_PoseByName = {}
 
 
 
@@ -403,13 +403,13 @@ FAnimNode_PoseByName = {}
 ---@field DriveSource EPoseDriverSource
 ---@field DriveOutput EPoseDriverOutput
 ---@field bOnlyDriveSelectedBones boolean
-FAnimNode_PoseDriver = {}
+local FAnimNode_PoseDriver = {}
 
 
 
 ---@class FAnimNode_PoseHandler : FAnimNode_AssetPlayerBase
 ---@field PoseAsset UPoseAsset
-FAnimNode_PoseHandler = {}
+local FAnimNode_PoseHandler = {}
 
 
 
@@ -417,25 +417,25 @@ FAnimNode_PoseHandler = {}
 ---@field SnapshotName FName
 ---@field Snapshot FPoseSnapshot
 ---@field Mode ESnapshotSourceMode
-FAnimNode_PoseSnapshot = {}
+local FAnimNode_PoseSnapshot = {}
 
 
 
 ---@class FAnimNode_RandomPlayer : FAnimNode_Base
 ---@field Entries TArray<FRandomPlayerSequenceEntry>
 ---@field bShuffleMode boolean
-FAnimNode_RandomPlayer = {}
+local FAnimNode_RandomPlayer = {}
 
 
 
 ---@class FAnimNode_RefPose : FAnimNode_Base
 ---@field RefPoseType ERefPoseType
-FAnimNode_RefPose = {}
+local FAnimNode_RefPose = {}
 
 
 
 ---@class FAnimNode_ResetRoot : FAnimNode_SkeletalControlBase
-FAnimNode_ResetRoot = {}
+local FAnimNode_ResetRoot = {}
 
 
 ---@class FAnimNode_RigidBody : FAnimNode_SkeletalControlBase
@@ -455,7 +455,7 @@ FAnimNode_ResetRoot = {}
 ---@field bTransferBoneVelocities boolean
 ---@field bFreezeIncomingPoseOnStart boolean
 ---@field bClampLinearTranslationLimitToRefPose boolean
-FAnimNode_RigidBody = {}
+local FAnimNode_RigidBody = {}
 
 
 
@@ -476,7 +476,7 @@ FAnimNode_RigidBody = {}
 ---@field bTransferBoneVelocities boolean
 ---@field bFreezeIncomingPoseOnStart boolean
 ---@field bClampLinearTranslationLimitToRefPose boolean
-FAnimNode_RigidBody_Chaos = {}
+local FAnimNode_RigidBody_Chaos = {}
 
 
 
@@ -487,7 +487,7 @@ FAnimNode_RigidBody_Chaos = {}
 ---@field PitchScaleBiasClamp FInputScaleBiasClamp
 ---@field YawScaleBiasClamp FInputScaleBiasClamp
 ---@field MeshToComponent FRotator
-FAnimNode_RotateRootBone = {}
+local FAnimNode_RotateRootBone = {}
 
 
 
@@ -497,7 +497,7 @@ FAnimNode_RotateRootBone = {}
 ---@field Multiplier float
 ---@field RotationAxisToRefer EBoneAxis
 ---@field bIsAdditive boolean
-FAnimNode_RotationMultiplier = {}
+local FAnimNode_RotationMultiplier = {}
 
 
 
@@ -511,7 +511,7 @@ FAnimNode_RotationMultiplier = {}
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
 ---@field AlphaInputType EAnimAlphaInputType
 ---@field bAlphaBoolEnabled boolean
-FAnimNode_RotationOffsetBlendSpace = {}
+local FAnimNode_RotationOffsetBlendSpace = {}
 
 
 
@@ -524,7 +524,7 @@ FAnimNode_RotationOffsetBlendSpace = {}
 ---@field Alpha float
 ---@field AlphaScaleBias FInputScaleBias
 ---@field ChainInitialLength EScaleChainInitialLength
-FAnimNode_ScaleChainLength = {}
+local FAnimNode_ScaleChainLength = {}
 
 
 
@@ -535,7 +535,7 @@ FAnimNode_ScaleChainLength = {}
 ---@field bTeleportToExplicitTime boolean
 ---@field ReinitializationBehavior ESequenceEvalReinit::Type
 ---@field StartPosition float
-FAnimNode_SequenceEvaluator = {}
+local FAnimNode_SequenceEvaluator = {}
 
 
 
@@ -550,7 +550,7 @@ FAnimNode_SequenceEvaluator = {}
 ---@field AlphaBoolBlend FInputAlphaBoolBlend
 ---@field AlphaCurveName FName
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
-FAnimNode_SkeletalControlBase = {}
+local FAnimNode_SkeletalControlBase = {}
 
 
 
@@ -558,7 +558,7 @@ FAnimNode_SkeletalControlBase = {}
 ---@field Source FPoseLink
 ---@field SlotName FName
 ---@field bAlwaysUpdateSourcePose boolean
-FAnimNode_Slot = {}
+local FAnimNode_Slot = {}
 
 
 
@@ -575,7 +575,7 @@ FAnimNode_Slot = {}
 ---@field TwistBlend FAlphaBlend
 ---@field Stretch float
 ---@field Offset float
-FAnimNode_SplineIK = {}
+local FAnimNode_SplineIK = {}
 
 
 
@@ -592,12 +592,12 @@ FAnimNode_SplineIK = {}
 ---@field bRotateX boolean
 ---@field bRotateY boolean
 ---@field bRotateZ boolean
-FAnimNode_SpringBone = {}
+local FAnimNode_SpringBone = {}
 
 
 
 ---@class FAnimNode_StateResult : FAnimNode_Root
-FAnimNode_StateResult = {}
+local FAnimNode_StateResult = {}
 
 
 ---@class FAnimNode_Trail : FAnimNode_SkeletalControlBase
@@ -621,7 +621,7 @@ FAnimNode_StateResult = {}
 ---@field FakeVelocity FVector
 ---@field BaseJoint FBoneReference
 ---@field LastBoneRotationAnimAlphaBlend float
-FAnimNode_Trail = {}
+local FAnimNode_Trail = {}
 
 
 
@@ -633,7 +633,7 @@ FAnimNode_Trail = {}
 ---@field RemappedMin float
 ---@field RemappedMax float
 ---@field Curve FAnimCurveParam
-FAnimNode_TwistCorrectiveNode = {}
+local FAnimNode_TwistCorrectiveNode = {}
 
 
 
@@ -652,7 +652,7 @@ FAnimNode_TwistCorrectiveNode = {}
 ---@field bTakeRotationFromEffectorSpace boolean
 ---@field bMaintainEffectorRelRot boolean
 ---@field bAllowTwist boolean
-FAnimNode_TwoBoneIK = {}
+local FAnimNode_TwoBoneIK = {}
 
 
 
@@ -667,7 +667,7 @@ FAnimNode_TwoBoneIK = {}
 ---@field AlphaBoolBlend FInputAlphaBoolBlend
 ---@field AlphaCurveName FName
 ---@field AlphaScaleBiasClamp FInputScaleBiasClamp
-FAnimNode_TwoWayBlend = {}
+local FAnimNode_TwoWayBlend = {}
 
 
 
@@ -684,14 +684,14 @@ FAnimNode_TwoWayBlend = {}
 ---@field AngularLimitsMin FVector
 ---@field AngularLimitsMax FVector
 ---@field AngularTarget FVector
-FAnimPhysConstraintSetup = {}
+local FAnimPhysConstraintSetup = {}
 
 
 
 ---@class FAnimPhysPlanarLimit
 ---@field DrivingBone FBoneReference
 ---@field PlaneTransform FTransform
-FAnimPhysPlanarLimit = {}
+local FAnimPhysPlanarLimit = {}
 
 
 
@@ -700,12 +700,12 @@ FAnimPhysPlanarLimit = {}
 ---@field SphereLocalOffset FVector
 ---@field LimitRadius float
 ---@field LimitType ESphericalLimitType
-FAnimPhysSphericalLimit = {}
+local FAnimPhysSphericalLimit = {}
 
 
 
 ---@class FAnimSequencerInstanceProxy : FAnimInstanceProxy
-FAnimSequencerInstanceProxy = {}
+local FAnimSequencerInstanceProxy = {}
 
 
 ---@class FBlendBoneByChannelEntry
@@ -714,7 +714,7 @@ FAnimSequencerInstanceProxy = {}
 ---@field bBlendTranslation boolean
 ---@field bBlendRotation boolean
 ---@field bBlendScale boolean
-FBlendBoneByChannelEntry = {}
+local FBlendBoneByChannelEntry = {}
 
 
 
@@ -722,7 +722,7 @@ FBlendBoneByChannelEntry = {}
 ---@field bUseSocket boolean
 ---@field BoneReference FBoneReference
 ---@field SocketReference FSocketReference
-FBoneSocketTarget = {}
+local FBoneSocketTarget = {}
 
 
 
@@ -731,16 +731,16 @@ FBoneSocketTarget = {}
 ---@field OffsetOption EConstraintOffsetOption
 ---@field TransformType ETransformConstraintType
 ---@field PerAxis FFilterOptionPerAxis
-FConstraint = {}
+local FConstraint = {}
 
 
 
 ---@class FIKChain
-FIKChain = {}
+local FIKChain = {}
 
 
 ---@class FIKChainLink
-FIKChainLink = {}
+local FIKChainLink = {}
 
 
 ---@class FPoseDriverTarget
@@ -753,27 +753,27 @@ FIKChainLink = {}
 ---@field CustomCurve FRichCurve
 ---@field DrivenName FName
 ---@field bIsHidden boolean
-FPoseDriverTarget = {}
+local FPoseDriverTarget = {}
 
 
 
 ---@class FPoseDriverTransform
 ---@field TargetTranslation FVector
 ---@field TargetRotation FRotator
-FPoseDriverTransform = {}
+local FPoseDriverTransform = {}
 
 
 
 ---@class FPositionHistory
 ---@field Positions TArray<FVector>
 ---@field Range float
-FPositionHistory = {}
+local FPositionHistory = {}
 
 
 
 ---@class FRBFEntry
 ---@field Values TArray<float>
-FRBFEntry = {}
+local FRBFEntry = {}
 
 
 
@@ -788,7 +788,7 @@ FRBFEntry = {}
 ---@field MedianReference FVector
 ---@field MedianMin float
 ---@field MedianMax float
-FRBFParams = {}
+local FRBFParams = {}
 
 
 
@@ -798,7 +798,7 @@ FRBFParams = {}
 ---@field CustomCurve FRichCurve
 ---@field DistanceMethod ERBFDistanceMethod
 ---@field FunctionType ERBFFunctionType
-FRBFTarget = {}
+local FRBFTarget = {}
 
 
 
@@ -810,21 +810,21 @@ FRBFTarget = {}
 ---@field MinPlayRate float
 ---@field MaxPlayRate float
 ---@field BlendIn FAlphaBlend
-FRandomPlayerSequenceEntry = {}
+local FRandomPlayerSequenceEntry = {}
 
 
 
 ---@class FReferenceBoneFrame
 ---@field Bone FBoneReference
 ---@field Axis FAxis
-FReferenceBoneFrame = {}
+local FReferenceBoneFrame = {}
 
 
 
 ---@class FRotationLimit
 ---@field LimitMin FVector
 ---@field LimitMax FVector
-FRotationLimit = {}
+local FRotationLimit = {}
 
 
 
@@ -844,45 +844,45 @@ FRotationLimit = {}
 ---@field bFlipEasing boolean
 ---@field EasingWeight float
 ---@field bClamp boolean
-FRotationRetargetingInfo = {}
+local FRotationRetargetingInfo = {}
 
 
 
 ---@class FSocketReference
 ---@field SocketName FName
-FSocketReference = {}
+local FSocketReference = {}
 
 
 
 ---@class FSplineIKCachedBoneData
 ---@field Bone FBoneReference
 ---@field RefSkeletonIndex int32
-FSplineIKCachedBoneData = {}
+local FSplineIKCachedBoneData = {}
 
 
 
 ---@class UAnimCustomInstance : UAnimInstance
-UAnimCustomInstance = {}
+local UAnimCustomInstance = {}
 
 
 ---@class UAnimNotify_PlayMontageNotify : UAnimNotify
 ---@field NotifyName FName
-UAnimNotify_PlayMontageNotify = {}
+local UAnimNotify_PlayMontageNotify = {}
 
 
 
 ---@class UAnimNotify_PlayMontageNotifyWindow : UAnimNotifyState
 ---@field NotifyName FName
-UAnimNotify_PlayMontageNotifyWindow = {}
+local UAnimNotify_PlayMontageNotifyWindow = {}
 
 
 
 ---@class UAnimSequencerInstance : UAnimCustomInstance
-UAnimSequencerInstance = {}
+local UAnimSequencerInstance = {}
 
 
 ---@class UKismetAnimationLibrary : UBlueprintFunctionLibrary
-UKismetAnimationLibrary = {}
+local UKismetAnimationLibrary = {}
 
 ---@param RootPos FVector
 ---@param JointPos FVector
@@ -971,7 +971,7 @@ function UKismetAnimationLibrary:K2_CalculateVelocityFromPositionHistory(DeltaSe
 ---@field OnInterrupted FPlayMontageCallbackProxyOnInterrupted
 ---@field OnNotifyBegin FPlayMontageCallbackProxyOnNotifyBegin
 ---@field OnNotifyEnd FPlayMontageCallbackProxyOnNotifyEnd
-UPlayMontageCallbackProxy = {}
+local UPlayMontageCallbackProxy = {}
 
 ---@param NotifyName FName
 ---@param BranchingPointNotifyPayload FBranchingPointNotifyPayload

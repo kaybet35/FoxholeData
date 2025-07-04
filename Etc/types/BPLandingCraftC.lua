@@ -2,7 +2,7 @@
 
 ---@class ABPLandingCraftC_C : ABPLandingCraftBaseC_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
-ABPLandingCraftC_C = {}
+local ABPLandingCraftC_C = {}
 
 ---@param IsOn boolean
 function ABPLandingCraftC_C:BPOnVehicleOn(IsOn) end

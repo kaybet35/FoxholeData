@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPStructurePipelineOutput_C : UBuildSocketComponent
-UBPStructurePipelineOutput_C = {}
+local UBPStructurePipelineOutput_C = {}
 
 

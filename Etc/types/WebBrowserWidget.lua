@@ -5,7 +5,7 @@
 ---@field OnBeforePopup FWebBrowserOnBeforePopup
 ---@field InitialURL FString
 ---@field bSupportsTransparency boolean
-UWebBrowser = {}
+local UWebBrowser = {}
 
 ---@param Text FText
 function UWebBrowser:OnUrlChanged__DelegateSignature(Text) end
@@ -27,7 +27,7 @@ function UWebBrowser:ExecuteJavascript(ScriptText) end
 
 ---@class UWebBrowserAssetManager : UObject
 ---@field DefaultMaterial TSoftObjectPtr<UMaterial>
-UWebBrowserAssetManager = {}
+local UWebBrowserAssetManager = {}
 
 
 

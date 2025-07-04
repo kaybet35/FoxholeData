@@ -4,7 +4,7 @@
 ---@field SpotLight USpotLightComponent
 ---@field LightMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPPowerPoleLight_C = {}
+local ABPPowerPoleLight_C = {}
 
 
 

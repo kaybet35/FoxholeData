@@ -4,7 +4,7 @@
 ---@field BuildSocket UBuildSocketComponent
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPDeployedSatchelChargeTGhost_C = {}
+local ABPDeployedSatchelChargeTGhost_C = {}
 
 
 

@@ -14,7 +14,7 @@
 ---@field Stairs2 UStaticMeshComponent
 ---@field Stairs1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPRelicBase1BuildSite_C = {}
+local ABPRelicBase1BuildSite_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPExplosiveLightCComponent_C : UExplosiveItemComponent
-UBPExplosiveLightCComponent_C = {}
+local UBPExplosiveLightCComponent_C = {}
 
 

@@ -20,7 +20,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_F34C8FDC4B349D984933C6825910F162 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_DC1538454ACE24F4DDF8B4B458F4CAE4 FAnimNode_RotationOffsetBlendSpace
 ---@field Test boolean
-UABP_EmplacedCannonLargeC_C = {}
+local UABP_EmplacedCannonLargeC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacedCannonLargeC_C:AnimGraph(AnimGraph) end

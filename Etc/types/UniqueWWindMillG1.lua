@@ -7,7 +7,7 @@
 ---@field SK_WindMill USkeletalMeshComponent
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Windmill UStaticMeshComponent
-AUniqueWWindMillG1_C = {}
+local AUniqueWWindMillG1_C = {}
 
 
 

@@ -5,7 +5,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field RelicBunkerShootSpotAIDestroyed UStaticMeshComponent
 ---@field RelicBase02AIDestroyed UStaticMeshComponent
-ABPDestroyedRelicBase1_C = {}
+local ABPDestroyedRelicBase1_C = {}
 
 
 

@@ -15,7 +15,7 @@
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPMediumTank2BaseC_C = {}
+local ABPMediumTank2BaseC_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2BaseC_C:BPOnVehicleOn(IsOn) end

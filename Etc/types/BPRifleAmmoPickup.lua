@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRifleAmmoPickup_C : AAmmoPickup
-ABPRifleAmmoPickup_C = {}
+local ABPRifleAmmoPickup_C = {}
 
 

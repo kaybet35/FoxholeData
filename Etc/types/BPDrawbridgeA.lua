@@ -2,7 +2,7 @@
 
 ---@class ABPDrawbridgeA_C : ADrawbridge
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPDrawbridgeA_C = {}
+local ABPDrawbridgeA_C = {}
 
 
 

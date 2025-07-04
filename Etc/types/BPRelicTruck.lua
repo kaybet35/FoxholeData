@@ -22,7 +22,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field destroyedps UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPRelicTruck_C = {}
+local ABPRelicTruck_C = {}
 
 ---@param IsOn boolean
 function ABPRelicTruck_C:BPOnVehicleOn(IsOn) end

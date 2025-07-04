@@ -11,7 +11,7 @@
 ---@field DriverExit USeatExitComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriverSeat0 UVehicleSeatComponent
-ABPTanketteBaseC_C = {}
+local ABPTanketteBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPTanketteBaseC_C:BPOnVehicleOn(IsOn) end

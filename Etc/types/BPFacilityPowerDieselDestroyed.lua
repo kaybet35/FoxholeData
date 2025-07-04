@@ -6,7 +6,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field Roof UStaticMeshComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityPowerDieselDestroyed_C = {}
+local ABPFacilityPowerDieselDestroyed_C = {}
 
 
 

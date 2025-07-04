@@ -1,5 +1,5 @@
 ---@enum EMediaAudioCaptureDeviceFilter
-EMediaAudioCaptureDeviceFilter = {
+local EMediaAudioCaptureDeviceFilter = {
     None = 0,
     Card = 1,
     Microphone = 2,
@@ -9,7 +9,7 @@ EMediaAudioCaptureDeviceFilter = {
 }
 
 ---@enum EMediaPlayerTrack
-EMediaPlayerTrack = {
+local EMediaPlayerTrack = {
     Audio = 0,
     Caption = 1,
     Metadata = 2,
@@ -21,7 +21,7 @@ EMediaPlayerTrack = {
 }
 
 ---@enum EMediaSoundChannels
-EMediaSoundChannels = {
+local EMediaSoundChannels = {
     Mono = 0,
     Stereo = 1,
     Surround = 2,
@@ -29,7 +29,7 @@ EMediaSoundChannels = {
 }
 
 ---@enum EMediaSoundComponentFFTSize
-EMediaSoundComponentFFTSize = {
+local EMediaSoundComponentFFTSize = {
     Min_64 = 0,
     Small_256 = 1,
     Medium_512 = 2,
@@ -38,7 +38,7 @@ EMediaSoundComponentFFTSize = {
 }
 
 ---@enum EMediaVideoCaptureDeviceFilter
-EMediaVideoCaptureDeviceFilter = {
+local EMediaVideoCaptureDeviceFilter = {
     None = 0,
     Card = 1,
     Software = 2,
@@ -48,7 +48,7 @@ EMediaVideoCaptureDeviceFilter = {
 }
 
 ---@enum EMediaWebcamCaptureDeviceFilter
-EMediaWebcamCaptureDeviceFilter = {
+local EMediaWebcamCaptureDeviceFilter = {
     None = 0,
     DepthSensor = 1,
     Front = 2,

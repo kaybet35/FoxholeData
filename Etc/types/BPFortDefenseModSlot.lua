@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFortDefenseModSlot_C : UModificationSlotComponent
-UBPFortDefenseModSlot_C = {}
+local UBPFortDefenseModSlot_C = {}
 
 

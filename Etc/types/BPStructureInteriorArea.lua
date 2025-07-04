@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPStructureInteriorArea_C : UVisibilityToggleAreaComponent
-UBPStructureInteriorArea_C = {}
+local UBPStructureInteriorArea_C = {}
 
 

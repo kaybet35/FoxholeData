@@ -3,7 +3,7 @@
 ---@class AReplicationGraphDebugActor : AActor
 ---@field ReplicationGraph UReplicationGraph
 ---@field ConnectionManager UNetReplicationGraphConnection
-AReplicationGraphDebugActor = {}
+local AReplicationGraphDebugActor = {}
 
 function AReplicationGraphDebugActor:ServerStopDebugging() end
 function AReplicationGraphDebugActor:ServerStartDebugging() end
@@ -29,27 +29,27 @@ function AReplicationGraphDebugActor:ClientCellInfo(CellLocation, CellExtent, Ac
 ---@field Connection UNetConnection
 ---@field LastViewer AActor
 ---@field LastViewTarget AActor
-FAlwaysRelevantActorInfo = {}
+local FAlwaysRelevantActorInfo = {}
 
 
 
 ---@class FConnectionAlwaysRelevantNodePair
 ---@field NetConnection UNetConnection
 ---@field Node UReplicationGraphNode_AlwaysRelevant_ForConnection
-FConnectionAlwaysRelevantNodePair = {}
+local FConnectionAlwaysRelevantNodePair = {}
 
 
 
 ---@class FLastLocationGatherInfo
 ---@field Connection UNetConnection
 ---@field LastLocation FVector
-FLastLocationGatherInfo = {}
+local FLastLocationGatherInfo = {}
 
 
 
 ---@class FTearOffActorInfo
 ---@field Actor AActor
-FTearOffActorInfo = {}
+local FTearOffActorInfo = {}
 
 
 
@@ -58,7 +58,7 @@ FTearOffActorInfo = {}
 ---@field AlwaysRelevantNode UReplicationGraphNode_ActorList
 ---@field AlwaysRelevantForConnectionList TArray<FConnectionAlwaysRelevantNodePair>
 ---@field ActorsWithoutNetConnection TArray<AActor>
-UBasicReplicationGraph = {}
+local UBasicReplicationGraph = {}
 
 
 
@@ -68,7 +68,7 @@ UBasicReplicationGraph = {}
 ---@field LastGatherLocations TArray<FLastLocationGatherInfo>
 ---@field ConnectionGraphNodes TArray<UReplicationGraphNode>
 ---@field TearOffNode UReplicationGraphNode_TearOff_ForConnection
-UNetReplicationGraphConnection = {}
+local UNetReplicationGraphConnection = {}
 
 
 
@@ -79,27 +79,27 @@ UNetReplicationGraphConnection = {}
 ---@field PendingConnections TArray<UNetReplicationGraphConnection>
 ---@field GlobalGraphNodes TArray<UReplicationGraphNode>
 ---@field PrepareForReplicationNodes TArray<UReplicationGraphNode>
-UReplicationGraph = {}
+local UReplicationGraph = {}
 
 
 
 ---@class UReplicationGraphNode : UObject
 ---@field AllChildNodes TArray<UReplicationGraphNode>
-UReplicationGraphNode = {}
+local UReplicationGraphNode = {}
 
 
 
 ---@class UReplicationGraphNode_ActorList : UReplicationGraphNode
-UReplicationGraphNode_ActorList = {}
+local UReplicationGraphNode_ActorList = {}
 
 
 ---@class UReplicationGraphNode_ActorListFrequencyBuckets : UReplicationGraphNode
-UReplicationGraphNode_ActorListFrequencyBuckets = {}
+local UReplicationGraphNode_ActorListFrequencyBuckets = {}
 
 
 ---@class UReplicationGraphNode_AlwaysRelevant : UReplicationGraphNode
 ---@field ChildNode UReplicationGraphNode
-UReplicationGraphNode_AlwaysRelevant = {}
+local UReplicationGraphNode_AlwaysRelevant = {}
 
 
 
@@ -107,36 +107,36 @@ UReplicationGraphNode_AlwaysRelevant = {}
 ---@field PastRelevantActors TArray<FAlwaysRelevantActorInfo>
 ---@field LastViewer AActor
 ---@field LastViewTarget AActor
-UReplicationGraphNode_AlwaysRelevant_ForConnection = {}
+local UReplicationGraphNode_AlwaysRelevant_ForConnection = {}
 
 
 
 ---@class UReplicationGraphNode_ConnectionDormancyNode : UReplicationGraphNode_ActorList
-UReplicationGraphNode_ConnectionDormancyNode = {}
+local UReplicationGraphNode_ConnectionDormancyNode = {}
 
 
 ---@class UReplicationGraphNode_DormancyNode : UReplicationGraphNode_ActorList
-UReplicationGraphNode_DormancyNode = {}
+local UReplicationGraphNode_DormancyNode = {}
 
 
 ---@class UReplicationGraphNode_DynamicSpatialFrequency : UReplicationGraphNode_ActorList
-UReplicationGraphNode_DynamicSpatialFrequency = {}
+local UReplicationGraphNode_DynamicSpatialFrequency = {}
 
 
 ---@class UReplicationGraphNode_GridCell : UReplicationGraphNode_ActorList
 ---@field DynamicNode UReplicationGraphNode
 ---@field DormancyNode UReplicationGraphNode_DormancyNode
-UReplicationGraphNode_GridCell = {}
+local UReplicationGraphNode_GridCell = {}
 
 
 
 ---@class UReplicationGraphNode_GridSpatialization2D : UReplicationGraphNode
-UReplicationGraphNode_GridSpatialization2D = {}
+local UReplicationGraphNode_GridSpatialization2D = {}
 
 
 ---@class UReplicationGraphNode_TearOff_ForConnection : UReplicationGraphNode
 ---@field TearOffActors TArray<FTearOffActorInfo>
-UReplicationGraphNode_TearOff_ForConnection = {}
+local UReplicationGraphNode_TearOff_ForConnection = {}
 
 
 

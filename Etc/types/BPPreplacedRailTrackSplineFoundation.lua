@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPPreplacedRailTrackSplineFoundation_C : ARailwayTrack
-ABPPreplacedRailTrackSplineFoundation_C = {}
+local ABPPreplacedRailTrackSplineFoundation_C = {}
 
 

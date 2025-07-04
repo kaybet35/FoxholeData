@@ -7,7 +7,7 @@
 ---@field Timeline_0_NewTrack_0_D8BBADF741143162658E83B495E14EB4 FVector
 ---@field Timeline_0__Direction_D8BBADF741143162658E83B495E14EB4 ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPCopperTier2Resource_C = {}
+local ABPCopperTier2Resource_C = {}
 
 function ABPCopperTier2Resource_C:Timeline_0__FinishedFunc() end
 function ABPCopperTier2Resource_C:Timeline_0__UpdateFunc() end

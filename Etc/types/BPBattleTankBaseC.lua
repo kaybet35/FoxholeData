@@ -11,7 +11,7 @@
 ---@field TurretLight USpotLightComponent
 ---@field FrontLightLeft USpotLightComponent
 ---@field FrontLightRight USpotLightComponent
-ABPBattleTankBaseC_C = {}
+local ABPBattleTankBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPBattleTankBaseC_C:BPOnVehicleOn(IsOn) end

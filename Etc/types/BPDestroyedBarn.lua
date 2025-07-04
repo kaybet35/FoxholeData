@@ -15,7 +15,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ABPDestroyedBarn_C = {}
+local ABPDestroyedBarn_C = {}
 
 
 

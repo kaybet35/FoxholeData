@@ -2,7 +2,7 @@
 
 ---@class ASmokeGrenade_C : ATimedProjectile
 ---@field ProjectileMesh UStaticMeshComponent
-ASmokeGrenade_C = {}
+local ASmokeGrenade_C = {}
 
 
 

@@ -31,7 +31,7 @@
 ---@field FVFBarrel04 UStaticMeshComponent
 ---@field FVFBarrel03 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityFactoryAmmoRocketFactory_C = {}
+local ABPFacilityFactoryAmmoRocketFactory_C = {}
 
 
 

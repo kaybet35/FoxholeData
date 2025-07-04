@@ -25,7 +25,7 @@
 ---@field WallLeft UStaticMeshComponent
 ---@field WallBack UStaticMeshComponent
 ---@field WallFront UStaticMeshComponent
-ABPTrenchConnectorT3_C = {}
+local ABPTrenchConnectorT3_C = {}
 
 
 

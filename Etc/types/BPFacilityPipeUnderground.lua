@@ -6,7 +6,7 @@
 ---@field BackSurfaceCheckSocket UBuildSocketComponent
 ---@field FrontMesh UStaticMeshComponent
 ---@field BackMesh UStaticMeshComponent
-ABPFacilityPipeUnderground_C = {}
+local ABPFacilityPipeUnderground_C = {}
 
 
 

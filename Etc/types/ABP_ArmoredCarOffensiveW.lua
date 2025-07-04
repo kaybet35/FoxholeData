@@ -25,7 +25,7 @@
 ---@field AnimGraphNode_StateMachine_D8242D4B4B1C090EF30F73AEBA479648 FAnimNode_StateMachine
 ---@field AnimGraphNode_Root_39FAB641409FC10F391FBDA334304B7A FAnimNode_Root
 ---@field TurretElevation float
-UABP_ArmoredCarOffensiveW_C = {}
+local UABP_ArmoredCarOffensiveW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ArmoredCarOffensiveW_C:AnimGraph(AnimGraph) end

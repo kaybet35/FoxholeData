@@ -19,7 +19,7 @@
 ---@field ChaosDebugSubstepControl FChaosDebugSubstepControl
 ---@field SpriteComponent UBillboardComponent
 ---@field GameplayEventDispatcherComponent UChaosGameplayEventDispatcher
-AChaosSolverActor = {}
+local AChaosSolverActor = {}
 
 ---@param bActive boolean
 function AChaosSolverActor:SetSolverActive(bActive) end
@@ -27,7 +27,7 @@ function AChaosSolverActor:SetAsCurrentWorldSolver() end
 
 
 ---@class FBreakEventCallbackWrapper
-FBreakEventCallbackWrapper = {}
+local FBreakEventCallbackWrapper = {}
 
 
 ---@class FChaosBreakEvent
@@ -36,7 +36,7 @@ FBreakEventCallbackWrapper = {}
 ---@field Velocity FVector
 ---@field AngularVelocity FVector
 ---@field Mass float
-FChaosBreakEvent = {}
+local FChaosBreakEvent = {}
 
 
 
@@ -44,13 +44,13 @@ FChaosBreakEvent = {}
 ---@field bPause boolean
 ---@field bSubstep boolean
 ---@field bStep boolean
-FChaosDebugSubstepControl = {}
+local FChaosDebugSubstepControl = {}
 
 
 
 ---@class FChaosHandlerSet
 ---@field ChaosHandlers TSet<UObject>
-FChaosHandlerSet = {}
+local FChaosHandlerSet = {}
 
 
 
@@ -66,35 +66,35 @@ FChaosHandlerSet = {}
 ---@field OtherAngularVelocity FVector
 ---@field Mass float
 ---@field OtherMass float
-FChaosPhysicsCollisionInfo = {}
+local FChaosPhysicsCollisionInfo = {}
 
 
 
 ---@class IChaosNotifyHandlerInterface : IInterface
-IChaosNotifyHandlerInterface = {}
+local IChaosNotifyHandlerInterface = {}
 
 
 ---@class UChaosDebugDrawComponent : UActorComponent
-UChaosDebugDrawComponent = {}
+local UChaosDebugDrawComponent = {}
 
 
 ---@class UChaosEventListenerComponent : UActorComponent
-UChaosEventListenerComponent = {}
+local UChaosEventListenerComponent = {}
 
 
 ---@class UChaosGameplayEventDispatcher : UChaosEventListenerComponent
 ---@field CollisionEventRegistrations TMap<UPrimitiveComponent, FChaosHandlerSet>
 ---@field BreakEventRegistrations TMap<UPrimitiveComponent, FBreakEventCallbackWrapper>
-UChaosGameplayEventDispatcher = {}
+local UChaosGameplayEventDispatcher = {}
 
 
 
 ---@class UChaosSolver : UObject
-UChaosSolver = {}
+local UChaosSolver = {}
 
 
 ---@class UChaosSolverEngineBlueprintLibrary : UBlueprintFunctionLibrary
-UChaosSolverEngineBlueprintLibrary = {}
+local UChaosSolverEngineBlueprintLibrary = {}
 
 ---@param PhysicsCollision FChaosPhysicsCollisionInfo
 ---@return FHitResult
@@ -103,7 +103,7 @@ function UChaosSolverEngineBlueprintLibrary:ConvertPhysicsCollisionToHitResult(P
 
 ---@class UChaosSolverSettings : UDeveloperSettings
 ---@field DefaultChaosSolverActorClass FSoftClassPath
-UChaosSolverSettings = {}
+local UChaosSolverSettings = {}
 
 
 

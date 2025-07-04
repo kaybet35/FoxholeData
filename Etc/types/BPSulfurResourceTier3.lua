@@ -8,7 +8,7 @@
 ---@field Timeline_0_NewTrack_0_A5116ABE47B7C7AB1BA658BBC8A44D20 FVector
 ---@field Timeline_0__Direction_A5116ABE47B7C7AB1BA658BBC8A44D20 ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPSulfurResourceTier3_C = {}
+local ABPSulfurResourceTier3_C = {}
 
 function ABPSulfurResourceTier3_C:Timeline_0__FinishedFunc() end
 function ABPSulfurResourceTier3_C:Timeline_0__UpdateFunc() end

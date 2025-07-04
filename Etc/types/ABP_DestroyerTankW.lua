@@ -21,7 +21,7 @@
 ---@field AnimGraphNode_StateResult_94602C9543CC2EB0E4F87DA1CCC13BD3 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_BDE0F6354380D710AFC1B19A09944D57 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_1C08E4D34332BFE148CCFD99B684EC87 FAnimNode_StateMachine
-UABP_DestroyerTankW_C = {}
+local UABP_DestroyerTankW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_DestroyerTankW_C:AnimGraph(AnimGraph) end

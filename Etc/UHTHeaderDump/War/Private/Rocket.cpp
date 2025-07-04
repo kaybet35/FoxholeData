@@ -23,11 +23,11 @@ ARocket::ARocket(const FObjectInitializer& ObjectInitializer) : Super(ObjectInit
     this->LaunchAudioComponent = NULL;
     this->State = ERocketLaunchSequence::Idle;
     this->OriginMapID = EWorldConquestMapId::Invalid;
-    this->SkeletalMesh->SetupAttachment(RootComponent);
     this->FuelingParticleSystem->SetupAttachment(RootComponent);
     this->GroundParticleSystem->SetupAttachment(RootComponent);
-    this->LaunchParticleSystem->SetupAttachment(SkeletalMesh);
     this->InFlightParticleSystem->SetupAttachment(SkeletalMesh);
+    this->LaunchParticleSystem->SetupAttachment(SkeletalMesh);
+    this->SkeletalMesh->SetupAttachment(RootComponent);
 }
 
 void ARocket::OnRep_State() {

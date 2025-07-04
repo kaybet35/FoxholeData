@@ -4,7 +4,7 @@
 ---@field FrameRateOverride FFrameRate
 ---@field ProxyOverride FString
 ---@field SequencePath FDirectoryPath
-UImgMediaSource = {}
+local UImgMediaSource = {}
 
 ---@param Path FString
 function UImgMediaSource:SetSequencePath(Path) end

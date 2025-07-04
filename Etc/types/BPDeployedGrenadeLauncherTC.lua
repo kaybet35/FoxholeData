@@ -2,7 +2,7 @@
 
 ---@class ABPDeployedGrenadeLauncherTC_C : ADeployedWeapon
 ---@field OccupiableComponent UStructureSeatComponent
-ABPDeployedGrenadeLauncherTC_C = {}
+local ABPDeployedGrenadeLauncherTC_C = {}
 
 
 

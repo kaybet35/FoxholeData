@@ -1,11 +1,11 @@
 ---@meta
 
 ---@class ULiveLinkMagicLeapHandTrackingSourceFactory : ULiveLinkSourceFactory
-ULiveLinkMagicLeapHandTrackingSourceFactory = {}
+local ULiveLinkMagicLeapHandTrackingSourceFactory = {}
 
 
 ---@class UMagicLeapHandTrackingFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapHandTrackingFunctionLibrary = {}
+local UMagicLeapHandTrackingFunctionLibrary = {}
 
 ---@param Gesture EMagicLeapHandTrackingGesture
 ---@param Confidence float

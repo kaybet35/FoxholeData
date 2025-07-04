@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTrenchBlockerBox_C : UWarBoxComponent
-UBPTrenchBlockerBox_C = {}
+local UBPTrenchBlockerBox_C = {}
 
 

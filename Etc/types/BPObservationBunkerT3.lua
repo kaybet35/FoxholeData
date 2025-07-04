@@ -17,7 +17,7 @@
 ---@field FortCommon UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPObservationBunkerT3_C = {}
+local ABPObservationBunkerT3_C = {}
 
 
 

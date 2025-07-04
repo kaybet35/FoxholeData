@@ -4,7 +4,7 @@
 ---@field WaterProjectileTrail UParticleSystemComponent
 ---@field WaterTrail UParticleSystemComponent
 ---@field BloodBall UStaticMeshComponent
-AWaterBucketfullProjectile_C = {}
+local AWaterBucketfullProjectile_C = {}
 
 
 

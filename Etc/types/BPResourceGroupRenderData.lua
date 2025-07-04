@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPResourceGroupRenderData_C : UResourceGroupRenderData
-UBPResourceGroupRenderData_C = {}
+local UBPResourceGroupRenderData_C = {}
 
 

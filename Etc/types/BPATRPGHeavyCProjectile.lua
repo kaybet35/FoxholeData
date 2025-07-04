@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPATRPGHeavyCProjectile_C : ABPATRPGCProjectile_C
-ABPATRPGHeavyCProjectile_C = {}
+local ABPATRPGHeavyCProjectile_C = {}
 
 

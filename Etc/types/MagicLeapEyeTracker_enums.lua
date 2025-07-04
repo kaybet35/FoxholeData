@@ -1,5 +1,5 @@
 ---@enum EMagicLeapEyeTrackingCalibrationStatus
-EMagicLeapEyeTrackingCalibrationStatus = {
+local EMagicLeapEyeTrackingCalibrationStatus = {
     None = 0,
     Bad = 1,
     Good = 2,
@@ -7,7 +7,7 @@ EMagicLeapEyeTrackingCalibrationStatus = {
 }
 
 ---@enum EMagicLeapEyeTrackingStatus
-EMagicLeapEyeTrackingStatus = {
+local EMagicLeapEyeTrackingStatus = {
     NotConnected = 0,
     Disabled = 1,
     UserNotPresent = 2,

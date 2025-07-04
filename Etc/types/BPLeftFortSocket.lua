@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLeftFortSocket_C : UBuildSocketComponent
-UBPLeftFortSocket_C = {}
+local UBPLeftFortSocket_C = {}
 
 

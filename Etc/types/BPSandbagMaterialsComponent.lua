@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSandbagMaterialsComponent_C : ULargeMaterialComponent
-UBPSandbagMaterialsComponent_C = {}
+local UBPSandbagMaterialsComponent_C = {}
 
 

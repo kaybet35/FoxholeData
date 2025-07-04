@@ -6,7 +6,7 @@
 ---@field SpotLight USpotLightComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
 ---@field MainBodyTop USkeletalMeshComponent
-ABPHalfTrackOffensiveW_C = {}
+local ABPHalfTrackOffensiveW_C = {}
 
 ---@param IsOn boolean
 function ABPHalfTrackOffensiveW_C:BPOnVehicleOn(IsOn) end

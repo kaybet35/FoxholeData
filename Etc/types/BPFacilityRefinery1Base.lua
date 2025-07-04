@@ -10,7 +10,7 @@
 ---@field ['Producing Smoke'] UParticleSystemComponent
 ---@field FacilityRefinery1Forge UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery1Base_C = {}
+local ABPFacilityRefinery1Base_C = {}
 
 
 

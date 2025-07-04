@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPAntiTankExplosiveStickyBombDamageType_C : USimDamageType
-UBPAntiTankExplosiveStickyBombDamageType_C = {}
+local UBPAntiTankExplosiveStickyBombDamageType_C = {}
 
 

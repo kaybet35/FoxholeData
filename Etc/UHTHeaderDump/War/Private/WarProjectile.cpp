@@ -33,8 +33,8 @@ AWarProjectile::AWarProjectile(const FObjectInitializer& ObjectInitializer) : Su
     this->RotationVelocityRequirement = 0.00f;
     this->UnderWaterExplosionTemplate = NULL;
     this->WaterSurfaceExplosionTemplate = NULL;
-    this->ParticleComp->SetupAttachment(RootComponent);
     this->LoopingAudio->SetupAttachment(RootComponent);
+    this->ParticleComp->SetupAttachment(RootComponent);
 }
 
 void AWarProjectile::SetHomingTarget(AActor* Target) {

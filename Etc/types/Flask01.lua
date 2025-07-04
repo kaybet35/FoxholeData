@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AFlask01_C : ALorePickup
-AFlask01_C = {}
+local AFlask01_C = {}
 
 

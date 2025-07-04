@@ -9,7 +9,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field ShootThroughCollision UBoxComponent
 ---@field HouseMesh UStaticMeshComponent
-ABPDestroyedBarn2_C = {}
+local ABPDestroyedBarn2_C = {}
 
 
 

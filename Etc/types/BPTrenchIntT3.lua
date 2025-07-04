@@ -15,7 +15,7 @@
 ---@field WallCornerBackRight UStaticMeshComponent
 ---@field BPTrenchRoofModSlot UBPTrenchRoofModSlot_C
 ---@field TrenchIntCommon UTemplateComponent
-ABPTrenchIntT3_C = {}
+local ABPTrenchIntT3_C = {}
 
 
 

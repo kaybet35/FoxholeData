@@ -11,7 +11,7 @@
 ---@field InstancedStaticMesh1 UInstancedStaticMeshComponent
 ---@field InstancedStaticMesh UInstancedStaticMeshComponent
 ---@field ItemGroupRender UItemGroupRenderComponent
-ABPFacilityTransferMaterial_C = {}
+local ABPFacilityTransferMaterial_C = {}
 
 
 

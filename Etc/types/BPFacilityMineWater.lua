@@ -6,7 +6,7 @@
 ---@field ProducingFX1 UParticleSystemComponent
 ---@field ProducingFX UParticleSystemComponent
 ---@field MainMesh USkeletalMeshComponent
-ABPFacilityMineWater_C = {}
+local ABPFacilityMineWater_C = {}
 
 
 

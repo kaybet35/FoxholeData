@@ -22,7 +22,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field BackExit USeatExitComponent
 ---@field chassis USkeletalMeshComponent
-ABPAmbulanceFlameC_C = {}
+local ABPAmbulanceFlameC_C = {}
 
 ---@param IsOn boolean
 function ABPAmbulanceFlameC_C:BPOnVehicleOn(IsOn) end

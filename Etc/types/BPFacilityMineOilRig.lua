@@ -12,7 +12,7 @@
 ---@field FacilityResourceLoadingPlatform UStaticMeshComponent
 ---@field FacilityMineOilRig UStaticMeshComponent
 ---@field ProducingSFX UWarAudioComponent
-ABPFacilityMineOilRig_C = {}
+local ABPFacilityMineOilRig_C = {}
 
 
 

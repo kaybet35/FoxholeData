@@ -5,7 +5,7 @@
 ---@field LeftFortStairsModSlot UBPFortStairsModSlot_C
 ---@field BackFortStairsModSlot UBPFortStairsModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortRampCommonT2T3Mods_C = {}
+local ABPFortRampCommonT2T3Mods_C = {}
 
 
 

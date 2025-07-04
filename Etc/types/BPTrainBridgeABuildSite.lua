@@ -12,7 +12,7 @@
 ---@field VehicleBlocking UBoxComponent
 ---@field SideB UStaticMeshComponent
 ---@field SideA UStaticMeshComponent
-ABPTrainBridgeABuildSite_C = {}
+local ABPTrainBridgeABuildSite_C = {}
 
 
 

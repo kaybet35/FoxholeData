@@ -13,8 +13,8 @@ AFort::AFort(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
     this->bSupportsEmplacedStructures = false;
     this->EmplacementLocation = CreateDefaultSubobject<UBoxComponent>(TEXT("EmplacementLocation"));
     this->MinUpgradeTargetDistance = 0.00f;
-    this->KillVolume->SetupAttachment(RootComponent);
     this->EmplacementLocation->SetupAttachment(RootComponent);
+    this->KillVolume->SetupAttachment(RootComponent);
 }
 
 

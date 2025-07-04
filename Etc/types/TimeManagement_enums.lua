@@ -1,5 +1,5 @@
 ---@enum EFrameNumberDisplayFormats
-EFrameNumberDisplayFormats = {
+local EFrameNumberDisplayFormats = {
     NonDropFrameTimecode = 0,
     DropFrameTimecode = 1,
     Seconds = 2,

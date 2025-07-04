@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMechWGunnerComponent_C : UProjectileGunnerMountComponent
-UBPMechWGunnerComponent_C = {}
+local UBPMechWGunnerComponent_C = {}
 
 

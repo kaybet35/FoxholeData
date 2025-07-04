@@ -4,12 +4,12 @@
 ---@field bIsValid boolean
 ---@field PixelIntensity float
 ---@field RGBScaleFactor FVector
-FLuminARLightEstimate = {}
+local FLuminARLightEstimate = {}
 
 
 
 ---@class ULuminARFrameFunctionLibrary : UBlueprintFunctionLibrary
-ULuminARFrameFunctionLibrary = {}
+local ULuminARFrameFunctionLibrary = {}
 
 ---@param WorldContextObject UObject
 ---@param ScreenPosition FVector2D
@@ -30,12 +30,12 @@ function ULuminARFrameFunctionLibrary:GetLightEstimation(OutLightEstimate) end
 ---@field PlaneSearchExtents FVector
 ---@field PlaneQueryFlags TArray<EMagicLeapPlaneQueryFlags>
 ---@field bDiscardZeroExtentPlanes boolean
-ULuminARSessionConfig = {}
+local ULuminARSessionConfig = {}
 
 
 
 ---@class ULuminARSessionFunctionLibrary : UBlueprintFunctionLibrary
-ULuminARSessionFunctionLibrary = {}
+local ULuminARSessionFunctionLibrary = {}
 
 ---@param WorldContextObject UObject
 ---@param LatentInfo FLatentActionInfo
@@ -45,7 +45,7 @@ function ULuminARSessionFunctionLibrary:StartLuminARSession(WorldContextObject, 
 
 ---@class ULuminARUObjectManager : UObject
 ---@field AllAnchors TArray<UARPin>
-ULuminARUObjectManager = {}
+local ULuminARUObjectManager = {}
 
 
 

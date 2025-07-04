@@ -5,7 +5,7 @@
 ---@field RailStartArrowVis UArrowComponent
 ---@field RailEndVis UStaticMeshComponent
 ---@field RailStartVis UStaticMeshComponent
-ABPNoVisRailTrackSpline_C = {}
+local ABPNoVisRailTrackSpline_C = {}
 
 
 

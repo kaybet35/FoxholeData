@@ -12,7 +12,7 @@
 ---@field PointLight UPointLightComponent
 ---@field FVFLight UStaticMeshComponent
 ---@field FoundationDecal UDecalComponent
-ABPFacilityCrane_C = {}
+local ABPFacilityCrane_C = {}
 
 
 

@@ -7,7 +7,7 @@
 ---@field Fire UAudioComponent
 ---@field NoMansLandSplinter UParticleSystemComponent
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPAspenTree03Replacement_C = {}
+local ABPAspenTree03Replacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPAspenTree03Replacement_C:OnStateChanged(State) end

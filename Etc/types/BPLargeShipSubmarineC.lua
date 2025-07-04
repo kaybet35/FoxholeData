@@ -182,7 +182,7 @@
 ---@field SafetyBallastSeat8 UVehicleSeatComponent
 ---@field MainBallastSeat6 UVehicleSeatComponent
 ---@field Deck USkeletalMeshComponent
-ABPLargeShipSubmarineC_C = {}
+local ABPLargeShipSubmarineC_C = {}
 
 
 

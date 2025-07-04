@@ -5,7 +5,7 @@
 ---@field EditorOnlySphere USphereComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPSnowStormMinor_C = {}
+local ABPSnowStormMinor_C = {}
 
 
 

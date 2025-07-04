@@ -5,7 +5,7 @@
 ---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
 ---@field BPLoadingAreaBox UBPLoadingAreaBox_C
 ---@field FoundationDecal UDecalComponent
-ABPFacilityTransferCrate_C = {}
+local ABPFacilityTransferCrate_C = {}
 
 
 

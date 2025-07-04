@@ -12,7 +12,7 @@
 ---@field BackSupport UStaticMeshComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
-ABPFacilityCatwalkBridge_C = {}
+local ABPFacilityCatwalkBridge_C = {}
 
 
 

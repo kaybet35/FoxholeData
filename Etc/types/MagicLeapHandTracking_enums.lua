@@ -1,5 +1,5 @@
 ---@enum EMagicLeapGestureTransformSpace
-EMagicLeapGestureTransformSpace = {
+local EMagicLeapGestureTransformSpace = {
     World = 0,
     Hand = 1,
     Tracking = 2,
@@ -7,7 +7,7 @@ EMagicLeapGestureTransformSpace = {
 }
 
 ---@enum EMagicLeapHandTrackingGesture
-EMagicLeapHandTrackingGesture = {
+local EMagicLeapHandTrackingGesture = {
     Finger = 0,
     Fist = 1,
     Pinch = 2,
@@ -23,7 +23,7 @@ EMagicLeapHandTrackingGesture = {
 }
 
 ---@enum EMagicLeapHandTrackingGestureFilterLevel
-EMagicLeapHandTrackingGestureFilterLevel = {
+local EMagicLeapHandTrackingGestureFilterLevel = {
     NoFilter = 0,
     SlightRobustnessToFlicker = 1,
     MoreRobustnessToFlicker = 2,
@@ -31,7 +31,7 @@ EMagicLeapHandTrackingGestureFilterLevel = {
 }
 
 ---@enum EMagicLeapHandTrackingKeypoint
-EMagicLeapHandTrackingKeypoint = {
+local EMagicLeapHandTrackingKeypoint = {
     Thumb_Tip = 0,
     Thumb_IP = 1,
     Thumb_MCP = 2,
@@ -60,7 +60,7 @@ EMagicLeapHandTrackingKeypoint = {
 }
 
 ---@enum EMagicLeapHandTrackingKeypointFilterLevel
-EMagicLeapHandTrackingKeypointFilterLevel = {
+local EMagicLeapHandTrackingKeypointFilterLevel = {
     NoFilter = 0,
     SimpleSmoothing = 1,
     PredictiveSmoothing = 2,

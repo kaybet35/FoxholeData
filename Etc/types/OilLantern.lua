@@ -4,7 +4,7 @@
 ---@field ParticleSystem UParticleSystemComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-AOilLantern_C = {}
+local AOilLantern_C = {}
 
 
 

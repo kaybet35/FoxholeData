@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTrainCombatCarWGunnerComponent_C : UBPLightTankGunnerMountComponentW_C
-UBPTrainCombatCarWGunnerComponent_C = {}
+local UBPTrainCombatCarWGunnerComponent_C = {}
 
 

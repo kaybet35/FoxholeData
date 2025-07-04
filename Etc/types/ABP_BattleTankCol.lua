@@ -61,7 +61,7 @@
 ---@field AnimGraphNode_SequencePlayer_D3E7DBA44E6051561B6F1BAB4521B542 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_9471DADD4A6EF376C33552ADBAAEB9B6 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_E8A2394149484D12AFF2618025A7D2A1 FAnimNode_StateMachine
-UABP_BattleTankCol_C = {}
+local UABP_BattleTankCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_BattleTankCol_C:AnimGraph(AnimGraph) end

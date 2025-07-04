@@ -14,7 +14,7 @@
 ---@field AnimGraphNode_BlendListByBool_8A2005084E4550A8876DD99E9B9078C3 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_381239134B80FC6940066C9949B67502 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_1614C54843ABE9BDABB04A876638AA62 FAnimNode_SequencePlayer
-UABP_DestroyerTankFlameW_C = {}
+local UABP_DestroyerTankFlameW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_DestroyerTankFlameW_C:AnimGraph(AnimGraph) end

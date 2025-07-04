@@ -4,7 +4,7 @@
 ---@field Audio UAudioComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field RVWallT2 UStaticMeshComponent
-ABPRVWallT3_C = {}
+local ABPRVWallT3_C = {}
 
 
 

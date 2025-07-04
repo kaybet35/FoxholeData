@@ -1,5 +1,5 @@
 ---@enum EMagicLeapIdentityError
-EMagicLeapIdentityError = {
+local EMagicLeapIdentityError = {
     Ok = 0,
     InvalidParam = 1,
     AllocFailed = 2,
@@ -22,7 +22,7 @@ EMagicLeapIdentityError = {
 }
 
 ---@enum EMagicLeapIdentityKey
-EMagicLeapIdentityKey = {
+local EMagicLeapIdentityKey = {
     GivenName = 0,
     FamilyName = 1,
     Email = 2,

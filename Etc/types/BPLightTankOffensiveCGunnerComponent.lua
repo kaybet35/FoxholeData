@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLightTankOffensiveCGunnerComponent_C : UTankGunnerMountComponent
-UBPLightTankOffensiveCGunnerComponent_C = {}
+local UBPLightTankOffensiveCGunnerComponent_C = {}
 
 

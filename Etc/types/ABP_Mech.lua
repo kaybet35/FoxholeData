@@ -21,7 +21,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_071849C048E7D5EB10D41CA71C948DAD FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendListByBool_FB09606B48FCB493EC964580620C9A2A FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_43FBED9F49BD89FCCEAD7CBD2B49D5E7 FAnimNode_SequencePlayer
-UABP_Mech_C = {}
+local UABP_Mech_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Mech_C:AnimGraph(AnimGraph) end

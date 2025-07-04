@@ -25,7 +25,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_6E6C5F344C79BD51CE971F865846085B FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_28D174B0402B1A8F4893EA8C6BC1AB67 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_BlendSpacePlayer_F62C0FD547531601C51E7681291CE18D FAnimNode_BlendSpacePlayer
-UABP_MortarTankCol_C = {}
+local UABP_MortarTankCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_MortarTankCol_C:AnimGraph(AnimGraph) end

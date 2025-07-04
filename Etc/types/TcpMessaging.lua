@@ -5,7 +5,7 @@
 ---@field ListenEndpoint FString
 ---@field ConnectToEndpoints TArray<FString>
 ---@field ConnectionRetryDelay int32
-UTcpMessagingSettings = {}
+local UTcpMessagingSettings = {}
 
 
 

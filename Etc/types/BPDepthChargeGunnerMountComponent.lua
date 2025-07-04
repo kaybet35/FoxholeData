@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPDepthChargeGunnerMountComponent_C : UProjectileGunnerMountComponent
-UBPDepthChargeGunnerMountComponent_C = {}
+local UBPDepthChargeGunnerMountComponent_C = {}
 
 

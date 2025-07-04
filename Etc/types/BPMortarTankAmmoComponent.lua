@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMortarTankAmmoComponent_C : ULargeItemComponent
-UBPMortarTankAmmoComponent_C = {}
+local UBPMortarTankAmmoComponent_C = {}
 
 

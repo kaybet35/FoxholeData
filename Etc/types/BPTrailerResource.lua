@@ -19,7 +19,7 @@
 ---@field Node01 UStaticMeshComponent
 ---@field Node00 UStaticMeshComponent
 ---@field BPResourceGroupRenderComponent UBPResourceGroupRenderComponent_C
-ABPTrailerResource_C = {}
+local ABPTrailerResource_C = {}
 
 
 

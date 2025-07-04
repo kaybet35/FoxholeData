@@ -22,7 +22,7 @@
 ---@field AnimGraphNode_ApplyAdditive_8CD364C64D683DC517CE8D970CD696F4 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_BlendListByBool_0C6E94E64A86248547C4E0B7E4386909 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_63FF8FBC4ED5A3EA82DEE79E0B0B4CE4 FAnimNode_SequencePlayer
-UABP_RelicLightTank_C = {}
+local UABP_RelicLightTank_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RelicLightTank_C:AnimGraph(AnimGraph) end

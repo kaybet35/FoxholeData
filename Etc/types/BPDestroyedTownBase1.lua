@@ -25,7 +25,7 @@
 ---@field TownHallPostOffice_destroyed UStaticMeshComponent
 ---@field TownHallPostOfficeRoof_destroyed UStaticMeshComponent
 ---@field NoBuildVolume UBoxComponent
-ABPDestroyedTownBase1_C = {}
+local ABPDestroyedTownBase1_C = {}
 
 
 

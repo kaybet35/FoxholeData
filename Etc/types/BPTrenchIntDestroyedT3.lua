@@ -19,7 +19,7 @@
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field TrenchCommonMods UTemplateComponent
 ---@field TrenchIntCommon UTemplateComponent
-ABPTrenchIntDestroyedT3_C = {}
+local ABPTrenchIntDestroyedT3_C = {}
 
 
 

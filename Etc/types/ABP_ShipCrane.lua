@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_7F0A67F14C5B4F56869DA6AAF9639375 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_1415D80C44D152923CDB8B839E34D2FC FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_F3D463C141C0EEC11F6BB69FF27F566E FAnimNode_BlendSpacePlayer
-UABP_ShipCrane_C = {}
+local UABP_ShipCrane_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ShipCrane_C:AnimGraph(AnimGraph) end

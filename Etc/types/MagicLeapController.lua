@@ -11,12 +11,12 @@
 ---@field FingerGap float
 ---@field Radius float
 ---@field Angle float
-FMagicLeapTouchpadGesture = {}
+local FMagicLeapTouchpadGesture = {}
 
 
 
 ---@class UMagicLeapControllerFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapControllerFunctionLibrary = {}
+local UMagicLeapControllerFunctionLibrary = {}
 
 ---@param Hand EControllerHand
 ---@param MotionSource FName
@@ -93,7 +93,7 @@ function UMagicLeapControllerFunctionLibrary:GetControllerMapping(ControllerInde
 ---@field OnTouchpadGestureStart FMagicLeapTouchpadGesturesComponentOnTouchpadGestureStart
 ---@field OnTouchpadGestureContinue FMagicLeapTouchpadGesturesComponentOnTouchpadGestureContinue
 ---@field OnTouchpadGestureEnd FMagicLeapTouchpadGesturesComponentOnTouchpadGestureEnd
-UMagicLeapTouchpadGesturesComponent = {}
+local UMagicLeapTouchpadGesturesComponent = {}
 
 
 

@@ -4,7 +4,7 @@
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
-ALetter02_C = {}
+local ALetter02_C = {}
 
 
 

@@ -2,7 +2,7 @@
 
 ---@class ABPDeployedMGTW_C : ADeployedWeapon
 ---@field OccupiableComponent UStructureSeatComponent
-ABPDeployedMGTW_C = {}
+local ABPDeployedMGTW_C = {}
 
 
 

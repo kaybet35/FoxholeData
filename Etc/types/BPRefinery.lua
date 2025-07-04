@@ -42,7 +42,7 @@
 ---@field RefineryBuilding UStaticMeshComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field bIsProducingSFXActive boolean
-ABPRefinery_C = {}
+local ABPRefinery_C = {}
 
 function ABPRefinery_C:ReceiveBeginPlay() end
 function ABPRefinery_C:UpdateVisuals_SlowTick() end

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UPistolComponent_C : UHitScanWeaponComponent
-UPistolComponent_C = {}
+local UPistolComponent_C = {}
 
 

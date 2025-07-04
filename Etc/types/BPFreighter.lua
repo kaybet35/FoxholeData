@@ -27,7 +27,7 @@
 ---@field IdleSFXLoop UAudioComponent
 ---@field WorkVolume UBoxComponent
 ---@field Camera UCameraComponent
-ABPFreighter_C = {}
+local ABPFreighter_C = {}
 
 ---@param IsOn boolean
 function ABPFreighter_C:BPOnVehicleOn(IsOn) end

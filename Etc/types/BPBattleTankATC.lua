@@ -2,7 +2,7 @@
 
 ---@class ABPBattleTankATC_C : ABattleTankATCBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
-ABPBattleTankATC_C = {}
+local ABPBattleTankATC_C = {}
 
 ---@param IsOn boolean
 function ABPBattleTankATC_C:BPOnVehicleOn(IsOn) end

@@ -10,8 +10,8 @@ AMapMarker::AMapMarker(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MajorTextRender = CreateDefaultSubobject<UTextRenderComponent>(TEXT("MajorTextRender"));
     this->MinorTextRender = CreateDefaultSubobject<UTextRenderComponent>(TEXT("MinorTextRender"));
     this->MapMarkerType = EMapMarkerType::Minor;
-    this->MarkerArea->SetupAttachment(RootComponent);
     this->MajorTextRender->SetupAttachment(RootComponent);
+    this->MarkerArea->SetupAttachment(RootComponent);
     this->MinorTextRender->SetupAttachment(RootComponent);
 }
 

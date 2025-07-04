@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMortarTankGunner_C : UProjectileGunnerMountComponent
-UBPMortarTankGunner_C = {}
+local UBPMortarTankGunner_C = {}
 
 

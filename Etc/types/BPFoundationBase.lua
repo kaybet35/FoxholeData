@@ -2,7 +2,7 @@
 
 ---@class ABPFoundationBase_C : AFoundation
 ---@field Foundation UStaticMeshComponent
-ABPFoundationBase_C = {}
+local ABPFoundationBase_C = {}
 
 
 

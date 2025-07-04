@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWeatherStationMount_C : UWeatherStationMountComponent
-UBPWeatherStationMount_C = {}
+local UBPWeatherStationMount_C = {}
 
 

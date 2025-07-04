@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMGCItemComponent_C : UHeavyMachineGunItemComponent
-UBPMGCItemComponent_C = {}
+local UBPMGCItemComponent_C = {}
 
 

@@ -12,7 +12,7 @@
 ---@field SideRope01 UStaticMeshComponent
 ---@field BSDecal UDecalComponent
 ---@field Side01 UStaticMeshComponent
-ABPFortCornerBuildSite_C = {}
+local ABPFortCornerBuildSite_C = {}
 
 
 

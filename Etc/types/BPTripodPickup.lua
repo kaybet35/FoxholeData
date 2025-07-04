@@ -2,7 +2,7 @@
 
 ---@class ABPTripodPickup_C : AGearPickup
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPTripodPickup_C = {}
+local ABPTripodPickup_C = {}
 
 
 

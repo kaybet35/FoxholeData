@@ -2,7 +2,7 @@
 
 ---@class ABPVehicleProfileList_C : AVehicleProfileList
 ---@field DefaultSceneRoot USceneComponent
-ABPVehicleProfileList_C = {}
+local ABPVehicleProfileList_C = {}
 
 
 

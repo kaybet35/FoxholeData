@@ -17,7 +17,7 @@
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent
-ABPFortFirePitT3_C = {}
+local ABPFortFirePitT3_C = {}
 
 
 

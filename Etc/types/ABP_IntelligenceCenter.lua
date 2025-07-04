@@ -7,7 +7,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_0E5AA4674D588AD12FF43F9C98EF25C5 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_3FC6AD624BA22E337CD21391A51A1446 FAnimNode_LayeredBoneBlend
 ---@field Test float
-UABP_IntelligenceCenter_C = {}
+local UABP_IntelligenceCenter_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_IntelligenceCenter_C:AnimGraph(AnimGraph) end

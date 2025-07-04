@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPATRPGIndirectAmmoPickup_C : AAmmoPickup
-ABPATRPGIndirectAmmoPickup_C = {}
+local ABPATRPGIndirectAmmoPickup_C = {}
 
 

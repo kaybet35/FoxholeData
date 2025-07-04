@@ -12,7 +12,7 @@
 ---@field DirtLeft UStaticMeshComponent
 ---@field DirtRight UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchCommonDirtT1T2_C = {}
+local ABPTrenchCommonDirtT1T2_C = {}
 
 
 

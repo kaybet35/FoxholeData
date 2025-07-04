@@ -12,7 +12,7 @@
 ---@field BackDefenseModSlot UBPFortDefenseModSlot_C
 ---@field AngleDefenseModSlot UBPFortDefenseModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCornerCommonDefenseMods_C = {}
+local ABPFortCornerCommonDefenseMods_C = {}
 
 
 

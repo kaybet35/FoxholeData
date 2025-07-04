@@ -2,7 +2,7 @@
 
 ---@class ABPHeavyArtilleryAmmoPickup_C : AExplosiveAmmoPickup
 ---@field ItemMeshSK USkeletalMeshComponent
-ABPHeavyArtilleryAmmoPickup_C = {}
+local ABPHeavyArtilleryAmmoPickup_C = {}
 
 
 

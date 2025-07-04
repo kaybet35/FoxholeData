@@ -19,7 +19,7 @@
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field SpotLight_R USpotLightComponent
 ---@field Light_R UStaticMeshComponent
-ABPScoutVehicleUtilityW_C = {}
+local ABPScoutVehicleUtilityW_C = {}
 
 ---@param IsOn boolean
 function ABPScoutVehicleUtilityW_C:BPOnVehicleOn(IsOn) end

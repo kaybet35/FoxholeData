@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AColonialJournal02_C : ALorePickup
-AColonialJournal02_C = {}
+local AColonialJournal02_C = {}
 
 

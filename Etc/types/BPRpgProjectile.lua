@@ -2,7 +2,7 @@
 
 ---@class ABPRpgProjectile_C : AWarProjectile
 ---@field Mesh UStaticMeshComponent
-ABPRpgProjectile_C = {}
+local ABPRpgProjectile_C = {}
 
 
 

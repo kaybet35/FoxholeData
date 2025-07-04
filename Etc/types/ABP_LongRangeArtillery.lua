@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_StateResult_5C72A4F345C089D87A301A990975A566 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_ED5444E140F31C96EB5514BECB9D28B0 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_CE4AF7304CE22E6353795B9D36AABD2E FAnimNode_StateMachine
-UABP_LongRangeArtillery_C = {}
+local UABP_LongRangeArtillery_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LongRangeArtillery_C:AnimGraph(AnimGraph) end

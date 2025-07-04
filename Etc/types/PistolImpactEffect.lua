@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
 ---@field DefaultSceneRoot USceneComponent
-APistolImpactEffect_C = {}
+local APistolImpactEffect_C = {}
 
 function APistolImpactEffect_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

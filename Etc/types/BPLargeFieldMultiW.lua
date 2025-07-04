@@ -11,7 +11,7 @@
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPLargeFieldMultiW_C = {}
+local ABPLargeFieldMultiW_C = {}
 
 
 

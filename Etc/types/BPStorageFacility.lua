@@ -43,7 +43,7 @@
 ---@field StaticMesh14 UStaticMeshComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPStorageFacility_C = {}
+local ABPStorageFacility_C = {}
 
 ---@param VisualTeamId int32
 function ABPStorageFacility_C:BPSetTeamVisuals(VisualTeamId) end

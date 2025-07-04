@@ -4,7 +4,7 @@
 ---@field SulfurSmoke UParticleSystemComponent
 ---@field Sphere USphereComponent
 ---@field Decal UDecalComponent
-ABPSulfurField_C = {}
+local ABPSulfurField_C = {}
 
 
 

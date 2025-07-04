@@ -10,7 +10,7 @@
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPLargeFieldMortarC_C = {}
+local ABPLargeFieldMortarC_C = {}
 
 
 

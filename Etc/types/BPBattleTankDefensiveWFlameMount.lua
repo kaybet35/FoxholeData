@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBattleTankDefensiveWFlameMount_C : UBPFlameMountBaseComponent_C
-UBPBattleTankDefensiveWFlameMount_C = {}
+local UBPBattleTankDefensiveWFlameMount_C = {}
 
 

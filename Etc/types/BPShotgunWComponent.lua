@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPShotgunWComponent_C : UBPShotgunComponent_C
-UBPShotgunWComponent_C = {}
+local UBPShotgunWComponent_C = {}
 
 

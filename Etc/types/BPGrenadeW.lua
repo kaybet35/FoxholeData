@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPGrenadeW_C : AGrenade_C
-ABPGrenadeW_C = {}
+local ABPGrenadeW_C = {}
 
 

@@ -13,7 +13,7 @@
 ---@field InputDecal0 UDecalComponent
 ---@field PipeInput0 UBuildSocketComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityPowerOil_C = {}
+local ABPFacilityPowerOil_C = {}
 
 
 

@@ -2,7 +2,7 @@
 
 ---@class ABPDestroyedRVWallT1_C : ADestroyedStructure
 ---@field StaticMesh UStaticMeshComponent
-ABPDestroyedRVWallT1_C = {}
+local ABPDestroyedRVWallT1_C = {}
 
 
 

@@ -26,7 +26,7 @@
 ---@field Decal2 UDecalComponent
 ---@field Decal1 UDecalComponent
 ---@field WorkBox UBoxComponent
-ABPTrenchEmpBuildSite_C = {}
+local ABPTrenchEmpBuildSite_C = {}
 
 
 

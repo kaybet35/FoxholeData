@@ -2,7 +2,7 @@
 
 ---@class ABPMortarAmmoFLPickup_C : AMortarAmmoPickup
 ---@field MortarShellPickup UStaticMeshComponent
-ABPMortarAmmoFLPickup_C = {}
+local ABPMortarAmmoFLPickup_C = {}
 
 
 

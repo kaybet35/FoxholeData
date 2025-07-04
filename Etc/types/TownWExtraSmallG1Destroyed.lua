@@ -12,7 +12,7 @@
 ---@field Decal UDecalComponent
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field HouseMesh UStaticMeshComponent
-ATownWExtraSmallG1Destroyed_C = {}
+local ATownWExtraSmallG1Destroyed_C = {}
 
 
 

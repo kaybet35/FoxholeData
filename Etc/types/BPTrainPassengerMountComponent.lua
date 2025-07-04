@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTrainPassengerMountComponent_C : UTrainPassengerMountComponent
-UBPTrainPassengerMountComponent_C = {}
+local UBPTrainPassengerMountComponent_C = {}
 
 

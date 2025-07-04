@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPMedicUniformCPickup_C : ABPUniformPickup_C
-ABPMedicUniformCPickup_C = {}
+local ABPMedicUniformCPickup_C = {}
 
 

@@ -62,7 +62,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWPubG1Destroyed_C = {}
+local AUniqueWPubG1Destroyed_C = {}
 
 
 

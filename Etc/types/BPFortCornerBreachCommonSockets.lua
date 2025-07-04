@@ -7,7 +7,7 @@
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCornerBreachCommonSockets_C = {}
+local ABPFortCornerBreachCommonSockets_C = {}
 
 
 

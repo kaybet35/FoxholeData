@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UMagicLeapSecureStorage : UBlueprintFunctionLibrary
-UMagicLeapSecureStorage = {}
+local UMagicLeapSecureStorage = {}
 
 ---@param Key FString
 ---@param DataToStore FVector

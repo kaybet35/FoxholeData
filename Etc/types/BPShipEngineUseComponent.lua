@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPShipEngineUseComponent_C : UShipEngineUseComponent
-UBPShipEngineUseComponent_C = {}
+local UBPShipEngineUseComponent_C = {}
 
 

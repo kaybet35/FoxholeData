@@ -17,7 +17,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Scene USceneComponent
 ---@field Camera UCameraComponent
-ABPLandingShipBase_C = {}
+local ABPLandingShipBase_C = {}
 
 
 

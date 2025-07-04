@@ -2,30 +2,30 @@
 
 ---@class FGameplayTag
 ---@field TagName FName
-FGameplayTag = {}
+local FGameplayTag = {}
 
 
 
 ---@class FGameplayTagCategoryRemap
 ---@field BaseCategory FString
 ---@field RemapCategories TArray<FString>
-FGameplayTagCategoryRemap = {}
+local FGameplayTagCategoryRemap = {}
 
 
 
 ---@class FGameplayTagContainer
 ---@field GameplayTags TArray<FGameplayTag>
 ---@field ParentTags TArray<FGameplayTag>
-FGameplayTagContainer = {}
+local FGameplayTagContainer = {}
 
 
 
 ---@class FGameplayTagCreationWidgetHelper
-FGameplayTagCreationWidgetHelper = {}
+local FGameplayTagCreationWidgetHelper = {}
 
 
 ---@class FGameplayTagNode
-FGameplayTagNode = {}
+local FGameplayTagNode = {}
 
 
 ---@class FGameplayTagQuery
@@ -34,19 +34,19 @@ FGameplayTagNode = {}
 ---@field QueryTokenStream TArray<uint8>
 ---@field UserDescription FString
 ---@field AutoDescription FString
-FGameplayTagQuery = {}
+local FGameplayTagQuery = {}
 
 
 
 ---@class FGameplayTagRedirect
 ---@field OldTagName FName
 ---@field NewTagName FName
-FGameplayTagRedirect = {}
+local FGameplayTagRedirect = {}
 
 
 
 ---@class FGameplayTagReferenceHelper
-FGameplayTagReferenceHelper = {}
+local FGameplayTagReferenceHelper = {}
 
 
 ---@class FGameplayTagSource
@@ -54,32 +54,32 @@ FGameplayTagReferenceHelper = {}
 ---@field SourceType EGameplayTagSourceType
 ---@field SourceTagList UGameplayTagsList
 ---@field SourceRestrictedTagList URestrictedGameplayTagsList
-FGameplayTagSource = {}
+local FGameplayTagSource = {}
 
 
 
 ---@class FGameplayTagTableRow : FTableRowBase
 ---@field Tag FName
 ---@field DevComment FString
-FGameplayTagTableRow = {}
+local FGameplayTagTableRow = {}
 
 
 
 ---@class FRestrictedConfigInfo
 ---@field RestrictedConfigName FString
 ---@field Owners TArray<FString>
-FRestrictedConfigInfo = {}
+local FRestrictedConfigInfo = {}
 
 
 
 ---@class FRestrictedGameplayTagTableRow : FGameplayTagTableRow
 ---@field bAllowNonRestrictedChildren boolean
-FRestrictedGameplayTagTableRow = {}
+local FRestrictedGameplayTagTableRow = {}
 
 
 
 ---@class IGameplayTagAssetInterface : IInterface
-IGameplayTagAssetInterface = {}
+local IGameplayTagAssetInterface = {}
 
 ---@param TagToCheck FGameplayTag
 ---@return boolean
@@ -95,7 +95,7 @@ function IGameplayTagAssetInterface:GetOwnedGameplayTags(TagContainer) end
 
 
 ---@class UBlueprintGameplayTagLibrary : UBlueprintFunctionLibrary
-UBlueprintGameplayTagLibrary = {}
+local UBlueprintGameplayTagLibrary = {}
 
 ---@param TagContainer FGameplayTagContainer
 ---@param Tag FGameplayTag
@@ -215,67 +215,67 @@ function UBlueprintGameplayTagLibrary:AddGameplayTag(TagContainer, Tag) end
 ---@field UserDescription FString
 ---@field RootExpression UEditableGameplayTagQueryExpression
 ---@field TagQueryExportText_Helper FGameplayTagQuery
-UEditableGameplayTagQuery = {}
+local UEditableGameplayTagQuery = {}
 
 
 
 ---@class UEditableGameplayTagQueryExpression : UObject
-UEditableGameplayTagQueryExpression = {}
+local UEditableGameplayTagQueryExpression = {}
 
 
 ---@class UEditableGameplayTagQueryExpression_AllExprMatch : UEditableGameplayTagQueryExpression
 ---@field Expressions TArray<UEditableGameplayTagQueryExpression>
-UEditableGameplayTagQueryExpression_AllExprMatch = {}
+local UEditableGameplayTagQueryExpression_AllExprMatch = {}
 
 
 
 ---@class UEditableGameplayTagQueryExpression_AllTagsMatch : UEditableGameplayTagQueryExpression
 ---@field Tags FGameplayTagContainer
-UEditableGameplayTagQueryExpression_AllTagsMatch = {}
+local UEditableGameplayTagQueryExpression_AllTagsMatch = {}
 
 
 
 ---@class UEditableGameplayTagQueryExpression_AnyExprMatch : UEditableGameplayTagQueryExpression
 ---@field Expressions TArray<UEditableGameplayTagQueryExpression>
-UEditableGameplayTagQueryExpression_AnyExprMatch = {}
+local UEditableGameplayTagQueryExpression_AnyExprMatch = {}
 
 
 
 ---@class UEditableGameplayTagQueryExpression_AnyTagsMatch : UEditableGameplayTagQueryExpression
 ---@field Tags FGameplayTagContainer
-UEditableGameplayTagQueryExpression_AnyTagsMatch = {}
+local UEditableGameplayTagQueryExpression_AnyTagsMatch = {}
 
 
 
 ---@class UEditableGameplayTagQueryExpression_NoExprMatch : UEditableGameplayTagQueryExpression
 ---@field Expressions TArray<UEditableGameplayTagQueryExpression>
-UEditableGameplayTagQueryExpression_NoExprMatch = {}
+local UEditableGameplayTagQueryExpression_NoExprMatch = {}
 
 
 
 ---@class UEditableGameplayTagQueryExpression_NoTagsMatch : UEditableGameplayTagQueryExpression
 ---@field Tags FGameplayTagContainer
-UEditableGameplayTagQueryExpression_NoTagsMatch = {}
+local UEditableGameplayTagQueryExpression_NoTagsMatch = {}
 
 
 
 ---@class UGameplayTagsDeveloperSettings : UObject
 ---@field DeveloperConfigName FString
-UGameplayTagsDeveloperSettings = {}
+local UGameplayTagsDeveloperSettings = {}
 
 
 
 ---@class UGameplayTagsList : UObject
 ---@field ConfigFileName FString
 ---@field GameplayTagList TArray<FGameplayTagTableRow>
-UGameplayTagsList = {}
+local UGameplayTagsList = {}
 
 
 
 ---@class UGameplayTagsManager : UObject
 ---@field TagSources TArray<FGameplayTagSource>
 ---@field GameplayTagTables TArray<UDataTable>
-UGameplayTagsManager = {}
+local UGameplayTagsManager = {}
 
 
 
@@ -291,14 +291,14 @@ UGameplayTagsManager = {}
 ---@field NumBitsForContainerSize int32
 ---@field NetIndexFirstBitSegment int32
 ---@field RestrictedConfigFiles TArray<FRestrictedConfigInfo>
-UGameplayTagsSettings = {}
+local UGameplayTagsSettings = {}
 
 
 
 ---@class URestrictedGameplayTagsList : UObject
 ---@field ConfigFileName FString
 ---@field RestrictedGameplayTagList TArray<FRestrictedGameplayTagTableRow>
-URestrictedGameplayTagsList = {}
+local URestrictedGameplayTagsList = {}
 
 
 

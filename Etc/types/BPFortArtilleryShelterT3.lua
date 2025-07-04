@@ -16,7 +16,7 @@
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field CornerFrontRight UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPFortArtilleryShelterT3_C = {}
+local ABPFortArtilleryShelterT3_C = {}
 
 
 

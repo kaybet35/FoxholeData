@@ -28,7 +28,7 @@
 ---@field CollisionThickness float
 ---@field AnimDriveSpringStiffness float
 ---@field AnimDriveDamperStiffness float
-FClothConfig = {}
+local FClothConfig = {}
 
 
 
@@ -37,14 +37,14 @@ FClothConfig = {}
 ---@field StiffnessMultiplier float
 ---@field StretchLimit float
 ---@field CompressionLimit float
-FClothConstraintSetup = {}
+local FClothConstraintSetup = {}
 
 
 
 ---@class FClothLODData
 ---@field PhysicalMeshData FClothPhysicalMeshData
 ---@field CollisionData FClothCollisionData
-FClothLODData = {}
+local FClothLODData = {}
 
 
 
@@ -55,7 +55,7 @@ FClothLODData = {}
 ---@field MinValue float
 ---@field Values TArray<float>
 ---@field bEnabled boolean
-FClothParameterMask_PhysMesh = {}
+local FClothParameterMask_PhysMesh = {}
 
 
 
@@ -72,7 +72,7 @@ FClothParameterMask_PhysMesh = {}
 ---@field MaxBoneWeights int32
 ---@field NumFixedVerts int32
 ---@field SelfCollisionIndices TArray<uint32>
-FClothPhysicalMeshData = {}
+local FClothPhysicalMeshData = {}
 
 
 
@@ -104,12 +104,12 @@ FClothPhysicalMeshData = {}
 ---@field CollisionThickness float
 ---@field AnimDriveSpringStiffness float
 ---@field AnimDriveDamperStiffness float
-UClothConfigNv = {}
+local UClothConfigNv = {}
 
 
 
 ---@class UClothLODDataNv : UClothLODDataBase
-UClothLODDataNv = {}
+local UClothLODDataNv = {}
 
 
 ---@class UClothPhysicalMeshDataNv : UClothPhysicalMeshDataBase
@@ -117,23 +117,23 @@ UClothLODDataNv = {}
 ---@field BackstopDistances TArray<float>
 ---@field BackstopRadiuses TArray<float>
 ---@field AnimDriveMultipliers TArray<float>
-UClothPhysicalMeshDataNv = {}
+local UClothPhysicalMeshDataNv = {}
 
 
 
 ---@class UClothingAssetNv : UClothingAssetCommon
 ---@field ClothConfig FClothConfig
 ---@field LODData TArray<FClothLODData>
-UClothingAssetNv = {}
+local UClothingAssetNv = {}
 
 
 
 ---@class UClothingSimulationFactoryNv : UClothingSimulationFactory
-UClothingSimulationFactoryNv = {}
+local UClothingSimulationFactoryNv = {}
 
 
 ---@class UClothingSimulationInteractorNv : UClothingSimulationInteractor
-UClothingSimulationInteractorNv = {}
+local UClothingSimulationInteractorNv = {}
 
 ---@param InStiffness float
 function UClothingSimulationInteractorNv:SetAnimDriveSpringStiffness(InStiffness) end

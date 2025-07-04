@@ -1,5 +1,5 @@
 ---@enum EAWSLogEnableStatus
-EAWSLogEnableStatus = {
+local EAWSLogEnableStatus = {
     Live = 0,
     Dev = 1,
     Off = 2,
@@ -7,7 +7,7 @@ EAWSLogEnableStatus = {
 }
 
 ---@enum EAccessItemHolderResponse
-EAccessItemHolderResponse = {
+local EAccessItemHolderResponse = {
     Success = 0,
     OwnerPendingTravel = 1,
     ZombiesRestricted = 2,
@@ -21,7 +21,7 @@ EAccessItemHolderResponse = {
 }
 
 ---@enum EAccessLevel
-EAccessLevel = {
+local EAccessLevel = {
     Personal = 0,
     Public = 1,
     Count = 2,
@@ -29,7 +29,7 @@ EAccessLevel = {
 }
 
 ---@enum EActionType
-EActionType = {
+local EActionType = {
     None = 0,
     Lock = 1,
     Unlock = 2,
@@ -99,7 +99,7 @@ EActionType = {
 }
 
 ---@enum EActivityBonusState
-EActivityBonusState = {
+local EActivityBonusState = {
     None = 0,
     Inactive = 1,
     Active = 2,
@@ -107,7 +107,7 @@ EActivityBonusState = {
 }
 
 ---@enum EActivityStateDebugTraceType
-EActivityStateDebugTraceType = {
+local EActivityStateDebugTraceType = {
     None = 0,
     Start = 1,
     Finished = 2,
@@ -124,7 +124,7 @@ EActivityStateDebugTraceType = {
 }
 
 ---@enum EActorLogEntryType
-EActorLogEntryType = {
+local EActorLogEntryType = {
     None = 0,
     BuildStarted = 1,
     BuildComplete = 2,
@@ -170,7 +170,7 @@ EActorLogEntryType = {
 }
 
 ---@enum EAnalyticsAccessLevel
-EAnalyticsAccessLevel = {
+local EAnalyticsAccessLevel = {
     Dev = 0,
     Mod = 1,
     Public = 2,
@@ -178,7 +178,7 @@ EAnalyticsAccessLevel = {
 }
 
 ---@enum EAnalyticsEventType
-EAnalyticsEventType = {
+local EAnalyticsEventType = {
     PlayerLogin = 0,
     FriendlyPlayerKill = 1,
     VoteKick = 2,
@@ -213,7 +213,7 @@ EAnalyticsEventType = {
 }
 
 ---@enum EAnchorState
-EAnchorState = {
+local EAnchorState = {
     Raised = 0,
     Dropping = 1,
     Dropped = 2,
@@ -222,7 +222,7 @@ EAnchorState = {
 }
 
 ---@enum EArmourDirection
-EArmourDirection = {
+local EArmourDirection = {
     Default = 0,
     Front = 1,
     Back = 2,
@@ -238,7 +238,7 @@ EArmourDirection = {
 }
 
 ---@enum EArmourType
-EArmourType = {
+local EArmourType = {
     None = 0,
     NoArmour = 1,
     LightVehicle = 2,
@@ -263,7 +263,7 @@ EArmourType = {
 }
 
 ---@enum EAssemblyAreaState
-EAssemblyAreaState = {
+local EAssemblyAreaState = {
     Closed = 0,
     Closing = 1,
     Open = 2,
@@ -272,7 +272,7 @@ EAssemblyAreaState = {
 }
 
 ---@enum EAssemblyAreaWaterState
-EAssemblyAreaWaterState = {
+local EAssemblyAreaWaterState = {
     Raised = 0,
     Raising = 1,
     Lowered = 2,
@@ -281,7 +281,7 @@ EAssemblyAreaWaterState = {
 }
 
 ---@enum EAssignCoalitionResponse
-EAssignCoalitionResponse = {
+local EAssignCoalitionResponse = {
     Success = 0,
     Error = 1,
     Locked = 2,
@@ -293,7 +293,7 @@ EAssignCoalitionResponse = {
 }
 
 ---@enum EBallastType
-EBallastType = {
+local EBallastType = {
     Main = 0,
     Negative = 1,
     Safety = 2,
@@ -301,7 +301,7 @@ EBallastType = {
 }
 
 ---@enum EBanReason
-EBanReason = {
+local EBanReason = {
     CommsMisuse = 0,
     Harrassment = 1,
     BadLanguage = 2,
@@ -319,7 +319,7 @@ EBanReason = {
 }
 
 ---@enum EBridgeSide
-EBridgeSide = {
+local EBridgeSide = {
     None = 0,
     A = 1,
     B = 2,
@@ -328,7 +328,7 @@ EBridgeSide = {
 }
 
 ---@enum EBridgeState
-EBridgeState = {
+local EBridgeState = {
     Closed = 0,
     Closing = 1,
     Opening = 2,
@@ -337,14 +337,14 @@ EBridgeState = {
 }
 
 ---@enum EBuildArmType
-EBuildArmType = {
+local EBuildArmType = {
     Default = 0,
     Overhead = 1,
     EBuildArmType_MAX = 2,
 }
 
 ---@enum EBuildCategory
-EBuildCategory = {
+local EBuildCategory = {
     Defense = 0,
     Bunker = 1,
     Default = 2,
@@ -358,7 +358,7 @@ EBuildCategory = {
 }
 
 ---@enum EBuildLocationType
-EBuildLocationType = {
+local EBuildLocationType = {
     None = 0,
     Anywhere = 1,
     VehicleFactory = 2,
@@ -373,7 +373,7 @@ EBuildLocationType = {
 }
 
 ---@enum EBuildResponse
-EBuildResponse = {
+local EBuildResponse = {
     Success = 0,
     IsObstructed = 1,
     IsObstructedByPlayer = 2,
@@ -428,7 +428,7 @@ EBuildResponse = {
 }
 
 ---@enum EBuildSocketTagRule
-EBuildSocketTagRule = {
+local EBuildSocketTagRule = {
     AffectsBoth = 0,
     AffectsHigherZ = 1,
     AffectsLowerZ = 2,
@@ -436,7 +436,7 @@ EBuildSocketTagRule = {
 }
 
 ---@enum EBuildSocketType
-EBuildSocketType = {
+local EBuildSocketType = {
     Sandbag = 0,
     Trench = 1,
     Fort = 2,
@@ -481,7 +481,7 @@ EBuildSocketType = {
 }
 
 ---@enum EBuildTool
-EBuildTool = {
+local EBuildTool = {
     None = 0,
     Hammer = 1,
     Shovel = 2,
@@ -493,7 +493,7 @@ EBuildTool = {
 }
 
 ---@enum ECardinalDirection
-ECardinalDirection = {
+local ECardinalDirection = {
     North = 0,
     East = 1,
     South = 2,
@@ -502,7 +502,7 @@ ECardinalDirection = {
 }
 
 ---@enum ECharacterActivityState
-ECharacterActivityState = {
+local ECharacterActivityState = {
     Idle = 0,
     Equipping = 1,
     UnEquipping = 2,
@@ -577,7 +577,7 @@ ECharacterActivityState = {
 }
 
 ---@enum EChatChannel
-EChatChannel = {
+local EChatChannel = {
     Default = 0,
     RegionTeam = 1,
     WorldTeam = 2,
@@ -592,7 +592,7 @@ EChatChannel = {
 }
 
 ---@enum EChatLanguage
-EChatLanguage = {
+local EChatLanguage = {
     English = 1,
     Russian = 2,
     Korean = 4,
@@ -601,7 +601,7 @@ EChatLanguage = {
 }
 
 ---@enum EChatMessageType
-EChatMessageType = {
+local EChatMessageType = {
     RegionTeam = 1,
     WorldTeam = 2,
     Logistics = 4,
@@ -617,7 +617,7 @@ EChatMessageType = {
 }
 
 ---@enum EClassRepNodeMapping
-EClassRepNodeMapping = {
+local EClassRepNodeMapping = {
     NotRouted = 0,
     RelevantAllConnections = 1,
     RailVehicle = 2,
@@ -628,7 +628,7 @@ EClassRepNodeMapping = {
 }
 
 ---@enum EClientConfigDownloadStatusType
-EClientConfigDownloadStatusType = {
+local EClientConfigDownloadStatusType = {
     Success = 0,
     HttpRequestFailed = 1,
     HttpResponseCode = 2,
@@ -638,7 +638,7 @@ EClientConfigDownloadStatusType = {
 }
 
 ---@enum EClientConfigDownloadTaskState
-EClientConfigDownloadTaskState = {
+local EClientConfigDownloadTaskState = {
     NotStarted = 0,
     Completed = 1,
     InProgress = 2,
@@ -646,7 +646,7 @@ EClientConfigDownloadTaskState = {
 }
 
 ---@enum EClientConfigURLType
-EClientConfigURLType = {
+local EClientConfigURLType = {
     Live = 0,
     Internal = 1,
     Iteration = 2,
@@ -655,7 +655,7 @@ EClientConfigURLType = {
 }
 
 ---@enum EClientFoliageReplacementState
-EClientFoliageReplacementState = {
+local EClientFoliageReplacementState = {
     Initial = 0,
     Damaged = 1,
     Destroyed = 2,
@@ -663,7 +663,7 @@ EClientFoliageReplacementState = {
 }
 
 ---@enum ECommandParam
-ECommandParam = {
+local ECommandParam = {
     Bool = 0,
     Int = 1,
     Float = 2,
@@ -676,7 +676,7 @@ ECommandParam = {
 }
 
 ---@enum ECommandTarget
-ECommandTarget = {
+local ECommandTarget = {
     LocalOnly = 0,
     Global = 1,
     GlobalSingleServer = 2,
@@ -685,7 +685,7 @@ ECommandTarget = {
 }
 
 ---@enum ECommsRatingCondition
-ECommsRatingCondition = {
+local ECommsRatingCondition = {
     Good = 0,
     Poor = 1,
     VeryPoor = 2,
@@ -693,7 +693,7 @@ ECommsRatingCondition = {
 }
 
 ---@enum EConnectorConfigurationFlag
-EConnectorConfigurationFlag = {
+local EConnectorConfigurationFlag = {
     None = 0,
     OverridePathModeToBiarc = 1,
     UnderRoad = 2,
@@ -701,7 +701,7 @@ EConnectorConfigurationFlag = {
 }
 
 ---@enum EConnectorPathMode
-EConnectorPathMode = {
+local EConnectorPathMode = {
     Spline = 0,
     Arc = 1,
     Biarc = 2,
@@ -709,7 +709,7 @@ EConnectorPathMode = {
 }
 
 ---@enum ECoverMitigationType
-ECoverMitigationType = {
+local ECoverMitigationType = {
     Default = 0,
     Assault = 1,
     Carbine = 2,
@@ -719,7 +719,7 @@ ECoverMitigationType = {
 }
 
 ---@enum ECraneState
-ECraneState = {
+local ECraneState = {
     Inactive = 0,
     Destroyed = 1,
     DeployingWeights = 2,
@@ -732,7 +732,7 @@ ECraneState = {
 }
 
 ---@enum ECreateCoalitionResponse
-ECreateCoalitionResponse = {
+local ECreateCoalitionResponse = {
     Success = 0,
     LimitReached = 1,
     RankTooLow = 2,
@@ -742,7 +742,7 @@ ECreateCoalitionResponse = {
 }
 
 ---@enum ECustomMovementMode
-ECustomMovementMode = {
+local ECustomMovementMode = {
     MOVE_Custom_None = 0,
     MOVE_Custom_LadderClimbing = 1,
     MOVE_Custom_WoundedCarried = 2,
@@ -752,7 +752,7 @@ ECustomMovementMode = {
 }
 
 ---@enum EDamageSource
-EDamageSource = {
+local EDamageSource = {
     Weapon = 0,
     Vehicle = 1,
     StructureWeapon = 2,
@@ -761,7 +761,7 @@ EDamageSource = {
 }
 
 ---@enum EDamageType
-EDamageType = {
+local EDamageType = {
     None = 0,
     LightKinetic = 1,
     HeavyKinetic = 2,
@@ -787,7 +787,7 @@ EDamageType = {
 }
 
 ---@enum EDeployResponse
-EDeployResponse = {
+local EDeployResponse = {
     Success = 0,
     RampBlocked = 1,
     ShorelineOnly = 2,
@@ -802,7 +802,7 @@ EDeployResponse = {
 }
 
 ---@enum EDockedState
-EDockedState = {
+local EDockedState = {
     Docked = 0,
     Docking = 1,
     Undocked = 2,
@@ -811,7 +811,7 @@ EDockedState = {
 }
 
 ---@enum EDynamicState
-EDynamicState = {
+local EDynamicState = {
     Closed = 0,
     Opening = 1,
     Open = 2,
@@ -820,7 +820,7 @@ EDynamicState = {
 }
 
 ---@enum EDynamicTier
-EDynamicTier = {
+local EDynamicTier = {
     Default = 0,
     One = 1,
     Two = 2,
@@ -829,7 +829,7 @@ EDynamicTier = {
 }
 
 ---@enum EEquipmentSlot
-EEquipmentSlot = {
+local EEquipmentSlot = {
     Primary = 0,
     Secondary = 1,
     Tertiary = 2,
@@ -844,7 +844,7 @@ EEquipmentSlot = {
 }
 
 ---@enum EEquippedWeaponGripType
-EEquippedWeaponGripType = {
+local EEquippedWeaponGripType = {
     None = 0,
     Rifle = 1,
     Pistol = 2,
@@ -901,7 +901,7 @@ EEquippedWeaponGripType = {
 }
 
 ---@enum EFacilityMapPostType
-EFacilityMapPostType = {
+local EFacilityMapPostType = {
     None = 0,
     General = 1,
     Vehicle = 2,
@@ -913,7 +913,7 @@ EFacilityMapPostType = {
 }
 
 ---@enum EFacilityRefineryItemsType
-EFacilityRefineryItemsType = {
+local EFacilityRefineryItemsType = {
     Input = 0,
     CrateInput = 1,
     FuelInput = 2,
@@ -924,7 +924,7 @@ EFacilityRefineryItemsType = {
 }
 
 ---@enum EFacilityRefineryOrderState
-EFacilityRefineryOrderState = {
+local EFacilityRefineryOrderState = {
     None = 0,
     Pending = 1,
     Paused = 2,
@@ -934,7 +934,7 @@ EFacilityRefineryOrderState = {
 }
 
 ---@enum EFactionId
-EFactionId = {
+local EFactionId = {
     Colonials = 0,
     Wardens = 1,
     NumFactions = 2,
@@ -943,7 +943,7 @@ EFactionId = {
 }
 
 ---@enum EFactoryOrderAccess
-EFactoryOrderAccess = {
+local EFactoryOrderAccess = {
     Personal = 0,
     Squad = 1,
     Public = 2,
@@ -952,7 +952,7 @@ EFactoryOrderAccess = {
 }
 
 ---@enum EFactoryOrderStatus
-EFactoryOrderStatus = {
+local EFactoryOrderStatus = {
     NoOrder = 0,
     Pending = 1,
     ReadyPickup = 2,
@@ -961,7 +961,7 @@ EFactoryOrderStatus = {
 }
 
 ---@enum EFactoryQueueType
-EFactoryQueueType = {
+local EFactoryQueueType = {
     None = 0,
     SmallArms = 1,
     HeavyArms = 2,
@@ -978,7 +978,7 @@ EFactoryQueueType = {
 }
 
 ---@enum EFactoryReadyOrdersPickupStatus
-EFactoryReadyOrdersPickupStatus = {
+local EFactoryReadyOrdersPickupStatus = {
     CanBePickedUp = 0,
     TransferLocationBlocked = 1,
     NumTypes = 2,
@@ -986,7 +986,7 @@ EFactoryReadyOrdersPickupStatus = {
 }
 
 ---@enum EFireIntensity
-EFireIntensity = {
+local EFireIntensity = {
     None = 0,
     Low = 1,
     Medium = 2,
@@ -997,7 +997,7 @@ EFireIntensity = {
 }
 
 ---@enum EFloorVisibility
-EFloorVisibility = {
+local EFloorVisibility = {
     None = 0,
     Floor1 = 1,
     Floor2 = 2,
@@ -1006,7 +1006,7 @@ EFloorVisibility = {
 }
 
 ---@enum EFoot
-EFoot = {
+local EFoot = {
     Left = 0,
     Right = 1,
     NumTypes = 2,
@@ -1015,7 +1015,7 @@ EFoot = {
 }
 
 ---@enum EFortEmpStructure
-EFortEmpStructure = {
+local EFortEmpStructure = {
     StormCannon = 0,
     WeatherStation = 1,
     IntelCenter = 2,
@@ -1026,7 +1026,7 @@ EFortEmpStructure = {
 }
 
 ---@enum EFortModificationType
-EFortModificationType = {
+local EFortModificationType = {
     Default = 0,
     Door = 1,
     FiringPort = 2,
@@ -1101,7 +1101,7 @@ EFortModificationType = {
 }
 
 ---@enum EFortTier
-EFortTier = {
+local EFortTier = {
     None = 0,
     T1 = 1,
     T2 = 2,
@@ -1112,7 +1112,7 @@ EFortTier = {
 }
 
 ---@enum EFreighterState
-EFreighterState = {
+local EFreighterState = {
     Idle = 0,
     Deploying = 1,
     Deployed = 2,
@@ -1121,7 +1121,7 @@ EFreighterState = {
 }
 
 ---@enum EFullRepairResponse
-EFullRepairResponse = {
+local EFullRepairResponse = {
     Success = 0,
     SuccessArmour = 1,
     NotEnoughMaterials = 2,
@@ -1133,7 +1133,7 @@ EFullRepairResponse = {
 }
 
 ---@enum EGameplayFlag
-EGameplayFlag = {
+local EGameplayFlag = {
     TrainingGrounds = 0,
     Festival = 1,
     Zombie = 2,
@@ -1144,7 +1144,7 @@ EGameplayFlag = {
 }
 
 ---@enum EGateState
-EGateState = {
+local EGateState = {
     Closed = 0,
     OpenForward = 1,
     OpenBackward = 2,
@@ -1154,7 +1154,7 @@ EGateState = {
 }
 
 ---@enum EGetProfileResponseCode
-EGetProfileResponseCode = {
+local EGetProfileResponseCode = {
     Success = 0,
     NoProfile = 1,
     Error = 2,
@@ -1162,14 +1162,14 @@ EGetProfileResponseCode = {
 }
 
 ---@enum EGlobalLogEntryType
-EGlobalLogEntryType = {
+local EGlobalLogEntryType = {
     None = 0,
     VehiclesTransferred = 1,
     MAX = 2,
 }
 
 ---@enum EHUDMode
-EHUDMode = {
+local EHUDMode = {
     Visible = 0,
     OnlyPlayerNames = 1,
     Hidden = 2,
@@ -1178,7 +1178,7 @@ EHUDMode = {
 }
 
 ---@enum EHUDNotification
-EHUDNotification = {
+local EHUDNotification = {
     None = 0,
     SetSpawnPointReminder = 1,
     OccupyLocationBlocked = 2,
@@ -1322,7 +1322,7 @@ EHUDNotification = {
 }
 
 ---@enum EHexDirection
-EHexDirection = {
+local EHexDirection = {
     North = 0,
     NorthEast = 1,
     SouthEast = 2,
@@ -1334,7 +1334,7 @@ EHexDirection = {
 }
 
 ---@enum EHospitalResponse
-EHospitalResponse = {
+local EHospitalResponse = {
     Success = 0,
     Error = 1,
     AtCapacity = 2,
@@ -1345,7 +1345,7 @@ EHospitalResponse = {
 }
 
 ---@enum EInfrastructureType
-EInfrastructureType = {
+local EInfrastructureType = {
     None = 0,
     Garrison = 1,
     Command = 2,
@@ -1357,7 +1357,7 @@ EInfrastructureType = {
 }
 
 ---@enum EInputActionCategory
-EInputActionCategory = {
+local EInputActionCategory = {
     None = 0,
     Movement = 1,
     Vehicle = 2,
@@ -1372,7 +1372,7 @@ EInputActionCategory = {
 }
 
 ---@enum EInteractiveObjectType
-EInteractiveObjectType = {
+local EInteractiveObjectType = {
     ItemPickup = 0,
     LargeItemPickup = 1,
     BuildableStructure = 2,
@@ -1392,7 +1392,7 @@ EInteractiveObjectType = {
 }
 
 ---@enum EInventoryType
-EInventoryType = {
+local EInventoryType = {
     Default = 0,
     Player = 1,
     Ambulance = 2,
@@ -1402,7 +1402,7 @@ EInventoryType = {
 }
 
 ---@enum EItemCategory
-EItemCategory = {
+local EItemCategory = {
     Misc = 0,
     SmallArms = 1,
     HeavyArms = 2,
@@ -1415,7 +1415,7 @@ EItemCategory = {
 }
 
 ---@enum EItemFlags
-EItemFlags = {
+local EItemFlags = {
     None = 0,
     Default = 1,
     BasicMaterial = 2,
@@ -1437,7 +1437,7 @@ EItemFlags = {
 }
 
 ---@enum EItemProfileType
-EItemProfileType = {
+local EItemProfileType = {
     Invalid = 0,
     RawResource = 1,
     UnstackableRawResource = 2,
@@ -1464,7 +1464,7 @@ EItemProfileType = {
 }
 
 ---@enum EItemRequisitionType
-EItemRequisitionType = {
+local EItemRequisitionType = {
     Open = 0,
     Coalition = 1,
     MainEquipment = 2,
@@ -1476,14 +1476,14 @@ EItemRequisitionType = {
 }
 
 ---@enum EItemSortMethod
-EItemSortMethod = {
+local EItemSortMethod = {
     Default = 0,
     CodeName = 1,
     EItemSortMethod_MAX = 2,
 }
 
 ---@enum EItemSubtype
-EItemSubtype = {
+local EItemSubtype = {
     None = 0,
     ArmorPiercing = 1,
     Flare = 2,
@@ -1496,7 +1496,7 @@ EItemSubtype = {
 }
 
 ---@enum EJoinWarResponse
-EJoinWarResponse = {
+local EJoinWarResponse = {
     Success = 0,
     AskToJoinModQueue = 1,
     Banned = 2,
@@ -1525,7 +1525,7 @@ EJoinWarResponse = {
 }
 
 ---@enum EKickFromCoalitionResponse
-EKickFromCoalitionResponse = {
+local EKickFromCoalitionResponse = {
     Success = 0,
     IsOfficer = 1,
     NotFound = 2,
@@ -1534,7 +1534,7 @@ EKickFromCoalitionResponse = {
 }
 
 ---@enum ELanguageType
-ELanguageType = {
+local ELanguageType = {
     English = 0,
     Chinese = 1,
     French = 2,
@@ -1545,7 +1545,7 @@ ELanguageType = {
 }
 
 ---@enum ELeakOffsetRangeSide
-ELeakOffsetRangeSide = {
+local ELeakOffsetRangeSide = {
     Both = 0,
     Left = 1,
     Right = 2,
@@ -1553,7 +1553,7 @@ ELeakOffsetRangeSide = {
 }
 
 ---@enum ELimbIK
-ELimbIK = {
+local ELimbIK = {
     LeftHand = 0,
     RightHand = 1,
     LeftFoot = 2,
@@ -1564,7 +1564,7 @@ ELimbIK = {
 }
 
 ---@enum ELogChannel
-ELogChannel = {
+local ELogChannel = {
     WarServer = 0,
     WarBans = 1,
     WarLogins = 2,
@@ -1580,14 +1580,14 @@ ELogChannel = {
 }
 
 ---@enum ELongRangeArtilleryType
-ELongRangeArtilleryType = {
+local ELongRangeArtilleryType = {
     Static = 0,
     Train = 1,
     ELongRangeArtilleryType_MAX = 2,
 }
 
 ---@enum EMainMenuPromptType
-EMainMenuPromptType = {
+local EMainMenuPromptType = {
     None = 0,
     Update = 1,
     Rejoin = 2,
@@ -1600,7 +1600,7 @@ EMainMenuPromptType = {
 }
 
 ---@enum EMapBoundaryBuildRule
-EMapBoundaryBuildRule = {
+local EMapBoundaryBuildRule = {
     NotBuildableNearBorder = 0,
     OnlyBuildableNearBorder = 1,
     OptionallyBuildableNearBorder = 2,
@@ -1608,14 +1608,14 @@ EMapBoundaryBuildRule = {
 }
 
 ---@enum EMapExtentMarkerLocation
-EMapExtentMarkerLocation = {
+local EMapExtentMarkerLocation = {
     TopLeft = 0,
     BottomRight = 1,
     EMapExtentMarkerLocation_MAX = 2,
 }
 
 ---@enum EMapIconCategory
-EMapIconCategory = {
+local EMapIconCategory = {
     None = 0,
     MapIntel = 1,
     Resources = 2,
@@ -1630,7 +1630,7 @@ EMapIconCategory = {
 }
 
 ---@enum EMapIconType
-EMapIconType = {
+local EMapIconType = {
     None = 0,
     HomeTown = 1,
     TownHall = 2,
@@ -1723,7 +1723,7 @@ EMapIconType = {
 }
 
 ---@enum EMapIntelCategory
-EMapIntelCategory = {
+local EMapIntelCategory = {
     None = 0,
     Infantry = 1,
     Vehicles = 2,
@@ -1739,7 +1739,7 @@ EMapIntelCategory = {
 }
 
 ---@enum EMapIntelligenceType
-EMapIntelligenceType = {
+local EMapIntelligenceType = {
     None = 0,
     Soldier = 1,
     Vehicle = 2,
@@ -1760,7 +1760,7 @@ EMapIntelligenceType = {
 }
 
 ---@enum EMapItemFlags
-EMapItemFlags = {
+local EMapItemFlags = {
     IsTownBase = 1,
     IsHomeTown = 2,
     IsBuildSite = 4,
@@ -1771,14 +1771,14 @@ EMapItemFlags = {
 }
 
 ---@enum EMapMarkerType
-EMapMarkerType = {
+local EMapMarkerType = {
     Major = 0,
     Minor = 1,
     EMapMarkerType_MAX = 2,
 }
 
 ---@enum EMapPostCreationResponse
-EMapPostCreationResponse = {
+local EMapPostCreationResponse = {
     Success = 0,
     RankTooLow = 1,
     AlreadyExists = 2,
@@ -1789,14 +1789,14 @@ EMapPostCreationResponse = {
 }
 
 ---@enum EMapPostRank
-EMapPostRank = {
+local EMapPostRank = {
     High = 0,
     Low = 1,
     EMapPostRank_MAX = 2,
 }
 
 ---@enum EMapPostType
-EMapPostType = {
+local EMapPostType = {
     Public = 0,
     Squad = 1,
     Regiment = 2,
@@ -1807,7 +1807,7 @@ EMapPostType = {
 }
 
 ---@enum EMapPostVoteType
-EMapPostVoteType = {
+local EMapPostVoteType = {
     None = 0,
     Up = 1,
     Down = 2,
@@ -1815,14 +1815,14 @@ EMapPostVoteType = {
 }
 
 ---@enum EMapSnapshotSource
-EMapSnapshotSource = {
+local EMapSnapshotSource = {
     PlayerSource = 0,
     AISource = 1,
     EMapSnapshotSource_MAX = 2,
 }
 
 ---@enum EMapTeamId
-EMapTeamId = {
+local EMapTeamId = {
     Colonial = 0,
     Warden = 1,
     None = 2,
@@ -1831,7 +1831,7 @@ EMapTeamId = {
 }
 
 ---@enum EModeType
-EModeType = {
+local EModeType = {
     UseDefault = 0,
     Build = 1,
     Crane = 2,
@@ -1842,7 +1842,7 @@ EModeType = {
 }
 
 ---@enum EMonumentType
-EMonumentType = {
+local EMonumentType = {
     None = 0,
     Bronze = 1,
     Silver = 2,
@@ -1853,7 +1853,7 @@ EMonumentType = {
 }
 
 ---@enum EOccupyResult
-EOccupyResult = {
+local EOccupyResult = {
     Occupied = 0,
     Vacated = 1,
     Failed = 2,
@@ -1861,14 +1861,14 @@ EOccupyResult = {
 }
 
 ---@enum EOpenVehicleInventoryResponse
-EOpenVehicleInventoryResponse = {
+local EOpenVehicleInventoryResponse = {
     Success = 0,
     Locked = 1,
     EOpenVehicleInventoryResponse_MAX = 2,
 }
 
 ---@enum EOutfitMeshInfoType
-EOutfitMeshInfoType = {
+local EOutfitMeshInfoType = {
     Invalid = 0,
     Default = 1,
     ColonialMale = 2,
@@ -1887,7 +1887,7 @@ EOutfitMeshInfoType = {
 }
 
 ---@enum EOutfitType
-EOutfitType = {
+local EOutfitType = {
     Invalid = 0,
     Default = 1,
     Press = 2,
@@ -1897,7 +1897,7 @@ EOutfitType = {
 }
 
 ---@enum EOverpopButtonText
-EOverpopButtonText = {
+local EOverpopButtonText = {
     None = 0,
     ChangeShard = 1,
     WaitInQueue = 2,
@@ -1905,14 +1905,14 @@ EOverpopButtonText = {
 }
 
 ---@enum EOverpopText
-EOverpopText = {
+local EOverpopText = {
     None = 0,
     ShardAtCapacity = 1,
     EOverpopText_MAX = 2,
 }
 
 ---@enum EPackUpResponse
-EPackUpResponse = {
+local EPackUpResponse = {
     Success = 0,
     Error = 1,
     InUse = 2,
@@ -1922,7 +1922,7 @@ EPackUpResponse = {
 }
 
 ---@enum EPermissionLevel
-EPermissionLevel = {
+local EPermissionLevel = {
     None = 0,
     Mod = 1,
     Admin = 2,
@@ -1930,7 +1930,7 @@ EPermissionLevel = {
 }
 
 ---@enum EPipeType
-EPipeType = {
+local EPipeType = {
     None = 0,
     Input = 1,
     Output = 2,
@@ -1938,7 +1938,7 @@ EPipeType = {
 }
 
 ---@enum EPlacementModificationInteraction
-EPlacementModificationInteraction = {
+local EPlacementModificationInteraction = {
     NoInteraction = 0,
     HidesModification = 1,
     BlocksPlacement = 2,
@@ -1947,7 +1947,7 @@ EPlacementModificationInteraction = {
 }
 
 ---@enum EPlacementStatus
-EPlacementStatus = {
+local EPlacementStatus = {
     Valid = 0,
     Invalid = 1,
     ValidFarFromOutpost = 2,
@@ -2023,7 +2023,7 @@ EPlacementStatus = {
 }
 
 ---@enum EPlayerOnlineStatus
-EPlayerOnlineStatus = {
+local EPlayerOnlineStatus = {
     OnlineInRegion = 0,
     Offline = 1,
     TransferredRegion = 2,
@@ -2032,7 +2032,7 @@ EPlayerOnlineStatus = {
 }
 
 ---@enum EProjectileFiringMode
-EProjectileFiringMode = {
+local EProjectileFiringMode = {
     Default = 0,
     Grenade = 1,
     ShortToss = 2,
@@ -2040,7 +2040,7 @@ EProjectileFiringMode = {
 }
 
 ---@enum EQueueType
-EQueueType = {
+local EQueueType = {
     Regular = 0,
     Mod = 1,
     ServerTravel = 2,
@@ -2049,7 +2049,7 @@ EQueueType = {
 }
 
 ---@enum EQueueWarningState
-EQueueWarningState = {
+local EQueueWarningState = {
     Auto = 0,
     ForceShow = 1,
     ForceHide = 2,
@@ -2057,7 +2057,7 @@ EQueueWarningState = {
 }
 
 ---@enum ERamDamageFlags
-ERamDamageFlags = {
+local ERamDamageFlags = {
     Light = 1,
     Medium = 2,
     Destructible = 4,
@@ -2069,7 +2069,7 @@ ERamDamageFlags = {
 }
 
 ---@enum ERampState
-ERampState = {
+local ERampState = {
     Raised = 0,
     Lowering = 1,
     Lowered = 2,
@@ -2078,7 +2078,7 @@ ERampState = {
 }
 
 ---@enum ERefinementOrderResponse
-ERefinementOrderResponse = {
+local ERefinementOrderResponse = {
     Success = 0,
     Error = 1,
     NotEnoughMaterials = 2,
@@ -2090,7 +2090,7 @@ ERefinementOrderResponse = {
 }
 
 ---@enum ERefineryClaimType
-ERefineryClaimType = {
+local ERefineryClaimType = {
     Single = 0,
     Multiple = 1,
     Crate = 2,
@@ -2099,7 +2099,7 @@ ERefineryClaimType = {
 }
 
 ---@enum ERefineryOrderAccessLevel
-ERefineryOrderAccessLevel = {
+local ERefineryOrderAccessLevel = {
     Personal = 0,
     Public = 1,
     Count = 2,
@@ -2107,7 +2107,7 @@ ERefineryOrderAccessLevel = {
 }
 
 ---@enum ERegimentCreationResponse
-ERegimentCreationResponse = {
+local ERegimentCreationResponse = {
     Success = 0,
     AlreadyInRegiment = 1,
     RankTooLow = 2,
@@ -2117,7 +2117,7 @@ ERegimentCreationResponse = {
 }
 
 ---@enum ERegimentNotificationType
-ERegimentNotificationType = {
+local ERegimentNotificationType = {
     MemberAdded = 0,
     MemberRemoved = 1,
     Disbanded = 2,
@@ -2127,14 +2127,14 @@ ERegimentNotificationType = {
 }
 
 ---@enum ERegimentPromptMode
-ERegimentPromptMode = {
+local ERegimentPromptMode = {
     Create = 0,
     Edit = 1,
     ERegimentPromptMode_MAX = 2,
 }
 
 ---@enum ERegimentQueryType
-ERegimentQueryType = {
+local ERegimentQueryType = {
     PlayerOnlineId = 0,
     RegimentName = 1,
     RegimentTag = 2,
@@ -2143,7 +2143,7 @@ ERegimentQueryType = {
 }
 
 ---@enum ERegimentRole
-ERegimentRole = {
+local ERegimentRole = {
     Commander = 0,
     Officer = 1,
     Member = 2,
@@ -2151,7 +2151,7 @@ ERegimentRole = {
 }
 
 ---@enum ERegionLogEntryType
-ERegionLogEntryType = {
+local ERegionLogEntryType = {
     None = 0,
     FriendlyPlayerDamage = 1,
     FriendlyDamage = 2,
@@ -2167,7 +2167,7 @@ ERegionLogEntryType = {
 }
 
 ---@enum ERegionType
-ERegionType = {
+local ERegionType = {
     All = 0,
     Global = 1,
     Americas = 2,
@@ -2180,14 +2180,14 @@ ERegionType = {
 }
 
 ---@enum EReserveStockpileAccessLevel
-EReserveStockpileAccessLevel = {
+local EReserveStockpileAccessLevel = {
     Visible = 0,
     Hidden = 1,
     EReserveStockpileAccessLevel_MAX = 2,
 }
 
 ---@enum EReserveStockpileUserRole
-EReserveStockpileUserRole = {
+local EReserveStockpileUserRole = {
     Owner = 0,
     UserWithAccess = 1,
     ExternalUser = 2,
@@ -2196,7 +2196,7 @@ EReserveStockpileUserRole = {
 }
 
 ---@enum EReservedPlayerStatus
-EReservedPlayerStatus = {
+local EReservedPlayerStatus = {
     Reserved = 0,
     ReservedButServerIsFull = 1,
     NotReserved = 2,
@@ -2204,7 +2204,7 @@ EReservedPlayerStatus = {
 }
 
 ---@enum ERestrictedState
-ERestrictedState = {
+local ERestrictedState = {
     None = 0,
     WeaponUsage = 1,
     Build = 2,
@@ -2216,7 +2216,7 @@ ERestrictedState = {
 }
 
 ---@enum ERichTextColour
-ERichTextColour = {
+local ERichTextColour = {
     Orange = 0,
     Colonial = 1,
     Warden = 2,
@@ -2229,7 +2229,7 @@ ERichTextColour = {
 }
 
 ---@enum ERichTextFontType
-ERichTextFontType = {
+local ERichTextFontType = {
     Regular10Pt = 0,
     Regular12Pt = 1,
     Regular24Pt = 2,
@@ -2242,7 +2242,7 @@ ERichTextFontType = {
 }
 
 ---@enum ERocketConsoleActionResult
-ERocketConsoleActionResult = {
+local ERocketConsoleActionResult = {
     Success = 0,
     Error = 1,
     Failure = 2,
@@ -2260,7 +2260,7 @@ ERocketConsoleActionResult = {
 }
 
 ---@enum ERocketLaunchResponse
-ERocketLaunchResponse = {
+local ERocketLaunchResponse = {
     Success = 0,
     Error = 1,
     Cancelled = 2,
@@ -2276,7 +2276,7 @@ ERocketLaunchResponse = {
 }
 
 ---@enum ERocketLaunchSequence
-ERocketLaunchSequence = {
+local ERocketLaunchSequence = {
     Idle = 0,
     Verifying = 1,
     PreLaunch = 2,
@@ -2290,7 +2290,7 @@ ERocketLaunchSequence = {
 }
 
 ---@enum ERotationDirection
-ERotationDirection = {
+local ERotationDirection = {
     None = 0,
     Clockwise = 1,
     CounterClockwise = 2,
@@ -2298,7 +2298,7 @@ ERotationDirection = {
 }
 
 ---@enum ESeatDirection
-ESeatDirection = {
+local ESeatDirection = {
     None = 0,
     Center = 1,
     Front = 2,
@@ -2320,7 +2320,7 @@ ESeatDirection = {
 }
 
 ---@enum EServerAnimTickMode
-EServerAnimTickMode = {
+local EServerAnimTickMode = {
     Custom = 0,
     TickWhenOccupied = 1,
     NeverTicks = 2,
@@ -2328,7 +2328,7 @@ EServerAnimTickMode = {
 }
 
 ---@enum EServerTravelOriginType
-EServerTravelOriginType = {
+local EServerTravelOriginType = {
     Client = 0,
     HomeRegion = 1,
     WarServer = 2,
@@ -2337,7 +2337,7 @@ EServerTravelOriginType = {
 }
 
 ---@enum EServerTravelStatusOnClient
-EServerTravelStatusOnClient = {
+local EServerTravelStatusOnClient = {
     Invalid = 0,
     TravelStarted = 1,
     TravelFinished = 2,
@@ -2345,7 +2345,7 @@ EServerTravelStatusOnClient = {
 }
 
 ---@enum EShardDescription
-EShardDescription = {
+local EShardDescription = {
     None = 0,
     TestingFeatures = 1,
     LiveRegularPlayers = 2,
@@ -2354,7 +2354,7 @@ EShardDescription = {
 }
 
 ---@enum EShipFXType
-EShipFXType = {
+local EShipFXType = {
     IdleLoop = 0,
     WaterLapping = 1,
     Exhaust = 2,
@@ -2377,7 +2377,7 @@ EShipFXType = {
 }
 
 ---@enum EShippableStatus
-EShippableStatus = {
+local EShippableStatus = {
     Success = 0,
     Error = 1,
     NoShippable = 2,
@@ -2439,7 +2439,7 @@ EShippableStatus = {
 }
 
 ---@enum EShippableType
-EShippableType = {
+local EShippableType = {
     None = 0,
     Small = 1,
     Normal = 2,
@@ -2449,7 +2449,7 @@ EShippableType = {
 }
 
 ---@enum ESimCharacterStance
-ESimCharacterStance = {
+local ESimCharacterStance = {
     Standing = 0,
     Crouched = 1,
     Prone = 2,
@@ -2459,7 +2459,7 @@ ESimCharacterStance = {
 }
 
 ---@enum ESimScreen
-ESimScreen = {
+local ESimScreen = {
     HUD = 0,
     Pause = 1,
     Wait = 2,
@@ -2526,7 +2526,7 @@ ESimScreen = {
 }
 
 ---@enum ESlopeRotationMode
-ESlopeRotationMode = {
+local ESlopeRotationMode = {
     OpposingSockets = 0,
     LocalSampling = 1,
     ManualControl = 2,
@@ -2536,7 +2536,7 @@ ESlopeRotationMode = {
 }
 
 ---@enum ESnapType
-ESnapType = {
+local ESnapType = {
     None = 0,
     Socket = 1,
     Path = 2,
@@ -2544,7 +2544,7 @@ ESnapType = {
 }
 
 ---@enum ESocketDirection
-ESocketDirection = {
+local ESocketDirection = {
     None = 0,
     Front = 1,
     Left = 2,
@@ -2560,7 +2560,7 @@ ESocketDirection = {
 }
 
 ---@enum ESpawnPointCategory
-ESpawnPointCategory = {
+local ESpawnPointCategory = {
     None = 0,
     StaticBase = 1,
     ForwardBase = 2,
@@ -2569,14 +2569,14 @@ ESpawnPointCategory = {
 }
 
 ---@enum ESpawnPointPriority
-ESpawnPointPriority = {
+local ESpawnPointPriority = {
     High = 0,
     Low = 1,
     ESpawnPointPriority_MAX = 2,
 }
 
 ---@enum ESpawnPointType
-ESpawnPointType = {
+local ESpawnPointType = {
     None = 0,
     Campsite = 1,
     Outpost = 2,
@@ -2604,7 +2604,7 @@ ESpawnPointType = {
 }
 
 ---@enum ESplineConnectorMeshMode
-ESplineConnectorMeshMode = {
+local ESplineConnectorMeshMode = {
     Spline = 0,
     Interval = 1,
     Points = 2,
@@ -2614,7 +2614,7 @@ ESplineConnectorMeshMode = {
 }
 
 ---@enum ESplineFootprintShapeType
-ESplineFootprintShapeType = {
+local ESplineFootprintShapeType = {
     Box = 0,
     Capsule = 1,
     CapsuleWithBoxEnds = 2,
@@ -2624,7 +2624,7 @@ ESplineFootprintShapeType = {
 }
 
 ---@enum ESplineWaterPlacementRequirement
-ESplineWaterPlacementRequirement = {
+local ESplineWaterPlacementRequirement = {
     None = 0,
     NoPlacementAboveWater = 1,
     RequireWaterAtEnd = 2,
@@ -2632,14 +2632,14 @@ ESplineWaterPlacementRequirement = {
 }
 
 ---@enum ESquadAccessLevel
-ESquadAccessLevel = {
+local ESquadAccessLevel = {
     Private = 0,
     Public = 1,
     ESquadAccessLevel_MAX = 2,
 }
 
 ---@enum ESquadActivationResponse
-ESquadActivationResponse = {
+local ESquadActivationResponse = {
     Success = 0,
     TooSoon = 1,
     Error = 2,
@@ -2647,7 +2647,7 @@ ESquadActivationResponse = {
 }
 
 ---@enum ESquadCreationResponse
-ESquadCreationResponse = {
+local ESquadCreationResponse = {
     Success = 0,
     SquadLimitReached = 1,
     TooSoon = 2,
@@ -2656,7 +2656,7 @@ ESquadCreationResponse = {
 }
 
 ---@enum ESquadEditMembersResponse
-ESquadEditMembersResponse = {
+local ESquadEditMembersResponse = {
     Success = 0,
     IsPrivate = 1,
     SquadNotFound = 2,
@@ -2669,7 +2669,7 @@ ESquadEditMembersResponse = {
 }
 
 ---@enum ESquadRole
-ESquadRole = {
+local ESquadRole = {
     Leader = 0,
     Member = 1,
     NotInSquad = 2,
@@ -2677,7 +2677,7 @@ ESquadRole = {
 }
 
 ---@enum EStockpileCategoryType
-EStockpileCategoryType = {
+local EStockpileCategoryType = {
     Items = 0,
     Vehicles = 1,
     Structures = 2,
@@ -2685,7 +2685,7 @@ EStockpileCategoryType = {
 }
 
 ---@enum EStockpileEntryType
-EStockpileEntryType = {
+local EStockpileEntryType = {
     None = 0,
     Items = 1,
     ItemCrates = 2,
@@ -2698,21 +2698,21 @@ EStockpileEntryType = {
 }
 
 ---@enum EStockpileType
-EStockpileType = {
+local EStockpileType = {
     Public = 0,
     Squad = 1,
     EStockpileType_MAX = 2,
 }
 
 ---@enum EStorageType
-EStorageType = {
+local EStorageType = {
     Default = 0,
     Dockyard = 1,
     EStorageType_MAX = 2,
 }
 
 ---@enum EStructureFlag
-EStructureFlag = {
+local EStructureFlag = {
     None = 0,
     Invulnerable = 1,
     VictoryTown = 2,
@@ -2725,7 +2725,7 @@ EStructureFlag = {
 }
 
 ---@enum EStructureLayer
-EStructureLayer = {
+local EStructureLayer = {
     Logi = 0,
     Obstacles = 1,
     Logi2 = 2,
@@ -2735,7 +2735,7 @@ EStructureLayer = {
 }
 
 ---@enum EStructureNetRelevancySize
-EStructureNetRelevancySize = {
+local EStructureNetRelevancySize = {
     Small = 0,
     Medium = 1,
     Large = 2,
@@ -2744,7 +2744,7 @@ EStructureNetRelevancySize = {
 }
 
 ---@enum EStructureProfileType
-EStructureProfileType = {
+local EStructureProfileType = {
     Default = 0,
     GarrisonHouse = 1,
     BuildSite = 2,
@@ -2792,7 +2792,7 @@ EStructureProfileType = {
 }
 
 ---@enum ESupportTicketType
-ESupportTicketType = {
+local ESupportTicketType = {
     ShardConnectionError = 0,
     RegionConnectionError = 1,
     RegionLag = 2,
@@ -2803,14 +2803,14 @@ ESupportTicketType = {
 }
 
 ---@enum ETankArmourEffectBehaviour
-ETankArmourEffectBehaviour = {
+local ETankArmourEffectBehaviour = {
     Default = 0,
     DoNotPlayEffect = 1,
     ETankArmourEffectBehaviour_MAX = 2,
 }
 
 ---@enum ETankArmourEffectType
-ETankArmourEffectType = {
+local ETankArmourEffectType = {
     None = 0,
     Small = 1,
     Large = 2,
@@ -2818,7 +2818,7 @@ ETankArmourEffectType = {
 }
 
 ---@enum ETaskItemTargetCheckMethod
-ETaskItemTargetCheckMethod = {
+local ETaskItemTargetCheckMethod = {
     None = 0,
     OverlapFacing = 1,
     Trace = 2,
@@ -2827,7 +2827,7 @@ ETaskItemTargetCheckMethod = {
 }
 
 ---@enum ETechComponentID
-ETechComponentID = {
+local ETechComponentID = {
     None = 0,
     T1Garrison = 1,
     T2Garrison = 2,
@@ -2855,7 +2855,7 @@ ETechComponentID = {
 }
 
 ---@enum ETechID
-ETechID = {
+local ETechID = {
     None = 0,
     UnlockAssaultRifle = 1,
     UnlockAssaultRifleHeavy = 2,
@@ -3063,7 +3063,7 @@ ETechID = {
 }
 
 ---@enum ETechResourceID
-ETechResourceID = {
+local ETechResourceID = {
     None = 0,
     Aluminum = 1,
     Copper = 2,
@@ -3073,7 +3073,7 @@ ETechResourceID = {
 }
 
 ---@enum ETechTreeTier
-ETechTreeTier = {
+local ETechTreeTier = {
     Prototype = 0,
     One = 1,
     Two = 2,
@@ -3083,7 +3083,7 @@ ETechTreeTier = {
 }
 
 ---@enum ETemperatureState
-ETemperatureState = {
+local ETemperatureState = {
     Burning = 0,
     Hot = 1,
     None = 2,
@@ -3094,7 +3094,7 @@ ETemperatureState = {
 }
 
 ---@enum ETestEnum
-ETestEnum = {
+local ETestEnum = {
     Test1 = 0,
     Test2 = 1,
     Test3 = 2,
@@ -3102,7 +3102,7 @@ ETestEnum = {
 }
 
 ---@enum ETimeDiscrepancyType
-ETimeDiscrepancyType = {
+local ETimeDiscrepancyType = {
     AntiLag = 0,
     AntiCheat = 1,
     Custom = 2,
@@ -3110,7 +3110,7 @@ ETimeDiscrepancyType = {
 }
 
 ---@enum ETooltipDetailType
-ETooltipDetailType = {
+local ETooltipDetailType = {
     Default = 0,
     HighestVisibility = 1,
     MediumVisibility = 2,
@@ -3119,14 +3119,14 @@ ETooltipDetailType = {
 }
 
 ---@enum ETownHallState
-ETownHallState = {
+local ETownHallState = {
     Built = 0,
     NotBuilt = 1,
     ETownHallState_MAX = 2,
 }
 
 ---@enum ETrackGauge
-ETrackGauge = {
+local ETrackGauge = {
     Large = 0,
     Small = 1,
     Crane = 2,
@@ -3134,7 +3134,7 @@ ETrackGauge = {
 }
 
 ---@enum ETransactionResponse
-ETransactionResponse = {
+local ETransactionResponse = {
     Success = 0,
     Error = 1,
     None = 2,
@@ -3185,7 +3185,7 @@ ETransactionResponse = {
 }
 
 ---@enum ETravelResult
-ETravelResult = {
+local ETravelResult = {
     Success = 1,
     FailureInvalidRequest = 2,
     FailureServerError = 3,
@@ -3211,7 +3211,7 @@ ETravelResult = {
 }
 
 ---@enum ETunnelConnectionState
-ETunnelConnectionState = {
+local ETunnelConnectionState = {
     Disconnected = 0,
     DisconnectedStarved = 1,
     Connected = 2,
@@ -3219,21 +3219,21 @@ ETunnelConnectionState = {
 }
 
 ---@enum ETunnelNodeType
-ETunnelNodeType = {
+local ETunnelNodeType = {
     Source = 0,
     Terminal = 1,
     ETunnelNodeType_MAX = 2,
 }
 
 ---@enum ETurretMuzzleType
-ETurretMuzzleType = {
+local ETurretMuzzleType = {
     Self = 0,
     GunnerSupport = 1,
     ETurretMuzzleType_MAX = 2,
 }
 
 ---@enum ETurretTargetType
-ETurretTargetType = {
+local ETurretTargetType = {
     None = 0,
     Players = 1,
     AllVehicles = 2,
@@ -3246,14 +3246,14 @@ ETurretTargetType = {
 }
 
 ---@enum ETurretTrackingMode
-ETurretTrackingMode = {
+local ETurretTrackingMode = {
     Instant = 0,
     GunnerSupportTracking = 1,
     ETurretTrackingMode_MAX = 2,
 }
 
 ---@enum EUniformType
-EUniformType = {
+local EUniformType = {
     Default = 0,
     AmmoW = 1,
     ArmourC = 2,
@@ -3281,7 +3281,7 @@ EUniformType = {
 }
 
 ---@enum EUnlockStatus
-EUnlockStatus = {
+local EUnlockStatus = {
     Unlocked = 0,
     RequiresTech = 1,
     RequiresSameItemInOrder = 2,
@@ -3290,7 +3290,7 @@ EUnlockStatus = {
 }
 
 ---@enum EUnstuckMessage
-EUnstuckMessage = {
+local EUnstuckMessage = {
     ZeroCount = 0,
     Count = 1,
     Execute = 2,
@@ -3309,7 +3309,7 @@ EUnstuckMessage = {
 }
 
 ---@enum EUprisingChanceType
-EUprisingChanceType = {
+local EUprisingChanceType = {
     None = 0,
     ColonialLow = 1,
     ColonialHigh = 2,
@@ -3319,7 +3319,7 @@ EUprisingChanceType = {
 }
 
 ---@enum EUserVoteKickCategory
-EUserVoteKickCategory = {
+local EUserVoteKickCategory = {
     TeamKilling = 0,
     TeamVehicleDamage = 1,
     TeamStructureDamage = 2,
@@ -3333,7 +3333,7 @@ EUserVoteKickCategory = {
 }
 
 ---@enum EValveRotationDirection
-EValveRotationDirection = {
+local EValveRotationDirection = {
     Decreasing = -1,
     None = 0,
     Increasing = 1,
@@ -3341,7 +3341,7 @@ EValveRotationDirection = {
 }
 
 ---@enum EVehicleBuildType
-EVehicleBuildType = {
+local EVehicleBuildType = {
     NotBuildable = 0,
     BuildableAnywhere = 1,
     VehicleFactory = 2,
@@ -3354,7 +3354,7 @@ EVehicleBuildType = {
 }
 
 ---@enum EVehicleDeploymentState
-EVehicleDeploymentState = {
+local EVehicleDeploymentState = {
     Undeployed = 0,
     Deploying = 1,
     Deployed = 2,
@@ -3363,7 +3363,7 @@ EVehicleDeploymentState = {
 }
 
 ---@enum EVehicleMovementProfileType
-EVehicleMovementProfileType = {
+local EVehicleMovementProfileType = {
     Default = 0,
     Truck = 1,
     ScoutVehicle = 2,
@@ -3392,7 +3392,7 @@ EVehicleMovementProfileType = {
 }
 
 ---@enum EVehicleProfileType
-EVehicleProfileType = {
+local EVehicleProfileType = {
     Default = 0,
     WheeledTransport = 1,
     OpenRoofWheeledTransport = 2,
@@ -3413,7 +3413,7 @@ EVehicleProfileType = {
 }
 
 ---@enum EVehicleStockpileResponse
-EVehicleStockpileResponse = {
+local EVehicleStockpileResponse = {
     Success = 0,
     Error = 1,
     NotStockpilable = 2,
@@ -3436,7 +3436,7 @@ EVehicleStockpileResponse = {
 }
 
 ---@enum EVehicleSubsystem
-EVehicleSubsystem = {
+local EVehicleSubsystem = {
     Track = 0,
     FuelTank = 1,
     Turret = 2,
@@ -3450,7 +3450,7 @@ EVehicleSubsystem = {
 }
 
 ---@enum EViolationLogType
-EViolationLogType = {
+local EViolationLogType = {
     VoteKick = 0,
     VoteBan = 1,
     ModKick = 2,
@@ -3464,21 +3464,21 @@ EViolationLogType = {
 }
 
 ---@enum EVoiceChannelType
-EVoiceChannelType = {
+local EVoiceChannelType = {
     Local = 0,
     Squad = 1,
     EVoiceChannelType_MAX = 2,
 }
 
 ---@enum EWSExternalConnectionErrorType
-EWSExternalConnectionErrorType = {
+local EWSExternalConnectionErrorType = {
     ConnectionFailed = 0,
     AuthenticationFailed = 1,
     EWSExternalConnectionErrorType_MAX = 2,
 }
 
 ---@enum EWarAchievementType
-EWarAchievementType = {
+local EWarAchievementType = {
     MajorOffensive = 0,
     Offensive = 1,
     Fortified = 2,
@@ -3493,7 +3493,7 @@ EWarAchievementType = {
 }
 
 ---@enum EWarBalancerPopulationFactor
-EWarBalancerPopulationFactor = {
+local EWarBalancerPopulationFactor = {
     NotAvailable = 0,
     RoughlyEqualPlayers = 1,
     MoreColonialPlayers = 2,
@@ -3502,7 +3502,7 @@ EWarBalancerPopulationFactor = {
 }
 
 ---@enum EWarBalancerRegionTypeFactor
-EWarBalancerRegionTypeFactor = {
+local EWarBalancerRegionTypeFactor = {
     NotAvailable = 0,
     NeutralStarterContested = 1,
     FriendlyStarterContested = 2,
@@ -3514,7 +3514,7 @@ EWarBalancerRegionTypeFactor = {
 }
 
 ---@enum EWarBalancerWinFactor
-EWarBalancerWinFactor = {
+local EWarBalancerWinFactor = {
     NotAvailable = 0,
     NeitherFactionWinning = 1,
     ColonialsWinning = 2,
@@ -3525,7 +3525,7 @@ EWarBalancerWinFactor = {
 }
 
 ---@enum EWarCollisionIgnoreFlags
-EWarCollisionIgnoreFlags = {
+local EWarCollisionIgnoreFlags = {
     BridgeWaterAccess = 1,
     MovementSweep = 2,
     DefenseMods = 4,
@@ -3536,7 +3536,7 @@ EWarCollisionIgnoreFlags = {
 }
 
 ---@enum EWarOpsAlertMessage
-EWarOpsAlertMessage = {
+local EWarOpsAlertMessage = {
     Invalid = 0,
     DeployUpdate = 1,
     UpcomingServerPatch = 2,
@@ -3552,7 +3552,7 @@ EWarOpsAlertMessage = {
 }
 
 ---@enum EWarPhase
-EWarPhase = {
+local EWarPhase = {
     PreConquest = 0,
     Conquest = 1,
     Victory = 2,
@@ -3562,7 +3562,7 @@ EWarPhase = {
 }
 
 ---@enum EWarServerType
-EWarServerType = {
+local EWarServerType = {
     Skirmish = 0,
     WorldConquest = 1,
     Event = 3,
@@ -3573,7 +3573,7 @@ EWarServerType = {
 }
 
 ---@enum EWaterSourceType
-EWaterSourceType = {
+local EWaterSourceType = {
     None = 0,
     InfiniteWater = 1,
     Floodable = 2,
@@ -3583,7 +3583,7 @@ EWaterSourceType = {
 }
 
 ---@enum EWearableSlot
-EWearableSlot = {
+local EWearableSlot = {
     Head = 0,
     Chest = 1,
     Feet = 2,
@@ -3595,14 +3595,14 @@ EWearableSlot = {
 }
 
 ---@enum EWeatherIceLimiterType
-EWeatherIceLimiterType = {
+local EWeatherIceLimiterType = {
     Include = 0,
     Exclude = 1,
     EWeatherIceLimiterType_MAX = 2,
 }
 
 ---@enum EWeatherStationResult
-EWeatherStationResult = {
+local EWeatherStationResult = {
     Success = 0,
     Error = 1,
     NotEnoughPower = 2,
@@ -3622,14 +3622,14 @@ EWeatherStationResult = {
 }
 
 ---@enum EWeatherStationState
-EWeatherStationState = {
+local EWeatherStationState = {
     Idle = 0,
     Active = 1,
     EWeatherStationState_MAX = 2,
 }
 
 ---@enum EWeatherType
-EWeatherType = {
+local EWeatherType = {
     None = 0,
     RainStorm = 1,
     SnowStorm = 2,
@@ -3637,7 +3637,7 @@ EWeatherType = {
 }
 
 ---@enum EWheelTrace
-EWheelTrace = {
+local EWheelTrace = {
     FrontLeft = 0,
     FrontRight = 1,
     BackLeft = 2,
@@ -3647,7 +3647,7 @@ EWheelTrace = {
 }
 
 ---@enum EWindowState
-EWindowState = {
+local EWindowState = {
     Built = 0,
     Disconnected = 1,
     Starved = 2,
@@ -3655,7 +3655,7 @@ EWindowState = {
 }
 
 ---@enum EWorldConquestMapId
-EWorldConquestMapId = {
+local EWorldConquestMapId = {
     Invalid = 0,
     HomeRegionC = 1,
     HomeRegionW = 2,
@@ -3710,7 +3710,7 @@ EWorldConquestMapId = {
 }
 
 ---@enum EZombieSecondaryAttack
-EZombieSecondaryAttack = {
+local EZombieSecondaryAttack = {
     None = 0,
     Ranged = 1,
     FrontalAOE = 2,
@@ -3718,7 +3718,7 @@ EZombieSecondaryAttack = {
 }
 
 ---@enum EZombieType
-EZombieType = {
+local EZombieType = {
     None = 0,
     Regular = 1,
     Spitter = 2,

@@ -7,7 +7,7 @@
 ---@field SpotLightBodyLeft USpotLightComponent
 ---@field LightBodyLeft UStaticMeshComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
-ABPMediumTank2C_C = {}
+local ABPMediumTank2C_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2C_C:BPOnVehicleOn(IsOn) end

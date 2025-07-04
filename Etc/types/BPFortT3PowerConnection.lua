@@ -5,7 +5,7 @@
 ---@field PowerSocket UBuildSocketComponent
 ---@field FortT3Wall UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortT3PowerConnection_C = {}
+local ABPFortT3PowerConnection_C = {}
 
 
 

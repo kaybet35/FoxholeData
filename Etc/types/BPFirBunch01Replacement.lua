@@ -7,7 +7,7 @@
 ---@field NoMansLandSplinter UParticleSystemComponent
 ---@field Splinter UAudioComponent
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPFirBunch01Replacement_C = {}
+local ABPFirBunch01Replacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPFirBunch01Replacement_C:OnStateChanged(State) end

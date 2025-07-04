@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ASatchelCharge_C : AExplosive
-ASatchelCharge_C = {}
+local ASatchelCharge_C = {}
 
 

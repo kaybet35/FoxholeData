@@ -14,7 +14,7 @@
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
 ---@field FortT1GunAI UStaticMeshComponent
-ABPRifleAIT3_C = {}
+local ABPRifleAIT3_C = {}
 
 
 

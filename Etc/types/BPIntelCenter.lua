@@ -16,7 +16,7 @@
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPIntelCenter_C = {}
+local ABPIntelCenter_C = {}
 
 ---@param VisualTeamId int32
 function ABPIntelCenter_C:BPSetTeamVisuals(VisualTeamId) end

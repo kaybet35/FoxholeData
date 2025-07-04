@@ -6,14 +6,14 @@
 ---@field GreenCurve FMovieSceneFloatChannel
 ---@field BlueCurve FMovieSceneFloatChannel
 ---@field AlphaCurve FMovieSceneFloatChannel
-FColorParameterNameAndCurves = {}
+local FColorParameterNameAndCurves = {}
 
 
 
 ---@class FEventPayload
 ---@field EventName FName
 ---@field Parameters FMovieSceneEventParameters
-FEventPayload = {}
+local FEventPayload = {}
 
 
 
@@ -27,14 +27,14 @@ FEventPayload = {}
 ---@field DetachmentLocationRule EDetachmentRule
 ---@field DetachmentRotationRule EDetachmentRule
 ---@field DetachmentScaleRule EDetachmentRule
-FMovieScene3DAttachSectionTemplate = {}
+local FMovieScene3DAttachSectionTemplate = {}
 
 
 
 ---@class FMovieScene3DLocationKeyStruct : FMovieSceneKeyStruct
 ---@field Location FVector
 ---@field Time FFrameNumber
-FMovieScene3DLocationKeyStruct = {}
+local FMovieScene3DLocationKeyStruct = {}
 
 
 
@@ -46,21 +46,21 @@ FMovieScene3DLocationKeyStruct = {}
 ---@field bFollow boolean
 ---@field bReverse boolean
 ---@field bForceUpright boolean
-FMovieScene3DPathSectionTemplate = {}
+local FMovieScene3DPathSectionTemplate = {}
 
 
 
 ---@class FMovieScene3DRotationKeyStruct : FMovieSceneKeyStruct
 ---@field Rotation FRotator
 ---@field Time FFrameNumber
-FMovieScene3DRotationKeyStruct = {}
+local FMovieScene3DRotationKeyStruct = {}
 
 
 
 ---@class FMovieScene3DScaleKeyStruct : FMovieSceneKeyStruct
 ---@field Scale FVector
 ---@field Time FFrameNumber
-FMovieScene3DScaleKeyStruct = {}
+local FMovieScene3DScaleKeyStruct = {}
 
 
 
@@ -69,7 +69,7 @@ FMovieScene3DScaleKeyStruct = {}
 ---@field Rotation FRotator
 ---@field Scale FVector
 ---@field Time FFrameNumber
-FMovieScene3DTransformKeyStruct = {}
+local FMovieScene3DTransformKeyStruct = {}
 
 
 
@@ -81,49 +81,49 @@ FMovieScene3DTransformKeyStruct = {}
 ---@field BlendType EMovieSceneBlendType
 ---@field Mask FMovieSceneTransformMask
 ---@field bUseQuaternionInterpolation boolean
-FMovieScene3DTransformTemplateData = {}
+local FMovieScene3DTransformTemplateData = {}
 
 
 
 ---@class FMovieSceneActorReferenceData : FMovieSceneChannel
 ---@field KeyTimes TArray<FFrameNumber>
 ---@field KeyValues TArray<FMovieSceneActorReferenceKey>
-FMovieSceneActorReferenceData = {}
+local FMovieSceneActorReferenceData = {}
 
 
 
 ---@class FMovieSceneActorReferenceKey
 ---@field Object FMovieSceneObjectBindingID
-FMovieSceneActorReferenceKey = {}
+local FMovieSceneActorReferenceKey = {}
 
 
 
 ---@class FMovieSceneActorReferenceSectionTemplate : FMovieSceneEvalTemplate
 ---@field PropertyData FMovieScenePropertySectionData
 ---@field ActorReferenceData FMovieSceneActorReferenceData
-FMovieSceneActorReferenceSectionTemplate = {}
+local FMovieSceneActorReferenceSectionTemplate = {}
 
 
 
 ---@class FMovieSceneAdditiveCameraAnimationTemplate : FMovieSceneEvalTemplate
-FMovieSceneAdditiveCameraAnimationTemplate = {}
+local FMovieSceneAdditiveCameraAnimationTemplate = {}
 
 
 ---@class FMovieSceneAudioSectionTemplate : FMovieSceneEvalTemplate
 ---@field AudioSection UMovieSceneAudioSection
-FMovieSceneAudioSectionTemplate = {}
+local FMovieSceneAudioSectionTemplate = {}
 
 
 
 ---@class FMovieSceneBoolPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field BoolCurve FMovieSceneBoolChannel
-FMovieSceneBoolPropertySectionTemplate = {}
+local FMovieSceneBoolPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneBytePropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field ByteCurve FMovieSceneByteChannel
-FMovieSceneBytePropertySectionTemplate = {}
+local FMovieSceneBytePropertySectionTemplate = {}
 
 
 
@@ -134,14 +134,14 @@ FMovieSceneBytePropertySectionTemplate = {}
 ---@field BlendInTime float
 ---@field BlendOutTime float
 ---@field bLooping boolean
-FMovieSceneCameraAnimSectionData = {}
+local FMovieSceneCameraAnimSectionData = {}
 
 
 
 ---@class FMovieSceneCameraAnimSectionTemplate : FMovieSceneAdditiveCameraAnimationTemplate
 ---@field SourceData FMovieSceneCameraAnimSectionData
 ---@field SectionStartTime FFrameNumber
-FMovieSceneCameraAnimSectionTemplate = {}
+local FMovieSceneCameraAnimSectionTemplate = {}
 
 
 
@@ -149,7 +149,7 @@ FMovieSceneCameraAnimSectionTemplate = {}
 ---@field CameraBindingID FMovieSceneObjectBindingID
 ---@field CutTransform FTransform
 ---@field bHasCutTransform boolean
-FMovieSceneCameraCutSectionTemplate = {}
+local FMovieSceneCameraCutSectionTemplate = {}
 
 
 
@@ -158,101 +158,101 @@ FMovieSceneCameraCutSectionTemplate = {}
 ---@field PlayScale float
 ---@field PlaySpace ECameraAnimPlaySpace::Type
 ---@field UserDefinedPlaySpace FRotator
-FMovieSceneCameraShakeSectionData = {}
+local FMovieSceneCameraShakeSectionData = {}
 
 
 
 ---@class FMovieSceneCameraShakeSectionTemplate : FMovieSceneAdditiveCameraAnimationTemplate
 ---@field SourceData FMovieSceneCameraShakeSectionData
 ---@field SectionStartTime FFrameNumber
-FMovieSceneCameraShakeSectionTemplate = {}
+local FMovieSceneCameraShakeSectionTemplate = {}
 
 
 
 ---@class FMovieSceneColorKeyStruct : FMovieSceneKeyStruct
 ---@field Color FLinearColor
 ---@field Time FFrameNumber
-FMovieSceneColorKeyStruct = {}
+local FMovieSceneColorKeyStruct = {}
 
 
 
 ---@class FMovieSceneColorSectionTemplate : FMovieScenePropertySectionTemplate
 ---@field Curves FMovieSceneFloatChannel
 ---@field BlendType EMovieSceneBlendType
-FMovieSceneColorSectionTemplate = {}
+local FMovieSceneColorSectionTemplate = {}
 
 
 
 ---@class FMovieSceneComponentMaterialSectionTemplate : FMovieSceneParameterSectionTemplate
 ---@field MaterialIndex int32
-FMovieSceneComponentMaterialSectionTemplate = {}
+local FMovieSceneComponentMaterialSectionTemplate = {}
 
 
 
 ---@class FMovieSceneComponentTransformSectionTemplate : FMovieSceneEvalTemplate
 ---@field TemplateData FMovieScene3DTransformTemplateData
-FMovieSceneComponentTransformSectionTemplate = {}
+local FMovieSceneComponentTransformSectionTemplate = {}
 
 
 
 ---@class FMovieSceneEnumPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field EnumCurve FMovieSceneByteChannel
-FMovieSceneEnumPropertySectionTemplate = {}
+local FMovieSceneEnumPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneEulerTransformPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field TemplateData FMovieScene3DTransformTemplateData
-FMovieSceneEulerTransformPropertySectionTemplate = {}
+local FMovieSceneEulerTransformPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneEvent
 ---@field Ptrs FMovieSceneEventPtrs
-FMovieSceneEvent = {}
+local FMovieSceneEvent = {}
 
 
 
 ---@class FMovieSceneEventChannel : FMovieSceneChannel
 ---@field KeyTimes TArray<FFrameNumber>
 ---@field KeyValues TArray<FMovieSceneEvent>
-FMovieSceneEventChannel = {}
+local FMovieSceneEventChannel = {}
 
 
 
 ---@class FMovieSceneEventParameters
-FMovieSceneEventParameters = {}
+local FMovieSceneEventParameters = {}
 
 
 ---@class FMovieSceneEventPayloadVariable
 ---@field Value FString
-FMovieSceneEventPayloadVariable = {}
+local FMovieSceneEventPayloadVariable = {}
 
 
 
 ---@class FMovieSceneEventPtrs
 ---@field Function UFunction
 ---@field BoundObjectProperty UProperty
-FMovieSceneEventPtrs = {}
+local FMovieSceneEventPtrs = {}
 
 
 
 ---@class FMovieSceneEventRepeaterTemplate : FMovieSceneEventTemplateBase
 ---@field EventToTrigger FMovieSceneEventPtrs
-FMovieSceneEventRepeaterTemplate = {}
+local FMovieSceneEventRepeaterTemplate = {}
 
 
 
 ---@class FMovieSceneEventSectionData : FMovieSceneChannel
 ---@field Times TArray<FFrameNumber>
 ---@field KeyValues TArray<FEventPayload>
-FMovieSceneEventSectionData = {}
+local FMovieSceneEventSectionData = {}
 
 
 
 ---@class FMovieSceneEventSectionTemplate : FMovieSceneEventTemplateBase
 ---@field EventData FMovieSceneEventSectionData
-FMovieSceneEventSectionTemplate = {}
+local FMovieSceneEventSectionTemplate = {}
 
 
 
@@ -260,14 +260,14 @@ FMovieSceneEventSectionTemplate = {}
 ---@field EventReceivers TArray<FMovieSceneObjectBindingID>
 ---@field bFireEventsWhenForwards boolean
 ---@field bFireEventsWhenBackwards boolean
-FMovieSceneEventTemplateBase = {}
+local FMovieSceneEventTemplateBase = {}
 
 
 
 ---@class FMovieSceneEventTriggerTemplate : FMovieSceneEventTemplateBase
 ---@field EventTimes TArray<FFrameNumber>
 ---@field Events TArray<FMovieSceneEventPtrs>
-FMovieSceneEventTriggerTemplate = {}
+local FMovieSceneEventTriggerTemplate = {}
 
 
 
@@ -275,40 +275,40 @@ FMovieSceneEventTriggerTemplate = {}
 ---@field FadeCurve FMovieSceneFloatChannel
 ---@field FadeColor FLinearColor
 ---@field bFadeAudio boolean
-FMovieSceneFadeSectionTemplate = {}
+local FMovieSceneFadeSectionTemplate = {}
 
 
 
 ---@class FMovieSceneFloatPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field FloatFunction FMovieSceneFloatChannel
 ---@field BlendType EMovieSceneBlendType
-FMovieSceneFloatPropertySectionTemplate = {}
+local FMovieSceneFloatPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneIntegerPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field IntegerCurve FMovieSceneIntegerChannel
 ---@field BlendType EMovieSceneBlendType
-FMovieSceneIntegerPropertySectionTemplate = {}
+local FMovieSceneIntegerPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneLevelVisibilitySectionTemplate : FMovieSceneEvalTemplate
 ---@field Visibility ELevelVisibility
 ---@field LevelNames TArray<FName>
-FMovieSceneLevelVisibilitySectionTemplate = {}
+local FMovieSceneLevelVisibilitySectionTemplate = {}
 
 
 
 ---@class FMovieSceneMaterialParameterCollectionTemplate : FMovieSceneParameterSectionTemplate
 ---@field MPC UMaterialParameterCollection
-FMovieSceneMaterialParameterCollectionTemplate = {}
+local FMovieSceneMaterialParameterCollectionTemplate = {}
 
 
 
 ---@class FMovieSceneObjectPropertyTemplate : FMovieScenePropertySectionTemplate
 ---@field ObjectChannel FMovieSceneObjectPathChannel
-FMovieSceneObjectPropertyTemplate = {}
+local FMovieSceneObjectPropertyTemplate = {}
 
 
 
@@ -317,28 +317,28 @@ FMovieSceneObjectPropertyTemplate = {}
 ---@field Vectors TArray<FVectorParameterNameAndCurves>
 ---@field Colors TArray<FColorParameterNameAndCurves>
 ---@field Transforms TArray<FTransformParameterNameAndCurves>
-FMovieSceneParameterSectionTemplate = {}
+local FMovieSceneParameterSectionTemplate = {}
 
 
 
 ---@class FMovieSceneParticleChannel : FMovieSceneByteChannel
-FMovieSceneParticleChannel = {}
+local FMovieSceneParticleChannel = {}
 
 
 ---@class FMovieSceneParticleParameterSectionTemplate : FMovieSceneParameterSectionTemplate
-FMovieSceneParticleParameterSectionTemplate = {}
+local FMovieSceneParticleParameterSectionTemplate = {}
 
 
 ---@class FMovieSceneParticleSectionTemplate : FMovieSceneEvalTemplate
 ---@field ParticleKeys FMovieSceneParticleChannel
-FMovieSceneParticleSectionTemplate = {}
+local FMovieSceneParticleSectionTemplate = {}
 
 
 
 ---@class FMovieScenePrimitiveMaterialTemplate : FMovieSceneEvalTemplate
 ---@field MaterialIndex int32
 ---@field MaterialChannel FMovieSceneObjectPathChannel
-FMovieScenePrimitiveMaterialTemplate = {}
+local FMovieScenePrimitiveMaterialTemplate = {}
 
 
 
@@ -355,32 +355,32 @@ FMovieScenePrimitiveMaterialTemplate = {}
 ---@field bForceCustomMode boolean
 ---@field StartOffset float
 ---@field EndOffset float
-FMovieSceneSkeletalAnimationParams = {}
+local FMovieSceneSkeletalAnimationParams = {}
 
 
 
 ---@class FMovieSceneSkeletalAnimationSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneSkeletalAnimationSectionTemplateParameters
-FMovieSceneSkeletalAnimationSectionTemplate = {}
+local FMovieSceneSkeletalAnimationSectionTemplate = {}
 
 
 
 ---@class FMovieSceneSkeletalAnimationSectionTemplateParameters : FMovieSceneSkeletalAnimationParams
 ---@field SectionStartTime FFrameNumber
 ---@field SectionEndTime FFrameNumber
-FMovieSceneSkeletalAnimationSectionTemplateParameters = {}
+local FMovieSceneSkeletalAnimationSectionTemplateParameters = {}
 
 
 
 ---@class FMovieSceneSlomoSectionTemplate : FMovieSceneEvalTemplate
 ---@field SlomoCurve FMovieSceneFloatChannel
-FMovieSceneSlomoSectionTemplate = {}
+local FMovieSceneSlomoSectionTemplate = {}
 
 
 
 ---@class FMovieSceneSpawnSectionTemplate : FMovieSceneEvalTemplate
 ---@field Curve FMovieSceneBoolChannel
-FMovieSceneSpawnSectionTemplate = {}
+local FMovieSceneSpawnSectionTemplate = {}
 
 
 
@@ -389,49 +389,49 @@ FMovieSceneSpawnSectionTemplate = {}
 ---@field Values TArray<FString>
 ---@field DefaultValue FString
 ---@field bHasDefaultValue boolean
-FMovieSceneStringChannel = {}
+local FMovieSceneStringChannel = {}
 
 
 
 ---@class FMovieSceneStringPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field StringCurve FMovieSceneStringChannel
-FMovieSceneStringPropertySectionTemplate = {}
+local FMovieSceneStringPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneTransformMask
 ---@field Mask uint32
-FMovieSceneTransformMask = {}
+local FMovieSceneTransformMask = {}
 
 
 
 ---@class FMovieSceneTransformPropertySectionTemplate : FMovieScenePropertySectionTemplate
 ---@field TemplateData FMovieScene3DTransformTemplateData
-FMovieSceneTransformPropertySectionTemplate = {}
+local FMovieSceneTransformPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneVector2DKeyStruct : FMovieSceneVectorKeyStructBase
 ---@field Vector FVector2D
-FMovieSceneVector2DKeyStruct = {}
+local FMovieSceneVector2DKeyStruct = {}
 
 
 
 ---@class FMovieSceneVector4KeyStruct : FMovieSceneVectorKeyStructBase
 ---@field Vector FVector4
-FMovieSceneVector4KeyStruct = {}
+local FMovieSceneVector4KeyStruct = {}
 
 
 
 ---@class FMovieSceneVectorKeyStruct : FMovieSceneVectorKeyStructBase
 ---@field Vector FVector
-FMovieSceneVectorKeyStruct = {}
+local FMovieSceneVectorKeyStruct = {}
 
 
 
 ---@class FMovieSceneVectorKeyStructBase : FMovieSceneKeyStruct
 ---@field Time FFrameNumber
-FMovieSceneVectorKeyStructBase = {}
+local FMovieSceneVectorKeyStructBase = {}
 
 
 
@@ -439,18 +439,18 @@ FMovieSceneVectorKeyStructBase = {}
 ---@field ComponentCurves FMovieSceneFloatChannel
 ---@field NumChannelsUsed int32
 ---@field BlendType EMovieSceneBlendType
-FMovieSceneVectorPropertySectionTemplate = {}
+local FMovieSceneVectorPropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneVisibilitySectionTemplate : FMovieSceneBoolPropertySectionTemplate
-FMovieSceneVisibilitySectionTemplate = {}
+local FMovieSceneVisibilitySectionTemplate = {}
 
 
 ---@class FScalarParameterNameAndCurve
 ---@field ParameterName FName
 ---@field ParameterCurve FMovieSceneFloatChannel
-FScalarParameterNameAndCurve = {}
+local FScalarParameterNameAndCurve = {}
 
 
 
@@ -459,7 +459,7 @@ FScalarParameterNameAndCurve = {}
 ---@field Translation FMovieSceneFloatChannel
 ---@field Rotation FMovieSceneFloatChannel
 ---@field Scale FMovieSceneFloatChannel
-FTransformParameterNameAndCurves = {}
+local FTransformParameterNameAndCurves = {}
 
 
 
@@ -468,12 +468,12 @@ FTransformParameterNameAndCurves = {}
 ---@field XCurve FMovieSceneFloatChannel
 ---@field YCurve FMovieSceneFloatChannel
 ---@field ZCurve FMovieSceneFloatChannel
-FVectorParameterNameAndCurves = {}
+local FVectorParameterNameAndCurves = {}
 
 
 
 ---@class IMovieSceneTransformOrigin : IInterface
-IMovieSceneTransformOrigin = {}
+local IMovieSceneTransformOrigin = {}
 
 ---@return FTransform
 function IMovieSceneTransformOrigin:BP_GetTransformOrigin() end
@@ -488,18 +488,18 @@ function IMovieSceneTransformOrigin:BP_GetTransformOrigin() end
 ---@field DetachmentLocationRule EDetachmentRule
 ---@field DetachmentRotationRule EDetachmentRule
 ---@field DetachmentScaleRule EDetachmentRule
-UMovieScene3DAttachSection = {}
+local UMovieScene3DAttachSection = {}
 
 
 
 ---@class UMovieScene3DAttachTrack : UMovieScene3DConstraintTrack
-UMovieScene3DAttachTrack = {}
+local UMovieScene3DAttachTrack = {}
 
 
 ---@class UMovieScene3DConstraintSection : UMovieSceneSection
 ---@field ConstraintId FGuid
 ---@field ConstraintBindingID FMovieSceneObjectBindingID
-UMovieScene3DConstraintSection = {}
+local UMovieScene3DConstraintSection = {}
 
 ---@param InConstraintBindingID FMovieSceneObjectBindingID
 function UMovieScene3DConstraintSection:SetConstraintBindingID(InConstraintBindingID) end
@@ -509,7 +509,7 @@ function UMovieScene3DConstraintSection:GetConstraintBindingID() end
 
 ---@class UMovieScene3DConstraintTrack : UMovieSceneTrack
 ---@field ConstraintSections TArray<UMovieSceneSection>
-UMovieScene3DConstraintTrack = {}
+local UMovieScene3DConstraintTrack = {}
 
 
 
@@ -520,12 +520,12 @@ UMovieScene3DConstraintTrack = {}
 ---@field bFollow boolean
 ---@field bReverse boolean
 ---@field bForceUpright boolean
-UMovieScene3DPathSection = {}
+local UMovieScene3DPathSection = {}
 
 
 
 ---@class UMovieScene3DPathTrack : UMovieScene3DConstraintTrack
-UMovieScene3DPathTrack = {}
+local UMovieScene3DPathTrack = {}
 
 
 ---@class UMovieScene3DTransformSection : UMovieSceneSection
@@ -535,24 +535,24 @@ UMovieScene3DPathTrack = {}
 ---@field Scale FMovieSceneFloatChannel
 ---@field ManualWeight FMovieSceneFloatChannel
 ---@field bUseQuaternionInterpolation boolean
-UMovieScene3DTransformSection = {}
+local UMovieScene3DTransformSection = {}
 
 
 
 ---@class UMovieScene3DTransformTrack : UMovieScenePropertyTrack
-UMovieScene3DTransformTrack = {}
+local UMovieScene3DTransformTrack = {}
 
 
 ---@class UMovieSceneActorReferenceSection : UMovieSceneSection
 ---@field ActorReferenceData FMovieSceneActorReferenceData
 ---@field ActorGuidIndexCurve FIntegralCurve
 ---@field ActorGuidStrings TArray<FString>
-UMovieSceneActorReferenceSection = {}
+local UMovieSceneActorReferenceSection = {}
 
 
 
 ---@class UMovieSceneActorReferenceTrack : UMovieScenePropertyTrack
-UMovieSceneActorReferenceTrack = {}
+local UMovieSceneActorReferenceTrack = {}
 
 
 ---@class UMovieSceneAudioSection : UMovieSceneSection
@@ -570,7 +570,7 @@ UMovieSceneActorReferenceTrack = {}
 ---@field OnQueueSubtitles FMovieSceneAudioSectionOnQueueSubtitles
 ---@field OnAudioFinished FMovieSceneAudioSectionOnAudioFinished
 ---@field OnAudioPlaybackPercent FMovieSceneAudioSectionOnAudioPlaybackPercent
-UMovieSceneAudioSection = {}
+local UMovieSceneAudioSection = {}
 
 ---@param InStartOffset FFrameNumber
 function UMovieSceneAudioSection:SetStartOffset(InStartOffset) end
@@ -584,30 +584,30 @@ function UMovieSceneAudioSection:GetSound() end
 
 ---@class UMovieSceneAudioTrack : UMovieSceneNameableTrack
 ---@field AudioSections TArray<UMovieSceneSection>
-UMovieSceneAudioTrack = {}
+local UMovieSceneAudioTrack = {}
 
 
 
 ---@class UMovieSceneBoolSection : UMovieSceneSection
 ---@field DefaultValue boolean
 ---@field BoolCurve FMovieSceneBoolChannel
-UMovieSceneBoolSection = {}
+local UMovieSceneBoolSection = {}
 
 
 
 ---@class UMovieSceneBoolTrack : UMovieScenePropertyTrack
-UMovieSceneBoolTrack = {}
+local UMovieSceneBoolTrack = {}
 
 
 ---@class UMovieSceneByteSection : UMovieSceneSection
 ---@field ByteCurve FMovieSceneByteChannel
-UMovieSceneByteSection = {}
+local UMovieSceneByteSection = {}
 
 
 
 ---@class UMovieSceneByteTrack : UMovieScenePropertyTrack
 ---@field Enum UEnum
-UMovieSceneByteTrack = {}
+local UMovieSceneByteTrack = {}
 
 
 
@@ -619,20 +619,20 @@ UMovieSceneByteTrack = {}
 ---@field BlendInTime float
 ---@field BlendOutTime float
 ---@field bLooping boolean
-UMovieSceneCameraAnimSection = {}
+local UMovieSceneCameraAnimSection = {}
 
 
 
 ---@class UMovieSceneCameraAnimTrack : UMovieSceneNameableTrack
 ---@field CameraAnimSections TArray<UMovieSceneSection>
-UMovieSceneCameraAnimTrack = {}
+local UMovieSceneCameraAnimTrack = {}
 
 
 
 ---@class UMovieSceneCameraCutSection : UMovieSceneSection
 ---@field CameraGuid FGuid
 ---@field CameraBindingID FMovieSceneObjectBindingID
-UMovieSceneCameraCutSection = {}
+local UMovieSceneCameraCutSection = {}
 
 ---@param InCameraBindingID FMovieSceneObjectBindingID
 function UMovieSceneCameraCutSection:SetCameraBindingID(InCameraBindingID) end
@@ -642,7 +642,7 @@ function UMovieSceneCameraCutSection:GetCameraBindingID() end
 
 ---@class UMovieSceneCameraCutTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneCameraCutTrack = {}
+local UMovieSceneCameraCutTrack = {}
 
 
 
@@ -652,20 +652,20 @@ UMovieSceneCameraCutTrack = {}
 ---@field PlayScale float
 ---@field PlaySpace ECameraAnimPlaySpace::Type
 ---@field UserDefinedPlaySpace FRotator
-UMovieSceneCameraShakeSection = {}
+local UMovieSceneCameraShakeSection = {}
 
 
 
 ---@class UMovieSceneCameraShakeTrack : UMovieSceneNameableTrack
 ---@field CameraShakeSections TArray<UMovieSceneSection>
-UMovieSceneCameraShakeTrack = {}
+local UMovieSceneCameraShakeTrack = {}
 
 
 
 ---@class UMovieSceneCinematicShotSection : UMovieSceneSubSection
 ---@field ShotDisplayName FString
 ---@field DisplayName FText
-UMovieSceneCinematicShotSection = {}
+local UMovieSceneCinematicShotSection = {}
 
 ---@param InShotDisplayName FString
 function UMovieSceneCinematicShotSection:SetShotDisplayName(InShotDisplayName) end
@@ -674,7 +674,7 @@ function UMovieSceneCinematicShotSection:GetShotDisplayName() end
 
 
 ---@class UMovieSceneCinematicShotTrack : UMovieSceneSubTrack
-UMovieSceneCinematicShotTrack = {}
+local UMovieSceneCinematicShotTrack = {}
 
 
 ---@class UMovieSceneColorSection : UMovieSceneSection
@@ -682,53 +682,53 @@ UMovieSceneCinematicShotTrack = {}
 ---@field GreenCurve FMovieSceneFloatChannel
 ---@field BlueCurve FMovieSceneFloatChannel
 ---@field AlphaCurve FMovieSceneFloatChannel
-UMovieSceneColorSection = {}
+local UMovieSceneColorSection = {}
 
 
 
 ---@class UMovieSceneColorTrack : UMovieScenePropertyTrack
 ---@field bIsSlateColor boolean
-UMovieSceneColorTrack = {}
+local UMovieSceneColorTrack = {}
 
 
 
 ---@class UMovieSceneComponentMaterialTrack : UMovieSceneMaterialTrack
 ---@field MaterialIndex int32
-UMovieSceneComponentMaterialTrack = {}
+local UMovieSceneComponentMaterialTrack = {}
 
 
 
 ---@class UMovieSceneEnumSection : UMovieSceneSection
 ---@field EnumCurve FMovieSceneByteChannel
-UMovieSceneEnumSection = {}
+local UMovieSceneEnumSection = {}
 
 
 
 ---@class UMovieSceneEnumTrack : UMovieScenePropertyTrack
 ---@field Enum UEnum
-UMovieSceneEnumTrack = {}
+local UMovieSceneEnumTrack = {}
 
 
 
 ---@class UMovieSceneEulerTransformTrack : UMovieScenePropertyTrack
-UMovieSceneEulerTransformTrack = {}
+local UMovieSceneEulerTransformTrack = {}
 
 
 ---@class UMovieSceneEventRepeaterSection : UMovieSceneEventSectionBase
 ---@field Event FMovieSceneEvent
-UMovieSceneEventRepeaterSection = {}
+local UMovieSceneEventRepeaterSection = {}
 
 
 
 ---@class UMovieSceneEventSection : UMovieSceneSection
 ---@field Events FNameCurve
 ---@field EventData FMovieSceneEventSectionData
-UMovieSceneEventSection = {}
+local UMovieSceneEventSection = {}
 
 
 
 ---@class UMovieSceneEventSectionBase : UMovieSceneSection
-UMovieSceneEventSectionBase = {}
+local UMovieSceneEventSectionBase = {}
 
 
 ---@class UMovieSceneEventTrack : UMovieSceneNameableTrack
@@ -737,51 +737,51 @@ UMovieSceneEventSectionBase = {}
 ---@field EventPosition EFireEventsAtPosition
 ---@field EventReceivers TArray<FMovieSceneObjectBindingID>
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneEventTrack = {}
+local UMovieSceneEventTrack = {}
 
 
 
 ---@class UMovieSceneEventTriggerSection : UMovieSceneEventSectionBase
 ---@field EventChannel FMovieSceneEventChannel
-UMovieSceneEventTriggerSection = {}
+local UMovieSceneEventTriggerSection = {}
 
 
 
 ---@class UMovieSceneFadeSection : UMovieSceneFloatSection
 ---@field FadeColor FLinearColor
 ---@field bFadeAudio boolean
-UMovieSceneFadeSection = {}
+local UMovieSceneFadeSection = {}
 
 
 
 ---@class UMovieSceneFadeTrack : UMovieSceneFloatTrack
-UMovieSceneFadeTrack = {}
+local UMovieSceneFadeTrack = {}
 
 
 ---@class UMovieSceneFloatSection : UMovieSceneSection
 ---@field FloatCurve FMovieSceneFloatChannel
-UMovieSceneFloatSection = {}
+local UMovieSceneFloatSection = {}
 
 
 
 ---@class UMovieSceneFloatTrack : UMovieScenePropertyTrack
-UMovieSceneFloatTrack = {}
+local UMovieSceneFloatTrack = {}
 
 
 ---@class UMovieSceneIntegerSection : UMovieSceneSection
 ---@field IntegerCurve FMovieSceneIntegerChannel
-UMovieSceneIntegerSection = {}
+local UMovieSceneIntegerSection = {}
 
 
 
 ---@class UMovieSceneIntegerTrack : UMovieScenePropertyTrack
-UMovieSceneIntegerTrack = {}
+local UMovieSceneIntegerTrack = {}
 
 
 ---@class UMovieSceneLevelVisibilitySection : UMovieSceneSection
 ---@field Visibility ELevelVisibility
 ---@field LevelNames TArray<FName>
-UMovieSceneLevelVisibilitySection = {}
+local UMovieSceneLevelVisibilitySection = {}
 
 ---@param InVisibility ELevelVisibility
 function UMovieSceneLevelVisibilitySection:SetVisibility(InVisibility) end
@@ -795,31 +795,31 @@ function UMovieSceneLevelVisibilitySection:GetLevelNames() end
 
 ---@class UMovieSceneLevelVisibilityTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneLevelVisibilityTrack = {}
+local UMovieSceneLevelVisibilityTrack = {}
 
 
 
 ---@class UMovieSceneMaterialParameterCollectionTrack : UMovieSceneMaterialTrack
 ---@field MPC UMaterialParameterCollection
-UMovieSceneMaterialParameterCollectionTrack = {}
+local UMovieSceneMaterialParameterCollectionTrack = {}
 
 
 
 ---@class UMovieSceneMaterialTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneMaterialTrack = {}
+local UMovieSceneMaterialTrack = {}
 
 
 
 ---@class UMovieSceneObjectPropertySection : UMovieSceneSection
 ---@field ObjectChannel FMovieSceneObjectPathChannel
-UMovieSceneObjectPropertySection = {}
+local UMovieSceneObjectPropertySection = {}
 
 
 
 ---@class UMovieSceneObjectPropertyTrack : UMovieScenePropertyTrack
 ---@field PropertyClass UClass
-UMovieSceneObjectPropertyTrack = {}
+local UMovieSceneObjectPropertyTrack = {}
 
 
 
@@ -828,37 +828,37 @@ UMovieSceneObjectPropertyTrack = {}
 ---@field VectorParameterNamesAndCurves TArray<FVectorParameterNameAndCurves>
 ---@field ColorParameterNamesAndCurves TArray<FColorParameterNameAndCurves>
 ---@field TransformParameterNamesAndCurves TArray<FTransformParameterNameAndCurves>
-UMovieSceneParameterSection = {}
+local UMovieSceneParameterSection = {}
 
 
 
 ---@class UMovieSceneParticleParameterTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneParticleParameterTrack = {}
+local UMovieSceneParticleParameterTrack = {}
 
 
 
 ---@class UMovieSceneParticleSection : UMovieSceneSection
 ---@field ParticleKeys FMovieSceneParticleChannel
-UMovieSceneParticleSection = {}
+local UMovieSceneParticleSection = {}
 
 
 
 ---@class UMovieSceneParticleTrack : UMovieSceneNameableTrack
 ---@field ParticleSections TArray<UMovieSceneSection>
-UMovieSceneParticleTrack = {}
+local UMovieSceneParticleTrack = {}
 
 
 
 ---@class UMovieScenePrimitiveMaterialSection : UMovieSceneSection
 ---@field MaterialChannel FMovieSceneObjectPathChannel
-UMovieScenePrimitiveMaterialSection = {}
+local UMovieScenePrimitiveMaterialSection = {}
 
 
 
 ---@class UMovieScenePrimitiveMaterialTrack : UMovieScenePropertyTrack
 ---@field MaterialIndex int32
-UMovieScenePrimitiveMaterialTrack = {}
+local UMovieScenePrimitiveMaterialTrack = {}
 
 
 
@@ -867,7 +867,7 @@ UMovieScenePrimitiveMaterialTrack = {}
 ---@field PropertyName FName
 ---@field PropertyPath FString
 ---@field Sections TArray<UMovieSceneSection>
-UMovieScenePropertyTrack = {}
+local UMovieScenePropertyTrack = {}
 
 
 
@@ -880,64 +880,64 @@ UMovieScenePropertyTrack = {}
 ---@field PlayRate float
 ---@field bReverse boolean
 ---@field SlotName FName
-UMovieSceneSkeletalAnimationSection = {}
+local UMovieSceneSkeletalAnimationSection = {}
 
 
 
 ---@class UMovieSceneSkeletalAnimationTrack : UMovieSceneNameableTrack
 ---@field AnimationSections TArray<UMovieSceneSection>
 ---@field bUseLegacySectionIndexBlend boolean
-UMovieSceneSkeletalAnimationTrack = {}
+local UMovieSceneSkeletalAnimationTrack = {}
 
 
 
 ---@class UMovieSceneSlomoSection : UMovieSceneFloatSection
-UMovieSceneSlomoSection = {}
+local UMovieSceneSlomoSection = {}
 
 
 ---@class UMovieSceneSlomoTrack : UMovieSceneFloatTrack
-UMovieSceneSlomoTrack = {}
+local UMovieSceneSlomoTrack = {}
 
 
 ---@class UMovieSceneSpawnSection : UMovieSceneBoolSection
-UMovieSceneSpawnSection = {}
+local UMovieSceneSpawnSection = {}
 
 
 ---@class UMovieSceneSpawnTrack : UMovieSceneTrack
 ---@field Sections TArray<UMovieSceneSection>
 ---@field ObjectGuid FGuid
-UMovieSceneSpawnTrack = {}
+local UMovieSceneSpawnTrack = {}
 
 
 
 ---@class UMovieSceneStringSection : UMovieSceneSection
 ---@field StringCurve FMovieSceneStringChannel
-UMovieSceneStringSection = {}
+local UMovieSceneStringSection = {}
 
 
 
 ---@class UMovieSceneStringTrack : UMovieScenePropertyTrack
-UMovieSceneStringTrack = {}
+local UMovieSceneStringTrack = {}
 
 
 ---@class UMovieSceneTransformTrack : UMovieScenePropertyTrack
-UMovieSceneTransformTrack = {}
+local UMovieSceneTransformTrack = {}
 
 
 ---@class UMovieSceneVectorSection : UMovieSceneSection
 ---@field Curves FMovieSceneFloatChannel
 ---@field ChannelsUsed int32
-UMovieSceneVectorSection = {}
+local UMovieSceneVectorSection = {}
 
 
 
 ---@class UMovieSceneVectorTrack : UMovieScenePropertyTrack
 ---@field NumChannelsUsed int32
-UMovieSceneVectorTrack = {}
+local UMovieSceneVectorTrack = {}
 
 
 
 ---@class UMovieSceneVisibilityTrack : UMovieSceneBoolTrack
-UMovieSceneVisibilityTrack = {}
+local UMovieSceneVisibilityTrack = {}
 
 

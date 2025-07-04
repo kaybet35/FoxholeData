@@ -9,7 +9,7 @@
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPFieldGunBase_C = {}
+local ABPFieldGunBase_C = {}
 
 
 

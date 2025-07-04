@@ -5,7 +5,7 @@
 ---@field EditorOnlySphere USphereComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPRainStormModerate_C = {}
+local ABPRainStormModerate_C = {}
 
 
 

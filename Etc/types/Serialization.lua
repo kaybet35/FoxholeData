@@ -7,7 +7,7 @@
 ---@field StaticFloatArray float
 ---@field VectorArray TArray<FVector>
 ---@field StructArray TArray<FStructSerializerBuiltinTestStruct>
-FStructSerializerArrayTestStruct = {}
+local FStructSerializerArrayTestStruct = {}
 
 
 
@@ -22,7 +22,7 @@ FStructSerializerArrayTestStruct = {}
 ---@field Bitfield5Set boolean
 ---@field Bitfield6 boolean
 ---@field Bitfield7Set boolean
-FStructSerializerBooleanTestStruct = {}
+local FStructSerializerBooleanTestStruct = {}
 
 
 
@@ -36,7 +36,7 @@ FStructSerializerBooleanTestStruct = {}
 ---@field Rotator FRotator
 ---@field Quat FQuat
 ---@field Color FColor
-FStructSerializerBuiltinTestStruct = {}
+local FStructSerializerBuiltinTestStruct = {}
 
 
 
@@ -45,7 +45,7 @@ FStructSerializerBuiltinTestStruct = {}
 ---@field StrToStr TMap<FString, FString>
 ---@field StrToVec TMap<FString, FVector>
 ---@field StrToStruct TMap<FString, FStructSerializerBuiltinTestStruct>
-FStructSerializerMapTestStruct = {}
+local FStructSerializerMapTestStruct = {}
 
 
 
@@ -60,7 +60,7 @@ FStructSerializerMapTestStruct = {}
 ---@field UInt64 uint64
 ---@field Float float
 ---@field Double double
-FStructSerializerNumericTestStruct = {}
+local FStructSerializerNumericTestStruct = {}
 
 
 
@@ -73,7 +73,7 @@ FStructSerializerNumericTestStruct = {}
 ---@field SoftObject TSoftObjectPtr<UMetaData>
 ---@field ClassPath FSoftClassPath
 ---@field ObjectPath FSoftObjectPath
-FStructSerializerObjectTestStruct = {}
+local FStructSerializerObjectTestStruct = {}
 
 
 
@@ -82,7 +82,7 @@ FStructSerializerObjectTestStruct = {}
 ---@field IntSet TSet<int32>
 ---@field NameSet TSet<FName>
 ---@field StructSet TSet<FStructSerializerBuiltinTestStruct>
-FStructSerializerSetTestStruct = {}
+local FStructSerializerSetTestStruct = {}
 
 
 
@@ -94,7 +94,7 @@ FStructSerializerSetTestStruct = {}
 ---@field Arrays FStructSerializerArrayTestStruct
 ---@field Maps FStructSerializerMapTestStruct
 ---@field Sets FStructSerializerSetTestStruct
-FStructSerializerTestStruct = {}
+local FStructSerializerTestStruct = {}
 
 
 

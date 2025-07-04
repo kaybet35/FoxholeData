@@ -8,7 +8,7 @@
 ---@field ModMesh UStaticMeshComponent
 ---@field PipeOutput0 UBPStructurePipelineOutput_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityMineWaterElectric_C = {}
+local ABPFacilityMineWaterElectric_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBicycleSpawnLocationComponent_C : UVehicleSpawnLocationComponent
-UBPBicycleSpawnLocationComponent_C = {}
+local UBPBicycleSpawnLocationComponent_C = {}
 
 

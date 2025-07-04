@@ -35,7 +35,7 @@
 ---@field AnimGraphNode_SequencePlayer_E12BAD464E924E2856676DA0C329F19B FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_FDF3E65D4A58B80BAFE153A2AF1AE281 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_35C3CBD842B1DF354CD0B1A9CC5DB94B FAnimNode_StateMachine
-UABP_PrototypeHalftrackW_C = {}
+local UABP_PrototypeHalftrackW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_PrototypeHalftrackW_C:AnimGraph(AnimGraph) end

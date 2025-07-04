@@ -3,7 +3,7 @@
 ---@class AStickybombExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AStickybombExplosion_C = {}
+local AStickybombExplosion_C = {}
 
 function AStickybombExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

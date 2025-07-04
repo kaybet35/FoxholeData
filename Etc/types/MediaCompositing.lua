@@ -9,13 +9,13 @@
 ---@field SectionEndFrame FFrameNumber
 ---@field bLooping boolean
 ---@field StartFrameOffset FFrameNumber
-FMovieSceneMediaSectionParams = {}
+local FMovieSceneMediaSectionParams = {}
 
 
 
 ---@class FMovieSceneMediaSectionTemplate : FMovieSceneEvalTemplate
 ---@field Params FMovieSceneMediaSectionParams
-FMovieSceneMediaSectionTemplate = {}
+local FMovieSceneMediaSectionTemplate = {}
 
 
 
@@ -27,13 +27,13 @@ FMovieSceneMediaSectionTemplate = {}
 ---@field MediaSoundComponent UMediaSoundComponent
 ---@field bUseExternalMediaPlayer boolean
 ---@field ExternalMediaPlayer UMediaPlayer
-UMovieSceneMediaSection = {}
+local UMovieSceneMediaSection = {}
 
 
 
 ---@class UMovieSceneMediaTrack : UMovieSceneNameableTrack
 ---@field MediaSections TArray<UMovieSceneSection>
-UMovieSceneMediaTrack = {}
+local UMovieSceneMediaTrack = {}
 
 
 

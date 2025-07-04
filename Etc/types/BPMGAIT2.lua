@@ -6,7 +6,7 @@
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field FortSpotLight UTemplateComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPMGAIT2_C = {}
+local ABPMGAIT2_C = {}
 
 
 

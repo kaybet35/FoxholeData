@@ -1,5 +1,5 @@
 ---@enum EInsetPolygonsMode
-EInsetPolygonsMode = {
+local EInsetPolygonsMode = {
     All = 0,
     CenterPolygonOnly = 1,
     SidePolygonsOnly = 2,
@@ -7,7 +7,7 @@ EInsetPolygonsMode = {
 }
 
 ---@enum EMeshElementAttributeType
-EMeshElementAttributeType = {
+local EMeshElementAttributeType = {
     None = 0,
     FVector4 = 1,
     FVector = 2,
@@ -20,7 +20,7 @@ EMeshElementAttributeType = {
 }
 
 ---@enum EMeshModificationType
-EMeshModificationType = {
+local EMeshModificationType = {
     FirstInterim = 0,
     Interim = 1,
     Final = 2,
@@ -28,14 +28,14 @@ EMeshModificationType = {
 }
 
 ---@enum EMeshTopologyChange
-EMeshTopologyChange = {
+local EMeshTopologyChange = {
     NoTopologyChange = 0,
     TopologyChange = 1,
     EMeshTopologyChange_MAX = 2,
 }
 
 ---@enum EPolygonEdgeHardness
-EPolygonEdgeHardness = {
+local EPolygonEdgeHardness = {
     NewEdgesSoft = 0,
     NewEdgesHard = 1,
     AllEdgesSoft = 2,
@@ -44,7 +44,7 @@ EPolygonEdgeHardness = {
 }
 
 ---@enum ETriangleTessellationMode
-ETriangleTessellationMode = {
+local ETriangleTessellationMode = {
     ThreeTriangles = 0,
     FourTriangles = 1,
     ETriangleTessellationMode_MAX = 2,

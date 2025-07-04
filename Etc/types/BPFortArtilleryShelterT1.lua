@@ -15,7 +15,7 @@
 ---@field FortCommon UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field Floor UStaticMeshComponent
-ABPFortArtilleryShelterT1_C = {}
+local ABPFortArtilleryShelterT1_C = {}
 
 
 

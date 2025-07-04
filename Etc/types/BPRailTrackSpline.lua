@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRailTrackSpline_C : ARailwayTrack
-ABPRailTrackSpline_C = {}
+local ABPRailTrackSpline_C = {}
 
 

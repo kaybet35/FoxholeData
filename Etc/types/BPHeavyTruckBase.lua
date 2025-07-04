@@ -19,7 +19,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field ParticleSystem UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPHeavyTruckBase_C = {}
+local ABPHeavyTruckBase_C = {}
 
 
 

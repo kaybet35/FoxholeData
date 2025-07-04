@@ -10,7 +10,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field chassis USkeletalMeshComponent
-ABPLargeFieldGunBaseW_C = {}
+local ABPLargeFieldGunBaseW_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHalfTrackOffensiveGunnerComponent_C : UTankGunnerMountComponent
-UBPHalfTrackOffensiveGunnerComponent_C = {}
+local UBPHalfTrackOffensiveGunnerComponent_C = {}
 
 

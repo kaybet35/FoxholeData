@@ -7,7 +7,7 @@
 ---@field AnimGraphNode_SequencePlayer_55B460AD42D8FF1A542A92ACEE8D4E14 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_32F025C54BE51EE19D4634BC71701CBA FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_DECABF24459921C41EB610949DD12FC5 FAnimNode_RotationOffsetBlendSpace
-UABP_AmbulanceWar_C = {}
+local UABP_AmbulanceWar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_AmbulanceWar_C:AnimGraph(AnimGraph) end

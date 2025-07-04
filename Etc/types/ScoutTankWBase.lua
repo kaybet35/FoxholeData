@@ -15,7 +15,7 @@
 ---@field CommanderTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-AScoutTankWBase_C = {}
+local AScoutTankWBase_C = {}
 
 ---@param IsOn boolean
 function AScoutTankWBase_C:BPOnVehicleOn(IsOn) end

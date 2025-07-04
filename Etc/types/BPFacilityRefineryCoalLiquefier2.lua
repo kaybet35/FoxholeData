@@ -11,7 +11,7 @@
 ---@field InputMesh0 UStaticMeshComponent
 ---@field PipeInput0 UBPStructurePipelineInput_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefineryCoalLiquefier2_C = {}
+local ABPFacilityRefineryCoalLiquefier2_C = {}
 
 
 

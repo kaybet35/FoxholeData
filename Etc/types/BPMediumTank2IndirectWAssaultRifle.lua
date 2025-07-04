@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMediumTank2IndirectWAssaultRifle_C : UHitScanMountComponent
-UBPMediumTank2IndirectWAssaultRifle_C = {}
+local UBPMediumTank2IndirectWAssaultRifle_C = {}
 
 

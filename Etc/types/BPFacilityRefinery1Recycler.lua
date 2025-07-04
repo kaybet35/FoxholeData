@@ -11,7 +11,7 @@
 ---@field PointLight1 UPointLightComponent
 ---@field ModMesh USkeletalMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery1Recycler_C = {}
+local ABPFacilityRefinery1Recycler_C = {}
 
 
 

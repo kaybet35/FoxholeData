@@ -10,7 +10,7 @@
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPFortDestroyedT3_C = {}
+local ABPFortDestroyedT3_C = {}
 
 
 

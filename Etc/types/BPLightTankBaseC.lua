@@ -10,7 +10,7 @@
 ---@field lightR UStaticMeshComponent
 ---@field SpotLight USpotLightComponent
 ---@field SpotLight1 USpotLightComponent
-ABPLightTankBaseC_C = {}
+local ABPLightTankBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPLightTankBaseC_C:BPOnVehicleOn(IsOn) end

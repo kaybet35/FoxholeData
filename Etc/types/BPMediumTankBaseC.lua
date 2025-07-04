@@ -12,7 +12,7 @@
 ---@field CommanderSeat2 UVehicleSeatComponent
 ---@field Gunner2Exit USeatExitComponent
 ---@field Gunner2Trigger USeatTriggerComponent
-ABPMediumTankBaseC_C = {}
+local ABPMediumTankBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTankBaseC_C:BPOnVehicleOn(IsOn) end

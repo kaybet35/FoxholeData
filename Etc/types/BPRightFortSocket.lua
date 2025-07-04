@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRightFortSocket_C : UBuildSocketComponent
-UBPRightFortSocket_C = {}
+local UBPRightFortSocket_C = {}
 
 

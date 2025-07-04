@@ -6,7 +6,7 @@
 ---@field BackRightCorner UStaticMeshComponent
 ---@field BackLeftCorner UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCommonAIT3_C = {}
+local ABPFortCommonAIT3_C = {}
 
 
 

@@ -96,7 +96,7 @@
 ---@field StaticMesh17 UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWTrainStationG1Destroyed_C = {}
+local AUniqueWTrainStationG1Destroyed_C = {}
 
 
 

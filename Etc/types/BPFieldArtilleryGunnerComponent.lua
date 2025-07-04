@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFieldArtilleryGunnerComponent_C : UArtilleryGunnerMountComponent
-UBPFieldArtilleryGunnerComponent_C = {}
+local UBPFieldArtilleryGunnerComponent_C = {}
 
 

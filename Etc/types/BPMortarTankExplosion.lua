@@ -3,7 +3,7 @@
 ---@class ABPMortarTankExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-ABPMortarTankExplosion_C = {}
+local ABPMortarTankExplosion_C = {}
 
 function ABPMortarTankExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

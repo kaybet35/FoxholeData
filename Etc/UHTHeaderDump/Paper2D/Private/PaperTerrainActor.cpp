@@ -8,8 +8,8 @@ APaperTerrainActor::APaperTerrainActor(const FObjectInitializer& ObjectInitializ
     this->DummyRoot = (USceneComponent*)RootComponent;
     this->SplineComponent = CreateDefaultSubobject<UPaperTerrainSplineComponent>(TEXT("SplineComponent"));
     this->RenderComponent = CreateDefaultSubobject<UPaperTerrainComponent>(TEXT("RenderComponent"));
-    this->SplineComponent->SetupAttachment(RootComponent);
     this->RenderComponent->SetupAttachment(RootComponent);
+    this->SplineComponent->SetupAttachment(RootComponent);
 }
 
 

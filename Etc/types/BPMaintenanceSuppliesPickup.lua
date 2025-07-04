@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPMaintenanceSuppliesPickup_C : ABasicItemPickup
-ABPMaintenanceSuppliesPickup_C = {}
+local ABPMaintenanceSuppliesPickup_C = {}
 
 

@@ -3,7 +3,7 @@
 ---@class ATownCSmallG2Destroyed_C : ADestroyedGarrisonHouse
 ---@field RuinedMesh URuinedMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownCSmallG2Destroyed_C = {}
+local ATownCSmallG2Destroyed_C = {}
 
 
 

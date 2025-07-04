@@ -3,14 +3,14 @@
 ---@class FAutoCompleteCommand
 ---@field Command FString
 ---@field Desc FString
-FAutoCompleteCommand = {}
+local FAutoCompleteCommand = {}
 
 
 
 ---@class FGameModeName
 ---@field Name FString
 ---@field GameMode FSoftClassPath
-FGameModeName = {}
+local FGameModeName = {}
 
 
 
@@ -26,7 +26,7 @@ FGameModeName = {}
 ---@field AutoCompleteCommandColor FColor
 ---@field AutoCompleteCVarColor FColor
 ---@field AutoCompleteFadedColor FColor
-UConsoleSettings = {}
+local UConsoleSettings = {}
 
 
 
@@ -45,7 +45,7 @@ UConsoleSettings = {}
 ---@field GlobalDefaultServerGameMode FSoftClassPath
 ---@field GameModeMapPrefixes TArray<FGameModeName>
 ---@field GameModeClassAliases TArray<FGameModeName>
-UGameMapsSettings = {}
+local UGameMapsSettings = {}
 
 ---@param bSkipFirstPlayer boolean
 function UGameMapsSettings:SetSkipAssigningGamepadToPlayer1(bSkipFirstPlayer) end
@@ -67,7 +67,7 @@ function UGameMapsSettings:GetGameMapsSettings() end
 ---@field PercentMissingForTxStandby float
 ---@field PercentForBadPing float
 ---@field JoinInProgressStandbyWaitTime float
-UGameNetworkManagerSettings = {}
+local UGameNetworkManagerSettings = {}
 
 
 
@@ -75,12 +75,12 @@ UGameNetworkManagerSettings = {}
 ---@field MaxSpectators int32
 ---@field MaxPlayers int32
 ---@field bRequiresPushToTalk boolean
-UGameSessionSettings = {}
+local UGameSessionSettings = {}
 
 
 
 ---@class UGeneralEngineSettings : UObject
-UGeneralEngineSettings = {}
+local UGeneralEngineSettings = {}
 
 
 ---@class UGeneralProjectSettings : UObject
@@ -106,14 +106,14 @@ UGeneralEngineSettings = {}
 ---@field bAllowClose boolean
 ---@field bAllowMaximize boolean
 ---@field bAllowMinimize boolean
-UGeneralProjectSettings = {}
+local UGeneralProjectSettings = {}
 
 
 
 ---@class UHudSettings : UObject
 ---@field bShowHUD boolean
 ---@field DebugDisplay TArray<FName>
-UHudSettings = {}
+local UHudSettings = {}
 
 
 

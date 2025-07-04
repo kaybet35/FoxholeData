@@ -18,7 +18,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriveIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABattleTankBase_C = {}
+local ABattleTankBase_C = {}
 
 
 

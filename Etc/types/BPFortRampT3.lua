@@ -18,7 +18,7 @@
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field Floor UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent
-ABPFortRampT3_C = {}
+local ABPFortRampT3_C = {}
 
 
 

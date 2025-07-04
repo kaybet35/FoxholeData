@@ -34,7 +34,7 @@
 ---@field Level2 USkeletalMeshComponent
 ---@field MineMesh USkeletalMeshComponent
 ---@field bIsProducingSFXActive boolean
-ABPSulfurMine_C = {}
+local ABPSulfurMine_C = {}
 
 function ABPSulfurMine_C:UpdateVisuals_FastTick() end
 function ABPSulfurMine_C:ReceiveBeginPlay() end
@@ -44,6 +44,6 @@ function ABPSulfurMine_C:ExecuteUbergraph_BPSulfurMine(EntryPoint) end
 
 
 ---@class UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482253
-UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482253 = {}
+local UPLACEHOLDER-CLASS__ABP_SulfurMine_C_2147482253 = {}
 
 

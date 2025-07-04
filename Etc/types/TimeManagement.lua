@@ -2,12 +2,12 @@
 
 ---@class UFixedFrameRateCustomTimeStep : UEngineCustomTimeStep
 ---@field FixedFrameRate FFrameRate
-UFixedFrameRateCustomTimeStep = {}
+local UFixedFrameRateCustomTimeStep = {}
 
 
 
 ---@class UTimeManagementBlueprintLibrary : UBlueprintFunctionLibrary
-UTimeManagementBlueprintLibrary = {}
+local UTimeManagementBlueprintLibrary = {}
 
 ---@param SourceTime FFrameTime
 ---@param SourceRate FFrameRate
@@ -76,7 +76,7 @@ function UTimeManagementBlueprintLibrary:Add_FrameNumberFrameNumber(A, B) end
 ---@class UTimeSynchronizationSource : UObject
 ---@field bUseForSynchronization boolean
 ---@field FrameOffset int32
-UTimeSynchronizationSource = {}
+local UTimeSynchronizationSource = {}
 
 
 

@@ -10,7 +10,7 @@
 ---@field AnimGraphNode_StateResult_61B9A37A4B4D5243B20E44A4CBE01722 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_C8DDA712416562CC3C3AAB8D96EF35CE FAnimNode_StateMachine
 ---@field rocketIsLaunched boolean
-UABP_Rocket_C = {}
+local UABP_Rocket_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Rocket_C:AnimGraph(AnimGraph) end

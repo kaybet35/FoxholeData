@@ -6,7 +6,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriverSeat UVehicleSeatComponent
 ---@field Camera UCameraComponent
-ABPBicycle_C = {}
+local ABPBicycle_C = {}
 
 
 

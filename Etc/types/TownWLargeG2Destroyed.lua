@@ -36,7 +36,7 @@
 ---@field WoodBarrel_01 UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownWLargeG2Destroyed_C = {}
+local ATownWLargeG2Destroyed_C = {}
 
 
 

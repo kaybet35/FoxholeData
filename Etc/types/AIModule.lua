@@ -15,7 +15,7 @@
 ---@field CachedGameplayTasksComponent UGameplayTasksComponent
 ---@field DefaultNavigationFilterClass TSubclassOf<UNavigationQueryFilter>
 ---@field ReceiveMoveCompleted FAIControllerReceiveMoveCompleted
-AAIController = {}
+local AAIController = {}
 
 ---@param BlackboardAsset UBlackboardData
 ---@param BlackboardComponent UBlackboardComponent
@@ -82,7 +82,7 @@ function AAIController:ClaimTaskResource(ResourceClass) end
 
 
 ---@class ADetourCrowdAIController : AAIController
-ADetourCrowdAIController = {}
+local ADetourCrowdAIController = {}
 
 
 ---@class AEQSTestingPawn : ACharacter
@@ -99,12 +99,12 @@ ADetourCrowdAIController = {}
 ---@field bTickDuringGame boolean
 ---@field QueryingMode EEnvQueryRunMode::Type
 ---@field NavAgentProperties FNavAgentProperties
-AEQSTestingPawn = {}
+local AEQSTestingPawn = {}
 
 
 
 ---@class AGridPathAIController : AAIController
-AGridPathAIController = {}
+local AGridPathAIController = {}
 
 
 ---@class ANavLinkProxy : AActor
@@ -113,7 +113,7 @@ AGridPathAIController = {}
 ---@field SmartLinkComp UNavLinkCustomComponent
 ---@field bSmartLinkIsRelevant boolean
 ---@field OnSmartLinkReached FNavLinkProxyOnSmartLinkReached
-ANavLinkProxy = {}
+local ANavLinkProxy = {}
 
 ---@param bEnabled boolean
 function ANavLinkProxy:SetSmartLinkEnabled(bEnabled) end
@@ -134,35 +134,35 @@ function ANavLinkProxy:HasMovingAgents() end
 ---@field HitLocation FVector
 ---@field DamagedActor AActor
 ---@field Instigator AActor
-FAIDamageEvent = {}
+local FAIDamageEvent = {}
 
 
 
 ---@class FAIDataProviderBoolValue : FAIDataProviderTypedValue
 ---@field DefaultValue boolean
-FAIDataProviderBoolValue = {}
+local FAIDataProviderBoolValue = {}
 
 
 
 ---@class FAIDataProviderFloatValue : FAIDataProviderTypedValue
 ---@field DefaultValue float
-FAIDataProviderFloatValue = {}
+local FAIDataProviderFloatValue = {}
 
 
 
 ---@class FAIDataProviderIntValue : FAIDataProviderTypedValue
 ---@field DefaultValue int32
-FAIDataProviderIntValue = {}
+local FAIDataProviderIntValue = {}
 
 
 
 ---@class FAIDataProviderStructValue : FAIDataProviderValue
-FAIDataProviderStructValue = {}
+local FAIDataProviderStructValue = {}
 
 
 ---@class FAIDataProviderTypedValue : FAIDataProviderValue
 ---@field PropertyType TSubclassOf<UProperty>
-FAIDataProviderTypedValue = {}
+local FAIDataProviderTypedValue = {}
 
 
 
@@ -170,7 +170,7 @@ FAIDataProviderTypedValue = {}
 ---@field CachedProperty UProperty
 ---@field DataBinding UAIDataProvider
 ---@field DataField FName
-FAIDataProviderValue = {}
+local FAIDataProviderValue = {}
 
 
 
@@ -179,13 +179,13 @@ FAIDataProviderValue = {}
 ---@field ParamType EAIParamType
 ---@field Value float
 ---@field BBKey FBlackboardKeySelector
-FAIDynamicParam = {}
+local FAIDynamicParam = {}
 
 
 
 ---@class FAIMoveRequest
 ---@field GoalActor AActor
-FAIMoveRequest = {}
+local FAIMoveRequest = {}
 
 
 
@@ -195,20 +195,20 @@ FAIMoveRequest = {}
 ---@field MaxRange float
 ---@field Instigator AActor
 ---@field Tag FName
-FAINoiseEvent = {}
+local FAINoiseEvent = {}
 
 
 
 ---@class FAIPredictionEvent
 ---@field Requestor AActor
 ---@field PredictedActor AActor
-FAIPredictionEvent = {}
+local FAIPredictionEvent = {}
 
 
 
 ---@class FAIRequestID
 ---@field RequestID uint32
-FAIRequestID = {}
+local FAIRequestID = {}
 
 
 
@@ -216,14 +216,14 @@ FAIRequestID = {}
 ---@field bDetectEnemies boolean
 ---@field bDetectNeutrals boolean
 ---@field bDetectFriendlies boolean
-FAISenseAffiliationFilter = {}
+local FAISenseAffiliationFilter = {}
 
 
 
 ---@class FAISightEvent
 ---@field SeenActor AActor
 ---@field Observer AActor
-FAISightEvent = {}
+local FAISightEvent = {}
 
 
 
@@ -235,21 +235,21 @@ FAISightEvent = {}
 ---@field ReceiverLocation FVector
 ---@field Tag FName
 ---@field bSuccessfullySensed boolean
-FAIStimulus = {}
+local FAIStimulus = {}
 
 
 
 ---@class FAITeamStimulusEvent
 ---@field Broadcaster AActor
 ---@field Enemy AActor
-FAITeamStimulusEvent = {}
+local FAITeamStimulusEvent = {}
 
 
 
 ---@class FAITouchEvent
 ---@field TouchReceiver AActor
 ---@field OtherActor AActor
-FAITouchEvent = {}
+local FAITouchEvent = {}
 
 
 
@@ -257,7 +257,7 @@ FAITouchEvent = {}
 ---@field Target AActor
 ---@field LastSensedStimuli TArray<FAIStimulus>
 ---@field bIsHostile boolean
-FActorPerceptionBlueprintInfo = {}
+local FActorPerceptionBlueprintInfo = {}
 
 
 
@@ -266,21 +266,21 @@ FActorPerceptionBlueprintInfo = {}
 ---@field ChildTask UBTTaskNode
 ---@field Decorators TArray<UBTDecorator>
 ---@field DecoratorOps TArray<FBTDecoratorLogic>
-FBTCompositeChild = {}
+local FBTCompositeChild = {}
 
 
 
 ---@class FBTDecoratorLogic
 ---@field Operation EBTDecoratorLogic::Type
 ---@field Number uint16
-FBTDecoratorLogic = {}
+local FBTDecoratorLogic = {}
 
 
 
 ---@class FBehaviorTreeTemplateInfo
 ---@field Asset UBehaviorTree
 ---@field Template UBTCompositeNode
-FBehaviorTreeTemplateInfo = {}
+local FBehaviorTreeTemplateInfo = {}
 
 
 
@@ -288,7 +288,7 @@ FBehaviorTreeTemplateInfo = {}
 ---@field EntryName FName
 ---@field KeyType UBlackboardKeyType
 ---@field bInstanceSynced boolean
-FBlackboardEntry = {}
+local FBlackboardEntry = {}
 
 
 
@@ -298,7 +298,7 @@ FBlackboardEntry = {}
 ---@field SelectedKeyType TSubclassOf<UBlackboardKeyType>
 ---@field SelectedKeyID uint8
 ---@field bNoneIsAllowedValue boolean
-FBlackboardKeySelector = {}
+local FBlackboardKeySelector = {}
 
 
 
@@ -313,19 +313,19 @@ FBlackboardKeySelector = {}
 ---@field AdaptiveDivisions uint8
 ---@field AdaptiveRings uint8
 ---@field AdaptiveDepth uint8
-FCrowdAvoidanceConfig = {}
+local FCrowdAvoidanceConfig = {}
 
 
 
 ---@class FCrowdAvoidanceSamplingPattern
 ---@field Angles TArray<float>
 ---@field Radii TArray<float>
-FCrowdAvoidanceSamplingPattern = {}
+local FCrowdAvoidanceSamplingPattern = {}
 
 
 
 ---@class FDefault__AISenseBlueprintListener
-FDefault__AISenseBlueprintListener = {}
+local FDefault__AISenseBlueprintListener = {}
 
 
 ---@class FEQSParametrizedQueryExecutionRequest
@@ -334,7 +334,7 @@ FDefault__AISenseBlueprintListener = {}
 ---@field EQSQueryBlackboardKey FBlackboardKeySelector
 ---@field RunMode EEnvQueryRunMode::Type
 ---@field bUseBBKeyForQueryTemplate boolean
-FEQSParametrizedQueryExecutionRequest = {}
+local FEQSParametrizedQueryExecutionRequest = {}
 
 
 
@@ -343,7 +343,7 @@ FEQSParametrizedQueryExecutionRequest = {}
 ---@field LineTo TSubclassOf<UEnvQueryContext>
 ---@field Rotation TSubclassOf<UEnvQueryContext>
 ---@field DirMode EEnvDirection::Type
-FEnvDirection = {}
+local FEnvDirection = {}
 
 
 
@@ -351,7 +351,7 @@ FEnvDirection = {}
 ---@field ParamName FName
 ---@field ParamType EAIParamType
 ---@field Value float
-FEnvNamedValue = {}
+local FEnvNamedValue = {}
 
 
 
@@ -365,13 +365,13 @@ FEnvNamedValue = {}
 ---@field bOnlyBlockingHits boolean
 ---@field bOverlapComplex boolean
 ---@field bSkipOverlapQuerier boolean
-FEnvOverlapData = {}
+local FEnvOverlapData = {}
 
 
 
 ---@class FEnvQueryInstanceCache
 ---@field Template UEnvQuery
-FEnvQueryInstanceCache = {}
+local FEnvQueryInstanceCache = {}
 
 
 
@@ -379,7 +379,7 @@ FEnvQueryInstanceCache = {}
 ---@field QueryTemplate UEnvQuery
 ---@field Owner UObject
 ---@field World UWorld
-FEnvQueryRequest = {}
+local FEnvQueryRequest = {}
 
 
 
@@ -387,7 +387,7 @@ FEnvQueryRequest = {}
 ---@field ItemType TSubclassOf<UEnvQueryItemType>
 ---@field OptionIndex int32
 ---@field QueryID int32
-FEnvQueryResult = {}
+local FEnvQueryResult = {}
 
 
 
@@ -410,62 +410,62 @@ FEnvQueryResult = {}
 ---@field bCanTraceOnGeometry boolean
 ---@field bCanDisableTrace boolean
 ---@field bCanProjectDown boolean
-FEnvTraceData = {}
+local FEnvTraceData = {}
 
 
 
 ---@class FGenericTeamId
 ---@field TeamId uint8
-FGenericTeamId = {}
+local FGenericTeamId = {}
 
 
 
 ---@class FIntervalCountdown
 ---@field Interval float
-FIntervalCountdown = {}
+local FIntervalCountdown = {}
 
 
 
 ---@class FPawnActionEvent
 ---@field Action UPawnAction
-FPawnActionEvent = {}
+local FPawnActionEvent = {}
 
 
 
 ---@class FPawnActionStack
 ---@field TopAction UPawnAction
-FPawnActionStack = {}
+local FPawnActionStack = {}
 
 
 
 ---@class IAIPerceptionListenerInterface : IInterface
-IAIPerceptionListenerInterface = {}
+local IAIPerceptionListenerInterface = {}
 
 
 ---@class IAIResourceInterface : IInterface
-IAIResourceInterface = {}
+local IAIResourceInterface = {}
 
 
 ---@class IAISightTargetInterface : IInterface
-IAISightTargetInterface = {}
+local IAISightTargetInterface = {}
 
 
 ---@class ICrowdAgentInterface : IInterface
-ICrowdAgentInterface = {}
+local ICrowdAgentInterface = {}
 
 
 ---@class IEQSQueryResultSourceInterface : IInterface
-IEQSQueryResultSourceInterface = {}
+local IEQSQueryResultSourceInterface = {}
 
 
 ---@class IGenericTeamAgentInterface : IInterface
-IGenericTeamAgentInterface = {}
+local IGenericTeamAgentInterface = {}
 
 
 ---@class UAIAsyncTaskBlueprintProxy : UObject
 ---@field OnSuccess FAIAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFail FAIAsyncTaskBlueprintProxyOnFail
-UAIAsyncTaskBlueprintProxy = {}
+local UAIAsyncTaskBlueprintProxy = {}
 
 ---@param RequestID FAIRequestID
 ---@param MovementResult EPathFollowingResult::Type
@@ -473,7 +473,7 @@ function UAIAsyncTaskBlueprintProxy:OnMoveCompleted(RequestID, MovementResult) e
 
 
 ---@class UAIBlueprintHelperLibrary : UBlueprintFunctionLibrary
-UAIBlueprintHelperLibrary = {}
+local UAIBlueprintHelperLibrary = {}
 
 ---@param AnimInstance UAnimInstance
 ---@param bUnlockMovement boolean
@@ -531,7 +531,7 @@ function UAIBlueprintHelperLibrary:CreateMoveToProxyObject(WorldContextObject, P
 
 
 ---@class UAIDataProvider : UObject
-UAIDataProvider = {}
+local UAIDataProvider = {}
 
 
 ---@class UAIDataProvider_QueryParams : UAIDataProvider
@@ -539,7 +539,7 @@ UAIDataProvider = {}
 ---@field FloatValue float
 ---@field IntValue int32
 ---@field BoolValue boolean
-UAIDataProvider_QueryParams = {}
+local UAIDataProvider_QueryParams = {}
 
 
 
@@ -547,12 +547,12 @@ UAIDataProvider_QueryParams = {}
 ---@field Min float
 ---@field Max float
 ---@field bInteger boolean
-UAIDataProvider_Random = {}
+local UAIDataProvider_Random = {}
 
 
 
 ---@class UAIHotSpotManager : UObject
-UAIHotSpotManager = {}
+local UAIHotSpotManager = {}
 
 
 ---@class UAIPerceptionComponent : UActorComponent
@@ -561,7 +561,7 @@ UAIHotSpotManager = {}
 ---@field AIOwner AAIController
 ---@field OnPerceptionUpdated FAIPerceptionComponentOnPerceptionUpdated
 ---@field OnTargetPerceptionUpdated FAIPerceptionComponentOnTargetPerceptionUpdated
-UAIPerceptionComponent = {}
+local UAIPerceptionComponent = {}
 
 ---@param SenseClass TSubclassOf<UAISense>
 ---@param bEnable boolean
@@ -590,7 +590,7 @@ function UAIPerceptionComponent:GetActorsPerception(Actor, Info) end
 ---@class UAIPerceptionStimuliSourceComponent : UActorComponent
 ---@field bAutoRegisterAsSource boolean
 ---@field RegisterAsSourceForSenses TArray<TSubclassOf<UAISense>>
-UAIPerceptionStimuliSourceComponent = {}
+local UAIPerceptionStimuliSourceComponent = {}
 
 ---@param SenseClass TSubclassOf<UAISense>
 function UAIPerceptionStimuliSourceComponent:UnregisterFromSense(SenseClass) end
@@ -603,7 +603,7 @@ function UAIPerceptionStimuliSourceComponent:RegisterForSense(SenseClass) end
 ---@class UAIPerceptionSystem : UAISubsystem
 ---@field Senses TArray<UAISense>
 ---@field PerceptionAgingRate float
-UAIPerceptionSystem = {}
+local UAIPerceptionSystem = {}
 
 ---@param WorldContextObject UObject
 ---@param PerceptionEvent UAISenseEvent
@@ -625,11 +625,11 @@ function UAIPerceptionSystem:GetSenseClassForStimulus(WorldContextObject, Stimul
 
 
 ---@class UAIResource_Logic : UGameplayTaskResource
-UAIResource_Logic = {}
+local UAIResource_Logic = {}
 
 
 ---@class UAIResource_Movement : UGameplayTaskResource
-UAIResource_Movement = {}
+local UAIResource_Movement = {}
 
 
 ---@class UAISense : UObject
@@ -638,31 +638,31 @@ UAIResource_Movement = {}
 ---@field bWantsNewPawnNotification boolean
 ---@field bAutoRegisterAllPawnsAsSources boolean
 ---@field PerceptionSystemInstance UAIPerceptionSystem
-UAISense = {}
+local UAISense = {}
 
 
 
 ---@class UAISenseBlueprintListener : UUserDefinedStruct
-UAISenseBlueprintListener = {}
+local UAISenseBlueprintListener = {}
 
 
 ---@class UAISenseConfig : UObject
 ---@field DebugColor FColor
 ---@field MaxAge float
 ---@field bStartsEnabled boolean
-UAISenseConfig = {}
+local UAISenseConfig = {}
 
 
 
 ---@class UAISenseConfig_Blueprint : UAISenseConfig
 ---@field Implementation TSubclassOf<UAISense_Blueprint>
-UAISenseConfig_Blueprint = {}
+local UAISenseConfig_Blueprint = {}
 
 
 
 ---@class UAISenseConfig_Damage : UAISenseConfig
 ---@field Implementation TSubclassOf<UAISense_Damage>
-UAISenseConfig_Damage = {}
+local UAISenseConfig_Damage = {}
 
 
 
@@ -672,12 +672,12 @@ UAISenseConfig_Damage = {}
 ---@field LoSHearingRange float
 ---@field bUseLoSHearing boolean
 ---@field DetectionByAffiliation FAISenseAffiliationFilter
-UAISenseConfig_Hearing = {}
+local UAISenseConfig_Hearing = {}
 
 
 
 ---@class UAISenseConfig_Prediction : UAISenseConfig
-UAISenseConfig_Prediction = {}
+local UAISenseConfig_Prediction = {}
 
 
 ---@class UAISenseConfig_Sight : UAISenseConfig
@@ -687,31 +687,31 @@ UAISenseConfig_Prediction = {}
 ---@field PeripheralVisionAngleDegrees float
 ---@field DetectionByAffiliation FAISenseAffiliationFilter
 ---@field AutoSuccessRangeFromLastSeenLocation float
-UAISenseConfig_Sight = {}
+local UAISenseConfig_Sight = {}
 
 
 
 ---@class UAISenseConfig_Team : UAISenseConfig
-UAISenseConfig_Team = {}
+local UAISenseConfig_Team = {}
 
 
 ---@class UAISenseConfig_Touch : UAISenseConfig
-UAISenseConfig_Touch = {}
+local UAISenseConfig_Touch = {}
 
 
 ---@class UAISenseEvent : UObject
-UAISenseEvent = {}
+local UAISenseEvent = {}
 
 
 ---@class UAISenseEvent_Damage : UAISenseEvent
 ---@field Event FAIDamageEvent
-UAISenseEvent_Damage = {}
+local UAISenseEvent_Damage = {}
 
 
 
 ---@class UAISenseEvent_Hearing : UAISenseEvent
 ---@field Event FAINoiseEvent
-UAISenseEvent_Hearing = {}
+local UAISenseEvent_Hearing = {}
 
 
 
@@ -719,7 +719,7 @@ UAISenseEvent_Hearing = {}
 ---@field ListenerDataType TSubclassOf<UUserDefinedStruct>
 ---@field ListenerContainer TArray<UAIPerceptionComponent>
 ---@field UnprocessedEvents TArray<UAISenseEvent>
-UAISense_Blueprint = {}
+local UAISense_Blueprint = {}
 
 ---@param EventsToProcess TArray<UAISenseEvent>
 ---@return float
@@ -743,7 +743,7 @@ function UAISense_Blueprint:GetAllListenerActors(ListenerActors) end
 
 ---@class UAISense_Damage : UAISense
 ---@field RegisteredEvents TArray<FAIDamageEvent>
-UAISense_Damage = {}
+local UAISense_Damage = {}
 
 ---@param WorldContextObject UObject
 ---@param DamagedActor AActor
@@ -757,7 +757,7 @@ function UAISense_Damage:ReportDamageEvent(WorldContextObject, DamagedActor, Ins
 ---@class UAISense_Hearing : UAISense
 ---@field NoiseEvents TArray<FAINoiseEvent>
 ---@field SpeedOfSoundSq float
-UAISense_Hearing = {}
+local UAISense_Hearing = {}
 
 ---@param WorldContextObject UObject
 ---@param NoiseLocation FVector
@@ -770,7 +770,7 @@ function UAISense_Hearing:ReportNoiseEvent(WorldContextObject, NoiseLocation, Lo
 
 ---@class UAISense_Prediction : UAISense
 ---@field RegisteredEvents TArray<FAIPredictionEvent>
-UAISense_Prediction = {}
+local UAISense_Prediction = {}
 
 ---@param Requestor APawn
 ---@param PredictedActor AActor
@@ -789,25 +789,25 @@ function UAISense_Prediction:RequestControllerPredictionEvent(Requestor, Predict
 ---@field HighImportanceQueryDistanceThreshold float
 ---@field MaxQueryImportance float
 ---@field SightLimitQueryImportance float
-UAISense_Sight = {}
+local UAISense_Sight = {}
 
 
 
 ---@class UAISense_Team : UAISense
 ---@field RegisteredEvents TArray<FAITeamStimulusEvent>
-UAISense_Team = {}
+local UAISense_Team = {}
 
 
 
 ---@class UAISense_Touch : UAISense
 ---@field RegisteredEvents TArray<FAITouchEvent>
-UAISense_Touch = {}
+local UAISense_Touch = {}
 
 
 
 ---@class UAISubsystem : UObject
 ---@field AISystem UAISystem
-UAISubsystem = {}
+local UAISubsystem = {}
 
 
 
@@ -830,7 +830,7 @@ UAISubsystem = {}
 ---@field AllProxyObjects TArray<UAIAsyncTaskBlueprintProxy>
 ---@field HotSpotManager UAIHotSpotManager
 ---@field NavLocalGrids UNavLocalGridManager
-UAISystem = {}
+local UAISystem = {}
 
 function UAISystem:AILoggingVerbose() end
 function UAISystem:AIIgnorePlayers() end
@@ -838,19 +838,19 @@ function UAISystem:AIIgnorePlayers() end
 
 ---@class UAITask : UGameplayTask
 ---@field OwnerController AAIController
-UAITask = {}
+local UAITask = {}
 
 
 
 ---@class UAITask_LockLogic : UAITask
-UAITask_LockLogic = {}
+local UAITask_LockLogic = {}
 
 
 ---@class UAITask_MoveTo : UAITask
 ---@field OnRequestFailed FAITask_MoveToOnRequestFailed
 ---@field OnMoveFinished FAITask_MoveToOnMoveFinished
 ---@field MoveRequest FAIMoveRequest
-UAITask_MoveTo = {}
+local UAITask_MoveTo = {}
 
 ---@param Controller AAIController
 ---@param GoalLocation FVector
@@ -867,7 +867,7 @@ function UAITask_MoveTo:AIMoveTo(Controller, GoalLocation, GoalActor, Acceptance
 
 
 ---@class UAITask_RunEQS : UAITask
-UAITask_RunEQS = {}
+local UAITask_RunEQS = {}
 
 ---@param Controller AAIController
 ---@param QueryTemplate UEnvQuery
@@ -876,35 +876,35 @@ function UAITask_RunEQS:RunEQS(Controller, QueryTemplate) end
 
 
 ---@class UBTAuxiliaryNode : UBTNode
-UBTAuxiliaryNode = {}
+local UBTAuxiliaryNode = {}
 
 
 ---@class UBTCompositeNode : UBTNode
 ---@field Children TArray<FBTCompositeChild>
 ---@field Services TArray<UBTService>
 ---@field bApplyDecoratorScope boolean
-UBTCompositeNode = {}
+local UBTCompositeNode = {}
 
 
 
 ---@class UBTComposite_Selector : UBTCompositeNode
-UBTComposite_Selector = {}
+local UBTComposite_Selector = {}
 
 
 ---@class UBTComposite_Sequence : UBTCompositeNode
-UBTComposite_Sequence = {}
+local UBTComposite_Sequence = {}
 
 
 ---@class UBTComposite_SimpleParallel : UBTCompositeNode
 ---@field FinishMode EBTParallelMode::Type
-UBTComposite_SimpleParallel = {}
+local UBTComposite_SimpleParallel = {}
 
 
 
 ---@class UBTDecorator : UBTAuxiliaryNode
 ---@field bInverseCondition boolean
 ---@field FlowAbortMode EBTFlowAbortMode::Type
-UBTDecorator = {}
+local UBTDecorator = {}
 
 
 
@@ -915,13 +915,13 @@ UBTDecorator = {}
 ---@field CachedDescription FString
 ---@field OperationType uint8
 ---@field NotifyObserver EBTBlackboardRestart::Type
-UBTDecorator_Blackboard = {}
+local UBTDecorator_Blackboard = {}
 
 
 
 ---@class UBTDecorator_BlackboardBase : UBTDecorator
 ---@field BlackboardKey FBlackboardKeySelector
-UBTDecorator_BlackboardBase = {}
+local UBTDecorator_BlackboardBase = {}
 
 
 
@@ -932,7 +932,7 @@ UBTDecorator_BlackboardBase = {}
 ---@field bShowPropertyDetails boolean
 ---@field bCheckConditionOnlyBlackBoardChanges boolean
 ---@field bIsObservingBB boolean
-UBTDecorator_BlueprintBase = {}
+local UBTDecorator_BlueprintBase = {}
 
 ---@param OwnerController AAIController
 ---@param ControlledPawn APawn
@@ -981,7 +981,7 @@ function UBTDecorator_BlueprintBase:IsDecoratorExecutionActive() end
 ---@field TagsToMatch EGameplayContainerMatchType
 ---@field GameplayTags FGameplayTagContainer
 ---@field CachedDescription FString
-UBTDecorator_CheckGameplayTagsOnActor = {}
+local UBTDecorator_CheckGameplayTagsOnActor = {}
 
 
 
@@ -989,12 +989,12 @@ UBTDecorator_CheckGameplayTagsOnActor = {}
 ---@field Operator EBlackBoardEntryComparison::Type
 ---@field BlackboardKeyA FBlackboardKeySelector
 ---@field BlackboardKeyB FBlackboardKeySelector
-UBTDecorator_CompareBBEntries = {}
+local UBTDecorator_CompareBBEntries = {}
 
 
 
 ---@class UBTDecorator_ConditionalLoop : UBTDecorator_Blackboard
-UBTDecorator_ConditionalLoop = {}
+local UBTDecorator_ConditionalLoop = {}
 
 
 ---@class UBTDecorator_ConeCheck : UBTDecorator
@@ -1002,13 +1002,13 @@ UBTDecorator_ConditionalLoop = {}
 ---@field ConeOrigin FBlackboardKeySelector
 ---@field ConeDirection FBlackboardKeySelector
 ---@field Observed FBlackboardKeySelector
-UBTDecorator_ConeCheck = {}
+local UBTDecorator_ConeCheck = {}
 
 
 
 ---@class UBTDecorator_Cooldown : UBTDecorator
 ---@field CoolDownTime float
-UBTDecorator_Cooldown = {}
+local UBTDecorator_Cooldown = {}
 
 
 
@@ -1018,12 +1018,12 @@ UBTDecorator_Cooldown = {}
 ---@field bUseSelf boolean
 ---@field PathQueryType EPathExistanceQueryType::Type
 ---@field FilterClass TSubclassOf<UNavigationQueryFilter>
-UBTDecorator_DoesPathExist = {}
+local UBTDecorator_DoesPathExist = {}
 
 
 
 ---@class UBTDecorator_ForceSuccess : UBTDecorator
-UBTDecorator_ForceSuccess = {}
+local UBTDecorator_ForceSuccess = {}
 
 
 ---@class UBTDecorator_IsAtLocation : UBTDecorator_BlackboardBase
@@ -1033,13 +1033,13 @@ UBTDecorator_ForceSuccess = {}
 ---@field bUseParametrizedRadius boolean
 ---@field bUseNavAgentGoalLocation boolean
 ---@field bPathFindingBasedTest boolean
-UBTDecorator_IsAtLocation = {}
+local UBTDecorator_IsAtLocation = {}
 
 
 
 ---@class UBTDecorator_IsBBEntryOfClass : UBTDecorator_BlackboardBase
 ---@field TestClass UClass
-UBTDecorator_IsBBEntryOfClass = {}
+local UBTDecorator_IsBBEntryOfClass = {}
 
 
 
@@ -1049,7 +1049,7 @@ UBTDecorator_IsBBEntryOfClass = {}
 ---@field Observed FBlackboardKeySelector
 ---@field bUseSelfAsOrigin boolean
 ---@field bUseSelfAsObserved boolean
-UBTDecorator_KeepInCone = {}
+local UBTDecorator_KeepInCone = {}
 
 
 
@@ -1057,19 +1057,19 @@ UBTDecorator_KeepInCone = {}
 ---@field NumLoops int32
 ---@field bInfiniteLoop boolean
 ---@field InfiniteLoopTimeoutTime float
-UBTDecorator_Loop = {}
+local UBTDecorator_Loop = {}
 
 
 
 ---@class UBTDecorator_ReachedMoveGoal : UBTDecorator
-UBTDecorator_ReachedMoveGoal = {}
+local UBTDecorator_ReachedMoveGoal = {}
 
 
 ---@class UBTDecorator_SetTagCooldown : UBTDecorator
 ---@field CooldownTag FGameplayTag
 ---@field CooldownDuration float
 ---@field bAddToExistingDuration boolean
-UBTDecorator_SetTagCooldown = {}
+local UBTDecorator_SetTagCooldown = {}
 
 
 
@@ -1078,18 +1078,18 @@ UBTDecorator_SetTagCooldown = {}
 ---@field CooldownDuration float
 ---@field bAddToExistingDuration boolean
 ---@field bActivatesCooldown boolean
-UBTDecorator_TagCooldown = {}
+local UBTDecorator_TagCooldown = {}
 
 
 
 ---@class UBTDecorator_TimeLimit : UBTDecorator
 ---@field TimeLimit float
-UBTDecorator_TimeLimit = {}
+local UBTDecorator_TimeLimit = {}
 
 
 
 ---@class UBTFunctionLibrary : UBlueprintFunctionLibrary
-UBTFunctionLibrary = {}
+local UBTFunctionLibrary = {}
 
 ---@param NodeOwner UBTNode
 function UBTFunctionLibrary:StopUsingExternalEvent(NodeOwner) end
@@ -1198,7 +1198,7 @@ function UBTFunctionLibrary:ClearBlackboardValue(NodeOwner, Key) end
 ---@field NodeName FString
 ---@field TreeAsset UBehaviorTree
 ---@field ParentNode UBTCompositeNode
-UBTNode = {}
+local UBTNode = {}
 
 
 
@@ -1207,13 +1207,13 @@ UBTNode = {}
 ---@field RandomDeviation float
 ---@field bCallTickOnSearchStart boolean
 ---@field bRestartTimerOnEachActivation boolean
-UBTService = {}
+local UBTService = {}
 
 
 
 ---@class UBTService_BlackboardBase : UBTService
 ---@field BlackboardKey FBlackboardKeySelector
-UBTService_BlackboardBase = {}
+local UBTService_BlackboardBase = {}
 
 
 
@@ -1222,7 +1222,7 @@ UBTService_BlackboardBase = {}
 ---@field ActorOwner AActor
 ---@field bShowPropertyDetails boolean
 ---@field bShowEventDetails boolean
-UBTService_BlueprintBase = {}
+local UBTService_BlueprintBase = {}
 
 ---@param OwnerController AAIController
 ---@param ControlledPawn APawn
@@ -1252,26 +1252,26 @@ function UBTService_BlueprintBase:IsServiceActive() end
 
 ---@class UBTService_DefaultFocus : UBTService_BlackboardBase
 ---@field FocusPriority uint8
-UBTService_DefaultFocus = {}
+local UBTService_DefaultFocus = {}
 
 
 
 ---@class UBTService_RunEQS : UBTService_BlackboardBase
 ---@field EQSRequest FEQSParametrizedQueryExecutionRequest
-UBTService_RunEQS = {}
+local UBTService_RunEQS = {}
 
 
 
 ---@class UBTTaskNode : UBTNode
 ---@field Services TArray<UBTService>
 ---@field bIgnoreRestartSelf boolean
-UBTTaskNode = {}
+local UBTTaskNode = {}
 
 
 
 ---@class UBTTask_BlackboardBase : UBTTaskNode
 ---@field BlackboardKey FBlackboardKeySelector
-UBTTask_BlackboardBase = {}
+local UBTTask_BlackboardBase = {}
 
 
 
@@ -1280,7 +1280,7 @@ UBTTask_BlackboardBase = {}
 ---@field ActorOwner AActor
 ---@field TickInterval FIntervalCountdown
 ---@field bShowPropertyDetails boolean
-UBTTask_BlueprintBase = {}
+local UBTTask_BlueprintBase = {}
 
 ---@param MessageName FName
 ---@param RequestID int32
@@ -1315,19 +1315,19 @@ function UBTTask_BlueprintBase:FinishAbort() end
 
 ---@class UBTTask_FinishWithResult : UBTTaskNode
 ---@field Result EBTNodeResult::Type
-UBTTask_FinishWithResult = {}
+local UBTTask_FinishWithResult = {}
 
 
 
 ---@class UBTTask_GameplayTaskBase : UBTTaskNode
 ---@field bWaitForGameplayTask boolean
-UBTTask_GameplayTaskBase = {}
+local UBTTask_GameplayTaskBase = {}
 
 
 
 ---@class UBTTask_MakeNoise : UBTTaskNode
 ---@field Loudnes float
-UBTTask_MakeNoise = {}
+local UBTTask_MakeNoise = {}
 
 
 
@@ -1335,7 +1335,7 @@ UBTTask_MakeNoise = {}
 ---@field bDisablePathUpdateOnGoalLocationChange boolean
 ---@field bProjectVectorGoalToNavigation boolean
 ---@field bUpdatedDeprecatedProperties boolean
-UBTTask_MoveDirectlyToward = {}
+local UBTTask_MoveDirectlyToward = {}
 
 
 
@@ -1352,12 +1352,12 @@ UBTTask_MoveDirectlyToward = {}
 ---@field bReachTestIncludesGoalRadius boolean
 ---@field bStopOnOverlap boolean
 ---@field bStopOnOverlapNeedsUpdate boolean
-UBTTask_MoveTo = {}
+local UBTTask_MoveTo = {}
 
 
 
 ---@class UBTTask_PawnActionBase : UBTTaskNode
-UBTTask_PawnActionBase = {}
+local UBTTask_PawnActionBase = {}
 
 
 ---@class UBTTask_PlayAnimation : UBTTaskNode
@@ -1366,31 +1366,31 @@ UBTTask_PawnActionBase = {}
 ---@field bNonBlocking boolean
 ---@field MyOwnerComp UBehaviorTreeComponent
 ---@field CachedSkelMesh USkeletalMeshComponent
-UBTTask_PlayAnimation = {}
+local UBTTask_PlayAnimation = {}
 
 
 
 ---@class UBTTask_PlaySound : UBTTaskNode
 ---@field SoundToPlay USoundCue
-UBTTask_PlaySound = {}
+local UBTTask_PlaySound = {}
 
 
 
 ---@class UBTTask_PushPawnAction : UBTTask_PawnActionBase
 ---@field Action UPawnAction
-UBTTask_PushPawnAction = {}
+local UBTTask_PushPawnAction = {}
 
 
 
 ---@class UBTTask_RotateToFaceBBEntry : UBTTask_BlackboardBase
 ---@field Precision float
-UBTTask_RotateToFaceBBEntry = {}
+local UBTTask_RotateToFaceBBEntry = {}
 
 
 
 ---@class UBTTask_RunBehavior : UBTTaskNode
 ---@field BehaviorAsset UBehaviorTree
-UBTTask_RunBehavior = {}
+local UBTTask_RunBehavior = {}
 
 
 
@@ -1398,7 +1398,7 @@ UBTTask_RunBehavior = {}
 ---@field InjectionTag FGameplayTag
 ---@field DefaultBehaviorAsset UBehaviorTree
 ---@field BehaviorAsset UBehaviorTree
-UBTTask_RunBehaviorDynamic = {}
+local UBTTask_RunBehaviorDynamic = {}
 
 
 
@@ -1410,7 +1410,7 @@ UBTTask_RunBehaviorDynamic = {}
 ---@field EQSQueryBlackboardKey FBlackboardKeySelector
 ---@field bUseBBKey boolean
 ---@field EQSRequest FEQSParametrizedQueryExecutionRequest
-UBTTask_RunEQSQuery = {}
+local UBTTask_RunEQSQuery = {}
 
 
 
@@ -1418,20 +1418,20 @@ UBTTask_RunEQSQuery = {}
 ---@field CooldownTag FGameplayTag
 ---@field bAddToExistingDuration boolean
 ---@field CooldownDuration float
-UBTTask_SetTagCooldown = {}
+local UBTTask_SetTagCooldown = {}
 
 
 
 ---@class UBTTask_Wait : UBTTaskNode
 ---@field WaitTime float
 ---@field RandomDeviation float
-UBTTask_Wait = {}
+local UBTTask_Wait = {}
 
 
 
 ---@class UBTTask_WaitBlackboardTime : UBTTask_Wait
 ---@field BlackboardKey FBlackboardKeySelector
-UBTTask_WaitBlackboardTime = {}
+local UBTTask_WaitBlackboardTime = {}
 
 
 
@@ -1440,13 +1440,13 @@ UBTTask_WaitBlackboardTime = {}
 ---@field BlackboardAsset UBlackboardData
 ---@field RootDecorators TArray<UBTDecorator>
 ---@field RootDecoratorOps TArray<FBTDecoratorLogic>
-UBehaviorTree = {}
+local UBehaviorTree = {}
 
 
 
 ---@class UBehaviorTreeComponent : UBrainComponent
 ---@field NodeInstances TArray<UBTNode>
-UBehaviorTreeComponent = {}
+local UBehaviorTreeComponent = {}
 
 ---@param InjectTag FGameplayTag
 ---@param BehaviorAsset UBehaviorTree
@@ -1464,19 +1464,19 @@ function UBehaviorTreeComponent:AddCooldownTagDuration(CooldownTag, CooldownDura
 ---@field MaxDebuggerSteps int32
 ---@field LoadedTemplates TArray<FBehaviorTreeTemplateInfo>
 ---@field ActiveComponents TArray<UBehaviorTreeComponent>
-UBehaviorTreeManager = {}
+local UBehaviorTreeManager = {}
 
 
 
 ---@class UBehaviorTreeTypes : UObject
-UBehaviorTreeTypes = {}
+local UBehaviorTreeTypes = {}
 
 
 ---@class UBlackboardComponent : UActorComponent
 ---@field BrainComp UBrainComponent
 ---@field BlackboardAsset UBlackboardData
 ---@field KeyInstances TArray<UBlackboardKeyType>
-UBlackboardComponent = {}
+local UBlackboardComponent = {}
 
 ---@param KeyName FName
 ---@param VectorValue FVector
@@ -1557,21 +1557,21 @@ function UBlackboardComponent:ClearValue(KeyName) end
 ---@field Parent UBlackboardData
 ---@field Keys TArray<FBlackboardEntry>
 ---@field bHasSynchronizedKeys boolean
-UBlackboardData = {}
+local UBlackboardData = {}
 
 
 
 ---@class UBlackboardKeyType : UObject
-UBlackboardKeyType = {}
+local UBlackboardKeyType = {}
 
 
 ---@class UBlackboardKeyType_Bool : UBlackboardKeyType
-UBlackboardKeyType_Bool = {}
+local UBlackboardKeyType_Bool = {}
 
 
 ---@class UBlackboardKeyType_Class : UBlackboardKeyType
 ---@field BaseClass UClass
-UBlackboardKeyType_Class = {}
+local UBlackboardKeyType_Class = {}
 
 
 
@@ -1579,53 +1579,53 @@ UBlackboardKeyType_Class = {}
 ---@field EnumType UEnum
 ---@field EnumName FString
 ---@field bIsEnumNameValid boolean
-UBlackboardKeyType_Enum = {}
+local UBlackboardKeyType_Enum = {}
 
 
 
 ---@class UBlackboardKeyType_Float : UBlackboardKeyType
-UBlackboardKeyType_Float = {}
+local UBlackboardKeyType_Float = {}
 
 
 ---@class UBlackboardKeyType_Int : UBlackboardKeyType
-UBlackboardKeyType_Int = {}
+local UBlackboardKeyType_Int = {}
 
 
 ---@class UBlackboardKeyType_Name : UBlackboardKeyType
-UBlackboardKeyType_Name = {}
+local UBlackboardKeyType_Name = {}
 
 
 ---@class UBlackboardKeyType_NativeEnum : UBlackboardKeyType
 ---@field EnumName FString
 ---@field EnumType UEnum
-UBlackboardKeyType_NativeEnum = {}
+local UBlackboardKeyType_NativeEnum = {}
 
 
 
 ---@class UBlackboardKeyType_Object : UBlackboardKeyType
 ---@field BaseClass UClass
-UBlackboardKeyType_Object = {}
+local UBlackboardKeyType_Object = {}
 
 
 
 ---@class UBlackboardKeyType_Rotator : UBlackboardKeyType
-UBlackboardKeyType_Rotator = {}
+local UBlackboardKeyType_Rotator = {}
 
 
 ---@class UBlackboardKeyType_String : UBlackboardKeyType
 ---@field StringValue FString
-UBlackboardKeyType_String = {}
+local UBlackboardKeyType_String = {}
 
 
 
 ---@class UBlackboardKeyType_Vector : UBlackboardKeyType
-UBlackboardKeyType_Vector = {}
+local UBlackboardKeyType_Vector = {}
 
 
 ---@class UBrainComponent : UActorComponent
 ---@field BlackboardComp UBlackboardComponent
 ---@field AIOwner AAIController
-UBrainComponent = {}
+local UBrainComponent = {}
 
 ---@param Reason FString
 function UBrainComponent:StopLogic(Reason) end
@@ -1639,7 +1639,7 @@ function UBrainComponent:IsPaused() end
 ---@class UCrowdFollowingComponent : UPathFollowingComponent
 ---@field CharacterMovement UCharacterMovementComponent
 ---@field CrowdAgentMoveDirection FVector
-UCrowdFollowingComponent = {}
+local UCrowdFollowingComponent = {}
 
 ---@param bSuspend boolean
 function UCrowdFollowingComponent:SuspendCrowdSteering(bSuspend) end
@@ -1658,27 +1658,27 @@ function UCrowdFollowingComponent:SuspendCrowdSteering(bSuspend) end
 ---@field SeparationDirClamp float
 ---@field PathOffsetRadiusMultiplier float
 ---@field bResolveCollisions boolean
-UCrowdManager = {}
+local UCrowdManager = {}
 
 
 
 ---@class UEQSRenderingComponent : UPrimitiveComponent
-UEQSRenderingComponent = {}
+local UEQSRenderingComponent = {}
 
 
 ---@class UEnvQuery : UDataAsset
 ---@field QueryName FName
 ---@field Options TArray<UEnvQueryOption>
-UEnvQuery = {}
+local UEnvQuery = {}
 
 
 
 ---@class UEnvQueryContext : UObject
-UEnvQueryContext = {}
+local UEnvQueryContext = {}
 
 
 ---@class UEnvQueryContext_BlueprintBase : UEnvQueryContext
-UEnvQueryContext_BlueprintBase = {}
+local UEnvQueryContext_BlueprintBase = {}
 
 ---@param QuerierObject UObject
 ---@param QuerierActor AActor
@@ -1699,22 +1699,22 @@ function UEnvQueryContext_BlueprintBase:ProvideActorsSet(QuerierObject, QuerierA
 
 
 ---@class UEnvQueryContext_Item : UEnvQueryContext
-UEnvQueryContext_Item = {}
+local UEnvQueryContext_Item = {}
 
 
 ---@class UEnvQueryContext_Querier : UEnvQueryContext
-UEnvQueryContext_Querier = {}
+local UEnvQueryContext_Querier = {}
 
 
 ---@class UEnvQueryDebugHelpers : UObject
-UEnvQueryDebugHelpers = {}
+local UEnvQueryDebugHelpers = {}
 
 
 ---@class UEnvQueryGenerator : UEnvQueryNode
 ---@field OptionName FString
 ---@field ItemType TSubclassOf<UEnvQueryItemType>
 ---@field bAutoSortTests boolean
-UEnvQueryGenerator = {}
+local UEnvQueryGenerator = {}
 
 
 
@@ -1723,7 +1723,7 @@ UEnvQueryGenerator = {}
 ---@field GenerateOnlyActorsInRadius FAIDataProviderBoolValue
 ---@field SearchRadius FAIDataProviderFloatValue
 ---@field SearchCenter TSubclassOf<UEnvQueryContext>
-UEnvQueryGenerator_ActorsOfClass = {}
+local UEnvQueryGenerator_ActorsOfClass = {}
 
 
 
@@ -1731,7 +1731,7 @@ UEnvQueryGenerator_ActorsOfClass = {}
 ---@field GeneratorsActionDescription FText
 ---@field Context TSubclassOf<UEnvQueryContext>
 ---@field GeneratedItemType TSubclassOf<UEnvQueryItemType>
-UEnvQueryGenerator_BlueprintBase = {}
+local UEnvQueryGenerator_BlueprintBase = {}
 
 ---@return UObject
 function UEnvQueryGenerator_BlueprintBase:GetQuerier() end
@@ -1748,7 +1748,7 @@ function UEnvQueryGenerator_BlueprintBase:AddGeneratedActor(GeneratedActor) end
 ---@field bAllowDifferentItemTypes boolean
 ---@field bHasMatchingItemType boolean
 ---@field ForcedItemType TSubclassOf<UEnvQueryItemType>
-UEnvQueryGenerator_Composite = {}
+local UEnvQueryGenerator_Composite = {}
 
 
 
@@ -1759,13 +1759,13 @@ UEnvQueryGenerator_Composite = {}
 ---@field Range FAIDataProviderFloatValue
 ---@field CenterActor TSubclassOf<UEnvQueryContext>
 ---@field bIncludeContextLocation boolean
-UEnvQueryGenerator_Cone = {}
+local UEnvQueryGenerator_Cone = {}
 
 
 
 ---@class UEnvQueryGenerator_CurrentLocation : UEnvQueryGenerator
 ---@field QueryContext TSubclassOf<UEnvQueryContext>
-UEnvQueryGenerator_CurrentLocation = {}
+local UEnvQueryGenerator_CurrentLocation = {}
 
 
 
@@ -1779,7 +1779,7 @@ UEnvQueryGenerator_CurrentLocation = {}
 ---@field bUseSpiralPattern boolean
 ---@field Center TSubclassOf<UEnvQueryContext>
 ---@field bDefineArc boolean
-UEnvQueryGenerator_Donut = {}
+local UEnvQueryGenerator_Donut = {}
 
 
 
@@ -1796,7 +1796,7 @@ UEnvQueryGenerator_Donut = {}
 ---@field CircleCenterZOffset FAIDataProviderFloatValue
 ---@field TraceData FEnvTraceData
 ---@field bDefineArc boolean
-UEnvQueryGenerator_OnCircle = {}
+local UEnvQueryGenerator_OnCircle = {}
 
 
 
@@ -1804,13 +1804,13 @@ UEnvQueryGenerator_OnCircle = {}
 ---@field PathToItem FAIDataProviderBoolValue
 ---@field NavigationFilter TSubclassOf<UNavigationQueryFilter>
 ---@field ScanRangeMultiplier FAIDataProviderFloatValue
-UEnvQueryGenerator_PathingGrid = {}
+local UEnvQueryGenerator_PathingGrid = {}
 
 
 
 ---@class UEnvQueryGenerator_ProjectedPoints : UEnvQueryGenerator
 ---@field ProjectionData FEnvTraceData
-UEnvQueryGenerator_ProjectedPoints = {}
+local UEnvQueryGenerator_ProjectedPoints = {}
 
 
 
@@ -1818,7 +1818,7 @@ UEnvQueryGenerator_ProjectedPoints = {}
 ---@field GridSize FAIDataProviderFloatValue
 ---@field SpaceBetween FAIDataProviderFloatValue
 ---@field GenerateAround TSubclassOf<UEnvQueryContext>
-UEnvQueryGenerator_SimpleGrid = {}
+local UEnvQueryGenerator_SimpleGrid = {}
 
 
 
@@ -1827,7 +1827,7 @@ UEnvQueryGenerator_SimpleGrid = {}
 ---@field ItemType TSubclassOf<UEnvQueryItemType>
 ---@field OptionIndex int32
 ---@field OnQueryFinishedEvent FEnvQueryInstanceBlueprintWrapperOnQueryFinishedEvent
-UEnvQueryInstanceBlueprintWrapper = {}
+local UEnvQueryInstanceBlueprintWrapper = {}
 
 ---@param ParamName FName
 ---@param Value float
@@ -1851,27 +1851,27 @@ function UEnvQueryInstanceBlueprintWrapper:EQSQueryDoneSignature__DelegateSignat
 
 
 ---@class UEnvQueryItemType : UObject
-UEnvQueryItemType = {}
+local UEnvQueryItemType = {}
 
 
 ---@class UEnvQueryItemType_Actor : UEnvQueryItemType_ActorBase
-UEnvQueryItemType_Actor = {}
+local UEnvQueryItemType_Actor = {}
 
 
 ---@class UEnvQueryItemType_ActorBase : UEnvQueryItemType_VectorBase
-UEnvQueryItemType_ActorBase = {}
+local UEnvQueryItemType_ActorBase = {}
 
 
 ---@class UEnvQueryItemType_Direction : UEnvQueryItemType_VectorBase
-UEnvQueryItemType_Direction = {}
+local UEnvQueryItemType_Direction = {}
 
 
 ---@class UEnvQueryItemType_Point : UEnvQueryItemType_VectorBase
-UEnvQueryItemType_Point = {}
+local UEnvQueryItemType_Point = {}
 
 
 ---@class UEnvQueryItemType_VectorBase : UEnvQueryItemType
-UEnvQueryItemType_VectorBase = {}
+local UEnvQueryItemType_VectorBase = {}
 
 
 ---@class UEnvQueryManager : UAISubsystem
@@ -1882,7 +1882,7 @@ UEnvQueryItemType_VectorBase = {}
 ---@field bTestQueriesUsingBreadth boolean
 ---@field QueryCountWarningThreshold int32
 ---@field QueryCountWarningInterval double
-UEnvQueryManager = {}
+local UEnvQueryManager = {}
 
 ---@param WorldContextObject UObject
 ---@param QueryTemplate UEnvQuery
@@ -1895,14 +1895,14 @@ function UEnvQueryManager:RunEQSQuery(WorldContextObject, QueryTemplate, Querier
 
 ---@class UEnvQueryNode : UObject
 ---@field VerNum int32
-UEnvQueryNode = {}
+local UEnvQueryNode = {}
 
 
 
 ---@class UEnvQueryOption : UObject
 ---@field Generator UEnvQueryGenerator
 ---@field Tests TArray<UEnvQueryTest>
-UEnvQueryOption = {}
+local UEnvQueryOption = {}
 
 
 
@@ -1926,14 +1926,14 @@ UEnvQueryOption = {}
 ---@field ReferenceValue FAIDataProviderFloatValue
 ---@field bDefineReferenceValue boolean
 ---@field bWorkOnFloatValues boolean
-UEnvQueryTest = {}
+local UEnvQueryTest = {}
 
 
 
 ---@class UEnvQueryTest_Distance : UEnvQueryTest
 ---@field TestMode EEnvTestDistance::Type
 ---@field DistanceTo TSubclassOf<UEnvQueryContext>
-UEnvQueryTest_Distance = {}
+local UEnvQueryTest_Distance = {}
 
 
 
@@ -1942,7 +1942,7 @@ UEnvQueryTest_Distance = {}
 ---@field LineB FEnvDirection
 ---@field TestMode EEnvTestDot
 ---@field bAbsoluteValue boolean
-UEnvQueryTest_Dot = {}
+local UEnvQueryTest_Dot = {}
 
 
 
@@ -1951,13 +1951,13 @@ UEnvQueryTest_Dot = {}
 ---@field bUpdatedToUseQuery boolean
 ---@field TagsToMatch EGameplayContainerMatchType
 ---@field GameplayTags FGameplayTagContainer
-UEnvQueryTest_GameplayTags = {}
+local UEnvQueryTest_GameplayTags = {}
 
 
 
 ---@class UEnvQueryTest_Overlap : UEnvQueryTest
 ---@field OverlapData FEnvOverlapData
-UEnvQueryTest_Overlap = {}
+local UEnvQueryTest_Overlap = {}
 
 
 
@@ -1967,24 +1967,24 @@ UEnvQueryTest_Overlap = {}
 ---@field PathFromContext FAIDataProviderBoolValue
 ---@field SkipUnreachable FAIDataProviderBoolValue
 ---@field FilterClass TSubclassOf<UNavigationQueryFilter>
-UEnvQueryTest_Pathfinding = {}
+local UEnvQueryTest_Pathfinding = {}
 
 
 
 ---@class UEnvQueryTest_PathfindingBatch : UEnvQueryTest_Pathfinding
 ---@field ScanRangeMultiplier FAIDataProviderFloatValue
-UEnvQueryTest_PathfindingBatch = {}
+local UEnvQueryTest_PathfindingBatch = {}
 
 
 
 ---@class UEnvQueryTest_Project : UEnvQueryTest
 ---@field ProjectionData FEnvTraceData
-UEnvQueryTest_Project = {}
+local UEnvQueryTest_Project = {}
 
 
 
 ---@class UEnvQueryTest_Random : UEnvQueryTest
-UEnvQueryTest_Random = {}
+local UEnvQueryTest_Random = {}
 
 
 ---@class UEnvQueryTest_Trace : UEnvQueryTest
@@ -1993,7 +1993,7 @@ UEnvQueryTest_Random = {}
 ---@field ItemHeightOffset FAIDataProviderFloatValue
 ---@field ContextHeightOffset FAIDataProviderFloatValue
 ---@field Context TSubclassOf<UEnvQueryContext>
-UEnvQueryTest_Trace = {}
+local UEnvQueryTest_Trace = {}
 
 
 
@@ -2001,26 +2001,26 @@ UEnvQueryTest_Trace = {}
 ---@field VolumeContext TSubclassOf<UEnvQueryContext>
 ---@field VolumeClass TSubclassOf<AVolume>
 ---@field bDoComplexVolumeTest boolean
-UEnvQueryTest_Volume = {}
+local UEnvQueryTest_Volume = {}
 
 
 
 ---@class UEnvQueryTypes : UObject
-UEnvQueryTypes = {}
+local UEnvQueryTypes = {}
 
 
 ---@class UGridPathFollowingComponent : UPathFollowingComponent
 ---@field GridManager UNavLocalGridManager
-UGridPathFollowingComponent = {}
+local UGridPathFollowingComponent = {}
 
 
 
 ---@class UNavFilter_AIControllerDefault : UNavigationQueryFilter
-UNavFilter_AIControllerDefault = {}
+local UNavFilter_AIControllerDefault = {}
 
 
 ---@class UNavLocalGridManager : UObject
-UNavLocalGridManager = {}
+local UNavLocalGridManager = {}
 
 ---@param WorldContextObject UObject
 ---@param CellSize float
@@ -2073,7 +2073,7 @@ function UNavLocalGridManager:AddLocalNavigationGridForBox(WorldContextObject, L
 ---@class UPathFollowingComponent : UActorComponent
 ---@field MovementComp UNavMovementComponent
 ---@field MyNavData ANavigationData
-UPathFollowingComponent = {}
+local UPathFollowingComponent = {}
 
 ---@param NavData ANavigationData
 function UPathFollowingComponent:OnNavDataRegistered(NavData) end
@@ -2089,7 +2089,7 @@ function UPathFollowingComponent:GetPathActionType() end
 
 
 ---@class UPathFollowingManager : UObject
-UPathFollowingManager = {}
+local UPathFollowingManager = {}
 
 
 ---@class UPawnAction : UObject
@@ -2102,7 +2102,7 @@ UPathFollowingManager = {}
 ---@field bReplaceActiveSameClassInstance boolean
 ---@field bShouldPauseMovement boolean
 ---@field bAlwaysNotifyOnFinished boolean
-UPawnAction = {}
+local UPawnAction = {}
 
 ---@return EAIRequestPriority::Type
 function UPawnAction:GetActionPriority() end
@@ -2115,7 +2115,7 @@ function UPawnAction:CreateActionInstance(WorldContextObject, ActionClass) end
 
 
 ---@class UPawnAction_BlueprintBase : UPawnAction
-UPawnAction_BlueprintBase = {}
+local UPawnAction_BlueprintBase = {}
 
 ---@param ControlledPawn APawn
 ---@param DeltaSeconds float
@@ -2143,7 +2143,7 @@ function UPawnAction_BlueprintBase:ActionFinished(ControlledPawn, WithResult) en
 ---@field bProjectGoalToNavigation boolean
 ---@field bUpdatePathToGoal boolean
 ---@field bAbortChildActionOnPathChange boolean
-UPawnAction_Move = {}
+local UPawnAction_Move = {}
 
 
 
@@ -2151,7 +2151,7 @@ UPawnAction_Move = {}
 ---@field ActionToRepeat UPawnAction
 ---@field RecentActionCopy UPawnAction
 ---@field ChildFailureHandlingMode EPawnActionFailHandling::Type
-UPawnAction_Repeat = {}
+local UPawnAction_Repeat = {}
 
 
 
@@ -2159,13 +2159,13 @@ UPawnAction_Repeat = {}
 ---@field ActionSequence TArray<UPawnAction>
 ---@field ChildFailureHandlingMode EPawnActionFailHandling::Type
 ---@field RecentActionCopy UPawnAction
-UPawnAction_Sequence = {}
+local UPawnAction_Sequence = {}
 
 
 
 ---@class UPawnAction_Wait : UPawnAction
 ---@field TimeToWait float
-UPawnAction_Wait = {}
+local UPawnAction_Wait = {}
 
 
 
@@ -2174,7 +2174,7 @@ UPawnAction_Wait = {}
 ---@field ActionStacks TArray<FPawnActionStack>
 ---@field ActionEvents TArray<FPawnActionEvent>
 ---@field CurrentAction UPawnAction
-UPawnActionsComponent = {}
+local UPawnActionsComponent = {}
 
 ---@param NewAction UPawnAction
 ---@param Priority EAIRequestPriority::Type
@@ -2208,7 +2208,7 @@ function UPawnActionsComponent:K2_AbortAction(ActionToAbort) end
 ---@field OnHearNoise FPawnSensingComponentOnHearNoise
 ---@field PeripheralVisionAngle float
 ---@field PeripheralVisionCosine float
-UPawnSensingComponent = {}
+local UPawnSensingComponent = {}
 
 ---@param bEnabled boolean
 function UPawnSensingComponent:SetSensingUpdatesEnabled(bEnabled) end
@@ -2229,6 +2229,6 @@ function UPawnSensingComponent:GetPeripheralVisionAngle() end
 
 
 ---@class UVisualLoggerExtension : UObject
-UVisualLoggerExtension = {}
+local UVisualLoggerExtension = {}
 
 

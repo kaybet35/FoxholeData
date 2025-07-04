@@ -6,7 +6,7 @@
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field OccupiableComponent UStructureSeatComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPEmplacedLightArtilleryW_C = {}
+local ABPEmplacedLightArtilleryW_C = {}
 
 
 

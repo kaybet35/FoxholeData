@@ -31,10 +31,10 @@ AFortStaticArtillery::AFortStaticArtillery(const FObjectInitializer& ObjectIniti
     this->HorizontalAngle = 0.00f;
     this->VerticalAngle = 45.00f;
     this->bIsFiring = false;
+    this->FireShellParticleSystem->SetupAttachment(SkeletalMesh);
+    this->FlagMesh->SetupAttachment(RootComponent);
     this->KillVolume->SetupAttachment(RootComponent);
     this->SkeletalMesh->SetupAttachment(RootComponent);
-    this->FlagMesh->SetupAttachment(RootComponent);
-    this->FireShellParticleSystem->SetupAttachment(SkeletalMesh);
 }
 
 void AFortStaticArtillery::OnRep_IsFiring() {

@@ -16,7 +16,7 @@
 ---@field FVFWireWheel1 UStaticMeshComponent
 ---@field FVFWireWheel UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory1FieldAssemblyStation01_C = {}
+local ABPFacilityVehicleFactory1FieldAssemblyStation01_C = {}
 
 
 

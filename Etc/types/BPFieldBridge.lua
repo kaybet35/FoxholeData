@@ -15,7 +15,7 @@
 ---@field Timeline_0_NewTrack_0_738F45B945E6F66E508CF1BDC736E93C FVector
 ---@field Timeline_0__Direction_738F45B945E6F66E508CF1BDC736E93C ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPFieldBridge_C = {}
+local ABPFieldBridge_C = {}
 
 function ABPFieldBridge_C:Timeline_0__FinishedFunc() end
 function ABPFieldBridge_C:Timeline_0__UpdateFunc() end

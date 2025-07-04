@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATRPGTWComponent_C : UDeployableItemComponent
-UBPATRPGTWComponent_C = {}
+local UBPATRPGTWComponent_C = {}
 
 

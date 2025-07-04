@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field MainBodyTop USkeletalMeshComponent
 ---@field GunnerSeat2 UVehicleSeatComponent
-ABPHalfTrackArtilleryC_C = {}
+local ABPHalfTrackArtilleryC_C = {}
 
 ---@param IsOn boolean
 function ABPHalfTrackArtilleryC_C:BPOnVehicleOn(IsOn) end

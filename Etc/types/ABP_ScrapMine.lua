@@ -7,7 +7,7 @@
 ---@field AnimGraphNode_SequencePlayer_24EFE54D43FC8360DEF53A835A16D9D9 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_95EFE262413AA28C4705FF9317797BA4 FAnimNode_BlendListByBool
 ---@field IsActive boolean
-UABP_ScrapMine_C = {}
+local UABP_ScrapMine_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ScrapMine_C:AnimGraph(AnimGraph) end

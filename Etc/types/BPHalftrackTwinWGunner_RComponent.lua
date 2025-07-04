@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPHalftrackTwinWGunner_RComponent_C : UBPHalftrackTwinWGunner_LComponent_C
-UBPHalftrackTwinWGunner_RComponent_C = {}
+local UBPHalftrackTwinWGunner_RComponent_C = {}
 
 

@@ -6,7 +6,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field SpotLight USpotLightComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPLandingCraftBaseC_C = {}
+local ABPLandingCraftBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPLandingCraftBaseC_C:BPOnVehicleOn(IsOn) end

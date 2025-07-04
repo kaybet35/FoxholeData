@@ -8,7 +8,7 @@
 ---@field TownCLargeGarrisonGS1_Props UStaticMeshComponent
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field HouseMesh UStaticMeshComponent
-ATownCLargeGarrisonGS1Destroyed_C = {}
+local ATownCLargeGarrisonGS1Destroyed_C = {}
 
 
 

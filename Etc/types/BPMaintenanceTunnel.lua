@@ -9,7 +9,7 @@
 ---@field LandscapeCheck UBuildSocketComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field Placeholder UStaticMeshComponent
-ABPMaintenanceTunnel_C = {}
+local ABPMaintenanceTunnel_C = {}
 
 
 

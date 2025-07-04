@@ -12,7 +12,7 @@
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPSuperTankBase_C = {}
+local ABPSuperTankBase_C = {}
 
 ---@param IsOn boolean
 function ABPSuperTankBase_C:BPOnVehicleOn(IsOn) end

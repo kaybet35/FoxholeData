@@ -15,7 +15,7 @@
 ---@field BackFortSocket UBPBackFortSocket_C
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortBreachedCommon_C = {}
+local ABPFortBreachedCommon_C = {}
 
 
 

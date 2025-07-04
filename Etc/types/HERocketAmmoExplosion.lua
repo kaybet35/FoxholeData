@@ -6,7 +6,7 @@
 ---@field RotationCorrection USceneComponent
 ---@field ProjectileTickRate float
 ---@field ProjectileVelocity FVector
-AHERocketAmmoExplosion_C = {}
+local AHERocketAmmoExplosion_C = {}
 
 function AHERocketAmmoExplosion_C:ReceiveDestroyed() end
 function AHERocketAmmoExplosion_C:BPDetonate() end

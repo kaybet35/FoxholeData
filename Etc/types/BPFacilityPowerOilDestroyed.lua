@@ -6,7 +6,7 @@
 ---@field Decal4 UDecalComponent
 ---@field BaseMesh UStaticMeshComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityPowerOilDestroyed_C = {}
+local ABPFacilityPowerOilDestroyed_C = {}
 
 
 

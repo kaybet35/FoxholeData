@@ -10,7 +10,7 @@
 ---@field FoundationDecal UDecalComponent
 ---@field FacilityRefinery2UpgradeMesh2 USkeletalMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery2Recycler_C = {}
+local ABPFacilityRefinery2Recycler_C = {}
 
 
 

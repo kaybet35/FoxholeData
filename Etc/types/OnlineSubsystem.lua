@@ -12,14 +12,14 @@
 ---@field DecimalSeparator FString
 ---@field GroupingSeparator FString
 ---@field ReceiptData FString
-FInAppPurchaseProductInfo = {}
+local FInAppPurchaseProductInfo = {}
 
 
 
 ---@class FInAppPurchaseProductRequest
 ---@field ProductIdentifier FString
 ---@field bIsConsumable boolean
-FInAppPurchaseProductRequest = {}
+local FInAppPurchaseProductRequest = {}
 
 
 
@@ -27,26 +27,26 @@ FInAppPurchaseProductRequest = {}
 ---@field Identifier FString
 ---@field ReceiptData FString
 ---@field TransactionIdentifier FString
-FInAppPurchaseRestoreInfo = {}
+local FInAppPurchaseRestoreInfo = {}
 
 
 
 ---@class FNamedInterface
 ---@field InterfaceName FName
 ---@field InterfaceObject UObject
-FNamedInterface = {}
+local FNamedInterface = {}
 
 
 
 ---@class FNamedInterfaceDef
 ---@field InterfaceName FName
 ---@field InterfaceClassName FString
-FNamedInterfaceDef = {}
+local FNamedInterfaceDef = {}
 
 
 
 ---@class ITurnBasedMatchInterface : IInterface
-ITurnBasedMatchInterface = {}
+local ITurnBasedMatchInterface = {}
 
 ---@param Match FString
 ---@param bDidBecomeActive boolean
@@ -58,7 +58,7 @@ function ITurnBasedMatchInterface:OnMatchEnded(Match) end
 ---@class UNamedInterfaces : UObject
 ---@field NamedInterfaces TArray<FNamedInterface>
 ---@field NamedInterfaceDefs TArray<FNamedInterfaceDef>
-UNamedInterfaces = {}
+local UNamedInterfaces = {}
 
 
 

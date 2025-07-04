@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPGarrisonStationTechTree_C : UTechTreeComponentData
-UBPGarrisonStationTechTree_C = {}
+local UBPGarrisonStationTechTree_C = {}
 
 

@@ -18,7 +18,7 @@
 ---@field Exhaust UParticleSystemComponent
 ---@field VehicleIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPRelicArmouredCar_C = {}
+local ABPRelicArmouredCar_C = {}
 
 ---@param IsOn boolean
 function ABPRelicArmouredCar_C:BPOnVehicleOn(IsOn) end

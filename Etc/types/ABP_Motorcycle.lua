@@ -10,7 +10,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_721EDF93462D25CBD4B585A015A63989 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_824C4AE041A1B780C1A9FB97B2CD2C73 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_9FF7A19F447EE0C3BBDB6C980395B287 FAnimNode_BlendListByBool
-UABP_Motorcycle_C = {}
+local UABP_Motorcycle_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Motorcycle_C:AnimGraph(AnimGraph) end

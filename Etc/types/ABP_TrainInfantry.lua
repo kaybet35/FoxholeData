@@ -23,7 +23,7 @@
 ---@field AnimGraphNode_ApplyAdditive_8498B17D46AC45B63614DABCE5320289 FAnimNode_ApplyAdditive
 ---@field AnimGraphNode_BlendListByBool_F58120154814F7FE05C0629CC02D426B FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_4616BF304C80A4DB4E96B2BF23A8B27B FAnimNode_SequencePlayer
-UABP_TrainInfantry_C = {}
+local UABP_TrainInfantry_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_TrainInfantry_C:AnimGraph(AnimGraph) end

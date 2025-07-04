@@ -8,7 +8,7 @@
 ---@field FacilityFuelLight UFacilityFuelLightComponent
 ---@field FacilityIndicatorFrame UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFuelLightTemplate_C = {}
+local ABPFuelLightTemplate_C = {}
 
 
 

@@ -13,7 +13,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field GunnerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
-ABPMortarTankBase_C = {}
+local ABPMortarTankBase_C = {}
 
 
 

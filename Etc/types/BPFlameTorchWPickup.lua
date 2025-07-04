@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFlameTorchWPickup_C : AFirearmPickup
-ABPFlameTorchWPickup_C = {}
+local ABPFlameTorchWPickup_C = {}
 
 

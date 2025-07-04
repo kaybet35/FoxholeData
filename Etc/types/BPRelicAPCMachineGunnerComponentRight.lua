@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRelicAPCMachineGunnerComponentRight_C : UHitScanMountComponent
-UBPRelicAPCMachineGunnerComponentRight_C = {}
+local UBPRelicAPCMachineGunnerComponentRight_C = {}
 
 

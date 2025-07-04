@@ -2,7 +2,7 @@
 
 ---@class ABPDepthChargeAmmoPickup_C : AAmmoPickup
 ---@field DepthChargeMesh USkeletalMeshComponent
-ABPDepthChargeAmmoPickup_C = {}
+local ABPDepthChargeAmmoPickup_C = {}
 
 
 

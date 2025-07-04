@@ -2,7 +2,7 @@
 
 ---@class ABPMapIntelligence_C : AMapIntelligence
 ---@field DefaultSceneRoot USceneComponent
-ABPMapIntelligence_C = {}
+local ABPMapIntelligence_C = {}
 
 
 

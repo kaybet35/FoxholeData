@@ -3,14 +3,14 @@
 ---@class FMagicLeapPlaneBoundaries
 ---@field ID FGuid
 ---@field Boundaries TArray<FMagicLeapPlaneBoundary>
-FMagicLeapPlaneBoundaries = {}
+local FMagicLeapPlaneBoundaries = {}
 
 
 
 ---@class FMagicLeapPlaneBoundary
 ---@field Polygon FMagicLeapPolygon
 ---@field Holes TArray<FMagicLeapPolygon>
-FMagicLeapPlaneBoundary = {}
+local FMagicLeapPlaneBoundary = {}
 
 
 
@@ -21,7 +21,7 @@ FMagicLeapPlaneBoundary = {}
 ---@field PlaneDimensions FVector2D
 ---@field PlaneFlags TArray<EMagicLeapPlaneQueryFlags>
 ---@field ID FGuid
-FMagicLeapPlaneResult = {}
+local FMagicLeapPlaneResult = {}
 
 
 
@@ -34,13 +34,13 @@ FMagicLeapPlaneResult = {}
 ---@field SearchVolumePosition FVector
 ---@field SearchVolumeOrientation FQuat
 ---@field SearchVolumeExtents FVector
-FMagicLeapPlanesQuery = {}
+local FMagicLeapPlanesQuery = {}
 
 
 
 ---@class FMagicLeapPolygon
 ---@field Vertices TArray<FVector>
-FMagicLeapPolygon = {}
+local FMagicLeapPolygon = {}
 
 
 
@@ -51,14 +51,14 @@ FMagicLeapPolygon = {}
 ---@field MinHolePerimeter float
 ---@field MinPlaneArea float
 ---@field OnPlanesQueryResult FMagicLeapPlanesComponentOnPlanesQueryResult
-UMagicLeapPlanesComponent = {}
+local UMagicLeapPlanesComponent = {}
 
 ---@return boolean
 function UMagicLeapPlanesComponent:RequestPlanesAsync() end
 
 
 ---@class UMagicLeapPlanesFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapPlanesFunctionLibrary = {}
+local UMagicLeapPlanesFunctionLibrary = {}
 
 ---@param InPriority TArray<EMagicLeapPlaneQueryFlags>
 ---@param InFlagsToReorder TArray<EMagicLeapPlaneQueryFlags>

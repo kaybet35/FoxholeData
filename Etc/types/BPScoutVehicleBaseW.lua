@@ -6,7 +6,7 @@
 ---@field Base UStaticMeshComponent
 ---@field SpotLight_R USpotLightComponent
 ---@field Light_R UStaticMeshComponent
-ABPScoutVehicleBaseW_C = {}
+local ABPScoutVehicleBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPScoutVehicleBaseW_C:BPOnVehicleOn(IsOn) end

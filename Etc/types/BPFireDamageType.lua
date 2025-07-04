@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFireDamageType_C : USimDamageType
-UBPFireDamageType_C = {}
+local UBPFireDamageType_C = {}
 
 

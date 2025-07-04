@@ -3,34 +3,34 @@
 ---@class FMediaCaptureDevice
 ---@field DisplayName FText
 ---@field URL FString
-FMediaCaptureDevice = {}
+local FMediaCaptureDevice = {}
 
 
 
 ---@class FMediaSoundComponentSpectralData
 ---@field FrequencyHz float
 ---@field Magnitude float
-FMediaSoundComponentSpectralData = {}
+local FMediaSoundComponentSpectralData = {}
 
 
 
 ---@class UBaseMediaSource : UMediaSource
 ---@field PlayerName FName
-UBaseMediaSource = {}
+local UBaseMediaSource = {}
 
 
 
 ---@class UFileMediaSource : UBaseMediaSource
 ---@field FilePath FString
 ---@field PrecacheFile boolean
-UFileMediaSource = {}
+local UFileMediaSource = {}
 
 ---@param Path FString
 function UFileMediaSource:SetFilePath(Path) end
 
 
 ---@class UMediaBlueprintFunctionLibrary : UBlueprintFunctionLibrary
-UMediaBlueprintFunctionLibrary = {}
+local UMediaBlueprintFunctionLibrary = {}
 
 ---@param OutDevices TArray<FMediaCaptureDevice>
 ---@param Filter int32
@@ -66,7 +66,7 @@ function UMediaBlueprintFunctionLibrary:EnumerateAudioCaptureDevices(OutDevices,
 ---@field VerticalFieldOfView float
 ---@field ViewRotation FRotator
 ---@field PlayerGuid FGuid
-UMediaPlayer = {}
+local UMediaPlayer = {}
 
 ---@return boolean
 function UMediaPlayer:SupportsSeeking() end
@@ -275,7 +275,7 @@ function UMediaPlayer:CanPause() end
 
 ---@class UMediaPlaylist : UObject
 ---@field Items TArray<UMediaSource>
-UMediaPlaylist = {}
+local UMediaPlaylist = {}
 
 ---@param Index int32
 ---@param Replacement UMediaSource
@@ -321,7 +321,7 @@ function UMediaPlaylist:Add(MediaSource) end
 ---@field RateAdjustmentFactor float
 ---@field RateAdjustmentRange FFloatRange
 ---@field MediaPlayer UMediaPlayer
-UMediaSoundComponent = {}
+local UMediaSoundComponent = {}
 
 ---@param InFrequenciesToAnalyze TArray<float>
 ---@param InFFTSize EMediaSoundComponentFFTSize
@@ -347,7 +347,7 @@ function UMediaSoundComponent:BP_GetAttenuationSettingsToApply(OutAttenuationSet
 
 
 ---@class UMediaSource : UObject
-UMediaSource = {}
+local UMediaSource = {}
 
 ---@return boolean
 function UMediaSource:Validate() end
@@ -373,7 +373,7 @@ function UMediaSource:GetUrl() end
 ---@field AutoClear boolean
 ---@field ClearColor FLinearColor
 ---@field MediaPlayer UMediaPlayer
-UMediaTexture = {}
+local UMediaTexture = {}
 
 ---@param NewMediaPlayer UMediaPlayer
 function UMediaTexture:SetMediaPlayer(NewMediaPlayer) end
@@ -389,13 +389,13 @@ function UMediaTexture:GetAspectRatio() end
 
 ---@class UPlatformMediaSource : UMediaSource
 ---@field MediaSource UMediaSource
-UPlatformMediaSource = {}
+local UPlatformMediaSource = {}
 
 
 
 ---@class UStreamMediaSource : UBaseMediaSource
 ---@field StreamUrl FString
-UStreamMediaSource = {}
+local UStreamMediaSource = {}
 
 
 
@@ -403,7 +403,7 @@ UStreamMediaSource = {}
 ---@field bUseTimeSynchronization boolean
 ---@field FrameDelay int32
 ---@field TimeDelay double
-UTimeSynchronizableMediaSource = {}
+local UTimeSynchronizableMediaSource = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPEngineerUniformCPickup_C : ABPUniformPickup_C
-ABPEngineerUniformCPickup_C = {}
+local ABPEngineerUniformCPickup_C = {}
 
 

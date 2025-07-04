@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class FAnalogInputEvent : FKeyEvent
-FAnalogInputEvent = {}
+local FAnalogInputEvent = {}
 
 
 ---@class FButtonStyle : FSlateWidgetStyle
@@ -13,16 +13,16 @@ FAnalogInputEvent = {}
 ---@field PressedPadding FMargin
 ---@field PressedSlateSound FSlateSound
 ---@field HoveredSlateSound FSlateSound
-FButtonStyle = {}
+local FButtonStyle = {}
 
 
 
 ---@class FCaptureLostEvent
-FCaptureLostEvent = {}
+local FCaptureLostEvent = {}
 
 
 ---@class FCharacterEvent : FInputEvent
-FCharacterEvent = {}
+local FCharacterEvent = {}
 
 
 ---@class FCheckBoxStyle : FSlateWidgetStyle
@@ -42,7 +42,7 @@ FCharacterEvent = {}
 ---@field CheckedSlateSound FSlateSound
 ---@field UncheckedSlateSound FSlateSound
 ---@field HoveredSlateSound FSlateSound
-FCheckBoxStyle = {}
+local FCheckBoxStyle = {}
 
 
 
@@ -50,7 +50,7 @@ FCheckBoxStyle = {}
 ---@field ComboButtonStyle FComboButtonStyle
 ---@field PressedSlateSound FSlateSound
 ---@field SelectionChangeSlateSound FSlateSound
-FComboBoxStyle = {}
+local FComboBoxStyle = {}
 
 
 
@@ -59,14 +59,14 @@ FComboBoxStyle = {}
 ---@field DownArrowImage FSlateBrush
 ---@field MenuBorderBrush FSlateBrush
 ---@field MenuBorderPadding FMargin
-FComboButtonStyle = {}
+local FComboButtonStyle = {}
 
 
 
 ---@class FCompositeFallbackFont
 ---@field Typeface FTypeface
 ---@field ScalingFactor float
-FCompositeFallbackFont = {}
+local FCompositeFallbackFont = {}
 
 
 
@@ -74,14 +74,14 @@ FCompositeFallbackFont = {}
 ---@field DefaultTypeface FTypeface
 ---@field FallbackTypeface FCompositeFallbackFont
 ---@field SubTypefaces TArray<FCompositeSubFont>
-FCompositeFont = {}
+local FCompositeFont = {}
 
 
 
 ---@class FCompositeSubFont : FCompositeFallbackFont
 ---@field CharacterRanges TArray<FInt32Range>
 ---@field Cultures FString
-FCompositeSubFont = {}
+local FCompositeSubFont = {}
 
 
 
@@ -98,7 +98,7 @@ FCompositeSubFont = {}
 ---@field TabPadding FMargin
 ---@field OverlapWidth float
 ---@field FlashColor FSlateColor
-FDockTabStyle = {}
+local FDockTabStyle = {}
 
 
 
@@ -115,7 +115,7 @@ FDockTabStyle = {}
 ---@field HScrollBarPadding FMargin
 ---@field VScrollBarPadding FMargin
 ---@field ScrollBarStyle FScrollBarStyle
-FEditableTextBoxStyle = {}
+local FEditableTextBoxStyle = {}
 
 
 
@@ -125,7 +125,7 @@ FEditableTextBoxStyle = {}
 ---@field BackgroundImageSelected FSlateBrush
 ---@field BackgroundImageComposing FSlateBrush
 ---@field CaretImage FSlateBrush
-FEditableTextStyle = {}
+local FEditableTextStyle = {}
 
 
 
@@ -133,12 +133,12 @@ FEditableTextStyle = {}
 ---@field CollapsedImage FSlateBrush
 ---@field ExpandedImage FSlateBrush
 ---@field RolloutAnimationSeconds float
-FExpandableAreaStyle = {}
+local FExpandableAreaStyle = {}
 
 
 
 ---@class FFocusEvent
-FFocusEvent = {}
+local FFocusEvent = {}
 
 
 ---@class FFontData
@@ -147,7 +147,7 @@ FFocusEvent = {}
 ---@field LoadingPolicy EFontLoadingPolicy
 ---@field SubFaceIndex int32
 ---@field FontFaceAsset UObject
-FFontData = {}
+local FFontData = {}
 
 
 
@@ -157,12 +157,12 @@ FFontData = {}
 ---@field bApplyOutlineToDropShadows boolean
 ---@field OutlineMaterial UObject
 ---@field OutlineColor FLinearColor
-FFontOutlineSettings = {}
+local FFontOutlineSettings = {}
 
 
 
 ---@class FGeometry
-FGeometry = {}
+local FGeometry = {}
 
 
 ---@class FHeaderRowStyle : FSlateWidgetStyle
@@ -171,7 +171,7 @@ FGeometry = {}
 ---@field ColumnSplitterStyle FSplitterStyle
 ---@field BackgroundBrush FSlateBrush
 ---@field ForegroundColor FSlateColor
-FHeaderRowStyle = {}
+local FHeaderRowStyle = {}
 
 
 
@@ -179,30 +179,30 @@ FHeaderRowStyle = {}
 ---@field UnderlineStyle FButtonStyle
 ---@field TextStyle FTextBlockStyle
 ---@field Padding FMargin
-FHyperlinkStyle = {}
+local FHyperlinkStyle = {}
 
 
 
 ---@class FInlineEditableTextBlockStyle : FSlateWidgetStyle
 ---@field EditableTextBoxStyle FEditableTextBoxStyle
 ---@field TextStyle FTextBlockStyle
-FInlineEditableTextBlockStyle = {}
+local FInlineEditableTextBlockStyle = {}
 
 
 
 ---@class FInlineTextImageStyle : FSlateWidgetStyle
 ---@field Image FSlateBrush
 ---@field Baseline int16
-FInlineTextImageStyle = {}
+local FInlineTextImageStyle = {}
 
 
 
 ---@class FInputEvent
-FInputEvent = {}
+local FInputEvent = {}
 
 
 ---@class FKeyEvent : FInputEvent
-FKeyEvent = {}
+local FKeyEvent = {}
 
 
 ---@class FMargin
@@ -210,27 +210,27 @@ FKeyEvent = {}
 ---@field Top float
 ---@field Right float
 ---@field Bottom float
-FMargin = {}
+local FMargin = {}
 
 
 
 ---@class FMotionEvent : FInputEvent
-FMotionEvent = {}
+local FMotionEvent = {}
 
 
 ---@class FNavigationEvent : FInputEvent
-FNavigationEvent = {}
+local FNavigationEvent = {}
 
 
 ---@class FPointerEvent : FInputEvent
-FPointerEvent = {}
+local FPointerEvent = {}
 
 
 ---@class FProgressBarStyle : FSlateWidgetStyle
 ---@field BackgroundImage FSlateBrush
 ---@field FillImage FSlateBrush
 ---@field MarqueeImage FSlateBrush
-FProgressBarStyle = {}
+local FProgressBarStyle = {}
 
 
 
@@ -244,14 +244,14 @@ FProgressBarStyle = {}
 ---@field NormalThumbImage FSlateBrush
 ---@field HoveredThumbImage FSlateBrush
 ---@field DraggedThumbImage FSlateBrush
-FScrollBarStyle = {}
+local FScrollBarStyle = {}
 
 
 
 ---@class FScrollBorderStyle : FSlateWidgetStyle
 ---@field TopShadowBrush FSlateBrush
 ---@field BottomShadowBrush FSlateBrush
-FScrollBorderStyle = {}
+local FScrollBorderStyle = {}
 
 
 
@@ -260,7 +260,7 @@ FScrollBorderStyle = {}
 ---@field BottomShadowBrush FSlateBrush
 ---@field LeftShadowBrush FSlateBrush
 ---@field RightShadowBrush FSlateBrush
-FScrollBoxStyle = {}
+local FScrollBoxStyle = {}
 
 
 
@@ -273,7 +273,7 @@ FScrollBoxStyle = {}
 ---@field ClearImage FSlateBrush
 ---@field ImagePadding FMargin
 ---@field bLeftAlignButtons boolean
-FSearchBoxStyle = {}
+local FSearchBoxStyle = {}
 
 
 
@@ -290,14 +290,14 @@ FSearchBoxStyle = {}
 ---@field ImageType ESlateBrushImageType::Type
 ---@field bIsDynamicallyLoaded boolean
 ---@field bHasUObject boolean
-FSlateBrush = {}
+local FSlateBrush = {}
 
 
 
 ---@class FSlateColor
 ---@field SpecifiedColor FLinearColor
 ---@field ColorUseRule ESlateColorStylingMode::Type
-FSlateColor = {}
+local FSlateColor = {}
 
 
 
@@ -307,18 +307,18 @@ FSlateColor = {}
 ---@field OutlineSettings FFontOutlineSettings
 ---@field TypefaceFontName FName
 ---@field Size int32
-FSlateFontInfo = {}
+local FSlateFontInfo = {}
 
 
 
 ---@class FSlateSound
 ---@field ResourceObject UObject
-FSlateSound = {}
+local FSlateSound = {}
 
 
 
 ---@class FSlateWidgetStyle
-FSlateWidgetStyle = {}
+local FSlateWidgetStyle = {}
 
 
 ---@class FSliderStyle : FSlateWidgetStyle
@@ -329,7 +329,7 @@ FSlateWidgetStyle = {}
 ---@field HoveredThumbImage FSlateBrush
 ---@field DisabledThumbImage FSlateBrush
 ---@field BarThickness float
-FSliderStyle = {}
+local FSliderStyle = {}
 
 
 
@@ -341,14 +341,14 @@ FSliderStyle = {}
 ---@field ArrowsImage FSlateBrush
 ---@field ForegroundColor FSlateColor
 ---@field TextPadding FMargin
-FSpinBoxStyle = {}
+local FSpinBoxStyle = {}
 
 
 
 ---@class FSplitterStyle : FSlateWidgetStyle
 ---@field HandleNormalBrush FSlateBrush
 ---@field HandleHighlightBrush FSlateBrush
-FSplitterStyle = {}
+local FSplitterStyle = {}
 
 
 
@@ -362,7 +362,7 @@ FSplitterStyle = {}
 ---@field MenuDropdownImage FSlateBrush
 ---@field MenuDropdownNormalBorderBrush FSlateBrush
 ---@field MenuDropdownHoveredBorderBrush FSlateBrush
-FTableColumnHeaderStyle = {}
+local FTableColumnHeaderStyle = {}
 
 
 
@@ -383,7 +383,7 @@ FTableColumnHeaderStyle = {}
 ---@field DropIndicator_Below FSlateBrush
 ---@field ActiveHighlightedBrush FSlateBrush
 ---@field InactiveHighlightedBrush FSlateBrush
-FTableRowStyle = {}
+local FTableRowStyle = {}
 
 
 
@@ -397,20 +397,20 @@ FTableRowStyle = {}
 ---@field HighlightShape FSlateBrush
 ---@field StrikeBrush FSlateBrush
 ---@field UnderlineBrush FSlateBrush
-FTextBlockStyle = {}
+local FTextBlockStyle = {}
 
 
 
 ---@class FTypeface
 ---@field Fonts TArray<FTypefaceEntry>
-FTypeface = {}
+local FTypeface = {}
 
 
 
 ---@class FTypefaceEntry
 ---@field Name FName
 ---@field Font FFontData
-FTypefaceEntry = {}
+local FTypefaceEntry = {}
 
 
 
@@ -421,7 +421,7 @@ FTypefaceEntry = {}
 ---@field LowVolumeImage FSlateBrush
 ---@field NoVolumeImage FSlateBrush
 ---@field MutedImage FSlateBrush
-FVolumeControlStyle = {}
+local FVolumeControlStyle = {}
 
 
 
@@ -440,37 +440,37 @@ FVolumeControlStyle = {}
 ---@field BorderBrush FSlateBrush
 ---@field BackgroundBrush FSlateBrush
 ---@field ChildBackgroundBrush FSlateBrush
-FWindowStyle = {}
+local FWindowStyle = {}
 
 
 
 ---@class IFontFaceInterface : IInterface
-IFontFaceInterface = {}
+local IFontFaceInterface = {}
 
 
 ---@class IFontProviderInterface : IInterface
-IFontProviderInterface = {}
+local IFontProviderInterface = {}
 
 
 ---@class ISlateWidgetStyleContainerInterface : IInterface
-ISlateWidgetStyleContainerInterface = {}
+local ISlateWidgetStyleContainerInterface = {}
 
 
 ---@class UFontBulkData : UObject
-UFontBulkData = {}
+local UFontBulkData = {}
 
 
 ---@class USlateTypes : UObject
-USlateTypes = {}
+local USlateTypes = {}
 
 
 ---@class USlateWidgetStyleAsset : UObject
 ---@field CustomStyle USlateWidgetStyleContainerBase
-USlateWidgetStyleAsset = {}
+local USlateWidgetStyleAsset = {}
 
 
 
 ---@class USlateWidgetStyleContainerBase : UObject
-USlateWidgetStyleContainerBase = {}
+local USlateWidgetStyleContainerBase = {}
 
 

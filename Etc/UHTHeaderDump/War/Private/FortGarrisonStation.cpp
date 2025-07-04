@@ -13,10 +13,10 @@ AFortGarrisonStation::AFortGarrisonStation(const FObjectInitializer& ObjectIniti
     this->BoatHullComponent = CreateDefaultSubobject<UBoatHullComponent>(TEXT("BoatHullComponent"));
     this->VisibilityToggleComponent = CreateDefaultSubobject<USafeHouseVisibilityToggleComponent>(TEXT("VisibilityToggleComponent"));
     this->GenericStockpileComponent = CreateDefaultSubobject<UGenericStockpileComponent>(TEXT("GenericStockpileComponent"));
-    this->RoofMesh->SetupAttachment(RootComponent);
     this->BasementMesh->SetupAttachment(RootComponent);
-    this->GroundStaircaseMesh->SetupAttachment(RootComponent);
     this->BoatHullComponent->SetupAttachment(RootComponent);
+    this->GroundStaircaseMesh->SetupAttachment(RootComponent);
+    this->RoofMesh->SetupAttachment(RootComponent);
     this->VisibilityToggleComponent->SetupAttachment(RootComponent);
 }
 

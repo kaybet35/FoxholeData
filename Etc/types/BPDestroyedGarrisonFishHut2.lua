@@ -5,7 +5,7 @@
 ---@field RuinedMesh URuinedMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ABPDestroyedGarrisonFishHut2_C = {}
+local ABPDestroyedGarrisonFishHut2_C = {}
 
 
 

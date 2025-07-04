@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPWorkHammerPickup_C : AGearPickup
-ABPWorkHammerPickup_C = {}
+local ABPWorkHammerPickup_C = {}
 
 

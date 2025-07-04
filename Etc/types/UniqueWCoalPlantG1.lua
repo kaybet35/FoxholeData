@@ -53,7 +53,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWCoalPlantG1_C = {}
+local AUniqueWCoalPlantG1_C = {}
 
 
 

@@ -5,7 +5,7 @@
 ---@field SpotLight_Turret USpotLightComponent
 ---@field Light_Turret UStaticMeshComponent
 ---@field chassis USkeletalMeshComponent
-ABPArmoredCarFlameW_C = {}
+local ABPArmoredCarFlameW_C = {}
 
 ---@param IsOn boolean
 function ABPArmoredCarFlameW_C:BPOnVehicleOn(IsOn) end

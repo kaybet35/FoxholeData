@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBinocularsComponent_C : UBinocularsItemComponent
-UBPBinocularsComponent_C = {}
+local UBPBinocularsComponent_C = {}
 
 

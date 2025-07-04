@@ -18,7 +18,7 @@
 ---@field Right UStaticMeshComponent
 ---@field Front UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchEmpCommonDirtT3_C = {}
+local ABPTrenchEmpCommonDirtT3_C = {}
 
 
 

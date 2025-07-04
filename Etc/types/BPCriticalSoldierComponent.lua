@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPCriticalSoldierComponent_C : USoldierItemComponent
-UBPCriticalSoldierComponent_C = {}
+local UBPCriticalSoldierComponent_C = {}
 
 

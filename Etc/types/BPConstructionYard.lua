@@ -49,7 +49,7 @@
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPConstructionYard_C = {}
+local ABPConstructionYard_C = {}
 
 
 

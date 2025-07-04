@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPMineSpline_C : AMineSpline
-ABPMineSpline_C = {}
+local ABPMineSpline_C = {}
 
 

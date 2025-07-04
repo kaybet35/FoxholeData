@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRifleAutomaticWPickup_C : AFirearmPickup
-ABPRifleAutomaticWPickup_C = {}
+local ABPRifleAutomaticWPickup_C = {}
 
 

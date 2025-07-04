@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLRArtilleryMountComponent_C : ULongRangeArtilleryMountComponent
-UBPLRArtilleryMountComponent_C = {}
+local UBPLRArtilleryMountComponent_C = {}
 
 

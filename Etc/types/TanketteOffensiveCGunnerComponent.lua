@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UTanketteOffensiveCGunnerComponent_C : UTankGunnerMountComponent
-UTanketteOffensiveCGunnerComponent_C = {}
+local UTanketteOffensiveCGunnerComponent_C = {}
 
 

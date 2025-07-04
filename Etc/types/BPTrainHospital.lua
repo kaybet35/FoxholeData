@@ -12,7 +12,7 @@
 ---@field RightExit USeatExitComponent
 ---@field RightTrigger USeatTriggerComponent
 ---@field UseVolume UBoxComponent
-ABPTrainHospital_C = {}
+local ABPTrainHospital_C = {}
 
 
 

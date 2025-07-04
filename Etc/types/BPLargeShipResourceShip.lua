@@ -199,7 +199,7 @@
 ---@field HallwayRoom URoomComponent
 ---@field EngineRoom URoomComponent
 ---@field Floodable UFloodableComponent
-ABPLargeShipResourceShip_C = {}
+local ABPLargeShipResourceShip_C = {}
 
 function ABPLargeShipResourceShip_C:BPOnClientBeginPlay() end
 ---@param EntryPoint int32

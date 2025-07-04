@@ -1,12 +1,12 @@
 ---@meta
 
 ---@class AAROriginActor : AActor
-AAROriginActor = {}
+local AAROriginActor = {}
 
 
 ---@class AARSharedWorldGameMode : AGameMode
 ---@field BufferSizePerChunk int32
-AARSharedWorldGameMode = {}
+local AARSharedWorldGameMode = {}
 
 ---@param ImageData TArray<uint8>
 function AARSharedWorldGameMode:SetPreviewImageData(ImageData) end
@@ -24,13 +24,13 @@ function AARSharedWorldGameMode:GetARSharedWorldGameState() end
 ---@field ARWorldBytesTotal int32
 ---@field PreviewImageBytesDelivered int32
 ---@field ARWorldBytesDelivered int32
-AARSharedWorldGameState = {}
+local AARSharedWorldGameState = {}
 
 function AARSharedWorldGameState:K2_OnARWorldMapIsReady() end
 
 
 ---@class AARSharedWorldPlayerController : APlayerController
-AARSharedWorldPlayerController = {}
+local AARSharedWorldPlayerController = {}
 
 function AARSharedWorldPlayerController:ServerMarkReadyForReceiving() end
 ---@param Offset int32
@@ -46,7 +46,7 @@ function AARSharedWorldPlayerController:ClientInitSharedWorld(PreviewImageSize, 
 
 ---@class AARSkyLight : ASkyLight
 ---@field CaptureProbe UAREnvironmentCaptureProbe
-AARSkyLight = {}
+local AARSkyLight = {}
 
 ---@param InCaptureProbe UAREnvironmentCaptureProbe
 function AARSkyLight:SetEnvironmentCaptureProbe(InCaptureProbe) end
@@ -56,7 +56,7 @@ function AARSkyLight:SetEnvironmentCaptureProbe(InCaptureProbe) end
 ---@field SkeletonDefinition FARSkeletonDefinition
 ---@field JointLocations TArray<FVector2D>
 ---@field IsJointTracked TArray<boolean>
-FARPose2D = {}
+local FARPose2D = {}
 
 
 
@@ -65,21 +65,21 @@ FARPose2D = {}
 ---@field JointTransforms TArray<FTransform>
 ---@field IsJointTracked TArray<boolean>
 ---@field JointTransformSpace EARJointTransformSpace
-FARPose3D = {}
+local FARPose3D = {}
 
 
 
 ---@class FARSessionStatus
 ---@field AdditionalInfo FString
 ---@field Status EARSessionStatus
-FARSessionStatus = {}
+local FARSessionStatus = {}
 
 
 
 ---@class FARSharedWorldReplicationState
 ---@field PreviewImageOffset int32
 ---@field ARWorldOffset int32
-FARSharedWorldReplicationState = {}
+local FARSharedWorldReplicationState = {}
 
 
 
@@ -87,7 +87,7 @@ FARSharedWorldReplicationState = {}
 ---@field NumJoints int32
 ---@field JointNames TArray<FName>
 ---@field ParentIndices TArray<int32>
-FARSkeletonDefinition = {}
+local FARSkeletonDefinition = {}
 
 
 
@@ -96,7 +96,7 @@ FARSkeletonDefinition = {}
 ---@field TraceChannel EARLineTraceChannels
 ---@field LocalToTrackingTransform FTransform
 ---@field TrackedGeometry UARTrackedGeometry
-FARTraceResult = {}
+local FARTraceResult = {}
 
 
 
@@ -104,19 +104,19 @@ FARTraceResult = {}
 ---@field FPS int32
 ---@field Width int32
 ---@field Height int32
-FARVideoFormat = {}
+local FARVideoFormat = {}
 
 
 
 ---@class UARBaseAsyncTaskBlueprintProxy : UBlueprintAsyncActionBase
-UARBaseAsyncTaskBlueprintProxy = {}
+local UARBaseAsyncTaskBlueprintProxy = {}
 
 
 ---@class UARBasicLightEstimate : UARLightEstimate
 ---@field AmbientIntensityLumens float
 ---@field AmbientColorTemperatureKelvin float
 ---@field AmbientColor FLinearColor
-UARBasicLightEstimate = {}
+local UARBasicLightEstimate = {}
 
 ---@return float
 function UARBasicLightEstimate:GetAmbientIntensityLumens() end
@@ -127,7 +127,7 @@ function UARBasicLightEstimate:GetAmbientColor() end
 
 
 ---@class UARBlueprintLibrary : UBlueprintFunctionLibrary
-UARBlueprintLibrary = {}
+local UARBlueprintLibrary = {}
 
 ---@param ComponentToUnpin USceneComponent
 function UARBlueprintLibrary:UnpinComponent(ComponentToUnpin) end
@@ -245,7 +245,7 @@ function UARBlueprintLibrary:AddManualEnvironmentCaptureProbe(Location, Extent) 
 ---@field Width float
 ---@field Height float
 ---@field Orientation EARCandidateImageOrientation
-UARCandidateImage = {}
+local UARCandidateImage = {}
 
 ---@return float
 function UARCandidateImage:GetPhysicalWidth() end
@@ -263,7 +263,7 @@ function UARCandidateImage:GetCandidateTexture() end
 ---@field CandidateObjectData TArray<uint8>
 ---@field FriendlyName FString
 ---@field BoundingBox FBox
-UARCandidateObject = {}
+local UARCandidateObject = {}
 
 ---@param NewName FString
 function UARCandidateObject:SetFriendlyName(NewName) end
@@ -281,7 +281,7 @@ function UARCandidateObject:GetBoundingBox() end
 
 ---@class UAREnvironmentCaptureProbe : UARTrackedGeometry
 ---@field EnvironmentCaptureTexture UAREnvironmentCaptureProbeTexture
-UAREnvironmentCaptureProbe = {}
+local UAREnvironmentCaptureProbe = {}
 
 ---@return FVector
 function UAREnvironmentCaptureProbe:GetExtent() end
@@ -294,7 +294,7 @@ function UAREnvironmentCaptureProbe:GetEnvironmentCaptureTexture() end
 ---@field Timestamp float
 ---@field ExternalTextureGuid FGuid
 ---@field Size FVector2D
-UAREnvironmentCaptureProbeTexture = {}
+local UAREnvironmentCaptureProbeTexture = {}
 
 
 
@@ -302,7 +302,7 @@ UAREnvironmentCaptureProbeTexture = {}
 ---@field LookAtTarget FVector
 ---@field bIsTracked boolean
 ---@field BlendShapes TMap<EARFaceBlendShape, float>
-UARFaceGeometry = {}
+local UARFaceGeometry = {}
 
 ---@param Eye EAREye
 ---@return FTransform
@@ -320,7 +320,7 @@ function UARFaceGeometry:GetBlendShapes() end
 ---@class UARGetCandidateObjectAsyncTaskBlueprintProxy : UARBaseAsyncTaskBlueprintProxy
 ---@field OnSuccess FARGetCandidateObjectAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFailed FARGetCandidateObjectAsyncTaskBlueprintProxyOnFailed
-UARGetCandidateObjectAsyncTaskBlueprintProxy = {}
+local UARGetCandidateObjectAsyncTaskBlueprintProxy = {}
 
 ---@param WorldContextObject UObject
 ---@param Location FVector
@@ -330,7 +330,7 @@ function UARGetCandidateObjectAsyncTaskBlueprintProxy:ARGetCandidateObject(World
 
 
 ---@class UARLightEstimate : UObject
-UARLightEstimate = {}
+local UARLightEstimate = {}
 
 
 ---@class UARPin : UObject
@@ -341,7 +341,7 @@ UARLightEstimate = {}
 ---@field TrackingState EARTrackingState
 ---@field OnARTrackingStateChanged FARPinOnARTrackingStateChanged
 ---@field OnARTransformUpdated FARPinOnARTransformUpdated
-UARPin = {}
+local UARPin = {}
 
 ---@return EARTrackingState
 function UARPin:GetTrackingState() end
@@ -367,7 +367,7 @@ function UARPin:DebugDraw(World, Color, Scale, PersistForSeconds) end
 ---@field Center FVector
 ---@field Extent FVector
 ---@field SubsumedBy UARPlaneGeometry
-UARPlaneGeometry = {}
+local UARPlaneGeometry = {}
 
 ---@return UARPlaneGeometry
 function UARPlaneGeometry:GetSubsumedBy() end
@@ -384,7 +384,7 @@ function UARPlaneGeometry:GetBoundaryPolygonInLocalSpace() end
 ---@class UARSaveWorldAsyncTaskBlueprintProxy : UARBaseAsyncTaskBlueprintProxy
 ---@field OnSuccess FARSaveWorldAsyncTaskBlueprintProxyOnSuccess
 ---@field OnFailed FARSaveWorldAsyncTaskBlueprintProxyOnFailed
-UARSaveWorldAsyncTaskBlueprintProxy = {}
+local UARSaveWorldAsyncTaskBlueprintProxy = {}
 
 ---@param WorldContextObject UObject
 ---@return UARSaveWorldAsyncTaskBlueprintProxy
@@ -421,7 +421,7 @@ function UARSaveWorldAsyncTaskBlueprintProxy:ARSaveWorld(WorldContextObject) end
 ---@field FaceTrackingUpdate EARFaceTrackingUpdate
 ---@field SerializedARCandidateImageDatabase TArray<uint8>
 ---@field EnabledSessionTrackingFeature EARSessionTrackingFeature
-UARSessionConfig = {}
+local UARSessionConfig = {}
 
 ---@return boolean
 function UARSessionConfig:ShouldResetTrackedObjects() end
@@ -490,7 +490,7 @@ function UARSessionConfig:AddCandidateImage(NewCandidateImage) end
 ---@field Timestamp float
 ---@field ExternalTextureGuid FGuid
 ---@field Size FVector2D
-UARTexture = {}
+local UARTexture = {}
 
 
 
@@ -498,20 +498,20 @@ UARTexture = {}
 ---@field DepthQuality EARDepthQuality
 ---@field DepthAccuracy EARDepthAccuracy
 ---@field bIsTemporallySmoothed boolean
-UARTextureCameraDepth = {}
+local UARTextureCameraDepth = {}
 
 
 
 ---@class UARTextureCameraImage : UARTexture
-UARTextureCameraImage = {}
+local UARTextureCameraImage = {}
 
 
 ---@class UARTraceResultDummy : UObject
-UARTraceResultDummy = {}
+local UARTraceResultDummy = {}
 
 
 ---@class UARTraceResultLibrary : UBlueprintFunctionLibrary
-UARTraceResultLibrary = {}
+local UARTraceResultLibrary = {}
 
 ---@param TraceResult FARTraceResult
 ---@return UARTrackedGeometry
@@ -552,7 +552,7 @@ function UARTraceResultLibrary:GetDistanceFromCamera(TraceResult) end
 ---@field OnAddTrackedObject FARTrackableNotifyComponentOnAddTrackedObject
 ---@field OnUpdateTrackedObject FARTrackableNotifyComponentOnUpdateTrackedObject
 ---@field OnRemoveTrackedObject FARTrackableNotifyComponentOnRemoveTrackedObject
-UARTrackableNotifyComponent = {}
+local UARTrackableNotifyComponent = {}
 
 
 
@@ -565,7 +565,7 @@ UARTrackableNotifyComponent = {}
 ---@field ObjectClassification EARObjectClassification
 ---@field LastUpdateFrameNumber int32
 ---@field DebugName FName
-UARTrackedGeometry = {}
+local UARTrackedGeometry = {}
 
 ---@return boolean
 function UARTrackedGeometry:IsTracked() end
@@ -590,7 +590,7 @@ function UARTrackedGeometry:GetDebugName() end
 ---@class UARTrackedImage : UARTrackedGeometry
 ---@field DetectedImage UARCandidateImage
 ---@field EstimatedSize FVector2D
-UARTrackedImage = {}
+local UARTrackedImage = {}
 
 ---@return FVector2D
 function UARTrackedImage:GetEstimateSize() end
@@ -600,18 +600,18 @@ function UARTrackedImage:GetDetectedImage() end
 
 ---@class UARTrackedObject : UARTrackedGeometry
 ---@field DetectedObject UARCandidateObject
-UARTrackedObject = {}
+local UARTrackedObject = {}
 
 ---@return UARCandidateObject
 function UARTrackedObject:GetDetectedObject() end
 
 
 ---@class UARTrackedPoint : UARTrackedGeometry
-UARTrackedPoint = {}
+local UARTrackedPoint = {}
 
 
 ---@class UARTrackedPose : UARTrackedGeometry
-UARTrackedPose = {}
+local UARTrackedPose = {}
 
 ---@return FARPose3D
 function UARTrackedPose:GetTrackedPoseData() end
@@ -620,11 +620,11 @@ function UARTrackedPose:GetTrackedPoseData() end
 ---@class UARTrackedQRCode : UARTrackedImage
 ---@field QRCode FString
 ---@field Version int32
-UARTrackedQRCode = {}
+local UARTrackedQRCode = {}
 
 
 
 ---@class UARTypesDummyClass : UObject
-UARTypesDummyClass = {}
+local UARTypesDummyClass = {}
 
 

@@ -7,7 +7,7 @@
 ---@field Splinter UAudioComponent
 ---@field NoMansLandTreeFire UParticleSystemComponent
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPBirch03Replacement_C = {}
+local ABPBirch03Replacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPBirch03Replacement_C:OnStateChanged(State) end

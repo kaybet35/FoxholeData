@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPArmoredCarOffensiveGunnerC_C : UHitScanMountComponent
-UBPArmoredCarOffensiveGunnerC_C = {}
+local UBPArmoredCarOffensiveGunnerC_C = {}
 
 

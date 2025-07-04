@@ -45,7 +45,7 @@
 ---@field Props USceneComponent
 ---@field FacilityAmmoFactoryBaseRoof UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityFactorySmallArmsHeavyAmmo_C = {}
+local ABPFacilityFactorySmallArmsHeavyAmmo_C = {}
 
 
 

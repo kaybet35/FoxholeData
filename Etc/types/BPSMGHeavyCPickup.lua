@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSMGHeavyCPickup_C : AFirearmPickup
-ABPSMGHeavyCPickup_C = {}
+local ABPSMGHeavyCPickup_C = {}
 
 

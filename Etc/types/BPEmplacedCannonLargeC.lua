@@ -6,7 +6,7 @@
 ---@field ShieldedOccupiableComponent UStructureSeatComponent
 ---@field OccupiableComponent UStructureSeatComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPEmplacedCannonLargeC_C = {}
+local ABPEmplacedCannonLargeC_C = {}
 
 
 

@@ -13,7 +13,7 @@
 ---@field FoundationDecal UDecalComponent
 ---@field Smoke UParticleSystemComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityRefineryCoal_C = {}
+local ABPFacilityRefineryCoal_C = {}
 
 function ABPFacilityRefineryCoal_C:BPOnStateActive() end
 function ABPFacilityRefineryCoal_C:BPOnStateInactive() end

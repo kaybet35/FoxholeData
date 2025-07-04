@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMechHMGGunnerComponent_C : UHitScanMountComponent
-UBPMechHMGGunnerComponent_C = {}
+local UBPMechHMGGunnerComponent_C = {}
 
 

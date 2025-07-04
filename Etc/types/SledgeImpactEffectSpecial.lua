@@ -2,7 +2,7 @@
 
 ---@class ASledgeImpactEffectSpecial_C : AImpactEffect
 ---@field DefaultSceneRoot USceneComponent
-ASledgeImpactEffectSpecial_C = {}
+local ASledgeImpactEffectSpecial_C = {}
 
 
 

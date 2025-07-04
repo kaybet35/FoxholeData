@@ -11,7 +11,7 @@
 ---@field SpawnPoint1 USpawnPointComponent
 ---@field SpawnPoint USpawnPointComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPMedicalRoomSpawnPoints_C = {}
+local ABPMedicalRoomSpawnPoints_C = {}
 
 
 

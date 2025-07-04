@@ -9,7 +9,7 @@
 ---@field FoundationDecal UDecalComponent
 ---@field Smoke UParticleSystemComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityRefinery1_C = {}
+local ABPFacilityRefinery1_C = {}
 
 
 

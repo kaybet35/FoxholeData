@@ -2,7 +2,7 @@
 
 ---@class ABPStructureCrate_C : AStructureCrate
 ---@field BoxMesh UStaticMeshComponent
-ABPStructureCrate_C = {}
+local ABPStructureCrate_C = {}
 
 
 

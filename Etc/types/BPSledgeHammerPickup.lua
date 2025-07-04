@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSledgeHammerPickup_C : AGearPickup
-ABPSledgeHammerPickup_C = {}
+local ABPSledgeHammerPickup_C = {}
 
 

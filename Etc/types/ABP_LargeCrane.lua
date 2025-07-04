@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_E07A7FFC4A50708923FF18A99A2B4605 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_RotationOffsetBlendSpace_D17FCC31465BFACD1F2156BB79E5FD09 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_BlendSpacePlayer_450089A24C263139702585BDCCAE3780 FAnimNode_BlendSpacePlayer
-UABP_LargeCrane_C = {}
+local UABP_LargeCrane_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeCrane_C:AnimGraph(AnimGraph) end

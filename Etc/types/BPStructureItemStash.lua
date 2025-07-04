@@ -2,7 +2,7 @@
 
 ---@class ABPStructureItemStash_C : AItemStash
 ---@field StaticMesh UStaticMeshComponent
-ABPStructureItemStash_C = {}
+local ABPStructureItemStash_C = {}
 
 
 

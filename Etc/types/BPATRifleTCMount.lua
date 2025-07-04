@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATRifleTCMount_C : UHitScanMountComponent
-UBPATRifleTCMount_C = {}
+local UBPATRifleTCMount_C = {}
 
 

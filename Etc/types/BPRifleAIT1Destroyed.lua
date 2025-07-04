@@ -14,7 +14,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Mesh UStaticMeshComponent
-ABPRifleAIT1Destroyed_C = {}
+local ABPRifleAIT1Destroyed_C = {}
 
 
 

@@ -148,7 +148,7 @@
 ---@field BarracksRoom URoomComponent
 ---@field EngineRoom URoomComponent
 ---@field Floodable UFloodableComponent
-ABPLargeShipBaseShip_C = {}
+local ABPLargeShipBaseShip_C = {}
 
 function ABPLargeShipBaseShip_C:BPOnClientBeginPlay() end
 ---@param EntryPoint int32

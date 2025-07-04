@@ -6,7 +6,7 @@
 ---@field Light_Turret UStaticMeshComponent
 ---@field SpotLight_R USpotLightComponent
 ---@field Light_R UStaticMeshComponent
-ABPBattleTankDefensiveW_C = {}
+local ABPBattleTankDefensiveW_C = {}
 
 ---@param IsOn boolean
 function ABPBattleTankDefensiveW_C:BPOnVehicleOn(IsOn) end

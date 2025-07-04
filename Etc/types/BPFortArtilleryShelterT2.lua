@@ -12,7 +12,7 @@
 ---@field FortCommonDirtT2 UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPFortArtilleryShelterT2_C = {}
+local ABPFortArtilleryShelterT2_C = {}
 
 
 

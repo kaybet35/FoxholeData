@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMinimalForwardBaseTechTree_C : UTechTreeComponentData
-UBPMinimalForwardBaseTechTree_C = {}
+local UBPMinimalForwardBaseTechTree_C = {}
 
 

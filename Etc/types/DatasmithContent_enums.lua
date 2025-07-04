@@ -1,5 +1,5 @@
 ---@enum EDatasmithAreaLightActorShape
-EDatasmithAreaLightActorShape = {
+local EDatasmithAreaLightActorShape = {
     Rectangle = 0,
     Disc = 1,
     Sphere = 2,
@@ -9,7 +9,7 @@ EDatasmithAreaLightActorShape = {
 }
 
 ---@enum EDatasmithAreaLightActorType
-EDatasmithAreaLightActorType = {
+local EDatasmithAreaLightActorType = {
     Point = 0,
     Spot = 1,
     Rect = 2,
@@ -17,7 +17,7 @@ EDatasmithAreaLightActorType = {
 }
 
 ---@enum EDatasmithCADStitchingTechnique
-EDatasmithCADStitchingTechnique = {
+local EDatasmithCADStitchingTechnique = {
     StitchingNone = 0,
     StitchingHeal = 1,
     StitchingSew = 2,
@@ -25,7 +25,7 @@ EDatasmithCADStitchingTechnique = {
 }
 
 ---@enum EDatasmithImportActorPolicy
-EDatasmithImportActorPolicy = {
+local EDatasmithImportActorPolicy = {
     Update = 0,
     Full = 1,
     Ignore = 2,
@@ -33,7 +33,7 @@ EDatasmithImportActorPolicy = {
 }
 
 ---@enum EDatasmithImportAssetConflictPolicy
-EDatasmithImportAssetConflictPolicy = {
+local EDatasmithImportAssetConflictPolicy = {
     Replace = 0,
     Update = 1,
     Use = 2,
@@ -42,7 +42,7 @@ EDatasmithImportAssetConflictPolicy = {
 }
 
 ---@enum EDatasmithImportHierarchy
-EDatasmithImportHierarchy = {
+local EDatasmithImportHierarchy = {
     UseMultipleActors = 0,
     UseSingleActor = 1,
     UseOneBlueprint = 2,
@@ -50,7 +50,7 @@ EDatasmithImportHierarchy = {
 }
 
 ---@enum EDatasmithImportLightmapMax
-EDatasmithImportLightmapMax = {
+local EDatasmithImportLightmapMax = {
     LIGHTMAP_64 = 0,
     LIGHTMAP_128 = 1,
     LIGHTMAP_256 = 2,
@@ -62,7 +62,7 @@ EDatasmithImportLightmapMax = {
 }
 
 ---@enum EDatasmithImportLightmapMin
-EDatasmithImportLightmapMin = {
+local EDatasmithImportLightmapMin = {
     LIGHTMAP_16 = 0,
     LIGHTMAP_32 = 1,
     LIGHTMAP_64 = 2,
@@ -73,7 +73,7 @@ EDatasmithImportLightmapMin = {
 }
 
 ---@enum EDatasmithImportMaterialQuality
-EDatasmithImportMaterialQuality = {
+local EDatasmithImportMaterialQuality = {
     UseNoFresnelCurves = 0,
     UseSimplifierFresnelCurves = 1,
     UseRealFresnelCurves = 2,
@@ -81,7 +81,7 @@ EDatasmithImportMaterialQuality = {
 }
 
 ---@enum EDatasmithImportScene
-EDatasmithImportScene = {
+local EDatasmithImportScene = {
     NewLevel = 0,
     CurrentLevel = 1,
     AssetsOnly = 2,
@@ -89,7 +89,7 @@ EDatasmithImportScene = {
 }
 
 ---@enum EDatasmithImportSearchPackagePolicy
-EDatasmithImportSearchPackagePolicy = {
+local EDatasmithImportSearchPackagePolicy = {
     Current = 0,
     All = 1,
     EDatasmithImportSearchPackagePolicy_MAX = 2,

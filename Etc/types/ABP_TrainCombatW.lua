@@ -39,7 +39,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_89A3E0694BC67C44F8FD4396663E1BCE FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendListByBool_E6CD8AB345ED65FFB4817AB16B19EC88 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_E10F0C364D09C2AC8AADA0B492CD2027 FAnimNode_SequencePlayer
-UABP_TrainCombatW_C = {}
+local UABP_TrainCombatW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_TrainCombatW_C:AnimGraph(AnimGraph) end

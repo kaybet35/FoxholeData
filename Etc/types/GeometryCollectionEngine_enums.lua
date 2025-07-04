@@ -1,5 +1,5 @@
 ---@enum EChaosBreakingSortMethod
-EChaosBreakingSortMethod = {
+local EChaosBreakingSortMethod = {
     SortNone = 0,
     SortByHighestMass = 1,
     SortByHighestSpeed = 2,
@@ -9,7 +9,7 @@ EChaosBreakingSortMethod = {
 }
 
 ---@enum EChaosCollisionSortMethod
-EChaosCollisionSortMethod = {
+local EChaosCollisionSortMethod = {
     SortNone = 0,
     SortByHighestMass = 1,
     SortByHighestSpeed = 2,
@@ -20,7 +20,7 @@ EChaosCollisionSortMethod = {
 }
 
 ---@enum EChaosTrailingSortMethod
-EChaosTrailingSortMethod = {
+local EChaosTrailingSortMethod = {
     SortNone = 0,
     SortByHighestMass = 1,
     SortByHighestSpeed = 2,
@@ -30,7 +30,7 @@ EChaosTrailingSortMethod = {
 }
 
 ---@enum ECollectionAttributeEnum
-ECollectionAttributeEnum = {
+local ECollectionAttributeEnum = {
     Chaos_Active = 0,
     Chaos_DynamicState = 1,
     Chaos_CollisionGroup = 2,
@@ -38,13 +38,13 @@ ECollectionAttributeEnum = {
 }
 
 ---@enum ECollectionGroupEnum
-ECollectionGroupEnum = {
+local ECollectionGroupEnum = {
     Chaos_Traansform = 0,
     Chaos_Max = 1,
 }
 
 ---@enum EGeometryCollectionDebugDrawActorHideGeometry
-EGeometryCollectionDebugDrawActorHideGeometry = {
+local EGeometryCollectionDebugDrawActorHideGeometry = {
     HideNone = 0,
     HideWithCollision = 1,
     HideSelected = 2,

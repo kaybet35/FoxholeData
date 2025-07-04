@@ -11,7 +11,7 @@
 ---@field AnimGraphNode_SequencePlayer_FBD5AFAF4D3C59005D8A9C893755CDBB FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_98D0EFB94A3168A63B153C89AB46A98B FAnimNode_BlendListByBool
 ---@field WheelRotationSpeedFactor int32
-UABP_FieldMortarW_C = {}
+local UABP_FieldMortarW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FieldMortarW_C:AnimGraph(AnimGraph) end

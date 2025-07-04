@@ -10,7 +10,7 @@
 ---@field AnimGraphNode_SequencePlayer_2ABB177D4488252186D7FDA366319E4C FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_5B9017F54E62919189BC108143A26DC9 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_989EDE264878235E6F003AB4C18BCB95 FAnimNode_BlendListByBool
-UABP_FlatbedTruck_C = {}
+local UABP_FlatbedTruck_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FlatbedTruck_C:AnimGraph(AnimGraph) end

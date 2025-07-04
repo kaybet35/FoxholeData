@@ -1,14 +1,14 @@
 ---@meta
 
 ---@class FGeneratedMovieSceneKeyStruct
-FGeneratedMovieSceneKeyStruct = {}
+local FGeneratedMovieSceneKeyStruct = {}
 
 
 ---@class FMovieSceneBinding
 ---@field ObjectGuid FGuid
 ---@field BindingName FString
 ---@field Tracks TArray<UMovieSceneTrack>
-FMovieSceneBinding = {}
+local FMovieSceneBinding = {}
 
 
 
@@ -16,7 +16,7 @@ FMovieSceneBinding = {}
 ---@field ObjectBindingId FMovieSceneObjectBindingID
 ---@field Object TWeakObjectPtr<UObject>
 ---@field bOverridesDefault boolean
-FMovieSceneBindingOverrideData = {}
+local FMovieSceneBindingOverrideData = {}
 
 
 
@@ -25,7 +25,7 @@ FMovieSceneBindingOverrideData = {}
 ---@field DefaultValue boolean
 ---@field bHasDefaultValue boolean
 ---@field Values TArray<boolean>
-FMovieSceneBoolChannel = {}
+local FMovieSceneBoolChannel = {}
 
 
 
@@ -35,12 +35,12 @@ FMovieSceneBoolChannel = {}
 ---@field bHasDefaultValue boolean
 ---@field Values TArray<uint8>
 ---@field Enum UEnum
-FMovieSceneByteChannel = {}
+local FMovieSceneByteChannel = {}
 
 
 
 ---@class FMovieSceneChannel
-FMovieSceneChannel = {}
+local FMovieSceneChannel = {}
 
 
 ---@class FMovieSceneEasingSettings
@@ -52,7 +52,7 @@ FMovieSceneChannel = {}
 ---@field EaseOut TScriptInterface<IMovieSceneEasingFunction>
 ---@field bManualEaseOut boolean
 ---@field ManualEaseOutDuration int32
-FMovieSceneEasingSettings = {}
+local FMovieSceneEasingSettings = {}
 
 
 
@@ -66,54 +66,54 @@ FMovieSceneEasingSettings = {}
 ---@field MarkedFrames TSet<FFrameNumber>
 ---@field WorkingRange FFloatRange
 ---@field ViewRange FFloatRange
-FMovieSceneEditorData = {}
+local FMovieSceneEditorData = {}
 
 
 
 ---@class FMovieSceneEmptyStruct
-FMovieSceneEmptyStruct = {}
+local FMovieSceneEmptyStruct = {}
 
 
 ---@class FMovieSceneEvalTemplate : FMovieSceneEvalTemplateBase
 ---@field CompletionMode EMovieSceneCompletionMode
 ---@field SourceSectionPtr TWeakObjectPtr<UMovieSceneSection>
-FMovieSceneEvalTemplate = {}
+local FMovieSceneEvalTemplate = {}
 
 
 
 ---@class FMovieSceneEvalTemplateBase
-FMovieSceneEvalTemplateBase = {}
+local FMovieSceneEvalTemplateBase = {}
 
 
 ---@class FMovieSceneEvalTemplatePtr
-FMovieSceneEvalTemplatePtr = {}
+local FMovieSceneEvalTemplatePtr = {}
 
 
 ---@class FMovieSceneEvaluationField
 ---@field Ranges TArray<FMovieSceneFrameRange>
 ---@field Groups TArray<FMovieSceneEvaluationGroup>
 ---@field MetaData TArray<FMovieSceneEvaluationMetaData>
-FMovieSceneEvaluationField = {}
+local FMovieSceneEvaluationField = {}
 
 
 
 ---@class FMovieSceneEvaluationFieldSegmentPtr : FMovieSceneEvaluationFieldTrackPtr
 ---@field SegmentID FMovieSceneSegmentIdentifier
-FMovieSceneEvaluationFieldSegmentPtr = {}
+local FMovieSceneEvaluationFieldSegmentPtr = {}
 
 
 
 ---@class FMovieSceneEvaluationFieldTrackPtr
 ---@field SequenceID FMovieSceneSequenceID
 ---@field TrackIdentifier FMovieSceneTrackIdentifier
-FMovieSceneEvaluationFieldTrackPtr = {}
+local FMovieSceneEvaluationFieldTrackPtr = {}
 
 
 
 ---@class FMovieSceneEvaluationGroup
 ---@field LUTIndices TArray<FMovieSceneEvaluationGroupLUTIndex>
 ---@field SegmentPtrLUT TArray<FMovieSceneEvaluationFieldSegmentPtr>
-FMovieSceneEvaluationGroup = {}
+local FMovieSceneEvaluationGroup = {}
 
 
 
@@ -121,7 +121,7 @@ FMovieSceneEvaluationGroup = {}
 ---@field LUTOffset int32
 ---@field NumInitPtrs int32
 ---@field NumEvalPtrs int32
-FMovieSceneEvaluationGroupLUTIndex = {}
+local FMovieSceneEvaluationGroupLUTIndex = {}
 
 
 
@@ -129,7 +129,7 @@ FMovieSceneEvaluationGroupLUTIndex = {}
 ---@field SequenceID FMovieSceneSequenceID
 ---@field TrackIdentifier FMovieSceneTrackIdentifier
 ---@field SectionIndex uint32
-FMovieSceneEvaluationKey = {}
+local FMovieSceneEvaluationKey = {}
 
 
 
@@ -137,14 +137,14 @@ FMovieSceneEvaluationKey = {}
 ---@field ActiveSequences TArray<FMovieSceneSequenceID>
 ---@field ActiveEntities TArray<FMovieSceneOrderedEvaluationKey>
 ---@field SubTemplateSerialNumbers TMap<FMovieSceneSequenceID, uint32>
-FMovieSceneEvaluationMetaData = {}
+local FMovieSceneEvaluationMetaData = {}
 
 
 
 ---@class FMovieSceneEvaluationOperand
 ---@field ObjectBindingId FGuid
 ---@field SequenceID FMovieSceneSequenceID
-FMovieSceneEvaluationOperand = {}
+local FMovieSceneEvaluationOperand = {}
 
 
 
@@ -157,13 +157,13 @@ FMovieSceneEvaluationOperand = {}
 ---@field TemplateLedger FMovieSceneTemplateGenerationLedger
 ---@field TrackFieldData FMovieSceneTrackFieldData
 ---@field SubSectionFieldData FMovieSceneSubSectionFieldData
-FMovieSceneEvaluationTemplate = {}
+local FMovieSceneEvaluationTemplate = {}
 
 
 
 ---@class FMovieSceneEvaluationTemplateSerialNumber
 ---@field Value uint32
-FMovieSceneEvaluationTemplateSerialNumber = {}
+local FMovieSceneEvaluationTemplateSerialNumber = {}
 
 
 
@@ -180,20 +180,20 @@ FMovieSceneEvaluationTemplateSerialNumber = {}
 ---@field bEvaluateInPreroll boolean
 ---@field bEvaluateInPostroll boolean
 ---@field bTearDownPriority boolean
-FMovieSceneEvaluationTrack = {}
+local FMovieSceneEvaluationTrack = {}
 
 
 
 ---@class FMovieSceneEvaluationTrackSegments
 ---@field SegmentIdentifierToIndex TArray<int32>
 ---@field SortedSegments TArray<FMovieSceneSegment>
-FMovieSceneEvaluationTrackSegments = {}
+local FMovieSceneEvaluationTrackSegments = {}
 
 
 
 ---@class FMovieSceneExpansionState
 ---@field bExpanded boolean
-FMovieSceneExpansionState = {}
+local FMovieSceneExpansionState = {}
 
 
 
@@ -206,7 +206,7 @@ FMovieSceneExpansionState = {}
 ---@field bHasDefaultValue boolean
 ---@field KeyHandles FMovieSceneKeyHandleMap
 ---@field TickResolution FFrameRate
-FMovieSceneFloatChannel = {}
+local FMovieSceneFloatChannel = {}
 
 
 
@@ -215,12 +215,12 @@ FMovieSceneFloatChannel = {}
 ---@field InterpMode ERichCurveInterpMode
 ---@field TangentMode ERichCurveTangentMode
 ---@field Tangent FMovieSceneTangentData
-FMovieSceneFloatValue = {}
+local FMovieSceneFloatValue = {}
 
 
 
 ---@class FMovieSceneFrameRange
-FMovieSceneFrameRange = {}
+local FMovieSceneFrameRange = {}
 
 
 ---@class FMovieSceneIntegerChannel : FMovieSceneChannel
@@ -228,28 +228,28 @@ FMovieSceneFrameRange = {}
 ---@field DefaultValue int32
 ---@field bHasDefaultValue boolean
 ---@field Values TArray<int32>
-FMovieSceneIntegerChannel = {}
+local FMovieSceneIntegerChannel = {}
 
 
 
 ---@class FMovieSceneKeyHandleMap : FKeyHandleLookupTable
-FMovieSceneKeyHandleMap = {}
+local FMovieSceneKeyHandleMap = {}
 
 
 ---@class FMovieSceneKeyStruct
-FMovieSceneKeyStruct = {}
+local FMovieSceneKeyStruct = {}
 
 
 ---@class FMovieSceneKeyTimeStruct : FMovieSceneKeyStruct
 ---@field Time FFrameNumber
-FMovieSceneKeyTimeStruct = {}
+local FMovieSceneKeyTimeStruct = {}
 
 
 
 ---@class FMovieSceneMarkedFrame
 ---@field FrameNumber FFrameNumber
 ---@field Label FString
-FMovieSceneMarkedFrame = {}
+local FMovieSceneMarkedFrame = {}
 
 
 
@@ -257,13 +257,13 @@ FMovieSceneMarkedFrame = {}
 ---@field SequenceID int32
 ---@field Space EMovieSceneObjectBindingSpace
 ---@field Guid FGuid
-FMovieSceneObjectBindingID = {}
+local FMovieSceneObjectBindingID = {}
 
 
 
 ---@class FMovieSceneObjectBindingIDs
 ---@field Ids TArray<FMovieSceneObjectBindingID>
-FMovieSceneObjectBindingIDs = {}
+local FMovieSceneObjectBindingIDs = {}
 
 
 
@@ -272,14 +272,14 @@ FMovieSceneObjectBindingIDs = {}
 ---@field Times TArray<FFrameNumber>
 ---@field Values TArray<FMovieSceneObjectPathChannelKeyValue>
 ---@field DefaultValue FMovieSceneObjectPathChannelKeyValue
-FMovieSceneObjectPathChannel = {}
+local FMovieSceneObjectPathChannel = {}
 
 
 
 ---@class FMovieSceneObjectPathChannelKeyValue
 ---@field SoftPtr TSoftObjectPtr<UObject>
 ---@field HardPtr UObject
-FMovieSceneObjectPathChannelKeyValue = {}
+local FMovieSceneObjectPathChannelKeyValue = {}
 
 
 
@@ -287,7 +287,7 @@ FMovieSceneObjectPathChannelKeyValue = {}
 ---@field Key FMovieSceneEvaluationKey
 ---@field SetupIndex uint16
 ---@field TearDownIndex uint16
-FMovieSceneOrderedEvaluationKey = {}
+local FMovieSceneOrderedEvaluationKey = {}
 
 
 
@@ -297,7 +297,7 @@ FMovieSceneOrderedEvaluationKey = {}
 ---@field Name FString
 ---@field PossessedObjectClass UClass
 ---@field ParentGuid FGuid
-FMovieScenePossessable = {}
+local FMovieScenePossessable = {}
 
 
 
@@ -306,32 +306,32 @@ FMovieScenePossessable = {}
 ---@field PropertyPath FString
 ---@field FunctionName FName
 ---@field NotifyFunctionName FName
-FMovieScenePropertySectionData = {}
+local FMovieScenePropertySectionData = {}
 
 
 
 ---@class FMovieScenePropertySectionTemplate : FMovieSceneEvalTemplate
 ---@field PropertyData FMovieScenePropertySectionData
-FMovieScenePropertySectionTemplate = {}
+local FMovieScenePropertySectionTemplate = {}
 
 
 
 ---@class FMovieSceneRootEvaluationTemplateInstance
 ---@field DirectorInstances TMap<FMovieSceneSequenceID, UObject>
-FMovieSceneRootEvaluationTemplateInstance = {}
+local FMovieSceneRootEvaluationTemplateInstance = {}
 
 
 
 ---@class FMovieSceneSectionEvalOptions
 ---@field bCanEditCompletionMode boolean
 ---@field CompletionMode EMovieSceneCompletionMode
-FMovieSceneSectionEvalOptions = {}
+local FMovieSceneSectionEvalOptions = {}
 
 
 
 ---@class FMovieSceneSectionGroup
 ---@field Sections TArray<TWeakObjectPtr<UMovieSceneSection>>
-FMovieSceneSectionGroup = {}
+local FMovieSceneSectionGroup = {}
 
 
 
@@ -342,51 +342,51 @@ FMovieSceneSectionGroup = {}
 ---@field StartOffset float
 ---@field PrerollTime float
 ---@field PostrollTime float
-FMovieSceneSectionParameters = {}
+local FMovieSceneSectionParameters = {}
 
 
 
 ---@class FMovieSceneSegment
-FMovieSceneSegment = {}
+local FMovieSceneSegment = {}
 
 
 ---@class FMovieSceneSegmentIdentifier
 ---@field IdentifierIndex int32
-FMovieSceneSegmentIdentifier = {}
+local FMovieSceneSegmentIdentifier = {}
 
 
 
 ---@class FMovieSceneSequenceHierarchy
 ---@field SubSequences TMap<FMovieSceneSequenceID, FMovieSceneSubSequenceData>
 ---@field Hierarchy TMap<FMovieSceneSequenceID, FMovieSceneSequenceHierarchyNode>
-FMovieSceneSequenceHierarchy = {}
+local FMovieSceneSequenceHierarchy = {}
 
 
 
 ---@class FMovieSceneSequenceHierarchyNode
 ---@field ParentID FMovieSceneSequenceID
 ---@field Children TArray<FMovieSceneSequenceID>
-FMovieSceneSequenceHierarchyNode = {}
+local FMovieSceneSequenceHierarchyNode = {}
 
 
 
 ---@class FMovieSceneSequenceID
 ---@field Value uint32
-FMovieSceneSequenceID = {}
+local FMovieSceneSequenceID = {}
 
 
 
 ---@class FMovieSceneSequenceInstanceData
-FMovieSceneSequenceInstanceData = {}
+local FMovieSceneSequenceInstanceData = {}
 
 
 ---@class FMovieSceneSequenceInstanceDataPtr
-FMovieSceneSequenceInstanceDataPtr = {}
+local FMovieSceneSequenceInstanceDataPtr = {}
 
 
 ---@class FMovieSceneSequenceLoopCount
 ---@field Value int32
-FMovieSceneSequenceLoopCount = {}
+local FMovieSceneSequenceLoopCount = {}
 
 
 
@@ -403,7 +403,7 @@ FMovieSceneSequenceLoopCount = {}
 ---@field bHideHud boolean
 ---@field bDisableCameraCuts boolean
 ---@field bPauseAtEnd boolean
-FMovieSceneSequencePlaybackSettings = {}
+local FMovieSceneSequencePlaybackSettings = {}
 
 
 
@@ -411,14 +411,14 @@ FMovieSceneSequencePlaybackSettings = {}
 ---@field LastKnownPosition FFrameTime
 ---@field LastKnownStatus EMovieScenePlayerStatus::Type
 ---@field LastKnownNumLoops int32
-FMovieSceneSequenceReplProperties = {}
+local FMovieSceneSequenceReplProperties = {}
 
 
 
 ---@class FMovieSceneSequenceTransform
 ---@field TimeScale float
 ---@field Offset FFrameTime
-FMovieSceneSequenceTransform = {}
+local FMovieSceneSequenceTransform = {}
 
 
 
@@ -432,7 +432,7 @@ FMovieSceneSequenceTransform = {}
 ---@field ChildPossessables TArray<FGuid>
 ---@field Ownership ESpawnOwnership
 ---@field LevelName FName
-FMovieSceneSpawnable = {}
+local FMovieSceneSpawnable = {}
 
 
 
@@ -440,12 +440,12 @@ FMovieSceneSpawnable = {}
 ---@field Section TWeakObjectPtr<UMovieSceneSubSection>
 ---@field ObjectBindingId FGuid
 ---@field Flags ESectionEvaluationFlags
-FMovieSceneSubSectionData = {}
+local FMovieSceneSubSectionData = {}
 
 
 
 ---@class FMovieSceneSubSectionFieldData
-FMovieSceneSubSectionFieldData = {}
+local FMovieSceneSubSectionFieldData = {}
 
 
 ---@class FMovieSceneSubSequenceData
@@ -460,7 +460,7 @@ FMovieSceneSubSectionFieldData = {}
 ---@field InstanceData FMovieSceneSequenceInstanceDataPtr
 ---@field SubSectionSignature FGuid
 ---@field OuterToInnerTransform FMovieSceneSequenceTransform
-FMovieSceneSubSequenceData = {}
+local FMovieSceneSubSequenceData = {}
 
 
 
@@ -470,7 +470,7 @@ FMovieSceneSubSequenceData = {}
 ---@field TangentWeightMode ERichCurveTangentWeightMode
 ---@field ArriveTangentWeight float
 ---@field LeaveTangentWeight float
-FMovieSceneTangentData = {}
+local FMovieSceneTangentData = {}
 
 
 
@@ -478,20 +478,20 @@ FMovieSceneTangentData = {}
 ---@field LastTrackIdentifier FMovieSceneTrackIdentifier
 ---@field TrackSignatureToTrackIdentifier TMap<FGuid, FMovieSceneTrackIdentifier>
 ---@field SubSectionRanges TMap<FGuid, FMovieSceneFrameRange>
-FMovieSceneTemplateGenerationLedger = {}
+local FMovieSceneTemplateGenerationLedger = {}
 
 
 
 ---@class FMovieSceneTimecodeSource
 ---@field Timecode FTimecode
 ---@field DeltaFrame FFrameNumber
-FMovieSceneTimecodeSource = {}
+local FMovieSceneTimecodeSource = {}
 
 
 
 ---@class FMovieSceneTrackDisplayOptions
 ---@field bShowVerticalFrames boolean
-FMovieSceneTrackDisplayOptions = {}
+local FMovieSceneTrackDisplayOptions = {}
 
 
 
@@ -501,38 +501,38 @@ FMovieSceneTrackDisplayOptions = {}
 ---@field bEvaluateInPreroll boolean
 ---@field bEvaluateInPostroll boolean
 ---@field bEvaluateNearestSection boolean
-FMovieSceneTrackEvalOptions = {}
+local FMovieSceneTrackEvalOptions = {}
 
 
 
 ---@class FMovieSceneTrackFieldData
-FMovieSceneTrackFieldData = {}
+local FMovieSceneTrackFieldData = {}
 
 
 ---@class FMovieSceneTrackIdentifier
 ---@field Value uint32
-FMovieSceneTrackIdentifier = {}
+local FMovieSceneTrackIdentifier = {}
 
 
 
 ---@class FMovieSceneTrackImplementation : FMovieSceneEvalTemplateBase
-FMovieSceneTrackImplementation = {}
+local FMovieSceneTrackImplementation = {}
 
 
 ---@class FMovieSceneTrackImplementationPtr
-FMovieSceneTrackImplementationPtr = {}
+local FMovieSceneTrackImplementationPtr = {}
 
 
 ---@class FMovieSceneTrackLabels
 ---@field Strings TArray<FString>
-FMovieSceneTrackLabels = {}
+local FMovieSceneTrackLabels = {}
 
 
 
 ---@class FOptionalMovieSceneBlendType
 ---@field BlendType EMovieSceneBlendType
 ---@field bIsValid boolean
-FOptionalMovieSceneBlendType = {}
+local FOptionalMovieSceneBlendType = {}
 
 
 
@@ -540,24 +540,24 @@ FOptionalMovieSceneBlendType = {}
 ---@field ImplIndex int32
 ---@field ForcedTime FFrameNumber
 ---@field Flags ESectionEvaluationFlags
-FSectionEvaluationData = {}
+local FSectionEvaluationData = {}
 
 
 
 ---@class FSectionEvaluationDataTree
-FSectionEvaluationDataTree = {}
+local FSectionEvaluationDataTree = {}
 
 
 ---@class FTestMovieSceneEvalTemplate : FMovieSceneEvalTemplate
-FTestMovieSceneEvalTemplate = {}
+local FTestMovieSceneEvalTemplate = {}
 
 
 ---@class IMovieSceneBindingOwnerInterface : IInterface
-IMovieSceneBindingOwnerInterface = {}
+local IMovieSceneBindingOwnerInterface = {}
 
 
 ---@class IMovieSceneEasingFunction : IInterface
-IMovieSceneEasingFunction = {}
+local IMovieSceneEasingFunction = {}
 
 ---@param Interp float
 ---@return float
@@ -565,11 +565,11 @@ function IMovieSceneEasingFunction:OnEvaluate(Interp) end
 
 
 ---@class IMovieSceneKeyProxy : IInterface
-IMovieSceneKeyProxy = {}
+local IMovieSceneKeyProxy = {}
 
 
 ---@class IMovieScenePlaybackClient : IInterface
-IMovieScenePlaybackClient = {}
+local IMovieScenePlaybackClient = {}
 
 
 ---@class UMovieScene : UMovieSceneSignedObject
@@ -586,25 +586,25 @@ IMovieScenePlaybackClient = {}
 ---@field EvaluationType EMovieSceneEvaluationType
 ---@field ClockSource EUpdateClockSource
 ---@field MarkedFrames TArray<FMovieSceneMarkedFrame>
-UMovieScene = {}
+local UMovieScene = {}
 
 
 
 ---@class UMovieSceneBindingOverrides : UObject
 ---@field BindingData TArray<FMovieSceneBindingOverrideData>
-UMovieSceneBindingOverrides = {}
+local UMovieSceneBindingOverrides = {}
 
 
 
 ---@class UMovieSceneBuiltInEasingFunction : UObject
 ---@field Type EMovieSceneBuiltInEasing
-UMovieSceneBuiltInEasingFunction = {}
+local UMovieSceneBuiltInEasingFunction = {}
 
 
 
 ---@class UMovieSceneEasingExternalCurve : UObject
 ---@field Curve UCurveFloat
-UMovieSceneEasingExternalCurve = {}
+local UMovieSceneEasingExternalCurve = {}
 
 
 
@@ -613,12 +613,12 @@ UMovieSceneEasingExternalCurve = {}
 ---@field ChildFolders TArray<UMovieSceneFolder>
 ---@field ChildMasterTracks TArray<UMovieSceneTrack>
 ---@field ChildObjectBindingStrings TArray<FString>
-UMovieSceneFolder = {}
+local UMovieSceneFolder = {}
 
 
 
 ---@class UMovieSceneNameableTrack : UMovieSceneTrack
-UMovieSceneNameableTrack = {}
+local UMovieSceneNameableTrack = {}
 
 
 ---@class UMovieSceneSection : UMovieSceneSignedObject
@@ -638,7 +638,7 @@ UMovieSceneNameableTrack = {}
 ---@field bIsInfinite boolean
 ---@field bSupportsInfiniteRange boolean
 ---@field BlendType FOptionalMovieSceneBlendType
-UMovieSceneSection = {}
+local UMovieSceneSection = {}
 
 ---@param NewRowIndex int32
 function UMovieSceneSection:SetRowIndex(NewRowIndex) end
@@ -679,7 +679,7 @@ function UMovieSceneSection:GetBlendType() end
 ---@field DefaultCompletionMode EMovieSceneCompletionMode
 ---@field bParentContextsAreSignificant boolean
 ---@field bPlayableDirectly boolean
-UMovieSceneSequence = {}
+local UMovieSceneSequence = {}
 
 ---@param InBindingName FName
 ---@return TArray<FMovieSceneObjectBindingID>
@@ -705,7 +705,7 @@ function UMovieSceneSequence:FindBindingByTag(InBindingName) end
 ---@field RootTemplateInstance FMovieSceneRootEvaluationTemplateInstance
 ---@field NetSyncProps FMovieSceneSequenceReplProperties
 ---@field PlaybackClient TScriptInterface<IMovieScenePlaybackClient>
-UMovieSceneSequencePlayer = {}
+local UMovieSceneSequencePlayer = {}
 
 function UMovieSceneSequencePlayer:StopAtCurrentTime() end
 function UMovieSceneSequencePlayer:Stop() end
@@ -802,7 +802,7 @@ function UMovieSceneSequencePlayer:ChangePlaybackDirection() end
 
 ---@class UMovieSceneSignedObject : UObject
 ---@field Signature FGuid
-UMovieSceneSignedObject = {}
+local UMovieSceneSignedObject = {}
 
 
 
@@ -815,7 +815,7 @@ UMovieSceneSignedObject = {}
 ---@field ActorToRecord TLazyObjectPtr<AActor>
 ---@field TargetSequenceName FString
 ---@field TargetPathToRecordTo FDirectoryPath
-UMovieSceneSubSection = {}
+local UMovieSceneSubSection = {}
 
 ---@param Sequence UMovieSceneSequence
 function UMovieSceneSubSection:SetSequence(Sequence) end
@@ -825,31 +825,31 @@ function UMovieSceneSubSection:GetSequence() end
 
 ---@class UMovieSceneSubTrack : UMovieSceneNameableTrack
 ---@field Sections TArray<UMovieSceneSection>
-UMovieSceneSubTrack = {}
+local UMovieSceneSubTrack = {}
 
 
 
 ---@class UMovieSceneTrack : UMovieSceneSignedObject
 ---@field EvalOptions FMovieSceneTrackEvalOptions
 ---@field bIsEvalDisabled boolean
-UMovieSceneTrack = {}
+local UMovieSceneTrack = {}
 
 
 
 ---@class UTestMovieSceneSection : UMovieSceneSection
-UTestMovieSceneSection = {}
+local UTestMovieSceneSection = {}
 
 
 ---@class UTestMovieSceneSequence : UMovieSceneSequence
 ---@field MovieScene UMovieScene
-UTestMovieSceneSequence = {}
+local UTestMovieSceneSequence = {}
 
 
 
 ---@class UTestMovieSceneTrack : UMovieSceneTrack
 ---@field bHighPassFilter boolean
 ---@field SectionArray TArray<UMovieSceneSection>
-UTestMovieSceneTrack = {}
+local UTestMovieSceneTrack = {}
 
 
 

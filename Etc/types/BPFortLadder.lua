@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFortLadder_C : AReplicatedLadder
-ABPFortLadder_C = {}
+local ABPFortLadder_C = {}
 
 

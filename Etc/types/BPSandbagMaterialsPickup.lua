@@ -2,7 +2,7 @@
 
 ---@class ABPSandbagMaterialsPickup_C : AGearPickup
 ---@field ItemMeshSK USkeletalMeshComponent
-ABPSandbagMaterialsPickup_C = {}
+local ABPSandbagMaterialsPickup_C = {}
 
 
 

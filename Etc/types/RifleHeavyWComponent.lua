@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URifleHeavyWComponent_C : UGrenadeAdapterComponent
-URifleHeavyWComponent_C = {}
+local URifleHeavyWComponent_C = {}
 
 

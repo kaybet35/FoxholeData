@@ -71,7 +71,7 @@
 ---@field StaticMeshProps UBoxComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWChurchG1Destroyed_C = {}
+local AUniqueWChurchG1Destroyed_C = {}
 
 ---@param Enter boolean
 ---@param Actor AActor

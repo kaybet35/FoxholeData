@@ -14,7 +14,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
 ---@field DriverSeat0 UVehicleSeatComponent
-ABPLargeCrane_C = {}
+local ABPLargeCrane_C = {}
 
 ---@param IsOn boolean
 function ABPLargeCrane_C:BPOnVehicleOn(IsOn) end

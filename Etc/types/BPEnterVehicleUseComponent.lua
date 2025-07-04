@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEnterVehicleUseComponent_C : UEnterVehicleUseComponent
-UBPEnterVehicleUseComponent_C = {}
+local UBPEnterVehicleUseComponent_C = {}
 
 

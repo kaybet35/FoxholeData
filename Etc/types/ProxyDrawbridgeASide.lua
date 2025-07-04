@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AProxyDrawbridgeASide_C : AProxyDrawbridgeSide
-AProxyDrawbridgeASide_C = {}
+local AProxyDrawbridgeASide_C = {}
 
 

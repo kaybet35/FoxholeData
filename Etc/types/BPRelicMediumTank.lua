@@ -22,7 +22,7 @@
 ---@field LightTurret4 UStaticMeshComponent
 ---@field LightTurret3 UStaticMeshComponent
 ---@field LightTurret2 UStaticMeshComponent
-ABPRelicMediumTank_C = {}
+local ABPRelicMediumTank_C = {}
 
 ---@param IsOn boolean
 function ABPRelicMediumTank_C:BPOnVehicleOn(IsOn) end

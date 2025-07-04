@@ -5,7 +5,7 @@
 ---@field SpotLight_R USpotLightComponent
 ---@field Light_L UStaticMeshComponent
 ---@field Light_R UStaticMeshComponent
-ABPTruckBaseC_C = {}
+local ABPTruckBaseC_C = {}
 
 
 

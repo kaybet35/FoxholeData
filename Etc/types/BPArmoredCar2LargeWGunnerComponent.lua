@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPArmoredCar2LargeWGunnerComponent_C : UTankGunnerMountComponent
-UBPArmoredCar2LargeWGunnerComponent_C = {}
+local UBPArmoredCar2LargeWGunnerComponent_C = {}
 
 

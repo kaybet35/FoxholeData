@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPWeaponRack_C : AStorageBox
-ABPWeaponRack_C = {}
+local ABPWeaponRack_C = {}
 
 

@@ -19,7 +19,7 @@
 ---@field Floor UStaticMeshComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent
-ABPAmmoRoomT3_C = {}
+local ABPAmmoRoomT3_C = {}
 
 ---@param AmmoCount int32
 function ABPAmmoRoomT3_C:UpdateAmmoInstanceMesh(AmmoCount) end

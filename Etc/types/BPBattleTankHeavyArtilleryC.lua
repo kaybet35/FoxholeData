@@ -8,7 +8,7 @@
 ---@field PassengerSeat3 UVehicleSeatComponent
 ---@field PassengerExitRight USeatExitComponent
 ---@field PassengerTriggerRight USeatTriggerComponent
-ABPBattleTankHeavyArtilleryC_C = {}
+local ABPBattleTankHeavyArtilleryC_C = {}
 
 ---@param IsOn boolean
 function ABPBattleTankHeavyArtilleryC_C:BPOnVehicleOn(IsOn) end

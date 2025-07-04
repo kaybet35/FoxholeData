@@ -12,7 +12,7 @@
 ---@field BulwarkDressingMetalBracket UStaticMeshComponent
 ---@field StaticMesh15 UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPStorageFacilityBuildSite_C = {}
+local ABPStorageFacilityBuildSite_C = {}
 
 
 

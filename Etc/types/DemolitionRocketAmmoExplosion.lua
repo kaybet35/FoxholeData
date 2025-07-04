@@ -3,7 +3,7 @@
 ---@class ADemolitionRocketAmmoExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-ADemolitionRocketAmmoExplosion_C = {}
+local ADemolitionRocketAmmoExplosion_C = {}
 
 function ADemolitionRocketAmmoExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

@@ -84,7 +84,7 @@
 ---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWWarehouseG4_C = {}
+local AUniqueWWarehouseG4_C = {}
 
 
 

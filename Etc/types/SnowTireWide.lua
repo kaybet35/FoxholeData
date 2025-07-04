@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ASnowTireWide_C : ADecalActor
-ASnowTireWide_C = {}
+local ASnowTireWide_C = {}
 
 

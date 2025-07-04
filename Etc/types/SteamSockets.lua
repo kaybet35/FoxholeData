@@ -1,10 +1,10 @@
 ---@meta
 
 ---@class USteamSocketsNetConnection : UNetConnection
-USteamSocketsNetConnection = {}
+local USteamSocketsNetConnection = {}
 
 
 ---@class USteamSocketsNetDriver : UNetDriver
-USteamSocketsNetDriver = {}
+local USteamSocketsNetDriver = {}
 
 

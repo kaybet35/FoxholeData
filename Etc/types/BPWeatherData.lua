@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWeatherData_C : UWeatherData
-UBPWeatherData_C = {}
+local UBPWeatherData_C = {}
 
 

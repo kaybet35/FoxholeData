@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMotorcycleOffensiveGunnerComponent_C : UBPTruckOffensiveGunnerComponent_C
-UBPMotorcycleOffensiveGunnerComponent_C = {}
+local UBPMotorcycleOffensiveGunnerComponent_C = {}
 
 

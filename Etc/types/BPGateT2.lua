@@ -15,7 +15,7 @@
 ---@field RightSocket UBuildSocketComponent
 ---@field Decal UDecalComponent
 ---@field FlagMesh UStaticMeshComponent
-ABPGateT2_C = {}
+local ABPGateT2_C = {}
 
 ---@param VisualTeamId int32
 function ABPGateT2_C:BPSetTeamVisuals(VisualTeamId) end

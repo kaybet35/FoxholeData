@@ -2,7 +2,7 @@
 
 ---@class ABPMGTWPickup_C : AGearPickup
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPMGTWPickup_C = {}
+local ABPMGTWPickup_C = {}
 
 
 

@@ -21,7 +21,7 @@
 ---@field RightSocket UBuildSocketComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field LeftSocket UBuildSocketComponent
-ABPTrenchIntBuildGhost_C = {}
+local ABPTrenchIntBuildGhost_C = {}
 
 
 

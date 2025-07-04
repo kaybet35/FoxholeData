@@ -22,7 +22,7 @@
 ---@field AnimGraphNode_SequencePlayer_B1561243438889F37F6ECAB9715D6971 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_502157834EF5685F3FA4E9A189B58D97 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_F7EB48B94FB7A3DF5C7009B9C7A43304 FAnimNode_StateMachine
-UABP_Barge_03_C = {}
+local UABP_Barge_03_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Barge_03_C:AnimGraph(AnimGraph) end

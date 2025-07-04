@@ -85,7 +85,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWWaterMillG1_C = {}
+local AUniqueWWaterMillG1_C = {}
 
 
 

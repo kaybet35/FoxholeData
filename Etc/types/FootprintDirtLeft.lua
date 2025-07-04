@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AFootprintDirtLeft_C : ADecalActor
-AFootprintDirtLeft_C = {}
+local AFootprintDirtLeft_C = {}
 
 

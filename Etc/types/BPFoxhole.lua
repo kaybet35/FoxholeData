@@ -15,7 +15,7 @@
 ---@field Decal UDecalComponent
 ---@field Floor UStaticMeshComponent
 ---@field Hole UBoxComponent
-ABPFoxhole_C = {}
+local ABPFoxhole_C = {}
 
 
 

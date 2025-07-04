@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class USniperRifleComponent_C : USniperRifleComponent
-USniperRifleComponent_C = {}
+local USniperRifleComponent_C = {}
 
 

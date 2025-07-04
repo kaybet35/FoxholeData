@@ -22,7 +22,7 @@
 ---@field sandbag01 UStaticMeshComponent
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field TownWSmall1 UStaticMeshComponent
-ATownWSmall1_C = {}
+local ATownWSmall1_C = {}
 
 
 

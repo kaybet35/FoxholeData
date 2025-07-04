@@ -15,7 +15,7 @@
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPWeatherStation_C = {}
+local ABPWeatherStation_C = {}
 
 ---@param VisualTeamId int32
 function ABPWeatherStation_C:BPSetTeamVisuals(VisualTeamId) end

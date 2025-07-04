@@ -14,7 +14,7 @@
 ---@field InputMesh0 UStaticMeshComponent
 ---@field PipeInput0 UBuildSocketComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityPowerDiesel_C = {}
+local ABPFacilityPowerDiesel_C = {}
 
 
 

@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Audio UAudioComponent
 ---@field RadialForce URadialForceComponent
-AMortarFlameExplosion_C = {}
+local AMortarFlameExplosion_C = {}
 
 function AMortarFlameExplosion_C:ReceiveBeginPlay() end
 function AMortarFlameExplosion_C:BPTelegraph() end

@@ -15,7 +15,7 @@
 ---@field WorkVolume UBoxComponent
 ---@field idle UAudioComponent
 ---@field Camera UCameraComponent
-ABPMotorboat_C = {}
+local ABPMotorboat_C = {}
 
 ---@param IsOn boolean
 function ABPMotorboat_C:BPOnVehicleOn(IsOn) end

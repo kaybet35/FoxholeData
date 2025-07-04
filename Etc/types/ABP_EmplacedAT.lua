@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_StateResult_58CBBEC44EB87F68BFFF059BC55F5E24 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_C0B532E3422C767024CF81886B70D935 FAnimNode_StateMachine
 ---@field AnimGraphNode_RotationOffsetBlendSpace_19D92DFD4EC8D225E8BDF5B9971E7A98 FAnimNode_RotationOffsetBlendSpace
-UABP_EmplacedAT_C = {}
+local UABP_EmplacedAT_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacedAT_C:AnimGraph(AnimGraph) end

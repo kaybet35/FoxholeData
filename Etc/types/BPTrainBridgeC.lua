@@ -12,7 +12,7 @@
 ---@field TrainBridgeSectionSideA UStaticMeshComponent
 ---@field TrainBridgeSectionSideB UStaticMeshComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPTrainBridgeC_C = {}
+local ABPTrainBridgeC_C = {}
 
 
 

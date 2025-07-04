@@ -15,7 +15,7 @@
 ---@field AnimGraphNode_SequencePlayer_3CE988934761CAF4E3E9A699A01A61AF FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_F84C9F934E663F87B379AE9FD04BDD32 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_ApplyAdditive_BCE93B204ECB37986EB13AAF70BDDEE9 FAnimNode_ApplyAdditive
-UABP_PrototypeTruckWar_C = {}
+local UABP_PrototypeTruckWar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_PrototypeTruckWar_C:AnimGraph(AnimGraph) end

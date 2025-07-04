@@ -34,10 +34,10 @@ AWeatherStation::AWeatherStation(const FObjectInitializer& ObjectInitializer) : 
     this->SquadId = 0;
     this->Yaw = 0.00f;
     this->RemainingActiveTime = 0.00f;
+    this->ActiveSFXLoop->SetupAttachment(RootComponent);
+    this->BaseMesh->SetupAttachment(RootComponent);
     this->KillVolume->SetupAttachment(RootComponent);
     this->Mesh->SetupAttachment(RootComponent);
-    this->BaseMesh->SetupAttachment(RootComponent);
-    this->ActiveSFXLoop->SetupAttachment(RootComponent);
     this->RotationSFXLoop->SetupAttachment(RootComponent);
 }
 

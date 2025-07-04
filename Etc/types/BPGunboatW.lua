@@ -37,7 +37,7 @@
 ---@field SpotLight USpotLightComponent
 ---@field idle UAudioComponent
 ---@field Camera UCameraComponent
-ABPGunboatW_C = {}
+local ABPGunboatW_C = {}
 
 ---@param IsOn boolean
 function ABPGunboatW_C:BPOnVehicleOn(IsOn) end

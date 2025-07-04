@@ -19,7 +19,7 @@
 ---@field PassengerSeat0 UVehicleSeatComponent
 ---@field DriverExit USeatExitComponent
 ---@field DriverTrigger USeatTriggerComponent
-ABPSmallTrainResource_C = {}
+local ABPSmallTrainResource_C = {}
 
 
 

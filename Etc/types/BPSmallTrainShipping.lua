@@ -5,7 +5,7 @@
 ---@field PassengerSeat0 UVehicleSeatComponent
 ---@field DriverExit USeatExitComponent
 ---@field DriverTrigger USeatTriggerComponent
-ABPSmallTrainShipping_C = {}
+local ABPSmallTrainShipping_C = {}
 
 
 

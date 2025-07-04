@@ -70,7 +70,7 @@
 ---@field Timeline_0_Intensity_FF49C7B244E0D069117E96B10CA77D84 float
 ---@field Timeline_0__Direction_FF49C7B244E0D069117E96B10CA77D84 ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPRVT1Room_C = {}
+local ABPRVT1Room_C = {}
 
 function ABPRVT1Room_C:Timeline_0__FinishedFunc() end
 function ABPRVT1Room_C:Timeline_0__UpdateFunc() end

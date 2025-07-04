@@ -3,7 +3,7 @@
 ---@class ABPEmplacedATW_C : AEmplacedWeapon
 ---@field OccupiableComponent UStructureSeatComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPEmplacedATW_C = {}
+local ABPEmplacedATW_C = {}
 
 
 

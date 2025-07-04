@@ -21,7 +21,7 @@
 ---@field ['Producing Smoke'] UParticleSystemComponent
 ---@field FacilityRefinery1Forge UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery1Forge_C = {}
+local ABPFacilityRefinery1Forge_C = {}
 
 
 

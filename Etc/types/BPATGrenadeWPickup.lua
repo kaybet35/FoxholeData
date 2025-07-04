@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPATGrenadeWPickup_C : ABPGrenadeWPickup_C
-ABPATGrenadeWPickup_C = {}
+local ABPATGrenadeWPickup_C = {}
 
 

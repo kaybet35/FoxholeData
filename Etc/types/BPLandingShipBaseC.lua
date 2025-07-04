@@ -9,7 +9,7 @@
 ---@field PassengerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field PassengerTrigger USeatTriggerComponent
-ABPLandingShipBaseC_C = {}
+local ABPLandingShipBaseC_C = {}
 
 ---@param IsOn boolean
 function ABPLandingShipBaseC_C:BPOnVehicleOn(IsOn) end

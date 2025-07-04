@@ -10,7 +10,7 @@
 ---@field BridgeBase UStaticMeshComponent
 ---@field Bridge UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchBridge_C = {}
+local ABPTrenchBridge_C = {}
 
 
 

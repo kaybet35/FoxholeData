@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPDieselComponent_C : UFuelItemComponent
-UBPDieselComponent_C = {}
+local UBPDieselComponent_C = {}
 
 

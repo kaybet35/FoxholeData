@@ -14,7 +14,7 @@
 ---@field chassis USkeletalMeshComponent
 ---@field Exhaust UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPLightTank2InfantryC_C = {}
+local ABPLightTank2InfantryC_C = {}
 
 ---@param IsOn boolean
 function ABPLightTank2InfantryC_C:BPOnVehicleOn(IsOn) end

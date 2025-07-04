@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_StateResult_58EF654B450909B72253948DB4AAFCC8 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_4E500817466AFDDC9A13E6A57BCB1457 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_835FFB5244B607E1EE75E3AAD9738C41 FAnimNode_StateMachine
-UABP_FortGunner_C = {}
+local UABP_FortGunner_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FortGunner_C:AnimGraph(AnimGraph) end

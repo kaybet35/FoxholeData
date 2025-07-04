@@ -3,7 +3,7 @@
 ---@class ASatchelExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-ASatchelExplosion_C = {}
+local ASatchelExplosion_C = {}
 
 function ASatchelExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

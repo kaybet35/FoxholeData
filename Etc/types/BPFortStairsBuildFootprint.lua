@@ -3,7 +3,7 @@
 ---@class ABPFortStairsBuildFootprint_C : AModificationTemplate
 ---@field BuildFootprintBox UBuildFootprintBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortStairsBuildFootprint_C = {}
+local ABPFortStairsBuildFootprint_C = {}
 
 
 

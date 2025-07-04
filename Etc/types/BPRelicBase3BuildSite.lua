@@ -14,7 +14,7 @@
 ---@field BuildSite UBoxComponent
 ---@field RelicBaseMesh UStaticMeshComponent
 ---@field RoofMesh UStaticMeshComponent
-ABPRelicBase3BuildSite_C = {}
+local ABPRelicBase3BuildSite_C = {}
 
 
 

@@ -5,7 +5,7 @@
 ---@field UseAreaBox1 UBoxComponent
 ---@field FrontTrim UStaticMeshComponent
 ---@field BackTrim UStaticMeshComponent
-ABPFacilityPipe_C = {}
+local ABPFacilityPipe_C = {}
 
 
 

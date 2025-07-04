@@ -6,7 +6,7 @@
 ---@field Resource1 UStaticMeshComponent
 ---@field ModMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityMineResource4Excavator_C = {}
+local ABPFacilityMineResource4Excavator_C = {}
 
 
 

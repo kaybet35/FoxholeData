@@ -7,7 +7,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field idle UAudioComponent
 ---@field Camera UCameraComponent
-ABPMotorcycleBase_C = {}
+local ABPMotorcycleBase_C = {}
 
 
 

@@ -22,7 +22,7 @@
 ---@field BPAIGarrisonTurret UBPAIGarrisonTurret_C
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ATownWExtraSmallG1_C = {}
+local ATownWExtraSmallG1_C = {}
 
 
 

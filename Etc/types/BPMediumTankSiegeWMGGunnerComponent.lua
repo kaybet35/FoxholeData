@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMediumTankSiegeWMGGunnerComponent_C : UHitScanMountComponent
-UBPMediumTankSiegeWMGGunnerComponent_C = {}
+local UBPMediumTankSiegeWMGGunnerComponent_C = {}
 
 

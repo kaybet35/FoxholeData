@@ -22,7 +22,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_1A01A135428A63FB31E27696AD1BF370 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_40816A0646139C9C90E21DA2A379F7D2 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_BA83FBC4443B8F7C9DECC989DCB656A4 FAnimNode_BlendSpacePlayer
-UABP_GunboatC_C = {}
+local UABP_GunboatC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_GunboatC_C:AnimGraph(AnimGraph) end

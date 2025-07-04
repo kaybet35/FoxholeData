@@ -4,7 +4,7 @@
 ---@field ParticleSystem2 UParticleSystemComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery1Smelter_C = {}
+local ABPFacilityRefinery1Smelter_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLargeShipBattleshipWLadder_C : ULadderComponent
-UBPLargeShipBattleshipWLadder_C = {}
+local UBPLargeShipBattleshipWLadder_C = {}
 
 

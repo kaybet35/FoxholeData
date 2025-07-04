@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPAssaultRifleAmmoPickup_C : AAmmoPickup
-ABPAssaultRifleAmmoPickup_C = {}
+local ABPAssaultRifleAmmoPickup_C = {}
 
 

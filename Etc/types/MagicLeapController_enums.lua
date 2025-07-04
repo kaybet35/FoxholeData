@@ -1,5 +1,5 @@
 ---@enum EMagicLeapControllerHapticIntensity
-EMagicLeapControllerHapticIntensity = {
+local EMagicLeapControllerHapticIntensity = {
     Low = 0,
     Medium = 1,
     High = 2,
@@ -7,7 +7,7 @@ EMagicLeapControllerHapticIntensity = {
 }
 
 ---@enum EMagicLeapControllerHapticPattern
-EMagicLeapControllerHapticPattern = {
+local EMagicLeapControllerHapticPattern = {
     None = 0,
     Click = 1,
     Bump = 2,
@@ -22,7 +22,7 @@ EMagicLeapControllerHapticPattern = {
 }
 
 ---@enum EMagicLeapControllerLEDColor
-EMagicLeapControllerLEDColor = {
+local EMagicLeapControllerLEDColor = {
     BrightMissionRed = 0,
     PastelMissionRed = 1,
     BrightFloridaOrange = 2,
@@ -43,7 +43,7 @@ EMagicLeapControllerLEDColor = {
 }
 
 ---@enum EMagicLeapControllerLEDEffect
-EMagicLeapControllerLEDEffect = {
+local EMagicLeapControllerLEDEffect = {
     RotateCW = 0,
     RotateCCW = 1,
     Pulse = 2,
@@ -54,7 +54,7 @@ EMagicLeapControllerLEDEffect = {
 }
 
 ---@enum EMagicLeapControllerLEDPattern
-EMagicLeapControllerLEDPattern = {
+local EMagicLeapControllerLEDPattern = {
     None = 0,
     Clock01 = 1,
     Clock02 = 2,
@@ -78,7 +78,7 @@ EMagicLeapControllerLEDPattern = {
 }
 
 ---@enum EMagicLeapControllerLEDSpeed
-EMagicLeapControllerLEDSpeed = {
+local EMagicLeapControllerLEDSpeed = {
     Slow = 0,
     Medium = 1,
     Fast = 2,
@@ -86,14 +86,14 @@ EMagicLeapControllerLEDSpeed = {
 }
 
 ---@enum EMagicLeapControllerTrackingMode
-EMagicLeapControllerTrackingMode = {
+local EMagicLeapControllerTrackingMode = {
     InputService = 0,
     CoordinateFrameUID = 1,
     EMagicLeapControllerTrackingMode_MAX = 2,
 }
 
 ---@enum EMagicLeapControllerType
-EMagicLeapControllerType = {
+local EMagicLeapControllerType = {
     None = 0,
     Device = 1,
     MobileApp = 2,
@@ -101,7 +101,7 @@ EMagicLeapControllerType = {
 }
 
 ---@enum EMagicLeapTouchpadGestureDirection
-EMagicLeapTouchpadGestureDirection = {
+local EMagicLeapTouchpadGestureDirection = {
     None = 0,
     Up = 1,
     Down = 2,
@@ -115,7 +115,7 @@ EMagicLeapTouchpadGestureDirection = {
 }
 
 ---@enum EMagicLeapTouchpadGestureType
-EMagicLeapTouchpadGestureType = {
+local EMagicLeapTouchpadGestureType = {
     None = 0,
     Tap = 1,
     ForceTapDown = 2,

@@ -20,9 +20,9 @@ AConstructionEquipment::AConstructionEquipment(const FObjectInitializer& ObjectI
     this->MaterialSubmissionDistance = 500.00f;
     this->RecheckBlockedSiteTime = 3.00f;
     this->FuelConsumptionPerCycle = 10;
-    this->SkeletalMesh->SetupAttachment(RootComponent);
-    this->CollisionQueryLocation->SetupAttachment(RootComponent);
     this->ActiveLoop->SetupAttachment(RootComponent);
+    this->CollisionQueryLocation->SetupAttachment(RootComponent);
+    this->SkeletalMesh->SetupAttachment(RootComponent);
     this->TurningLoop->SetupAttachment(RootComponent);
 }
 

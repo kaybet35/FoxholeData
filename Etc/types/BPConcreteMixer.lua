@@ -4,7 +4,7 @@
 ---@field ProducingSFX UWarAudioComponent
 ---@field SkeletalMesh USkeletalMeshComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPConcreteMixer_C = {}
+local ABPConcreteMixer_C = {}
 
 
 

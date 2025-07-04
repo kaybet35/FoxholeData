@@ -8,7 +8,7 @@
 ---@field NoBuildArea UBoxComponent
 ---@field Decal UDecalComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPDestroyedSulfurMine_C = {}
+local ABPDestroyedSulfurMine_C = {}
 
 
 

@@ -4,7 +4,7 @@
 ---@field CraneOccupiableComponentTrigger USeatTriggerComponent
 ---@field CraneOccupiableComponent UStructureSeatComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPStaticCrane_C = {}
+local ABPStaticCrane_C = {}
 
 
 

@@ -29,7 +29,7 @@
 ---@field AnimGraphNode_SequencePlayer_7AE70DAA42222D56828BA6A9EF565ACF FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_D39A786E46B90A0B04C27C85C1058F8C FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_9E7383C740F5DE22F42B359A6A181F35 FAnimNode_StateMachine
-UABP_LightTankWar_C = {}
+local UABP_LightTankWar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LightTankWar_C:AnimGraph(AnimGraph) end

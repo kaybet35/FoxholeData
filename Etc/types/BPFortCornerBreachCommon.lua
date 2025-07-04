@@ -10,7 +10,7 @@
 ---@field LandscapeHole UBoxComponent
 ---@field BoatHull UBoatHullComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCornerBreachCommon_C = {}
+local ABPFortCornerBreachCommon_C = {}
 
 
 

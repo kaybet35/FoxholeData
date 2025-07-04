@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRocketCameraShake_C : UCameraShake
-UBPRocketCameraShake_C = {}
+local UBPRocketCameraShake_C = {}
 
 

@@ -82,7 +82,7 @@
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWTrainStationG1_C = {}
+local AUniqueWTrainStationG1_C = {}
 
 
 

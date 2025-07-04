@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ALetter01_C : ALorePickup
-ALetter01_C = {}
+local ALetter01_C = {}
 
 

@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field SpotLight_Turret USpotLightComponent
 ---@field Light_Turret UStaticMeshComponent
-ABPArmoredCarW_C = {}
+local ABPArmoredCarW_C = {}
 
 ---@param IsOn boolean
 function ABPArmoredCarW_C:BPOnVehicleOn(IsOn) end

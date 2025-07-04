@@ -38,7 +38,7 @@
 ---@field AnimGraphNode_SequencePlayer_F1AD8A934E762EE7F159B79A064E2FF1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_2D8B2CA64AE503CC2049FC8FF04F1E1D FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_9AED3ABA4A6A2C71E22FD5876659A57F FAnimNode_StateMachine
-UABP_TrainHospital_C = {}
+local UABP_TrainHospital_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_TrainHospital_C:AnimGraph(AnimGraph) end

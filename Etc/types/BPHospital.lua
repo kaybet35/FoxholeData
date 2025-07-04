@@ -36,7 +36,7 @@
 ---@field VisibilityToggleArea UVisibilityToggleAreaComponent
 ---@field HospitalRoof UStaticMeshComponent
 ---@field Hospital UStaticMeshComponent
-ABPHospital_C = {}
+local ABPHospital_C = {}
 
 ---@param VisualTeamId int32
 function ABPHospital_C:BPSetTeamVisuals(VisualTeamId) end

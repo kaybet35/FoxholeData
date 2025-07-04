@@ -17,7 +17,7 @@
 ---@field AnimGraphNode_SequencePlayer_8C4A5B1243B0517B39FBB5BA84B585FA FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_DF1B1F5B44AA62E1779271BB0D5217C9 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_CA65EAC7423AD68E714C8BA7C6FD95C4 FAnimNode_SequencePlayer
-UABP_RelicArmouredCar_C = {}
+local UABP_RelicArmouredCar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RelicArmouredCar_C:AnimGraph(AnimGraph) end

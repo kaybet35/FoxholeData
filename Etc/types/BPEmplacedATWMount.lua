@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEmplacedATWMount_C : UHitScanMountComponent
-UBPEmplacedATWMount_C = {}
+local UBPEmplacedATWMount_C = {}
 
 

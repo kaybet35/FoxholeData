@@ -2,7 +2,7 @@
 
 ---@class ABPInfantryMinePickup_C : AGearPickup
 ---@field InfantryMinePickup UStaticMeshComponent
-ABPInfantryMinePickup_C = {}
+local ABPInfantryMinePickup_C = {}
 
 
 

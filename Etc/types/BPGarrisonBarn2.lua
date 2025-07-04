@@ -51,7 +51,7 @@
 ---@field MultiplexedRoof UMultiplexedStaticMeshComponent
 ---@field MultiplexedHouse UMultiplexedStaticMeshComponent
 ---@field Roof UStaticMeshComponent
-ABPGarrisonBarn2_C = {}
+local ABPGarrisonBarn2_C = {}
 
 
 

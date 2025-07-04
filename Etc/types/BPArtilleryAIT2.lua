@@ -7,7 +7,7 @@
 ---@field FortCommonDirtT2 UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field FortCommonMods UTemplateComponent
-ABPArtilleryAIT2_C = {}
+local ABPArtilleryAIT2_C = {}
 
 
 

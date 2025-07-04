@@ -6,7 +6,7 @@
 ---@field AnimGraphNode_SequencePlayer_B4B901FF451B6781DEFE22AE1557FAB3 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_CC8ED5E646568964C35F83B95615FFAF FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByEnum_FCC2EA9041763623ECCB34BEECD13C8D FAnimNode_BlendListByEnum
-UABP_LightMachineGun_C = {}
+local UABP_LightMachineGun_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LightMachineGun_C:AnimGraph(AnimGraph) end

@@ -29,7 +29,7 @@
 ---@field Node01 UStaticMeshComponent
 ---@field Node00 UStaticMeshComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
-ABPResourceContainer_C = {}
+local ABPResourceContainer_C = {}
 
 
 

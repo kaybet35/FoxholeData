@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMechWMachineGunnerComponent_C : UHitScanMountComponent
-UBPMechWMachineGunnerComponent_C = {}
+local UBPMechWMachineGunnerComponent_C = {}
 
 

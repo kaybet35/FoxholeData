@@ -4,7 +4,7 @@
 ---@field Mode EMagicLeapHeadTrackingMode
 ---@field Error EMagicLeapHeadTrackingError
 ---@field Confidence float
-FMagicLeapHeadTrackingState = {}
+local FMagicLeapHeadTrackingState = {}
 
 
 
@@ -15,14 +15,14 @@ FMagicLeapHeadTrackingState = {}
 ---@field BlockDimensions FVector
 ---@field Timestamp FTimespan
 ---@field BlockState EMagicLeapMeshState
-FMagicLeapMeshBlockInfo = {}
+local FMagicLeapMeshBlockInfo = {}
 
 
 
 ---@class FMagicLeapMeshBlockRequest
 ---@field BlockID FGuid
 ---@field LevelOfDetail EMagicLeapMeshLOD
-FMagicLeapMeshBlockRequest = {}
+local FMagicLeapMeshBlockRequest = {}
 
 
 
@@ -32,7 +32,7 @@ FMagicLeapMeshBlockRequest = {}
 ---@field Normal FVector
 ---@field Confidence float
 ---@field UserData int32
-FMagicLeapRaycastHitResult = {}
+local FMagicLeapRaycastHitResult = {}
 
 
 
@@ -45,21 +45,21 @@ FMagicLeapRaycastHitResult = {}
 ---@field HorizontalFovDegrees float
 ---@field CollideWithUnobserved boolean
 ---@field UserData int32
-FMagicLeapRaycastQueryParams = {}
+local FMagicLeapRaycastQueryParams = {}
 
 
 
 ---@class FMagicLeapTrackingMeshInfo
 ---@field Timestamp FTimespan
 ---@field BlockData TArray<FMagicLeapMeshBlockInfo>
-FMagicLeapTrackingMeshInfo = {}
+local FMagicLeapTrackingMeshInfo = {}
 
 
 
 ---@class FPurchaseConfirmation
 ---@field PackageName FString
 ---@field Type PurchaseType
-FPurchaseConfirmation = {}
+local FPurchaseConfirmation = {}
 
 
 
@@ -67,12 +67,12 @@ FPurchaseConfirmation = {}
 ---@field Price FString
 ---@field Name FString
 ---@field Type PurchaseType
-FPurchaseItemDetails = {}
+local FPurchaseItemDetails = {}
 
 
 
 ---@class IMagicLeapMeshBlockSelectorInterface : IInterface
-IMagicLeapMeshBlockSelectorInterface = {}
+local IMagicLeapMeshBlockSelectorInterface = {}
 
 ---@param NewMeshInfo FMagicLeapTrackingMeshInfo
 ---@param RequestedMesh TArray<FMagicLeapMeshBlockRequest>
@@ -87,7 +87,7 @@ function IMagicLeapMeshBlockSelectorInterface:SelectMeshBlocks(NewMeshInfo, Requ
 ---@field PurchaseConfirmationFailure FInAppPurchaseComponentPurchaseConfirmationFailure
 ---@field GetPurchaseHistorySuccess FInAppPurchaseComponentGetPurchaseHistorySuccess
 ---@field GetPurchaseHistoryFailure FInAppPurchaseComponentGetPurchaseHistoryFailure
-UInAppPurchaseComponent = {}
+local UInAppPurchaseComponent = {}
 
 ---@param ItemDetails FPurchaseItemDetails
 ---@return boolean
@@ -115,12 +115,12 @@ function UInAppPurchaseComponent:GetItemsDetailsFailure__DelegateSignature() end
 ---@field DeviceHasReactivatedDelegate FLuminApplicationLifecycleComponentDeviceHasReactivatedDelegate
 ---@field DeviceWillEnterRealityModeDelegate FLuminApplicationLifecycleComponentDeviceWillEnterRealityModeDelegate
 ---@field DeviceWillGoInStandbyDelegate FLuminApplicationLifecycleComponentDeviceWillGoInStandbyDelegate
-ULuminApplicationLifecycleComponent = {}
+local ULuminApplicationLifecycleComponent = {}
 
 
 
 ---@class UMagicLeapHMDFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapHMDFunctionLibrary = {}
+local UMagicLeapHMDFunctionLibrary = {}
 
 ---@param InStabilizationDepthActor AActor
 ---@param bSetFocusActor boolean
@@ -159,12 +159,12 @@ function UMagicLeapHMDFunctionLibrary:GetHeadTrackingMapEvents(MapEvents) end
 ---@field OnHeadTrackingRecovered FMagicLeapHeadTrackingNotificationsComponentOnHeadTrackingRecovered
 ---@field OnHeadTrackingRecoveryFailed FMagicLeapHeadTrackingNotificationsComponentOnHeadTrackingRecoveryFailed
 ---@field OnHeadTrackingNewSessionStarted FMagicLeapHeadTrackingNotificationsComponentOnHeadTrackingNewSessionStarted
-UMagicLeapHeadTrackingNotificationsComponent = {}
+local UMagicLeapHeadTrackingNotificationsComponent = {}
 
 
 
 ---@class UMagicLeapRaycastComponent : UActorComponent
-UMagicLeapRaycastComponent = {}
+local UMagicLeapRaycastComponent = {}
 
 ---@param RequestParams FMagicLeapRaycastQueryParams
 ---@param ResultDelegate FRequestRaycastResultDelegate
@@ -175,7 +175,7 @@ function UMagicLeapRaycastComponent:RaycastResultDelegate__DelegateSignature(Hit
 
 
 ---@class UMagicLeapRaycastFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapRaycastFunctionLibrary = {}
+local UMagicLeapRaycastFunctionLibrary = {}
 
 ---@param Position FVector
 ---@param Direction FVector
@@ -193,7 +193,7 @@ function UMagicLeapRaycastFunctionLibrary:MakeRaycastQueryParams(Position, Direc
 ---@field bEnableZI boolean
 ---@field bUseVulkanForZI boolean
 ---@field bUseMLAudioForZI boolean
-UMagicLeapSettings = {}
+local UMagicLeapSettings = {}
 
 
 
@@ -215,7 +215,7 @@ UMagicLeapSettings = {}
 ---@field RemoveOverlappingTriangles boolean
 ---@field MRMesh UMRMeshComponent
 ---@field BricksPerFrame int32
-UMeshTrackerComponent = {}
+local UMeshTrackerComponent = {}
 
 ---@param NewMeshInfo FMagicLeapTrackingMeshInfo
 ---@param RequestedMesh TArray<FMagicLeapMeshBlockRequest>

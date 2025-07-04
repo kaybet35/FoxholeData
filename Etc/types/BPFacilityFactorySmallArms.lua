@@ -21,7 +21,7 @@
 ---@field PointLight UPointLightComponent
 ---@field FoundationDecal UDecalComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityFactorySmallArms_C = {}
+local ABPFacilityFactorySmallArms_C = {}
 
 
 

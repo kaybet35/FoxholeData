@@ -9,7 +9,7 @@
 ---@field LandscapeCheck1 UBuildSocketComponent
 ---@field LandscapeCheck UBuildSocketComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPFirePitT2_C = {}
+local ABPFirePitT2_C = {}
 
 
 

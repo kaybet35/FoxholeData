@@ -9,7 +9,7 @@
 ---@field ModMesh UStaticMeshComponent
 ---@field PipeOutput0 UBPStructurePipelineOutput_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityMineOilFracker_C = {}
+local ABPFacilityMineOilFracker_C = {}
 
 
 

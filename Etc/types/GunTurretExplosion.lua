@@ -3,7 +3,7 @@
 ---@class AGunTurretExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AGunTurretExplosion_C = {}
+local AGunTurretExplosion_C = {}
 
 function AGunTurretExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

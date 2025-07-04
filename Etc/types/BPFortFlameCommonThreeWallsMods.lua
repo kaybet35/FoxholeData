@@ -5,7 +5,7 @@
 ---@field LeftModSlot UBPFortWallModSlotMinimal_C
 ---@field FrontModSlot UBPFortWallModSlotMinimal_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortFlameCommonThreeWallsMods_C = {}
+local ABPFortFlameCommonThreeWallsMods_C = {}
 
 
 

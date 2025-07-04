@@ -9,7 +9,7 @@
 ---@field Timeline_0_NewTrack_0_D3521A74464CB0BCF5D9B8AE945964CD FVector
 ---@field Timeline_0__Direction_D3521A74464CB0BCF5D9B8AE945964CD ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPCoalResource_C = {}
+local ABPCoalResource_C = {}
 
 function ABPCoalResource_C:Timeline_0__FinishedFunc() end
 function ABPCoalResource_C:Timeline_0__UpdateFunc() end

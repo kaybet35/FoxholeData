@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFieldMultiWDriverComponent_C : UMountComponent
-UBPFieldMultiWDriverComponent_C = {}
+local UBPFieldMultiWDriverComponent_C = {}
 
 

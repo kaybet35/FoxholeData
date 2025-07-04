@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field PassengerSeat2 UVehicleSeatComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPLightTankOffensiveC_C = {}
+local ABPLightTankOffensiveC_C = {}
 
 ---@param IsOn boolean
 function ABPLightTankOffensiveC_C:BPOnVehicleOn(IsOn) end

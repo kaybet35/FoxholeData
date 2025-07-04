@@ -3,7 +3,7 @@
 ---@class ABPRockLarge_C : AWall
 ---@field RockTop UStaticMeshComponent
 ---@field Rock UStaticMeshComponent
-ABPRockLarge_C = {}
+local ABPRockLarge_C = {}
 
 
 

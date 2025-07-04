@@ -17,7 +17,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field PostProcess UPostProcessComponent
 ---@field Sphere1 USphereComponent
-ABPRocketGroundZero_C = {}
+local ABPRocketGroundZero_C = {}
 
 
 

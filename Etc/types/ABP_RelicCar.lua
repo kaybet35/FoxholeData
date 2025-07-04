@@ -13,7 +13,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_8A3E76604F9FDFB171C28EB44E94910C FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_3625F772458E4D17CADDA78E8779584B FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_10351D1B4B1F68F32EC9B7950A75C74D FAnimNode_RotationOffsetBlendSpace
-UABP_RelicCar_C = {}
+local UABP_RelicCar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_RelicCar_C:AnimGraph(AnimGraph) end

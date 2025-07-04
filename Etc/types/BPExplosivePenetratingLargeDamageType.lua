@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPExplosivePenetratingLargeDamageType_C : USimDamageType
-UBPExplosivePenetratingLargeDamageType_C = {}
+local UBPExplosivePenetratingLargeDamageType_C = {}
 
 

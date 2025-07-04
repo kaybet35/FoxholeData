@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMetalBeamMaterialsComponent_C : ULargeMaterialComponent
-UBPMetalBeamMaterialsComponent_C = {}
+local UBPMetalBeamMaterialsComponent_C = {}
 
 

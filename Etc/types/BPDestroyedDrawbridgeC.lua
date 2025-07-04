@@ -7,7 +7,7 @@
 ---@field BelowBlockingA UBoxComponent
 ---@field SideB UStaticMeshComponent
 ---@field SideA UStaticMeshComponent
-ABPDestroyedDrawbridgeC_C = {}
+local ABPDestroyedDrawbridgeC_C = {}
 
 
 

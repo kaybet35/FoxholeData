@@ -2,7 +2,7 @@
 
 ---@class ABPArmoredCarTwinCRPGProjectile_C : AWarProjectile
 ---@field Mesh UStaticMeshComponent
-ABPArmoredCarTwinCRPGProjectile_C = {}
+local ABPArmoredCarTwinCRPGProjectile_C = {}
 
 
 

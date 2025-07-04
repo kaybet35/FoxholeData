@@ -5,7 +5,7 @@
 ---@field LadderSpawnLocation USceneComponent
 ---@field Roof UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortT2LadderRoof_C = {}
+local ABPFortT2LadderRoof_C = {}
 
 
 

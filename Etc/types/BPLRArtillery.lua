@@ -14,7 +14,7 @@
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPLRArtillery_C = {}
+local ABPLRArtillery_C = {}
 
 ---@param VisualTeamId int32
 function ABPLRArtillery_C:BPSetTeamVisuals(VisualTeamId) end

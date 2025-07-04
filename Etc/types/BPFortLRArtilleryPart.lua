@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFortLRArtilleryPart_C : ABPFortPartBase_C
-ABPFortLRArtilleryPart_C = {}
+local ABPFortLRArtilleryPart_C = {}
 
 

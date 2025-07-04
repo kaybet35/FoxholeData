@@ -8,7 +8,7 @@
 ---@field PipeInput1 UBPStructurePipelineInput_C
 ---@field ModMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefineryOilReformer_C = {}
+local ABPFacilityRefineryOilReformer_C = {}
 
 
 

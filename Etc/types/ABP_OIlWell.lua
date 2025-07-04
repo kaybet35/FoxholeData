@@ -6,7 +6,7 @@
 ---@field AnimGraphNode_BlendListByBool_1E14B3484208EE358512058422C836AA FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_A6A583284871B4792BA92EA999003EFF FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_FA394A9E47F06A63CC37359BA7CEAEF9 FAnimNode_BlendSpacePlayer
-UABP_OIlWell_C = {}
+local UABP_OIlWell_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_OIlWell_C:AnimGraph(AnimGraph) end

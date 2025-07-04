@@ -13,7 +13,7 @@
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field FortCommonMods UTemplateComponent
 ---@field FortCommon UTemplateComponent
-ABPMGAIT3_C = {}
+local ABPMGAIT3_C = {}
 
 
 

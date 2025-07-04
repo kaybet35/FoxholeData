@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_StateResult_E6FBF3B04E01A5E0DDFEC6AC1E59541E FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_EE653F984F39BD7EED2D3FB0FE3E0470 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_7A5B62524FED6E6E8CD35C953148A2A5 FAnimNode_StateMachine
-UABP_Tripod_C = {}
+local UABP_Tripod_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Tripod_C:AnimGraph(AnimGraph) end

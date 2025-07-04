@@ -5,7 +5,7 @@
 ---@field LeftModSlot UBPFortWallModSlot_C
 ---@field RightModSlot UBPFortWallModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortRampCommonMods_C = {}
+local ABPFortRampCommonMods_C = {}
 
 
 

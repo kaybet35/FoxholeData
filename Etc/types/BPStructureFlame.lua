@@ -9,7 +9,7 @@
 ---@field FireLow UParticleSystemComponent
 ---@field DefaultSceneRoot USceneComponent
 ---@field Flames TArray<UParticleSystemComponent>
-ABPStructureFlame_C = {}
+local ABPStructureFlame_C = {}
 
 function ABPStructureFlame_C:ReceiveBeginPlay() end
 ---@param Previous uint8

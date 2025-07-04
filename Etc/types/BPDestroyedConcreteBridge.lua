@@ -7,7 +7,7 @@
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field BridgeMesh UStaticMeshComponent
-ABPDestroyedConcreteBridge_C = {}
+local ABPDestroyedConcreteBridge_C = {}
 
 
 

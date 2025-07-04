@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPMortarPickup_C : AFirearmPickup
-ABPMortarPickup_C = {}
+local ABPMortarPickup_C = {}
 
 

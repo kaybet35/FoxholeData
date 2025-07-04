@@ -83,7 +83,7 @@
 ---@field AnimGraphNode_StateResult_BCDE640C4EE377F7B90033BE18306809 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_90A84A92471620DEC5D483873F406D3A FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_A81296C148FA3845067053A54B838B64 FAnimNode_StateMachine
-UABP_Submarine_C = {}
+local UABP_Submarine_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Submarine_C:AnimGraph(AnimGraph) end

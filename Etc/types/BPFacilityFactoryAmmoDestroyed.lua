@@ -5,7 +5,7 @@
 ---@field Decal5 UDecalComponent
 ---@field Decal4 UDecalComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityFactoryAmmoDestroyed_C = {}
+local ABPFacilityFactoryAmmoDestroyed_C = {}
 
 
 

@@ -107,7 +107,7 @@
 ---@field StaticMesh UStaticMeshComponent
 ---@field FactoryRoof UStaticMeshComponent
 ---@field Factory UStaticMeshComponent
-ABPVehicleFactory_C = {}
+local ABPVehicleFactory_C = {}
 
 function ABPVehicleFactory_C:Deprecated() end
 ---@param VisualTeamId int32

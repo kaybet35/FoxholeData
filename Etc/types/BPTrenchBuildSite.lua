@@ -19,7 +19,7 @@
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
 ---@field WorkBox UBoxComponent
-ABPTrenchBuildSite_C = {}
+local ABPTrenchBuildSite_C = {}
 
 
 

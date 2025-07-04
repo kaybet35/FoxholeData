@@ -9,7 +9,7 @@
 ---@field Decal UDecalComponent
 ---@field MineMesh USkeletalMeshComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPFacilityMineOil_C = {}
+local ABPFacilityMineOil_C = {}
 
 
 

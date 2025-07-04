@@ -6,7 +6,7 @@
 ---@field RightDefenseModSlot UBPFortDefenseModSlot_C
 ---@field BackDefenseModSlot UBPFortDefenseModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortRampCommonDefenseMods_C = {}
+local ABPFortRampCommonDefenseMods_C = {}
 
 
 

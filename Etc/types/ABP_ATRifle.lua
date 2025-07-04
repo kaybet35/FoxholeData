@@ -86,7 +86,7 @@
 ---@field AnimGraphNode_StateMachine_1F5AC3BB4D447EF486273C9CB80E918C FAnimNode_StateMachine
 ---@field AnimGraphNode_LayeredBoneBlend_85827ED14254F4EC88E675814AF58AD5 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_7B27502543ED62454D9C9DAC58C59CC8 FAnimNode_SequencePlayer
-UABP_ATRifle_C = {}
+local UABP_ATRifle_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ATRifle_C:AnimGraph(AnimGraph) end

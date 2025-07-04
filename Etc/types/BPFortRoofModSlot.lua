@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFortRoofModSlot_C : ULadderModificationSlotComponent
-UBPFortRoofModSlot_C = {}
+local UBPFortRoofModSlot_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPFortT2Fill_C : ABPFortT2_C
-ABPFortT2Fill_C = {}
+local ABPFortT2Fill_C = {}
 
 

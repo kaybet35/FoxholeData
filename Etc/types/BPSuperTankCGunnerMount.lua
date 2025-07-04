@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSuperTankCGunnerMount_C : UTankGunnerMountComponent
-UBPSuperTankCGunnerMount_C = {}
+local UBPSuperTankCGunnerMount_C = {}
 
 

@@ -7,7 +7,7 @@
 ---@field LightRear_R UPointLightComponent
 ---@field RearLight_R UStaticMeshComponent
 ---@field TowHitchUse UTowHitchUseComponent
-ABPTruckMobilityC_C = {}
+local ABPTruckMobilityC_C = {}
 
 ---@param IsOn boolean
 function ABPTruckMobilityC_C:BPOnVehicleOn(IsOn) end

@@ -2,7 +2,7 @@
 
 ---@class ABPMotorboatVehicleProxyGhost_C : ABuildGhost
 ---@field StaticMesh UStaticMeshComponent
-ABPMotorboatVehicleProxyGhost_C = {}
+local ABPMotorboatVehicleProxyGhost_C = {}
 
 
 

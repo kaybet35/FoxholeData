@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_SequencePlayer_AEEAE57146EEA701E0FDDF90DA2EF3CE FAnimNode_SequencePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_B64BC70647A5FE2127B05A93DB0D8149 FAnimNode_LayeredBoneBlend
 ---@field IsActive boolean
-UABP_SulfurMine_C = {}
+local UABP_SulfurMine_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_SulfurMine_C:AnimGraph(AnimGraph) end

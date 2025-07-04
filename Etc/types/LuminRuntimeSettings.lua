@@ -6,14 +6,14 @@
 ---@field ExecutableName FString
 ---@field ComponentType ELuminComponentType
 ---@field ExtraComponentSubElements TArray<FLuminComponentSubElement>
-FLuminComponentElement = {}
+local FLuminComponentElement = {}
 
 
 
 ---@class FLuminComponentSubElement
 ---@field ElementType ELuminComponentSubElementType
 ---@field Value FString
-FLuminComponentSubElement = {}
+local FLuminComponentSubElement = {}
 
 
 
@@ -40,7 +40,7 @@ FLuminComponentSubElement = {}
 ---@field bRemoveDebugInfo boolean
 ---@field VulkanValidationLayerLibs FDirectoryPath
 ---@field bFrameVignette boolean
-ULuminRuntimeSettings = {}
+local ULuminRuntimeSettings = {}
 
 
 

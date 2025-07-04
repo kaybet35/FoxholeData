@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEmplacedLightArtilleryWGunner_C : UArtilleryGunnerMountComponent
-UBPEmplacedLightArtilleryWGunner_C = {}
+local UBPEmplacedLightArtilleryWGunner_C = {}
 
 

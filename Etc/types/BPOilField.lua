@@ -5,7 +5,7 @@
 ---@field WornDecal1 UDecalComponent
 ---@field WornDecal UDecalComponent
 ---@field Decal UDecalComponent
-ABPOilField_C = {}
+local ABPOilField_C = {}
 
 
 

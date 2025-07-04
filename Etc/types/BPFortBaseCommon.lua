@@ -6,7 +6,7 @@
 ---@field LandscapeHoleFront UBoxComponent
 ---@field LandscapeHole UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortBaseCommon_C = {}
+local ABPFortBaseCommon_C = {}
 
 
 

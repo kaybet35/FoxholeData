@@ -3,7 +3,7 @@
 ---@class ABPLightTankMobilityC_C : ABPLightTankBaseC_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field mainBody USkeletalMeshComponent
-ABPLightTankMobilityC_C = {}
+local ABPLightTankMobilityC_C = {}
 
 ---@param IsOn boolean
 function ABPLightTankMobilityC_C:BPOnVehicleOn(IsOn) end

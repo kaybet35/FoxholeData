@@ -29,7 +29,7 @@
 ---@field BusIdle UAudioComponent
 ---@field Exhaust UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPBusC_C = {}
+local ABPBusC_C = {}
 
 ---@param IsOn boolean
 function ABPBusC_C:BPOnVehicleOn(IsOn) end

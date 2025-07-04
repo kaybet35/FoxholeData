@@ -48,7 +48,7 @@
 ---@field Decal12 UDecalComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWWaterMillG1Destroyed_C = {}
+local AUniqueWWaterMillG1Destroyed_C = {}
 
 
 

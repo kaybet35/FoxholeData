@@ -3,7 +3,7 @@
 ---@class ABPDestroyedGarage_C : ADestroyedStorageFacility
 ---@field Decal UDecalComponent
 ---@field StorageFaciltyDestoryed UStaticMeshComponent
-ABPDestroyedGarage_C = {}
+local ABPDestroyedGarage_C = {}
 
 
 

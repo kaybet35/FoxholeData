@@ -7,7 +7,7 @@
 ---@field Fire UAudioComponent
 ---@field NoMansLandSplinter UParticleSystemComponent
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPCypressTree02Replacement_C = {}
+local ABPCypressTree02Replacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPCypressTree02Replacement_C:OnStateChanged(State) end

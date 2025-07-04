@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_BlendListByBool_32D06D034F5ED9DAD63036865284D2B7 FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_974A6DB64C9CE4DD5580FEB374581EEE FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_8F77D209412767A0B657558F1322BA1F FAnimNode_RotationOffsetBlendSpace
-UABP_HeavyTruckW_C = {}
+local UABP_HeavyTruckW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_HeavyTruckW_C:AnimGraph(AnimGraph) end

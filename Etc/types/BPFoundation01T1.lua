@@ -13,7 +13,7 @@
 ---@field LeftSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
 ---@field BackSocket UBuildSocketComponent
-ABPFoundation01T1_C = {}
+local ABPFoundation01T1_C = {}
 
 
 

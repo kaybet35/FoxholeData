@@ -6,7 +6,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortBreachedCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPFortDestroyedT1_C = {}
+local ABPFortDestroyedT1_C = {}
 
 
 

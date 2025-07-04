@@ -30,7 +30,7 @@
 ---@field AnimGraphNode_SequencePlayer_C5F1E396485CE5D877D24FA0FF6476FA FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_D031EDB842C1AE1E7CC9F6B8568014AD FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_C63C2D8C409B462C7F6512BA59AE5A1F FAnimNode_BlendListByBool
-UABP_ScoutTankW_C = {}
+local UABP_ScoutTankW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_ScoutTankW_C:AnimGraph(AnimGraph) end

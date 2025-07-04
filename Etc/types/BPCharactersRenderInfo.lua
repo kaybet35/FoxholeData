@@ -2,7 +2,7 @@
 
 ---@class ABPCharactersRenderInfo_C : ACharactersRenderInfo
 ---@field DefaultSceneRoot USceneComponent
-ABPCharactersRenderInfo_C = {}
+local ABPCharactersRenderInfo_C = {}
 
 
 

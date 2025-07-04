@@ -3,7 +3,7 @@
 ---@class FCachedPropertyPath
 ---@field Segments TArray<FPropertyPathSegment>
 ---@field CachedFunction UFunction
-FCachedPropertyPath = {}
+local FCachedPropertyPath = {}
 
 
 
@@ -12,7 +12,7 @@ FCachedPropertyPath = {}
 ---@field ArrayIndex int32
 ---@field Struct UStruct
 ---@field Field UField
-FPropertyPathSegment = {}
+local FPropertyPathSegment = {}
 
 
 

@@ -13,7 +13,7 @@
 ---@field Decal UDecalComponent
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AUniqueWBellTowerG1Destroyed_C = {}
+local AUniqueWBellTowerG1Destroyed_C = {}
 
 
 

@@ -30,7 +30,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_35B336DF495C909986A017AA94C194B4 FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_SequencePlayer_46E7C87A4035A73E44E82D807DF59ECF FAnimNode_SequencePlayer
 ---@field WheelRotationSpeedFactor int32
-UABP_LargeFieldMortarC_C = {}
+local UABP_LargeFieldMortarC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeFieldMortarC_C:AnimGraph(AnimGraph) end

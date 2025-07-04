@@ -7,7 +7,7 @@
 ---@field Timeline_0_NewTrack_0_AAC7D47F4777C9656C25519A5ECF757D FVector
 ---@field Timeline_0__Direction_AAC7D47F4777C9656C25519A5ECF757D ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPOilResource_C = {}
+local ABPOilResource_C = {}
 
 ---@param IsEnabled boolean
 ---@param Mesh UStaticMeshComponent

@@ -6,7 +6,7 @@
 ---@field BreachedLeft UStaticMeshComponent
 ---@field BreachedBack UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCommonT3BreachedWalls_C = {}
+local ABPFortCommonT3BreachedWalls_C = {}
 
 
 

@@ -27,11 +27,11 @@ ARailVehicle::ARailVehicle(const FObjectInitializer& ObjectInitializer) : Super(
     this->LastRearBogieTrack = NULL;
     this->bIsBoosting = false;
     this->BorderTravelOverrideExtent = 0.00f;
-    this->IdleLoop->SetupAttachment(RootComponent);
     this->BrakeLoop->SetupAttachment(RootComponent);
     this->FrontClacks->SetupAttachment(RootComponent);
-    this->RearClacks->SetupAttachment(RootComponent);
     this->FrontCoupler->SetupAttachment(RootComponent);
+    this->IdleLoop->SetupAttachment(RootComponent);
+    this->RearClacks->SetupAttachment(RootComponent);
     this->RearCoupler->SetupAttachment(RootComponent);
 }
 

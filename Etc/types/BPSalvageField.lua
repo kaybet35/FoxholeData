@@ -3,7 +3,7 @@
 ---@class ABPSalvageField_C : AResourceField
 ---@field Sphere USphereComponent
 ---@field Decal UDecalComponent
-ABPSalvageField_C = {}
+local ABPSalvageField_C = {}
 
 
 

@@ -10,7 +10,7 @@
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field Camera UCameraComponent
-ABPLargeFieldLightArtilleryC_C = {}
+local ABPLargeFieldLightArtilleryC_C = {}
 
 
 

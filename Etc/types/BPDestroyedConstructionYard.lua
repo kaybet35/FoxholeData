@@ -30,7 +30,7 @@
 ---@field Decal UDecalComponent
 ---@field ConstructionYardDestroyed UStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPDestroyedConstructionYard_C = {}
+local ABPDestroyedConstructionYard_C = {}
 
 
 

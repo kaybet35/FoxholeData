@@ -5,7 +5,7 @@
 ---@field GunnerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field chassis USkeletalMeshComponent
-ABPMediumTank2BaseW_C = {}
+local ABPMediumTank2BaseW_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTank2BaseW_C:BPOnVehicleOn(IsOn) end

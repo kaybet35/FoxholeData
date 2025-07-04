@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRPGTWMountComponent_C : UProjectileGunnerMountComponent
-UBPRPGTWMountComponent_C = {}
+local UBPRPGTWMountComponent_C = {}
 
 

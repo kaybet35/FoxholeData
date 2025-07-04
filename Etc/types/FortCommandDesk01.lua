@@ -8,7 +8,7 @@
 ---@field StaticMesh4 UStaticMeshComponent
 ---@field Collision UBoxComponent
 ---@field DefaultSceneRoot USceneComponent
-AFortCommandDesk01_C = {}
+local AFortCommandDesk01_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPShrapnelDamageType_C : USimDamageType
-UBPShrapnelDamageType_C = {}
+local UBPShrapnelDamageType_C = {}
 
 

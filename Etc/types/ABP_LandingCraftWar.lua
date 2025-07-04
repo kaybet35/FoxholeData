@@ -9,7 +9,7 @@
 ---@field AnimGraphNode_SequencePlayer_2C153BC14E332834479876ACDCD23D5A FAnimNode_SequencePlayer
 ---@field AnimGraphNode_SequencePlayer_6EEF8D0947DF6DA73469E2BBC78CA400 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_ApplyAdditive_8C41B62A46C16FC3D27488B82E604A5C FAnimNode_ApplyAdditive
-UABP_LandingCraftWar_C = {}
+local UABP_LandingCraftWar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LandingCraftWar_C:AnimGraph(AnimGraph) end

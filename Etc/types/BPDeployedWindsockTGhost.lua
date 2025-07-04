@@ -6,7 +6,7 @@
 ---@field BuildSocket UBuildSocketComponent
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPDeployedWindsockTGhost_C = {}
+local ABPDeployedWindsockTGhost_C = {}
 
 
 

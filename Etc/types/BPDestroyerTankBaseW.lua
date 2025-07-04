@@ -15,7 +15,7 @@
 ---@field LightTurret UStaticMeshComponent
 ---@field GunnerSeat1 UVehicleSeatComponent
 ---@field DriverSeat0 UVehicleSeatComponent
-ABPDestroyerTankBaseW_C = {}
+local ABPDestroyerTankBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPDestroyerTankBaseW_C:BPOnVehicleOn(IsOn) end

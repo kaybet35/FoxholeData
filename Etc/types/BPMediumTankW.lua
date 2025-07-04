@@ -6,7 +6,7 @@
 ---@field SpotLightTurret USpotLightComponent
 ---@field LightTurret UStaticMeshComponent
 ---@field chassis_0 USkeletalMeshComponent
-ABPMediumTankW_C = {}
+local ABPMediumTankW_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTankW_C:BPOnVehicleOn(IsOn) end

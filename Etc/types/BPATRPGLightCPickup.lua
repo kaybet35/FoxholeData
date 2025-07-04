@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPATRPGLightCPickup_C : AFirearmPickup
-ABPATRPGLightCPickup_C = {}
+local ABPATRPGLightCPickup_C = {}
 
 

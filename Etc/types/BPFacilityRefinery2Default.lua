@@ -6,7 +6,7 @@
 ---@field FoundationDecal UDecalComponent
 ---@field FacilityRefinery2UpgradeMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery2Default_C = {}
+local ABPFacilityRefinery2Default_C = {}
 
 
 

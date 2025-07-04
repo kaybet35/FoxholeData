@@ -3,7 +3,7 @@
 ---@class FMagicLeapEyeBlinkState
 ---@field LeftEyeBlinked boolean
 ---@field RightEyeBlinked boolean
-FMagicLeapEyeBlinkState = {}
+local FMagicLeapEyeBlinkState = {}
 
 
 
@@ -11,12 +11,12 @@ FMagicLeapEyeBlinkState = {}
 ---@field FixationDepthIsUncomfortable boolean
 ---@field FixationDepthViolationHasOccurred boolean
 ---@field RemainingTimeAtUncomfortableDepth float
-FMagicLeapFixationComfort = {}
+local FMagicLeapFixationComfort = {}
 
 
 
 ---@class UMagicLeapEyeTrackerFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapEyeTrackerFunctionLibrary = {}
+local UMagicLeapEyeTrackerFunctionLibrary = {}
 
 ---@param FixationComfort FMagicLeapFixationComfort
 ---@return boolean

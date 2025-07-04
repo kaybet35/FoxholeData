@@ -3,7 +3,7 @@
 ---@class AGeometryCollectionActor : AActor
 ---@field GeometryCollectionComponent UGeometryCollectionComponent
 ---@field GeometryCollectionDebugDrawComponent UGeometryCollectionDebugDrawComponent
-AGeometryCollectionActor = {}
+local AGeometryCollectionActor = {}
 
 ---@param Start FVector
 ---@param End FVector
@@ -74,7 +74,7 @@ function AGeometryCollectionActor:RaycastSingle(Start, End, OutHit) end
 ---@field VertexIndexColor FColor
 ---@field VertexNormalColor FColor
 ---@field SpriteComponent UBillboardComponent
-AGeometryCollectionDebugDrawActor = {}
+local AGeometryCollectionDebugDrawActor = {}
 
 
 
@@ -85,7 +85,7 @@ AGeometryCollectionDebugDrawActor = {}
 ---@field Isovalue float
 ---@field Enabled boolean
 ---@field RenderVolumeBoundingBox boolean
-AGeometryCollectionRenderLevelSetActor = {}
+local AGeometryCollectionRenderLevelSetActor = {}
 
 
 
@@ -94,7 +94,7 @@ AGeometryCollectionRenderLevelSetActor = {}
 ---@field Velocity FVector
 ---@field Mass float
 ---@field ParticleIndex int32
-FChaosBreakingEventData = {}
+local FChaosBreakingEventData = {}
 
 
 
@@ -105,7 +105,7 @@ FChaosBreakingEventData = {}
 ---@field MinMass float
 ---@field MaxDistance float
 ---@field SortMethod EChaosBreakingSortMethod
-FChaosBreakingEventRequestSettings = {}
+local FChaosBreakingEventRequestSettings = {}
 
 
 
@@ -117,7 +117,7 @@ FChaosBreakingEventRequestSettings = {}
 ---@field Mass1 float
 ---@field Mass2 float
 ---@field Impulse FVector
-FChaosCollisionEventData = {}
+local FChaosCollisionEventData = {}
 
 
 
@@ -128,7 +128,7 @@ FChaosCollisionEventData = {}
 ---@field MinImpulse float
 ---@field MaxDistance float
 ---@field SortMethod EChaosCollisionSortMethod
-FChaosCollisionEventRequestSettings = {}
+local FChaosCollisionEventRequestSettings = {}
 
 
 
@@ -138,7 +138,7 @@ FChaosCollisionEventRequestSettings = {}
 ---@field AngularVelocity FVector
 ---@field Mass float
 ---@field ParticleIndex int32
-FChaosTrailingEventData = {}
+local FChaosTrailingEventData = {}
 
 
 
@@ -149,7 +149,7 @@ FChaosTrailingEventData = {}
 ---@field MinAngularSpeed float
 ---@field MaxDistance float
 ---@field SortMethod EChaosTrailingSortMethod
-FChaosTrailingEventRequestSettings = {}
+local FChaosTrailingEventRequestSettings = {}
 
 
 
@@ -174,7 +174,7 @@ FChaosTrailingEventRequestSettings = {}
 ---@field TrailingDataSizeMax int32
 ---@field TrailingMinSpeedThreshold float
 ---@field TrailingMinVolumeThreshold float
-FGeomComponentCacheParameters = {}
+local FGeomComponentCacheParameters = {}
 
 
 
@@ -182,12 +182,12 @@ FGeomComponentCacheParameters = {}
 ---@field ID int32
 ---@field Solver AChaosSolverActor
 ---@field GeometryCollection AGeometryCollectionActor
-FGeometryCollectionDebugDrawActorSelectedRigidBody = {}
+local FGeometryCollectionDebugDrawActorSelectedRigidBody = {}
 
 
 
 ---@class FGeometryCollectionDebugDrawWarningMessage
-FGeometryCollectionDebugDrawWarningMessage = {}
+local FGeometryCollectionDebugDrawWarningMessage = {}
 
 
 ---@class FGeometryCollectionSizeSpecificData
@@ -201,7 +201,7 @@ FGeometryCollectionDebugDrawWarningMessage = {}
 ---@field CollisionObjectReductionPercentage int32
 ---@field CollisionParticlesFraction float
 ---@field MaximumCollisionParticles int32
-FGeometryCollectionSizeSpecificData = {}
+local FGeometryCollectionSizeSpecificData = {}
 
 
 
@@ -217,7 +217,7 @@ FGeometryCollectionSizeSpecificData = {}
 ---@field OnCollisionEvents FChaosDestructionListenerOnCollisionEvents
 ---@field OnBreakingEvents FChaosDestructionListenerOnBreakingEvents
 ---@field OnTrailingEvents FChaosDestructionListenerOnTrailingEvents
-UChaosDestructionListener = {}
+local UChaosDestructionListener = {}
 
 ---@param TrailingEvents TArray<FChaosTrailingEventData>
 ---@param SortMethod EChaosTrailingSortMethod
@@ -272,7 +272,7 @@ function UChaosDestructionListener:AddChaosSolverActor(ChaosSolverActor) end
 ---@field PersistentGuid FGuid
 ---@field StateGuid FGuid
 ---@field BoneSelectedMaterialIndex int32
-UGeometryCollection = {}
+local UGeometryCollection = {}
 
 
 
@@ -280,7 +280,7 @@ UGeometryCollection = {}
 ---@field RecordedData FRecordedTransformTrack
 ---@field SupportedCollection UGeometryCollection
 ---@field CompatibleCollectionState FGuid
-UGeometryCollectionCache = {}
+local UGeometryCollectionCache = {}
 
 
 
@@ -311,7 +311,7 @@ UGeometryCollectionCache = {}
 ---@field bNotifyBreaks boolean
 ---@field bNotifyCollisions boolean
 ---@field DummyBodySetup UBodySetup
-UGeometryCollectionComponent = {}
+local UGeometryCollectionComponent = {}
 
 ---@param bNewNotifyBreaks boolean
 function UGeometryCollectionComponent:SetNotifyBreaks(bNewNotifyBreaks) end
@@ -334,7 +334,7 @@ function UGeometryCollectionComponent:ApplyKinematicField(Radius, Position) end
 ---@class UGeometryCollectionDebugDrawComponent : UActorComponent
 ---@field GeometryCollectionDebugDrawActor AGeometryCollectionDebugDrawActor
 ---@field GeometryCollectionRenderLevelSetActor AGeometryCollectionRenderLevelSetActor
-UGeometryCollectionDebugDrawComponent = {}
+local UGeometryCollectionDebugDrawComponent = {}
 
 
 
@@ -359,7 +359,7 @@ UGeometryCollectionDebugDrawComponent = {}
 ---@field InitialLinearVelocity FVector
 ---@field InitialAngularVelocity FVector
 ---@field OnChaosPhysicsCollision FSkeletalMeshSimulationComponentOnChaosPhysicsCollision
-USkeletalMeshSimulationComponent = {}
+local USkeletalMeshSimulationComponent = {}
 
 ---@param CollisionInfo FChaosPhysicsCollisionInfo
 function USkeletalMeshSimulationComponent:ReceivePhysicsCollision(CollisionInfo) end
@@ -382,7 +382,7 @@ function USkeletalMeshSimulationComponent:ReceivePhysicsCollision(CollisionInfo)
 ---@field ChaosSolverActor AChaosSolverActor
 ---@field OnChaosPhysicsCollision FStaticMeshSimulationComponentOnChaosPhysicsCollision
 ---@field SimulatedComponents TArray<UPrimitiveComponent>
-UStaticMeshSimulationComponent = {}
+local UStaticMeshSimulationComponent = {}
 
 ---@param CollisionInfo FChaosPhysicsCollisionInfo
 function UStaticMeshSimulationComponent:ReceivePhysicsCollision(CollisionInfo) end

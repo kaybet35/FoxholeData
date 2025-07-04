@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLargeFieldCannonWGunner_C : UTankGunnerMountComponent
-UBPLargeFieldCannonWGunner_C = {}
+local UBPLargeFieldCannonWGunner_C = {}
 
 

@@ -2,7 +2,7 @@
 
 ---@class AMetalBeamMaterialImpactEffect_C : AImpactEffect
 ---@field DefaultSceneRoot USceneComponent
-AMetalBeamMaterialImpactEffect_C = {}
+local AMetalBeamMaterialImpactEffect_C = {}
 
 
 

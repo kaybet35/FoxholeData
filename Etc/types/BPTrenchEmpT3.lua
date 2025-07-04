@@ -7,7 +7,7 @@
 ---@field TrenchEmpCommonMods UTemplateComponent
 ---@field TrenchEmpCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPTrenchEmpT3_C = {}
+local ABPTrenchEmpT3_C = {}
 
 
 

@@ -12,7 +12,7 @@
 ---@field DriverSeat UVehicleSeatComponent
 ---@field DriverExit USeatExitComponent
 ---@field DriverTrigger USeatTriggerComponent
-ABPSmallTrainEngine_C = {}
+local ABPSmallTrainEngine_C = {}
 
 ---@param IsOn boolean
 function ABPSmallTrainEngine_C:BPOnVehicleOn(IsOn) end

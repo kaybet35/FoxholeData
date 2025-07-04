@@ -9,7 +9,7 @@
 ---@field Light_L UStaticMeshComponent
 ---@field Exhaust UParticleSystemComponent
 ---@field SpotLight_L USpotLightComponent
-ABPMotorcycleBaseW_C = {}
+local ABPMotorcycleBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPMotorcycleBaseW_C:BPOnVehicleOn(IsOn) end

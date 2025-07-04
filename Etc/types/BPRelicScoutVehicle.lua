@@ -14,7 +14,7 @@
 ---@field Headlight_L UStaticMeshComponent
 ---@field SpotLight_L USpotLightComponent
 ---@field Camera UCameraComponent
-ABPRelicScoutVehicle_C = {}
+local ABPRelicScoutVehicle_C = {}
 
 ---@param IsOn boolean
 function ABPRelicScoutVehicle_C:BPOnVehicleOn(IsOn) end

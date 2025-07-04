@@ -3,7 +3,7 @@
 ---@class AGrenadeCExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AGrenadeCExplosion_C = {}
+local AGrenadeCExplosion_C = {}
 
 function AGrenadeCExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

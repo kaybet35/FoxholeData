@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPExtinguishingDamageType_C : UNonDamagingDamageType
-UBPExtinguishingDamageType_C = {}
+local UBPExtinguishingDamageType_C = {}
 
 

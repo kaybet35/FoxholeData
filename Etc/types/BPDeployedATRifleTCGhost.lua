@@ -5,7 +5,7 @@
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPDeployedATRifleTCGhost_C = {}
+local ABPDeployedATRifleTCGhost_C = {}
 
 
 

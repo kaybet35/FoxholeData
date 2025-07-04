@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPLargeShipDestroyerCDirectGunner_C : UTankGunnerMountComponent
-UBPLargeShipDestroyerCDirectGunner_C = {}
+local UBPLargeShipDestroyerCDirectGunner_C = {}
 
 

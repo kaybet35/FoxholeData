@@ -11,7 +11,7 @@
 ---@field PipeInput0 UBuildSocketComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPRocketSite_C = {}
+local ABPRocketSite_C = {}
 
 
 

@@ -20,8 +20,8 @@ AFortFireSuppression::AFortFireSuppression(const FObjectInitializer& ObjectIniti
     this->SteamVFXComponent = NULL;
     this->DispenseAmountPerSec = 20.00f;
     this->KillVolume->SetupAttachment(RootComponent);
-    this->SprinklerVFXComponent->SetupAttachment(RootComponent);
     this->PumpingLoopComponent->SetupAttachment(RootComponent);
+    this->SprinklerVFXComponent->SetupAttachment(RootComponent);
 }
 
 void AFortFireSuppression::OnRep_IsDispensingWater() {

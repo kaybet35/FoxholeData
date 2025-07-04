@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPStructurePuddleMesh_C : UStaticMeshComponent
-UBPStructurePuddleMesh_C = {}
+local UBPStructurePuddleMesh_C = {}
 
 

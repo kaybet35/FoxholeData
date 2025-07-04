@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWoundedCarriedPlayerItemComponent_C : UWoundedCarriedItemComponent
-UBPWoundedCarriedPlayerItemComponent_C = {}
+local UBPWoundedCarriedPlayerItemComponent_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPRocketTarget_C : ARocketTarget
-ABPRocketTarget_C = {}
+local ABPRocketTarget_C = {}
 
 

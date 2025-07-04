@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPGunboatWMainGunnerComponent_C : UArtilleryGunnerMountComponent
-UBPGunboatWMainGunnerComponent_C = {}
+local UBPGunboatWMainGunnerComponent_C = {}
 
 

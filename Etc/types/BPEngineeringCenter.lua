@@ -7,7 +7,7 @@
 ---@field PointLight1 UPointLightComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field EngineeringCenter UStaticMeshComponent
-ABPEngineeringCenter_C = {}
+local ABPEngineeringCenter_C = {}
 
 ---@param FacilityMesh UStaticMeshComponent
 ---@param IsVisible boolean

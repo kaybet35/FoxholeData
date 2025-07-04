@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBarbedWireMaterialsComponent_C : ULargeMaterialComponent
-UBPBarbedWireMaterialsComponent_C = {}
+local UBPBarbedWireMaterialsComponent_C = {}
 
 

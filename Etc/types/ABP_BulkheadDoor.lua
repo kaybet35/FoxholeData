@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_SequencePlayer_0DF886A145AA914371DFF0A6128E7B2A FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_2815A2BF4CCB3B12448C77B290FB583C FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_364368A8439E4C39DD921AA3974E492F FAnimNode_StateMachine
-UABP_BulkheadDoor_C = {}
+local UABP_BulkheadDoor_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_BulkheadDoor_C:AnimGraph(AnimGraph) end

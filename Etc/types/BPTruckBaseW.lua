@@ -6,7 +6,7 @@
 ---@field Light_Rear UPointLightComponent
 ---@field RearLight UStaticMeshComponent
 ---@field Light_R UStaticMeshComponent
-ABPTruckBaseW_C = {}
+local ABPTruckBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPTruckBaseW_C:BPOnVehicleOn(IsOn) end

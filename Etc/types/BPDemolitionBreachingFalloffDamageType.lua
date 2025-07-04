@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPDemolitionBreachingFalloffDamageType_C : USimDamageType
-UBPDemolitionBreachingFalloffDamageType_C = {}
+local UBPDemolitionBreachingFalloffDamageType_C = {}
 
 

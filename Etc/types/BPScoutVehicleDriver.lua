@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPScoutVehicleDriver_C : UMountComponent
-UBPScoutVehicleDriver_C = {}
+local UBPScoutVehicleDriver_C = {}
 
 

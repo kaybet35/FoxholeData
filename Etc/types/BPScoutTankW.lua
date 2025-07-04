@@ -3,7 +3,7 @@
 ---@class ABPScoutTankW_C : AScoutTankWBase_C
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field chassis USkeletalMeshComponent
-ABPScoutTankW_C = {}
+local ABPScoutTankW_C = {}
 
 ---@param IsOn boolean
 function ABPScoutTankW_C:BPOnVehicleOn(IsOn) end

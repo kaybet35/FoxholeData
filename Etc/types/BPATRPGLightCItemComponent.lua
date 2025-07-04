@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATRPGLightCItemComponent_C : UBPATRPGCItemComponent_C
-UBPATRPGLightCItemComponent_C = {}
+local UBPATRPGLightCItemComponent_C = {}
 
 

@@ -20,7 +20,7 @@
 ---@field DriverExit0 USeatExitComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field PassengerSeat1 UVehicleSeatComponent
-ABPTruckMultiC_C = {}
+local ABPTruckMultiC_C = {}
 
 ---@param IsOn boolean
 function ABPTruckMultiC_C:BPOnVehicleOn(IsOn) end

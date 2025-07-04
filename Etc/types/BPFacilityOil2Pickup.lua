@@ -2,7 +2,7 @@
 
 ---@class ABPFacilityOil2Pickup_C : AGearPickup
 ---@field StaticMesh UStaticMeshComponent
-ABPFacilityOil2Pickup_C = {}
+local ABPFacilityOil2Pickup_C = {}
 
 
 

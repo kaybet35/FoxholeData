@@ -8,7 +8,7 @@
 ---@field CoalPile UStaticMeshComponent
 ---@field Sphere USphereComponent
 ---@field Decal UDecalComponent
-ABPCoalField_C = {}
+local ABPCoalField_C = {}
 
 
 

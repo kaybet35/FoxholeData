@@ -6,7 +6,7 @@
 ---@field RightFortInteriorFiringPortModSlot UBFFortInteriorFiringPortModSlot_C
 ---@field FrontFortInteriorFiringPortModSlot UBFFortInteriorFiringPortModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCommonT3Mods_C = {}
+local ABPFortCommonT3Mods_C = {}
 
 
 

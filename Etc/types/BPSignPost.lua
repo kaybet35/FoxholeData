@@ -6,7 +6,7 @@
 ---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
 ---@field DamageBox UBoxComponent
 ---@field StaticMesh UStaticMeshComponent
-ABPSignPost_C = {}
+local ABPSignPost_C = {}
 
 
 

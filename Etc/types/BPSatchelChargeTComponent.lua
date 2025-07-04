@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSatchelChargeTComponent_C : UDeployableItemComponent
-UBPSatchelChargeTComponent_C = {}
+local UBPSatchelChargeTComponent_C = {}
 
 

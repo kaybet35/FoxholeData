@@ -1,5 +1,5 @@
 ---@enum EHMDTrackingOrigin
-EHMDTrackingOrigin = {
+local EHMDTrackingOrigin = {
     Floor = 0,
     Eye = 1,
     Stage = 2,
@@ -7,7 +7,7 @@ EHMDTrackingOrigin = {
 }
 
 ---@enum EHMDWornState
-EHMDWornState = {
+local EHMDWornState = {
     Unknown = 0,
     Worn = 1,
     NotWorn = 2,
@@ -15,7 +15,7 @@ EHMDWornState = {
 }
 
 ---@enum EOrientPositionSelector
-EOrientPositionSelector = {
+local EOrientPositionSelector = {
     Orientation = 0,
     Position = 1,
     OrientationAndPosition = 2,
@@ -23,7 +23,7 @@ EOrientPositionSelector = {
 }
 
 ---@enum ESpectatorScreenMode
-ESpectatorScreenMode = {
+local ESpectatorScreenMode = {
     Disabled = 0,
     SingleEyeLetterboxed = 1,
     Undistorted = 2,
@@ -36,7 +36,7 @@ ESpectatorScreenMode = {
 }
 
 ---@enum ETrackingStatus
-ETrackingStatus = {
+local ETrackingStatus = {
     NotTracked = 0,
     InertialOnly = 1,
     Tracked = 2,
@@ -44,7 +44,7 @@ ETrackingStatus = {
 }
 
 ---@enum EXRTrackedDeviceType
-EXRTrackedDeviceType = {
+local EXRTrackedDeviceType = {
     HeadMountedDisplay = 0,
     Controller = 1,
     TrackingReference = 2,

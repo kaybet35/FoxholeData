@@ -29,7 +29,7 @@
 ---@field FVFBarrel01 UStaticMeshComponent
 ---@field FVFAmmoBox1 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory1LightVehicleAssembly_C = {}
+local ABPFacilityVehicleFactory1LightVehicleAssembly_C = {}
 
 
 

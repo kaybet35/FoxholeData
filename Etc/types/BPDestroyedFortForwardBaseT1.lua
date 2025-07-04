@@ -32,7 +32,7 @@
 ---@field Floor UStaticMeshComponent
 ---@field BoatHull UBoatHullComponent
 ---@field NoBuildZone UBoxComponent
-ABPDestroyedFortForwardBaseT1_C = {}
+local ABPDestroyedFortForwardBaseT1_C = {}
 
 
 

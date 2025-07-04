@@ -2,7 +2,7 @@
 
 ---@class AFieldSystemActor : AActor
 ---@field FieldSystemComponent UFieldSystemComponent
-AFieldSystemActor = {}
+local AFieldSystemActor = {}
 
 
 
@@ -13,7 +13,7 @@ AFieldSystemActor = {}
 ---@field Default float
 ---@field Transform FTransform
 ---@field Falloff EFieldFalloffType
-UBoxFalloff = {}
+local UBoxFalloff = {}
 
 ---@param Magnitude float
 ---@param MinRange float
@@ -29,7 +29,7 @@ function UBoxFalloff:SetBoxFalloff(Magnitude, MinRange, MaxRange, Default, Trans
 ---@field Culling UFieldNodeBase
 ---@field Field UFieldNodeBase
 ---@field Operation EFieldCullingOperationType
-UCullingField = {}
+local UCullingField = {}
 
 ---@param Culling UFieldNodeBase
 ---@param Field UFieldNodeBase
@@ -39,29 +39,29 @@ function UCullingField:SetCullingField(Culling, Field, Operation) end
 
 
 ---@class UFieldNodeBase : UActorComponent
-UFieldNodeBase = {}
+local UFieldNodeBase = {}
 
 
 ---@class UFieldNodeFloat : UFieldNodeBase
-UFieldNodeFloat = {}
+local UFieldNodeFloat = {}
 
 
 ---@class UFieldNodeInt : UFieldNodeBase
-UFieldNodeInt = {}
+local UFieldNodeInt = {}
 
 
 ---@class UFieldNodeVector : UFieldNodeBase
-UFieldNodeVector = {}
+local UFieldNodeVector = {}
 
 
 ---@class UFieldSystem : UObject
-UFieldSystem = {}
+local UFieldSystem = {}
 
 
 ---@class UFieldSystemComponent : UPrimitiveComponent
 ---@field FieldSystem UFieldSystem
 ---@field SupportedSolvers TArray<TSoftObjectPtr<AChaosSolverActor>>
-UFieldSystemComponent = {}
+local UFieldSystemComponent = {}
 
 function UFieldSystemComponent:ResetFieldSystem() end
 ---@param Enabled boolean
@@ -106,12 +106,12 @@ function UFieldSystemComponent:AddFieldCommand(Enabled, Target, MetaData, Field)
 
 
 ---@class UFieldSystemMetaData : UActorComponent
-UFieldSystemMetaData = {}
+local UFieldSystemMetaData = {}
 
 
 ---@class UFieldSystemMetaDataIteration : UFieldSystemMetaData
 ---@field Iterations int32
-UFieldSystemMetaDataIteration = {}
+local UFieldSystemMetaDataIteration = {}
 
 ---@param Iterations int32
 ---@return UFieldSystemMetaDataIteration
@@ -120,7 +120,7 @@ function UFieldSystemMetaDataIteration:SetMetaDataIteration(Iterations) end
 
 ---@class UFieldSystemMetaDataProcessingResolution : UFieldSystemMetaData
 ---@field ResolutionType EFieldResolutionType
-UFieldSystemMetaDataProcessingResolution = {}
+local UFieldSystemMetaDataProcessingResolution = {}
 
 ---@param ResolutionType EFieldResolutionType
 ---@return UFieldSystemMetaDataProcessingResolution
@@ -131,7 +131,7 @@ function UFieldSystemMetaDataProcessingResolution:SetMetaDataaProcessingResoluti
 ---@field MinRange float
 ---@field MaxRange float
 ---@field Transform FTransform
-UNoiseField = {}
+local UNoiseField = {}
 
 ---@param MinRange float
 ---@param MaxRange float
@@ -145,7 +145,7 @@ function UNoiseField:SetNoiseField(MinRange, MaxRange, Transform) end
 ---@field RightField UFieldNodeBase
 ---@field LeftField UFieldNodeBase
 ---@field Operation EFieldOperationType
-UOperatorField = {}
+local UOperatorField = {}
 
 ---@param Magnitude float
 ---@param RightField UFieldNodeBase
@@ -164,7 +164,7 @@ function UOperatorField:SetOperatorField(Magnitude, RightField, LeftField, Opera
 ---@field Position FVector
 ---@field Normal FVector
 ---@field Falloff EFieldFalloffType
-UPlaneFalloff = {}
+local UPlaneFalloff = {}
 
 ---@param Magnitude float
 ---@param MinRange float
@@ -186,7 +186,7 @@ function UPlaneFalloff:SetPlaneFalloff(Magnitude, MinRange, MaxRange, Default, D
 ---@field Radius float
 ---@field Position FVector
 ---@field Falloff EFieldFalloffType
-URadialFalloff = {}
+local URadialFalloff = {}
 
 ---@param Magnitude float
 ---@param MinRange float
@@ -205,7 +205,7 @@ function URadialFalloff:SetRadialFalloff(Magnitude, MinRange, MaxRange, Default,
 ---@field InteriorValue int32
 ---@field ExteriorValue int32
 ---@field SetMaskCondition ESetMaskConditionType
-URadialIntMask = {}
+local URadialIntMask = {}
 
 ---@param Radius float
 ---@param Position FVector
@@ -219,7 +219,7 @@ function URadialIntMask:SetRadialIntMask(Radius, Position, InteriorValue, Exteri
 ---@class URadialVector : UFieldNodeVector
 ---@field Magnitude float
 ---@field Position FVector
-URadialVector = {}
+local URadialVector = {}
 
 ---@param Magnitude float
 ---@param Position FVector
@@ -229,7 +229,7 @@ function URadialVector:SetRadialVector(Magnitude, Position) end
 
 ---@class URandomVector : UFieldNodeVector
 ---@field Magnitude float
-URandomVector = {}
+local URandomVector = {}
 
 ---@param Magnitude float
 ---@return URandomVector
@@ -237,7 +237,7 @@ function URandomVector:SetRandomVector(Magnitude) end
 
 
 ---@class UReturnResultsTerminal : UFieldNodeBase
-UReturnResultsTerminal = {}
+local UReturnResultsTerminal = {}
 
 ---@return UReturnResultsTerminal
 function UReturnResultsTerminal:SetReturnResultsTerminal() end
@@ -245,7 +245,7 @@ function UReturnResultsTerminal:SetReturnResultsTerminal() end
 
 ---@class UToFloatField : UFieldNodeFloat
 ---@field IntField UFieldNodeInt
-UToFloatField = {}
+local UToFloatField = {}
 
 ---@param IntegerField UFieldNodeInt
 ---@return UToFloatField
@@ -254,7 +254,7 @@ function UToFloatField:SetToFloatField(IntegerField) end
 
 ---@class UToIntegerField : UFieldNodeInt
 ---@field FloatField UFieldNodeFloat
-UToIntegerField = {}
+local UToIntegerField = {}
 
 ---@param FloatField UFieldNodeFloat
 ---@return UToIntegerField
@@ -263,7 +263,7 @@ function UToIntegerField:SetToIntegerField(FloatField) end
 
 ---@class UUniformInteger : UFieldNodeInt
 ---@field Magnitude int32
-UUniformInteger = {}
+local UUniformInteger = {}
 
 ---@param Magnitude int32
 ---@return UUniformInteger
@@ -272,7 +272,7 @@ function UUniformInteger:SetUniformInteger(Magnitude) end
 
 ---@class UUniformScalar : UFieldNodeFloat
 ---@field Magnitude float
-UUniformScalar = {}
+local UUniformScalar = {}
 
 ---@param Magnitude float
 ---@return UUniformScalar
@@ -282,7 +282,7 @@ function UUniformScalar:SetUniformScalar(Magnitude) end
 ---@class UUniformVector : UFieldNodeVector
 ---@field Magnitude float
 ---@field Direction FVector
-UUniformVector = {}
+local UUniformVector = {}
 
 ---@param Magnitude float
 ---@param Direction FVector

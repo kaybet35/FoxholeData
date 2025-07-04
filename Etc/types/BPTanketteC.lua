@@ -9,7 +9,7 @@
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field PassengerSeat3 UVehicleSeatComponent
 ---@field PassengerSeat2 UVehicleSeatComponent
-ABPTanketteC_C = {}
+local ABPTanketteC_C = {}
 
 ---@param IsOn boolean
 function ABPTanketteC_C:BPOnVehicleOn(IsOn) end

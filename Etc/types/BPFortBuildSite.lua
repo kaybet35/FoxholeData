@@ -12,7 +12,7 @@
 ---@field BackFortSocket UBuildSocketComponent
 ---@field LeftFortSocket UBuildSocketComponent
 ---@field WorkBox UBoxComponent
-ABPFortBuildSite_C = {}
+local ABPFortBuildSite_C = {}
 
 
 

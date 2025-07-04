@@ -15,7 +15,7 @@
 ---@field AnimGraphNode_StateResult_A3045FA04EDCFCDC7FD1F99A91D37D7C FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_CB83C7AE497FDF2C42B813AFB68BFB30 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_B5B91A0E46BCCD0CB81E8B8BBDFAD1BC FAnimNode_StateMachine
-UABP_AmbulanceCol_C = {}
+local UABP_AmbulanceCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_AmbulanceCol_C:AnimGraph(AnimGraph) end

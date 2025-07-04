@@ -10,7 +10,7 @@
 ---@field StaticMesh2 UStaticMeshComponent
 ---@field StaticMesh1 UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-ABPDestroyedGarrisonFishHut_C = {}
+local ABPDestroyedGarrisonFishHut_C = {}
 
 
 

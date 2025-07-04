@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPPoisonGasDamageType_C : USimDamageType
-UBPPoisonGasDamageType_C = {}
+local UBPPoisonGasDamageType_C = {}
 
 

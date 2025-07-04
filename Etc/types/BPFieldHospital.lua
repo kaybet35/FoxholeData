@@ -28,7 +28,7 @@
 ---@field Decal UDecalComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field FieldHospital UStaticMeshComponent
-ABPFieldHospital_C = {}
+local ABPFieldHospital_C = {}
 
 
 

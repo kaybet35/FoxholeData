@@ -10,7 +10,7 @@
 ---@field Timeline_0_NewTrack_0_F3D1FD0D40F5E5263DFF59A717B60DAC FVector
 ---@field Timeline_0__Direction_F3D1FD0D40F5E5263DFF59A717B60DAC ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPSulfurResource_C = {}
+local ABPSulfurResource_C = {}
 
 function ABPSulfurResource_C:Timeline_0__FinishedFunc() end
 function ABPSulfurResource_C:Timeline_0__UpdateFunc() end

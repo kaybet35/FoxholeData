@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTruckMultiCGunnerComponent_C : UArtilleryGunnerMountComponent
-UBPTruckMultiCGunnerComponent_C = {}
+local UBPTruckMultiCGunnerComponent_C = {}
 
 

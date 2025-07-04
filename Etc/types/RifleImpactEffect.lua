@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
 ---@field DefaultSceneRoot USceneComponent
-ARifleImpactEffect_C = {}
+local ARifleImpactEffect_C = {}
 
 function ARifleImpactEffect_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

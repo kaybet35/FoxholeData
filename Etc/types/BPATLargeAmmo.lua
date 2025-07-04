@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPATLargeAmmo_C : ULargeItemComponent
-UBPATLargeAmmo_C = {}
+local UBPATLargeAmmo_C = {}
 
 

@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_2CBAC3DC40D8405054B91482A9FB770A FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_6636DE8641929992628628AF40D57A29 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_66FCF8614D0872AC3C9C6AB4523299DD FAnimNode_BlendSpacePlayer
-UABP_FacilityVehicleFactory2_C = {}
+local UABP_FacilityVehicleFactory2_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FacilityVehicleFactory2_C:AnimGraph(AnimGraph) end

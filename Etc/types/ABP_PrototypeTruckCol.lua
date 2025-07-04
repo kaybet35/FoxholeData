@@ -11,7 +11,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_88CCCB16444B62DADD5548AE037BE469 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_5A05C33F4F5CA9274DF9E896CE81DEDD FAnimNode_SequencePlayer
 ---@field AnimGraphNode_BlendListByBool_8C056DA344988443F05581B1B7C44806 FAnimNode_BlendListByBool
-UABP_PrototypeTruckCol_C = {}
+local UABP_PrototypeTruckCol_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_PrototypeTruckCol_C:AnimGraph(AnimGraph) end

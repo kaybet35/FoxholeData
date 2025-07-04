@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URifleCComponent_C : UGrenadeAdapterComponent
-URifleCComponent_C = {}
+local URifleCComponent_C = {}
 
 

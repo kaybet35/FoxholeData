@@ -7,7 +7,7 @@
 ---@field NoMansLandSplinter UParticleSystemComponent
 ---@field Splinter UAudioComponent
 ---@field NewVar_0 EClientFoliageReplacementState
-ABPPine01SnowReplacement_C = {}
+local ABPPine01SnowReplacement_C = {}
 
 ---@param State EClientFoliageReplacementState
 function ABPPine01SnowReplacement_C:OnStateChanged(State) end

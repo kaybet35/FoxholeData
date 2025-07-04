@@ -7,7 +7,7 @@
 ---@field Roof UStaticMeshComponent
 ---@field Rubble UStaticMeshComponent
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityRefinery2Destroyed_C = {}
+local ABPFacilityRefinery2Destroyed_C = {}
 
 
 

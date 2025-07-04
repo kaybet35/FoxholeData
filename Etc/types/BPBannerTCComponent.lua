@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPBannerTCComponent_C : UDeployableItemComponent
-UBPBannerTCComponent_C = {}
+local UBPBannerTCComponent_C = {}
 
 

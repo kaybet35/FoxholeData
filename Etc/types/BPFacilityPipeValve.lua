@@ -2,7 +2,7 @@
 
 ---@class ABPFacilityPipeValve_C : APipelineValve
 ---@field MainMesh UStaticMeshComponent
-ABPFacilityPipeValve_C = {}
+local ABPFacilityPipeValve_C = {}
 
 
 

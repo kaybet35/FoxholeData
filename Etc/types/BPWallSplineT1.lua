@@ -6,7 +6,7 @@
 ---@field WallSplineCommon UTemplateComponent
 ---@field WallTarget USceneComponent
 ---@field Wall USplineConnectorComponent
-ABPWallSplineT1_C = {}
+local ABPWallSplineT1_C = {}
 
 
 

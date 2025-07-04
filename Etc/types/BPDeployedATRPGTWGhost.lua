@@ -5,7 +5,7 @@
 ---@field SkeletalMesh1 USkeletalMeshComponent
 ---@field StaticMesh UStaticMeshComponent
 ---@field SkeletalMesh USkeletalMeshComponent
-ABPDeployedATRPGTWGhost_C = {}
+local ABPDeployedATRPGTWGhost_C = {}
 
 
 

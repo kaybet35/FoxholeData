@@ -26,7 +26,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field FactoryMesh UStaticMeshComponent
 ---@field bIsProducingSFXActive boolean
-ABPMassProduction_C = {}
+local ABPMassProduction_C = {}
 
 ---@param FacilityMesh UStaticMeshComponent
 ---@param IsVisible boolean

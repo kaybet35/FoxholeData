@@ -3,7 +3,7 @@
 ---@class ACoastalGunExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-ACoastalGunExplosion_C = {}
+local ACoastalGunExplosion_C = {}
 
 function ACoastalGunExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

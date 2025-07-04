@@ -28,7 +28,7 @@
 ---@field AnimGraphNode_SequencePlayer_B3B2E2CC4AC6BDD72F0930AA35360A4A FAnimNode_SequencePlayer
 ---@field AnimGraphNode_RotationOffsetBlendSpace_41E32E37427E7526BC7C55AE988392C4 FAnimNode_RotationOffsetBlendSpace
 ---@field WheelRotationSpeedFactor int32
-UABP_LargeFieldMultiRLW_C = {}
+local UABP_LargeFieldMultiRLW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_LargeFieldMultiRLW_C:AnimGraph(AnimGraph) end

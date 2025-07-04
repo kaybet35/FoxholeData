@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPWarGameInstance_C : UWarGameInstance
-UBPWarGameInstance_C = {}
+local UBPWarGameInstance_C = {}
 
 

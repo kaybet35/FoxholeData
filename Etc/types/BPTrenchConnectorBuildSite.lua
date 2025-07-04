@@ -19,7 +19,7 @@
 ---@field FrontSide UStaticMeshComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field FrontSocket UBuildSocketComponent
-ABPTrenchConnectorBuildSite_C = {}
+local ABPTrenchConnectorBuildSite_C = {}
 
 
 

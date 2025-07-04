@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class URifleAutomaticWComponent_C : UAssaultRifleComponent
-URifleAutomaticWComponent_C = {}
+local URifleAutomaticWComponent_C = {}
 
 

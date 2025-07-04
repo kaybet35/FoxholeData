@@ -12,7 +12,7 @@
 ---@field ReferenceA UStaticMeshComponent
 ---@field BridgeScaffoldA UStaticMeshComponent
 ---@field CollisionA UBoxComponent
-ABPDrawbridgeCBuildSite_C = {}
+local ABPDrawbridgeCBuildSite_C = {}
 
 
 

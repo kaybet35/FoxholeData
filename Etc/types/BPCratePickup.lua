@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPCratePickup_C : AItemCratePickup
-ABPCratePickup_C = {}
+local ABPCratePickup_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPGangwayRamp_C : UGangwayRamp
-UBPGangwayRamp_C = {}
+local UBPGangwayRamp_C = {}
 
 

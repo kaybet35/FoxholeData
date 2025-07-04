@@ -4,7 +4,7 @@
 ---@field CommanderSeat3 UVehicleSeatComponent
 ---@field EngineerSeat2 UVehicleSeatComponent
 ---@field chassis USkeletalMeshComponent
-ABPMediumTankATW_C = {}
+local ABPMediumTankATW_C = {}
 
 
 

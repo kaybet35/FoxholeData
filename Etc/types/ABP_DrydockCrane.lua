@@ -8,7 +8,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_82A8CABB4A4A6E0958485591C460E3C2 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_7F5BCA0143BF35D0DA77B7BAFBE548B3 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_SequencePlayer_B21B825C402EB8148955049D17AB326E FAnimNode_SequencePlayer
-UABP_DrydockCrane_C = {}
+local UABP_DrydockCrane_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_DrydockCrane_C:AnimGraph(AnimGraph) end

@@ -1,12 +1,12 @@
 ---@enum EEvaluationMethod
-EEvaluationMethod = {
+local EEvaluationMethod = {
     Static = 0,
     Swept = 1,
     EEvaluationMethod_MAX = 2,
 }
 
 ---@enum EMovieSceneBlendType
-EMovieSceneBlendType = {
+local EMovieSceneBlendType = {
     Invalid = 0,
     Absolute = 1,
     Additive = 2,
@@ -15,7 +15,7 @@ EMovieSceneBlendType = {
 }
 
 ---@enum EMovieSceneBuiltInEasing
-EMovieSceneBuiltInEasing = {
+local EMovieSceneBuiltInEasing = {
     Linear = 0,
     SinIn = 1,
     SinOut = 2,
@@ -42,7 +42,7 @@ EMovieSceneBuiltInEasing = {
 }
 
 ---@enum EMovieSceneCompletionMode
-EMovieSceneCompletionMode = {
+local EMovieSceneCompletionMode = {
     KeepState = 0,
     RestoreState = 1,
     ProjectDefault = 2,
@@ -50,14 +50,14 @@ EMovieSceneCompletionMode = {
 }
 
 ---@enum EMovieSceneEvaluationType
-EMovieSceneEvaluationType = {
+local EMovieSceneEvaluationType = {
     FrameLocked = 0,
     WithSubFrames = 1,
     EMovieSceneEvaluationType_MAX = 2,
 }
 
 ---@enum EMovieSceneKeyInterpolation
-EMovieSceneKeyInterpolation = {
+local EMovieSceneKeyInterpolation = {
     Auto = 0,
     User = 1,
     Break = 2,
@@ -67,14 +67,14 @@ EMovieSceneKeyInterpolation = {
 }
 
 ---@enum EMovieSceneObjectBindingSpace
-EMovieSceneObjectBindingSpace = {
+local EMovieSceneObjectBindingSpace = {
     Local = 0,
     Root = 1,
     EMovieSceneObjectBindingSpace_MAX = 2,
 }
 
 ---@enum EMovieScenePlayerStatus
-EMovieScenePlayerStatus = {
+local EMovieScenePlayerStatus = {
     Stopped = 0,
     Playing = 1,
     Recording = 2,
@@ -86,7 +86,7 @@ EMovieScenePlayerStatus = {
 }
 
 ---@enum ESectionEvaluationFlags
-ESectionEvaluationFlags = {
+local ESectionEvaluationFlags = {
     None = 0,
     PreRoll = 1,
     PostRoll = 2,
@@ -94,7 +94,7 @@ ESectionEvaluationFlags = {
 }
 
 ---@enum ESpawnOwnership
-ESpawnOwnership = {
+local ESpawnOwnership = {
     InnerSequence = 0,
     MasterSequence = 1,
     External = 2,
@@ -102,7 +102,7 @@ ESpawnOwnership = {
 }
 
 ---@enum EUpdateClockSource
-EUpdateClockSource = {
+local EUpdateClockSource = {
     Tick = 0,
     Platform = 1,
     Audio = 2,
@@ -111,7 +111,7 @@ EUpdateClockSource = {
 }
 
 ---@enum EUpdatePositionMethod
-EUpdatePositionMethod = {
+local EUpdatePositionMethod = {
     Play = 0,
     Jump = 1,
     Scrub = 2,

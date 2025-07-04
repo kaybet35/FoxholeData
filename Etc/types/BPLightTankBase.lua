@@ -11,7 +11,7 @@
 ---@field DriverTrigger USeatTriggerComponent
 ---@field DriveIdle UAudioComponent
 ---@field Camera UCameraComponent
-ABPLightTankBase_C = {}
+local ABPLightTankBase_C = {}
 
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPShovelComponent_C : UShovelComponent
-UBPShovelComponent_C = {}
+local UBPShovelComponent_C = {}
 
 

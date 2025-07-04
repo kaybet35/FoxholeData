@@ -6,7 +6,7 @@
 ---@field chassis USkeletalMeshComponent
 ---@field Exhaust UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPMortarTankC_C = {}
+local ABPMortarTankC_C = {}
 
 ---@param IsOn boolean
 function ABPMortarTankC_C:BPOnVehicleOn(IsOn) end

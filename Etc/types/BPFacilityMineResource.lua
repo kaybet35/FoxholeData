@@ -7,7 +7,7 @@
 ---@field InputMesh0 UStaticMeshComponent
 ---@field PipeInput0 UBuildSocketComponent
 ---@field Smoke UParticleSystemComponent
-ABPFacilityMineResource_C = {}
+local ABPFacilityMineResource_C = {}
 
 
 

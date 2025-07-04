@@ -7,7 +7,7 @@
 ---@field TrimMesh1 UStaticMeshComponent
 ---@field TrimMesh UStaticMeshComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPTrainBridgeA_C = {}
+local ABPTrainBridgeA_C = {}
 
 
 

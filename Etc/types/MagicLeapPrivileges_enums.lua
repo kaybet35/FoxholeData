@@ -1,5 +1,5 @@
 ---@enum EMagicLeapPrivilege
-EMagicLeapPrivilege = {
+local EMagicLeapPrivilege = {
     Invalid = 0,
     BatteryInfo = 1,
     CameraCapture = 2,

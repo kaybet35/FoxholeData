@@ -6,7 +6,7 @@
 ---@field SpotLightTurretTop USpotLightComponent
 ---@field CommanderSeat3 UVehicleSeatComponent
 ---@field chassis_0 USkeletalMeshComponent
-ABPMediumTankSiegeW_C = {}
+local ABPMediumTankSiegeW_C = {}
 
 ---@param IsOn boolean
 function ABPMediumTankSiegeW_C:BPOnVehicleOn(IsOn) end

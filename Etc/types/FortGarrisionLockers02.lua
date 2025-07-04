@@ -13,7 +13,7 @@
 ---@field Locker01 UStaticMeshComponent
 ---@field Locker04 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-AFortGarrisionLockers02_C = {}
+local AFortGarrisionLockers02_C = {}
 
 
 

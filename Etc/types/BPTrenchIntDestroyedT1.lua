@@ -23,7 +23,7 @@
 ---@field WallLeft UStaticMeshComponent
 ---@field WallBack UStaticMeshComponent
 ---@field WallFront UStaticMeshComponent
-ABPTrenchIntDestroyedT1_C = {}
+local ABPTrenchIntDestroyedT1_C = {}
 
 
 

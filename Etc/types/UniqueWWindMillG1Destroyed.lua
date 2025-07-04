@@ -17,7 +17,7 @@
 ---@field Decal1 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field TownWSmall1Destroyed UStaticMeshComponent
-AUniqueWWindMillG1Destroyed_C = {}
+local AUniqueWWindMillG1Destroyed_C = {}
 
 
 

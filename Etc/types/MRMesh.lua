@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class FMRMeshConfiguration
-FMRMeshConfiguration = {}
+local FMRMeshConfiguration = {}
 
 
 ---@class UMRMeshComponent : UPrimitiveComponent
@@ -12,7 +12,7 @@ FMRMeshConfiguration = {}
 ---@field CachedBodySetup UBodySetup
 ---@field BodySetups TArray<UBodySetup>
 ---@field WireframeMaterial UMaterialInterface
-UMRMeshComponent = {}
+local UMRMeshComponent = {}
 
 ---@return boolean
 function UMRMeshComponent:IsConnected() end
@@ -21,7 +21,7 @@ function UMRMeshComponent:Clear() end
 
 
 ---@class UMeshReconstructorBase : UObject
-UMeshReconstructorBase = {}
+local UMeshReconstructorBase = {}
 
 function UMeshReconstructorBase:StopReconstruction() end
 function UMeshReconstructorBase:StartReconstruction() end
@@ -46,7 +46,7 @@ function UMeshReconstructorBase:ConnectMRMesh(Mesh) end
 ---@field VertexColorFromConfidenceOne FLinearColor
 ---@field UpdateInterval float
 ---@field MRMesh UMRMeshComponent
-UMockDataMeshTrackerComponent = {}
+local UMockDataMeshTrackerComponent = {}
 
 ---@param Index int32
 ---@param Vertices TArray<FVector>

@@ -49,7 +49,7 @@
 ---@field WheelMesh UStaticMeshComponent
 ---@field RoofMesh UStaticMeshComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
-ABPKeep_C = {}
+local ABPKeep_C = {}
 
 ---@param Exiting boolean
 ---@param Actor AActor

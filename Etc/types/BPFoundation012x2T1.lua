@@ -21,7 +21,7 @@
 ---@field RightSocket0 UBuildSocketComponent
 ---@field FrontSocket1 UBuildSocketComponent
 ---@field FrontSocket0 UBuildSocketComponent
-ABPFoundation012x2T1_C = {}
+local ABPFoundation012x2T1_C = {}
 
 
 

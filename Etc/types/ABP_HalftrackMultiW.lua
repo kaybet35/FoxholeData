@@ -20,7 +20,7 @@
 ---@field AnimGraphNode_RotationOffsetBlendSpace_A2D7DFB1464F113ED1905CAF6D55D98A FAnimNode_RotationOffsetBlendSpace
 ---@field AnimGraphNode_SequencePlayer_F7588CA04EAE0A86541EEFBD6A1E1321 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_ApplyAdditive_ED7482A94B2C4976DFAB57B7967007EA FAnimNode_ApplyAdditive
-UABP_HalftrackMultiW_C = {}
+local UABP_HalftrackMultiW_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_HalftrackMultiW_C:AnimGraph(AnimGraph) end

@@ -7,7 +7,7 @@
 ---@field EndFront UStaticMeshComponent
 ---@field EndBack UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchIntT3Roof_C = {}
+local ABPTrenchIntT3Roof_C = {}
 
 
 

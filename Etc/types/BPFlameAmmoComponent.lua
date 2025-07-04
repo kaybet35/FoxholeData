@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFlameAmmoComponent_C : ULargeItemComponent
-UBPFlameAmmoComponent_C = {}
+local UBPFlameAmmoComponent_C = {}
 
 

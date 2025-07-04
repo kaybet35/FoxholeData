@@ -7,7 +7,7 @@
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPMGAIT3Destroyed_C = {}
+local ABPMGAIT3Destroyed_C = {}
 
 
 

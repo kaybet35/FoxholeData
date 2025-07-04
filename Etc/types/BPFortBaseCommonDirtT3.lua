@@ -9,7 +9,7 @@
 ---@field DirtLeft UStaticMeshComponent
 ---@field DirtCornerBackLeft UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortBaseCommonDirtT3_C = {}
+local ABPFortBaseCommonDirtT3_C = {}
 
 
 

@@ -16,7 +16,7 @@
 ---@field isShooting boolean
 ---@field horizontalAiming_Yaw float
 ---@field verticalAiming_Pitch float
-UABP_CoastalGun_C = {}
+local UABP_CoastalGun_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_CoastalGun_C:AnimGraph(AnimGraph) end

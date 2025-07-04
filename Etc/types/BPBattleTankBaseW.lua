@@ -5,7 +5,7 @@
 ---@field mainBody USkeletalMeshComponent
 ---@field ExhaustRight UParticleSystemComponent
 ---@field ExhaustLeft UParticleSystemComponent
-ABPBattleTankBaseW_C = {}
+local ABPBattleTankBaseW_C = {}
 
 ---@param IsOn boolean
 function ABPBattleTankBaseW_C:BPOnVehicleOn(IsOn) end

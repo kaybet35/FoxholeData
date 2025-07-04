@@ -21,7 +21,7 @@
 ---@field TruckIdle UAudioComponent
 ---@field Exhaust UParticleSystemComponent
 ---@field Camera UCameraComponent
-ABPAmbulanceC_C = {}
+local ABPAmbulanceC_C = {}
 
 ---@param IsOn boolean
 function ABPAmbulanceC_C:BPOnVehicleOn(IsOn) end

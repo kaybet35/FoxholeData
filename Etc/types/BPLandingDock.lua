@@ -4,7 +4,7 @@
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field DockingVolume UDockComponent
 ---@field Factory UStaticMeshComponent
-ABPLandingDock_C = {}
+local ABPLandingDock_C = {}
 
 
 

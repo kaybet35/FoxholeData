@@ -6,7 +6,7 @@
 ---@field ShieldedOccupiableComponent UStructureSeatComponent
 ---@field OccupiableComponent UStructureSeatComponent
 ---@field MultiplexedSkeletalMesh UMultiplexedSkeletalMeshComponent
-ABPEmplacedInfantryC_C = {}
+local ABPEmplacedInfantryC_C = {}
 
 
 

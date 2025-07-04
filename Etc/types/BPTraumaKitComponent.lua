@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPTraumaKitComponent_C : UTraumaKitComponent
-UBPTraumaKitComponent_C = {}
+local UBPTraumaKitComponent_C = {}
 
 

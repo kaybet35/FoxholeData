@@ -23,7 +23,7 @@
 ---@field AnimGraphNode_StateResult_EEB0A1514331829565A8EBA2760560AD FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_B256C3A7474F137EFC97E7AEE79FDFAE FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_9433427E443FA1FFA3605BA70A8ED454 FAnimNode_StateMachine
-UABP_GateDoor_C = {}
+local UABP_GateDoor_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_GateDoor_C:AnimGraph(AnimGraph) end

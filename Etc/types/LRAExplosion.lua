@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field Audio UAudioComponent
 ---@field RadialForce URadialForceComponent
-ALRAExplosion_C = {}
+local ALRAExplosion_C = {}
 
 function ALRAExplosion_C:BPDetonate() end
 function ALRAExplosion_C:BPTelegraph() end

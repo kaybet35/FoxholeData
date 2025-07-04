@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPSensorOperatorMountComponent_C : USensorOperatorMountComponent
-UBPSensorOperatorMountComponent_C = {}
+local UBPSensorOperatorMountComponent_C = {}
 
 

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPCraneVehicleProxy_C : ABuildableStructure
-ABPCraneVehicleProxy_C = {}
+local ABPCraneVehicleProxy_C = {}
 
 

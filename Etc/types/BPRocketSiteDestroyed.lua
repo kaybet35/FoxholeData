@@ -7,7 +7,7 @@
 ---@field Corner02 UDecalComponent
 ---@field ['Center Decal'] UDecalComponent
 ---@field MainMesh UStaticMeshComponent
-ABPRocketSiteDestroyed_C = {}
+local ABPRocketSiteDestroyed_C = {}
 
 
 

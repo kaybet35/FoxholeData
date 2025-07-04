@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class AMortarFLExplosion_C : AFlareExplosionEffect
-AMortarFLExplosion_C = {}
+local AMortarFLExplosion_C = {}
 
 

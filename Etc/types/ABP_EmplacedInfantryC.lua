@@ -12,7 +12,7 @@
 ---@field AnimGraphNode_StateResult_AACFD9774C003C4390ABCD9A7C83C9C1 FAnimNode_StateResult
 ---@field AnimGraphNode_StateResult_7A43A81142B3DF1BB4555EAF9A8AAE22 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_EA12DC73498C67121C70E08F1863449B FAnimNode_StateMachine
-UABP_EmplacedInfantryC_C = {}
+local UABP_EmplacedInfantryC_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_EmplacedInfantryC_C:AnimGraph(AnimGraph) end

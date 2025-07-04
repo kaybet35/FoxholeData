@@ -4,7 +4,7 @@
 ---@field FrontSocket UBuildSocketComponent
 ---@field BackSocket UBuildSocketComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPWallSplineCommon_C = {}
+local ABPWallSplineCommon_C = {}
 
 
 

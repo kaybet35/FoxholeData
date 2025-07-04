@@ -11,7 +11,7 @@
 ---@field HospitalRoof UStaticMeshComponent
 ---@field VisibilityToggleArea UVisibilityToggleAreaComponent
 ---@field Hospital UStaticMeshComponent
-ABPDestroyedHospital_C = {}
+local ABPDestroyedHospital_C = {}
 
 
 

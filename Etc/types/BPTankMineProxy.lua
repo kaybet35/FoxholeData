@@ -2,7 +2,7 @@
 
 ---@class ABPTankMineProxy_C : ABuildableStructure
 ---@field AntiTankMinePickup UStaticMeshComponent
-ABPTankMineProxy_C = {}
+local ABPTankMineProxy_C = {}
 
 
 

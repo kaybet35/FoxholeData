@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPComponentsPickup_C : ABasicItemPickup
-ABPComponentsPickup_C = {}
+local ABPComponentsPickup_C = {}
 
 

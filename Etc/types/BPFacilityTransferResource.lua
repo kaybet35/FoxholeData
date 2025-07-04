@@ -50,7 +50,7 @@
 ---@field Node01 UStaticMeshComponent
 ---@field Node00 UStaticMeshComponent
 ---@field BPResourceGroupRenderComponent UBPResourceGroupRenderComponent_C
-ABPFacilityTransferResource_C = {}
+local ABPFacilityTransferResource_C = {}
 
 
 

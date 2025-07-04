@@ -10,7 +10,7 @@
 ---@field AnimGraphNode_SequencePlayer_CDE30CA048B9216E41632FB2CF37B476 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_528CD49F4BAF3BC7429B9D90BF1FABAA FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_2283DE9E41F7BD0D92B1B495B6BC459E FAnimNode_StateMachine
-UABP_WeatherStation_lower_C = {}
+local UABP_WeatherStation_lower_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_WeatherStation_lower_C:AnimGraph(AnimGraph) end

@@ -8,7 +8,7 @@
 ---@field BackInfraModSlot UBPFortInfraModSlot_C
 ---@field LeftInfraModSlot UBPFortInfraModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCornerCommonMods_C = {}
+local ABPFortCornerCommonMods_C = {}
 
 
 

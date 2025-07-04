@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPSoldierSuppliesPickup_C : ABasicItemPickup
-ABPSoldierSuppliesPickup_C = {}
+local ABPSoldierSuppliesPickup_C = {}
 
 

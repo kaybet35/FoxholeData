@@ -22,14 +22,14 @@ AStaticCrane::AStaticCrane(const FObjectInitializer& ObjectInitializer) : Super(
     this->PowerSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("PowerSocket"));
     this->LightComponent = CreateDefaultSubobject<UFacilityLightComponent>(TEXT("LightComponent"));
     this->CraneComponent = CreateDefaultSubobject<UCraneComponent>(TEXT("CraneComponent"));
-    this->MainMesh->SetupAttachment(RootComponent);
+    this->ArmMovementSFXLoop->SetupAttachment(MainMesh);
     this->BaseMesh->SetupAttachment(MainMesh);
+    this->DeployingSFXLoop->SetupAttachment(MainMesh);
+    this->MainMesh->SetupAttachment(RootComponent);
+    this->PowerSocket->SetupAttachment(RootComponent);
+    this->PulleyMovementSFXLoop->SetupAttachment(MainMesh);
     this->RopeMesh->SetupAttachment(MainMesh);
     this->ShippableCollision->SetupAttachment(MainMesh);
-    this->ArmMovementSFXLoop->SetupAttachment(MainMesh);
-    this->DeployingSFXLoop->SetupAttachment(MainMesh);
-    this->PulleyMovementSFXLoop->SetupAttachment(MainMesh);
-    this->PowerSocket->SetupAttachment(RootComponent);
 }
 
 void AStaticCrane::OnRep_PowerGridInfo() {

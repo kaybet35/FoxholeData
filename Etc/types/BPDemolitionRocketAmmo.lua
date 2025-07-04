@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPDemolitionRocketAmmo_C : ULargeItemComponent
-UBPDemolitionRocketAmmo_C = {}
+local UBPDemolitionRocketAmmo_C = {}
 
 

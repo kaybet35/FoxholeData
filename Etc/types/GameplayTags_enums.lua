@@ -1,19 +1,19 @@
 ---@enum EGameplayContainerMatchType
-EGameplayContainerMatchType = {
+local EGameplayContainerMatchType = {
     Any = 0,
     All = 1,
     EGameplayContainerMatchType_MAX = 2,
 }
 
 ---@enum EGameplayTagMatchType
-EGameplayTagMatchType = {
+local EGameplayTagMatchType = {
     Explicit = 0,
     IncludeParentTags = 1,
     EGameplayTagMatchType_MAX = 2,
 }
 
 ---@enum EGameplayTagQueryExprType
-EGameplayTagQueryExprType = {
+local EGameplayTagQueryExprType = {
     Undefined = 0,
     AnyTagsMatch = 1,
     AllTagsMatch = 2,
@@ -25,7 +25,7 @@ EGameplayTagQueryExprType = {
 }
 
 ---@enum EGameplayTagSelectionType
-EGameplayTagSelectionType = {
+local EGameplayTagSelectionType = {
     None = 0,
     NonRestrictedOnly = 1,
     RestrictedOnly = 2,
@@ -34,7 +34,7 @@ EGameplayTagSelectionType = {
 }
 
 ---@enum EGameplayTagSourceType
-EGameplayTagSourceType = {
+local EGameplayTagSourceType = {
     Native = 0,
     DefaultTagList = 1,
     TagList = 2,

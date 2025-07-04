@@ -806,7 +806,7 @@
 ---@field LeftHandHitWall boolean
 ---@field tempShoulderDuration float
 ---@field MyPlayerPawn ACharacter
-UABP_Male_C = {}
+local UABP_Male_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Male_C:AnimGraph(AnimGraph) end

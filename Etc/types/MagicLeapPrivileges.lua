@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class UMagicLeapPrivilegesFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapPrivilegesFunctionLibrary = {}
+local UMagicLeapPrivilegesFunctionLibrary = {}
 
 ---@param Privilege EMagicLeapPrivilege
 ---@param ResultDelegate FRequestPrivilegeAsyncResultDelegate

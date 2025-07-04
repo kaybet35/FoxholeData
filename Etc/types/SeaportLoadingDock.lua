@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ASeaportLoadingDock_C : APersistentProxy
-ASeaportLoadingDock_C = {}
+local ASeaportLoadingDock_C = {}
 
 

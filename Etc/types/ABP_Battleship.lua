@@ -46,7 +46,7 @@
 ---@field AnimGraphNode_LayeredBoneBlend_795A3E1F461F44DF0C5186A42D82F320 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_LayeredBoneBlend_8FEE491F423A1FCBF21E4D9EC5199B64 FAnimNode_LayeredBoneBlend
 ---@field AnimGraphNode_Root_205D01DC453729A20EFE68952B403002 FAnimNode_Root
-UABP_Battleship_C = {}
+local UABP_Battleship_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_Battleship_C:AnimGraph(AnimGraph) end

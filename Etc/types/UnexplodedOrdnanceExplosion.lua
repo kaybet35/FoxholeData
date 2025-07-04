@@ -3,7 +3,7 @@
 ---@class AUnexplodedOrdnanceExplosion_C : AWarExplosionEffect
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field RadialForce URadialForceComponent
-AUnexplodedOrdnanceExplosion_C = {}
+local AUnexplodedOrdnanceExplosion_C = {}
 
 function AUnexplodedOrdnanceExplosion_C:ReceiveBeginPlay() end
 ---@param EntryPoint int32

@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMediumTankATWEngineerComponent_C : UTankEngineerComponent
-UBPMediumTankATWEngineerComponent_C = {}
+local UBPMediumTankATWEngineerComponent_C = {}
 
 

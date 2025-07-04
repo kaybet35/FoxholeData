@@ -49,7 +49,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_32EB69124BC95AD5371047962701781B FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_68E993784AF3EA419CAB7FB5A588FA54 FAnimNode_BlendSpacePlayer
 ---@field Test float
-UABP_MediumTankWar_C = {}
+local UABP_MediumTankWar_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_MediumTankWar_C:AnimGraph(AnimGraph) end

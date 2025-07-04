@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMainBallastMountComponent_C : UBallastMountComponent
-UBPMainBallastMountComponent_C = {}
+local UBPMainBallastMountComponent_C = {}
 
 

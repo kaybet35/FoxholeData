@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPEmplacedArtilleryWRotator_C : URotatorMountComponent
-UBPEmplacedArtilleryWRotator_C = {}
+local UBPEmplacedArtilleryWRotator_C = {}
 
 

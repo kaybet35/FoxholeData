@@ -9,7 +9,7 @@
 ---@field PipeInput0 UBPStructurePipelineInput_C
 ---@field StaticMesh UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityRefinery2Furnace_C = {}
+local ABPFacilityRefinery2Furnace_C = {}
 
 
 

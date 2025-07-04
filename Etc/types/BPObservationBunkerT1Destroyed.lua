@@ -14,7 +14,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
-ABPObservationBunkerT1Destroyed_C = {}
+local ABPObservationBunkerT1Destroyed_C = {}
 
 
 

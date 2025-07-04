@@ -10,7 +10,7 @@
 ---@field Decal5 UDecalComponent
 ---@field Decal UDecalComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPTrenchEmpDirtDecals_C = {}
+local ABPTrenchEmpDirtDecals_C = {}
 
 
 

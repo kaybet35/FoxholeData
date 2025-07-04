@@ -10,7 +10,7 @@
 ---@field FrontModSlot UBPFortWallModSlot_C
 ---@field FrontInfraModSlot UBPFortInfraModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortCommonMods_C = {}
+local ABPFortCommonMods_C = {}
 
 
 

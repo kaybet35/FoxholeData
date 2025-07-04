@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFlameTorchCItemComponent_C : UFlamethrowerWeaponComponent
-UBPFlameTorchCItemComponent_C = {}
+local UBPFlameTorchCItemComponent_C = {}
 
 

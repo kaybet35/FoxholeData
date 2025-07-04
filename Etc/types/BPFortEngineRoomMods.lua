@@ -6,7 +6,7 @@
 ---@field FrontModSlot UBPFortEngineRoomModSlot_C
 ---@field LeftModSlot UBPFortEngineRoomModSlot_C
 ---@field DefaultSceneRoot USceneComponent
-ABPFortEngineRoomMods_C = {}
+local ABPFortEngineRoomMods_C = {}
 
 
 

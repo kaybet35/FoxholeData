@@ -7,7 +7,7 @@
 ---@field FortCommonDirt UTemplateComponent
 ---@field FortCommonMods UTemplateComponent
 ---@field FortCommon UTemplateComponent
-ABPMGAIBase_C = {}
+local ABPMGAIBase_C = {}
 
 
 

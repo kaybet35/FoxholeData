@@ -8,7 +8,7 @@
 ---@field Timeline_0_NewTrack_0_DC99FEDA428B6A765EDAFC9BA85C56E6 FVector
 ---@field Timeline_0__Direction_DC99FEDA428B6A765EDAFC9BA85C56E6 ETimelineDirection::Type
 ---@field Timeline_0 UTimelineComponent
-ABPSalvageResource_C = {}
+local ABPSalvageResource_C = {}
 
 function ABPSalvageResource_C:Timeline_0__FinishedFunc() end
 function ABPSalvageResource_C:Timeline_0__UpdateFunc() end

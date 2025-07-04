@@ -22,7 +22,7 @@
 ---@field FVFBarrel03 UStaticMeshComponent
 ---@field FVFBarrel02 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory1ArtilleryFactory_C = {}
+local ABPFacilityVehicleFactory1ArtilleryFactory_C = {}
 
 
 

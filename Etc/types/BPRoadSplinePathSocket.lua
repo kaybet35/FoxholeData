@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPRoadSplinePathSocket_C : UBuildSocketComponent
-UBPRoadSplinePathSocket_C = {}
+local UBPRoadSplinePathSocket_C = {}
 
 

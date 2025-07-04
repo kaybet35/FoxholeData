@@ -9,7 +9,7 @@
 ---@field FireMesh UStaticMeshComponent
 ---@field FirePit UFirePitComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFortFirePitCommonFire_C = {}
+local ABPFortFirePitCommonFire_C = {}
 
 
 

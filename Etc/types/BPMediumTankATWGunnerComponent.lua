@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMediumTankATWGunnerComponent_C : UTankGunnerMountComponent
-UBPMediumTankATWGunnerComponent_C = {}
+local UBPMediumTankATWGunnerComponent_C = {}
 
 

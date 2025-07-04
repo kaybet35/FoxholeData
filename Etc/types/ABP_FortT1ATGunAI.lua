@@ -4,7 +4,7 @@
 ---@field UberGraphFrame FPointerToUberGraphFrame
 ---@field AnimGraphNode_Root_305535A944012814DD39DF921365148C FAnimNode_Root
 ---@field AnimGraphNode_BlendSpacePlayer_878A257B4AB0FB345725619412C03059 FAnimNode_BlendSpacePlayer
-UABP_FortT1ATGunAI_C = {}
+local UABP_FortT1ATGunAI_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FortT1ATGunAI_C:AnimGraph(AnimGraph) end

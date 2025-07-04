@@ -1,5 +1,5 @@
 ---@enum AnimPhysCollisionType
-AnimPhysCollisionType = {
+local AnimPhysCollisionType = {
     CoM = 0,
     CustomSphere = 1,
     InnerSphere = 2,
@@ -8,7 +8,7 @@ AnimPhysCollisionType = {
 }
 
 ---@enum AnimPhysTwistAxis
-AnimPhysTwistAxis = {
+local AnimPhysTwistAxis = {
     AxisX = 0,
     AxisY = 1,
     AxisZ = 2,
@@ -16,7 +16,7 @@ AnimPhysTwistAxis = {
 }
 
 ---@enum AnimationCompressionFormat
-AnimationCompressionFormat = {
+local AnimationCompressionFormat = {
     ACF_None = 0,
     ACF_Float96NoW = 1,
     ACF_Fixed48NoW = 2,
@@ -28,7 +28,7 @@ AnimationCompressionFormat = {
 }
 
 ---@enum AnimationKeyFormat
-AnimationKeyFormat = {
+local AnimationKeyFormat = {
     AKF_ConstantKeyLerp = 0,
     AKF_VariableKeyLerp = 1,
     AKF_PerTrackCompression = 2,
@@ -36,7 +36,7 @@ AnimationKeyFormat = {
 }
 
 ---@enum Beam2SourceTargetMethod
-Beam2SourceTargetMethod = {
+local Beam2SourceTargetMethod = {
     PEB2STM_Default = 0,
     PEB2STM_UserSet = 1,
     PEB2STM_Emitter = 2,
@@ -46,7 +46,7 @@ Beam2SourceTargetMethod = {
 }
 
 ---@enum Beam2SourceTargetTangentMethod
-Beam2SourceTargetTangentMethod = {
+local Beam2SourceTargetTangentMethod = {
     PEB2STTM_Direct = 0,
     PEB2STTM_UserSet = 1,
     PEB2STTM_Distribution = 2,
@@ -55,14 +55,14 @@ Beam2SourceTargetTangentMethod = {
 }
 
 ---@enum BeamModifierType
-BeamModifierType = {
+local BeamModifierType = {
     PEB2MT_Source = 0,
     PEB2MT_Target = 1,
     PEB2MT_MAX = 2,
 }
 
 ---@enum CylinderHeightAxis
-CylinderHeightAxis = {
+local CylinderHeightAxis = {
     PMLPC_HEIGHTAXIS_X = 0,
     PMLPC_HEIGHTAXIS_Y = 1,
     PMLPC_HEIGHTAXIS_Z = 2,
@@ -70,11 +70,11 @@ CylinderHeightAxis = {
 }
 
 ---@enum Default__UserDefinedEnum
-Default__UserDefinedEnum = {
+local Default__UserDefinedEnum = {
 }
 
 ---@enum DistributionParamMode
-DistributionParamMode = {
+local DistributionParamMode = {
     DPM_Normal = 0,
     DPM_Abs = 1,
     DPM_Direct = 2,
@@ -82,7 +82,7 @@ DistributionParamMode = {
 }
 
 ---@enum EActorUpdateOverlapsMethod
-EActorUpdateOverlapsMethod = {
+local EActorUpdateOverlapsMethod = {
     UseConfigDefault = 0,
     AlwaysUpdate = 1,
     OnlyUpdateMovable = 2,
@@ -91,14 +91,14 @@ EActorUpdateOverlapsMethod = {
 }
 
 ---@enum EAdManagerDelegate
-EAdManagerDelegate = {
+local EAdManagerDelegate = {
     AMD_ClickedBanner = 0,
     AMD_UserClosedAd = 1,
     AMD_MAX = 2,
 }
 
 ---@enum EAdditiveAnimationType
-EAdditiveAnimationType = {
+local EAdditiveAnimationType = {
     AAT_None = 0,
     AAT_LocalSpaceBase = 1,
     AAT_RotationOffsetMeshSpace = 2,
@@ -106,7 +106,7 @@ EAdditiveAnimationType = {
 }
 
 ---@enum EAdditiveBasePoseType
-EAdditiveBasePoseType = {
+local EAdditiveBasePoseType = {
     ABPT_None = 0,
     ABPT_RefPose = 1,
     ABPT_AnimScaled = 2,
@@ -115,14 +115,14 @@ EAdditiveBasePoseType = {
 }
 
 ---@enum EAirAbsorptionMethod
-EAirAbsorptionMethod = {
+local EAirAbsorptionMethod = {
     Linear = 0,
     CustomCurve = 1,
     EAirAbsorptionMethod_MAX = 2,
 }
 
 ---@enum EAlphaBlendOption
-EAlphaBlendOption = {
+local EAlphaBlendOption = {
     Linear = 0,
     Cubic = 1,
     HermiteCubic = 2,
@@ -142,7 +142,7 @@ EAlphaBlendOption = {
 }
 
 ---@enum EAlphaChannelMode
-EAlphaChannelMode = {
+local EAlphaChannelMode = {
     Disabled = 0,
     LinearColorSpaceOnly = 1,
     AllowThroughTonemapper = 2,
@@ -150,7 +150,7 @@ EAlphaChannelMode = {
 }
 
 ---@enum EAngularConstraintMotion
-EAngularConstraintMotion = {
+local EAngularConstraintMotion = {
     ACM_Free = 0,
     ACM_Limited = 1,
     ACM_Locked = 2,
@@ -158,14 +158,14 @@ EAngularConstraintMotion = {
 }
 
 ---@enum EAngularDriveMode
-EAngularDriveMode = {
+local EAngularDriveMode = {
     SLERP = 0,
     TwistAndSwing = 1,
     EAngularDriveMode_MAX = 2,
 }
 
 ---@enum EAnimAlphaInputType
-EAnimAlphaInputType = {
+local EAnimAlphaInputType = {
     Float = 0,
     Bool = 1,
     Curve = 2,
@@ -173,7 +173,7 @@ EAnimAlphaInputType = {
 }
 
 ---@enum EAnimAssetCurveFlags
-EAnimAssetCurveFlags = {
+local EAnimAssetCurveFlags = {
     AACF_NONE = 0,
     AACF_DriveMorphTarget_DEPRECATED = 1,
     AACF_DriveAttribute_DEPRECATED = 2,
@@ -186,7 +186,7 @@ EAnimAssetCurveFlags = {
 }
 
 ---@enum EAnimCurveType
-EAnimCurveType = {
+local EAnimCurveType = {
     AttributeCurve = 0,
     MaterialCurve = 1,
     MorphTargetCurve = 2,
@@ -195,7 +195,7 @@ EAnimCurveType = {
 }
 
 ---@enum EAnimGroupRole
-EAnimGroupRole = {
+local EAnimGroupRole = {
     CanBeLeader = 0,
     AlwaysFollower = 1,
     AlwaysLeader = 2,
@@ -205,14 +205,14 @@ EAnimGroupRole = {
 }
 
 ---@enum EAnimInterpolationType
-EAnimInterpolationType = {
+local EAnimInterpolationType = {
     Linear = 0,
     Step = 1,
     EAnimInterpolationType_MAX = 2,
 }
 
 ---@enum EAnimLinkMethod
-EAnimLinkMethod = {
+local EAnimLinkMethod = {
     Absolute = 0,
     Relative = 1,
     Proportional = 2,
@@ -220,14 +220,14 @@ EAnimLinkMethod = {
 }
 
 ---@enum EAnimNotifyEventType
-EAnimNotifyEventType = {
+local EAnimNotifyEventType = {
     Begin = 0,
     End = 1,
     EAnimNotifyEventType_MAX = 2,
 }
 
 ---@enum EAnimationMode
-EAnimationMode = {
+local EAnimationMode = {
     AnimationBlueprint = 0,
     AnimationSingleNode = 1,
     AnimationCustomMode = 2,
@@ -235,7 +235,7 @@ EAnimationMode = {
 }
 
 ---@enum EAntiAliasingMethod
-EAntiAliasingMethod = {
+local EAntiAliasingMethod = {
     AAM_None = 0,
     AAM_FXAA = 1,
     AAM_TemporalAA = 2,
@@ -244,7 +244,7 @@ EAntiAliasingMethod = {
 }
 
 ---@enum EApplicationState
-EApplicationState = {
+local EApplicationState = {
     Unknown = 0,
     Inactive = 1,
     Background = 2,
@@ -253,7 +253,7 @@ EApplicationState = {
 }
 
 ---@enum EAspectRatioAxisConstraint
-EAspectRatioAxisConstraint = {
+local EAspectRatioAxisConstraint = {
     AspectRatio_MaintainYFOV = 0,
     AspectRatio_MaintainXFOV = 1,
     AspectRatio_MajorAxisFOV = 2,
@@ -261,7 +261,7 @@ EAspectRatioAxisConstraint = {
 }
 
 ---@enum EAttachLocation
-EAttachLocation = {
+local EAttachLocation = {
     KeepRelativeOffset = 0,
     KeepWorldPosition = 1,
     SnapToTarget = 2,
@@ -270,7 +270,7 @@ EAttachLocation = {
 }
 
 ---@enum EAttachmentRule
-EAttachmentRule = {
+local EAttachmentRule = {
     KeepRelative = 0,
     KeepWorld = 1,
     SnapToTarget = 2,
@@ -278,7 +278,7 @@ EAttachmentRule = {
 }
 
 ---@enum EAttenuationDistanceModel
-EAttenuationDistanceModel = {
+local EAttenuationDistanceModel = {
     Linear = 0,
     Logarithmic = 1,
     Inverse = 2,
@@ -289,7 +289,7 @@ EAttenuationDistanceModel = {
 }
 
 ---@enum EAttenuationShape
-EAttenuationShape = {
+local EAttenuationShape = {
     Sphere = 0,
     Capsule = 1,
     Box = 2,
@@ -298,14 +298,14 @@ EAttenuationShape = {
 }
 
 ---@enum EAttractorParticleSelectionMethod
-EAttractorParticleSelectionMethod = {
+local EAttractorParticleSelectionMethod = {
     EAPSM_Random = 0,
     EAPSM_Sequential = 1,
     EAPSM_MAX = 2,
 }
 
 ---@enum EAudioComponentPlayState
-EAudioComponentPlayState = {
+local EAudioComponentPlayState = {
     Playing = 0,
     Stopped = 1,
     Paused = 2,
@@ -316,7 +316,7 @@ EAudioComponentPlayState = {
 }
 
 ---@enum EAudioFaderCurve
-EAudioFaderCurve = {
+local EAudioFaderCurve = {
     Linear = 0,
     Logarithmic = 1,
     SCurve = 2,
@@ -326,7 +326,7 @@ EAudioFaderCurve = {
 }
 
 ---@enum EAudioOutputTarget
-EAudioOutputTarget = {
+local EAudioOutputTarget = {
     Speaker = 0,
     Controller = 1,
     ControllerFallbackToSpeaker = 2,
@@ -334,14 +334,14 @@ EAudioOutputTarget = {
 }
 
 ---@enum EAudioRecordingExportType
-EAudioRecordingExportType = {
+local EAudioRecordingExportType = {
     SoundWave = 0,
     WavFile = 1,
     EAudioRecordingExportType_MAX = 2,
 }
 
 ---@enum EAutoExposureMethod
-EAutoExposureMethod = {
+local EAutoExposureMethod = {
     AEM_Histogram = 0,
     AEM_Basic = 1,
     AEM_Manual = 2,
@@ -349,7 +349,7 @@ EAutoExposureMethod = {
 }
 
 ---@enum EAutoExposureMethodUI
-EAutoExposureMethodUI = {
+local EAutoExposureMethodUI = {
     AEM_Histogram = 0,
     AEM_Basic = 1,
     AEM_Manual = 2,
@@ -357,7 +357,7 @@ EAutoExposureMethodUI = {
 }
 
 ---@enum EAutoPossessAI
-EAutoPossessAI = {
+local EAutoPossessAI = {
     Disabled = 0,
     PlacedInWorld = 1,
     Spawned = 2,
@@ -366,7 +366,7 @@ EAutoPossessAI = {
 }
 
 ---@enum EAutoReceiveInput
-EAutoReceiveInput = {
+local EAutoReceiveInput = {
     Disabled = 0,
     Player0 = 1,
     Player1 = 2,
@@ -380,7 +380,7 @@ EAutoReceiveInput = {
 }
 
 ---@enum EAxisOption
-EAxisOption = {
+local EAxisOption = {
     X = 0,
     Y = 1,
     Z = 2,
@@ -392,7 +392,7 @@ EAxisOption = {
 }
 
 ---@enum EBeam2Method
-EBeam2Method = {
+local EBeam2Method = {
     PEB2M_Distance = 0,
     PEB2M_Target = 1,
     PEB2M_Branch = 2,
@@ -400,7 +400,7 @@ EBeam2Method = {
 }
 
 ---@enum EBeamTaperMethod
-EBeamTaperMethod = {
+local EBeamTaperMethod = {
     PEBTM_None = 0,
     PEBTM_Full = 1,
     PEBTM_Partial = 2,
@@ -408,7 +408,7 @@ EBeamTaperMethod = {
 }
 
 ---@enum EBlendMode
-EBlendMode = {
+local EBlendMode = {
     BLEND_Opaque = 0,
     BLEND_Masked = 1,
     BLEND_Translucent = 2,
@@ -420,7 +420,7 @@ EBlendMode = {
 }
 
 ---@enum EBlendSpaceAxis
-EBlendSpaceAxis = {
+local EBlendSpaceAxis = {
     BSA_None = 0,
     BSA_X = 1,
     BSA_Y = 2,
@@ -428,7 +428,7 @@ EBlendSpaceAxis = {
 }
 
 ---@enum EBlendableLocation
-EBlendableLocation = {
+local EBlendableLocation = {
     BL_AfterTonemapping = 0,
     BL_BeforeTonemapping = 1,
     BL_BeforeTranslucency = 2,
@@ -438,14 +438,14 @@ EBlendableLocation = {
 }
 
 ---@enum EBloomMethod
-EBloomMethod = {
+local EBloomMethod = {
     BM_SOG = 0,
     BM_FFT = 1,
     BM_MAX = 2,
 }
 
 ---@enum EBlueprintCompileMode
-EBlueprintCompileMode = {
+local EBlueprintCompileMode = {
     Default = 0,
     Development = 1,
     FinalRelease = 2,
@@ -453,7 +453,7 @@ EBlueprintCompileMode = {
 }
 
 ---@enum EBlueprintNativizationFlag
-EBlueprintNativizationFlag = {
+local EBlueprintNativizationFlag = {
     Disabled = 0,
     Dependency = 1,
     ExplicitlyEnabled = 2,
@@ -461,14 +461,14 @@ EBlueprintNativizationFlag = {
 }
 
 ---@enum EBlueprintPinStyleType
-EBlueprintPinStyleType = {
+local EBlueprintPinStyleType = {
     BPST_Original = 0,
     BPST_VariantA = 1,
     BPST_MAX = 2,
 }
 
 ---@enum EBlueprintStatus
-EBlueprintStatus = {
+local EBlueprintStatus = {
     BS_Unknown = 0,
     BS_Dirty = 1,
     BS_Error = 2,
@@ -479,7 +479,7 @@ EBlueprintStatus = {
 }
 
 ---@enum EBlueprintType
-EBlueprintType = {
+local EBlueprintType = {
     BPTYPE_Normal = 0,
     BPTYPE_Const = 1,
     BPTYPE_MacroLibrary = 2,
@@ -490,14 +490,14 @@ EBlueprintType = {
 }
 
 ---@enum EBodyCollisionResponse
-EBodyCollisionResponse = {
+local EBodyCollisionResponse = {
     BodyCollision_Enabled = 0,
     BodyCollision_Disabled = 1,
     BodyCollision_MAX = 2,
 }
 
 ---@enum EBoneAxis
-EBoneAxis = {
+local EBoneAxis = {
     BA_X = 0,
     BA_Y = 1,
     BA_Z = 2,
@@ -505,7 +505,7 @@ EBoneAxis = {
 }
 
 ---@enum EBoneControlSpace
-EBoneControlSpace = {
+local EBoneControlSpace = {
     BCS_WorldSpace = 0,
     BCS_ComponentSpace = 1,
     BCS_ParentBoneSpace = 2,
@@ -514,7 +514,7 @@ EBoneControlSpace = {
 }
 
 ---@enum EBoneFilterActionOption
-EBoneFilterActionOption = {
+local EBoneFilterActionOption = {
     Remove = 0,
     Keep = 1,
     Invalid = 2,
@@ -522,7 +522,7 @@ EBoneFilterActionOption = {
 }
 
 ---@enum EBoneRotationSource
-EBoneRotationSource = {
+local EBoneRotationSource = {
     BRS_KeepComponentSpaceRotation = 0,
     BRS_KeepLocalSpaceRotation = 1,
     BRS_CopyFromTarget = 2,
@@ -530,14 +530,14 @@ EBoneRotationSource = {
 }
 
 ---@enum EBoneSpaces
-EBoneSpaces = {
+local EBoneSpaces = {
     WorldSpace = 0,
     ComponentSpace = 1,
     EBoneSpaces_MAX = 2,
 }
 
 ---@enum EBoneTranslationRetargetingMode
-EBoneTranslationRetargetingMode = {
+local EBoneTranslationRetargetingMode = {
     Animation = 0,
     Skeleton = 1,
     AnimationScaled = 2,
@@ -547,7 +547,7 @@ EBoneTranslationRetargetingMode = {
 }
 
 ---@enum EBoneVisibilityStatus
-EBoneVisibilityStatus = {
+local EBoneVisibilityStatus = {
     BVS_HiddenByParent = 0,
     BVS_Visible = 1,
     BVS_ExplicitlyHidden = 2,
@@ -555,7 +555,7 @@ EBoneVisibilityStatus = {
 }
 
 ---@enum EBrushType
-EBrushType = {
+local EBrushType = {
     Brush_Default = 0,
     Brush_Add = 1,
     Brush_Subtract = 2,
@@ -563,14 +563,14 @@ EBrushType = {
 }
 
 ---@enum ECameraAlphaBlendMode
-ECameraAlphaBlendMode = {
+local ECameraAlphaBlendMode = {
     CABM_Linear = 0,
     CABM_Cubic = 1,
     CABM_MAX = 2,
 }
 
 ---@enum ECameraAnimPlaySpace
-ECameraAnimPlaySpace = {
+local ECameraAnimPlaySpace = {
     CameraLocal = 0,
     World = 1,
     UserDefined = 2,
@@ -578,14 +578,14 @@ ECameraAnimPlaySpace = {
 }
 
 ---@enum ECameraProjectionMode
-ECameraProjectionMode = {
+local ECameraProjectionMode = {
     Perspective = 0,
     Orthographic = 1,
     ECameraProjectionMode_MAX = 2,
 }
 
 ---@enum ECanBeCharacterBase
-ECanBeCharacterBase = {
+local ECanBeCharacterBase = {
     ECB_No = 0,
     ECB_Yes = 1,
     ECB_Owner = 2,
@@ -593,7 +593,7 @@ ECanBeCharacterBase = {
 }
 
 ---@enum ECanCreateConnectionResponse
-ECanCreateConnectionResponse = {
+local ECanCreateConnectionResponse = {
     CONNECT_RESPONSE_MAKE = 0,
     CONNECT_RESPONSE_DISALLOW = 1,
     CONNECT_RESPONSE_BREAK_OTHERS_A = 2,
@@ -604,7 +604,7 @@ ECanCreateConnectionResponse = {
 }
 
 ---@enum EChannelMaskParameterColor
-EChannelMaskParameterColor = {
+local EChannelMaskParameterColor = {
     Red = 0,
     Green = 1,
     Blue = 2,
@@ -613,7 +613,7 @@ EChannelMaskParameterColor = {
 }
 
 ---@enum EClampMode
-EClampMode = {
+local EClampMode = {
     CMODE_Clamp = 0,
     CMODE_ClampMin = 1,
     CMODE_ClampMax = 2,
@@ -621,7 +621,7 @@ EClampMode = {
 }
 
 ---@enum EClearSceneOptions
-EClearSceneOptions = {
+local EClearSceneOptions = {
     NoClear = 0,
     HardwareClear = 1,
     QuadAtMaxZ = 2,
@@ -629,7 +629,7 @@ EClearSceneOptions = {
 }
 
 ---@enum EClothMassMode
-EClothMassMode = {
+local EClothMassMode = {
     UniformMass = 0,
     TotalMass = 1,
     Density = 2,
@@ -638,7 +638,7 @@ EClothMassMode = {
 }
 
 ---@enum ECloudStorageDelegate
-ECloudStorageDelegate = {
+local ECloudStorageDelegate = {
     CSD_KeyValueReadComplete = 0,
     CSD_KeyValueWriteComplete = 1,
     CSD_ValueChanged = 2,
@@ -650,7 +650,7 @@ ECloudStorageDelegate = {
 }
 
 ---@enum ECollisionChannel
-ECollisionChannel = {
+local ECollisionChannel = {
     ECC_WorldStatic = 0,
     ECC_WorldDynamic = 1,
     ECC_Pawn = 2,
@@ -688,7 +688,7 @@ ECollisionChannel = {
 }
 
 ---@enum ECollisionEnabled
-ECollisionEnabled = {
+local ECollisionEnabled = {
     NoCollision = 0,
     QueryOnly = 1,
     PhysicsOnly = 2,
@@ -697,7 +697,7 @@ ECollisionEnabled = {
 }
 
 ---@enum ECollisionResponse
-ECollisionResponse = {
+local ECollisionResponse = {
     ECR_Ignore = 0,
     ECR_Overlap = 1,
     ECR_Block = 2,
@@ -705,7 +705,7 @@ ECollisionResponse = {
 }
 
 ---@enum ECollisionTraceFlag
-ECollisionTraceFlag = {
+local ECollisionTraceFlag = {
     CTF_UseDefault = 0,
     CTF_UseSimpleAndComplex = 1,
     CTF_UseSimpleAsComplex = 2,
@@ -714,7 +714,7 @@ ECollisionTraceFlag = {
 }
 
 ---@enum EComponentCreationMethod
-EComponentCreationMethod = {
+local EComponentCreationMethod = {
     Native = 0,
     SimpleConstructionScript = 1,
     UserConstructionScript = 2,
@@ -723,7 +723,7 @@ EComponentCreationMethod = {
 }
 
 ---@enum EComponentMobility
-EComponentMobility = {
+local EComponentMobility = {
     Static = 0,
     Stationary = 1,
     Movable = 2,
@@ -731,7 +731,7 @@ EComponentMobility = {
 }
 
 ---@enum EComponentSocketType
-EComponentSocketType = {
+local EComponentSocketType = {
     Invalid = 0,
     Bone = 1,
     Socket = 2,
@@ -739,7 +739,7 @@ EComponentSocketType = {
 }
 
 ---@enum EComponentType
-EComponentType = {
+local EComponentType = {
     None = 0,
     TranslationX = 1,
     TranslationY = 2,
@@ -755,7 +755,7 @@ EComponentType = {
 }
 
 ---@enum ECompositeTextureMode
-ECompositeTextureMode = {
+local ECompositeTextureMode = {
     CTM_Disabled = 0,
     CTM_NormalRoughnessToRed = 1,
     CTM_NormalRoughnessToGreen = 2,
@@ -765,7 +765,7 @@ ECompositeTextureMode = {
 }
 
 ---@enum ECompositingSampleCount
-ECompositingSampleCount = {
+local ECompositingSampleCount = {
     One = 1,
     Two = 2,
     Four = 4,
@@ -774,35 +774,35 @@ ECompositingSampleCount = {
 }
 
 ---@enum EConstraintFrame
-EConstraintFrame = {
+local EConstraintFrame = {
     Frame1 = 0,
     Frame2 = 1,
     EConstraintFrame_MAX = 2,
 }
 
 ---@enum EConstraintTransform
-EConstraintTransform = {
+local EConstraintTransform = {
     Absolute = 0,
     Relative = 1,
     EConstraintTransform_MAX = 2,
 }
 
 ---@enum EControlConstraint
-EControlConstraint = {
+local EControlConstraint = {
     Orientation = 0,
     Translation = 1,
     MAX = 2,
 }
 
 ---@enum EControllerAnalogStick
-EControllerAnalogStick = {
+local EControllerAnalogStick = {
     CAS_LeftStick = 0,
     CAS_RightStick = 1,
     CAS_MAX = 2,
 }
 
 ---@enum ECopyType
-ECopyType = {
+local ECopyType = {
     MemCopy = 0,
     BoolProperty = 1,
     StructProperty = 2,
@@ -811,7 +811,7 @@ ECopyType = {
 }
 
 ---@enum ECsgOper
-ECsgOper = {
+local ECsgOper = {
     CSG_Active = 0,
     CSG_Add = 1,
     CSG_Subtract = 2,
@@ -822,7 +822,7 @@ ECsgOper = {
 }
 
 ---@enum ECurveBlendOption
-ECurveBlendOption = {
+local ECurveBlendOption = {
     MaxWeight = 0,
     NormalizeByWeight = 1,
     BlendByWeight = 2,
@@ -830,7 +830,7 @@ ECurveBlendOption = {
 }
 
 ---@enum ECurveTableMode
-ECurveTableMode = {
+local ECurveTableMode = {
     Empty = 0,
     SimpleCurves = 1,
     RichCurves = 2,
@@ -838,7 +838,7 @@ ECurveTableMode = {
 }
 
 ---@enum ECustomDepthStencil
-ECustomDepthStencil = {
+local ECustomDepthStencil = {
     Disabled = 0,
     Enabled = 1,
     EnabledOnDemand = 2,
@@ -847,7 +847,7 @@ ECustomDepthStencil = {
 }
 
 ---@enum ECustomMaterialOutputType
-ECustomMaterialOutputType = {
+local ECustomMaterialOutputType = {
     CMOT_Float1 = 0,
     CMOT_Float2 = 1,
     CMOT_Float3 = 2,
@@ -856,7 +856,7 @@ ECustomMaterialOutputType = {
 }
 
 ---@enum ECustomTimeStepSynchronizationState
-ECustomTimeStepSynchronizationState = {
+local ECustomTimeStepSynchronizationState = {
     Closed = 0,
     Error = 1,
     Synchronized = 2,
@@ -865,7 +865,7 @@ ECustomTimeStepSynchronizationState = {
 }
 
 ---@enum EDOFMode
-EDOFMode = {
+local EDOFMode = {
     Default = 0,
     SixDOF = 1,
     YZPlane = 2,
@@ -877,7 +877,7 @@ EDOFMode = {
 }
 
 ---@enum EDecalBlendMode
-EDecalBlendMode = {
+local EDecalBlendMode = {
     DBM_Translucent = 0,
     DBM_Stain = 1,
     DBM_Normal = 2,
@@ -899,7 +899,7 @@ EDecalBlendMode = {
 }
 
 ---@enum EDecompressionType
-EDecompressionType = {
+local EDecompressionType = {
     DTYPE_Setup = 0,
     DTYPE_Invalid = 1,
     DTYPE_Preview = 2,
@@ -912,7 +912,7 @@ EDecompressionType = {
 }
 
 ---@enum EDefaultBackBufferPixelFormat
-EDefaultBackBufferPixelFormat = {
+local EDefaultBackBufferPixelFormat = {
     DBBPF_B8G8R8A8 = 0,
     DBBPF_A16B16G16R16_DEPRECATED = 1,
     DBBPF_FloatRGB_DEPRECATED = 2,
@@ -922,7 +922,7 @@ EDefaultBackBufferPixelFormat = {
 }
 
 ---@enum EDemoPlayFailure
-EDemoPlayFailure = {
+local EDemoPlayFailure = {
     Generic = 0,
     DemoNotFound = 1,
     Corrupt = 2,
@@ -936,7 +936,7 @@ EDemoPlayFailure = {
 }
 
 ---@enum EDepthOfFieldFunctionValue
-EDepthOfFieldFunctionValue = {
+local EDepthOfFieldFunctionValue = {
     TDOF_NearAndFarMask = 0,
     TDOF_NearMask = 1,
     TDOF_FarMask = 2,
@@ -945,7 +945,7 @@ EDepthOfFieldFunctionValue = {
 }
 
 ---@enum EDepthOfFieldMethod
-EDepthOfFieldMethod = {
+local EDepthOfFieldMethod = {
     DOFM_BokehDOF = 0,
     DOFM_Gaussian = 1,
     DOFM_CircleDOF = 2,
@@ -953,14 +953,14 @@ EDepthOfFieldMethod = {
 }
 
 ---@enum EDetachmentRule
-EDetachmentRule = {
+local EDetachmentRule = {
     KeepRelative = 0,
     KeepWorld = 1,
     EDetachmentRule_MAX = 2,
 }
 
 ---@enum EDetailMode
-EDetailMode = {
+local EDetailMode = {
     DM_Low = 0,
     DM_Medium = 1,
     DM_High = 2,
@@ -968,7 +968,7 @@ EDetailMode = {
 }
 
 ---@enum EDistributionVectorLockFlags
-EDistributionVectorLockFlags = {
+local EDistributionVectorLockFlags = {
     EDVLF_None = 0,
     EDVLF_XY = 1,
     EDVLF_XZ = 2,
@@ -978,7 +978,7 @@ EDistributionVectorLockFlags = {
 }
 
 ---@enum EDistributionVectorMirrorFlags
-EDistributionVectorMirrorFlags = {
+local EDistributionVectorMirrorFlags = {
     EDVMF_Same = 0,
     EDVMF_Different = 1,
     EDVMF_Mirror = 2,
@@ -986,7 +986,7 @@ EDistributionVectorMirrorFlags = {
 }
 
 ---@enum EDrawDebugItemType
-EDrawDebugItemType = {
+local EDrawDebugItemType = {
     DirectionalArrow = 0,
     Sphere = 1,
     Line = 2,
@@ -996,7 +996,7 @@ EDrawDebugItemType = {
 }
 
 ---@enum EDrawDebugTrace
-EDrawDebugTrace = {
+local EDrawDebugTrace = {
     None = 0,
     ForOneFrame = 1,
     ForDuration = 2,
@@ -1005,7 +1005,7 @@ EDrawDebugTrace = {
 }
 
 ---@enum EDynamicForceFeedbackAction
-EDynamicForceFeedbackAction = {
+local EDynamicForceFeedbackAction = {
     Start = 0,
     Update = 1,
     Stop = 2,
@@ -1013,7 +1013,7 @@ EDynamicForceFeedbackAction = {
 }
 
 ---@enum EEarlyZPass
-EEarlyZPass = {
+local EEarlyZPass = {
     None = 0,
     OpaqueOnly = 1,
     OpaqueAndMasked = 2,
@@ -1022,7 +1022,7 @@ EEarlyZPass = {
 }
 
 ---@enum EEasingFunc
-EEasingFunc = {
+local EEasingFunc = {
     Linear = 0,
     Step = 1,
     SinusoidalIn = 2,
@@ -1041,14 +1041,14 @@ EEasingFunc = {
 }
 
 ---@enum EEdGraphPinDirection
-EEdGraphPinDirection = {
+local EEdGraphPinDirection = {
     EGPD_Input = 0,
     EGPD_Output = 1,
     EGPD_MAX = 2,
 }
 
 ---@enum EEmitterDynamicParameterValue
-EEmitterDynamicParameterValue = {
+local EEmitterDynamicParameterValue = {
     EDPV_UserSet = 0,
     EDPV_AutoSet = 1,
     EDPV_VelocityX = 2,
@@ -1059,7 +1059,7 @@ EEmitterDynamicParameterValue = {
 }
 
 ---@enum EEmitterNormalsMode
-EEmitterNormalsMode = {
+local EEmitterNormalsMode = {
     ENM_CameraFacing = 0,
     ENM_Spherical = 1,
     ENM_Cylindrical = 2,
@@ -1067,7 +1067,7 @@ EEmitterNormalsMode = {
 }
 
 ---@enum EEmitterRenderMode
-EEmitterRenderMode = {
+local EEmitterRenderMode = {
     ERM_Normal = 0,
     ERM_Point = 1,
     ERM_Cross = 2,
@@ -1077,7 +1077,7 @@ EEmitterRenderMode = {
 }
 
 ---@enum EEndPlayReason
-EEndPlayReason = {
+local EEndPlayReason = {
     Destroyed = 0,
     LevelTransition = 1,
     EndPlayInEditor = 2,
@@ -1087,21 +1087,21 @@ EEndPlayReason = {
 }
 
 ---@enum EEvaluateCurveTableResult
-EEvaluateCurveTableResult = {
+local EEvaluateCurveTableResult = {
     RowFound = 0,
     RowNotFound = 1,
     EEvaluateCurveTableResult_MAX = 2,
 }
 
 ---@enum EEvaluatorDataSource
-EEvaluatorDataSource = {
+local EEvaluatorDataSource = {
     EDS_SourcePose = 0,
     EDS_DestinationPose = 1,
     EDS_MAX = 2,
 }
 
 ---@enum EEvaluatorMode
-EEvaluatorMode = {
+local EEvaluatorMode = {
     EM_Standard = 0,
     EM_Freeze = 1,
     EM_DelayedFreeze = 2,
@@ -1109,7 +1109,7 @@ EEvaluatorMode = {
 }
 
 ---@enum EFastArraySerializerDeltaFlags
-EFastArraySerializerDeltaFlags = {
+local EFastArraySerializerDeltaFlags = {
     None = 0,
     HasBeenSerialized = 1,
     HasDeltaBeenRequested = 2,
@@ -1118,7 +1118,7 @@ EFastArraySerializerDeltaFlags = {
 }
 
 ---@enum EFilterInterpolationType
-EFilterInterpolationType = {
+local EFilterInterpolationType = {
     BSIT_Average = 0,
     BSIT_Linear = 1,
     BSIT_Cubic = 2,
@@ -1126,14 +1126,14 @@ EFilterInterpolationType = {
 }
 
 ---@enum EFontCacheType
-EFontCacheType = {
+local EFontCacheType = {
     Offline = 0,
     Runtime = 1,
     EFontCacheType_MAX = 2,
 }
 
 ---@enum EFontImportCharacterSet
-EFontImportCharacterSet = {
+local EFontImportCharacterSet = {
     FontICS_Default = 0,
     FontICS_Ansi = 1,
     FontICS_Symbol = 2,
@@ -1141,7 +1141,7 @@ EFontImportCharacterSet = {
 }
 
 ---@enum EFormatArgumentType
-EFormatArgumentType = {
+local EFormatArgumentType = {
     Int = 0,
     UInt = 1,
     Float = 2,
@@ -1152,7 +1152,7 @@ EFormatArgumentType = {
 }
 
 ---@enum EFrictionCombineMode
-EFrictionCombineMode = {
+local EFrictionCombineMode = {
     Average = 0,
     Min = 1,
     Multiply = 2,
@@ -1160,7 +1160,7 @@ EFrictionCombineMode = {
 }
 
 ---@enum EFullyLoadPackageType
-EFullyLoadPackageType = {
+local EFullyLoadPackageType = {
     FULLYLOAD_Map = 0,
     FULLYLOAD_Game_PreLoadClass = 1,
     FULLYLOAD_Game_PostLoadClass = 2,
@@ -1170,7 +1170,7 @@ EFullyLoadPackageType = {
 }
 
 ---@enum EFunctionInputType
-EFunctionInputType = {
+local EFunctionInputType = {
     FunctionInput_Scalar = 0,
     FunctionInput_Vector2 = 1,
     FunctionInput_Vector3 = 2,
@@ -1186,7 +1186,7 @@ EFunctionInputType = {
 }
 
 ---@enum EGBufferFormat
-EGBufferFormat = {
+local EGBufferFormat = {
     Force8BitsPerChannel = 0,
     Default = 1,
     HighPrecisionNormals = 3,
@@ -1195,7 +1195,7 @@ EGBufferFormat = {
 }
 
 ---@enum EGrammaticalGender
-EGrammaticalGender = {
+local EGrammaticalGender = {
     Neuter = 0,
     Masculine = 1,
     Feminine = 2,
@@ -1204,14 +1204,14 @@ EGrammaticalGender = {
 }
 
 ---@enum EGrammaticalNumber
-EGrammaticalNumber = {
+local EGrammaticalNumber = {
     Singular = 0,
     Plural = 1,
     EGrammaticalNumber_MAX = 2,
 }
 
 ---@enum EGraphAxisStyle
-EGraphAxisStyle = {
+local EGraphAxisStyle = {
     Lines = 0,
     Notches = 1,
     Grid = 2,
@@ -1219,14 +1219,14 @@ EGraphAxisStyle = {
 }
 
 ---@enum EGraphDataStyle
-EGraphDataStyle = {
+local EGraphDataStyle = {
     Lines = 0,
     Filled = 1,
     EGraphDataStyle_MAX = 2,
 }
 
 ---@enum EGraphType
-EGraphType = {
+local EGraphType = {
     GT_Function = 0,
     GT_Ubergraph = 1,
     GT_Macro = 2,
@@ -1236,7 +1236,7 @@ EGraphType = {
 }
 
 ---@enum EHasCustomNavigableGeometry
-EHasCustomNavigableGeometry = {
+local EHasCustomNavigableGeometry = {
     No = 0,
     Yes = 1,
     EvenIfNotCollidable = 2,
@@ -1245,7 +1245,7 @@ EHasCustomNavigableGeometry = {
 }
 
 ---@enum EHorizTextAligment
-EHorizTextAligment = {
+local EHorizTextAligment = {
     EHTA_Left = 0,
     EHTA_Center = 1,
     EHTA_Right = 2,
@@ -1253,7 +1253,7 @@ EHorizTextAligment = {
 }
 
 ---@enum EImportanceLevel
-EImportanceLevel = {
+local EImportanceLevel = {
     IL_Off = 0,
     IL_Lowest = 1,
     IL_Low = 2,
@@ -1265,7 +1265,7 @@ EImportanceLevel = {
 }
 
 ---@enum EImportanceWeight
-EImportanceWeight = {
+local EImportanceWeight = {
     Luminance = 0,
     Red = 1,
     Green = 2,
@@ -1275,7 +1275,7 @@ EImportanceWeight = {
 }
 
 ---@enum EIndirectLightingCacheQuality
-EIndirectLightingCacheQuality = {
+local EIndirectLightingCacheQuality = {
     ILCQ_Off = 0,
     ILCQ_Point = 1,
     ILCQ_Volume = 2,
@@ -1283,7 +1283,7 @@ EIndirectLightingCacheQuality = {
 }
 
 ---@enum EInertializationBoneState
-EInertializationBoneState = {
+local EInertializationBoneState = {
     Invalid = 0,
     Valid = 1,
     Excluded = 2,
@@ -1291,7 +1291,7 @@ EInertializationBoneState = {
 }
 
 ---@enum EInertializationSpace
-EInertializationSpace = {
+local EInertializationSpace = {
     Default = 0,
     WorldSpace = 1,
     WorldRotation = 2,
@@ -1299,7 +1299,7 @@ EInertializationSpace = {
 }
 
 ---@enum EInertializationState
-EInertializationState = {
+local EInertializationState = {
     Inactive = 0,
     Pending = 1,
     Active = 2,
@@ -1307,14 +1307,14 @@ EInertializationState = {
 }
 
 ---@enum EInitialOscillatorOffset
-EInitialOscillatorOffset = {
+local EInitialOscillatorOffset = {
     EOO_OffsetRandom = 0,
     EOO_OffsetZero = 1,
     EOO_MAX = 2,
 }
 
 ---@enum EInputEvent
-EInputEvent = {
+local EInputEvent = {
     IE_Pressed = 0,
     IE_Released = 1,
     IE_Repeat = 2,
@@ -1324,7 +1324,7 @@ EInputEvent = {
 }
 
 ---@enum EInterpMoveAxis
-EInterpMoveAxis = {
+local EInterpMoveAxis = {
     AXIS_TranslationX = 0,
     AXIS_TranslationY = 1,
     AXIS_TranslationZ = 2,
@@ -1335,7 +1335,7 @@ EInterpMoveAxis = {
 }
 
 ---@enum EInterpToBehaviourType
-EInterpToBehaviourType = {
+local EInterpToBehaviourType = {
     OneShot = 0,
     OneShot_Reverse = 1,
     Loop_Reset = 2,
@@ -1344,7 +1344,7 @@ EInterpToBehaviourType = {
 }
 
 ---@enum EInterpTrackMoveRotMode
-EInterpTrackMoveRotMode = {
+local EInterpTrackMoveRotMode = {
     IMR_Keyframed = 0,
     IMR_LookAtGroup = 1,
     IMR_Ignore = 2,
@@ -1352,14 +1352,14 @@ EInterpTrackMoveRotMode = {
 }
 
 ---@enum EKinematicBonesUpdateToPhysics
-EKinematicBonesUpdateToPhysics = {
+local EKinematicBonesUpdateToPhysics = {
     SkipSimulatingBones = 0,
     SkipAllBones = 1,
     EKinematicBonesUpdateToPhysics_MAX = 2,
 }
 
 ---@enum ELandscapeCullingPrecision
-ELandscapeCullingPrecision = {
+local ELandscapeCullingPrecision = {
     High = 0,
     Medium = 1,
     Low = 2,
@@ -1367,14 +1367,14 @@ ELandscapeCullingPrecision = {
 }
 
 ---@enum ELegendPosition
-ELegendPosition = {
+local ELegendPosition = {
     Outside = 0,
     Inside = 1,
     ELegendPosition_MAX = 2,
 }
 
 ---@enum ELerpInterpolationMode
-ELerpInterpolationMode = {
+local ELerpInterpolationMode = {
     QuatInterp = 0,
     EulerInterp = 1,
     DualQuatInterp = 2,
@@ -1382,7 +1382,7 @@ ELerpInterpolationMode = {
 }
 
 ---@enum ELightMapPaddingType
-ELightMapPaddingType = {
+local ELightMapPaddingType = {
     LMPT_NormalPadding = 0,
     LMPT_PrePadding = 1,
     LMPT_NoPadding = 2,
@@ -1390,7 +1390,7 @@ ELightMapPaddingType = {
 }
 
 ---@enum ELightUnits
-ELightUnits = {
+local ELightUnits = {
     Unitless = 0,
     Candelas = 1,
     Lumens = 2,
@@ -1398,7 +1398,7 @@ ELightUnits = {
 }
 
 ---@enum ELightingBuildQuality
-ELightingBuildQuality = {
+local ELightingBuildQuality = {
     Quality_Preview = 0,
     Quality_Medium = 1,
     Quality_High = 2,
@@ -1407,7 +1407,7 @@ ELightingBuildQuality = {
 }
 
 ---@enum ELightmapType
-ELightmapType = {
+local ELightmapType = {
     Default = 0,
     ForceSurface = 1,
     ForceVolumetric = 2,
@@ -1415,7 +1415,7 @@ ELightmapType = {
 }
 
 ---@enum ELinearConstraintMotion
-ELinearConstraintMotion = {
+local ELinearConstraintMotion = {
     LCM_Free = 0,
     LCM_Limited = 1,
     LCM_Locked = 2,
@@ -1423,35 +1423,35 @@ ELinearConstraintMotion = {
 }
 
 ---@enum ELocationBoneSocketSelectionMethod
-ELocationBoneSocketSelectionMethod = {
+local ELocationBoneSocketSelectionMethod = {
     BONESOCKETSEL_Sequential = 0,
     BONESOCKETSEL_Random = 1,
     BONESOCKETSEL_MAX = 2,
 }
 
 ---@enum ELocationBoneSocketSource
-ELocationBoneSocketSource = {
+local ELocationBoneSocketSource = {
     BONESOCKETSOURCE_Bones = 0,
     BONESOCKETSOURCE_Sockets = 1,
     BONESOCKETSOURCE_MAX = 2,
 }
 
 ---@enum ELocationEmitterSelectionMethod
-ELocationEmitterSelectionMethod = {
+local ELocationEmitterSelectionMethod = {
     ELESM_Random = 0,
     ELESM_Sequential = 1,
     ELESM_MAX = 2,
 }
 
 ---@enum ELocationSkelVertSurfaceSource
-ELocationSkelVertSurfaceSource = {
+local ELocationSkelVertSurfaceSource = {
     VERTSURFACESOURCE_Vert = 0,
     VERTSURFACESOURCE_Surface = 1,
     VERTSURFACESOURCE_MAX = 2,
 }
 
 ---@enum EMaterialAttributeBlend
-EMaterialAttributeBlend = {
+local EMaterialAttributeBlend = {
     Blend = 0,
     UseA = 1,
     UseB = 2,
@@ -1459,7 +1459,7 @@ EMaterialAttributeBlend = {
 }
 
 ---@enum EMaterialDecalResponse
-EMaterialDecalResponse = {
+local EMaterialDecalResponse = {
     MDR_None = 0,
     MDR_ColorNormalRoughness = 1,
     MDR_Color = 2,
@@ -1472,7 +1472,7 @@ EMaterialDecalResponse = {
 }
 
 ---@enum EMaterialDomain
-EMaterialDomain = {
+local EMaterialDomain = {
     MD_Surface = 0,
     MD_DeferredDecal = 1,
     MD_LightFunction = 2,
@@ -1484,14 +1484,14 @@ EMaterialDomain = {
 }
 
 ---@enum EMaterialExposedTextureProperty
-EMaterialExposedTextureProperty = {
+local EMaterialExposedTextureProperty = {
     TMTM_TextureSize = 0,
     TMTM_TexelSize = 1,
     TMTM_MAX = 2,
 }
 
 ---@enum EMaterialExposedViewProperty
-EMaterialExposedViewProperty = {
+local EMaterialExposedViewProperty = {
     MEVP_BufferSize = 0,
     MEVP_FieldOfView = 1,
     MEVP_TanHalfFieldOfView = 2,
@@ -1509,7 +1509,7 @@ EMaterialExposedViewProperty = {
 }
 
 ---@enum EMaterialFunctionUsage
-EMaterialFunctionUsage = {
+local EMaterialFunctionUsage = {
     Default = 0,
     MaterialLayer = 1,
     MaterialLayerBlend = 2,
@@ -1517,14 +1517,14 @@ EMaterialFunctionUsage = {
 }
 
 ---@enum EMaterialMergeType
-EMaterialMergeType = {
+local EMaterialMergeType = {
     MaterialMergeType_Default = 0,
     MaterialMergeType_Simplygon = 1,
     MaterialMergeType_MAX = 2,
 }
 
 ---@enum EMaterialParameterAssociation
-EMaterialParameterAssociation = {
+local EMaterialParameterAssociation = {
     LayerParameter = 0,
     BlendParameter = 1,
     GlobalParameter = 2,
@@ -1532,7 +1532,7 @@ EMaterialParameterAssociation = {
 }
 
 ---@enum EMaterialPositionTransformSource
-EMaterialPositionTransformSource = {
+local EMaterialPositionTransformSource = {
     TRANSFORMPOSSOURCE_Local = 0,
     TRANSFORMPOSSOURCE_World = 1,
     TRANSFORMPOSSOURCE_TranslatedWorld = 2,
@@ -1543,7 +1543,7 @@ EMaterialPositionTransformSource = {
 }
 
 ---@enum EMaterialProperty
-EMaterialProperty = {
+local EMaterialProperty = {
     MP_EmissiveColor = 0,
     MP_Opacity = 1,
     MP_OpacityMask = 2,
@@ -1578,7 +1578,7 @@ EMaterialProperty = {
 }
 
 ---@enum EMaterialSamplerType
-EMaterialSamplerType = {
+local EMaterialSamplerType = {
     SAMPLERTYPE_Color = 0,
     SAMPLERTYPE_Grayscale = 1,
     SAMPLERTYPE_Alpha = 2,
@@ -1600,14 +1600,14 @@ EMaterialSamplerType = {
 }
 
 ---@enum EMaterialSceneAttributeInputMode
-EMaterialSceneAttributeInputMode = {
+local EMaterialSceneAttributeInputMode = {
     Coordinates = 0,
     OffsetFraction = 1,
     EMaterialSceneAttributeInputMode_MAX = 2,
 }
 
 ---@enum EMaterialShadingModel
-EMaterialShadingModel = {
+local EMaterialShadingModel = {
     MSM_Unlit = 0,
     MSM_DefaultLit = 1,
     MSM_Subsurface = 2,
@@ -1625,7 +1625,7 @@ EMaterialShadingModel = {
 }
 
 ---@enum EMaterialStencilCompare
-EMaterialStencilCompare = {
+local EMaterialStencilCompare = {
     MSC_Less = 0,
     MSC_LessEqual = 1,
     MSC_Greater = 2,
@@ -1639,7 +1639,7 @@ EMaterialStencilCompare = {
 }
 
 ---@enum EMaterialTessellationMode
-EMaterialTessellationMode = {
+local EMaterialTessellationMode = {
     MTM_NoTessellation = 0,
     MTM_FlatTessellation = 1,
     MTM_PNTriangles = 2,
@@ -1647,7 +1647,7 @@ EMaterialTessellationMode = {
 }
 
 ---@enum EMaterialUsage
-EMaterialUsage = {
+local EMaterialUsage = {
     MATUSAGE_SkeletalMesh = 0,
     MATUSAGE_ParticleSprites = 1,
     MATUSAGE_BeamTrails = 2,
@@ -1668,7 +1668,7 @@ EMaterialUsage = {
 }
 
 ---@enum EMaterialVectorCoordTransform
-EMaterialVectorCoordTransform = {
+local EMaterialVectorCoordTransform = {
     TRANSFORM_Tangent = 0,
     TRANSFORM_Local = 1,
     TRANSFORM_World = 2,
@@ -1679,7 +1679,7 @@ EMaterialVectorCoordTransform = {
 }
 
 ---@enum EMaterialVectorCoordTransformSource
-EMaterialVectorCoordTransformSource = {
+local EMaterialVectorCoordTransformSource = {
     TRANSFORMSOURCE_Tangent = 0,
     TRANSFORMSOURCE_Local = 1,
     TRANSFORMSOURCE_World = 2,
@@ -1690,7 +1690,7 @@ EMaterialVectorCoordTransformSource = {
 }
 
 ---@enum EMatrixColumns
-EMatrixColumns = {
+local EMatrixColumns = {
     First = 0,
     Second = 1,
     Third = 2,
@@ -1699,7 +1699,7 @@ EMatrixColumns = {
 }
 
 ---@enum EMaxConcurrentResolutionRule
-EMaxConcurrentResolutionRule = {
+local EMaxConcurrentResolutionRule = {
     PreventNew = 0,
     StopOldest = 1,
     StopFarthestThenPreventNew = 2,
@@ -1711,14 +1711,14 @@ EMaxConcurrentResolutionRule = {
 }
 
 ---@enum EMeshBufferAccess
-EMeshBufferAccess = {
+local EMeshBufferAccess = {
     Default = 0,
     ForceCPUAndGPU = 1,
     EMeshBufferAccess_MAX = 2,
 }
 
 ---@enum EMeshCameraFacingOptions
-EMeshCameraFacingOptions = {
+local EMeshCameraFacingOptions = {
     XAxisFacing_NoUp = 0,
     XAxisFacing_ZUp = 1,
     XAxisFacing_NegativeZUp = 2,
@@ -1736,7 +1736,7 @@ EMeshCameraFacingOptions = {
 }
 
 ---@enum EMeshCameraFacingUpAxis
-EMeshCameraFacingUpAxis = {
+local EMeshCameraFacingUpAxis = {
     CameraFacing_NoneUP = 0,
     CameraFacing_ZUp = 1,
     CameraFacing_NegativeZUp = 2,
@@ -1746,7 +1746,7 @@ EMeshCameraFacingUpAxis = {
 }
 
 ---@enum EMeshFeatureImportance
-EMeshFeatureImportance = {
+local EMeshFeatureImportance = {
     Off = 0,
     Lowest = 1,
     Low = 2,
@@ -1757,14 +1757,14 @@ EMeshFeatureImportance = {
 }
 
 ---@enum EMeshInstancingReplacementMethod
-EMeshInstancingReplacementMethod = {
+local EMeshInstancingReplacementMethod = {
     RemoveOriginalActors = 0,
     KeepOriginalActorsAsEditorOnly = 1,
     EMeshInstancingReplacementMethod_MAX = 2,
 }
 
 ---@enum EMeshLODSelectionType
-EMeshLODSelectionType = {
+local EMeshLODSelectionType = {
     AllLODs = 0,
     SpecificLOD = 1,
     CalculateLOD = 2,
@@ -1773,14 +1773,14 @@ EMeshLODSelectionType = {
 }
 
 ---@enum EMeshMergeType
-EMeshMergeType = {
+local EMeshMergeType = {
     MeshMergeType_Default = 0,
     MeshMergeType_MergeActor = 1,
     MeshMergeType_MAX = 2,
 }
 
 ---@enum EMeshScreenAlignment
-EMeshScreenAlignment = {
+local EMeshScreenAlignment = {
     PSMA_MeshFaceCameraWithRoll = 0,
     PSMA_MeshFaceCameraWithSpin = 1,
     PSMA_MeshFaceCameraWithLockedAxis = 2,
@@ -1788,14 +1788,14 @@ EMeshScreenAlignment = {
 }
 
 ---@enum EMicroTransactionDelegate
-EMicroTransactionDelegate = {
+local EMicroTransactionDelegate = {
     MTD_PurchaseQueryComplete = 0,
     MTD_PurchaseComplete = 1,
     MTD_MAX = 2,
 }
 
 ---@enum EMicroTransactionResult
-EMicroTransactionResult = {
+local EMicroTransactionResult = {
     MTR_Succeeded = 0,
     MTR_Failed = 1,
     MTR_Canceled = 2,
@@ -1804,7 +1804,7 @@ EMicroTransactionResult = {
 }
 
 ---@enum EMobileMSAASampleCount
-EMobileMSAASampleCount = {
+local EMobileMSAASampleCount = {
     One = 1,
     Two = 2,
     Four = 4,
@@ -1813,7 +1813,7 @@ EMobileMSAASampleCount = {
 }
 
 ---@enum EModuleType
-EModuleType = {
+local EModuleType = {
     EPMT_General = 0,
     EPMT_TypeData = 1,
     EPMT_Beam = 2,
@@ -1827,7 +1827,7 @@ EModuleType = {
 }
 
 ---@enum EMonoChannelUpmixMethod
-EMonoChannelUpmixMethod = {
+local EMonoChannelUpmixMethod = {
     Linear = 0,
     EqualPower = 1,
     FullVolume = 2,
@@ -1835,21 +1835,21 @@ EMonoChannelUpmixMethod = {
 }
 
 ---@enum EMontageNotifyTickType
-EMontageNotifyTickType = {
+local EMontageNotifyTickType = {
     Queued = 0,
     BranchingPoint = 1,
     EMontageNotifyTickType_MAX = 2,
 }
 
 ---@enum EMontagePlayReturnType
-EMontagePlayReturnType = {
+local EMontagePlayReturnType = {
     MontageLength = 0,
     Duration = 1,
     EMontagePlayReturnType_MAX = 2,
 }
 
 ---@enum EMontageSubStepResult
-EMontageSubStepResult = {
+local EMontageSubStepResult = {
     Moved = 0,
     NotMoved = 1,
     InvalidSection = 2,
@@ -1858,7 +1858,7 @@ EMontageSubStepResult = {
 }
 
 ---@enum EMouseCaptureMode
-EMouseCaptureMode = {
+local EMouseCaptureMode = {
     NoCapture = 0,
     CapturePermanently = 1,
     CapturePermanently_IncludingInitialMouseDown = 2,
@@ -1868,7 +1868,7 @@ EMouseCaptureMode = {
 }
 
 ---@enum EMouseLockMode
-EMouseLockMode = {
+local EMouseLockMode = {
     DoNotLock = 0,
     LockOnCapture = 1,
     LockAlways = 2,
@@ -1877,7 +1877,7 @@ EMouseLockMode = {
 }
 
 ---@enum EMoveComponentAction
-EMoveComponentAction = {
+local EMoveComponentAction = {
     Move = 0,
     Stop = 1,
     Return = 2,
@@ -1885,7 +1885,7 @@ EMoveComponentAction = {
 }
 
 ---@enum EMovementMode
-EMovementMode = {
+local EMovementMode = {
     MOVE_None = 0,
     MOVE_Walking = 1,
     MOVE_NavWalking = 2,
@@ -1897,7 +1897,7 @@ EMovementMode = {
 }
 
 ---@enum ENavDataGatheringMode
-ENavDataGatheringMode = {
+local ENavDataGatheringMode = {
     Default = 0,
     Instant = 1,
     Lazy = 2,
@@ -1905,7 +1905,7 @@ ENavDataGatheringMode = {
 }
 
 ---@enum ENavDataGatheringModeConfig
-ENavDataGatheringModeConfig = {
+local ENavDataGatheringModeConfig = {
     Invalid = 0,
     Instant = 1,
     Lazy = 2,
@@ -1913,7 +1913,7 @@ ENavDataGatheringModeConfig = {
 }
 
 ---@enum ENavLinkDirection
-ENavLinkDirection = {
+local ENavLinkDirection = {
     BothWays = 0,
     LeftToRight = 1,
     RightToLeft = 2,
@@ -1921,7 +1921,7 @@ ENavLinkDirection = {
 }
 
 ---@enum ENavPathEvent
-ENavPathEvent = {
+local ENavPathEvent = {
     Cleared = 0,
     NewPath = 1,
     UpdatedDueToGoalMoved = 2,
@@ -1934,7 +1934,7 @@ ENavPathEvent = {
 }
 
 ---@enum ENavigationOptionFlag
-ENavigationOptionFlag = {
+local ENavigationOptionFlag = {
     Default = 0,
     Enable = 1,
     Disable = 2,
@@ -1942,7 +1942,7 @@ ENavigationOptionFlag = {
 }
 
 ---@enum ENavigationQueryResult
-ENavigationQueryResult = {
+local ENavigationQueryResult = {
     Invalid = 0,
     Error = 1,
     Fail = 2,
@@ -1951,7 +1951,7 @@ ENavigationQueryResult = {
 }
 
 ---@enum ENetDormancy
-ENetDormancy = {
+local ENetDormancy = {
     DORM_Never = 0,
     DORM_Awake = 1,
     DORM_DormantAll = 2,
@@ -1961,7 +1961,7 @@ ENetDormancy = {
 }
 
 ---@enum ENetRole
-ENetRole = {
+local ENetRole = {
     ROLE_None = 0,
     ROLE_SimulatedProxy = 1,
     ROLE_AutonomousProxy = 2,
@@ -1970,7 +1970,7 @@ ENetRole = {
 }
 
 ---@enum ENetworkFailure
-ENetworkFailure = {
+local ENetworkFailure = {
     NetDriverAlreadyExists = 0,
     NetDriverCreateFailure = 1,
     NetDriverListenFailure = 2,
@@ -1986,14 +1986,14 @@ ENetworkFailure = {
 }
 
 ---@enum ENetworkLagState
-ENetworkLagState = {
+local ENetworkLagState = {
     NotLagging = 0,
     Lagging = 1,
     ENetworkLagState_MAX = 2,
 }
 
 ---@enum ENetworkSmoothingMode
-ENetworkSmoothingMode = {
+local ENetworkSmoothingMode = {
     Disabled = 0,
     Linear = 1,
     Exponential = 2,
@@ -2002,7 +2002,7 @@ ENetworkSmoothingMode = {
 }
 
 ---@enum ENodeAdvancedPins
-ENodeAdvancedPins = {
+local ENodeAdvancedPins = {
     NoPins = 0,
     Shown = 1,
     Hidden = 2,
@@ -2010,7 +2010,7 @@ ENodeAdvancedPins = {
 }
 
 ---@enum ENodeEnabledState
-ENodeEnabledState = {
+local ENodeEnabledState = {
     Enabled = 0,
     Disabled = 1,
     DevelopmentOnly = 2,
@@ -2018,7 +2018,7 @@ ENodeEnabledState = {
 }
 
 ---@enum ENodeTitleType
-ENodeTitleType = {
+local ENodeTitleType = {
     FullTitle = 0,
     ListView = 1,
     EditableTitle = 2,
@@ -2028,7 +2028,7 @@ ENodeTitleType = {
 }
 
 ---@enum ENoiseFunction
-ENoiseFunction = {
+local ENoiseFunction = {
     NOISEFUNCTION_SimplexTex = 0,
     NOISEFUNCTION_GradientTex = 1,
     NOISEFUNCTION_GradientTex3D = 2,
@@ -2039,7 +2039,7 @@ ENoiseFunction = {
 }
 
 ---@enum ENormalMode
-ENormalMode = {
+local ENormalMode = {
     NM_PreserveSmoothingGroups = 0,
     NM_RecalculateNormals = 1,
     NM_RecalculateNormalsSmooth = 2,
@@ -2049,14 +2049,14 @@ ENormalMode = {
 }
 
 ---@enum ENotifyFilterType
-ENotifyFilterType = {
+local ENotifyFilterType = {
     NoFiltering = 0,
     LOD = 1,
     ENotifyFilterType_MAX = 2,
 }
 
 ---@enum ENotifyTriggerMode
-ENotifyTriggerMode = {
+local ENotifyTriggerMode = {
     AllAnimations = 0,
     HighestWeightedAnimation = 1,
     None = 2,
@@ -2064,7 +2064,7 @@ ENotifyTriggerMode = {
 }
 
 ---@enum EObjectTypeQuery
-EObjectTypeQuery = {
+local EObjectTypeQuery = {
     ObjectTypeQuery1 = 0,
     ObjectTypeQuery2 = 1,
     ObjectTypeQuery3 = 2,
@@ -2102,14 +2102,14 @@ EObjectTypeQuery = {
 }
 
 ---@enum EOcclusionCombineMode
-EOcclusionCombineMode = {
+local EOcclusionCombineMode = {
     OCM_Minimum = 0,
     OCM_Multiply = 1,
     OCM_MAX = 2,
 }
 
 ---@enum EOpacitySourceMode
-EOpacitySourceMode = {
+local EOpacitySourceMode = {
     OSM_Alpha = 0,
     OSM_ColorBrightness = 1,
     OSM_RedChannel = 2,
@@ -2119,14 +2119,14 @@ EOpacitySourceMode = {
 }
 
 ---@enum EOptimizationType
-EOptimizationType = {
+local EOptimizationType = {
     OT_NumOfTriangles = 0,
     OT_MaxDeviation = 1,
     OT_MAX = 2,
 }
 
 ---@enum EOrbitChainMode
-EOrbitChainMode = {
+local EOrbitChainMode = {
     EOChainMode_Add = 0,
     EOChainMode_Scale = 1,
     EOChainMode_Link = 2,
@@ -2134,14 +2134,14 @@ EOrbitChainMode = {
 }
 
 ---@enum EOscillatorWaveform
-EOscillatorWaveform = {
+local EOscillatorWaveform = {
     SineWave = 0,
     PerlinNoise = 1,
     EOscillatorWaveform_MAX = 2,
 }
 
 ---@enum EOverlapFilterOption
-EOverlapFilterOption = {
+local EOverlapFilterOption = {
     OverlapFilter_All = 0,
     OverlapFilter_DynamicOnly = 1,
     OverlapFilter_StaticOnly = 2,
@@ -2149,7 +2149,7 @@ EOverlapFilterOption = {
 }
 
 ---@enum EPSCPoolMethod
-EPSCPoolMethod = {
+local EPSCPoolMethod = {
     None = 0,
     AutoRelease = 1,
     ManualRelease = 2,
@@ -2159,14 +2159,14 @@ EPSCPoolMethod = {
 }
 
 ---@enum EPanningMethod
-EPanningMethod = {
+local EPanningMethod = {
     Linear = 0,
     EqualPower = 1,
     EPanningMethod_MAX = 2,
 }
 
 ---@enum EParticleAxisLock
-EParticleAxisLock = {
+local EParticleAxisLock = {
     EPAL_NONE = 0,
     EPAL_X = 1,
     EPAL_Y = 2,
@@ -2181,14 +2181,14 @@ EParticleAxisLock = {
 }
 
 ---@enum EParticleBurstMethod
-EParticleBurstMethod = {
+local EParticleBurstMethod = {
     EPBM_Instant = 0,
     EPBM_Interpolated = 1,
     EPBM_MAX = 2,
 }
 
 ---@enum EParticleCameraOffsetUpdateMethod
-EParticleCameraOffsetUpdateMethod = {
+local EParticleCameraOffsetUpdateMethod = {
     EPCOUM_DirectSet = 0,
     EPCOUM_Additive = 1,
     EPCOUM_Scalar = 2,
@@ -2196,7 +2196,7 @@ EParticleCameraOffsetUpdateMethod = {
 }
 
 ---@enum EParticleCollisionComplete
-EParticleCollisionComplete = {
+local EParticleCollisionComplete = {
     EPCC_Kill = 0,
     EPCC_Freeze = 1,
     EPCC_HaltCollisions = 2,
@@ -2207,14 +2207,14 @@ EParticleCollisionComplete = {
 }
 
 ---@enum EParticleCollisionMode
-EParticleCollisionMode = {
+local EParticleCollisionMode = {
     SceneDepth = 0,
     DistanceField = 1,
     EParticleCollisionMode_MAX = 2,
 }
 
 ---@enum EParticleCollisionResponse
-EParticleCollisionResponse = {
+local EParticleCollisionResponse = {
     Bounce = 0,
     Stop = 1,
     Kill = 2,
@@ -2222,7 +2222,7 @@ EParticleCollisionResponse = {
 }
 
 ---@enum EParticleDetailMode
-EParticleDetailMode = {
+local EParticleDetailMode = {
     PDM_Low = 0,
     PDM_Medium = 1,
     PDM_High = 2,
@@ -2230,7 +2230,7 @@ EParticleDetailMode = {
 }
 
 ---@enum EParticleEventType
-EParticleEventType = {
+local EParticleEventType = {
     EPET_Any = 0,
     EPET_Spawn = 1,
     EPET_Death = 2,
@@ -2241,7 +2241,7 @@ EParticleEventType = {
 }
 
 ---@enum EParticleScreenAlignment
-EParticleScreenAlignment = {
+local EParticleScreenAlignment = {
     PSA_FacingCameraPosition = 0,
     PSA_Square = 1,
     PSA_Rectangle = 2,
@@ -2253,7 +2253,7 @@ EParticleScreenAlignment = {
 }
 
 ---@enum EParticleSignificanceLevel
-EParticleSignificanceLevel = {
+local EParticleSignificanceLevel = {
     Low = 0,
     Medium = 1,
     High = 2,
@@ -2263,7 +2263,7 @@ EParticleSignificanceLevel = {
 }
 
 ---@enum EParticleSortMode
-EParticleSortMode = {
+local EParticleSortMode = {
     PSORTMODE_None = 0,
     PSORTMODE_ViewProjDepth = 1,
     PSORTMODE_DistanceToView = 2,
@@ -2273,14 +2273,14 @@ EParticleSortMode = {
 }
 
 ---@enum EParticleSourceSelectionMethod
-EParticleSourceSelectionMethod = {
+local EParticleSourceSelectionMethod = {
     EPSSM_Random = 0,
     EPSSM_Sequential = 1,
     EPSSM_MAX = 2,
 }
 
 ---@enum EParticleSubUVInterpMethod
-EParticleSubUVInterpMethod = {
+local EParticleSubUVInterpMethod = {
     PSUVIM_None = 0,
     PSUVIM_Linear = 1,
     PSUVIM_Linear_Blend = 2,
@@ -2290,7 +2290,7 @@ EParticleSubUVInterpMethod = {
 }
 
 ---@enum EParticleSysParamType
-EParticleSysParamType = {
+local EParticleSysParamType = {
     PSPT_None = 0,
     PSPT_Scalar = 1,
     PSPT_ScalarRand = 2,
@@ -2304,7 +2304,7 @@ EParticleSysParamType = {
 }
 
 ---@enum EParticleSystemInsignificanceReaction
-EParticleSystemInsignificanceReaction = {
+local EParticleSystemInsignificanceReaction = {
     Auto = 0,
     Complete = 1,
     DisableTick = 2,
@@ -2314,7 +2314,7 @@ EParticleSystemInsignificanceReaction = {
 }
 
 ---@enum EParticleSystemOcclusionBoundsMethod
-EParticleSystemOcclusionBoundsMethod = {
+local EParticleSystemOcclusionBoundsMethod = {
     EPSOBM_None = 0,
     EPSOBM_ParticleBounds = 1,
     EPSOBM_CustomBounds = 2,
@@ -2322,14 +2322,14 @@ EParticleSystemOcclusionBoundsMethod = {
 }
 
 ---@enum EParticleSystemUpdateMode
-EParticleSystemUpdateMode = {
+local EParticleSystemUpdateMode = {
     EPSUM_RealTime = 0,
     EPSUM_FixedTime = 1,
     EPSUM_MAX = 2,
 }
 
 ---@enum EParticleUVFlipMode
-EParticleUVFlipMode = {
+local EParticleUVFlipMode = {
     None = 0,
     FlipUV = 1,
     FlipUOnly = 2,
@@ -2342,14 +2342,14 @@ EParticleUVFlipMode = {
 }
 
 ---@enum EPhysBodyOp
-EPhysBodyOp = {
+local EPhysBodyOp = {
     PBO_None = 0,
     PBO_Term = 1,
     PBO_MAX = 2,
 }
 
 ---@enum EPhysicalSurface
-EPhysicalSurface = {
+local EPhysicalSurface = {
     SurfaceType_Default = 0,
     SurfaceType1 = 1,
     SurfaceType2 = 2,
@@ -2418,14 +2418,14 @@ EPhysicalSurface = {
 }
 
 ---@enum EPhysicsTransformUpdateMode
-EPhysicsTransformUpdateMode = {
+local EPhysicsTransformUpdateMode = {
     SimulationUpatesComponentTransform = 0,
     ComponentTransformIsKinematic = 1,
     EPhysicsTransformUpdateMode_MAX = 2,
 }
 
 ---@enum EPhysicsType
-EPhysicsType = {
+local EPhysicsType = {
     PhysType_Default = 0,
     PhysType_Kinematic = 1,
     PhysType_Simulated = 2,
@@ -2433,7 +2433,7 @@ EPhysicsType = {
 }
 
 ---@enum EPinContainerType
-EPinContainerType = {
+local EPinContainerType = {
     None = 0,
     Array = 1,
     Set = 2,
@@ -2442,7 +2442,7 @@ EPinContainerType = {
 }
 
 ---@enum EPinHidingMode
-EPinHidingMode = {
+local EPinHidingMode = {
     NeverAsPin = 0,
     PinHiddenByDefault = 1,
     PinShownByDefault = 2,
@@ -2451,7 +2451,7 @@ EPinHidingMode = {
 }
 
 ---@enum EPlaneConstraintAxisSetting
-EPlaneConstraintAxisSetting = {
+local EPlaneConstraintAxisSetting = {
     Custom = 0,
     X = 1,
     Y = 2,
@@ -2461,7 +2461,7 @@ EPlaneConstraintAxisSetting = {
 }
 
 ---@enum EPlatformInterfaceDataType
-EPlatformInterfaceDataType = {
+local EPlatformInterfaceDataType = {
     PIDT_None = 0,
     PIDT_Int = 1,
     PIDT_Float = 2,
@@ -2472,21 +2472,21 @@ EPlatformInterfaceDataType = {
 }
 
 ---@enum EPostCopyOperation
-EPostCopyOperation = {
+local EPostCopyOperation = {
     None = 0,
     LogicalNegateBool = 1,
     EPostCopyOperation_MAX = 2,
 }
 
 ---@enum EPreviewAnimationBlueprintApplicationMethod
-EPreviewAnimationBlueprintApplicationMethod = {
+local EPreviewAnimationBlueprintApplicationMethod = {
     LinkedLayers = 0,
     LinkedAnimGraph = 1,
     EPreviewAnimationBlueprintApplicationMethod_MAX = 2,
 }
 
 ---@enum EPrimaryAssetCookRule
-EPrimaryAssetCookRule = {
+local EPrimaryAssetCookRule = {
     Unknown = 0,
     NeverCook = 1,
     DevelopmentCook = 2,
@@ -2496,7 +2496,7 @@ EPrimaryAssetCookRule = {
 }
 
 ---@enum EProxyNormalComputationMethod
-EProxyNormalComputationMethod = {
+local EProxyNormalComputationMethod = {
     AngleWeighted = 0,
     AreaWeighted = 1,
     EqualWeighted = 2,
@@ -2504,21 +2504,21 @@ EProxyNormalComputationMethod = {
 }
 
 ---@enum EQuitPreference
-EQuitPreference = {
+local EQuitPreference = {
     Quit = 0,
     Background = 1,
     EQuitPreference_MAX = 2,
 }
 
 ---@enum ERadialImpulseFalloff
-ERadialImpulseFalloff = {
+local ERadialImpulseFalloff = {
     RIF_Constant = 0,
     RIF_Linear = 1,
     RIF_MAX = 2,
 }
 
 ---@enum ERawCurveTrackTypes
-ERawCurveTrackTypes = {
+local ERawCurveTrackTypes = {
     RCT_Float = 0,
     RCT_Vector = 1,
     RCT_Transform = 2,
@@ -2526,7 +2526,7 @@ ERawCurveTrackTypes = {
 }
 
 ---@enum ERayTracingGlobalIlluminationType
-ERayTracingGlobalIlluminationType = {
+local ERayTracingGlobalIlluminationType = {
     Disabled = 0,
     BruteForce = 1,
     FinalGather = 2,
@@ -2534,7 +2534,7 @@ ERayTracingGlobalIlluminationType = {
 }
 
 ---@enum EReflectedAndRefractedRayTracedShadows
-EReflectedAndRefractedRayTracedShadows = {
+local EReflectedAndRefractedRayTracedShadows = {
     Disabled = 0,
     Hard_shadows = 1,
     Area_shadows = 2,
@@ -2542,28 +2542,28 @@ EReflectedAndRefractedRayTracedShadows = {
 }
 
 ---@enum EReflectionSourceType
-EReflectionSourceType = {
+local EReflectionSourceType = {
     CapturedScene = 0,
     SpecifiedCubemap = 1,
     EReflectionSourceType_MAX = 2,
 }
 
 ---@enum EReflectionsType
-EReflectionsType = {
+local EReflectionsType = {
     ScreenSpace = 0,
     RayTracing = 1,
     EReflectionsType_MAX = 2,
 }
 
 ---@enum ERefractionMode
-ERefractionMode = {
+local ERefractionMode = {
     RM_IndexOfRefraction = 0,
     RM_PixelNormalOffset = 1,
     RM_MAX = 2,
 }
 
 ---@enum ERelativeTransformSpace
-ERelativeTransformSpace = {
+local ERelativeTransformSpace = {
     RTS_World = 0,
     RTS_Actor = 1,
     RTS_Component = 2,
@@ -2572,7 +2572,7 @@ ERelativeTransformSpace = {
 }
 
 ---@enum ERenderFocusRule
-ERenderFocusRule = {
+local ERenderFocusRule = {
     Always = 0,
     NonPointer = 1,
     NavigationOnly = 2,
@@ -2581,7 +2581,7 @@ ERenderFocusRule = {
 }
 
 ---@enum ERendererStencilMask
-ERendererStencilMask = {
+local ERendererStencilMask = {
     ERSM_Default = 0,
     ERSM_255 = 1,
     ERSM_1 = 2,
@@ -2598,14 +2598,14 @@ ERendererStencilMask = {
 }
 
 ---@enum EReporterLineStyle
-EReporterLineStyle = {
+local EReporterLineStyle = {
     Line = 0,
     Dash = 1,
     EReporterLineStyle_MAX = 2,
 }
 
 ---@enum EReverbSendMethod
-EReverbSendMethod = {
+local EReverbSendMethod = {
     Linear = 0,
     CustomCurve = 1,
     Manual = 2,
@@ -2613,7 +2613,7 @@ EReverbSendMethod = {
 }
 
 ---@enum ERichCurveCompressionFormat
-ERichCurveCompressionFormat = {
+local ERichCurveCompressionFormat = {
     RCCF_Empty = 0,
     RCCF_Constant = 1,
     RCCF_Linear = 2,
@@ -2623,7 +2623,7 @@ ERichCurveCompressionFormat = {
 }
 
 ---@enum ERichCurveExtrapolation
-ERichCurveExtrapolation = {
+local ERichCurveExtrapolation = {
     RCCE_Cycle = 0,
     RCCE_CycleWithOffset = 1,
     RCCE_Oscillate = 2,
@@ -2634,7 +2634,7 @@ ERichCurveExtrapolation = {
 }
 
 ---@enum ERichCurveInterpMode
-ERichCurveInterpMode = {
+local ERichCurveInterpMode = {
     RCIM_Linear = 0,
     RCIM_Constant = 1,
     RCIM_Cubic = 2,
@@ -2643,14 +2643,14 @@ ERichCurveInterpMode = {
 }
 
 ---@enum ERichCurveKeyTimeCompressionFormat
-ERichCurveKeyTimeCompressionFormat = {
+local ERichCurveKeyTimeCompressionFormat = {
     RCKTCF_uint16 = 0,
     RCKTCF_float32 = 1,
     RCKTCF_MAX = 2,
 }
 
 ---@enum ERichCurveTangentMode
-ERichCurveTangentMode = {
+local ERichCurveTangentMode = {
     RCTM_Auto = 0,
     RCTM_User = 1,
     RCTM_Break = 2,
@@ -2659,7 +2659,7 @@ ERichCurveTangentMode = {
 }
 
 ---@enum ERichCurveTangentWeightMode
-ERichCurveTangentWeightMode = {
+local ERichCurveTangentWeightMode = {
     RCTWM_WeightedNone = 0,
     RCTWM_WeightedArrive = 1,
     RCTWM_WeightedLeave = 2,
@@ -2668,14 +2668,14 @@ ERichCurveTangentWeightMode = {
 }
 
 ---@enum ERootMotionAccumulateMode
-ERootMotionAccumulateMode = {
+local ERootMotionAccumulateMode = {
     Override = 0,
     Additive = 1,
     ERootMotionAccumulateMode_MAX = 2,
 }
 
 ---@enum ERootMotionFinishVelocityMode
-ERootMotionFinishVelocityMode = {
+local ERootMotionFinishVelocityMode = {
     MaintainLastRootMotionVelocity = 0,
     SetVelocity = 1,
     ClampVelocity = 2,
@@ -2683,7 +2683,7 @@ ERootMotionFinishVelocityMode = {
 }
 
 ---@enum ERootMotionMode
-ERootMotionMode = {
+local ERootMotionMode = {
     NoRootMotionExtraction = 0,
     IgnoreRootMotion = 1,
     RootMotionFromEverything = 2,
@@ -2692,7 +2692,7 @@ ERootMotionMode = {
 }
 
 ---@enum ERootMotionRootLock
-ERootMotionRootLock = {
+local ERootMotionRootLock = {
     RefPose = 0,
     AnimFirstFrame = 1,
     Zero = 2,
@@ -2700,14 +2700,14 @@ ERootMotionRootLock = {
 }
 
 ---@enum ERootMotionSourceSettingsFlags
-ERootMotionSourceSettingsFlags = {
+local ERootMotionSourceSettingsFlags = {
     UseSensitiveLiftoffCheck = 1,
     DisablePartialEndTick = 2,
     ERootMotionSourceSettingsFlags_MAX = 3,
 }
 
 ---@enum ERootMotionSourceStatusFlags
-ERootMotionSourceStatusFlags = {
+local ERootMotionSourceStatusFlags = {
     Prepared = 1,
     Finished = 2,
     MarkedForRemoval = 4,
@@ -2715,14 +2715,14 @@ ERootMotionSourceStatusFlags = {
 }
 
 ---@enum ERotatorQuantization
-ERotatorQuantization = {
+local ERotatorQuantization = {
     ByteComponents = 0,
     ShortComponents = 1,
     ERotatorQuantization_MAX = 2,
 }
 
 ---@enum ERoundingMode
-ERoundingMode = {
+local ERoundingMode = {
     HalfToEven = 0,
     HalfFromZero = 1,
     HalfToZero = 2,
@@ -2734,14 +2734,14 @@ ERoundingMode = {
 }
 
 ---@enum ERuntimeVirtualTextureDebugType
-ERuntimeVirtualTextureDebugType = {
+local ERuntimeVirtualTextureDebugType = {
     None = 0,
     Debug = 1,
     ERuntimeVirtualTextureDebugType_MAX = 2,
 }
 
 ---@enum ERuntimeVirtualTextureMainPassType
-ERuntimeVirtualTextureMainPassType = {
+local ERuntimeVirtualTextureMainPassType = {
     Never = 0,
     Exclusive = 1,
     Always = 2,
@@ -2749,7 +2749,7 @@ ERuntimeVirtualTextureMainPassType = {
 }
 
 ---@enum ERuntimeVirtualTextureMaterialType
-ERuntimeVirtualTextureMaterialType = {
+local ERuntimeVirtualTextureMaterialType = {
     BaseColor = 0,
     BaseColor_Normal_DEPRECATED = 1,
     BaseColor_Normal_Specular = 2,
@@ -2760,7 +2760,7 @@ ERuntimeVirtualTextureMaterialType = {
 }
 
 ---@enum ERuntimeVirtualTextureMipValueMode
-ERuntimeVirtualTextureMipValueMode = {
+local ERuntimeVirtualTextureMipValueMode = {
     RVTMVM_None = 0,
     RVTMVM_MipLevel = 1,
     RVTMVM_MipBias = 2,
@@ -2768,7 +2768,7 @@ ERuntimeVirtualTextureMipValueMode = {
 }
 
 ---@enum ESamplerSourceMode
-ESamplerSourceMode = {
+local ESamplerSourceMode = {
     SSM_FromTextureAsset = 0,
     SSM_Wrap_WorldGroupSettings = 1,
     SSM_Clamp_WorldGroupSettings = 2,
@@ -2776,7 +2776,7 @@ ESamplerSourceMode = {
 }
 
 ---@enum ESceneCaptureCompositeMode
-ESceneCaptureCompositeMode = {
+local ESceneCaptureCompositeMode = {
     SCCM_Overwrite = 0,
     SCCM_Additive = 1,
     SCCM_Composite = 2,
@@ -2784,7 +2784,7 @@ ESceneCaptureCompositeMode = {
 }
 
 ---@enum ESceneCapturePrimitiveRenderMode
-ESceneCapturePrimitiveRenderMode = {
+local ESceneCapturePrimitiveRenderMode = {
     PRM_LegacySceneCapture = 0,
     PRM_RenderScenePrimitives = 1,
     PRM_UseShowOnlyList = 2,
@@ -2792,7 +2792,7 @@ ESceneCapturePrimitiveRenderMode = {
 }
 
 ---@enum ESceneCaptureSource
-ESceneCaptureSource = {
+local ESceneCaptureSource = {
     SCS_SceneColorHDR = 0,
     SCS_SceneColorHDRNoAlpha = 1,
     SCS_FinalColorLDR = 2,
@@ -2806,14 +2806,14 @@ ESceneCaptureSource = {
 }
 
 ---@enum ESceneDepthPriorityGroup
-ESceneDepthPriorityGroup = {
+local ESceneDepthPriorityGroup = {
     SDPG_World = 0,
     SDPG_Foreground = 1,
     SDPG_MAX = 2,
 }
 
 ---@enum ESceneTextureId
-ESceneTextureId = {
+local ESceneTextureId = {
     PPI_SceneColor = 0,
     PPI_SceneDepth = 1,
     PPI_DiffuseColor = 2,
@@ -2847,7 +2847,7 @@ ESceneTextureId = {
 }
 
 ---@enum EScreenOrientation
-EScreenOrientation = {
+local EScreenOrientation = {
     Unknown = 0,
     Portrait = 1,
     PortraitUpsideDown = 2,
@@ -2859,7 +2859,7 @@ EScreenOrientation = {
 }
 
 ---@enum ESendLevelControlMethod
-ESendLevelControlMethod = {
+local ESendLevelControlMethod = {
     Linear = 0,
     CustomCurve = 1,
     Manual = 2,
@@ -2867,7 +2867,7 @@ ESendLevelControlMethod = {
 }
 
 ---@enum ESettingsDOF
-ESettingsDOF = {
+local ESettingsDOF = {
     Full3D = 0,
     YZPlane = 1,
     XZPlane = 2,
@@ -2876,7 +2876,7 @@ ESettingsDOF = {
 }
 
 ---@enum ESettingsLockedAxis
-ESettingsLockedAxis = {
+local ESettingsLockedAxis = {
     None = 0,
     X = 1,
     Y = 2,
@@ -2886,14 +2886,14 @@ ESettingsLockedAxis = {
 }
 
 ---@enum EShadowMapFlags
-EShadowMapFlags = {
+local EShadowMapFlags = {
     SMF_None = 0,
     SMF_Streamed = 1,
     SMF_MAX = 2,
 }
 
 ---@enum ESkeletalMeshGeoImportVersions
-ESkeletalMeshGeoImportVersions = {
+local ESkeletalMeshGeoImportVersions = {
     Before_Versionning = 0,
     SkeletalMeshBuildRefactor = 1,
     VersionPlusOne = 2,
@@ -2902,7 +2902,7 @@ ESkeletalMeshGeoImportVersions = {
 }
 
 ---@enum ESkeletalMeshSkinningImportVersions
-ESkeletalMeshSkinningImportVersions = {
+local ESkeletalMeshSkinningImportVersions = {
     Before_Versionning = 0,
     SkeletalMeshBuildRefactor = 1,
     VersionPlusOne = 2,
@@ -2911,14 +2911,14 @@ ESkeletalMeshSkinningImportVersions = {
 }
 
 ---@enum ESkyLightSourceType
-ESkyLightSourceType = {
+local ESkyLightSourceType = {
     SLS_CapturedScene = 0,
     SLS_SpecifiedCubemap = 1,
     SLS_MAX = 2,
 }
 
 ---@enum ESlateGesture
-ESlateGesture = {
+local ESlateGesture = {
     None = 0,
     Scroll = 1,
     Magnify = 2,
@@ -2929,7 +2929,7 @@ ESlateGesture = {
 }
 
 ---@enum ESleepFamily
-ESleepFamily = {
+local ESleepFamily = {
     Normal = 0,
     Sensitive = 1,
     Custom = 2,
@@ -2937,7 +2937,7 @@ ESleepFamily = {
 }
 
 ---@enum ESoundDistanceCalc
-ESoundDistanceCalc = {
+local ESoundDistanceCalc = {
     SOUNDDISTANCE_Normal = 0,
     SOUNDDISTANCE_InfiniteXYPlane = 1,
     SOUNDDISTANCE_InfiniteXZPlane = 2,
@@ -2946,7 +2946,7 @@ ESoundDistanceCalc = {
 }
 
 ---@enum ESoundGroup
-ESoundGroup = {
+local ESoundGroup = {
     SOUNDGROUP_Default = 0,
     SOUNDGROUP_Effects = 1,
     SOUNDGROUP_UI = 2,
@@ -2976,14 +2976,14 @@ ESoundGroup = {
 }
 
 ---@enum ESoundSpatializationAlgorithm
-ESoundSpatializationAlgorithm = {
+local ESoundSpatializationAlgorithm = {
     SPATIALIZATION_Default = 0,
     SPATIALIZATION_HRTF = 1,
     SPATIALIZATION_MAX = 2,
 }
 
 ---@enum ESoundWaveFFTSize
-ESoundWaveFFTSize = {
+local ESoundWaveFFTSize = {
     VerySmall_64 = 0,
     Small_256 = 1,
     Medium_512 = 2,
@@ -2993,7 +2993,7 @@ ESoundWaveFFTSize = {
 }
 
 ---@enum ESoundWaveLoadingBehavior
-ESoundWaveLoadingBehavior = {
+local ESoundWaveLoadingBehavior = {
     Inherited = 0,
     RetainOnLoad = 1,
     PrimeOnLoad = 2,
@@ -3004,14 +3004,14 @@ ESoundWaveLoadingBehavior = {
 }
 
 ---@enum ESourceBusChannels
-ESourceBusChannels = {
+local ESourceBusChannels = {
     Mono = 0,
     Stereo = 1,
     ESourceBusChannels_MAX = 2,
 }
 
 ---@enum ESourceBusSendLevelControlMethod
-ESourceBusSendLevelControlMethod = {
+local ESourceBusSendLevelControlMethod = {
     Linear = 0,
     CustomCurve = 1,
     Manual = 2,
@@ -3019,7 +3019,7 @@ ESourceBusSendLevelControlMethod = {
 }
 
 ---@enum ESpawnActorCollisionHandlingMethod
-ESpawnActorCollisionHandlingMethod = {
+local ESpawnActorCollisionHandlingMethod = {
     Undefined = 0,
     AlwaysSpawn = 1,
     AdjustIfPossibleButAlwaysSpawn = 2,
@@ -3029,7 +3029,7 @@ ESpawnActorCollisionHandlingMethod = {
 }
 
 ---@enum ESpeedTreeGeometryType
-ESpeedTreeGeometryType = {
+local ESpeedTreeGeometryType = {
     STG_Branch = 0,
     STG_Frond = 1,
     STG_Leaf = 2,
@@ -3039,14 +3039,14 @@ ESpeedTreeGeometryType = {
 }
 
 ---@enum ESpeedTreeLODType
-ESpeedTreeLODType = {
+local ESpeedTreeLODType = {
     STLOD_Pop = 0,
     STLOD_Smooth = 1,
     STLOD_MAX = 2,
 }
 
 ---@enum ESpeedTreeWindType
-ESpeedTreeWindType = {
+local ESpeedTreeWindType = {
     STW_None = 0,
     STW_Fastest = 1,
     STW_Fast = 2,
@@ -3058,14 +3058,14 @@ ESpeedTreeWindType = {
 }
 
 ---@enum ESplineCoordinateSpace
-ESplineCoordinateSpace = {
+local ESplineCoordinateSpace = {
     Local = 0,
     World = 1,
     ESplineCoordinateSpace_MAX = 2,
 }
 
 ---@enum ESplineMeshAxis
-ESplineMeshAxis = {
+local ESplineMeshAxis = {
     X = 0,
     Y = 1,
     Z = 2,
@@ -3073,7 +3073,7 @@ ESplineMeshAxis = {
 }
 
 ---@enum ESplinePointType
-ESplinePointType = {
+local ESplinePointType = {
     Linear = 0,
     Curve = 1,
     Constant = 2,
@@ -3083,7 +3083,7 @@ ESplinePointType = {
 }
 
 ---@enum EStandbyType
-EStandbyType = {
+local EStandbyType = {
     STDBY_Rx = 0,
     STDBY_Tx = 1,
     STDBY_BadPing = 2,
@@ -3091,7 +3091,7 @@ EStandbyType = {
 }
 
 ---@enum EStaticMeshReductionTerimationCriterion
-EStaticMeshReductionTerimationCriterion = {
+local EStaticMeshReductionTerimationCriterion = {
     Triangles = 0,
     Vertices = 1,
     Any = 2,
@@ -3099,7 +3099,7 @@ EStaticMeshReductionTerimationCriterion = {
 }
 
 ---@enum EStereoLayerShape
-EStereoLayerShape = {
+local EStereoLayerShape = {
     SLSH_QuadLayer = 0,
     SLSH_CylinderLayer = 1,
     SLSH_CubemapLayer = 2,
@@ -3108,7 +3108,7 @@ EStereoLayerShape = {
 }
 
 ---@enum EStereoLayerType
-EStereoLayerType = {
+local EStereoLayerType = {
     SLT_WorldLocked = 0,
     SLT_TrackerLocked = 1,
     SLT_FaceLocked = 2,
@@ -3116,7 +3116,7 @@ EStereoLayerType = {
 }
 
 ---@enum EStreamingVolumeUsage
-EStreamingVolumeUsage = {
+local EStreamingVolumeUsage = {
     SVB_Loading = 0,
     SVB_LoadingAndVisibility = 1,
     SVB_VisibilityBlockingOnLoad = 2,
@@ -3126,14 +3126,14 @@ EStreamingVolumeUsage = {
 }
 
 ---@enum ESubUVBoundingVertexCount
-ESubUVBoundingVertexCount = {
+local ESubUVBoundingVertexCount = {
     BVC_FourVertices = 0,
     BVC_EightVertices = 1,
     BVC_MAX = 2,
 }
 
 ---@enum ESubmixChannelFormat
-ESubmixChannelFormat = {
+local ESubmixChannelFormat = {
     Device = 0,
     Stereo = 1,
     Quad = 2,
@@ -3145,7 +3145,7 @@ ESubmixChannelFormat = {
 }
 
 ---@enum ESuggestProjVelocityTraceOption
-ESuggestProjVelocityTraceOption = {
+local ESuggestProjVelocityTraceOption = {
     DoNotTrace = 0,
     TraceFullPath = 1,
     OnlyTraceWhileAscending = 2,
@@ -3153,7 +3153,7 @@ ESuggestProjVelocityTraceOption = {
 }
 
 ---@enum ETeleportType
-ETeleportType = {
+local ETeleportType = {
     None = 0,
     TeleportPhysics = 1,
     ResetPhysics = 2,
@@ -3161,7 +3161,7 @@ ETeleportType = {
 }
 
 ---@enum ETemperatureSeverityType
-ETemperatureSeverityType = {
+local ETemperatureSeverityType = {
     Unknown = 0,
     Good = 1,
     Bad = 2,
@@ -3172,7 +3172,7 @@ ETemperatureSeverityType = {
 }
 
 ---@enum ETextGender
-ETextGender = {
+local ETextGender = {
     Masculine = 0,
     Feminine = 1,
     Neuter = 2,
@@ -3180,7 +3180,7 @@ ETextGender = {
 }
 
 ---@enum ETextureColorChannel
-ETextureColorChannel = {
+local ETextureColorChannel = {
     TCC_Red = 0,
     TCC_Green = 1,
     TCC_Blue = 2,
@@ -3189,7 +3189,7 @@ ETextureColorChannel = {
 }
 
 ---@enum ETextureCompressionQuality
-ETextureCompressionQuality = {
+local ETextureCompressionQuality = {
     TCQ_Default = 0,
     TCQ_Lowest = 1,
     TCQ_Low = 2,
@@ -3200,7 +3200,7 @@ ETextureCompressionQuality = {
 }
 
 ---@enum ETextureLossyCompressionAmount
-ETextureLossyCompressionAmount = {
+local ETextureLossyCompressionAmount = {
     TLCA_Default = 0,
     TLCA_None = 1,
     TLCA_Lowest = 2,
@@ -3212,7 +3212,7 @@ ETextureLossyCompressionAmount = {
 }
 
 ---@enum ETextureMipCount
-ETextureMipCount = {
+local ETextureMipCount = {
     TMC_ResidentMips = 0,
     TMC_AllMips = 1,
     TMC_AllMipsBiased = 2,
@@ -3220,7 +3220,7 @@ ETextureMipCount = {
 }
 
 ---@enum ETextureMipLoadOptions
-ETextureMipLoadOptions = {
+local ETextureMipLoadOptions = {
     Default = 0,
     AllMips = 1,
     OnlyFirstMip = 2,
@@ -3228,7 +3228,7 @@ ETextureMipLoadOptions = {
 }
 
 ---@enum ETextureMipValueMode
-ETextureMipValueMode = {
+local ETextureMipValueMode = {
     TMVM_None = 0,
     TMVM_MipLevel = 1,
     TMVM_MipBias = 2,
@@ -3237,7 +3237,7 @@ ETextureMipValueMode = {
 }
 
 ---@enum ETexturePowerOfTwoSetting
-ETexturePowerOfTwoSetting = {
+local ETexturePowerOfTwoSetting = {
     None = 0,
     PadToPowerOfTwo = 1,
     PadToSquarePowerOfTwo = 2,
@@ -3245,7 +3245,7 @@ ETexturePowerOfTwoSetting = {
 }
 
 ---@enum ETextureRenderTargetFormat
-ETextureRenderTargetFormat = {
+local ETextureRenderTargetFormat = {
     RTF_R8 = 0,
     RTF_RG8 = 1,
     RTF_RGBA8 = 2,
@@ -3261,7 +3261,7 @@ ETextureRenderTargetFormat = {
 }
 
 ---@enum ETextureSamplerFilter
-ETextureSamplerFilter = {
+local ETextureSamplerFilter = {
     Point = 0,
     Bilinear = 1,
     Trilinear = 2,
@@ -3271,7 +3271,7 @@ ETextureSamplerFilter = {
 }
 
 ---@enum ETextureSizingType
-ETextureSizingType = {
+local ETextureSizingType = {
     TextureSizingType_UseSingleTextureSize = 0,
     TextureSizingType_UseAutomaticBiasedSizes = 1,
     TextureSizingType_UseManualOverrideTextureSize = 2,
@@ -3280,7 +3280,7 @@ ETextureSizingType = {
 }
 
 ---@enum ETextureSourceArtType
-ETextureSourceArtType = {
+local ETextureSourceArtType = {
     TSAT_Uncompressed = 0,
     TSAT_PNGCompressed = 1,
     TSAT_DDSFile = 2,
@@ -3288,7 +3288,7 @@ ETextureSourceArtType = {
 }
 
 ---@enum ETextureSourceFormat
-ETextureSourceFormat = {
+local ETextureSourceFormat = {
     TSF_Invalid = 0,
     TSF_G8 = 1,
     TSF_BGRA8 = 2,
@@ -3302,7 +3302,7 @@ ETextureSourceFormat = {
 }
 
 ---@enum ETickingGroup
-ETickingGroup = {
+local ETickingGroup = {
     TG_PrePhysics = 0,
     TG_StartPhysics = 1,
     TG_DuringPhysics = 2,
@@ -3315,7 +3315,7 @@ ETickingGroup = {
 }
 
 ---@enum ETimeStretchCurveMapping
-ETimeStretchCurveMapping = {
+local ETimeStretchCurveMapping = {
     T_Original = 0,
     T_TargetMin = 1,
     T_TargetMax = 2,
@@ -3323,7 +3323,7 @@ ETimeStretchCurveMapping = {
 }
 
 ---@enum ETimecodeProviderSynchronizationState
-ETimecodeProviderSynchronizationState = {
+local ETimecodeProviderSynchronizationState = {
     Closed = 0,
     Error = 1,
     Synchronized = 2,
@@ -3332,21 +3332,21 @@ ETimecodeProviderSynchronizationState = {
 }
 
 ---@enum ETimelineDirection
-ETimelineDirection = {
+local ETimelineDirection = {
     Forward = 0,
     Backward = 1,
     ETimelineDirection_MAX = 2,
 }
 
 ---@enum ETimelineLengthMode
-ETimelineLengthMode = {
+local ETimelineLengthMode = {
     TL_TimelineLength = 0,
     TL_LastKeyFrame = 1,
     TL_MAX = 2,
 }
 
 ---@enum ETimelineSigType
-ETimelineSigType = {
+local ETimelineSigType = {
     ETS_EventSignature = 0,
     ETS_FloatSignature = 1,
     ETS_VectorSignature = 2,
@@ -3356,7 +3356,7 @@ ETimelineSigType = {
 }
 
 ---@enum ETraceTypeQuery
-ETraceTypeQuery = {
+local ETraceTypeQuery = {
     TraceTypeQuery1 = 0,
     TraceTypeQuery2 = 1,
     TraceTypeQuery3 = 2,
@@ -3394,7 +3394,7 @@ ETraceTypeQuery = {
 }
 
 ---@enum ETrackActiveCondition
-ETrackActiveCondition = {
+local ETrackActiveCondition = {
     ETAC_Always = 0,
     ETAC_GoreEnabled = 1,
     ETAC_GoreDisabled = 2,
@@ -3402,7 +3402,7 @@ ETrackActiveCondition = {
 }
 
 ---@enum ETrackToggleAction
-ETrackToggleAction = {
+local ETrackToggleAction = {
     ETTA_Off = 0,
     ETTA_On = 1,
     ETTA_Toggle = 2,
@@ -3411,7 +3411,7 @@ ETrackToggleAction = {
 }
 
 ---@enum ETrail2SourceMethod
-ETrail2SourceMethod = {
+local ETrail2SourceMethod = {
     PET2SRCM_Default = 0,
     PET2SRCM_Particle = 1,
     PET2SRCM_Actor = 2,
@@ -3419,7 +3419,7 @@ ETrail2SourceMethod = {
 }
 
 ---@enum ETrailWidthMode
-ETrailWidthMode = {
+local ETrailWidthMode = {
     ETrailWidthMode_FromCentre = 0,
     ETrailWidthMode_FromFirst = 1,
     ETrailWidthMode_FromSecond = 2,
@@ -3427,7 +3427,7 @@ ETrailWidthMode = {
 }
 
 ---@enum ETrailsRenderAxisOption
-ETrailsRenderAxisOption = {
+local ETrailsRenderAxisOption = {
     Trails_CameraUp = 0,
     Trails_SourceUp = 1,
     Trails_WorldUp = 2,
@@ -3435,14 +3435,14 @@ ETrailsRenderAxisOption = {
 }
 
 ---@enum ETransitionBlendMode
-ETransitionBlendMode = {
+local ETransitionBlendMode = {
     TBM_Linear = 0,
     TBM_Cubic = 1,
     TBM_MAX = 2,
 }
 
 ---@enum ETransitionLogicType
-ETransitionLogicType = {
+local ETransitionLogicType = {
     TLT_StandardBlend = 0,
     TLT_Inertialization = 1,
     TLT_Custom = 2,
@@ -3450,7 +3450,7 @@ ETransitionLogicType = {
 }
 
 ---@enum ETransitionType
-ETransitionType = {
+local ETransitionType = {
     None = 0,
     Paused = 1,
     Loading = 2,
@@ -3462,7 +3462,7 @@ ETransitionType = {
 }
 
 ---@enum ETranslucencyLightingMode
-ETranslucencyLightingMode = {
+local ETranslucencyLightingMode = {
     TLM_VolumetricNonDirectional = 0,
     TLM_VolumetricDirectional = 1,
     TLM_VolumetricPerVertexNonDirectional = 2,
@@ -3473,14 +3473,14 @@ ETranslucencyLightingMode = {
 }
 
 ---@enum ETranslucencyType
-ETranslucencyType = {
+local ETranslucencyType = {
     Raster = 0,
     RayTracing = 1,
     ETranslucencyType_MAX = 2,
 }
 
 ---@enum ETranslucentSortPolicy
-ETranslucentSortPolicy = {
+local ETranslucentSortPolicy = {
     SortByDistance = 0,
     SortByProjectedZ = 1,
     SortAlongAxis = 2,
@@ -3488,7 +3488,7 @@ ETranslucentSortPolicy = {
 }
 
 ---@enum ETravelFailure
-ETravelFailure = {
+local ETravelFailure = {
     NoLevel = 0,
     LoadMapFailure = 1,
     InvalidURL = 2,
@@ -3505,7 +3505,7 @@ ETravelFailure = {
 }
 
 ---@enum ETravelType
-ETravelType = {
+local ETravelType = {
     TRAVEL_Absolute = 0,
     TRAVEL_Partial = 1,
     TRAVEL_Relative = 2,
@@ -3513,7 +3513,7 @@ ETravelType = {
 }
 
 ---@enum ETwitterIntegrationDelegate
-ETwitterIntegrationDelegate = {
+local ETwitterIntegrationDelegate = {
     TID_AuthorizeComplete = 0,
     TID_TweetUIComplete = 1,
     TID_RequestComplete = 2,
@@ -3521,7 +3521,7 @@ ETwitterIntegrationDelegate = {
 }
 
 ---@enum ETwitterRequestMethod
-ETwitterRequestMethod = {
+local ETwitterRequestMethod = {
     TRM_Get = 0,
     TRM_Post = 1,
     TRM_Delete = 2,
@@ -3529,7 +3529,7 @@ ETwitterRequestMethod = {
 }
 
 ---@enum ETypeAdvanceAnim
-ETypeAdvanceAnim = {
+local ETypeAdvanceAnim = {
     ETAA_Default = 0,
     ETAA_Finished = 1,
     ETAA_Looped = 2,
@@ -3537,7 +3537,7 @@ ETypeAdvanceAnim = {
 }
 
 ---@enum EUIScalingRule
-EUIScalingRule = {
+local EUIScalingRule = {
     ShortestSide = 0,
     LongestSide = 1,
     Horizontal = 2,
@@ -3547,14 +3547,14 @@ EUIScalingRule = {
 }
 
 ---@enum EUVOutput
-EUVOutput = {
+local EUVOutput = {
     DoNotOutputChannel = 0,
     OutputChannel = 1,
     EUVOutput_MAX = 2,
 }
 
 ---@enum EUpdateRateShiftBucket
-EUpdateRateShiftBucket = {
+local EUpdateRateShiftBucket = {
     ShiftBucket0 = 0,
     ShiftBucket1 = 1,
     ShiftBucket2 = 2,
@@ -3566,7 +3566,7 @@ EUpdateRateShiftBucket = {
 }
 
 ---@enum EUserDefinedStructureStatus
-EUserDefinedStructureStatus = {
+local EUserDefinedStructureStatus = {
     UDSS_UpToDate = 0,
     UDSS_Dirty = 1,
     UDSS_Error = 2,
@@ -3575,14 +3575,14 @@ EUserDefinedStructureStatus = {
 }
 
 ---@enum EVectorFieldConstructionOp
-EVectorFieldConstructionOp = {
+local EVectorFieldConstructionOp = {
     VFCO_Extrude = 0,
     VFCO_Revolve = 1,
     VFCO_MAX = 2,
 }
 
 ---@enum EVectorNoiseFunction
-EVectorNoiseFunction = {
+local EVectorNoiseFunction = {
     VNF_CellnoiseALU = 0,
     VNF_VectorALU = 1,
     VNF_GradientALU = 2,
@@ -3592,7 +3592,7 @@ EVectorNoiseFunction = {
 }
 
 ---@enum EVectorQuantization
-EVectorQuantization = {
+local EVectorQuantization = {
     RoundWholeNumber = 0,
     RoundOneDecimal = 1,
     RoundTwoDecimals = 2,
@@ -3600,7 +3600,7 @@ EVectorQuantization = {
 }
 
 ---@enum EVertexPaintAxis
-EVertexPaintAxis = {
+local EVertexPaintAxis = {
     X = 0,
     Y = 1,
     Z = 2,
@@ -3608,7 +3608,7 @@ EVertexPaintAxis = {
 }
 
 ---@enum EVerticalTextAligment
-EVerticalTextAligment = {
+local EVerticalTextAligment = {
     EVRTA_TextTop = 0,
     EVRTA_TextCenter = 1,
     EVRTA_TextBottom = 2,
@@ -3617,7 +3617,7 @@ EVerticalTextAligment = {
 }
 
 ---@enum EViewModeIndex
-EViewModeIndex = {
+local EViewModeIndex = {
     VMI_BrushWireframe = 0,
     VMI_Wireframe = 1,
     VMI_Unlit = 2,
@@ -3649,7 +3649,7 @@ EViewModeIndex = {
 }
 
 ---@enum EViewTargetBlendFunction
-EViewTargetBlendFunction = {
+local EViewTargetBlendFunction = {
     VTBlend_Linear = 0,
     VTBlend_Cubic = 1,
     VTBlend_EaseIn = 2,
@@ -3659,7 +3659,7 @@ EViewTargetBlendFunction = {
 }
 
 ---@enum EVirtualizationMode
-EVirtualizationMode = {
+local EVirtualizationMode = {
     Disabled = 0,
     PlayWhenSilent = 1,
     Restart = 2,
@@ -3667,7 +3667,7 @@ EVirtualizationMode = {
 }
 
 ---@enum EVisibilityAggressiveness
-EVisibilityAggressiveness = {
+local EVisibilityAggressiveness = {
     VIS_LeastAggressive = 0,
     VIS_ModeratelyAggressive = 1,
     VIS_MostAggressive = 2,
@@ -3675,7 +3675,7 @@ EVisibilityAggressiveness = {
 }
 
 ---@enum EVisibilityBasedAnimTickOption
-EVisibilityBasedAnimTickOption = {
+local EVisibilityBasedAnimTickOption = {
     AlwaysTickPoseAndRefreshBones = 0,
     AlwaysTickPose = 1,
     OnlyTickMontagesWhenNotRendered = 2,
@@ -3684,7 +3684,7 @@ EVisibilityBasedAnimTickOption = {
 }
 
 ---@enum EVisibilityTrackAction
-EVisibilityTrackAction = {
+local EVisibilityTrackAction = {
     EVTA_Hide = 0,
     EVTA_Show = 1,
     EVTA_Toggle = 2,
@@ -3692,7 +3692,7 @@ EVisibilityTrackAction = {
 }
 
 ---@enum EVisibilityTrackCondition
-EVisibilityTrackCondition = {
+local EVisibilityTrackCondition = {
     EVTC_Always = 0,
     EVTC_GoreEnabled = 1,
     EVTC_GoreDisabled = 2,
@@ -3700,21 +3700,21 @@ EVisibilityTrackCondition = {
 }
 
 ---@enum EVoiceSampleRate
-EVoiceSampleRate = {
+local EVoiceSampleRate = {
     Low16000Hz = 16000,
     Normal24000Hz = 24000,
     EVoiceSampleRate_MAX = 24001,
 }
 
 ---@enum EVolumeLightingMethod
-EVolumeLightingMethod = {
+local EVolumeLightingMethod = {
     VLM_VolumetricLightmap = 0,
     VLM_SparseVolumeLightingSamples = 1,
     VLM_MAX = 2,
 }
 
 ---@enum EWalkableSlopeBehavior
-EWalkableSlopeBehavior = {
+local EWalkableSlopeBehavior = {
     WalkableSlope_Default = 0,
     WalkableSlope_Increase = 1,
     WalkableSlope_Decrease = 2,
@@ -3723,14 +3723,14 @@ EWalkableSlopeBehavior = {
 }
 
 ---@enum EWindSourceType
-EWindSourceType = {
+local EWindSourceType = {
     Directional = 0,
     Point = 1,
     EWindSourceType_MAX = 2,
 }
 
 ---@enum EWindowMode
-EWindowMode = {
+local EWindowMode = {
     Fullscreen = 0,
     WindowedFullscreen = 1,
     Windowed = 2,
@@ -3738,14 +3738,14 @@ EWindowMode = {
 }
 
 ---@enum EWindowTitleBarMode
-EWindowTitleBarMode = {
+local EWindowTitleBarMode = {
     Overlay = 0,
     VerticalBox = 1,
     EWindowTitleBarMode_MAX = 2,
 }
 
 ---@enum EWorldPositionIncludedOffsets
-EWorldPositionIncludedOffsets = {
+local EWorldPositionIncludedOffsets = {
     WPT_Default = 0,
     WPT_ExcludeAllShaderOffsets = 1,
     WPT_CameraRelative = 2,
@@ -3754,7 +3754,7 @@ EWorldPositionIncludedOffsets = {
 }
 
 ---@enum FNavigationSystemRunMode
-FNavigationSystemRunMode = {
+local FNavigationSystemRunMode = {
     InvalidMode = 0,
     GameMode = 1,
     EditorMode = 2,
@@ -3764,7 +3764,7 @@ FNavigationSystemRunMode = {
 }
 
 ---@enum ModulationParamMode
-ModulationParamMode = {
+local ModulationParamMode = {
     MPM_Normal = 0,
     MPM_Abs = 1,
     MPM_Direct = 2,
@@ -3772,7 +3772,7 @@ ModulationParamMode = {
 }
 
 ---@enum ParticleReplayState
-ParticleReplayState = {
+local ParticleReplayState = {
     PRS_Disabled = 0,
     PRS_Capturing = 1,
     PRS_Replaying = 2,
@@ -3780,7 +3780,7 @@ ParticleReplayState = {
 }
 
 ---@enum ParticleSystemLODMethod
-ParticleSystemLODMethod = {
+local ParticleSystemLODMethod = {
     PARTICLESYSTEMLODMETHOD_Automatic = 0,
     PARTICLESYSTEMLODMETHOD_DirectSet = 1,
     PARTICLESYSTEMLODMETHOD_ActivateAutomatic = 2,
@@ -3788,7 +3788,7 @@ ParticleSystemLODMethod = {
 }
 
 ---@enum ReverbPreset
-ReverbPreset = {
+local ReverbPreset = {
     REVERB_Default = 0,
     REVERB_Bathroom = 1,
     REVERB_StoneRoom = 2,
@@ -3816,7 +3816,7 @@ ReverbPreset = {
 }
 
 ---@enum SkeletalMeshOptimizationImportance
-SkeletalMeshOptimizationImportance = {
+local SkeletalMeshOptimizationImportance = {
     SMOI_Off = 0,
     SMOI_Lowest = 1,
     SMOI_Low = 2,
@@ -3827,7 +3827,7 @@ SkeletalMeshOptimizationImportance = {
 }
 
 ---@enum SkeletalMeshOptimizationType
-SkeletalMeshOptimizationType = {
+local SkeletalMeshOptimizationType = {
     SMOT_NumOfTriangles = 0,
     SMOT_MaxDeviation = 1,
     SMOT_TriangleOrDeviation = 2,
@@ -3835,7 +3835,7 @@ SkeletalMeshOptimizationType = {
 }
 
 ---@enum SkeletalMeshTerminationCriterion
-SkeletalMeshTerminationCriterion = {
+local SkeletalMeshTerminationCriterion = {
     SMTC_NumOfTriangles = 0,
     SMTC_NumOfVerts = 1,
     SMTC_TriangleOrVert = 2,
@@ -3846,7 +3846,7 @@ SkeletalMeshTerminationCriterion = {
 }
 
 ---@enum TextureAddress
-TextureAddress = {
+local TextureAddress = {
     TA_Wrap = 0,
     TA_Clamp = 1,
     TA_Mirror = 2,
@@ -3854,7 +3854,7 @@ TextureAddress = {
 }
 
 ---@enum TextureCompressionSettings
-TextureCompressionSettings = {
+local TextureCompressionSettings = {
     TC_Default = 0,
     TC_Normalmap = 1,
     TC_Masks = 2,
@@ -3871,7 +3871,7 @@ TextureCompressionSettings = {
 }
 
 ---@enum TextureFilter
-TextureFilter = {
+local TextureFilter = {
     TF_Nearest = 0,
     TF_Bilinear = 1,
     TF_Trilinear = 2,
@@ -3880,7 +3880,7 @@ TextureFilter = {
 }
 
 ---@enum TextureGroup
-TextureGroup = {
+local TextureGroup = {
     TEXTUREGROUP_World = 0,
     TEXTUREGROUP_WorldNormalMap = 1,
     TEXTUREGROUP_WorldSpecular = 2,
@@ -3929,7 +3929,7 @@ TextureGroup = {
 }
 
 ---@enum TextureMipGenSettings
-TextureMipGenSettings = {
+local TextureMipGenSettings = {
     TMGS_FromTextureGroup = 0,
     TMGS_SimpleAverage = 1,
     TMGS_Sharpen0 = 2,

@@ -94,7 +94,7 @@
 ---@field RoofMesh UStaticMeshComponent
 ---@field ViewTargetCamera UCameraComponent
 ---@field TownBaseMesh UStaticMeshComponent
-ABPTownBase3_C = {}
+local ABPTownBase3_C = {}
 
 ---@param VisualTeamId int32
 function ABPTownBase3_C:BPSetTeamVisuals(VisualTeamId) end

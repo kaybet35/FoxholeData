@@ -11,7 +11,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_E08435BD42C8F191B8EEAF98D7DB10B7 FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendListByBool_5E70B9E4486FA5A92EEA9BB9D43681EF FAnimNode_BlendListByBool
 ---@field AnimGraphNode_SequencePlayer_6D995B4E43BAE3AEEE6C2D88915A3B62 FAnimNode_SequencePlayer
-UABP_TrainCoal_C = {}
+local UABP_TrainCoal_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_TrainCoal_C:AnimGraph(AnimGraph) end

@@ -18,7 +18,7 @@
 ---@field AnimGraphNode_SequencePlayer_F97902674B043B57D4CE789880608AD1 FAnimNode_SequencePlayer
 ---@field AnimGraphNode_StateResult_7484BBC34B1C725821354CAE6E096863 FAnimNode_StateResult
 ---@field AnimGraphNode_StateMachine_C2B70C6A42C544B4310CB385E6E9DFA6 FAnimNode_StateMachine
-UABP_SubmarineCHatch_C = {}
+local UABP_SubmarineCHatch_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_SubmarineCHatch_C:AnimGraph(AnimGraph) end

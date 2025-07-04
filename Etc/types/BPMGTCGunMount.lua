@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPMGTCGunMount_C : UHitScanMountComponent
-UBPMGTCGunMount_C = {}
+local UBPMGTCGunMount_C = {}
 
 

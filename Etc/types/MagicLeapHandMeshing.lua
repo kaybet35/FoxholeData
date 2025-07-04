@@ -4,7 +4,7 @@
 ---@field Version int32
 ---@field DataCount int32
 ---@field Data TArray<FMagicLeapHandMeshBlock>
-FMagicLeapHandMesh = {}
+local FMagicLeapHandMesh = {}
 
 
 
@@ -13,12 +13,12 @@ FMagicLeapHandMesh = {}
 ---@field VertexCount int32
 ---@field Vertex TArray<FVector>
 ---@field Index TArray<int32>
-FMagicLeapHandMeshBlock = {}
+local FMagicLeapHandMeshBlock = {}
 
 
 
 ---@class UMagicLeapHandMeshingComponent : UActorComponent
-UMagicLeapHandMeshingComponent = {}
+local UMagicLeapHandMeshingComponent = {}
 
 ---@param InMRMeshPtr UMRMeshComponent
 ---@return boolean
@@ -29,7 +29,7 @@ function UMagicLeapHandMeshingComponent:ConnectMRMesh(InMRMeshPtr) end
 
 
 ---@class UMagicLeapHandMeshingFunctionLibrary : UBlueprintFunctionLibrary
-UMagicLeapHandMeshingFunctionLibrary = {}
+local UMagicLeapHandMeshingFunctionLibrary = {}
 
 ---@param InMRMeshPtr UMRMeshComponent
 ---@return boolean

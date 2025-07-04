@@ -1,12 +1,12 @@
 ---@enum ELuminARAvailability
-ELuminARAvailability = {
+local ELuminARAvailability = {
     UnknownError = 0,
     SupportedInstalled = 200,
     ELuminARAvailability_MAX = 201,
 }
 
 ---@enum ELuminARFunctionStatus
-ELuminARFunctionStatus = {
+local ELuminARFunctionStatus = {
     Success = 0,
     Fatal = 1,
     SessionPaused = 2,
@@ -19,7 +19,7 @@ ELuminARFunctionStatus = {
 }
 
 ---@enum ELuminARLineTraceChannel
-ELuminARLineTraceChannel = {
+local ELuminARLineTraceChannel = {
     None = 0,
     FeaturePoint = 1,
     InfinitePlane = 2,
@@ -30,7 +30,7 @@ ELuminARLineTraceChannel = {
 }
 
 ---@enum ELuminARTrackingState
-ELuminARTrackingState = {
+local ELuminARTrackingState = {
     Tracking = 0,
     NotTracking = 1,
     StoppedTracking = 2,

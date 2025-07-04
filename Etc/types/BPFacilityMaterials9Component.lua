@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class UBPFacilityMaterials9Component_C : ULargeMaterialComponent
-UBPFacilityMaterials9Component_C = {}
+local UBPFacilityMaterials9Component_C = {}
 
 

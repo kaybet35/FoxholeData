@@ -16,7 +16,7 @@
 ---@field DriverExit0 USeatExitComponent
 ---@field DriverSeat0 UVehicleSeatComponent
 ---@field PassengerSeat1 UVehicleSeatComponent
-ABPHalftrackMultiW_C = {}
+local ABPHalftrackMultiW_C = {}
 
 ---@param IsOn boolean
 function ABPHalftrackMultiW_C:BPOnVehicleOn(IsOn) end

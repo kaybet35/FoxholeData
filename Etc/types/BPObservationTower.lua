@@ -12,7 +12,7 @@
 ---@field Decal UDecalComponent
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
 ---@field WatchTowerMesh UStaticMeshComponent
-ABPObservationTower_C = {}
+local ABPObservationTower_C = {}
 
 
 

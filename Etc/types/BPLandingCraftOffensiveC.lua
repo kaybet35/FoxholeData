@@ -6,7 +6,7 @@
 ---@field GunnerExit USeatExitComponent
 ---@field GunnerTrigger USeatTriggerComponent
 ---@field GunnerMounting USkeletalMeshComponent
-ABPLandingCraftOffensiveC_C = {}
+local ABPLandingCraftOffensiveC_C = {}
 
 ---@param IsOn boolean
 function ABPLandingCraftOffensiveC_C:BPOnVehicleOn(IsOn) end

@@ -2,7 +2,7 @@
 
 ---@class ALevelVariantSetsActor : AActor
 ---@field LevelVariantSets FSoftObjectPath
-ALevelVariantSetsActor = {}
+local ALevelVariantSetsActor = {}
 
 ---@param VariantSetName FString
 ---@param VariantName FString
@@ -21,7 +21,7 @@ function ALevelVariantSetsActor:GetLevelVariantSets(bLoad) end
 
 ---@class ASwitchActor : AActor
 ---@field SceneComponent USceneComponent
-ASwitchActor = {}
+local ASwitchActor = {}
 
 ---@param OptionIndex int32
 function ASwitchActor:SelectOption(OptionIndex) end
@@ -35,20 +35,20 @@ function ASwitchActor:GetOptions() end
 ---@field PropertyName FString
 ---@field PropertyIndex int32
 ---@field ComponentName FString
-FCapturedPropSegment = {}
+local FCapturedPropSegment = {}
 
 
 
 ---@class FFunctionCaller
 ---@field FunctionName FName
-FFunctionCaller = {}
+local FFunctionCaller = {}
 
 
 
 ---@class ULevelVariantSets : UObject
 ---@field DirectorClass UClass
 ---@field VariantSets TArray<UVariantSet>
-ULevelVariantSets = {}
+local ULevelVariantSets = {}
 
 ---@param VariantSetName FString
 ---@return UVariantSet
@@ -61,7 +61,7 @@ function ULevelVariantSets:GetNumVariantSets() end
 
 
 ---@class ULevelVariantSetsFunctionDirector : UObject
-ULevelVariantSetsFunctionDirector = {}
+local ULevelVariantSetsFunctionDirector = {}
 
 
 ---@class UPropertyValue : UObject
@@ -75,7 +75,7 @@ ULevelVariantSetsFunctionDirector = {}
 ---@field LeafPropertyClass UClass
 ---@field ValueBytes TArray<uint8>
 ---@field PropCategory EPropertyValueCategory
-UPropertyValue = {}
+local UPropertyValue = {}
 
 ---@return boolean
 function UPropertyValue:HasRecordedData() end
@@ -86,29 +86,29 @@ function UPropertyValue:GetFullDisplayString() end
 
 
 ---@class UPropertyValueColor : UPropertyValue
-UPropertyValueColor = {}
+local UPropertyValueColor = {}
 
 
 ---@class UPropertyValueMaterial : UPropertyValue
-UPropertyValueMaterial = {}
+local UPropertyValueMaterial = {}
 
 
 ---@class UPropertyValueOption : UPropertyValue
-UPropertyValueOption = {}
+local UPropertyValueOption = {}
 
 
 ---@class UPropertyValueTransform : UPropertyValue
-UPropertyValueTransform = {}
+local UPropertyValueTransform = {}
 
 
 ---@class UPropertyValueVisibility : UPropertyValue
-UPropertyValueVisibility = {}
+local UPropertyValueVisibility = {}
 
 
 ---@class UVariant : UObject
 ---@field DisplayText FText
 ---@field ObjectBindings TArray<UVariantObjectBinding>
-UVariant = {}
+local UVariant = {}
 
 function UVariant:SwitchOn() end
 ---@param NewDisplayText FText
@@ -127,7 +127,7 @@ function UVariant:GetActor(ActorIndex) end
 ---@field LazyObjectPtr TLazyObjectPtr<UObject>
 ---@field CapturedProperties TArray<UPropertyValue>
 ---@field FunctionCallers TArray<FFunctionCaller>
-UVariantObjectBinding = {}
+local UVariantObjectBinding = {}
 
 
 
@@ -135,7 +135,7 @@ UVariantObjectBinding = {}
 ---@field DisplayText FText
 ---@field bExpanded boolean
 ---@field Variants TArray<UVariant>
-UVariantSet = {}
+local UVariantSet = {}
 
 ---@param NewDisplayText FText
 function UVariantSet:SetDisplayText(NewDisplayText) end

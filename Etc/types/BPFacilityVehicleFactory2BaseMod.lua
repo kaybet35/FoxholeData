@@ -18,7 +18,7 @@
 ---@field FVFBarrel03 UStaticMeshComponent
 ---@field FVFBarrel02 UStaticMeshComponent
 ---@field DefaultSceneRoot USceneComponent
-ABPFacilityVehicleFactory2BaseMod_C = {}
+local ABPFacilityVehicleFactory2BaseMod_C = {}
 
 
 

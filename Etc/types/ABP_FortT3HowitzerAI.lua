@@ -6,7 +6,7 @@
 ---@field AnimGraphNode_BlendSpacePlayer_F256562842FE8F676D1859A6423FA5BD FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_BlendSpacePlayer_201F97914C58A630C8A8CBA09AF8FBAD FAnimNode_BlendSpacePlayer
 ---@field AnimGraphNode_LayeredBoneBlend_9EA3A1FA41D148CA5FB3CD8F1BFF6397 FAnimNode_LayeredBoneBlend
-UABP_FortT3HowitzerAI_C = {}
+local UABP_FortT3HowitzerAI_C = {}
 
 ---@param AnimGraph FPoseLink
 function UABP_FortT3HowitzerAI_C:AnimGraph(AnimGraph) end

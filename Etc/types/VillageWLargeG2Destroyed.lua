@@ -68,7 +68,7 @@
 ---@field BPStructureInteriorArea UBPStructureInteriorArea_C
 ---@field Roof UStaticMeshComponent
 ---@field HouseMesh UStaticMeshComponent
-AVillageWLargeG2Destroyed_C = {}
+local AVillageWLargeG2Destroyed_C = {}
 
 
 

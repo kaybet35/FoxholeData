@@ -1,6 +1,6 @@
 ---@meta
 
 ---@class ABPHeavyExplosivePickup_C : ABasicItemPickup
-ABPHeavyExplosivePickup_C = {}
+local ABPHeavyExplosivePickup_C = {}
 
 

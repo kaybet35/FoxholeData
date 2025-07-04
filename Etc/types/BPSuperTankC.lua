@@ -8,7 +8,7 @@
 ---@field CommanderSeat4 UVehicleSeatComponent
 ---@field EngineerSeat3 UVehicleSeatComponent
 ---@field EngineerSeat2 UVehicleSeatComponent
-ABPSuperTankC_C = {}
+local ABPSuperTankC_C = {}
 
 
 
