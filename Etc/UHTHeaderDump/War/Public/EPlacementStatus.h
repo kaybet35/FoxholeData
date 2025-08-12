@@ -74,6 +74,7 @@ enum class EPlacementStatus : uint8 {
     CantConnectEnemyStructure,
     IsObstructedByPuddle,
     SnappedSplineIntersects,
+    IsObstructedBySpawnPoint,
     Unknown,
 };
 

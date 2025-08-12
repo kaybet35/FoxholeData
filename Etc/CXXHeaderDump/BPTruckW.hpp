@@ -3,8 +3,8 @@
 
 class ABPTruckW_C : public ABPTruckBaseW_C
 {
-    class UTowHitchUseComponent* TowHitchUse;                                         // 0x13C8 (size: 0x8)
+    class UTowHitchUseComponent* TowHitchUse;                                         // 0x13F8 (size: 0x8)
 
-}; // Size: 0x13D0
+}; // Size: 0x1400
 
 #endif

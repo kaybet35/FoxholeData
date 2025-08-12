@@ -3,6 +3,6 @@
 
 class ABPFieldATC_C : public ABPFieldGunBase_C
 {
-}; // Size: 0x1300
+}; // Size: 0x1320
 
 #endif

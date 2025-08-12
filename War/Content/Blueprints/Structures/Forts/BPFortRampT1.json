@@ -44,7 +44,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortRampT1.9"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortRampT1_C:FortCommonDirt'",
+        "ObjectName": "ObjectProperty'BPFortRampT1_C:FortCommonDirtT1T2'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortRampT1.18"
       },
       {
@@ -182,8 +182,10 @@
       "MaxHealth": 750,
       "Health": 750,
       "UpgradeStructureCodeName": "FortRampT2",
+      "bAllowsShippablePlacement": true,
       "ClaimStatus": {
-        "bCanBeDemolished": true
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortRampT1_C:StealthComponent'",
@@ -246,18 +248,18 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoxExtent": {
-        "X": 300.0,
-        "Y": 300.0,
-        "Z": 145.0
+        "X": 225.0,
+        "Y": 225.0,
+        "Z": 80.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFortRampT1_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortRampT1.3"
       },
       "RelativeLocation": {
-        "X": -6.1035156E-05,
-        "Y": 1.4084167,
-        "Z": 22.0
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -80.0
       }
     }
   },
@@ -443,7 +445,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonDirt",
+    "Name": "FortCommonDirtT1T2",
     "Outer": "BPFortRampT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -812,13 +814,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPFortRampT1_C:FortCommonDirt_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPFortRampT1_C:FortCommonDirtT1T2_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortRampT1.53"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "EDC37805-41916F67-933B7E8A-B0BB9453",
-      "InternalVariableName": "FortCommonDirt"
+      "InternalVariableName": "FortCommonDirtT1T2"
     }
   },
   {
@@ -1049,6 +1051,7 @@
         "Yaw": 89.999954,
         "Roll": 0.0
       },
+      "bVisible": false,
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "BreachBack"
@@ -1125,6 +1128,7 @@
         "Yaw": -179.99997,
         "Roll": 0.0
       },
+      "bVisible": false,
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "BreachLeft"
@@ -1196,6 +1200,7 @@
         "Y": 250.0,
         "Z": -160.0
       },
+      "bVisible": false,
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
         "BreachRight"
@@ -1598,7 +1603,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonDirt_GEN_VARIABLE",
+    "Name": "FortCommonDirtT1T2_GEN_VARIABLE",
     "Outer": "BPFortRampT1_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

@@ -667,9 +667,6 @@ private:
     
 public:
     UFUNCTION(BlueprintCallable, Client, Reliable)
-    void ClientVehicleSeatSwitched(bool bIsDriver, ASimVehicle* Vehicle);
-    
-    UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientTraceActivity(FActivityStateDebugTrace NewTrace);
     
 private:

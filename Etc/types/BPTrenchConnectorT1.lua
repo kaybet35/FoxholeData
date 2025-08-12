@@ -1,6 +1,9 @@
 ---@meta
 
 ---@class ABPTrenchConnectorT1_C : AFortConnector
+---@field VisualSplineLeft USplineConnectorComponent
+---@field VisualSplineRight USplineConnectorComponent
+---@field FloorQuadrilateralCover UQuadrilateralCoverComponent
 ---@field TrenchConnectorBuildGhostSockets UTemplateComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field TrenchConnectorCommonT1T2 UTemplateComponent
@@ -10,16 +13,11 @@
 ---@field DirtCornerBackLeft UStaticMeshComponent
 ---@field DirtCornerBackRight UStaticMeshComponent
 ---@field DirtCornerFrontRight UStaticMeshComponent
----@field DecalRight UDecalComponent
----@field DecalLeft UDecalComponent
----@field DecalBack UDecalComponent
----@field DecalFront UDecalComponent
 ---@field CornerFrontRight UStaticMeshComponent
 ---@field CornerFrontLeft UStaticMeshComponent
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field CornerBackRight UStaticMeshComponent
 ---@field WallRight UStaticMeshComponent
----@field Floor UStaticMeshComponent
 ---@field WallLeft UStaticMeshComponent
 ---@field WallBack UStaticMeshComponent
 ---@field WallFront UStaticMeshComponent

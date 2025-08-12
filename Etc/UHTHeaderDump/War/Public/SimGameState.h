@@ -90,6 +90,13 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
     bool bIsShortWar;
     
+private:
+    UPROPERTY(EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    uint64 RegionMaintenanceBitMask;
+    
+    UPROPERTY(EditAnywhere, Replicated, meta=(AllowPrivateAccess=true))
+    uint64 EnabledRegionBitMask;
+    
 public:
     ASimGameState(const FObjectInitializer& ObjectInitializer);
 

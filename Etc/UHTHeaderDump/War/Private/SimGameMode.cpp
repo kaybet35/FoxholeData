@@ -16,6 +16,7 @@ ASimGameMode::ASimGameMode(const FObjectInitializer& ObjectInitializer) : Super(
     this->bPauseable = false;
     this->DefaultAutoSavePeriod = 0.00f;
     this->DefaultBotClass = NULL;
+    this->CurrentVehicleID = 0;
     this->PlayerProfileManager = NULL;
 }
 

@@ -5,6 +5,7 @@ AFoundation::AFoundation(const FObjectInitializer& ObjectInitializer) : Super(Ob
     this->NetDormancy = DORM_DormantAll;
     this->KillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("KillVolume"));
     this->bIgnoreFriendlyFire = true;
+    this->bAllowsShippablePlacement = true;
     this->bUsesImpactsMaterial = true;
     this->bCanBeFlaggedForDisruptivePlacement = true;
     this->KillVolume->SetupAttachment(RootComponent);

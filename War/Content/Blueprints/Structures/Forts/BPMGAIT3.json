@@ -40,7 +40,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3.22"
       },
       {
-        "ObjectName": "ObjectProperty'BPMGAIT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPMGAIT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3.18"
       },
       {
@@ -96,7 +96,7 @@
     "Type": "BPMGAIT3_C",
     "Name": "Default__BPMGAIT3_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPMGAIT3.BPMGAIT3_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "SkeletalMesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPMGAIT3_C:Mesh'",
@@ -210,6 +210,10 @@
       "MaxHealth": 4050,
       "Health": 4050,
       "MapIntelligenceType": "EMapIntelligenceType::Defense",
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
+      },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPMGAIT3_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3.42"
@@ -405,18 +409,18 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoxExtent": {
-        "X": 400.0,
-        "Y": 400.0,
-        "Z": 160.0
+        "X": 225.0,
+        "Y": 225.0,
+        "Z": 80.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPMGAIT3_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3.6"
       },
       "RelativeLocation": {
-        "X": -6.1035156E-05,
-        "Y": 1.4084167,
-        "Z": 0.0
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -80.0
       }
     }
   },
@@ -511,7 +515,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPMGAIT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -639,13 +643,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPMGAIT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPMGAIT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3.49"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "F3250FAC-48ECD10A-36C5EDBC-AE0A9791",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1202,7 +1206,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPMGAIT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

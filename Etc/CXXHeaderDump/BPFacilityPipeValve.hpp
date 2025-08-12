@@ -3,8 +3,8 @@
 
 class ABPFacilityPipeValve_C : public APipelineValve
 {
-    class UStaticMeshComponent* MainMesh;                                             // 0x0840 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x0860 (size: 0x8)
 
-}; // Size: 0x848
+}; // Size: 0x868
 
 #endif

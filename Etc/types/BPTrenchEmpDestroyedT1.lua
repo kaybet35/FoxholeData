@@ -2,7 +2,7 @@
 
 ---@class ABPTrenchEmpDestroyedT1_C : ADestroyedFort
 ---@field TrenchEmpCommonSockets UTemplateComponent
----@field BPTrenchEmpCommonDirtT1T2 UTemplateComponent
+---@field TrenchEmpCommonDirtT1T2 UTemplateComponent
 ---@field BPStructurePuddleMesh UBPStructurePuddleMesh_C
 ---@field FloorDecal UDecalComponent
 ---@field TrenchEmplacementT1Destroyed01Right UStaticMeshComponent

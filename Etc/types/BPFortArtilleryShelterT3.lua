@@ -2,7 +2,7 @@
 
 ---@class ABPFortArtilleryShelterT3_C : AFortArtilleryShelter
 ---@field FortCommonT3Mods UTemplateComponent
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent

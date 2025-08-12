@@ -5,7 +5,7 @@
 ---@field DriverExit USeatExitComponent
 ---@field PassengerTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
----@field idle UAudioComponent
+---@field Idle UAudioComponent
 ---@field Camera UCameraComponent
 local ABPMotorcycleBase_C = {}
 

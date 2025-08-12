@@ -3,8 +3,8 @@
 
 class ABPTrainFlatbed_C : public AFlatbedRailVehicle
 {
-    class UBoxComponent* UseVolume;                                                   // 0x1320 (size: 0x8)
+    class UBoxComponent* UseVolume;                                                   // 0x1380 (size: 0x8)
 
-}; // Size: 0x1328
+}; // Size: 0x1388
 
 #endif

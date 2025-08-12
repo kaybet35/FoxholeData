@@ -70,7 +70,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMedicalRoomT3.24"
       },
       {
-        "ObjectName": "ObjectProperty'BPMedicalRoomT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPMedicalRoomT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMedicalRoomT3.23"
       },
       {
@@ -164,7 +164,7 @@
     "Type": "BPMedicalRoomT3_C",
     "Name": "Default__BPMedicalRoomT3_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPMedicalRoomT3.BPMedicalRoomT3_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "HospitalComponent": {
         "ObjectName": "HospitalComponent'Default__BPMedicalRoomT3_C:HospitalComponent'",
@@ -261,7 +261,9 @@
       "MapIntelligenceType": "EMapIntelligenceType::FieldHospital",
       "bProvidesBasedShelter": true,
       "ClaimStatus": {
-        "bIsEnabled": true
+        "bIsEnabled": true,
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
       },
       "bHasMeshVisibilityComponent": true,
       "StealthComponent": {
@@ -586,7 +588,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPMedicalRoomT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -1135,13 +1137,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPMedicalRoomT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPMedicalRoomT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMedicalRoomT3.71"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "F245BF62-403085E1-E18A1189-96F2DE75",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1900,7 +1902,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPMedicalRoomT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

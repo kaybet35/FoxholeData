@@ -2,7 +2,7 @@
 
 ---@class ABPFortFirePitT3_C : AFortFirePit
 ---@field FortCommonThreeWallsMods UTemplateComponent
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field SideLeft UStaticMeshComponent
 ---@field Roof UStaticMeshComponent

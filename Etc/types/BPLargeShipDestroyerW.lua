@@ -86,7 +86,7 @@
 ---@field SideLeft UParticleSystemComponent
 ---@field WakeAft UParticleSystemComponent
 ---@field ExhaustFore UParticleSystemComponent
----@field idle UAudioComponent
+---@field Idle UAudioComponent
 ---@field SonarTrigger9 USeatTriggerComponent
 ---@field SonarSeat8 UVehicleSeatComponent
 ---@field LeftLadderHatchExit UHatchComponent

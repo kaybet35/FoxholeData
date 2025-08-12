@@ -3,6 +3,6 @@
 
 class UBPEnvironmentalModificationData_C : public UEnvironmentalModificationData
 {
-}; // Size: 0x188
+}; // Size: 0x198
 
 #endif

@@ -3,6 +3,6 @@
 
 class UBPMediumTankSiegeWMGGunnerComponent_C : public UHitScanMountComponent
 {
-}; // Size: 0x930
+}; // Size: 0x928
 
 #endif

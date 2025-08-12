@@ -84,7 +84,7 @@
     "Type": "BPFortT2_C",
     "Name": "Default__BPFortT2_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPFortT2.BPFortT2_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "EmplacementLocation": {
         "ObjectName": "BoxComponent'Default__BPFortT2_C:EmplacementLocation'",
@@ -179,8 +179,11 @@
       "MaxHealth": 2000,
       "Health": 2000,
       "UpgradeStructureCodeName": "FortT3",
+      "bAllowsShippablePlacement": true,
+      "ShippablePlacementFilter": "ConstructionEquipment",
       "ClaimStatus": {
-        "bCanBeDemolished": true
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortT2_C:StealthComponent'",
@@ -243,9 +246,9 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoxExtent": {
-        "X": 300.0,
-        "Y": 300.0,
-        "Z": 156.0
+        "X": 225.0,
+        "Y": 225.0,
+        "Z": 80.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFortT2_C:StructureArrow'",
@@ -254,7 +257,7 @@
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 22.0
+        "Z": -80.0
       }
     }
   },

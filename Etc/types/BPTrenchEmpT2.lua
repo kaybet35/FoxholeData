@@ -3,7 +3,7 @@
 ---@class ABPTrenchEmpT2_C : AFort
 ---@field TrenchEmpCommonSockets UTemplateComponent
 ---@field TrenchEmpDirtDecals UTemplateComponent
----@field TrenchEmpCommonDirt UTemplateComponent
+---@field TrenchEmpCommonDirtT1T2 UTemplateComponent
 ---@field TrenchEmpCommonMods UTemplateComponent
 ---@field TrenchEmpCommon UTemplateComponent
 ---@field BackCornerL UStaticMeshComponent

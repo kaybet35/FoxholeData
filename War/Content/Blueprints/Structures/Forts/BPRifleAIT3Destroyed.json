@@ -32,16 +32,16 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:Template'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.13"
-      },
-      {
-        "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:insidefloor'",
+        "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:FortCommonAIT3Destroyed'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.11"
       },
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:LocationMultiplexedMesh'",
+        "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:insidefloor'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.12"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:LocationMultiplexedMesh'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.13"
       },
       {
         "ObjectName": "ObjectProperty'BPRifleAIT3Destroyed_C:FortCommon'",
@@ -120,8 +120,8 @@
         "ObjectName": "ModularMountsComponent'Default__BPRifleAIT3Destroyed_C:ModularMountsComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.8"
       },
-      "MaxHealth": 3000,
-      "Health": 3000,
+      "MaxHealth": 3750,
+      "Health": 3750,
       "UpgradeStructureCodeName": "RifleAIT3",
       "bIsTrackedClimbable": false,
       "ClaimStatus": {
@@ -267,6 +267,18 @@
   },
   {
     "Type": "ObjectProperty",
+    "Name": "FortCommonAIT3Destroyed",
+    "Outer": "BPRifleAIT3Destroyed_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
     "Name": "insidefloor",
     "Outer": "BPRifleAIT3Destroyed_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -286,18 +298,6 @@
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
       "ObjectName": "Class'LocationMultiplexedMeshComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
-    "Name": "Template",
-    "Outer": "BPRifleAIT3Destroyed_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'TemplateComponent'",
       "ObjectPath": "/Script/War"
     }
   },
@@ -381,13 +381,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPRifleAIT3Destroyed_C:Template_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.28"
+        "ObjectName": "TemplateComponent'BPRifleAIT3Destroyed_C:FortCommonAIT3Destroyed_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.27"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "0EC6152C-4ACDA3FD-CCC840BB-E396E816",
-      "InternalVariableName": "Template"
+      "InternalVariableName": "FortCommonAIT3Destroyed"
     }
   },
   {
@@ -403,7 +403,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPRifleAIT3Destroyed_C:FortCommonDestroyedDirtT3_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3Destroyed.28"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -564,7 +564,8 @@
       },
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
-        "MultiplexedFloor"
+        "MultiplexedFloor",
+        "ShowWeatherFX"
       ]
     }
   },
@@ -663,6 +664,19 @@
   },
   {
     "Type": "TemplateComponent",
+    "Name": "FortCommonAIT3Destroyed_GEN_VARIABLE",
+    "Outer": "BPRifleAIT3Destroyed_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonAIT3Destroyed_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonAIT3Destroyed.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
     "Name": "FortCommonDestroyedDirtT3_GEN_VARIABLE",
     "Outer": "BPRifleAIT3Destroyed_C",
     "Class": "UScriptClass'TemplateComponent'",
@@ -671,19 +685,6 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortCommonDestroyedDirtT3_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonDestroyedDirtT3.1"
-      }
-    }
-  },
-  {
-    "Type": "TemplateComponent",
-    "Name": "Template_GEN_VARIABLE",
-    "Outer": "BPRifleAIT3Destroyed_C",
-    "Class": "UScriptClass'TemplateComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonAIT3Destroyed_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonAIT3Destroyed.1"
       }
     }
   }

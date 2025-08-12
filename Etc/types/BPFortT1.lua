@@ -2,7 +2,7 @@
 
 ---@class ABPFortT1_C : AFort
 ---@field FortCommonT1BreachedWalls UTemplateComponent
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field FortCommonMods UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent

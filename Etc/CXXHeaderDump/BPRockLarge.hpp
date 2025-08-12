@@ -3,9 +3,9 @@
 
 class ABPRockLarge_C : public AWall
 {
-    class UStaticMeshComponent* RockTop;                                              // 0x0810 (size: 0x8)
-    class UStaticMeshComponent* Rock;                                                 // 0x0818 (size: 0x8)
+    class UStaticMeshComponent* RockTop;                                              // 0x0830 (size: 0x8)
+    class UStaticMeshComponent* Rock;                                                 // 0x0838 (size: 0x8)
 
-}; // Size: 0x820
+}; // Size: 0x840
 
 #endif

@@ -3,6 +3,6 @@
 
 class UBPWeatherStationMount_C : public UWeatherStationMountComponent
 {
-}; // Size: 0x868
+}; // Size: 0x860
 
 #endif

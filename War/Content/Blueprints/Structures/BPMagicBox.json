@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "RepairBox",
+    "Name": "BPBuildFootprintBoxComponent",
     "Outer": "BPMagicBox_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "BlueprintGeneratedClass'BPBuildFootprintBoxComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.0"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPMagicBox_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.16"
       }
     },
     "SuperStruct": {
@@ -28,12 +28,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPMagicBox_C:RepairBox'",
+        "ObjectName": "ObjectProperty'BPMagicBox_C:BPBuildFootprintBoxComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPMagicBox_C:RepairBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.10"
+      },
+      {
         "ObjectName": "ObjectProperty'BPMagicBox_C:MultiplexedStaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.9"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -56,15 +60,13 @@
     "Properties": {
       "MeshComponent": {
         "ObjectName": "StaticMeshComponent'Default__BPMagicBox_C:Mesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.17"
       },
       "ReplenishRate": 5.0,
       "bReplenishFirstItem": true,
+      "ProceduralUseVolumeFactor": 0.0,
       "bIsBuiltOnFoundation": true,
-      "BuildSiteClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPStorageBoxBuildSite_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBoxBuildSite.1"
-      },
+      "BuildGhostClass": null,
       "Description": {
         "Namespace": "",
         "Key": "5134C9D844FBDCE85A83E29BF38D7C00",
@@ -120,7 +122,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPMagicBox_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.18"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPMagicBox_C:StructureArrow'",
@@ -249,6 +251,25 @@
     }
   },
   {
+    "Type": "BPBuildFootprintBoxComponent_C",
+    "Name": "BPBuildFootprintBoxComponent_GEN_VARIABLE",
+    "Outer": "BPMagicBox_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.BPBuildFootprintBoxComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 90.0,
+        "Y": 43.0,
+        "Z": 40.5
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 44.5
+      }
+    }
+  },
+  {
     "Type": "MultiplexedStaticMeshComponent",
     "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
     "Outer": "BPMagicBox_C",
@@ -295,6 +316,18 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "RepairBox",
+    "Outer": "BPMagicBox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPMagicBox_C",
@@ -314,10 +347,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPMagicBox_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.11"
       },
       "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPBuildFootprintBoxComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPBuildFootprintBoxComponent_C'BPMagicBox_C:BPBuildFootprintBoxComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "269AB8FE-4B659994-5D50D4A7-5871EF04",
+      "InternalVariableName": "BPBuildFootprintBoxComponent"
     }
   },
   {
@@ -333,7 +387,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedStaticMeshComponent'BPMagicBox_C:MultiplexedStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.8"
       },
       "VariableGuid": "B65A087D-4CA1AA4D-890F09B3-1854A5E8",
       "InternalVariableName": "MultiplexedStaticMesh"
@@ -370,26 +424,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.14"
         },
         {
           "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.12"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.14"
         },
         {
           "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.12"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPMagicBox_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPMagicBox.12"
       }
     }
   },

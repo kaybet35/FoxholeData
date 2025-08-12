@@ -8,7 +8,7 @@
 ---@field PipeInput1 UBuildSocketComponent
 ---@field Roof UStaticMeshComponent
 ---@field FortFlame USkeletalMeshComponent
----@field FortFlameT3BreachWalls UTemplateComponent
+---@field FortFlameT3BreachedWalls UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortFlameCommon UTemplateComponent

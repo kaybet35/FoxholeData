@@ -4,6 +4,7 @@
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Rotator -FallbackName=Rotator
 //CROSS-MODULE INCLUDE V2: -ModuleName=CoreUObject -ObjectName=Vector -FallbackName=Vector
 //CROSS-MODULE INCLUDE V2: -ModuleName=Engine -ObjectName=HitResult -FallbackName=HitResult
+#include "ActorLog.h"
 #include "ArmourDirectionBoneNamesList.h"
 #include "CoalitionAssignable.h"
 #include "DamageableActor.h"
@@ -21,6 +22,7 @@
 #include "FuelTanker.h"
 #include "FuelTankerInfo.h"
 #include "GenericActor.h"
+#include "GlobalVehicleID.h"
 #include "HornData.h"
 #include "ItemInstance.h"
 #include "MapIntelligenceInterface.h"
@@ -28,6 +30,7 @@
 #include "PersistentActor.h"
 #include "SeatSupport.h"
 #include "ShippableInfo.h"
+#include "SpoolingHandler.h"
 #include "Templates/SubclassOf.h"
 #include "TreadActorInfo.h"
 #include "TreadData.h"
@@ -132,6 +135,12 @@ protected:
     float DepthOffset;
     
 public:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FGlobalVehicleID GlobalVehicleID;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FActorLog ActorLog;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MinShipRammingVelocityChangeForDestruction;
     
@@ -357,6 +366,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FMuzzleInfo> MuzzleInfo;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSpoolingHandler SpoolingHandler;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     EMapIconType MapIconType;

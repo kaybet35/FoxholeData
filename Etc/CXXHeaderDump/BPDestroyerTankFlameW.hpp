@@ -3,6 +3,6 @@
 
 class ABPDestroyerTankFlameW_C : public ABPDestroyerTankBaseW_C
 {
-}; // Size: 0x13F0
+}; // Size: 0x1410
 
 #endif

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPMGAIT2_C : ABPMGAIBase_C
+---@field FortCommonDirtT2 UTemplateComponent
 ---@field PowerConsumer UPowerConsumerComponent
 ---@field FortCommonT2BreachedWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent

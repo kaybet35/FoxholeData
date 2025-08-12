@@ -11,7 +11,7 @@
 ---@field FortT1Destroyed01Front UStaticMeshComponent
 ---@field FortT1Destroyed01Back UStaticMeshComponent
 ---@field FortT1Destroyed01Right UStaticMeshComponent
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field Mesh UStaticMeshComponent
 local ABPRifleAIT2Destroyed_C = {}

@@ -3,6 +3,6 @@
 
 class UBPMediumTankSiegeWGunner_C : public UProjectileGunnerMountComponent
 {
-}; // Size: 0x8C8
+}; // Size: 0x8B8
 
 #endif

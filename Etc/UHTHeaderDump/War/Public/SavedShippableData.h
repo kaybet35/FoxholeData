@@ -1,6 +1,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GlobalSpawnPointMinimal.h"
+#include "GlobalVehicleID.h"
 #include "ItemInstance.h"
 #include "StockpileEntry.h"
 #include "SavedShippableData.generated.h"
@@ -53,6 +54,18 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     FGlobalSpawnPointMinimal GlobalSpawnPoint;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FString BuilderPlayerOnlineID;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FString BuilderName;
+    
+    UPROPERTY(EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    int64 OriginalBuildTime;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
+    FGlobalVehicleID VehicleLogID;
     
     WAR_API FSavedShippableData();
 };

@@ -76,7 +76,7 @@ local EActionType = {
     DisconnectAll = 43,
     FlagDisruptivePlacement = 44,
     DrainPipes = 45,
-    ViewActorLog = 46,
+    ViewStructureLog = 46,
     ViewReserveStockpileLog = 47,
     CloseAssemblyArea = 48,
     OpenAssemblyArea = 49,
@@ -95,7 +95,8 @@ local EActionType = {
     DeleteLoadout = 62,
     EditLoadout = 63,
     ViewGlobalLog = 64,
-    MAX = 65,
+    ViewVehicleLog = 65,
+    MAX = 66,
 }
 
 ---@enum EActivityBonusState
@@ -166,7 +167,25 @@ local EActorLogEntryType = {
     OtherBuildToolRequired = 38,
     WeaponAttached = 39,
     WeaponDetached = 40,
-    MAX = 41,
+    Packaged = 41,
+    Unpackaged = 42,
+    AutoUnpackaged = 43,
+    VehicleConstructionComplete = 44,
+    VehicleRetrievedFromStockpile = 45,
+    VehicleTravelled = 46,
+    TrailerAttached = 47,
+    TrailerDetached = 48,
+    ShippableReceived = 49,
+    ShippableRemoved = 50,
+    VehicleLocked = 51,
+    VehicleUnlocked = 52,
+    VehicleWrenched = 53,
+    VehicleReserved = 54,
+    VehicleReservationRemoved = 55,
+    VehicleReserveExpiry = 56,
+    ChangedFuelType = 57,
+    VehicleFullRepair = 58,
+    MAX = 59,
 }
 
 ---@enum EAnalyticsAccessLevel
@@ -1391,6 +1410,13 @@ local EInteractiveObjectType = {
     EInteractiveObjectType_MAX = 15,
 }
 
+---@enum EIntervalSequence
+local EIntervalSequence = {
+    Random = 0,
+    Sequential = 1,
+    EIntervalSequence_MAX = 2,
+}
+
 ---@enum EInventoryType
 local EInventoryType = {
     Default = 0,
@@ -1576,7 +1602,8 @@ local ELogChannel = {
     WarCreate = 8,
     WarChat = 9,
     WarComms = 10,
-    ELogChannel_MAX = 11,
+    WarVehicles = 11,
+    ELogChannel_MAX = 12,
 }
 
 ---@enum ELongRangeArtilleryType
@@ -2018,8 +2045,9 @@ local EPlacementStatus = {
     CantConnectEnemyStructure = 67,
     IsObstructedByPuddle = 68,
     SnappedSplineIntersects = 69,
-    Unknown = 70,
-    EPlacementStatus_MAX = 71,
+    IsObstructedBySpawnPoint = 70,
+    Unknown = 71,
+    EPlacementStatus_MAX = 72,
 }
 
 ---@enum EPlayerOnlineStatus

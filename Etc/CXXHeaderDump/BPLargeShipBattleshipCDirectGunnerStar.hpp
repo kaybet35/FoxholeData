@@ -3,6 +3,6 @@
 
 class UBPLargeShipBattleshipCDirectGunnerStar_C : public UTankGunnerMountComponent
 {
-}; // Size: 0x8E8
+}; // Size: 0x8E0
 
 #endif

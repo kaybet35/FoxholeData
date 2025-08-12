@@ -3,6 +3,6 @@
 
 class ABPTruckLiquidW_C : public ABPTruckLiquidC_C
 {
-}; // Size: 0x1328
+}; // Size: 0x1348
 
 #endif

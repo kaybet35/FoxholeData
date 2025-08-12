@@ -3,6 +3,6 @@
 
 class UBPObservationTowerRotatorComponent_C : public UWatchTowerMountComponent
 {
-}; // Size: 0x870
+}; // Size: 0x868
 
 #endif

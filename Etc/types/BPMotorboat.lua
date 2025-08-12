@@ -13,7 +13,7 @@
 ---@field CenterTrigger USeatTriggerComponent
 ---@field DriverTrigger USeatTriggerComponent
 ---@field WorkVolume UBoxComponent
----@field idle UAudioComponent
+---@field Idle UAudioComponent
 ---@field Camera UCameraComponent
 local ABPMotorboat_C = {}
 

@@ -3,11 +3,11 @@
 
 class ABPArmoredCarOffensiveC_C : public ABPArmoredCarBaseC_C
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x13A8 (size: 0x8)
-    class USkeletalMeshComponent* mainBody;                                           // 0x13B0 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x13D8 (size: 0x8)
+    class USkeletalMeshComponent* mainBody;                                           // 0x13E0 (size: 0x8)
 
     void BPOnVehicleOn(bool IsOn);
     void ExecuteUbergraph_BPArmoredCarOffensiveC(int32 EntryPoint);
-}; // Size: 0x13B8
+}; // Size: 0x13E8
 
 #endif

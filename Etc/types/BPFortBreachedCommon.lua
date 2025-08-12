@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortBreachedCommon_C : ATemplate
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field DecalFront UDecalComponent
 ---@field DecalRight UDecalComponent

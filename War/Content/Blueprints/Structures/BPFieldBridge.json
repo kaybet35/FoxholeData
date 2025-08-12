@@ -66,11 +66,11 @@
         "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.15"
       },
       {
-        "ObjectName": "ObjectProperty'BPFieldBridge_C:RampFrontBuildFootprint'",
+        "ObjectName": "ObjectProperty'BPFieldBridge_C:RampBackBuildFootprint'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.13"
       },
       {
-        "ObjectName": "ObjectProperty'BPFieldBridge_C:RampBackBuildFootprint'",
+        "ObjectName": "ObjectProperty'BPFieldBridge_C:RampFrontBuildFootprint'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.27"
       },
       {
@@ -156,7 +156,7 @@
     "Type": "BPFieldBridge_C",
     "Name": "Default__BPFieldBridge_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPFieldBridge.BPFieldBridge_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "UberGraphFrame": {},
       "Timeline_0_NewTrack_0_738F45B945E6F66E508CF1BDC736E93C": {
@@ -359,14 +359,21 @@
         }
       },
       "RelativeLocation": {
-        "X": 299.99976,
-        "Y": 2.910383E-11,
-        "Z": -30.0
+        "X": -300.0,
+        "Y": 0.0,
+        "Z": 30.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -179.99995,
+        "Roll": 0.0
       },
       "ComponentTags": [
         "IncludeInBuildFootprints",
         "IncludeInBuildGhost",
-        "PreserveProfileInBuildSite"
+        "PreserveProfileInBuildSite",
+        "QueryOnly",
+        "RampBack"
       ]
     }
   },
@@ -442,14 +449,16 @@
         }
       },
       "RelativeLocation": {
-        "X": 300.0,
+        "X": 700.0,
         "Y": 0.0,
-        "Z": -30.0
+        "Z": 30.0
       },
       "ComponentTags": [
         "IncludeInBuildFootprints",
         "IncludeInBuildGhost",
-        "PreserveProfileInBuildSite"
+        "PreserveProfileInBuildSite",
+        "QueryOnly",
+        "RampFront"
       ]
     }
   },
@@ -622,7 +631,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "RampFrontBuildFootprint",
+    "Name": "RampBackBuildFootprint",
     "Outer": "BPFieldBridge_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -800,7 +809,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "RampBackBuildFootprint",
+    "Name": "RampFrontBuildFootprint",
     "Outer": "BPFieldBridge_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -1090,7 +1099,7 @@
         "ObjectName": "BoxComponent'BPFieldBridge_C:RampBackBuildFootprint_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.5"
       },
-      "ParentComponentOrVariableName": "BackRamp",
+      "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "E047B381-4A89D4EF-54F45B9C-1F9657B8",
       "InternalVariableName": "RampBackBuildFootprint"
@@ -1111,7 +1120,7 @@
         "ObjectName": "BoxComponent'BPFieldBridge_C:RampFrontBuildFootprint_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.6"
       },
-      "ParentComponentOrVariableName": "FrontRamp",
+      "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "11A1AB07-48D1E589-D31105BC-742F267E",
       "InternalVariableName": "RampFrontBuildFootprint"
@@ -1154,12 +1163,12 @@
           "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.41"
         },
         {
-          "ObjectName": "SCS_Node'BPFieldBridge_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.43"
-        },
-        {
           "ObjectName": "SCS_Node'BPFieldBridge_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFieldBridge_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.43"
         }
       ],
       "AllNodes": [
@@ -1196,12 +1205,12 @@
           "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.41"
         },
         {
-          "ObjectName": "SCS_Node'BPFieldBridge_C:SimpleConstructionScript_0.SCS_Node_6'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.43"
-        },
-        {
           "ObjectName": "SCS_Node'BPFieldBridge_C:SimpleConstructionScript_0.SCS_Node_7'",
           "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BPFieldBridge_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPFieldBridge.43"
         }
       ],
       "DefaultSceneRootNode": {
@@ -1229,6 +1238,7 @@
             }
           ],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -1268,15 +1278,17 @@
           "Interval": 400.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": true,
           "bFillRemainder": true,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 200.0,
           "EndOffset": 200.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1321,12 +1333,15 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         },
         {
           "Mesh": null,
           "Meshes": [],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -1367,15 +1382,17 @@
           "Interval": 100.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": false,
           "bFillRemainder": false,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 0.0,
           "EndOffset": 0.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1420,12 +1437,15 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         },
         {
           "Mesh": null,
           "Meshes": [],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -1466,15 +1486,17 @@
           "Interval": 100.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": false,
           "bFillRemainder": false,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 0.0,
           "EndOffset": 0.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1519,12 +1541,15 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         },
         {
           "Mesh": null,
           "Meshes": [],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -1542,7 +1567,7 @@
           "EndIndex": 3,
           "BoxWidth": 431.0,
           "BoxHeight": 400.0,
-          "BoxLengthPadding": 800.0,
+          "BoxLengthPadding": 0.0,
           "SpawnPoints": [],
           "SplineMeshAxis": "ESplineMeshAxis::Z",
           "SplineStartOffset": {
@@ -1565,15 +1590,17 @@
           "Interval": 100.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": false,
           "bFillRemainder": false,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 0.0,
           "EndOffset": 0.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1618,7 +1645,9 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         }
       ],
       "MinBuffer": 1.0,
@@ -1659,6 +1688,7 @@
             }
           ],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -1696,15 +1726,17 @@
           "Interval": 400.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": true,
           "bFillRemainder": true,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 200.0,
           "EndOffset": 200.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1749,12 +1781,15 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         },
         {
           "Mesh": null,
           "Meshes": [],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -1794,15 +1829,17 @@
           "Interval": 100.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": false,
           "bFillRemainder": false,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 0.0,
           "EndOffset": 0.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1847,7 +1884,9 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         }
       ],
       "MinBuffer": 1.0,

@@ -3,6 +3,6 @@
 
 class UBPHalftrackTwinWGunner_RComponent_C : public UBPHalftrackTwinWGunner_LComponent_C
 {
-}; // Size: 0x930
+}; // Size: 0x928
 
 #endif

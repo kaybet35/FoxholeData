@@ -3,11 +3,11 @@
 
 class ABPPlayerImposter_C : public APlayerImposter
 {
-    class USeatExitComponent* DriverExit;                                             // 0x1130 (size: 0x8)
-    class USeatTriggerComponent* DriverTrigger;                                       // 0x1138 (size: 0x8)
-    class UVehicleSeatComponent* DriverSeat;                                          // 0x1140 (size: 0x8)
-    class UCameraComponent* Camera;                                                   // 0x1148 (size: 0x8)
+    class USeatExitComponent* DriverExit;                                             // 0x1160 (size: 0x8)
+    class USeatTriggerComponent* DriverTrigger;                                       // 0x1168 (size: 0x8)
+    class UVehicleSeatComponent* DriverSeat;                                          // 0x1170 (size: 0x8)
+    class UCameraComponent* Camera;                                                   // 0x1178 (size: 0x8)
 
-}; // Size: 0x1150
+}; // Size: 0x1180
 
 #endif

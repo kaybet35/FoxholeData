@@ -36,7 +36,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3.22"
       },
       {
-        "ObjectName": "ObjectProperty'BPRifleAIT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPRifleAIT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3.17"
       },
       {
@@ -96,7 +96,7 @@
     "Type": "BPRifleAIT3_C",
     "Name": "Default__BPRifleAIT3_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPRifleAIT3.BPRifleAIT3_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "AITurretComponent": {
         "ObjectName": "AITurretComponent'Default__BPRifleAIT3_C:AITurretComponent'",
@@ -205,6 +205,10 @@
       "MaxHealth": 3750,
       "Health": 3750,
       "MapIntelligenceType": "EMapIntelligenceType::Defense",
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
+      },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPRifleAIT3_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3.43"
@@ -397,18 +401,18 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoxExtent": {
-        "X": 400.0,
-        "Y": 400.0,
-        "Z": 160.0
+        "X": 225.0,
+        "Y": 225.0,
+        "Z": 80.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPRifleAIT3_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3.6"
       },
       "RelativeLocation": {
-        "X": -6.1035156E-05,
-        "Y": 1.4084167,
-        "Z": 0.0
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -80.0
       }
     }
   },
@@ -496,7 +500,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPRifleAIT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -636,13 +640,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPRifleAIT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPRifleAIT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPRifleAIT3.50"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "8CB0BEE0-4E4D20E5-C22870A7-C0259FC1",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1215,7 +1219,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPRifleAIT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

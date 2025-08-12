@@ -1,6 +1,8 @@
 ---@meta
 
 ---@class ABPFortCornerDestroyedT2_C : ADestroyedFort
+---@field FortT2AngleDestroyedRightShortWall UStaticMeshComponent
+---@field FortT2AngleDestroyedFrontShortWall UStaticMeshComponent
 ---@field FortCornerBreachCommonSockets UTemplateComponent
 ---@field FortCornerCommonDirtT1 UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent

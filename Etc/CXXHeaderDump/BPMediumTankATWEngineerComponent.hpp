@@ -3,6 +3,6 @@
 
 class UBPMediumTankATWEngineerComponent_C : public UTankEngineerComponent
 {
-}; // Size: 0x890
+}; // Size: 0x888
 
 #endif

@@ -3,6 +3,6 @@
 
 class ABPLargeFieldCannonW_C : public ABPLargeFieldGunBaseW_C
 {
-}; // Size: 0x1308
+}; // Size: 0x1328
 
 #endif

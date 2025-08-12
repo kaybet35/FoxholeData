@@ -181,6 +181,12 @@ protected:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIgnoreFriendlyFire: 1;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    uint8 bAllowsShippablePlacement: 1;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FName ShippablePlacementFilter;
+    
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     EStructureNetRelevancySize StructureNetRelevancySize;
     
@@ -207,6 +213,12 @@ public:
     bool bIsPowered;
     
 protected:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bIsScorchable;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
+    bool bIsScorched;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float InteractionDistanceOverride;
     

@@ -3,6 +3,6 @@
 
 class UBPAmbulanceFlameCGunner_C : public UFlameMountComponent
 {
-}; // Size: 0x970
+}; // Size: 0x968
 
 #endif

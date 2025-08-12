@@ -3,6 +3,6 @@
 
 class ABPMotorcycleC_C : public ABPMotorcycleBaseC_C
 {
-}; // Size: 0x1320
+}; // Size: 0x1350
 
 #endif

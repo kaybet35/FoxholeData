@@ -9,6 +9,7 @@ AConstructionSite::AConstructionSite(const FObjectInitializer& ObjectInitializer
     this->ArmourType = EArmourType::Tier3Structure;
     this->bIsBuildSiteMapIconVisible = true;
     this->bIgnoreFriendlyFire = true;
+    this->bAllowsShippablePlacement = true;
     this->BuildLocationFilter = EBuildLocationType::None;
     this->GarageFootprintComponent = CreateDefaultSubobject<UBoxComponent>(TEXT("GarageFootprint"));
     this->CraneSpawnLocationComponent = CreateDefaultSubobject<UCraneSpawnLocationComponent>(TEXT("CraneSpawnLocationComponent"));

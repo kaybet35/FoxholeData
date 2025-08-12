@@ -3,6 +3,6 @@
 
 class UBPGrenadeLauncherTCMountComponent_C : public UGrenadeGunnerMountComponent
 {
-}; // Size: 0x938
+}; // Size: 0x928
 
 #endif

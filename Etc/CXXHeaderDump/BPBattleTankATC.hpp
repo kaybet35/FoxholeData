@@ -3,10 +3,10 @@
 
 class ABPBattleTankATC_C : public ABattleTankATCBase_C
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x1428 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x1448 (size: 0x8)
 
     void BPOnVehicleOn(bool IsOn);
     void ExecuteUbergraph_BPBattleTankATC(int32 EntryPoint);
-}; // Size: 0x1430
+}; // Size: 0x1450
 
 #endif

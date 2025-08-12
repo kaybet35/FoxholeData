@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPFortT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -28,7 +28,7 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPFortT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortT3.0"
       },
       {
@@ -96,7 +96,7 @@
     "Type": "BPFortT3_C",
     "Name": "Default__BPFortT3_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPFortT3.BPFortT3_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "EmplacementLocation": {
         "ObjectName": "BoxComponent'Default__BPFortT3_C:EmplacementLocation'",
@@ -193,8 +193,14 @@
         "ObjectName": "ModularMountsComponent'Default__BPFortT3_C:ModularMountsComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortT3.8"
       },
-      "MaxHealth": 3000,
-      "Health": 3000,
+      "MaxHealth": 3750,
+      "Health": 3750,
+      "bAllowsShippablePlacement": true,
+      "ShippablePlacementFilter": "ConstructionEquipment",
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
+      },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortT3_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortT3.42"
@@ -256,9 +262,9 @@
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "BoxExtent": {
-        "X": 300.0,
-        "Y": 300.0,
-        "Z": 145.0
+        "X": 225.0,
+        "Y": 225.0,
+        "Z": 80.0
       },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFortT3_C:StructureArrow'",
@@ -267,7 +273,7 @@
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
-        "Z": 22.0
+        "Z": -80.0
       }
     }
   },
@@ -728,13 +734,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPFortT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPFortT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortT3.48"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "A377D73E-4E25A115-D87B908F-A79535F3",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1324,7 +1330,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPFortT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

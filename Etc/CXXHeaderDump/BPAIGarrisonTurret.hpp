@@ -3,6 +3,6 @@
 
 class UBPAIGarrisonTurret_C : public UAITurretComponent
 {
-}; // Size: 0x3E0
+}; // Size: 0x3F0
 
 #endif

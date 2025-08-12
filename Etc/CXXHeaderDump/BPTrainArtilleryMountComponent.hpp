@@ -3,6 +3,6 @@
 
 class UBPTrainArtilleryMountComponent_C : public ULongRangeArtilleryMountComponent
 {
-}; // Size: 0x870
+}; // Size: 0x868
 
 #endif

@@ -11,7 +11,7 @@
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field Roof UStaticMeshComponent
 ---@field ObservationBunkerT1 UStaticMeshComponent
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent
 ---@field FortCommonMods UTemplateComponent
 ---@field FortCommon UTemplateComponent

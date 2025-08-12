@@ -7,7 +7,7 @@
 ---@field OccupiableTriggerVolume USeatTriggerComponent
 ---@field FortCommonMods UTemplateComponent
 ---@field Floor UStaticMeshComponent
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field FortT1GunAI UStaticMeshComponent
 local ABPRifleAIT1_C = {}

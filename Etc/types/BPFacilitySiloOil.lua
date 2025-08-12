@@ -4,7 +4,7 @@
 ---@field BPBuildFootprintBoxComponent1 UBPBuildFootprintBoxComponent_C
 ---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
 ---@field MultiplexedStaticMesh UMultiplexedStaticMeshComponent
----@field BPFuelLightTemplate UTemplateComponent
+---@field FuelLightTemplate UTemplateComponent
 ---@field StaticMesh UStaticMeshComponent
 local ABPFacilitySiloOil_C = {}
 

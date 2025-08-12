@@ -11,7 +11,7 @@
 ---@field CornerBackRight UStaticMeshComponent
 ---@field CornerBackLeft UStaticMeshComponent
 ---@field CornerFrontRight UStaticMeshComponent
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field FortCommon UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
 ---@field Floor UStaticMeshComponent

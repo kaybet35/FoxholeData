@@ -9,6 +9,8 @@ UEnvironmentalModificationData::UEnvironmentalModificationData() {
     this->DecalSortOrder = 5;
     this->PuddleDecalSortOrder = 6;
     this->MaxTreeRemovalPercentage = 0.20f;
+    this->FoliageCullInstancedStaticMeshClass = NULL;
+    this->FoliageCullMeshZOffset = 50.00f;
     this->FoliageRemovalThresholdWeights[0] = 0.00f;
     this->FoliageRemovalThresholdWeights[1] = 0.00f;
     this->FoliageRemovalThresholdWeights[2] = 0.00f;

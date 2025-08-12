@@ -3,8 +3,8 @@
 
 class ABPShipPartBase_C : public ATeamStructure
 {
-    class UStaticMeshComponent* MainMesh;                                             // 0x0820 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x0840 (size: 0x8)
 
-}; // Size: 0x828
+}; // Size: 0x848
 
 #endif

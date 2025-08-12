@@ -15,7 +15,7 @@
 ---@field Light1 UStaticMeshComponent
 ---@field ['Ramp End (Editor Only)'] USceneComponent
 ---@field ['Ramp Start (Editor Only)'] USceneComponent
----@field idle UAudioComponent
+---@field Idle UAudioComponent
 ---@field Camera UCameraComponent
 local ABPBarge_C = {}
 

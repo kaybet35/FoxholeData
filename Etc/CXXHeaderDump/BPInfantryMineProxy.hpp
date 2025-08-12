@@ -3,8 +3,8 @@
 
 class ABPInfantryMineProxy_C : public ABuildableStructure
 {
-    class UStaticMeshComponent* InfantryMinePickup;                                   // 0x0800 (size: 0x8)
+    class UStaticMeshComponent* InfantryMinePickup;                                   // 0x0820 (size: 0x8)
 
-}; // Size: 0x808
+}; // Size: 0x828
 
 #endif

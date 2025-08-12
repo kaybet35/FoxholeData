@@ -3,6 +3,7 @@
 FDamageAttributes::FDamageAttributes() {
     this->WeaponFireFXClass = NULL;
     this->ImpactEffect = NULL;
+    this->ExplosionEffect = NULL;
     this->DamageType = NULL;
     this->ShotSoundCue = NULL;
     this->MuzzleFlashPS = NULL;

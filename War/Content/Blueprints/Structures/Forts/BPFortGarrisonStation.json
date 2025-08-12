@@ -346,6 +346,49 @@
         "Y": 800.0,
         "Z": 125.0
       },
+      "BodyInstance": {
+        "CollisionProfileName": "BoatHullCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Projectile",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
       "AttachParent": {
         "ObjectName": "ArrowComponent'Default__BPFortGarrisonStation_C:StructureArrow'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortGarrisonStation.3"
@@ -2932,6 +2975,7 @@
         "ObjectName": "StaticMesh'FortGarrisonStationBasement01'",
         "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationBasement01.2"
       },
+      "bReceivesDecals": false,
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
@@ -3045,6 +3089,7 @@
         "ObjectName": "StaticMesh'FortGarrisonStationGroundFloor01'",
         "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationGroundFloor01.2"
       },
+      "bReceivesDecals": false,
       "RelativeLocation": {
         "X": 0.0,
         "Y": 0.0,
@@ -3309,6 +3354,7 @@
         "ObjectName": "StaticMesh'FortGarrisonStationGroundFloor'",
         "ObjectPath": "War/Content/Meshes/Structures/FortGarrisonStationGroundFloor.2"
       },
+      "bReceivesDecals": false,
       "BodyInstance": {
         "CollisionProfileName": "StructureDamageableMesh",
         "CollisionResponses": {

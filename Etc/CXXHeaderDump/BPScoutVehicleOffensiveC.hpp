@@ -3,6 +3,6 @@
 
 class ABPScoutVehicleOffensiveC_C : public ABPScoutVehicleBaseC_C
 {
-}; // Size: 0x1348
+}; // Size: 0x1368
 
 #endif

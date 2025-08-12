@@ -80,6 +80,8 @@ function AArtillery:OnRep_GunnerYawAndPitch() end
 ---@field ExplosionDelay float
 ---@field FuelPowerForRotation float
 ---@field FuelPowerForFiring float
+---@field HeatForFiring uint8
+---@field Heat uint8
 local AArtilleryRailVehicle = {}
 
 
@@ -401,6 +403,7 @@ function ABuildSite:OnRep_DefaultResourceRequirements() end
 ---@field FactionVariant EFactionId
 ---@field DescriptionDetails TArray<FTooltipDetailText>
 ---@field ConcreteSettler FConcreteSettler
+---@field SpoolingHandler FSpoolingHandler
 ---@field bIsReservable boolean
 ---@field bUsesImpactsMaterial boolean
 ---@field PackagedMesh UStaticMesh
@@ -826,10 +829,7 @@ local ADestroyedStorageFacility = {}
 
 
 ---@class ADestroyedStructure : AStructure
----@field bIsScorchable boolean
----@field bIsScorched boolean
 local ADestroyedStructure = {}
-
 
 
 ---@class ADestroyedTeamStructure : ARuinableStructure
@@ -916,10 +916,7 @@ function AEffectSpawnerProxy:OnRep_DestroyedSoundCue() end
 
 
 ---@class AEmplacedArtillery : AEmplacedWeapon
----@field RequiredSquadMembers uint8
----@field SquadId int32
 local AEmplacedArtillery = {}
-
 
 
 ---@class AEmplacedStructure : ATeamStructure
@@ -1016,6 +1013,7 @@ local AEngineeringCenterBuildSite = {}
 ---@field Puddles TArray<FPuddleInfo>
 ---@field SavedPuddleRainfall TArray<float>
 ---@field RainfallReceivers TSet<AStructure>
+---@field FoliageCullInstancedMeshComponent UInstancedStaticMeshComponent
 ---@field Replacements TArray<AClientFoliageReplacement>
 ---@field Decals TArray<UDecalComponent>
 ---@field bFirstReplicationOfDevastationHeatmap boolean
@@ -1964,7 +1962,9 @@ local AListeningArea = {}
 ---@field MaxPower float
 ---@field RequiredPowerForFiring float
 ---@field RequiredPowerForRotation float
+---@field HeatForFiring uint8
 ---@field RequiredSquadMembers uint8
+---@field Heat uint8
 ---@field SquadId int32
 ---@field GunnerYawAndPitch FVector2D
 ---@field StashedAmmo int32
@@ -2284,6 +2284,7 @@ local APersistentProxy = {}
 ---@field RightSocket UBuildSocketComponent
 ---@field MaxLiquidAmount float
 ---@field SystemIndex int32
+---@field GroundedPipeLength float
 local APipeline = {}
 
 
@@ -3292,9 +3293,6 @@ function ASimCharacter:MulticastSetStagger(InStagger) end
 function ASimCharacter:MulticastSetNormalizedStamina(InNormalizedStamina) end
 ---@param DamageType EDamageType
 function ASimCharacter:MulticastOnUniformMitigatedDamage(DamageType) end
----@param bIsDriver boolean
----@param Vehicle ASimVehicle
-function ASimCharacter:ClientVehicleSeatSwitched(bIsDriver, Vehicle) end
 ---@param NewTrace FActivityStateDebugTrace
 function ASimCharacter:ClientTraceActivity(NewTrace) end
 ---@param CurrentSequenceNumber uint8
@@ -3349,6 +3347,7 @@ function ASimCharacter:BPCinematicDeath() end
 ---@field DefaultAutoSaveSlot FString
 ---@field DefaultBotClass TSubclassOf<APawn>
 ---@field AssignableSpawnPoints TMap<uint32, AActor>
+---@field CurrentVehicleID uint32
 ---@field OfflineCharacterMap TMap<FString, AOfflineCharacter>
 ---@field OfflineCharacterClass TSubclassOf<AOfflineCharacter>
 ---@field SavedCharacterMap TMap<FString, FSavedCharacter>
@@ -3388,6 +3387,8 @@ function ASimGameMode:HeadlessCommand(Command) end
 ---@field WarPhaseEndTime FDateTime
 ---@field bIsPatchRequired boolean
 ---@field bIsShortWar boolean
+---@field RegionMaintenanceBitMask uint64
+---@field EnabledRegionBitMask uint64
 local ASimGameState = {}
 
 function ASimGameState:OnRep_WorldWeatherState() end
@@ -3436,7 +3437,10 @@ local ASimPlayerCameraManager = {}
 ---@field RailHUDTargetDismountTime float
 ---@field CalloutMarkerGhost ACalloutMarkerGhost
 ---@field LandscapeCullRVTVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
+---@field FoliageCullRVTVolumeClass TSubclassOf<ARuntimeVirtualTextureVolume>
 ---@field LandscapeCullRVTVolume ARuntimeVirtualTextureVolume
+---@field FoliageCullRVTVolume ARuntimeVirtualTextureVolume
+---@field FoliageCullParameterCollectionInstance UMaterialParameterCollectionInstance
 local ASimPlayerController = {}
 
 ---@param TestInt int32
@@ -3664,6 +3668,12 @@ function ASimPlayerController:ServerResetStockpileTargetOverride() end
 ---@param Actor AActor
 function ASimPlayerController:ServerResetPowerGridConnectionState(Actor) end
 function ASimPlayerController:ServerResetInventorySourceOverride() end
+---@param Vehicle ASimVehicle
+---@param PageIndex uint32
+function ASimPlayerController:ServerRequestVehicleLog(Vehicle, PageIndex) end
+---@param Structure AStructure
+---@param PageIndex uint32
+function ASimPlayerController:ServerRequestStructureLog(Structure, PageIndex) end
 ---@param Structure AStructure
 ---@param bIsInitialRequest boolean
 function ASimPlayerController:ServerRequestStructureInfo(Structure, bIsInitialRequest) end
@@ -3691,9 +3701,6 @@ function ASimPlayerController:ServerRequestMapItemDetails(MapId, Index, SerialNu
 function ASimPlayerController:ServerRequestMapIntelligence() end
 ---@param SimVehicle ASimVehicle
 function ASimPlayerController:ServerRequestCachedDriverInfo(SimVehicle) end
----@param Structure AStructure
----@param PageIndex uint32
-function ASimPlayerController:ServerRequestActorLog(Structure, PageIndex) end
 ---@param TargetPlayerState ASimPlayerState
 function ASimPlayerController:ServerRequestActivityLog(TargetPlayerState) end
 ---@param AssemblyStation AAssemblyStation
@@ -3904,7 +3911,8 @@ function ASimPlayerController:ClientUpdateRegionLog(RegionLogPage, MaxAvailableP
 function ASimPlayerController:ClientUpdateCachedDriverInfo(SimVehicle, OnlineID, PlayerName) end
 ---@param LogPage FActorLogPage
 ---@param PageCount uint32
-function ASimPlayerController:ClientUpdateActorLog(LogPage, PageCount) end
+---@param VehicleID int64
+function ASimPlayerController:ClientUpdateActorLog(LogPage, PageCount, VehicleID) end
 ---@param Activity FPlayerActivity
 function ASimPlayerController:ClientUpdateActivityLog(Activity) end
 ---@param UnstuckMessage EUnstuckMessage
@@ -4313,6 +4321,8 @@ function ASimPlayerState:ClientSetIsGodMode(bIsGodMode) end
 ---@field ArmourType EArmourType
 ---@field bCanDriveOverTrenches boolean
 ---@field DepthOffset float
+---@field GlobalVehicleID FGlobalVehicleID
+---@field ActorLog FActorLog
 ---@field MinShipRammingVelocityChangeForDestruction float
 ---@field bIgnoreNonRootComponentsDuringVehicleMovement boolean
 ---@field bCanCarryVehicles boolean
@@ -4388,6 +4398,7 @@ function ASimPlayerState:ClientSetIsGodMode(bIsGodMode) end
 ---@field BoostSpeedModifier float
 ---@field BoostGasUsageModifier float
 ---@field MuzzleInfo TArray<FMuzzleInfo>
+---@field SpoolingHandler FSpoolingHandler
 ---@field MapIconType EMapIconType
 ---@field bCanMoveUnderBridges boolean
 ---@field bUsesTraces boolean
@@ -4657,6 +4668,8 @@ local AStorageFacilityBuildSite = {}
 ---@field MapIntelligenceType EMapIntelligenceType
 ---@field StructureFlags uint8
 ---@field bIgnoreFriendlyFire boolean
+---@field bAllowsShippablePlacement boolean
+---@field ShippablePlacementFilter FName
 ---@field StructureNetRelevancySize EStructureNetRelevancySize
 ---@field bIsStockpilable boolean
 ---@field bIsReserveStockpiled boolean
@@ -4665,6 +4678,8 @@ local AStorageFacilityBuildSite = {}
 ---@field bIgnoresRapidDecay boolean
 ---@field bIsPrototype boolean
 ---@field bIsPowered boolean
+---@field bIsScorchable boolean
+---@field bIsScorched boolean
 ---@field InteractionDistanceOverride float
 ---@field BuilderPlayerOnlineID FString
 ---@field BuilderName FString
@@ -4999,6 +5014,8 @@ local AUniformPickup = {}
 ---@class AVehicleBuildSite : ABuildSite
 ---@field OriginatorVehicleName FName
 ---@field SquadId int32
+---@field GlobalVehicleID FGlobalVehicleID
+---@field VehicleLog FActorLog
 ---@field BuildOffset FVector
 ---@field BuildRotation FRotator
 ---@field VehicleCodeName FName
@@ -6621,6 +6638,7 @@ local FCursorStyle = {}
 ---@class FDamageAttributes
 ---@field WeaponFireFXClass TSubclassOf<AWeaponFireFX>
 ---@field ImpactEffect TSubclassOf<AImpactEffect>
+---@field ExplosionEffect TSubclassOf<AWarExplosionEffect>
 ---@field DamageType TSubclassOf<USimDamageType>
 ---@field ShotSoundCue USoundCue
 ---@field MuzzleFlashPS UParticleSystem
@@ -7354,6 +7372,13 @@ local FGlobalSpawnPoint = {}
 ---@field ID uint32
 ---@field MapId EWorldConquestMapId
 local FGlobalSpawnPointMinimal = {}
+
+
+
+---@class FGlobalVehicleID
+---@field MapId EWorldConquestMapId
+---@field ID int32
+local FGlobalVehicleID = {}
 
 
 
@@ -8382,6 +8407,7 @@ local FMapSnapshotRequest = {}
 ---@field WinConditionStyle FWinConditionStyle
 ---@field MapPostStyle FMapPostStyle
 ---@field TravelMapStyle FTravelMapStyle
+---@field MapMaintenanceStyle FSlateBrush
 ---@field MapIconStyles FMapIconStyle
 local FMapStyle = {}
 
@@ -9929,6 +9955,10 @@ local FSavedRecoveryVehicle = {}
 ---@field bIsReservable boolean
 ---@field TankArmour int32
 ---@field GlobalSpawnPoint FGlobalSpawnPointMinimal
+---@field BuilderPlayerOnlineID FString
+---@field BuilderName FString
+---@field OriginalBuildTime int64
+---@field VehicleLogID FGlobalVehicleID
 local FSavedShippableData = {}
 
 
@@ -10210,6 +10240,7 @@ local FSplineConnectorComponentConfig = {}
 ---@field Mesh UStaticMesh
 ---@field Meshes TArray<UStaticMesh>
 ---@field Decals TArray<FDecalData>
+---@field Sequence EIntervalSequence
 ---@field bReceivesDecals boolean
 ---@field BuildGhostMaterialOverride UMaterialInterface
 ---@field BuildSiteMaterialOverride UMaterialInterface
@@ -10238,15 +10269,17 @@ local FSplineConnectorComponentConfig = {}
 ---@field Interval float
 ---@field IntervalDeltaPerDegree float
 ---@field bEvenlySpace boolean
+---@field bCenter boolean
 ---@field bLinearPlacement boolean
 ---@field bFillRemainder boolean
+---@field bScaleRemainder boolean
+---@field bApplySlopeOffset boolean
+---@field bAlternateY boolean
 ---@field bFixedPitch boolean
 ---@field FixedPitch float
 ---@field StartOffset float
 ---@field EndOffset float
 ---@field MaxSnapToLandscapeOffset float
----@field bApplySlopeOffset boolean
----@field bAlternateY boolean
 ---@field MaxInstances int32
 ---@field RelativeTransform FTransform
 ---@field RandomRotationVariance FRotator
@@ -10257,6 +10290,8 @@ local FSplineConnectorComponentConfig = {}
 ---@field bEndCapReactsToSockets boolean
 ---@field bReactToSurface boolean
 ---@field SurfaceSettings FMeshConfigSurfaceSettings
+---@field RuntimeVirtualTextures TArray<URuntimeVirtualTexture>
+---@field VirtualTextureRenderPassType ERuntimeVirtualTextureMainPassType
 local FSplineConnectorMeshConfig = {}
 
 
@@ -10275,6 +10310,12 @@ local FSplineConnectorMeshConfigTransient = {}
 
 ---@class FSplineConnectorTickFunction : FTickFunction
 local FSplineConnectorTickFunction = {}
+
+
+---@class FSpoolingHandler
+---@field bIsEnabled boolean
+local FSpoolingHandler = {}
+
 
 
 ---@class FSquad
@@ -11712,6 +11753,8 @@ local FWarTimeDiscrepancy = {}
 ---@field UnexplodedOrdnanceChance float
 ---@field FortBaseNetworkDistance int32
 ---@field LRADamage float
+---@field LRAReduceHeatTime float
+---@field RailLRAReduceHeatTime float
 ---@field LRADamageInnerRadius float
 ---@field LRAAccuracyRadiusMultiplier float
 ---@field FSAAccuracyRadiusMultiplier float
@@ -12506,6 +12549,7 @@ local UAnchorUseComponent = {}
 ---@field DirectFireScopeRange float
 ---@field DirectFireMaxDistance float
 ---@field DirectFireDropOffset float
+---@field bDisableRotationForFiringDuration boolean
 local UArtilleryGunnerMountComponent = {}
 
 function UArtilleryGunnerMountComponent:ServerStopInvoke() end
@@ -13073,6 +13117,8 @@ local UEnvironmentDamageType = {}
 ---@field PuddleDecalSortOrder int32
 ---@field FoliageReplacements TArray<FFoliageModificationInfo>
 ---@field MaxTreeRemovalPercentage float
+---@field FoliageCullInstancedStaticMeshClass TSubclassOf<UInstancedStaticMeshComponent>
+---@field FoliageCullMeshZOffset float
 ---@field FoliageRemovalThresholdWeights float
 ---@field SampleExtents float
 ---@field DevastationToContrast UCurveFloat
@@ -14283,8 +14329,6 @@ local UPlayerAnimInstance2 = {}
 
 ---@class UPlayerCameraRigComponent : USceneComponent
 ---@field TargetArmLength float
----@field bEnableCameraLag boolean
----@field MaxDistanceForCameraLerp float
 ---@field AimRadiusToViewRangeCurve UCurveFloat
 ---@field NormalizedAimCurve UCurveVector
 ---@field ViewRangeToMaxArmLengthCurve UCurveFloat

@@ -3,6 +3,6 @@
 
 class ABPScoutVehicleW_C : public ABPScoutVehicleBaseW_C
 {
-}; // Size: 0x1328
+}; // Size: 0x1348
 
 #endif

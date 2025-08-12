@@ -3,6 +3,6 @@
 
 class UBPConstructionUtilityDriverComponent_C : public UBPConstructionDriverComponent_C
 {
-}; // Size: 0x870
+}; // Size: 0x868
 
 #endif

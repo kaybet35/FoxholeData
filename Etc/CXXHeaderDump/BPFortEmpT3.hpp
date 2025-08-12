@@ -3,11 +3,11 @@
 
 class ABPFortEmpT3_C : public AFortEmp
 {
-    class UStaticMeshComponent* Arrow;                                                // 0x08D0 (size: 0x8)
-    class UTemplateComponent* FortCommon;                                             // 0x08D8 (size: 0x8)
-    class UStaticMeshComponent* FloorMesh;                                            // 0x08E0 (size: 0x8)
-    class UStaticMeshComponent* RoofMesh;                                             // 0x08E8 (size: 0x8)
+    class UStaticMeshComponent* Arrow;                                                // 0x08F0 (size: 0x8)
+    class UTemplateComponent* FortCommon;                                             // 0x08F8 (size: 0x8)
+    class UStaticMeshComponent* FloorMesh;                                            // 0x0900 (size: 0x8)
+    class UStaticMeshComponent* RoofMesh;                                             // 0x0908 (size: 0x8)
 
-}; // Size: 0x8F0
+}; // Size: 0x910
 
 #endif

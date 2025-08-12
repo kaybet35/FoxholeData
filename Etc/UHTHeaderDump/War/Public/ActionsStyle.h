@@ -9,7 +9,7 @@ struct WAR_API FActionsStyle {
 public:
 private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    FActionStyle AllStyles[65];
+    FActionStyle AllStyles[66];
     
 public:
     FActionsStyle();

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFoundation02T1_C : ABPFoundationBase_C
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field CenterBorder UStaticMeshComponent
 ---@field FrontBorder UStaticMeshComponent
 ---@field RightBorder UStaticMeshComponent

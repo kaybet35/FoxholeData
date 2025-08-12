@@ -3,11 +3,11 @@
 
 class ATownWLargeG1Destroyed_C : public ATownWLargeGS1Destroyed_C
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0660 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0670 (size: 0x8)
 
     void ReceiveActorBeginOverlap(class AActor* OtherActor);
     void ReceiveActorEndOverlap(class AActor* OtherActor);
     void ExecuteUbergraph_TownWLargeG1Destroyed(int32 EntryPoint);
-}; // Size: 0x668
+}; // Size: 0x678
 
 #endif

@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPEngineRoomT3_C : AEngineRoom
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field FortCommonT2T3ModsMinimal UTemplateComponent
 ---@field FortCommonDefenseMods UTemplateComponent

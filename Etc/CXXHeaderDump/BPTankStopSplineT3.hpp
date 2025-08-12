@@ -3,10 +3,10 @@
 
 class ABPTankStopSplineT3_C : public AConcreteWall
 {
-    class ULocationMultiplexedMeshComponent* LocationMultiplexedMesh;                 // 0x0810 (size: 0x8)
-    class UTemplateComponent* TankStopSplineCommon;                                   // 0x0818 (size: 0x8)
-    class USplineConnectorComponent* SplineConnector;                                 // 0x0820 (size: 0x8)
+    class ULocationMultiplexedMeshComponent* LocationMultiplexedMesh;                 // 0x0830 (size: 0x8)
+    class UTemplateComponent* TankStopSplineCommon;                                   // 0x0838 (size: 0x8)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0840 (size: 0x8)
 
-}; // Size: 0x828
+}; // Size: 0x848
 
 #endif

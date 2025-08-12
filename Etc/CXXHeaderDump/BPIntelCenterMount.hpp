@@ -3,6 +3,6 @@
 
 class UBPIntelCenterMount_C : public UIntelCenterMountComponent
 {
-}; // Size: 0x868
+}; // Size: 0x860
 
 #endif

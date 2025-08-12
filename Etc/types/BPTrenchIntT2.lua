@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchIntT2_C : AFort
----@field TrenchIntDecals UTemplateComponent
+---@field TrenchIntDirtDecals UTemplateComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
 ---@field TrenchIntCommonMods UTemplateComponent
 ---@field WallFrontRightCorner01 UStaticMeshComponent

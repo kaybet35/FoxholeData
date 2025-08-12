@@ -3,6 +3,6 @@
 
 class ABPWeaponRack_C : public AStorageBox
 {
-}; // Size: 0x830
+}; // Size: 0x850
 
 #endif

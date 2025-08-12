@@ -5,7 +5,7 @@
 ---@field ConnectionRules UConnectionRulesComponent
 ---@field FortCommonDestroyedDirtT3 UTemplateComponent
 ---@field LocationMultiplexedMesh ULocationMultiplexedMeshComponent
----@field FortCommon UTemplateComponent
+---@field FortBreachedCommon UTemplateComponent
 ---@field Floor UStaticMeshComponent
 local ABPLRArtilleryDestroyed_C = {}
 

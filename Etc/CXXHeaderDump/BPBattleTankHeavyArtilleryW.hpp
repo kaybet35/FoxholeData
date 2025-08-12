@@ -3,6 +3,6 @@
 
 class ABPBattleTankHeavyArtilleryW_C : public ABPBattleTankHeavyArtilleryBaseW_C
 {
-}; // Size: 0x1410
+}; // Size: 0x1430
 
 #endif

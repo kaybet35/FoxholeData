@@ -15,5 +15,6 @@ enum class ELogChannel : uint8 {
     WarCreate,
     WarChat,
     WarComms,
+    WarVehicles,
 };
 

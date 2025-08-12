@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortCornerBreachCommon_C : ATemplate
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field WaterStencil UBPWaterStencilComponent_C
 ---@field DecalFront UDecalComponent

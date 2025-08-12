@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "RepairBox",
+    "Name": "BPBuildFootprintBoxComponent",
     "Outer": "BPStorageBox_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "BlueprintGeneratedClass'BPBuildFootprintBoxComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.0"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPStorageBox_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.16"
       }
     },
     "SuperStruct": {
@@ -28,12 +28,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPStorageBox_C:RepairBox'",
+        "ObjectName": "ObjectProperty'BPStorageBox_C:BPBuildFootprintBoxComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPStorageBox_C:RepairBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.10"
+      },
+      {
         "ObjectName": "ObjectProperty'BPStorageBox_C:MultiplexedStaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.9"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -52,12 +56,13 @@
     "Type": "BPStorageBox_C",
     "Name": "Default__BPStorageBox_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPStorageBox.BPStorageBox_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "MeshComponent": {
         "ObjectName": "StaticMeshComponent'Default__BPStorageBox_C:Mesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.17"
       },
+      "ProceduralUseVolumeFactor": 0.0,
       "NoBuildPhysicalMaterials": [
         {
           "ObjectName": "PhysicalMaterial'WetSandPhys'",
@@ -85,10 +90,7 @@
         }
       ],
       "bIsBuiltOnFoundation": true,
-      "BuildSiteClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPStorageBoxBuildSite_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBoxBuildSite.1"
-      },
+      "BuildGhostClass": null,
       "Description": {
         "Namespace": "",
         "Key": "3B08756B4852B8ED7C3FD7AC8B91AE8F",
@@ -144,7 +146,7 @@
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPStorageBox_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.18"
       },
       "MinNetUpdateFrequency": 1.0,
       "RootComponent": {
@@ -278,6 +280,25 @@
     }
   },
   {
+    "Type": "BPBuildFootprintBoxComponent_C",
+    "Name": "BPBuildFootprintBoxComponent_GEN_VARIABLE",
+    "Outer": "BPStorageBox_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.BPBuildFootprintBoxComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 90.0,
+        "Y": 43.0,
+        "Z": 40.5
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 44.5
+      }
+    }
+  },
+  {
     "Type": "MultiplexedStaticMeshComponent",
     "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
     "Outer": "BPStorageBox_C",
@@ -324,6 +345,18 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "RepairBox",
+    "Outer": "BPStorageBox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPStorageBox_C",
@@ -343,10 +376,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPStorageBox_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.11"
       },
       "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPBuildFootprintBoxComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPBuildFootprintBoxComponent_C'BPStorageBox_C:BPBuildFootprintBoxComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "33918FD2-44C34CBD-97C644A7-7C5DD846",
+      "InternalVariableName": "BPBuildFootprintBoxComponent"
     }
   },
   {
@@ -362,7 +416,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedStaticMeshComponent'BPStorageBox_C:MultiplexedStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.8"
       },
       "VariableGuid": "D667579F-46309463-6D3D0483-D468D96E",
       "InternalVariableName": "MultiplexedStaticMesh"
@@ -399,26 +453,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.14"
         },
         {
           "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.12"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.14"
         },
         {
           "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_3'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.12"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPStorageBox_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBox.12"
       }
     }
   },

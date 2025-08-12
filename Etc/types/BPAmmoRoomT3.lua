@@ -2,7 +2,7 @@
 
 ---@class ABPAmmoRoomT3_C : AAmmoRoom
 ---@field FortCommonThreeWallsMods UTemplateComponent
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field InstancedStaticMesh UInstancedStaticMeshComponent
 ---@field ItemGroupRender UItemGroupRenderComponent

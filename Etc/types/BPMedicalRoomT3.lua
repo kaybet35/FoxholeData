@@ -3,7 +3,7 @@
 ---@class ABPMedicalRoomT3_C : AHospital
 ---@field BuildSiteLadderBlockVolume UBoxComponent
 ---@field FortCommonThreeWallsMods UTemplateComponent
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent
 ---@field Blanket UStaticMeshComponent
 ---@field MedicalRoomSpawnPoints UTemplateComponent

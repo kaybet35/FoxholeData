@@ -3,9 +3,9 @@
 
 class ABPDestroyedEngineeringCenter_C : public ADestroyedSpecializedFactory
 {
-    class UDecalComponent* Decal;                                                     // 0x0630 (size: 0x8)
-    class UStaticMeshComponent* EngineeringCenter;                                    // 0x0638 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0640 (size: 0x8)
+    class UStaticMeshComponent* EngineeringCenter;                                    // 0x0648 (size: 0x8)
 
-}; // Size: 0x640
+}; // Size: 0x650
 
 #endif

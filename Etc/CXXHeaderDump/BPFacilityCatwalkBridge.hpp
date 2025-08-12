@@ -3,18 +3,18 @@
 
 class ABPFacilityCatwalkBridge_C : public ACatWalk
 {
-    class USplineConnectorComponent* SplineConnector;                                 // 0x0820 (size: 0x8)
-    class UStaticMeshComponent* BackLeftCorner;                                       // 0x0828 (size: 0x8)
-    class UStaticMeshComponent* BackRightCorner;                                      // 0x0830 (size: 0x8)
-    class UStaticMeshComponent* FrontRightCorner;                                     // 0x0838 (size: 0x8)
-    class UStaticMeshComponent* FrontLeftCorner;                                      // 0x0840 (size: 0x8)
-    class UStaticMeshComponent* FrontRailing;                                         // 0x0848 (size: 0x8)
-    class UStaticMeshComponent* BackRailing;                                          // 0x0850 (size: 0x8)
-    class UStaticMeshComponent* FrontSupport;                                         // 0x0858 (size: 0x8)
-    class UStaticMeshComponent* BackSupport;                                          // 0x0860 (size: 0x8)
-    class UBuildSocketComponent* BackSocket;                                          // 0x0868 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0870 (size: 0x8)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0840 (size: 0x8)
+    class UStaticMeshComponent* BackLeftCorner;                                       // 0x0848 (size: 0x8)
+    class UStaticMeshComponent* BackRightCorner;                                      // 0x0850 (size: 0x8)
+    class UStaticMeshComponent* FrontRightCorner;                                     // 0x0858 (size: 0x8)
+    class UStaticMeshComponent* FrontLeftCorner;                                      // 0x0860 (size: 0x8)
+    class UStaticMeshComponent* FrontRailing;                                         // 0x0868 (size: 0x8)
+    class UStaticMeshComponent* BackRailing;                                          // 0x0870 (size: 0x8)
+    class UStaticMeshComponent* FrontSupport;                                         // 0x0878 (size: 0x8)
+    class UStaticMeshComponent* BackSupport;                                          // 0x0880 (size: 0x8)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0888 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0890 (size: 0x8)
 
-}; // Size: 0x878
+}; // Size: 0x898
 
 #endif

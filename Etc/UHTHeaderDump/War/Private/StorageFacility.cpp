@@ -13,6 +13,7 @@ AStorageFacility::AStorageFacility(const FObjectInitializer& ObjectInitializer) 
     this->ArmourType = EArmourType::Tier3Structure;
     this->bIsBuildSiteMapIconVisible = true;
     this->bIgnoreFriendlyFire = true;
+    this->bAllowsShippablePlacement = true;
     this->StructureNetRelevancySize = EStructureNetRelevancySize::Large;
     this->GenericStockpileComponent = CreateDefaultSubobject<UGenericStockpileComponent>(TEXT("GenericStockpileComponent"));
     this->ReserveStockpileComponent = CreateDefaultSubobject<UReserveStockpileComponent>(TEXT("ReserveStockpileComponent"));

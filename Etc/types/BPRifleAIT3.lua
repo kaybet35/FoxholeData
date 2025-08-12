@@ -3,7 +3,7 @@
 ---@class ABPRifleAIT3_C : AFortTurret
 ---@field OccupyComponent UStructureSeatComponent
 ---@field PowerConsumer UPowerConsumerComponent
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field OccupiableTriggerVolume USeatTriggerComponent
 ---@field FortCommonT3Mods UTemplateComponent

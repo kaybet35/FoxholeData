@@ -20,6 +20,7 @@ APipeline::APipeline(const FObjectInitializer& ObjectInitializer) : Super(Object
     this->RightSocket = CreateDefaultSubobject<UBuildSocketComponent>(TEXT("RightSocket"));
     this->MaxLiquidAmount = 0.00f;
     this->SystemIndex = -1;
+    this->GroundedPipeLength = 0.00f;
     this->BackSocket->SetupAttachment(RootComponent);
     this->FrontSocket->SetupAttachment(RootComponent);
     this->LeftSocket->SetupAttachment(RootComponent);

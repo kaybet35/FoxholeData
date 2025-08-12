@@ -56,7 +56,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.17"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortFlameT3_C:FortFlameT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPFortFlameT3_C:FortFlameT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.19"
       },
       {
@@ -203,7 +203,13 @@
       "MaxHealth": 3750,
       "Health": 3750,
       "ScreenToUse": "ESimScreen::FireSuppression",
+      "bAllowsShippablePlacement": true,
+      "ShippablePlacementFilter": "ConstructionEquipment",
       "StructureNetRelevancySize": "EStructureNetRelevancySize::Large",
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
+      },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortFlameT3_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.57"
@@ -492,7 +498,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortFlameT3BreachWalls",
+    "Name": "FortFlameT3BreachedWalls",
     "Outer": "BPFortFlameT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -933,13 +939,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPFortFlameT3_C:FortFlameT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPFortFlameT3_C:FortFlameT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFlameT3.62"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "A377D73E-4E25A115-D87B908F-A79535F3",
-      "InternalVariableName": "FortFlameT3BreachWalls"
+      "InternalVariableName": "FortFlameT3BreachedWalls"
     }
   },
   {
@@ -1180,7 +1186,8 @@
         "Z": -152.0
       },
       "ComponentTags": [
-        "NoConcrete"
+        "NoConcrete",
+        "FloorVisibility"
       ]
     }
   },
@@ -1438,7 +1445,8 @@
       },
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
-        "MultiplexedFloor"
+        "MultiplexedFloor",
+        "FloorVisibility"
       ]
     }
   },
@@ -1623,7 +1631,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortFlameT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortFlameT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPFortFlameT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

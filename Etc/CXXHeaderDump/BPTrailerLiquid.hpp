@@ -3,6 +3,6 @@
 
 class ABPTrailerLiquid_C : public ABPTrailerStockpileBase_C
 {
-}; // Size: 0x12B0
+}; // Size: 0x12D0
 
 #endif

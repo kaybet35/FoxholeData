@@ -11,6 +11,7 @@ AEnvironmentModification::AEnvironmentModification(const FObjectInitializer& Obj
     this->ImpactMap.AddDefaulted(1024);
     this->Seed = 0;
     this->DevastationHeatmap.AddDefaulted(512);
+    this->FoliageCullInstancedMeshComponent = NULL;
     this->bFirstReplicationOfDevastationHeatmap = true;
     this->CreationTime = 0.00f;
 }

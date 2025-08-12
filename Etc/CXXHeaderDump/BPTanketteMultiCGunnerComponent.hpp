@@ -3,6 +3,6 @@
 
 class UBPTanketteMultiCGunnerComponent_C : public UBPHalfTrackMultiWGunnerComponent_C
 {
-}; // Size: 0x928
+}; // Size: 0x920
 
 #endif

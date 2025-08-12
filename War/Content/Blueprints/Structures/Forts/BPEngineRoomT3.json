@@ -1,7 +1,7 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPEngineRoomT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -28,7 +28,7 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPEngineRoomT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPEngineRoomT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPEngineRoomT3.0"
       },
       {
@@ -299,8 +299,13 @@
       "MaxHealth": 3750,
       "Health": 3750,
       "ScreenToUse": "ESimScreen::Facility",
+      "bIgnoreFriendlyFire": false,
+      "bAllowsShippablePlacement": true,
+      "ShippablePlacementFilter": "ConstructionEquipment",
       "ClaimStatus": {
-        "bIsEnabled": true
+        "bIsEnabled": true,
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
       },
       "bIsBlankFortPiece": true,
       "StealthComponent": {
@@ -779,13 +784,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPEngineRoomT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPEngineRoomT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPEngineRoomT3.57"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "6F2FEF31-4DA95CBB-7DBDEABD-02E28A83",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1567,7 +1572,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPEngineRoomT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

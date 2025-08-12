@@ -3,6 +3,6 @@
 
 class UBPTrainCombatCarWGunnerComponent_C : public UBPLightTankGunnerMountComponentW_C
 {
-}; // Size: 0x8E8
+}; // Size: 0x8E0
 
 #endif

@@ -3,10 +3,10 @@
 
 class ABPStaticCrane_C : public AStaticCrane
 {
-    class USeatTriggerComponent* CraneOccupiableComponentTrigger;                     // 0x08E0 (size: 0x8)
-    class UStructureSeatComponent* CraneOccupiableComponent;                          // 0x08E8 (size: 0x8)
-    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08F0 (size: 0x8)
+    class USeatTriggerComponent* CraneOccupiableComponentTrigger;                     // 0x0900 (size: 0x8)
+    class UStructureSeatComponent* CraneOccupiableComponent;                          // 0x0908 (size: 0x8)
+    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x0910 (size: 0x8)
 
-}; // Size: 0x8F8
+}; // Size: 0x918
 
 #endif

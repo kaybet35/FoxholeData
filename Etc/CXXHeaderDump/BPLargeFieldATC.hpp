@@ -3,6 +3,6 @@
 
 class ABPLargeFieldATC_C : public ABPLargeFieldGunBaseC_C
 {
-}; // Size: 0x1308
+}; // Size: 0x1328
 
 #endif

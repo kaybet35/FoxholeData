@@ -8,5 +8,6 @@ FSavedShippableData::FSavedShippableData() {
     this->TeamId = 0;
     this->bIsReservable = false;
     this->TankArmour = 0;
+    this->OriginalBuildTime = 0;
 }
 

@@ -4,6 +4,7 @@
 #include "DamageAttributes.generated.h"
 
 class AImpactEffect;
+class AWarExplosionEffect;
 class AWeaponFireFX;
 class UParticleSystem;
 class USimDamageType;
@@ -18,6 +19,9 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<AImpactEffect> ImpactEffect;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<AWarExplosionEffect> ExplosionEffect;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TSubclassOf<USimDamageType> DamageType;

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortGarrisonStationCommon_C : ATemplate
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field BPLandscapeCullStaticMeshComponent1 UBPLandscapeCullStaticMeshComponent_C
 ---@field LandscapeHole UBoxComponent
 ---@field LeftFortSocket UBPLeftFortSocket_C

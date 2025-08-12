@@ -66,7 +66,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPAmmoRoomT3.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPAmmoRoomT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPAmmoRoomT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPAmmoRoomT3.22"
       },
       {
@@ -230,8 +230,12 @@
       ],
       "MaxHealth": 3750,
       "Health": 3750,
+      "bAllowsShippablePlacement": true,
+      "ShippablePlacementFilter": "ConstructionEquipment",
       "ClaimStatus": {
-        "bIsEnabled": true
+        "bIsEnabled": true,
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
       },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPAmmoRoomT3_C:StealthComponent'",
@@ -527,7 +531,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPAmmoRoomT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -1090,13 +1094,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPAmmoRoomT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPAmmoRoomT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPAmmoRoomT3.66"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "34F17953-44D90876-396B6891-51AAB9A3",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1748,7 +1752,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPAmmoRoomT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

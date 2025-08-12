@@ -3,6 +3,6 @@
 
 class UBPTruckOffensiveGunnerComponent_C : public UBPLMGGunnerBase_C
 {
-}; // Size: 0x930
+}; // Size: 0x928
 
 #endif

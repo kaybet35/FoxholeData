@@ -32,8 +32,8 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:BPTrenchEmpCommonDirtT1T2'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.11"
+        "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:TrenchEmpCommonDirtT1T2'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.14"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:BPStructurePuddleMesh'",
@@ -41,7 +41,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:FloorDecal'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.12"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:TrenchEmplacementT1Destroyed01Right'",
@@ -77,7 +77,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:TrenchEmpCommon'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.13"
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:TrenchT1Destroyed01'",
@@ -85,7 +85,7 @@
       },
       {
         "ObjectName": "ObjectProperty'BPTrenchEmpDestroyedT1_C:Floor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.12"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.11"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -318,18 +318,6 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "BPTrenchEmpCommonDirtT1T2",
-    "Outer": "BPTrenchEmpDestroyedT1_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'TemplateComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
     "Name": "Floor",
     "Outer": "BPTrenchEmpDestroyedT1_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -355,6 +343,18 @@
   {
     "Type": "ObjectProperty",
     "Name": "TrenchEmpCommon",
+    "Outer": "BPTrenchEmpDestroyedT1_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "TrenchEmpCommonDirtT1T2",
     "Outer": "BPTrenchEmpDestroyedT1_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -571,13 +571,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPTrenchEmpDestroyedT1_C:BPTrenchEmpCommonDirtT1T2_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.53"
+        "ObjectName": "TemplateComponent'BPTrenchEmpDestroyedT1_C:TrenchEmpCommonDirtT1T2_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.54"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "38EEBD82-40883B8E-EB470485-7DEEBB6F",
-      "InternalVariableName": "BPTrenchEmpCommonDirtT1T2"
+      "InternalVariableName": "TrenchEmpCommonDirtT1T2"
     }
   },
   {
@@ -641,7 +641,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPTrenchEmpDestroyedT1_C:TrenchEmpCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.54"
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpDestroyedT1.53"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -1293,19 +1293,6 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "BPTrenchEmpCommonDirtT1T2_GEN_VARIABLE",
-    "Outer": "BPTrenchEmpDestroyedT1_C",
-    "Class": "UScriptClass'TemplateComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPTrenchEmpCommonDirtT1T2_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpCommonDirtT1T2.1"
-      }
-    }
-  },
-  {
-    "Type": "TemplateComponent",
     "Name": "TrenchEmpCommon_GEN_VARIABLE",
     "Outer": "BPTrenchEmpDestroyedT1_C",
     "Class": "UScriptClass'TemplateComponent'",
@@ -1314,6 +1301,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPTrenchEmpCommon_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpCommon.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "TrenchEmpCommonDirtT1T2_GEN_VARIABLE",
+    "Outer": "BPTrenchEmpDestroyedT1_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPTrenchEmpCommonDirtT1T2_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Trenches/BPTrenchEmpCommonDirtT1T2.1"
       }
     }
   },

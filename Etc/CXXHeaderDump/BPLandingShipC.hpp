@@ -3,9 +3,9 @@
 
 class ABPLandingShipC_C : public ABPLandingShipBaseC_C
 {
-    class USpawnPointComponent* SpawnPoint;                                           // 0x1550 (size: 0x8)
-    class UBPWaterStencilComponent_C* BPWaterStencilComponent;                        // 0x1558 (size: 0x8)
+    class USpawnPointComponent* SpawnPoint;                                           // 0x15B0 (size: 0x8)
+    class UBPWaterStencilComponent_C* BPWaterStencilComponent;                        // 0x15B8 (size: 0x8)
 
-}; // Size: 0x1560
+}; // Size: 0x15C0
 
 #endif

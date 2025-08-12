@@ -1,0 +1,152 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "FoundationCornerCullPlane",
+    "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "BlockAll",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Damage",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BuildSurface",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "333984D647278B4CFD1047A87F36A36F"
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_2",
+    "Outer": "FoundationCornerCullPlane",
+    "Class": "UScriptClass'NavCollision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "CookedFormatData": {
+      "NavCollision_X": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 21,
+        "SizeOnDisk": 21,
+        "OffsetInFile": "0x19EA"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "FoundationCornerCullPlane",
+    "Class": "UScriptClass'StaticMesh'",
+    "Flags": "RF_Public | RF_Standalone | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'WorldGridMaterial'",
+            "ObjectPath": "Engine/Content/EngineMaterials/WorldGridMaterial.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 636.5106,
+            "LocalUVDensities[1]": 0.0,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 636.5106,
+      "LightMapResolution": 64,
+      "ExtendedBounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": -3.0517578E-05,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 325.00006,
+          "Y": 325.00003,
+          "Z": 0.0
+        },
+        "SphereRadius": 459.61942
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'FoundationCornerCullPlane:BodySetup_0'",
+      "ObjectPath": "War/Content/Blueprints/Culling/FoundationCornerCullPlane.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'FoundationCornerCullPlane:NavCollision_2'",
+      "ObjectPath": "War/Content/Blueprints/Culling/FoundationCornerCullPlane.1"
+    },
+    "LightingGuid": "9C0C2355-400DC372-C37AC789-C0C0C232",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 3,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 4,
+              "bEnableCollision": false,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 5
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 1,
+            "NumVertices": 5,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": -3.0517578E-05,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 325.00006,
+          "Y": 325.00003,
+          "Z": 0.0
+        },
+        "SphereRadius": 459.61942
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

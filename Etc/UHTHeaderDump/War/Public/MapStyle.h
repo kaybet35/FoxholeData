@@ -111,6 +111,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     FTravelMapStyle TravelMapStyle;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSlateBrush MapMaintenanceStyle;
+    
 private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     FMapIconStyle MapIconStyles[88];

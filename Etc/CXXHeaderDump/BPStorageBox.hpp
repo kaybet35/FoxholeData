@@ -3,9 +3,10 @@
 
 class ABPStorageBox_C : public AStorageBox
 {
-    class UBoxComponent* RepairBox;                                                   // 0x0830 (size: 0x8)
-    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0838 (size: 0x8)
+    class UBPBuildFootprintBoxComponent_C* BPBuildFootprintBoxComponent;              // 0x0850 (size: 0x8)
+    class UBoxComponent* RepairBox;                                                   // 0x0858 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0860 (size: 0x8)
 
-}; // Size: 0x840
+}; // Size: 0x868
 
 #endif

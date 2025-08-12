@@ -32,8 +32,8 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPObservationBunkerT3Destroyed_C:corners'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.9"
+        "ObjectName": "ObjectProperty'BPObservationBunkerT3Destroyed_C:FortCommonAIT3Destroyed'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.11"
       },
       {
         "ObjectName": "ObjectProperty'BPObservationBunkerT3Destroyed_C:insidefloor'",
@@ -45,11 +45,11 @@
       },
       {
         "ObjectName": "ObjectProperty'BPObservationBunkerT3Destroyed_C:FortCommon'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.10"
       },
       {
         "ObjectName": "ObjectProperty'BPObservationBunkerT3Destroyed_C:Floor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.9"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -242,18 +242,6 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "corners",
-    "Outer": "BPObservationBunkerT3Destroyed_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'TemplateComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
     "Name": "Floor",
     "Outer": "BPObservationBunkerT3Destroyed_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -267,6 +255,18 @@
   {
     "Type": "ObjectProperty",
     "Name": "FortCommon",
+    "Outer": "BPObservationBunkerT3Destroyed_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonAIT3Destroyed",
     "Outer": "BPObservationBunkerT3Destroyed_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -339,7 +339,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPObservationBunkerT3Destroyed_C:FortCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.26"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -380,13 +380,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPObservationBunkerT3Destroyed_C:corners_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.26"
+        "ObjectName": "TemplateComponent'BPObservationBunkerT3Destroyed_C:FortCommonAIT3Destroyed_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPObservationBunkerT3Destroyed.27"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "43936DB5-42BC84E5-327C538F-49AD1FA2",
-      "InternalVariableName": "corners"
+      "InternalVariableName": "FortCommonAIT3Destroyed"
     }
   },
   {
@@ -563,7 +563,8 @@
       },
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
-        "MultiplexedFloor"
+        "MultiplexedFloor",
+        "ShowWeatherFX"
       ]
     }
   },
@@ -649,19 +650,6 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "corners_GEN_VARIABLE",
-    "Outer": "BPObservationBunkerT3Destroyed_C",
-    "Class": "UScriptClass'TemplateComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonAIT3Destroyed_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonAIT3Destroyed.1"
-      }
-    }
-  },
-  {
-    "Type": "TemplateComponent",
     "Name": "FortCommon_GEN_VARIABLE",
     "Outer": "BPObservationBunkerT3Destroyed_C",
     "Class": "UScriptClass'TemplateComponent'",
@@ -670,6 +658,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortCommon_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommon.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonAIT3Destroyed_GEN_VARIABLE",
+    "Outer": "BPObservationBunkerT3Destroyed_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonAIT3Destroyed_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonAIT3Destroyed.1"
       }
     }
   },

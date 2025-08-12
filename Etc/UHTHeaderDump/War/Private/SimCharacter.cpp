@@ -404,9 +404,6 @@ void ASimCharacter::MulticastSetNormalizedStamina_Implementation(const float InN
 void ASimCharacter::MulticastOnUniformMitigatedDamage_Implementation(EDamageType DamageType) {
 }
 
-void ASimCharacter::ClientVehicleSeatSwitched_Implementation(bool bIsDriver, ASimVehicle* Vehicle) {
-}
-
 void ASimCharacter::ClientTraceActivity_Implementation(FActivityStateDebugTrace NewTrace) {
 }
 

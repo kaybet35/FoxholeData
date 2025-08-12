@@ -31,7 +31,7 @@
 ---@field SpotLightRight USpotLightComponent
 ---@field LightLeft UStaticMeshComponent
 ---@field SpotLightLeft USpotLightComponent
----@field idle UAudioComponent
+---@field Idle UAudioComponent
 ---@field Camera UCameraComponent
 local ABPGunboatC_C = {}
 

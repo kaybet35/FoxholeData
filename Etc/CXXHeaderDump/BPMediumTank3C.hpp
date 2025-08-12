@@ -3,6 +3,6 @@
 
 class ABPMediumTank3C_C : public ABPMediumTank3CBase_C
 {
-}; // Size: 0x1438
+}; // Size: 0x1458
 
 #endif

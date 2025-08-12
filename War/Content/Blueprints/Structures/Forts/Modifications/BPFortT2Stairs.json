@@ -1,13 +1,13 @@
 [
   {
-    "Type": "ObjectProperty",
-    "Name": "Roof",
+    "Type": "StructProperty",
+    "Name": "UberGraphFrame",
     "Outer": "BPFortT2Stairs_C",
-    "Class": "UScriptClass'ObjectProperty'",
+    "Class": "UScriptClass'StructProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'StaticMeshComponent'",
+    "PropertyFlags": "Transient | DuplicateTransient",
+    "Struct": {
+      "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -19,7 +19,15 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPFortT2Stairs_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.11"
+      },
+      "UberGraphFramePointerProperty": {
+        "ObjectName": "StructProperty'BPFortT2Stairs_C:UberGraphFrame'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.0"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPFortT2Stairs_C:ExecuteUbergraph_BPFortT2Stairs'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.4"
       }
     },
     "SuperStruct": {
@@ -28,14 +36,36 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPFortT2Stairs_C:Roof'",
+        "ObjectName": "StructProperty'BPFortT2Stairs_C:UberGraphFrame'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.0"
       },
       {
+        "ObjectName": "Function'BPFortT2Stairs_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.5"
+      },
+      {
+        "ObjectName": "Function'BPFortT2Stairs_C:ExecuteUbergraph_BPFortT2Stairs'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.4"
+      },
+      {
+        "ObjectName": "ObjectProperty'BPFortT2Stairs_C:Roof'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.7"
+      },
+      {
         "ObjectName": "ObjectProperty'BPFortT2Stairs_C:DefaultSceneRoot'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.3"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.6"
       }
     ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPFortT2Stairs": {
+        "ObjectName": "Function'BPFortT2Stairs_C:ExecuteUbergraph_BPFortT2Stairs'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.4"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BPFortT2Stairs_C:ReceiveBeginPlay'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.5"
+      }
+    },
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
     "ClassWithin": {
       "ObjectName": "Class'Object'",
@@ -52,7 +82,44 @@
     "Type": "BPFortT2Stairs_C",
     "Name": "Default__BPFortT2Stairs_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.BPFortT2Stairs_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "IntProperty",
+    "Name": "EntryPoint",
+    "Outer": "ExecuteUbergraph_BPFortT2Stairs",
+    "Class": "UScriptClass'IntProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+  },
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPFortT2Stairs",
+    "Outer": "BPFortT2Stairs_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "Children": [
+      {
+        "ObjectName": "IntProperty'BPFortT2Stairs_C:ExecuteUbergraph_BPFortT2Stairs.EntryPoint'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.3"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BPFortT2Stairs_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
   },
   {
     "Type": "ObjectProperty",
@@ -63,6 +130,18 @@
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
       "ObjectName": "Class'SceneComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "Roof",
+    "Outer": "BPFortT2Stairs_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'StaticMeshComponent'",
       "ObjectPath": "/Script/Engine"
     }
   },
@@ -86,12 +165,12 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPFortT2Stairs_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.4"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.8"
       },
       "ChildNodes": [
         {
           "ObjectName": "SCS_Node'BPFortT2Stairs_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.6"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.10"
         }
       ],
       "VariableGuid": "FC738D33-452DECA9-CA99D09A-1EB080F8",
@@ -111,7 +190,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "StaticMeshComponent'BPFortT2Stairs_C:Roof_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.12"
       },
       "VariableGuid": "799296F8-4D5EBF8C-0D36588C-FD2FBC1C",
       "InternalVariableName": "Roof"
@@ -127,22 +206,22 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPFortT2Stairs_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.5"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.9"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPFortT2Stairs_C:SimpleConstructionScript_0.SCS_Node_0'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.5"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.9"
         },
         {
           "ObjectName": "SCS_Node'BPFortT2Stairs_C:SimpleConstructionScript_0.SCS_Node_1'",
-          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.6"
+          "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.10"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPFortT2Stairs_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.5"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/Modifications/BPFortT2Stairs.9"
       }
     }
   },
@@ -186,7 +265,10 @@
         "Pitch": 0.0,
         "Yaw": -90.0,
         "Roll": 0.0
-      }
+      },
+      "ComponentTags": [
+        "ShowWeatherFX"
+      ]
     }
   }
 ]

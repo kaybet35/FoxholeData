@@ -13,6 +13,7 @@
 #include "GunnerSupport.h"
 #include "PathSocket.h"
 #include "ShippableInfo.h"
+#include "SpoolingHandler.h"
 #include "Structure.h"
 #include "Templates/SubclassOf.h"
 #include "TooltipDetailText.h"
@@ -236,6 +237,9 @@ protected:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
     FConcreteSettler ConcreteSettler;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    FSpoolingHandler SpoolingHandler;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Replicated, SaveGame, meta=(AllowPrivateAccess=true))
     bool bIsReservable;

@@ -3,6 +3,6 @@
 
 class ABPFoundation01T3_C : public ABPFoundation01T1_C
 {
-}; // Size: 0x888
+}; // Size: 0x8B0
 
 #endif

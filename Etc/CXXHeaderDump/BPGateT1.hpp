@@ -3,23 +3,23 @@
 
 class ABPGateT1_C : public AGate
 {
-    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0870 (size: 0x8)
-    class UBPBuildFootprintBoxComponent_C* RightLowerBuildFootprint;                  // 0x0878 (size: 0x8)
-    class UBPBuildFootprintBoxComponent_C* LeftLowerBuildFootprint;                   // 0x0880 (size: 0x8)
-    class UBPBuildFootprintBoxComponent_C* LowerBuildFootprint;                       // 0x0888 (size: 0x8)
-    class UBPBuildFootprintBoxComponent_C* LandscapeBuildFootprint;                   // 0x0890 (size: 0x8)
-    class UBoxComponent* DamageBoxRight;                                              // 0x0898 (size: 0x8)
-    class UBoxComponent* DamageBoxLeft;                                               // 0x08A0 (size: 0x8)
-    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08A8 (size: 0x8)
-    class UStaticMeshComponent* PillarRight;                                          // 0x08B0 (size: 0x8)
-    class UStaticMeshComponent* PillarLeft;                                           // 0x08B8 (size: 0x8)
-    class UBuildSocketComponent* LeftSocket;                                          // 0x08C0 (size: 0x8)
-    class UBuildSocketComponent* RightSocket;                                         // 0x08C8 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x08D0 (size: 0x8)
-    class UStaticMeshComponent* FlagMesh;                                             // 0x08D8 (size: 0x8)
+    FPointerToUberGraphFrame UberGraphFrame;                                          // 0x0890 (size: 0x8)
+    class UBPBuildFootprintBoxComponent_C* RightLowerBuildFootprint;                  // 0x0898 (size: 0x8)
+    class UBPBuildFootprintBoxComponent_C* LeftLowerBuildFootprint;                   // 0x08A0 (size: 0x8)
+    class UBPBuildFootprintBoxComponent_C* LowerBuildFootprint;                       // 0x08A8 (size: 0x8)
+    class UBPBuildFootprintBoxComponent_C* LandscapeBuildFootprint;                   // 0x08B0 (size: 0x8)
+    class UBoxComponent* DamageBoxRight;                                              // 0x08B8 (size: 0x8)
+    class UBoxComponent* DamageBoxLeft;                                               // 0x08C0 (size: 0x8)
+    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08C8 (size: 0x8)
+    class UStaticMeshComponent* PillarRight;                                          // 0x08D0 (size: 0x8)
+    class UStaticMeshComponent* PillarLeft;                                           // 0x08D8 (size: 0x8)
+    class UBuildSocketComponent* LeftSocket;                                          // 0x08E0 (size: 0x8)
+    class UBuildSocketComponent* RightSocket;                                         // 0x08E8 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x08F0 (size: 0x8)
+    class UStaticMeshComponent* FlagMesh;                                             // 0x08F8 (size: 0x8)
 
     void BPSetTeamVisuals(const int32 VisualTeamId);
     void ExecuteUbergraph_BPGateT1(int32 EntryPoint);
-}; // Size: 0x8E0
+}; // Size: 0x900
 
 #endif

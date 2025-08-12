@@ -95,6 +95,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Facilities/BPFacilityPipeOverhead.10"
       },
       "MaxLiquidAmount": 100.0,
+      "GroundedPipeLength": 220.0,
       "Tier": "EFortTier::T1",
       "ProceduralUseVolumeFactor": 0.0,
       "bIsBuiltOnLandscape": false,
@@ -951,6 +952,7 @@
             }
           ],
           "Decals": [],
+          "Sequence": "EIntervalSequence::Random",
           "bReceivesDecals": false,
           "BuildGhostMaterialOverride": null,
           "BuildSiteMaterialOverride": null,
@@ -979,7 +981,7 @@
           "SplineBoundaryMin": 0.0,
           "SplineBoundaryMax": 0.0,
           "MinSplineLength": 0.0,
-          "bExtendSplineToMinLength": false,
+          "bExtendSplineToMinLength": true,
           "MinSplineLengthForCollision": 0.0,
           "SplineMaterialScaling": {
             "X": 0.0,
@@ -988,15 +990,17 @@
           "Interval": 270.0,
           "IntervalDeltaPerDegree": 0.0,
           "bEvenlySpace": false,
+          "bCenter": false,
           "bLinearPlacement": false,
           "bFillRemainder": true,
+          "bScaleRemainder": false,
+          "bApplySlopeOffset": false,
+          "bAlternateY": false,
           "bFixedPitch": false,
           "FixedPitch": 0.0,
           "StartOffset": 220.0,
           "EndOffset": 220.0,
           "MaxSnapToLandscapeOffset": 0.0,
-          "bApplySlopeOffset": false,
-          "bAlternateY": false,
           "MaxInstances": 0,
           "RelativeTransform": {
             "Rotation": {
@@ -1041,7 +1045,9 @@
             "SurfaceDeltaUpperBound": 0.0,
             "bRequireBothSidesWithinBounds": false,
             "PhysMatBlockList": []
-          }
+          },
+          "RuntimeVirtualTextures": [],
+          "VirtualTextureRenderPassType": "ERuntimeVirtualTextureMainPassType::Exclusive"
         }
       ],
       "ComponentConfigs": [

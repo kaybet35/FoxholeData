@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPFortFlameCommon_C : ATemplate
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field BPLandscapeCullStaticMeshComponent UBPLandscapeCullStaticMeshComponent_C
 ---@field BackFortSocket UBPBackFortSocket_C
 ---@field DecalFront UDecalComponent

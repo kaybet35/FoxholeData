@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPFortT3_C : AFort
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field FortCommonT3Mods UTemplateComponent
 ---@field FortCommonT2T3Mods UTemplateComponent
 ---@field FortCommonDirtT3 UTemplateComponent

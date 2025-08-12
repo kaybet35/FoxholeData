@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPTrenchEmpCommon_C : ATemplate
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field BackCull UBPLandscapeCullStaticMeshComponent_C
 ---@field LeftCull UBPLandscapeCullStaticMeshComponent_C
 ---@field RightCull UBPLandscapeCullStaticMeshComponent_C

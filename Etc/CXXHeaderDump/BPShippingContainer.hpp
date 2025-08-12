@@ -3,8 +3,8 @@
 
 class ABPShippingContainer_C : public AShippingContainer
 {
-    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0830 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0850 (size: 0x8)
 
-}; // Size: 0x838
+}; // Size: 0x858
 
 #endif

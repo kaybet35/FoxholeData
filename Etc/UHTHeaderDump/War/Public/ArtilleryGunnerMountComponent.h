@@ -70,6 +70,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float DirectFireDropOffset;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    bool bDisableRotationForFiringDuration;
+    
 public:
     UArtilleryGunnerMountComponent(const FObjectInitializer& ObjectInitializer);
 

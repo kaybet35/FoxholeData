@@ -8,6 +8,7 @@
 class AClientFoliageReplacement;
 class AStructure;
 class UDecalComponent;
+class UInstancedStaticMeshComponent;
 
 UCLASS(Blueprintable)
 class WAR_API AEnvironmentModification : public AActor, public IPersistentActor {
@@ -38,6 +39,9 @@ public:
     TSet<AStructure*> RainfallReceivers;
     
 private:
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    UInstancedStaticMeshComponent* FoliageCullInstancedMeshComponent;
+    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<AClientFoliageReplacement*> Replacements;
     

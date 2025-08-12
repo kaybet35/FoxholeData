@@ -8,7 +8,7 @@
 ---@field InputDecal0 UDecalComponent
 ---@field PipeOutput0 UBPStructurePipelineOutput_C
 ---@field FoundationDecal UDecalComponent
----@field BPFuelLightTemplate UTemplateComponent
+---@field FuelLightTemplate UTemplateComponent
 ---@field PipeInput0 UBPStructurePipelineInput_C
 ---@field MainMesh UStaticMeshComponent
 local ABPFacilityTransferLiquid_C = {}

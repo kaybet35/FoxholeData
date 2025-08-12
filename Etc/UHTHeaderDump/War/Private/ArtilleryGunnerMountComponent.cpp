@@ -23,6 +23,7 @@ UArtilleryGunnerMountComponent::UArtilleryGunnerMountComponent(const FObjectInit
     this->DirectFireScopeRange = 4000.00f;
     this->DirectFireMaxDistance = 4000.00f;
     this->DirectFireDropOffset = 500.00f;
+    this->bDisableRotationForFiringDuration = false;
 }
 
 void UArtilleryGunnerMountComponent::ServerStopInvoke_Implementation() {

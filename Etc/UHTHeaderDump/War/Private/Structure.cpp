@@ -40,6 +40,7 @@ AStructure::AStructure(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->MapIntelligenceType = EMapIntelligenceType::None;
     this->StructureFlags = 0;
     this->bIgnoreFriendlyFire = false;
+    this->bAllowsShippablePlacement = false;
     this->StructureNetRelevancySize = EStructureNetRelevancySize::Medium;
     this->bIsStockpilable = false;
     this->bIsReserveStockpiled = false;
@@ -48,6 +49,8 @@ AStructure::AStructure(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->bIgnoresRapidDecay = false;
     this->bIsPrototype = false;
     this->bIsPowered = false;
+    this->bIsScorchable = false;
+    this->bIsScorched = false;
     this->InteractionDistanceOverride = 0.00f;
     this->BuildStepProgress = 0;
     this->bHasMeshVisibilityComponent = false;
@@ -118,6 +121,7 @@ void AStructure::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifeti
     DOREPLIFETIME(AStructure, DynamicTier);
     DOREPLIFETIME(AStructure, bIsPrototype);
     DOREPLIFETIME(AStructure, bIsPowered);
+    DOREPLIFETIME(AStructure, bIsScorched);
     DOREPLIFETIME(AStructure, BuilderPlayerOnlineID);
     DOREPLIFETIME(AStructure, BuilderName);
     DOREPLIFETIME(AStructure, BuildStepProgress);

@@ -3,6 +3,6 @@
 
 class UBPSafetyBallastMountComponent_C : public UBallastMountComponent
 {
-}; // Size: 0x880
+}; // Size: 0x878
 
 #endif

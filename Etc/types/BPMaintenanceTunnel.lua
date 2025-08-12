@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPMaintenanceTunnel_C : AMaintenanceTunnel
+---@field BPFoliageCullStaticMeshComponent UBPFoliageCullStaticMeshComponent_C
 ---@field BPBuildFootprintBoxComponent1 UBPBuildFootprintBoxComponent_C
 ---@field BPBuildFootprintBoxComponent UBPBuildFootprintBoxComponent_C
 ---@field LandscapeCheck3 UBuildSocketComponent

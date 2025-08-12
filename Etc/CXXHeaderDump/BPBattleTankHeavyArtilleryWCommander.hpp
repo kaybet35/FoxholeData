@@ -3,6 +3,6 @@
 
 class UBPBattleTankHeavyArtilleryWCommander_C : public UMountComponent
 {
-}; // Size: 0x868
+}; // Size: 0x860
 
 #endif

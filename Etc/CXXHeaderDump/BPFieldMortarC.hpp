@@ -3,6 +3,6 @@
 
 class ABPFieldMortarC_C : public ABPFieldMortarBase_C
 {
-}; // Size: 0x1360
+}; // Size: 0x1380
 
 #endif

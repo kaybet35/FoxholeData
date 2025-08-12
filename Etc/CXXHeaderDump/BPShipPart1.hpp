@@ -3,8 +3,8 @@
 
 class ABPShipPart1_C : public ABPShipPartBase_C
 {
-    class UMultiplexedStaticMeshComponent* MultiplexedMainMesh;                       // 0x0828 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedMainMesh;                       // 0x0848 (size: 0x8)
 
-}; // Size: 0x830
+}; // Size: 0x850
 
 #endif

@@ -32,8 +32,8 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPMGAIT3Destroyed_C:Corners'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.9"
+        "ObjectName": "ObjectProperty'BPMGAIT3Destroyed_C:FortCommonAIT3Destroyed'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.11"
       },
       {
         "ObjectName": "ObjectProperty'BPMGAIT3Destroyed_C:insidefloor'",
@@ -45,11 +45,11 @@
       },
       {
         "ObjectName": "ObjectProperty'BPMGAIT3Destroyed_C:FortCommon'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.11"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.10"
       },
       {
         "ObjectName": "ObjectProperty'BPMGAIT3Destroyed_C:Floor'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.9"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -120,8 +120,8 @@
         "ObjectName": "ModularMountsComponent'Default__BPMGAIT3Destroyed_C:ModularMountsComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.8"
       },
-      "MaxHealth": 3250,
-      "Health": 3250,
+      "MaxHealth": 4050,
+      "Health": 4050,
       "UpgradeStructureCodeName": "MGAIT3",
       "bIsTrackedClimbable": false,
       "ClaimStatus": {
@@ -243,18 +243,6 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "Corners",
-    "Outer": "BPMGAIT3Destroyed_C",
-    "Class": "UScriptClass'ObjectProperty'",
-    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
-    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
-    "PropertyClass": {
-      "ObjectName": "Class'TemplateComponent'",
-      "ObjectPath": "/Script/War"
-    }
-  },
-  {
-    "Type": "ObjectProperty",
     "Name": "Floor",
     "Outer": "BPMGAIT3Destroyed_C",
     "Class": "UScriptClass'ObjectProperty'",
@@ -268,6 +256,18 @@
   {
     "Type": "ObjectProperty",
     "Name": "FortCommon",
+    "Outer": "BPMGAIT3Destroyed_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'TemplateComponent'",
+      "ObjectPath": "/Script/War"
+    }
+  },
+  {
+    "Type": "ObjectProperty",
+    "Name": "FortCommonAIT3Destroyed",
     "Outer": "BPMGAIT3Destroyed_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -340,7 +340,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "TemplateComponent'BPMGAIT3Destroyed_C:FortCommon_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.27"
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.26"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
@@ -442,13 +442,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPMGAIT3Destroyed_C:Corners_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.26"
+        "ObjectName": "TemplateComponent'BPMGAIT3Destroyed_C:FortCommonAIT3Destroyed_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPMGAIT3Destroyed.27"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "D7BB001E-40726381-BFEFD68C-120F999D",
-      "InternalVariableName": "Corners"
+      "InternalVariableName": "FortCommonAIT3Destroyed"
     }
   },
   {
@@ -564,7 +564,8 @@
       },
       "Mobility": "EComponentMobility::Stationary",
       "ComponentTags": [
-        "MultiplexedFloor"
+        "MultiplexedFloor",
+        "ShowWeatherFX"
       ]
     }
   },
@@ -650,19 +651,6 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "Corners_GEN_VARIABLE",
-    "Outer": "BPMGAIT3Destroyed_C",
-    "Class": "UScriptClass'TemplateComponent'",
-    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
-    "Properties": {
-      "TemplateActor": {
-        "ObjectName": "BlueprintGeneratedClass'BPFortCommonAIT3Destroyed_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonAIT3Destroyed.1"
-      }
-    }
-  },
-  {
-    "Type": "TemplateComponent",
     "Name": "FortCommon_GEN_VARIABLE",
     "Outer": "BPMGAIT3Destroyed_C",
     "Class": "UScriptClass'TemplateComponent'",
@@ -671,6 +659,19 @@
       "TemplateActor": {
         "ObjectName": "BlueprintGeneratedClass'BPFortCommon_C'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommon.1"
+      }
+    }
+  },
+  {
+    "Type": "TemplateComponent",
+    "Name": "FortCommonAIT3Destroyed_GEN_VARIABLE",
+    "Outer": "BPMGAIT3Destroyed_C",
+    "Class": "UScriptClass'TemplateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TemplateActor": {
+        "ObjectName": "BlueprintGeneratedClass'BPFortCommonAIT3Destroyed_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortCommonAIT3Destroyed.1"
       }
     }
   },

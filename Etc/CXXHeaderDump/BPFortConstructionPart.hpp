@@ -3,8 +3,8 @@
 
 class ABPFortConstructionPart_C : public ABPFortPartBase_C
 {
-    class UStaticMeshComponent* FortStructurePart;                                    // 0x0830 (size: 0x8)
+    class UStaticMeshComponent* FortStructurePart;                                    // 0x0850 (size: 0x8)
 
-}; // Size: 0x838
+}; // Size: 0x858
 
 #endif

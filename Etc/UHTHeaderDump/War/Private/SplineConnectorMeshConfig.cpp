@@ -2,6 +2,7 @@
 
 FSplineConnectorMeshConfig::FSplineConnectorMeshConfig() {
     this->Mesh = NULL;
+    this->Sequence = EIntervalSequence::Random;
     this->bReceivesDecals = false;
     this->BuildGhostMaterialOverride = NULL;
     this->BuildSiteMaterialOverride = NULL;
@@ -24,20 +25,23 @@ FSplineConnectorMeshConfig::FSplineConnectorMeshConfig() {
     this->Interval = 0.00f;
     this->IntervalDeltaPerDegree = 0.00f;
     this->bEvenlySpace = false;
+    this->bCenter = false;
     this->bLinearPlacement = false;
     this->bFillRemainder = false;
+    this->bScaleRemainder = false;
+    this->bApplySlopeOffset = false;
+    this->bAlternateY = false;
     this->bFixedPitch = false;
     this->FixedPitch = 0.00f;
     this->StartOffset = 0.00f;
     this->EndOffset = 0.00f;
     this->MaxSnapToLandscapeOffset = 0.00f;
-    this->bApplySlopeOffset = false;
-    this->bAlternateY = false;
     this->MaxInstances = 0;
     this->bDisplayOnInvalidPath = false;
     this->CopyPlacementRangeFrom = 0;
     this->bIsEndCap = false;
     this->bEndCapReactsToSockets = false;
     this->bReactToSurface = false;
+    this->VirtualTextureRenderPassType = ERuntimeVirtualTextureMainPassType::Never;
 }
 

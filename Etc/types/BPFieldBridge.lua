@@ -2,8 +2,8 @@
 
 ---@class ABPFieldBridge_C : AFieldBridge
 ---@field UberGraphFrame FPointerToUberGraphFrame
----@field RampFrontBuildFootprint UBoxComponent
 ---@field RampBackBuildFootprint UBoxComponent
+---@field RampFrontBuildFootprint UBoxComponent
 ---@field PillarFront UStaticMeshComponent
 ---@field PillarBack UStaticMeshComponent
 ---@field SandbagTarget USceneComponent

@@ -3,9 +3,9 @@
 
 class ABPScoutVehicleOffensiveW_C : public ABPScoutVehicleBaseW_C
 {
-    class USeatTriggerComponent* BackTrigger;                                         // 0x1328 (size: 0x8)
-    class USeatExitComponent* BackExit;                                               // 0x1330 (size: 0x8)
+    class USeatTriggerComponent* BackTrigger;                                         // 0x1348 (size: 0x8)
+    class USeatExitComponent* BackExit;                                               // 0x1350 (size: 0x8)
 
-}; // Size: 0x1338
+}; // Size: 0x1358
 
 #endif

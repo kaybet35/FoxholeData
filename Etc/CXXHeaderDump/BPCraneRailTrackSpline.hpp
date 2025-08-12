@@ -3,6 +3,6 @@
 
 class ABPCraneRailTrackSpline_C : public ACraneRailwayTrack
 {
-}; // Size: 0x8D0
+}; // Size: 0x8F0
 
 #endif

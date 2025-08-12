@@ -3,6 +3,6 @@
 
 class ABPInfantryMineSpline_C : public ABPMineSpline_C
 {
-}; // Size: 0x8D0
+}; // Size: 0x8F0
 
 #endif

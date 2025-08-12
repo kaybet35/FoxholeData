@@ -1,7 +1,7 @@
 ---@meta
 
 ---@class ABPObservationBunkerT3_C : AFortObservation
----@field FortCommonT3BreachWalls UTemplateComponent
+---@field FortCommonT3BreachedWalls UTemplateComponent
 ---@field BlockBuildSiteMovement UBoxComponent
 ---@field OccupyComponent UStructureSeatComponent
 ---@field SeatTriggerComponent USeatTriggerComponent

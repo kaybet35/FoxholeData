@@ -3,6 +3,6 @@
 
 class ABPBusW_C : public ABPBusC_C
 {
-}; // Size: 0x1370
+}; // Size: 0x1390
 
 #endif

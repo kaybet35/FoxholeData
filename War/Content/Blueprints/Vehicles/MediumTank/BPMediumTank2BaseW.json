@@ -23,7 +23,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPMediumTank2BaseW_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.47"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.48"
       },
       "InheritableComponentHandler": {
         "ObjectName": "InheritableComponentHandler'BPMediumTank2BaseW_C:InheritableComponentHandler'",
@@ -137,7 +137,7 @@
       "FactionVariant": "EFactionId::Wardens",
       "DestroyedMesh": {
         "ObjectName": "StaticMeshComponent'Default__BPMediumTank2BaseW_C:DestroyedMesh'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.50"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.51"
       },
       "MinorDamagePS": {
         "ObjectName": "ParticleSystemComponent'Default__BPMediumTank2BaseW_C:MinorDamagePS'",
@@ -223,11 +223,11 @@
       "BoostGasUsageModifier": 6.0,
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPMediumTank2BaseW_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.51"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.52"
       },
       "Mesh": {
         "ObjectName": "SkeletalMeshComponent'Default__BPMediumTank2BaseW_C:CharacterMesh0'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.49"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.50"
       },
       "CharacterMovement": {
         "ObjectName": "RWDVehicleMovementComponent'Default__BPMediumTank2BaseW_C:CharMoveComp'",
@@ -424,7 +424,33 @@
     "Name": "InheritableComponentHandler",
     "Outer": "BPMediumTank2BaseW_C",
     "Class": "UScriptClass'InheritableComponentHandler'",
-    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'SeatExitComponent'",
+            "ObjectPath": "/Script/War"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "SeatExitComponent'BPMediumTank2BaseW_C:DriverExit_GEN_VARIABLE'",
+            "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.47"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BPMediumTankBase_C'",
+              "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTankBase.1"
+            },
+            "SCSVariableName": "DriverExit",
+            "AssociatedGuid": "3690A625-4F641F34-EB02CC95-DE498005"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
   },
   {
     "Type": "ObjectProperty",
@@ -800,7 +826,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SkeletalMeshComponent'BPMediumTank2BaseW_C:Chassis_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.48"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.49"
       },
       "ParentComponentOrVariableName": "CharacterMesh0",
       "bIsParentComponentNative": true,
@@ -821,7 +847,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VehicleSeatComponent'BPMediumTank2BaseW_C:DriverSeat0_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.52"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.53"
       },
       "AttachToName": "body_inertiaOffset",
       "ParentComponentOrVariableName": "CharacterMesh0",
@@ -843,12 +869,26 @@
       },
       "ComponentTemplate": {
         "ObjectName": "VehicleSeatComponent'BPMediumTank2BaseW_C:GunnerSeat1_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.53"
+        "ObjectPath": "War/Content/Blueprints/Vehicles/MediumTank/BPMediumTank2BaseW.54"
       },
       "ParentComponentOrVariableName": "CharacterMesh0",
       "bIsParentComponentNative": true,
       "VariableGuid": "9B7082E0-4DBA0039-EC39BBBA-ECEC91BE",
       "InternalVariableName": "GunnerSeat1"
+    }
+  },
+  {
+    "Type": "SeatExitComponent",
+    "Name": "DriverExit_GEN_VARIABLE",
+    "Outer": "BPMediumTank2BaseW_C",
+    "Class": "UScriptClass'SeatExitComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0025634766,
+        "Y": -379.558,
+        "Z": -40.0
+      }
     }
   },
   {

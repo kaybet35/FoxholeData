@@ -1,7 +1,8 @@
 ---@meta
 
 ---@class ABPTrenchConnectorCommon_C : ATemplate
----@field BPLandscapeCullInstancedStaticMeshComponent UBPLandscapeCullInstancedStaticMeshComponent_C
+---@field BPFoliageCullQuadCoverComponent UBPFoliageCullQuadCoverComponent_C
+---@field BPLandscapeCullQuadCoverComponent UBPLandscapeCullQuadCoverComponent_C
 ---@field PlacementSplineConnector USplineConnectorComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
 ---@field WaterStencil UBPWaterStencilComponent_C

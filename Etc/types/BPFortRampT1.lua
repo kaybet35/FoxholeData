@@ -5,7 +5,7 @@
 ---@field BreachedBack UStaticMeshComponent
 ---@field BreachedRight UStaticMeshComponent
 ---@field BPTrenchBlockerBox UBPTrenchBlockerBox_C
----@field FortCommonDirt UTemplateComponent
+---@field FortCommonDirtT1T2 UTemplateComponent
 ---@field FortRampCommon UTemplateComponent
 ---@field FortRampCommonMods UTemplateComponent
 ---@field FortCommon UTemplateComponent

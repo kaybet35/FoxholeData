@@ -1,14 +1,14 @@
 [
   {
     "Type": "ObjectProperty",
-    "Name": "RepairBox",
+    "Name": "BPBuildFootprintBoxComponent",
     "Outer": "BPResourceBox_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
     "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
     "PropertyClass": {
-      "ObjectName": "Class'BoxComponent'",
-      "ObjectPath": "/Script/Engine"
+      "ObjectName": "BlueprintGeneratedClass'BPBuildFootprintBoxComponent_C'",
+      "ObjectPath": "War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.0"
     }
   },
   {
@@ -19,7 +19,7 @@
     "Properties": {
       "SimpleConstructionScript": {
         "ObjectName": "SimpleConstructionScript'BPResourceBox_C:SimpleConstructionScript_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.13"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.16"
       }
     },
     "SuperStruct": {
@@ -28,12 +28,16 @@
     },
     "Children": [
       {
-        "ObjectName": "ObjectProperty'BPResourceBox_C:RepairBox'",
+        "ObjectName": "ObjectProperty'BPResourceBox_C:BPBuildFootprintBoxComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.0"
       },
       {
+        "ObjectName": "ObjectProperty'BPResourceBox_C:RepairBox'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.10"
+      },
+      {
         "ObjectName": "ObjectProperty'BPResourceBox_C:MultiplexedStaticMesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.8"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.9"
       }
     ],
     "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
@@ -52,11 +56,11 @@
     "Type": "BPResourceBox_C",
     "Name": "Default__BPResourceBox_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/BPResourceBox.BPResourceBox_C'",
-    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "MeshComponent": {
         "ObjectName": "StaticMeshComponent'Default__BPResourceBox_C:Mesh'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.14"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.17"
       },
       "ItemsToReplenish": [
         {
@@ -101,10 +105,8 @@
         }
       ],
       "ReplenishRate": 5.0,
-      "BuildSiteClass": {
-        "ObjectName": "BlueprintGeneratedClass'BPStorageBoxBuildSite_C'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPStorageBoxBuildSite.1"
-      },
+      "ProceduralUseVolumeFactor": 0.0,
+      "BuildGhostClass": null,
       "Description": {
         "Namespace": "",
         "Key": "81B26A394866F839029F09AB4976253E",
@@ -155,7 +157,7 @@
       "ScreenToUse": "ESimScreen::StorageBox",
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPResourceBox_C:StealthComponent'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.15"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.18"
       },
       "RootComponent": {
         "ObjectName": "ArrowComponent'Default__BPResourceBox_C:StructureArrow'",
@@ -274,6 +276,25 @@
     }
   },
   {
+    "Type": "BPBuildFootprintBoxComponent_C",
+    "Name": "BPBuildFootprintBoxComponent_GEN_VARIABLE",
+    "Outer": "BPResourceBox_C",
+    "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.BPBuildFootprintBoxComponent_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 90.0,
+        "Y": 43.0,
+        "Z": 40.5
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 44.5
+      }
+    }
+  },
+  {
     "Type": "MultiplexedStaticMeshComponent",
     "Name": "MultiplexedStaticMesh_GEN_VARIABLE",
     "Outer": "BPResourceBox_C",
@@ -320,6 +341,18 @@
     }
   },
   {
+    "Type": "ObjectProperty",
+    "Name": "RepairBox",
+    "Outer": "BPResourceBox_C",
+    "Class": "UScriptClass'ObjectProperty'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+    "PropertyClass": {
+      "ObjectName": "Class'BoxComponent'",
+      "ObjectPath": "/Script/Engine"
+    }
+  },
+  {
     "Type": "SceneComponent",
     "Name": "DefaultSceneRoot_GEN_VARIABLE",
     "Outer": "BPResourceBox_C",
@@ -339,10 +372,31 @@
       },
       "ComponentTemplate": {
         "ObjectName": "SceneComponent'BPResourceBox_C:DefaultSceneRoot_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.9"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.11"
       },
       "VariableGuid": "37B03939-494ABD7B-8233C4A5-6355017F",
       "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BPBuildFootprintBoxComponent_C'",
+        "ObjectPath": "War/Content/Blueprints/Structures/Components/BPBuildFootprintBoxComponent.0"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BPBuildFootprintBoxComponent_C'BPResourceBox_C:BPBuildFootprintBoxComponent_GEN_VARIABLE'",
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.7"
+      },
+      "ParentComponentOrVariableName": "StructureArrow",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "E24C9F70-4F6B1BE5-1423038F-023B2B7B",
+      "InternalVariableName": "BPBuildFootprintBoxComponent"
     }
   },
   {
@@ -358,7 +412,7 @@
       },
       "ComponentTemplate": {
         "ObjectName": "MultiplexedStaticMeshComponent'BPResourceBox_C:MultiplexedStaticMesh_GEN_VARIABLE'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.7"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.8"
       },
       "VariableGuid": "B65A087D-4CA1AA4D-890F09B3-1854A5E8",
       "InternalVariableName": "MultiplexedStaticMesh"
@@ -395,26 +449,34 @@
       "RootNodes": [
         {
           "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.14"
         },
         {
           "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.12"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.13"
         }
       ],
       "AllNodes": [
         {
           "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_2'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.11"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.14"
         },
         {
           "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_4'",
-          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.12"
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.13"
         }
       ],
       "DefaultSceneRootNode": {
         "ObjectName": "SCS_Node'BPResourceBox_C:SimpleConstructionScript_0.SCS_Node_0'",
-        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.10"
+        "ObjectPath": "War/Content/Blueprints/Structures/BPResourceBox.12"
       }
     }
   },

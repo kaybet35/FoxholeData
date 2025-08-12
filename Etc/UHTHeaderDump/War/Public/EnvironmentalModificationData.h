@@ -5,9 +5,11 @@
 #include "DecalData.h"
 #include "FoliageModificationInfo.h"
 #include "PuddleDecalInfo.h"
+#include "Templates/SubclassOf.h"
 #include "EnvironmentalModificationData.generated.h"
 
 class UCurveFloat;
+class UInstancedStaticMeshComponent;
 class UPhysicalMaterial;
 
 UCLASS(Blueprintable)
@@ -49,6 +51,12 @@ public:
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     float MaxTreeRemovalPercentage;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    TSubclassOf<UInstancedStaticMeshComponent> FoliageCullInstancedStaticMeshClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float FoliageCullMeshZOffset;
     
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     float FoliageRemovalThresholdWeights[16];

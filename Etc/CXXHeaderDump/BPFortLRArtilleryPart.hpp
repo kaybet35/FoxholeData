@@ -3,6 +3,6 @@
 
 class ABPFortLRArtilleryPart_C : public ABPFortPartBase_C
 {
-}; // Size: 0x830
+}; // Size: 0x850
 
 #endif

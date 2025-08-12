@@ -4,8 +4,6 @@ UPlayerCameraRigComponent::UPlayerCameraRigComponent(const FObjectInitializer& O
     this->bAutoActivate = true;
     this->bAbsoluteRotation = true;
     this->TargetArmLength = 2000.00f;
-    this->bEnableCameraLag = false;
-    this->MaxDistanceForCameraLerp = 0.00f;
 }
 
 

@@ -37,6 +37,9 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, SaveGame, meta=(AllowPrivateAccess=true))
     int32 SystemIndex;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    float GroundedPipeLength;
+    
     APipeline(const FObjectInitializer& ObjectInitializer);
 
 };

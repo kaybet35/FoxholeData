@@ -3,8 +3,8 @@
 
 class ABPStructureCrate_C : public AStructureCrate
 {
-    class UStaticMeshComponent* BoxMesh;                                              // 0x0810 (size: 0x8)
+    class UStaticMeshComponent* BoxMesh;                                              // 0x0830 (size: 0x8)
 
-}; // Size: 0x818
+}; // Size: 0x838
 
 #endif

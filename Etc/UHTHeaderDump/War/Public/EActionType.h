@@ -50,7 +50,7 @@ enum class EActionType : uint8 {
     DisconnectAll,
     FlagDisruptivePlacement,
     DrainPipes,
-    ViewActorLog,
+    ViewStructureLog,
     ViewReserveStockpileLog,
     CloseAssemblyArea,
     OpenAssemblyArea,
@@ -69,6 +69,7 @@ enum class EActionType : uint8 {
     DeleteLoadout,
     EditLoadout,
     ViewGlobalLog,
+    ViewVehicleLog,
     MAX,
 };
 

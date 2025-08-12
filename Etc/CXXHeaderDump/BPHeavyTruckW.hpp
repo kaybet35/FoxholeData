@@ -3,6 +3,6 @@
 
 class ABPHeavyTruckW_C : public ABPHeavyTruckBaseW_C
 {
-}; // Size: 0x13D0
+}; // Size: 0x1400
 
 #endif

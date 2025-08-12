@@ -32,7 +32,7 @@
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFirePitT3.0"
       },
       {
-        "ObjectName": "ObjectProperty'BPFortFirePitT3_C:FortCommonT3BreachWalls'",
+        "ObjectName": "ObjectProperty'BPFortFirePitT3_C:FortCommonT3BreachedWalls'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFirePitT3.19"
       },
       {
@@ -108,7 +108,7 @@
     "Type": "BPFortFirePitT3_C",
     "Name": "Default__BPFortFirePitT3_C",
     "Class": "BlueprintGeneratedClass'War/Content/Blueprints/Structures/Forts/BPFortFirePitT3.BPFortFirePitT3_C'",
-    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
     "Properties": {
       "EmplacementLocation": {
         "ObjectName": "BoxComponent'Default__BPFortFirePitT3_C:EmplacementLocation'",
@@ -194,8 +194,12 @@
         "ObjectName": "ModularMountsComponent'Default__BPFortFirePitT3_C:ModularMountsComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFirePitT3.8"
       },
-      "MaxHealth": 3000,
-      "Health": 3000,
+      "MaxHealth": 3750,
+      "Health": 3750,
+      "ClaimStatus": {
+        "bCanBeDemolished": true,
+        "DemolishDurationHours": 672
+      },
       "StealthComponent": {
         "ObjectName": "StealthComponent'Default__BPFortFirePitT3_C:StealthComponent'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFirePitT3.51"
@@ -437,7 +441,7 @@
   },
   {
     "Type": "ObjectProperty",
-    "Name": "FortCommonT3BreachWalls",
+    "Name": "FortCommonT3BreachedWalls",
     "Outer": "BPFortFirePitT3_C",
     "Class": "UScriptClass'ObjectProperty'",
     "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
@@ -636,13 +640,13 @@
         "ObjectPath": "/Script/War"
       },
       "ComponentTemplate": {
-        "ObjectName": "TemplateComponent'BPFortFirePitT3_C:FortCommonT3BreachWalls_GEN_VARIABLE'",
+        "ObjectName": "TemplateComponent'BPFortFirePitT3_C:FortCommonT3BreachedWalls_GEN_VARIABLE'",
         "ObjectPath": "War/Content/Blueprints/Structures/Forts/BPFortFirePitT3.56"
       },
       "ParentComponentOrVariableName": "StructureArrow",
       "bIsParentComponentNative": true,
       "VariableGuid": "11CDE88F-4ACE98D6-0B6C6D95-519FF383",
-      "InternalVariableName": "FortCommonT3BreachWalls"
+      "InternalVariableName": "FortCommonT3BreachedWalls"
     }
   },
   {
@@ -1468,7 +1472,7 @@
   },
   {
     "Type": "TemplateComponent",
-    "Name": "FortCommonT3BreachWalls_GEN_VARIABLE",
+    "Name": "FortCommonT3BreachedWalls_GEN_VARIABLE",
     "Outer": "BPFortFirePitT3_C",
     "Class": "UScriptClass'TemplateComponent'",
     "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",

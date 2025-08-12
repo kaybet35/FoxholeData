@@ -59,6 +59,8 @@ FWarTweakables::FWarTweakables() {
     this->UnexplodedOrdnanceChance = 0.00f;
     this->FortBaseNetworkDistance = 0;
     this->LRADamage = 0.00f;
+    this->LRAReduceHeatTime = 0.00f;
+    this->RailLRAReduceHeatTime = 0.00f;
     this->LRADamageInnerRadius = 0.00f;
     this->LRAAccuracyRadiusMultiplier = 0.00f;
     this->FSAAccuracyRadiusMultiplier = 0.00f;

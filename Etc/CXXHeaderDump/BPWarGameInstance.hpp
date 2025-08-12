@@ -3,6 +3,6 @@
 
 class UBPWarGameInstance_C : public UWarGameInstance
 {
-}; // Size: 0x1560
+}; // Size: 0x1538
 
 #endif

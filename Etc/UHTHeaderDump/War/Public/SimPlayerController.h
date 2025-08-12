@@ -118,6 +118,7 @@ class UGangwayRamp;
 class UGenericStockpileComponent;
 class UHospitalComponent;
 class UItemHolderComponent;
+class UMaterialParameterCollectionInstance;
 class USpecializedFactoryComponent;
 class UUseComponent;
 class UUserComponent;
@@ -187,7 +188,16 @@ private:
     TSubclassOf<ARuntimeVirtualTextureVolume> LandscapeCullRVTVolumeClass;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    TSubclassOf<ARuntimeVirtualTextureVolume> FoliageCullRVTVolumeClass;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     ARuntimeVirtualTextureVolume* LandscapeCullRVTVolume;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    ARuntimeVirtualTextureVolume* FoliageCullRVTVolume;
+    
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
+    UMaterialParameterCollectionInstance* FoliageCullParameterCollectionInstance;
     
 public:
     ASimPlayerController(const FObjectInitializer& ObjectInitializer);
@@ -469,6 +479,12 @@ public:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerResetInventorySourceOverride();
     
+    UFUNCTION(Reliable, Server, WithValidation)
+    void ServerRequestVehicleLog(const ASimVehicle* Vehicle, const uint32 PageIndex);
+    
+    UFUNCTION(Reliable, Server, WithValidation)
+    void ServerRequestStructureLog(const AStructure* Structure, const uint32 PageIndex);
+    
 private:
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerRequestStructureInfo(AStructure* Structure, const bool bIsInitialRequest);
@@ -503,9 +519,6 @@ public:
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerRequestCachedDriverInfo(ASimVehicle* SimVehicle);
-    
-    UFUNCTION(Reliable, Server, WithValidation)
-    void ServerRequestActorLog(const AStructure* Structure, const uint32 PageIndex);
     
     UFUNCTION(BlueprintCallable, Reliable, Server, WithValidation)
     void ServerRequestActivityLog(ASimPlayerState* TargetPlayerState);
@@ -757,7 +770,7 @@ public:
     void ClientUpdateCachedDriverInfo(ASimVehicle* SimVehicle, const FString& OnlineID, const FString& PlayerName);
     
     UFUNCTION(Client, Reliable)
-    void ClientUpdateActorLog(const FActorLogPage& LogPage, const uint32 PageCount);
+    void ClientUpdateActorLog(const FActorLogPage& LogPage, const uint32 PageCount, const int64 VehicleID);
     
     UFUNCTION(BlueprintCallable, Client, Reliable)
     void ClientUpdateActivityLog(const FPlayerActivity& Activity);

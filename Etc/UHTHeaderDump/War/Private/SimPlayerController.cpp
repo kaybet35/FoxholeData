@@ -17,6 +17,8 @@ ASimPlayerController::ASimPlayerController(const FObjectInitializer& ObjectIniti
     this->RailHUDTargetDismountTime = 0.00f;
     this->CalloutMarkerGhost = NULL;
     this->LandscapeCullRVTVolume = NULL;
+    this->FoliageCullRVTVolume = NULL;
+    this->FoliageCullParameterCollectionInstance = NULL;
 }
 
 void ASimPlayerController::WarMessageTest(const int32 TestInt, const float TestFloat, const bool TestBool, const FString& TestStr, const ETestEnum TestEnum) {
@@ -475,6 +477,18 @@ bool ASimPlayerController::ServerResetInventorySourceOverride_Validate() {
     return true;
 }
 
+void ASimPlayerController::ServerRequestVehicleLog_Implementation(const ASimVehicle* Vehicle, const uint32 PageIndex) {
+}
+bool ASimPlayerController::ServerRequestVehicleLog_Validate(const ASimVehicle* Vehicle, const uint32 PageIndex) {
+    return true;
+}
+
+void ASimPlayerController::ServerRequestStructureLog_Implementation(const AStructure* Structure, const uint32 PageIndex) {
+}
+bool ASimPlayerController::ServerRequestStructureLog_Validate(const AStructure* Structure, const uint32 PageIndex) {
+    return true;
+}
+
 void ASimPlayerController::ServerRequestStructureInfo_Implementation(AStructure* Structure, const bool bIsInitialRequest) {
 }
 bool ASimPlayerController::ServerRequestStructureInfo_Validate(AStructure* Structure, const bool bIsInitialRequest) {
@@ -535,12 +549,6 @@ bool ASimPlayerController::ServerRequestMapIntelligence_Validate() {
 void ASimPlayerController::ServerRequestCachedDriverInfo_Implementation(ASimVehicle* SimVehicle) {
 }
 bool ASimPlayerController::ServerRequestCachedDriverInfo_Validate(ASimVehicle* SimVehicle) {
-    return true;
-}
-
-void ASimPlayerController::ServerRequestActorLog_Implementation(const AStructure* Structure, const uint32 PageIndex) {
-}
-bool ASimPlayerController::ServerRequestActorLog_Validate(const AStructure* Structure, const uint32 PageIndex) {
     return true;
 }
 
@@ -949,7 +957,7 @@ void ASimPlayerController::ClientUpdateRegionLog_Implementation(const FRegionLog
 void ASimPlayerController::ClientUpdateCachedDriverInfo_Implementation(ASimVehicle* SimVehicle, const FString& OnlineID, const FString& PlayerName) {
 }
 
-void ASimPlayerController::ClientUpdateActorLog_Implementation(const FActorLogPage& LogPage, const uint32 PageCount) {
+void ASimPlayerController::ClientUpdateActorLog_Implementation(const FActorLogPage& LogPage, const uint32 PageCount, const int64 VehicleID) {
 }
 
 void ASimPlayerController::ClientUpdateActivityLog_Implementation(const FPlayerActivity& Activity) {

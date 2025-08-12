@@ -21,6 +21,8 @@ ASimGameState::ASimGameState(const FObjectInitializer& ObjectInitializer) : Supe
     this->WarPhase = EWarPhase::PreConquest;
     this->bIsPatchRequired = false;
     this->bIsShortWar = false;
+    this->RegionMaintenanceBitMask = 0;
+    this->EnabledRegionBitMask = 0;
 }
 
 void ASimGameState::OnRep_WorldWeatherState() {
@@ -75,6 +77,8 @@ void ASimGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLif
     DOREPLIFETIME(ASimGameState, WarPhaseEndTime);
     DOREPLIFETIME(ASimGameState, bIsPatchRequired);
     DOREPLIFETIME(ASimGameState, bIsShortWar);
+    DOREPLIFETIME(ASimGameState, RegionMaintenanceBitMask);
+    DOREPLIFETIME(ASimGameState, EnabledRegionBitMask);
 }
 
 

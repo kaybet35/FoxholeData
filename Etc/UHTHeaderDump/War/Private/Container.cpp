@@ -9,6 +9,7 @@ AContainer::AContainer(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->ProfileType = EStructureProfileType::Shippable;
     this->ArmourType = EArmourType::Tier1Structure;
     this->KillVolume = CreateDefaultSubobject<UBoxComponent>(TEXT("KillVolume"));
+    this->bAllowsShippablePlacement = true;
     this->bIsReserveStockpiled = true;
     this->MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
     this->GenericStockpileComponent = NULL;
