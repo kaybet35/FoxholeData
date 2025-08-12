@@ -3,8 +3,8 @@
 
 class ABPVehicleCrate_C : public AVehicleCrate
 {
-    class UStaticMeshComponent* BoxMesh;                                              // 0x0800 (size: 0x8)
+    class UStaticMeshComponent* BoxMesh;                                              // 0x0810 (size: 0x8)
 
-}; // Size: 0x808
+}; // Size: 0x818
 
 #endif

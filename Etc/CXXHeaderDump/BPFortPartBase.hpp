@@ -3,9 +3,9 @@
 
 class ABPFortPartBase_C : public ATeamStructure
 {
-    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0810 (size: 0x8)
-    class UStaticMeshComponent* MainMesh;                                             // 0x0818 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0820 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x0828 (size: 0x8)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 #endif

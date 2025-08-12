@@ -3,8 +3,8 @@
 
 class ABPVehicleItemStash_C : public AItemStash
 {
-    class UStaticMeshComponent* StaticMesh;                                           // 0x0830 (size: 0x8)
+    class UStaticMeshComponent* StaticMesh;                                           // 0x0840 (size: 0x8)
 
-}; // Size: 0x838
+}; // Size: 0x848
 
 #endif

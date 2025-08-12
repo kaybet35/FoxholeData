@@ -3,9 +3,9 @@
 
 class ABPDeployedSatchelChargeT_C : public ADeployedWeapon
 {
-    class UExplodeOnDeathComponent* ExplodeOnDeath;                                   // 0x0860 (size: 0x8)
-    class UBoxComponent* CollisionBox;                                                // 0x0868 (size: 0x8)
+    class UExplodeOnDeathComponent* ExplodeOnDeath;                                   // 0x0870 (size: 0x8)
+    class UBoxComponent* CollisionBox;                                                // 0x0878 (size: 0x8)
 
-}; // Size: 0x870
+}; // Size: 0x880
 
 #endif

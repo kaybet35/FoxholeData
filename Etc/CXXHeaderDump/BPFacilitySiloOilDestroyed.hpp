@@ -3,10 +3,10 @@
 
 class ABPFacilitySiloOilDestroyed_C : public ADestroyedStructure
 {
-    class UDecalComponent* Decal5;                                                    // 0x0600 (size: 0x8)
-    class UDecalComponent* Decal4;                                                    // 0x0608 (size: 0x8)
-    class UStaticMeshComponent* MainMesh;                                             // 0x0610 (size: 0x8)
+    class UDecalComponent* Decal5;                                                    // 0x0610 (size: 0x8)
+    class UDecalComponent* Decal4;                                                    // 0x0618 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x0620 (size: 0x8)
 
-}; // Size: 0x618
+}; // Size: 0x628
 
 #endif

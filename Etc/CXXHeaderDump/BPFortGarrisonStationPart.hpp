@@ -3,6 +3,6 @@
 
 class ABPFortGarrisonStationPart_C : public ABPFortPartBase_C
 {
-}; // Size: 0x820
+}; // Size: 0x830
 
 #endif

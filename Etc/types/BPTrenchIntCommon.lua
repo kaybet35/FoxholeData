@@ -1,6 +1,10 @@
 ---@meta
 
 ---@class ABPTrenchIntCommon_C : ATemplate
+---@field LeftLandscapeOverlap UBoxComponent
+---@field BackLandscapeOverlap UBoxComponent
+---@field RightLandscapeOverlap UBoxComponent
+---@field FrontLandscapeOverlap UBoxComponent
 ---@field LeftCull UBPLandscapeCullStaticMeshComponent_C
 ---@field BackCull UBPLandscapeCullStaticMeshComponent_C
 ---@field RightCull UBPLandscapeCullStaticMeshComponent_C

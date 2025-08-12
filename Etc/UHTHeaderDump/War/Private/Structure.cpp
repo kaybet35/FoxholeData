@@ -52,10 +52,6 @@ AStructure::AStructure(const FObjectInitializer& ObjectInitializer) : Super(Obje
     this->BuildStepProgress = 0;
     this->bHasMeshVisibilityComponent = false;
     this->bIsBlankFortPiece = false;
-    this->bAddLandscapeHolesOnBeginPlay = true;
-    this->bRemoveLandscapeHolesOnDestroy = true;
-    this->bHasLandscapeHoles = false;
-    this->bHasRemovedLandscapeHoles = false;
     this->StealthComponent = CreateDefaultSubobject<UStealthComponent>(TEXT("StealthComponent"));
     this->Rainfall = 0.00f;
     this->QuantizedRainfall = 0;

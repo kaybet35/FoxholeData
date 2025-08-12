@@ -3,6 +3,6 @@
 
 class ATownWLargeG1_C : public ATownWLargeGS1_C
 {
-}; // Size: 0xA30
+}; // Size: 0xA40
 
 #endif

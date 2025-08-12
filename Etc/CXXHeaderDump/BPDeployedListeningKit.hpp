@@ -3,8 +3,8 @@
 
 class ABPDeployedListeningKit_C : public ADeployedListeningKit
 {
-    class UAudioComponent* ListeningLoop;                                             // 0x0840 (size: 0x8)
+    class UAudioComponent* ListeningLoop;                                             // 0x0850 (size: 0x8)
 
-}; // Size: 0x848
+}; // Size: 0x858
 
 #endif

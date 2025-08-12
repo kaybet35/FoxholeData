@@ -3,10 +3,10 @@
 
 class ABPLandingDock_C : public AVehicleFactory
 {
-    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0830 (size: 0x8)
-    class UDockComponent* DockingVolume;                                              // 0x0838 (size: 0x8)
-    class UStaticMeshComponent* Factory;                                              // 0x0840 (size: 0x8)
+    class UMultiplexedStaticMeshComponent* MultiplexedStaticMesh;                     // 0x0840 (size: 0x8)
+    class UDockComponent* DockingVolume;                                              // 0x0848 (size: 0x8)
+    class UStaticMeshComponent* Factory;                                              // 0x0850 (size: 0x8)
 
-}; // Size: 0x848
+}; // Size: 0x858
 
 #endif

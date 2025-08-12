@@ -3,8 +3,8 @@
 
 class ABPDeployedGrenadeLauncherTC_C : public ADeployedWeapon
 {
-    class UStructureSeatComponent* OccupiableComponent;                               // 0x0860 (size: 0x8)
+    class UStructureSeatComponent* OccupiableComponent;                               // 0x0870 (size: 0x8)
 
-}; // Size: 0x868
+}; // Size: 0x878
 
 #endif

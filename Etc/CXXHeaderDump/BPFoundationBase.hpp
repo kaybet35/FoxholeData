@@ -3,8 +3,8 @@
 
 class ABPFoundationBase_C : public AFoundation
 {
-    class UStaticMeshComponent* Foundation;                                           // 0x0810 (size: 0x8)
+    class UStaticMeshComponent* Foundation;                                           // 0x0820 (size: 0x8)
 
-}; // Size: 0x818
+}; // Size: 0x828
 
 #endif

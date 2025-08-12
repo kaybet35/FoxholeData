@@ -1138,13 +1138,6 @@ struct FCraterInfo
 
 }; // Size: 0x28
 
-struct FCraterMeshStop
-{
-    float Length;                                                                     // 0x0000 (size: 0x4)
-    class UStaticMesh* StaticMesh;                                                    // 0x0008 (size: 0x8)
-
-}; // Size: 0x10
-
 struct FCreateDebugMapPostRequest
 {
     FCreateMapPostRequest Request;                                                    // 0x0000 (size: 0x20)
@@ -5174,13 +5167,14 @@ struct FStructureProfileData
 {
     bool bHasDynamicStartingCondition;                                                // 0x0000 (size: 0x1)
     bool bIsRepairable;                                                               // 0x0001 (size: 0x1)
-    bool bIsUpgradeRotationAllowed;                                                   // 0x0002 (size: 0x1)
-    bool bIsUsableFromVehicle;                                                        // 0x0003 (size: 0x1)
-    bool bAllowUpgradeWhenDamaged;                                                    // 0x0004 (size: 0x1)
-    bool bCanOverlapNonBlockingFoliage;                                               // 0x0005 (size: 0x1)
-    bool bDisallowAdjacentUpgradesInIsland;                                           // 0x0006 (size: 0x1)
-    bool bIncludeInStructureIslands;                                                  // 0x0007 (size: 0x1)
-    bool bCanDecayBePrevented;                                                        // 0x0008 (size: 0x1)
+    bool bIsOnlyMountableByFriendly;                                                  // 0x0002 (size: 0x1)
+    bool bIsUpgradeRotationAllowed;                                                   // 0x0003 (size: 0x1)
+    bool bIsUsableFromVehicle;                                                        // 0x0004 (size: 0x1)
+    bool bAllowUpgradeWhenDamaged;                                                    // 0x0005 (size: 0x1)
+    bool bCanOverlapNonBlockingFoliage;                                               // 0x0006 (size: 0x1)
+    bool bDisallowAdjacentUpgradesInIsland;                                           // 0x0007 (size: 0x1)
+    bool bIncludeInStructureIslands;                                                  // 0x0008 (size: 0x1)
+    bool bCanDecayBePrevented;                                                        // 0x0009 (size: 0x1)
     float VerticalEjectionDistance;                                                   // 0x000C (size: 0x4)
     bool bEnableStealth;                                                              // 0x0010 (size: 0x1)
     bool bIsRuinable;                                                                 // 0x0011 (size: 0x1)
@@ -6846,15 +6840,15 @@ class AAmmoPickup : public ABasicItemPickup
 
 class AAmmoRoom : public ATeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0810 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0820 (size: 0x8)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AAmmoRoomBuildSite : public AFortBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AAmphibiousVehicle : public ARWDSimVehicle
 {
@@ -6912,44 +6906,44 @@ class AArtilleryRailVehicle : public AInfantryRailVehicle
 
 class AAssemblyStation : public ATeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0818 (size: 0x8)
-    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0820 (size: 0x8)
-    class UBuildSocketComponent* PowerSocket;                                         // 0x0828 (size: 0x8)
-    class UFacilityLightComponent* LightComponent;                                    // 0x0830 (size: 0x8)
-    class UBoxComponent* GarageFootprintComponent;                                    // 0x0838 (size: 0x8)
-    class USceneComponent* TransferLocation;                                          // 0x0840 (size: 0x8)
-    class USceneComponent* TransferLocation2;                                         // 0x0848 (size: 0x8)
-    class UAssemblyAreaComponent* AssemblyAreaComponent;                              // 0x0850 (size: 0x8)
-    TArray<FAssemblyItem> AssemblyItems;                                              // 0x0858 (size: 0x10)
-    TMap<class EFortModificationType, class FAssemblyModification> Modifications;     // 0x0868 (size: 0x50)
-    FResourceAmounts RepairCost;                                                      // 0x08B8 (size: 0x20)
-    FPowerGridInfo PowerGridInfo;                                                     // 0x08D8 (size: 0x5C)
-    TWeakObjectPtr<class AActor> BuildActor;                                          // 0x0934 (size: 0x8)
-    EAssemblyAreaState AssemblyAreaState;                                             // 0x093C (size: 0x1)
-    FName BuildActorName;                                                             // 0x0940 (size: 0x8)
-    FString ProducerOnlineID;                                                         // 0x0948 (size: 0x10)
-    bool bAllowsTierUpgrades;                                                         // 0x0958 (size: 0x1)
-    bool bSupportsExtraLargeShippables;                                               // 0x0959 (size: 0x1)
-    bool bIsDockyard;                                                                 // 0x095A (size: 0x1)
-    bool bVehiclesMustBePositionedForRepairs;                                         // 0x095B (size: 0x1)
-    float UpgradeCostMultiplier;                                                      // 0x0960 (size: 0x4)
-    float GarageFootprintKillLocationZ;                                               // 0x0964 (size: 0x4)
-    class USceneComponent* LadderLocation1;                                           // 0x0988 (size: 0x8)
-    class USceneComponent* LadderLocation2;                                           // 0x0990 (size: 0x8)
-    class USceneComponent* LadderLocation3;                                           // 0x0998 (size: 0x8)
-    TSubclassOf<class ALadder> LadderType;                                            // 0x09A0 (size: 0x8)
-    TArray<class ALadder*> SpawnedLadders;                                            // 0x09A8 (size: 0x10)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0828 (size: 0x8)
+    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0830 (size: 0x8)
+    class UBuildSocketComponent* PowerSocket;                                         // 0x0838 (size: 0x8)
+    class UFacilityLightComponent* LightComponent;                                    // 0x0840 (size: 0x8)
+    class UBoxComponent* GarageFootprintComponent;                                    // 0x0848 (size: 0x8)
+    class USceneComponent* TransferLocation;                                          // 0x0850 (size: 0x8)
+    class USceneComponent* TransferLocation2;                                         // 0x0858 (size: 0x8)
+    class UAssemblyAreaComponent* AssemblyAreaComponent;                              // 0x0860 (size: 0x8)
+    TArray<FAssemblyItem> AssemblyItems;                                              // 0x0868 (size: 0x10)
+    TMap<class EFortModificationType, class FAssemblyModification> Modifications;     // 0x0878 (size: 0x50)
+    FResourceAmounts RepairCost;                                                      // 0x08C8 (size: 0x20)
+    FPowerGridInfo PowerGridInfo;                                                     // 0x08E8 (size: 0x5C)
+    TWeakObjectPtr<class AActor> BuildActor;                                          // 0x0944 (size: 0x8)
+    EAssemblyAreaState AssemblyAreaState;                                             // 0x094C (size: 0x1)
+    FName BuildActorName;                                                             // 0x0950 (size: 0x8)
+    FString ProducerOnlineID;                                                         // 0x0958 (size: 0x10)
+    bool bAllowsTierUpgrades;                                                         // 0x0968 (size: 0x1)
+    bool bSupportsExtraLargeShippables;                                               // 0x0969 (size: 0x1)
+    bool bIsDockyard;                                                                 // 0x096A (size: 0x1)
+    bool bVehiclesMustBePositionedForRepairs;                                         // 0x096B (size: 0x1)
+    float UpgradeCostMultiplier;                                                      // 0x0970 (size: 0x4)
+    float GarageFootprintKillLocationZ;                                               // 0x0974 (size: 0x4)
+    class USceneComponent* LadderLocation1;                                           // 0x0998 (size: 0x8)
+    class USceneComponent* LadderLocation2;                                           // 0x09A0 (size: 0x8)
+    class USceneComponent* LadderLocation3;                                           // 0x09A8 (size: 0x8)
+    TSubclassOf<class ALadder> LadderType;                                            // 0x09B0 (size: 0x8)
+    TArray<class ALadder*> SpawnedLadders;                                            // 0x09B8 (size: 0x10)
 
     void OnRep_PowerGridInfo();
     void OnRep_BuildActor();
     void OnRep_AssemblyAreaState();
-}; // Size: 0x9C0
+}; // Size: 0x9D0
 
 class AAssemblyStationBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ABackpackItemPickup : public AItemPickup
 {
@@ -6959,7 +6953,7 @@ class ABackpackItemPickup : public AItemPickup
 
 class ABarbedWire : public ABuildableStructure
 {
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ABarge : public ASimVehicle
 {
@@ -7021,29 +7015,29 @@ class ABargeShip : public AShipVehicle
 
 class ABase : public ATunnelNode
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0858 (size: 0x8)
-    class UTechTreeComponent* TechTreeComponent;                                      // 0x0860 (size: 0x8)
-    class UAudioComponent* SirenLoop;                                                 // 0x0868 (size: 0x8)
-    int32 GarrisonLevel;                                                              // 0x0870 (size: 0x4)
-    int32 BaseTunnelConnectionRange;                                                  // 0x0874 (size: 0x4)
-    FDecayInfo DecayInfo;                                                             // 0x0878 (size: 0x4)
-    FSpawnPoints SpawnPoints;                                                         // 0x0880 (size: 0x28)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0868 (size: 0x8)
+    class UTechTreeComponent* TechTreeComponent;                                      // 0x0870 (size: 0x8)
+    class UAudioComponent* SirenLoop;                                                 // 0x0878 (size: 0x8)
+    int32 GarrisonLevel;                                                              // 0x0880 (size: 0x4)
+    int32 BaseTunnelConnectionRange;                                                  // 0x0884 (size: 0x4)
+    FDecayInfo DecayInfo;                                                             // 0x0888 (size: 0x4)
+    FSpawnPoints SpawnPoints;                                                         // 0x0890 (size: 0x28)
 
-}; // Size: 0x8B0
+}; // Size: 0x8C0
 
 class ABaseBuildSite : public AStructureBuildSite
 {
-    bool bIsStaticBase;                                                               // 0x07E8 (size: 0x1)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
-    class UTechTreeComponent* TechTreeComponent;                                      // 0x07F8 (size: 0x8)
-    FSpawnPoints SpawnPoints;                                                         // 0x0800 (size: 0x28)
-    bool bIsFirstTier;                                                                // 0x0828 (size: 0x1)
-    TSubclassOf<class ATunnelNodeProxy> TunnelNodeProxyClass;                         // 0x0830 (size: 0x8)
-    class ATunnelNodeProxy* TunnelNodeProxy;                                          // 0x0838 (size: 0x8)
-    bool bIsBaseUpgrade;                                                              // 0x0840 (size: 0x1)
-    int32 TunnelConnectionRange;                                                      // 0x0844 (size: 0x4)
+    bool bIsStaticBase;                                                               // 0x07F8 (size: 0x1)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0800 (size: 0x8)
+    class UTechTreeComponent* TechTreeComponent;                                      // 0x0808 (size: 0x8)
+    FSpawnPoints SpawnPoints;                                                         // 0x0810 (size: 0x28)
+    bool bIsFirstTier;                                                                // 0x0838 (size: 0x1)
+    TSubclassOf<class ATunnelNodeProxy> TunnelNodeProxyClass;                         // 0x0840 (size: 0x8)
+    class ATunnelNodeProxy* TunnelNodeProxy;                                          // 0x0848 (size: 0x8)
+    bool bIsBaseUpgrade;                                                              // 0x0850 (size: 0x1)
+    int32 TunnelConnectionRange;                                                      // 0x0854 (size: 0x4)
 
-}; // Size: 0x850
+}; // Size: 0x860
 
 class ABasicItemPickup : public AItemPickup
 {
@@ -7082,14 +7076,14 @@ class ABicycle : public ASimVehicle
 
 class ABorderBase : public AForwardBase
 {
-    class UParticleSystemComponent* OnSpawnedPS;                                      // 0x08C0 (size: 0x8)
-    class USoundCue* OnSpawnedSFX;                                                    // 0x08C8 (size: 0x8)
-    bool bIsUsable;                                                                   // 0x08D0 (size: 0x1)
-    FBorderBaseInfo Info;                                                             // 0x08D8 (size: 0x10)
+    class UParticleSystemComponent* OnSpawnedPS;                                      // 0x08D0 (size: 0x8)
+    class USoundCue* OnSpawnedSFX;                                                    // 0x08D8 (size: 0x8)
+    bool bIsUsable;                                                                   // 0x08E0 (size: 0x1)
+    FBorderBaseInfo Info;                                                             // 0x08E8 (size: 0x10)
 
     void OnRep_IsUsable();
     void MulticastOnSpawned();
-}; // Size: 0x8F0
+}; // Size: 0x900
 
 class ABorderTravelGhost : public AActor
 {
@@ -7106,10 +7100,10 @@ class ABoundaryHex : public AActor
 
 class ABridge : public ABuildableStructure
 {
-    class UBoxComponent* BelowBlockingVolume;                                         // 0x07F0 (size: 0x8)
-    class UBoxComponent* AboveBlockingArea;                                           // 0x07F8 (size: 0x8)
+    class UBoxComponent* BelowBlockingVolume;                                         // 0x0800 (size: 0x8)
+    class UBoxComponent* AboveBlockingArea;                                           // 0x0808 (size: 0x8)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class ABuildGhost : public AActor
 {
@@ -7137,112 +7131,112 @@ class ABuildGhost : public AActor
 
 class ABuildSite : public AStructure
 {
-    FResourceAmounts DefaultResourceRequirements;                                     // 0x05F8 (size: 0x20)
-    FResourceAmounts ResourceRequirements;                                            // 0x0618 (size: 0x20)
-    bool BlocksPassiveDefences;                                                       // 0x0638 (size: 0x1)
-    bool bIgnoreStructureDeathAoE;                                                    // 0x0639 (size: 0x1)
-    bool bAllowStanding;                                                              // 0x0691 (size: 0x1)
-    bool bIsNeutral;                                                                  // 0x0692 (size: 0x1)
-    uint8 TeamId;                                                                     // 0x0693 (size: 0x1)
-    FString OwnerWorldPlayerId;                                                       // 0x0698 (size: 0x10)
-    int32 ResourcesPerBuildCycle;                                                     // 0x06A8 (size: 0x4)
-    bool bIsBuiltAutomatically;                                                       // 0x06AC (size: 0x1)
-    bool bIsReservableWhenBuiltAutomatically;                                         // 0x06AD (size: 0x1)
-    ETechTreeTier Tier;                                                               // 0x06AF (size: 0x1)
-    FVector PrototypeDropLocation;                                                    // 0x06B0 (size: 0xC)
-    float RemainingExpiryTime;                                                        // 0x06BC (size: 0x4)
-    TArray<class UShapeComponent*> PawnCheckVolumes;                                  // 0x06D8 (size: 0x10)
-    class UMaterialInterface* BuildSiteMaterial;                                      // 0x06E8 (size: 0x8)
+    FResourceAmounts DefaultResourceRequirements;                                     // 0x0608 (size: 0x20)
+    FResourceAmounts ResourceRequirements;                                            // 0x0628 (size: 0x20)
+    bool BlocksPassiveDefences;                                                       // 0x0648 (size: 0x1)
+    bool bIgnoreStructureDeathAoE;                                                    // 0x0649 (size: 0x1)
+    bool bAllowStanding;                                                              // 0x06A1 (size: 0x1)
+    bool bIsNeutral;                                                                  // 0x06A2 (size: 0x1)
+    uint8 TeamId;                                                                     // 0x06A3 (size: 0x1)
+    FString OwnerWorldPlayerId;                                                       // 0x06A8 (size: 0x10)
+    int32 ResourcesPerBuildCycle;                                                     // 0x06B8 (size: 0x4)
+    bool bIsBuiltAutomatically;                                                       // 0x06BC (size: 0x1)
+    bool bIsReservableWhenBuiltAutomatically;                                         // 0x06BD (size: 0x1)
+    ETechTreeTier Tier;                                                               // 0x06BF (size: 0x1)
+    FVector PrototypeDropLocation;                                                    // 0x06C0 (size: 0xC)
+    float RemainingExpiryTime;                                                        // 0x06CC (size: 0x4)
+    TArray<class UShapeComponent*> PawnCheckVolumes;                                  // 0x06E8 (size: 0x10)
+    class UMaterialInterface* BuildSiteMaterial;                                      // 0x06F8 (size: 0x8)
 
     void OnRep_ResourceRequirements();
     void OnRep_DefaultResourceRequirements();
-}; // Size: 0x6F0
+}; // Size: 0x700
 
 class ABuildableStructure : public AStructure
 {
-    TSubclassOf<class UBuildSocketComponent> SnappablePathSocketClass;                // 0x0600 (size: 0x8)
-    TArray<FPathSocket> PathSockets;                                                  // 0x0608 (size: 0x10)
-    EFortTier Tier;                                                                   // 0x0618 (size: 0x1)
-    uint32 ModificationMask;                                                          // 0x061C (size: 0x4)
-    bool bDisableModificationSlotValidation;                                          // 0x0620 (size: 0x1)
-    bool bOnlyMigratePipesModification;                                               // 0x0621 (size: 0x1)
-    bool bReadOnlyModifications;                                                      // 0x0622 (size: 0x1)
-    TArray<class UModificationSlotComponent*> ModificationSlots;                      // 0x0628 (size: 0x10)
-    float ProceduralUseVolumeFactor;                                                  // 0x063C (size: 0x4)
-    FConnectorConfiguration ConnectorConfiguration;                                   // 0x0640 (size: 0x30)
-    bool bDoUpgradeObstructionCheck;                                                  // 0x0674 (size: 0x1)
-    TArray<class UPhysicalMaterial*> NoBuildPhysicalMaterials;                        // 0x0678 (size: 0x10)
-    bool bApplyNoBuildPhysicalMaterialsToSurfaceSamples;                              // 0x0688 (size: 0x1)
-    bool bUseSplineFootprintsForSurfaceChecks;                                        // 0x0689 (size: 0x1)
-    bool bIgnoreNoBuildAreas;                                                         // 0x068A (size: 0x1)
-    bool bIgnoreBuiltRoads;                                                           // 0x068B (size: 0x1)
-    bool bIsBuiltOnLandscape;                                                         // 0x068C (size: 0x1)
-    bool bIsBuiltOnIce;                                                               // 0x068D (size: 0x1)
-    bool bBuildOnBridges;                                                             // 0x068E (size: 0x1)
-    bool bBuildOnWater;                                                               // 0x068F (size: 0x1)
-    bool bIsBuiltOnFoundation;                                                        // 0x0690 (size: 0x1)
-    bool bIsPartiallyBuiltOnFoundation;                                               // 0x0691 (size: 0x1)
-    bool bAllowFloating;                                                              // 0x0692 (size: 0x1)
-    bool bLinearAttachment;                                                           // 0x0693 (size: 0x1)
-    float LinearAttachmentTolerance;                                                  // 0x0694 (size: 0x4)
-    bool bLinearAttachmentPitch;                                                      // 0x0698 (size: 0x1)
-    int32 MaxAttachmentGroupSize;                                                     // 0x069C (size: 0x4)
-    EMapBoundaryBuildRule MapBoundaryBuildRule;                                       // 0x06A0 (size: 0x1)
-    bool bAllowNearEnemy;                                                             // 0x06A1 (size: 0x1)
-    bool bIsConnector;                                                                // 0x06A2 (size: 0x1)
-    bool bIsManualConnector;                                                          // 0x06A3 (size: 0x1)
-    float ConnectorMinLength;                                                         // 0x06A4 (size: 0x4)
-    float ConnectorMaxLength;                                                         // 0x06A8 (size: 0x4)
-    float MinLengthMaxHealthModifier;                                                 // 0x06AC (size: 0x4)
-    float ConnectorMinWidth;                                                          // 0x06B0 (size: 0x4)
-    bool bConnectorCanSnapUnderRoads;                                                 // 0x06B4 (size: 0x1)
-    TSubclassOf<class ABuildGhost> BuildGhostClass;                                   // 0x06B8 (size: 0x8)
-    TSubclassOf<class ABuildSite> BuildSiteClass;                                     // 0x06C0 (size: 0x8)
-    TSubclassOf<class AStructure> BaseStructureClass;                                 // 0x06C8 (size: 0x8)
-    TSubclassOf<class AStructure> BreachedStructureClass;                             // 0x06D0 (size: 0x8)
-    TSubclassOf<class AActor> ProxyActorClass;                                        // 0x06D8 (size: 0x8)
-    bool bClearModificationsOnDowngrade;                                              // 0x06E0 (size: 0x1)
-    FText Description;                                                                // 0x06E8 (size: 0x18)
-    FShippableInfo ShippableInfo;                                                     // 0x0700 (size: 0xC)
-    class UTexture* Icon;                                                             // 0x0710 (size: 0x8)
-    EBuildCategory BuildCategory;                                                     // 0x0718 (size: 0x1)
-    uint8 BuildOrder;                                                                 // 0x0719 (size: 0x1)
-    EBuildLocationType BuildLocationType;                                             // 0x071A (size: 0x1)
-    float MaxBuildDistance;                                                           // 0x071C (size: 0x4)
-    float MaxBuildOverlapDepth;                                                       // 0x0720 (size: 0x4)
-    float BuildTargetArmLength;                                                       // 0x0724 (size: 0x4)
-    float DestroyedDamageRadius;                                                      // 0x0728 (size: 0x4)
-    FVector DestroyedDamageExtent;                                                    // 0x072C (size: 0xC)
-    FVector DestroyedDamageOffset;                                                    // 0x0738 (size: 0xC)
-    bool bDropsLargeMaterialsWhenDestroyed;                                           // 0x0744 (size: 0x1)
-    bool bCustomPawnOverlapCheck;                                                     // 0x0745 (size: 0x1)
-    bool bCanOverlapSpawnPoint;                                                       // 0x0746 (size: 0x1)
-    bool bCanBeBuiltIndoors;                                                          // 0x0747 (size: 0x1)
-    bool bIsFillStructureProxy;                                                       // 0x0748 (size: 0x1)
-    float MinDistanceToSameStructure;                                                 // 0x074C (size: 0x4)
-    bool bIsVehicleProxy;                                                             // 0x0750 (size: 0x1)
-    bool bRotateBuildGhost;                                                           // 0x0751 (size: 0x1)
-    uint8 ValidBuildTools;                                                            // 0x0753 (size: 0x1)
-    bool bIsInitiallyDestroyed;                                                       // 0x0754 (size: 0x1)
-    EFactionId FactionVariant;                                                        // 0x0755 (size: 0x1)
-    TArray<FTooltipDetailText> DescriptionDetails;                                    // 0x0758 (size: 0x10)
-    FConcreteSettler ConcreteSettler;                                                 // 0x0768 (size: 0x48)
-    bool bIsReservable;                                                               // 0x07B0 (size: 0x1)
-    bool bUsesImpactsMaterial;                                                        // 0x07B2 (size: 0x1)
-    class UStaticMesh* PackagedMesh;                                                  // 0x07B8 (size: 0x8)
+    TSubclassOf<class UBuildSocketComponent> SnappablePathSocketClass;                // 0x0610 (size: 0x8)
+    TArray<FPathSocket> PathSockets;                                                  // 0x0618 (size: 0x10)
+    EFortTier Tier;                                                                   // 0x0628 (size: 0x1)
+    uint32 ModificationMask;                                                          // 0x062C (size: 0x4)
+    bool bDisableModificationSlotValidation;                                          // 0x0630 (size: 0x1)
+    bool bOnlyMigratePipesModification;                                               // 0x0631 (size: 0x1)
+    bool bReadOnlyModifications;                                                      // 0x0632 (size: 0x1)
+    TArray<class UModificationSlotComponent*> ModificationSlots;                      // 0x0638 (size: 0x10)
+    float ProceduralUseVolumeFactor;                                                  // 0x064C (size: 0x4)
+    FConnectorConfiguration ConnectorConfiguration;                                   // 0x0650 (size: 0x30)
+    bool bDoUpgradeObstructionCheck;                                                  // 0x0684 (size: 0x1)
+    TArray<class UPhysicalMaterial*> NoBuildPhysicalMaterials;                        // 0x0688 (size: 0x10)
+    bool bApplyNoBuildPhysicalMaterialsToSurfaceSamples;                              // 0x0698 (size: 0x1)
+    bool bUseSplineFootprintsForSurfaceChecks;                                        // 0x0699 (size: 0x1)
+    bool bIgnoreNoBuildAreas;                                                         // 0x069A (size: 0x1)
+    bool bIgnoreBuiltRoads;                                                           // 0x069B (size: 0x1)
+    bool bIsBuiltOnLandscape;                                                         // 0x069C (size: 0x1)
+    bool bIsBuiltOnIce;                                                               // 0x069D (size: 0x1)
+    bool bBuildOnBridges;                                                             // 0x069E (size: 0x1)
+    bool bBuildOnWater;                                                               // 0x069F (size: 0x1)
+    bool bIsBuiltOnFoundation;                                                        // 0x06A0 (size: 0x1)
+    bool bIsPartiallyBuiltOnFoundation;                                               // 0x06A1 (size: 0x1)
+    bool bAllowFloating;                                                              // 0x06A2 (size: 0x1)
+    bool bLinearAttachment;                                                           // 0x06A3 (size: 0x1)
+    float LinearAttachmentTolerance;                                                  // 0x06A4 (size: 0x4)
+    bool bLinearAttachmentPitch;                                                      // 0x06A8 (size: 0x1)
+    int32 MaxAttachmentGroupSize;                                                     // 0x06AC (size: 0x4)
+    EMapBoundaryBuildRule MapBoundaryBuildRule;                                       // 0x06B0 (size: 0x1)
+    bool bAllowNearEnemy;                                                             // 0x06B1 (size: 0x1)
+    bool bIsConnector;                                                                // 0x06B2 (size: 0x1)
+    bool bIsManualConnector;                                                          // 0x06B3 (size: 0x1)
+    float ConnectorMinLength;                                                         // 0x06B4 (size: 0x4)
+    float ConnectorMaxLength;                                                         // 0x06B8 (size: 0x4)
+    float MinLengthMaxHealthModifier;                                                 // 0x06BC (size: 0x4)
+    float ConnectorMinWidth;                                                          // 0x06C0 (size: 0x4)
+    bool bConnectorCanSnapUnderRoads;                                                 // 0x06C4 (size: 0x1)
+    TSubclassOf<class ABuildGhost> BuildGhostClass;                                   // 0x06C8 (size: 0x8)
+    TSubclassOf<class ABuildSite> BuildSiteClass;                                     // 0x06D0 (size: 0x8)
+    TSubclassOf<class AStructure> BaseStructureClass;                                 // 0x06D8 (size: 0x8)
+    TSubclassOf<class AStructure> BreachedStructureClass;                             // 0x06E0 (size: 0x8)
+    TSubclassOf<class AActor> ProxyActorClass;                                        // 0x06E8 (size: 0x8)
+    bool bClearModificationsOnDowngrade;                                              // 0x06F0 (size: 0x1)
+    FText Description;                                                                // 0x06F8 (size: 0x18)
+    FShippableInfo ShippableInfo;                                                     // 0x0710 (size: 0xC)
+    class UTexture* Icon;                                                             // 0x0720 (size: 0x8)
+    EBuildCategory BuildCategory;                                                     // 0x0728 (size: 0x1)
+    uint8 BuildOrder;                                                                 // 0x0729 (size: 0x1)
+    EBuildLocationType BuildLocationType;                                             // 0x072A (size: 0x1)
+    float MaxBuildDistance;                                                           // 0x072C (size: 0x4)
+    float MaxBuildOverlapDepth;                                                       // 0x0730 (size: 0x4)
+    float BuildTargetArmLength;                                                       // 0x0734 (size: 0x4)
+    float DestroyedDamageRadius;                                                      // 0x0738 (size: 0x4)
+    FVector DestroyedDamageExtent;                                                    // 0x073C (size: 0xC)
+    FVector DestroyedDamageOffset;                                                    // 0x0748 (size: 0xC)
+    bool bDropsLargeMaterialsWhenDestroyed;                                           // 0x0754 (size: 0x1)
+    bool bCustomPawnOverlapCheck;                                                     // 0x0755 (size: 0x1)
+    bool bCanOverlapSpawnPoint;                                                       // 0x0756 (size: 0x1)
+    bool bCanBeBuiltIndoors;                                                          // 0x0757 (size: 0x1)
+    bool bIsFillStructureProxy;                                                       // 0x0758 (size: 0x1)
+    float MinDistanceToSameStructure;                                                 // 0x075C (size: 0x4)
+    bool bIsVehicleProxy;                                                             // 0x0760 (size: 0x1)
+    bool bRotateBuildGhost;                                                           // 0x0761 (size: 0x1)
+    uint8 ValidBuildTools;                                                            // 0x0763 (size: 0x1)
+    bool bIsInitiallyDestroyed;                                                       // 0x0764 (size: 0x1)
+    EFactionId FactionVariant;                                                        // 0x0765 (size: 0x1)
+    TArray<FTooltipDetailText> DescriptionDetails;                                    // 0x0768 (size: 0x10)
+    FConcreteSettler ConcreteSettler;                                                 // 0x0778 (size: 0x48)
+    bool bIsReservable;                                                               // 0x07C0 (size: 0x1)
+    bool bUsesImpactsMaterial;                                                        // 0x07C2 (size: 0x1)
+    class UStaticMesh* PackagedMesh;                                                  // 0x07C8 (size: 0x8)
 
     void OnRep_PathSockets();
     void OnRep_ModificationMask(const uint32 PreviousModificationMask);
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ABuiltRoad : public ABuildableStructure
 {
-    class USplineConnectorComponent* SplineConnector;                                 // 0x07F0 (size: 0x8)
-    float GrassCullRadius;                                                            // 0x07F8 (size: 0x4)
-    class UBuildSocketComponent* BackSocket;                                          // 0x0800 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0808 (size: 0x8)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0800 (size: 0x8)
+    float GrassCullRadius;                                                            // 0x0808 (size: 0x4)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0810 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0818 (size: 0x8)
 
-}; // Size: 0x810
+}; // Size: 0x820
 
 class ACabooseRailVehicle : public ARailVehicle
 {
@@ -7265,7 +7259,7 @@ class ACalloutMarkerGhost : public AActor
 
 class ACatWalk : public ATeamStructure
 {
-}; // Size: 0x810
+}; // Size: 0x820
 
 class ACharactersRenderInfo : public AInfo
 {
@@ -7293,11 +7287,11 @@ class AClientFoliageReplacement : public AActor
 
 class ACoastalGun : public AGunTurret
 {
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class AConcreteWall : public AWall
 {
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AConquestConfig : public AInfo
 {
@@ -7308,41 +7302,41 @@ class AConquestConfig : public AInfo
 
 class AConstructionEquipment : public ATeamStructure
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0810 (size: 0x8)
-    class UStaticMeshComponent* ScoopMaterialMesh;                                    // 0x0818 (size: 0x8)
-    class UGenericStockpileComponent* MaterialGenericStockpileComponent;              // 0x0820 (size: 0x8)
-    class UGenericStockpileComponent* FuelGenericStockpileComponent;                  // 0x0828 (size: 0x8)
-    class USceneComponent* CollisionQueryLocation;                                    // 0x0830 (size: 0x8)
-    class UAudioComponent* ActiveLoop;                                                // 0x0838 (size: 0x8)
-    class UAudioComponent* TurningLoop;                                               // 0x0840 (size: 0x8)
-    TSubclassOf<class AImpactEffect> ImpactEffectClass;                               // 0x0848 (size: 0x8)
-    class USoundCue* MaterialDropSoundCue;                                            // 0x0850 (size: 0x8)
-    FName FuelName;                                                                   // 0x0858 (size: 0x8)
-    FConstructionEquipmentConfig Config;                                              // 0x0860 (size: 0x98)
-    float MaterialSubmissionDistance;                                                 // 0x08F8 (size: 0x4)
-    float RecheckBlockedSiteTime;                                                     // 0x08FC (size: 0x4)
-    int32 FuelConsumptionPerCycle;                                                    // 0x0900 (size: 0x4)
-    FConstructionEquipmentServerState ServerState;                                    // 0x0904 (size: 0xC)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0820 (size: 0x8)
+    class UStaticMeshComponent* ScoopMaterialMesh;                                    // 0x0828 (size: 0x8)
+    class UGenericStockpileComponent* MaterialGenericStockpileComponent;              // 0x0830 (size: 0x8)
+    class UGenericStockpileComponent* FuelGenericStockpileComponent;                  // 0x0838 (size: 0x8)
+    class USceneComponent* CollisionQueryLocation;                                    // 0x0840 (size: 0x8)
+    class UAudioComponent* ActiveLoop;                                                // 0x0848 (size: 0x8)
+    class UAudioComponent* TurningLoop;                                               // 0x0850 (size: 0x8)
+    TSubclassOf<class AImpactEffect> ImpactEffectClass;                               // 0x0858 (size: 0x8)
+    class USoundCue* MaterialDropSoundCue;                                            // 0x0860 (size: 0x8)
+    FName FuelName;                                                                   // 0x0868 (size: 0x8)
+    FConstructionEquipmentConfig Config;                                              // 0x0870 (size: 0x98)
+    float MaterialSubmissionDistance;                                                 // 0x0908 (size: 0x4)
+    float RecheckBlockedSiteTime;                                                     // 0x090C (size: 0x4)
+    int32 FuelConsumptionPerCycle;                                                    // 0x0910 (size: 0x4)
+    FConstructionEquipmentServerState ServerState;                                    // 0x0914 (size: 0xC)
 
     void OnRep_ConstructionEquipmentServerState();
     void MulticastPlayMaterialDropFX();
-}; // Size: 0x990
+}; // Size: 0x9A0
 
 class AConstructionSite : public ATeamStructure
 {
-    EBuildLocationType BuildLocationFilter;                                           // 0x0810 (size: 0x1)
-    class UBoxComponent* GarageFootprintComponent;                                    // 0x0818 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0820 (size: 0x8)
-    int32 FullRepairCost;                                                             // 0x0828 (size: 0x4)
+    EBuildLocationType BuildLocationFilter;                                           // 0x0820 (size: 0x1)
+    class UBoxComponent* GarageFootprintComponent;                                    // 0x0828 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0830 (size: 0x8)
+    int32 FullRepairCost;                                                             // 0x0838 (size: 0x4)
 
     bool ValidateMapBuildLocation();
-}; // Size: 0x830
+}; // Size: 0x840
 
 class AConstructionSiteBuildSite : public AStructureBuildSite
 {
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07E0 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AConstructionVehicle : public ARWDSimVehicle
 {
@@ -7361,13 +7355,13 @@ class AConstructionVehicle : public ARWDSimVehicle
 
 class AContainer : public ABuildableStructure
 {
-    class UStaticMeshComponent* MeshComponent;                                        // 0x07F0 (size: 0x8)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F8 (size: 0x8)
-    TArray<FLinearColor> Colors;                                                      // 0x0808 (size: 0x10)
-    uint8 ColorIndex;                                                                 // 0x0818 (size: 0x1)
+    class UStaticMeshComponent* MeshComponent;                                        // 0x0800 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0808 (size: 0x8)
+    TArray<FLinearColor> Colors;                                                      // 0x0818 (size: 0x10)
+    uint8 ColorIndex;                                                                 // 0x0828 (size: 0x1)
 
     void OnRep_Color();
-}; // Size: 0x820
+}; // Size: 0x830
 
 class ACrane : public ARWDSimVehicle
 {
@@ -7394,13 +7388,11 @@ class ACraneMarker : public AActor
 
 class ACraneRailwayTrack : public ARailwayTrack
 {
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class ACrater : public ABuildableStructure
 {
-    TArray<FCraterMeshStop> MeshStops;                                                // 0x07F0 (size: 0x10)
-
-}; // Size: 0x810
+}; // Size: 0x800
 
 class ADamageProfiles : public AInfo
 {
@@ -7453,35 +7445,35 @@ class ADeadlyGasGrenadeProjectile : public ATimedProjectile
 
 class ADeployedListeningKit : public ATripodMountedStructure
 {
-    class UListeningAreaComponent* ListeningAreaComponent;                            // 0x0830 (size: 0x8)
+    class UListeningAreaComponent* ListeningAreaComponent;                            // 0x0840 (size: 0x8)
 
-}; // Size: 0x840
+}; // Size: 0x850
 
 class ADeployedStructure : public ABuildableStructure
 {
-    uint8 TeamId;                                                                     // 0x07F0 (size: 0x1)
-    bool bEnableFriendlyFireTrackingOverride;                                         // 0x07F1 (size: 0x1)
-    TArray<FName> IgnoreDamageFromStructures;                                         // 0x07F8 (size: 0x10)
-
-}; // Size: 0x810
-
-class ADeployedTripod : public ADeployedStructure
-{
-    FName BaseItemCodeName;                                                           // 0x0810 (size: 0x8)
+    uint8 TeamId;                                                                     // 0x0800 (size: 0x1)
+    bool bEnableFriendlyFireTrackingOverride;                                         // 0x0801 (size: 0x1)
+    TArray<FName> IgnoreDamageFromStructures;                                         // 0x0808 (size: 0x10)
 
 }; // Size: 0x820
 
+class ADeployedTripod : public ADeployedStructure
+{
+    FName BaseItemCodeName;                                                           // 0x0820 (size: 0x8)
+
+}; // Size: 0x830
+
 class ADeployedWeapon : public ATripodMountedStructure
 {
-    class USkeletalMeshComponent* PayloadMesh;                                        // 0x0830 (size: 0x8)
-    FTripodHeightConfig HeightConfig;                                                 // 0x0838 (size: 0x4)
-    bool bIgnoresRadialDamage;                                                        // 0x083C (size: 0x1)
-    int16 StashedAmmo;                                                                // 0x083E (size: 0x2)
-    FName StashedAmmoType;                                                            // 0x0840 (size: 0x8)
-    float TripodHeight;                                                               // 0x0848 (size: 0x4)
+    class USkeletalMeshComponent* PayloadMesh;                                        // 0x0840 (size: 0x8)
+    FTripodHeightConfig HeightConfig;                                                 // 0x0848 (size: 0x4)
+    bool bIgnoresRadialDamage;                                                        // 0x084C (size: 0x1)
+    int16 StashedAmmo;                                                                // 0x084E (size: 0x2)
+    FName StashedAmmoType;                                                            // 0x0850 (size: 0x8)
+    float TripodHeight;                                                               // 0x0858 (size: 0x4)
 
     void OnRep_StashedAmmo();
-}; // Size: 0x860
+}; // Size: 0x870
 
 class ADepthProjectile : public AWarProjectile
 {
@@ -7491,181 +7483,181 @@ class ADepthProjectile : public AWarProjectile
 
 class ADestroyedAssemblyStation : public ADestroyedTeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-    uint32 ModificationMask;                                                          // 0x0620 (size: 0x4)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+    uint32 ModificationMask;                                                          // 0x0630 (size: 0x4)
 
-}; // Size: 0x628
+}; // Size: 0x638
 
 class ADestroyedBase : public ADestroyedTeamStructure
 {
-    uint32 LastSpawnPointID;                                                          // 0x0618 (size: 0x4)
-    bool bIsStaticBase;                                                               // 0x061C (size: 0x1)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0620 (size: 0x8)
-    class UTechTreeComponent* TechTreeComponent;                                      // 0x0628 (size: 0x8)
-
-}; // Size: 0x630
-
-class ADestroyedBorderBase : public ADestroyedBase
-{
-    FBorderBaseInfo Info;                                                             // 0x0630 (size: 0x10)
-    bool bIsActive;                                                                   // 0x0640 (size: 0x1)
-
-}; // Size: 0x658
-
-class ADestroyedBridge : public ADestroyedStructure
-{
-}; // Size: 0x600
-
-class ADestroyedConstructionSite : public ADestroyedTeamStructure
-{
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0618 (size: 0x8)
-
-}; // Size: 0x620
-
-class ADestroyedDrawbridge : public ADestroyedStructure
-{
-    class UPersistentProxyComponent* SideAProxy;                                      // 0x0600 (size: 0x8)
-    class UPersistentProxyComponent* SideBProxy;                                      // 0x0608 (size: 0x8)
-
-}; // Size: 0x610
-
-class ADestroyedEmplacementHouse : public ADestroyedTeamStructure
-{
-}; // Size: 0x618
-
-class ADestroyedEngineeringCenter : public ADestroyedTeamStructure
-{
-}; // Size: 0x618
-
-class ADestroyedFacilityRefinery : public ADestroyedTeamStructure
-{
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-    class UGenericStockpileComponent* CrateGenericStockpileComponent;                 // 0x0620 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0628 (size: 0x8)
-    TArray<FFuelTank> FuelTanks;                                                      // 0x0630 (size: 0x10)
-    TArray<FFacilityRefineryOrder> PendingOrders;                                     // 0x0640 (size: 0x10)
-    TArray<FFacilityRefineryOrder> Orders;                                            // 0x0650 (size: 0x10)
-    TArray<FFacilityRefineryOrder> CompletedOrders;                                   // 0x0660 (size: 0x10)
-    int32 ItemInputBuffer;                                                            // 0x0670 (size: 0x4)
-    FReservePower ReservePower;                                                       // 0x0674 (size: 0x8)
-    uint32 ModificationMask;                                                          // 0x067C (size: 0x4)
-
-}; // Size: 0x680
-
-class ADestroyedFort : public AFort
-{
-}; // Size: 0x820
-
-class ADestroyedFortForwardBase : public ADestroyedBase
-{
-}; // Size: 0x630
-
-class ADestroyedGarrisonHouse : public ADestroyedTeamStructure
-{
-}; // Size: 0x618
-
-class ADestroyedGarrisonStation : public ADestroyedGarrisonHouse
-{
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-    class UTechTreeComponent* TechTreeComponent;                                      // 0x0620 (size: 0x8)
     uint32 LastSpawnPointID;                                                          // 0x0628 (size: 0x4)
-
-}; // Size: 0x630
-
-class ADestroyedHospital : public ADestroyedTeamStructure
-{
-    uint32 LastSpawnPointID;                                                          // 0x0618 (size: 0x4)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0620 (size: 0x8)
-
-}; // Size: 0x628
-
-class ADestroyedKeep : public ADestroyedTeamStructure
-{
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-
-}; // Size: 0x620
-
-class ADestroyedLiquidTransferStation : public ADestroyedResourceTransferStation
-{
-    TArray<FFuelQuantity> FuelInputBuffers;                                           // 0x0620 (size: 0x10)
-    FFuelQuantity FuelOutputBuffer;                                                   // 0x0630 (size: 0xC)
+    bool bIsStaticBase;                                                               // 0x062C (size: 0x1)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0630 (size: 0x8)
+    class UTechTreeComponent* TechTreeComponent;                                      // 0x0638 (size: 0x8)
 
 }; // Size: 0x640
 
-class ADestroyedMassProductionFactory : public ADestroyedSpecializedFactory
+class ADestroyedBorderBase : public ADestroyedBase
 {
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0620 (size: 0x8)
+    FBorderBaseInfo Info;                                                             // 0x0640 (size: 0x10)
+    bool bIsActive;                                                                   // 0x0650 (size: 0x1)
 
-}; // Size: 0x628
+}; // Size: 0x668
 
-class ADestroyedRefinery : public ADestroyedTeamStructure
+class ADestroyedBridge : public ADestroyedStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0620 (size: 0x8)
-    TMap<class FString, class FRefinementOrderInfo> RefinementOrderMap;               // 0x0628 (size: 0x50)
+}; // Size: 0x610
 
-}; // Size: 0x678
-
-class ADestroyedResourceMine : public ADestroyedStructure
+class ADestroyedConstructionSite : public ADestroyedTeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0600 (size: 0x8)
-
-}; // Size: 0x608
-
-class ADestroyedResourceTransferStation : public ADestroyedTeamStructure
-{
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-
-}; // Size: 0x620
-
-class ADestroyedRocketFacility : public ADestroyedTeamStructure
-{
-    FFuelTank FuelTank;                                                               // 0x0618 (size: 0x14)
-
-}; // Size: 0x630
-
-class ADestroyedSeaport : public ADestroyedStorageFacility
-{
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent2;                 // 0x0630 (size: 0x8)
-    class UPersistentProxyComponent* ProxyLoadingDockComponent;                       // 0x0638 (size: 0x8)
-    TArray<class ALadder*> SpawnedLadders;                                            // 0x0640 (size: 0x10)
-
-}; // Size: 0x650
-
-class ADestroyedSpecializedFactory : public ADestroyedTeamStructure
-{
-    class USpecializedFactoryComponent* SpecializedFactoryComponent;                  // 0x0618 (size: 0x8)
-
-}; // Size: 0x620
-
-class ADestroyedStorageFacility : public ADestroyedTeamStructure
-{
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0618 (size: 0x8)
-    class UReserveStockpileComponent* ReserveStockpileComponent;                      // 0x0620 (size: 0x8)
     class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0628 (size: 0x8)
 
 }; // Size: 0x630
 
-class ADestroyedStructure : public AStructure
+class ADestroyedDrawbridge : public ADestroyedStructure
 {
-    bool bIsScorchable;                                                               // 0x05F8 (size: 0x1)
-    bool bIsScorched;                                                                 // 0x05F9 (size: 0x1)
+    class UPersistentProxyComponent* SideAProxy;                                      // 0x0610 (size: 0x8)
+    class UPersistentProxyComponent* SideBProxy;                                      // 0x0618 (size: 0x8)
 
-}; // Size: 0x600
+}; // Size: 0x620
 
-class ADestroyedTeamStructure : public ARuinableStructure
+class ADestroyedEmplacementHouse : public ADestroyedTeamStructure
 {
-    EFactionId LastHeldFactionID;                                                     // 0x0610 (size: 0x1)
+}; // Size: 0x628
+
+class ADestroyedEngineeringCenter : public ADestroyedTeamStructure
+{
+}; // Size: 0x628
+
+class ADestroyedFacilityRefinery : public ADestroyedTeamStructure
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+    class UGenericStockpileComponent* CrateGenericStockpileComponent;                 // 0x0630 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0638 (size: 0x8)
+    TArray<FFuelTank> FuelTanks;                                                      // 0x0640 (size: 0x10)
+    TArray<FFacilityRefineryOrder> PendingOrders;                                     // 0x0650 (size: 0x10)
+    TArray<FFacilityRefineryOrder> Orders;                                            // 0x0660 (size: 0x10)
+    TArray<FFacilityRefineryOrder> CompletedOrders;                                   // 0x0670 (size: 0x10)
+    int32 ItemInputBuffer;                                                            // 0x0680 (size: 0x4)
+    FReservePower ReservePower;                                                       // 0x0684 (size: 0x8)
+    uint32 ModificationMask;                                                          // 0x068C (size: 0x4)
+
+}; // Size: 0x690
+
+class ADestroyedFort : public AFort
+{
+}; // Size: 0x830
+
+class ADestroyedFortForwardBase : public ADestroyedBase
+{
+}; // Size: 0x640
+
+class ADestroyedGarrisonHouse : public ADestroyedTeamStructure
+{
+}; // Size: 0x628
+
+class ADestroyedGarrisonStation : public ADestroyedGarrisonHouse
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+    class UTechTreeComponent* TechTreeComponent;                                      // 0x0630 (size: 0x8)
+    uint32 LastSpawnPointID;                                                          // 0x0638 (size: 0x4)
+
+}; // Size: 0x640
+
+class ADestroyedHospital : public ADestroyedTeamStructure
+{
+    uint32 LastSpawnPointID;                                                          // 0x0628 (size: 0x4)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0630 (size: 0x8)
+
+}; // Size: 0x638
+
+class ADestroyedKeep : public ADestroyedTeamStructure
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+
+}; // Size: 0x630
+
+class ADestroyedLiquidTransferStation : public ADestroyedResourceTransferStation
+{
+    TArray<FFuelQuantity> FuelInputBuffers;                                           // 0x0630 (size: 0x10)
+    FFuelQuantity FuelOutputBuffer;                                                   // 0x0640 (size: 0xC)
+
+}; // Size: 0x650
+
+class ADestroyedMassProductionFactory : public ADestroyedSpecializedFactory
+{
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0630 (size: 0x8)
+
+}; // Size: 0x638
+
+class ADestroyedRefinery : public ADestroyedTeamStructure
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0630 (size: 0x8)
+    TMap<class FString, class FRefinementOrderInfo> RefinementOrderMap;               // 0x0638 (size: 0x50)
+
+}; // Size: 0x688
+
+class ADestroyedResourceMine : public ADestroyedStructure
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0610 (size: 0x8)
 
 }; // Size: 0x618
 
+class ADestroyedResourceTransferStation : public ADestroyedTeamStructure
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+
+}; // Size: 0x630
+
+class ADestroyedRocketFacility : public ADestroyedTeamStructure
+{
+    FFuelTank FuelTank;                                                               // 0x0628 (size: 0x14)
+
+}; // Size: 0x640
+
+class ADestroyedSeaport : public ADestroyedStorageFacility
+{
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent2;                 // 0x0640 (size: 0x8)
+    class UPersistentProxyComponent* ProxyLoadingDockComponent;                       // 0x0648 (size: 0x8)
+    TArray<class ALadder*> SpawnedLadders;                                            // 0x0650 (size: 0x10)
+
+}; // Size: 0x660
+
+class ADestroyedSpecializedFactory : public ADestroyedTeamStructure
+{
+    class USpecializedFactoryComponent* SpecializedFactoryComponent;                  // 0x0628 (size: 0x8)
+
+}; // Size: 0x630
+
+class ADestroyedStorageFacility : public ADestroyedTeamStructure
+{
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0628 (size: 0x8)
+    class UReserveStockpileComponent* ReserveStockpileComponent;                      // 0x0630 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0638 (size: 0x8)
+
+}; // Size: 0x640
+
+class ADestroyedStructure : public AStructure
+{
+    bool bIsScorchable;                                                               // 0x0608 (size: 0x1)
+    bool bIsScorched;                                                                 // 0x0609 (size: 0x1)
+
+}; // Size: 0x610
+
+class ADestroyedTeamStructure : public ARuinableStructure
+{
+    EFactionId LastHeldFactionID;                                                     // 0x0620 (size: 0x1)
+
+}; // Size: 0x628
+
 class ADestroyedTownHall : public ADestroyedBase
 {
-}; // Size: 0x630
+}; // Size: 0x640
 
 class ADestroyedVehicleFactory : public ADestroyedConstructionSite
 {
-}; // Size: 0x620
+}; // Size: 0x630
 
 class ADestructibleProp : public AActor
 {
@@ -7677,36 +7669,36 @@ class ADestructibleProp : public AActor
 
 class ADrawbridge : public ABuildableStructure
 {
-    class USkeletalMeshComponent* SideAMesh;                                          // 0x07F0 (size: 0x8)
-    class USkeletalMeshComponent* SideBMesh;                                          // 0x07F8 (size: 0x8)
-    class USkeletalMeshComponent* SideALeverMesh;                                     // 0x0800 (size: 0x8)
-    class USkeletalMeshComponent* SideBLeverMesh;                                     // 0x0808 (size: 0x8)
-    class UBoxComponent* SideAUseArea;                                                // 0x0810 (size: 0x8)
-    class UBoxComponent* SideBUseArea;                                                // 0x0818 (size: 0x8)
-    class UPersistentProxyComponent* SideAProxy;                                      // 0x0820 (size: 0x8)
-    class UPersistentProxyComponent* SideBProxy;                                      // 0x0828 (size: 0x8)
-    class UBoxComponent* SideBottomUseArea;                                           // 0x0830 (size: 0x8)
-    class UBoxComponent* AboveBlockingArea;                                           // 0x0838 (size: 0x8)
-    class UBoxComponent* AboveBlockingVolumeA;                                        // 0x0840 (size: 0x8)
-    class UBoxComponent* AboveBlockingVolumeB;                                        // 0x0848 (size: 0x8)
-    class UBoxComponent* BelowBlockingArea;                                           // 0x0850 (size: 0x8)
-    class UBoxComponent* BelowBlockingVolume;                                         // 0x0858 (size: 0x8)
-    class USoundCue* SwitchSound;                                                     // 0x0860 (size: 0x8)
-    class USoundCue* OpenedSound;                                                     // 0x0868 (size: 0x8)
-    class USoundCue* ClosedSound;                                                     // 0x0870 (size: 0x8)
-    class UAudioComponent* MovingLoop;                                                // 0x0878 (size: 0x8)
-    class USceneComponent* Ladder1Location;                                           // 0x0880 (size: 0x8)
-    class USceneComponent* Ladder2Location;                                           // 0x0888 (size: 0x8)
-    class ALadder* Ladder1;                                                           // 0x0890 (size: 0x8)
-    class ALadder* Ladder2;                                                           // 0x0898 (size: 0x8)
-    TSubclassOf<class ALadder> LadderType;                                            // 0x08A0 (size: 0x8)
-    float BridgeOpenDuration;                                                         // 0x08A8 (size: 0x4)
-    bool bIsRailBridge;                                                               // 0x08AC (size: 0x1)
-    class ARailwayTrack* LinkedTrack;                                                 // 0x08B0 (size: 0x8)
-    FBridgeSideState SideAState;                                                      // 0x08B8 (size: 0x1)
-    FBridgeSideState SideBState;                                                      // 0x08B9 (size: 0x1)
-    TEnumAsByte<EBridgeState> State;                                                  // 0x08BA (size: 0x1)
-    float StartTime;                                                                  // 0x08BC (size: 0x4)
+    class USkeletalMeshComponent* SideAMesh;                                          // 0x0800 (size: 0x8)
+    class USkeletalMeshComponent* SideBMesh;                                          // 0x0808 (size: 0x8)
+    class USkeletalMeshComponent* SideALeverMesh;                                     // 0x0810 (size: 0x8)
+    class USkeletalMeshComponent* SideBLeverMesh;                                     // 0x0818 (size: 0x8)
+    class UBoxComponent* SideAUseArea;                                                // 0x0820 (size: 0x8)
+    class UBoxComponent* SideBUseArea;                                                // 0x0828 (size: 0x8)
+    class UPersistentProxyComponent* SideAProxy;                                      // 0x0830 (size: 0x8)
+    class UPersistentProxyComponent* SideBProxy;                                      // 0x0838 (size: 0x8)
+    class UBoxComponent* SideBottomUseArea;                                           // 0x0840 (size: 0x8)
+    class UBoxComponent* AboveBlockingArea;                                           // 0x0848 (size: 0x8)
+    class UBoxComponent* AboveBlockingVolumeA;                                        // 0x0850 (size: 0x8)
+    class UBoxComponent* AboveBlockingVolumeB;                                        // 0x0858 (size: 0x8)
+    class UBoxComponent* BelowBlockingArea;                                           // 0x0860 (size: 0x8)
+    class UBoxComponent* BelowBlockingVolume;                                         // 0x0868 (size: 0x8)
+    class USoundCue* SwitchSound;                                                     // 0x0870 (size: 0x8)
+    class USoundCue* OpenedSound;                                                     // 0x0878 (size: 0x8)
+    class USoundCue* ClosedSound;                                                     // 0x0880 (size: 0x8)
+    class UAudioComponent* MovingLoop;                                                // 0x0888 (size: 0x8)
+    class USceneComponent* Ladder1Location;                                           // 0x0890 (size: 0x8)
+    class USceneComponent* Ladder2Location;                                           // 0x0898 (size: 0x8)
+    class ALadder* Ladder1;                                                           // 0x08A0 (size: 0x8)
+    class ALadder* Ladder2;                                                           // 0x08A8 (size: 0x8)
+    TSubclassOf<class ALadder> LadderType;                                            // 0x08B0 (size: 0x8)
+    float BridgeOpenDuration;                                                         // 0x08B8 (size: 0x4)
+    bool bIsRailBridge;                                                               // 0x08BC (size: 0x1)
+    class ARailwayTrack* LinkedTrack;                                                 // 0x08C0 (size: 0x8)
+    FBridgeSideState SideAState;                                                      // 0x08C8 (size: 0x1)
+    FBridgeSideState SideBState;                                                      // 0x08C9 (size: 0x1)
+    TEnumAsByte<EBridgeState> State;                                                  // 0x08CA (size: 0x1)
+    float StartTime;                                                                  // 0x08CC (size: 0x4)
 
     void OnRep_State();
     void OnRep_StartTime();
@@ -7714,14 +7706,14 @@ class ADrawbridge : public ABuildableStructure
     void MulticastPlaySideToggleEffect(TEnumAsByte<EBridgeSide> BridgeSide);
     float GetProgress();
     void ApplyVehicleDecay();
-}; // Size: 0x8E0
+}; // Size: 0x8F0
 
 class ADrawbridgeBuildSite : public AStructureBuildSite
 {
-    class UPersistentProxyComponent* SideAProxy;                                      // 0x07E0 (size: 0x8)
-    class UPersistentProxyComponent* SideBProxy;                                      // 0x07E8 (size: 0x8)
+    class UPersistentProxyComponent* SideAProxy;                                      // 0x07F0 (size: 0x8)
+    class UPersistentProxyComponent* SideBProxy;                                      // 0x07F8 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AEffectSpawnerProxy : public AActor
 {
@@ -7734,53 +7726,53 @@ class AEffectSpawnerProxy : public AActor
 
 class AEmplacedArtillery : public AEmplacedWeapon
 {
-    uint8 RequiredSquadMembers;                                                       // 0x08D0 (size: 0x1)
-    int32 SquadId;                                                                    // 0x08D4 (size: 0x4)
+    uint8 RequiredSquadMembers;                                                       // 0x08E0 (size: 0x1)
+    int32 SquadId;                                                                    // 0x08E4 (size: 0x4)
 
-}; // Size: 0x8E0
+}; // Size: 0x8F0
 
 class AEmplacedStructure : public ATeamStructure
 {
-    float EmplacedIncomingDamageModifier;                                             // 0x0810 (size: 0x4)
+    float EmplacedIncomingDamageModifier;                                             // 0x0820 (size: 0x4)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AEmplacedWeapon : public AEmplacedStructure
 {
-    float EmplacedTrackingModifier;                                                   // 0x0820 (size: 0x4)
-    class USkeletalMeshComponent* Mesh;                                               // 0x0828 (size: 0x8)
-    class USkeletalMeshComponent* FoundationMesh;                                     // 0x0830 (size: 0x8)
-    FVector2D GunnerYawAndPitch;                                                      // 0x0838 (size: 0x8)
-    int32 StashedAmmo;                                                                // 0x0840 (size: 0x4)
-    FName StashedAmmoType;                                                            // 0x0844 (size: 0x8)
-    TArray<FMuzzleInfo> MuzzleInfo;                                                   // 0x0850 (size: 0x10)
-    FPayloadMeshes PayloadMeshes;                                                     // 0x0860 (size: 0x58)
+    float EmplacedTrackingModifier;                                                   // 0x0830 (size: 0x4)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0838 (size: 0x8)
+    class USkeletalMeshComponent* FoundationMesh;                                     // 0x0840 (size: 0x8)
+    FVector2D GunnerYawAndPitch;                                                      // 0x0848 (size: 0x8)
+    int32 StashedAmmo;                                                                // 0x0850 (size: 0x4)
+    FName StashedAmmoType;                                                            // 0x0854 (size: 0x8)
+    TArray<FMuzzleInfo> MuzzleInfo;                                                   // 0x0860 (size: 0x10)
+    FPayloadMeshes PayloadMeshes;                                                     // 0x0870 (size: 0x58)
 
     void OnRep_StashedAmmo();
-}; // Size: 0x8D0
+}; // Size: 0x8E0
 
 class AEmplacedWeaponWithShieldedSeat : public AEmplacedWeapon
 {
-}; // Size: 0x8D0
+}; // Size: 0x8E0
 
 class AEmplacementHouse : public ATunnelNode
 {
-    class USkeletalMeshComponent* EmplacementGunMesh;                                 // 0x0848 (size: 0x8)
-    class USceneComponent* EmplacementGunMuzzleLocation;                              // 0x0850 (size: 0x8)
-    TSubclassOf<class ALadder> LadderType;                                            // 0x0858 (size: 0x8)
-    class USceneComponent* LadderLocation;                                            // 0x0860 (size: 0x8)
-    float TimeToStarvation;                                                           // 0x0868 (size: 0x4)
-    float AnimationHysteresisTime;                                                    // 0x086C (size: 0x4)
-    int32 StashedAmmo;                                                                // 0x0870 (size: 0x4)
-    FName StashedAmmoType;                                                            // 0x0874 (size: 0x8)
-    FVector2D GunnerYawAndPitch;                                                      // 0x087C (size: 0x8)
-    class ALadder* Ladder;                                                            // 0x0888 (size: 0x8)
+    class USkeletalMeshComponent* EmplacementGunMesh;                                 // 0x0858 (size: 0x8)
+    class USceneComponent* EmplacementGunMuzzleLocation;                              // 0x0860 (size: 0x8)
+    TSubclassOf<class ALadder> LadderType;                                            // 0x0868 (size: 0x8)
+    class USceneComponent* LadderLocation;                                            // 0x0870 (size: 0x8)
+    float TimeToStarvation;                                                           // 0x0878 (size: 0x4)
+    float AnimationHysteresisTime;                                                    // 0x087C (size: 0x4)
+    int32 StashedAmmo;                                                                // 0x0880 (size: 0x4)
+    FName StashedAmmoType;                                                            // 0x0884 (size: 0x8)
+    FVector2D GunnerYawAndPitch;                                                      // 0x088C (size: 0x8)
+    class ALadder* Ladder;                                                            // 0x0898 (size: 0x8)
 
-}; // Size: 0x8B0
+}; // Size: 0x8C0
 
 class AEmplacementHouseBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AEngineRailVehicle : public ARailVehicle
 {
@@ -7805,22 +7797,22 @@ class AEngineRailVehicle : public ARailVehicle
 
 class AEngineRoom : public AFacilityRefinery
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0A58 (size: 0x8)
-    class UAnimMontage* AnimMontage;                                                  // 0x0A60 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0A68 (size: 0x8)
+    class UAnimMontage* AnimMontage;                                                  // 0x0A70 (size: 0x8)
 
-}; // Size: 0xA70
+}; // Size: 0xA80
 
 class AEngineRoomBuildSite : public AFacilityRefineryBuildSite
 {
-}; // Size: 0x850
+}; // Size: 0x860
 
 class AEngineeringCenter : public ATeamStructure
 {
-}; // Size: 0x810
+}; // Size: 0x820
 
 class AEngineeringCenterBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AEnvironmentModification : public AActor
 {
@@ -7892,27 +7884,27 @@ class AExplosiveAmmoPickup : public AAmmoPickup
 
 class AFacilityRefinery : public ATeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0818 (size: 0x8)
-    class UGenericStockpileComponent* CrateGenericStockpileComponent;                 // 0x0820 (size: 0x8)
-    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0828 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0830 (size: 0x8)
-    class UBuildSocketComponent* PowerSocket;                                         // 0x0838 (size: 0x8)
-    class UFacilityLightComponent* LightComponent;                                    // 0x0840 (size: 0x8)
-    class USceneComponent* TransferLocation;                                          // 0x0848 (size: 0x8)
-    TArray<FMultiConversionInfo> ConversionEntries;                                   // 0x0850 (size: 0x10)
-    TMap<class EFortModificationType, class FFacilityModification> Modifications;     // 0x0860 (size: 0x50)
-    FName RequiredResourceFieldCodeName;                                              // 0x08B0 (size: 0x8)
-    TArray<FFuelTank> FuelTanks;                                                      // 0x08B8 (size: 0x10)
-    FPowerGridInfo PowerGridInfo;                                                     // 0x08C8 (size: 0x5C)
-    FReservePower ReservePower;                                                       // 0x0924 (size: 0x8)
-    bool bAlwaysSetOrdersToBlocked;                                                   // 0x092C (size: 0x1)
-    int8 ReplicatedIndex;                                                             // 0x092D (size: 0x1)
-    bool bReplicatedIsActive;                                                         // 0x092E (size: 0x1)
-    uint8 MaxOrders;                                                                  // 0x092F (size: 0x1)
-    TArray<FFacilityRefineryOrder> PendingOrders;                                     // 0x0938 (size: 0x10)
-    TArray<FFacilityRefineryOrder> Orders;                                            // 0x0948 (size: 0x10)
-    TArray<FFacilityRefineryOrder> CompletedOrders;                                   // 0x0958 (size: 0x10)
-    int32 ItemInputBuffer;                                                            // 0x0A08 (size: 0x4)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0828 (size: 0x8)
+    class UGenericStockpileComponent* CrateGenericStockpileComponent;                 // 0x0830 (size: 0x8)
+    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0838 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0840 (size: 0x8)
+    class UBuildSocketComponent* PowerSocket;                                         // 0x0848 (size: 0x8)
+    class UFacilityLightComponent* LightComponent;                                    // 0x0850 (size: 0x8)
+    class USceneComponent* TransferLocation;                                          // 0x0858 (size: 0x8)
+    TArray<FMultiConversionInfo> ConversionEntries;                                   // 0x0860 (size: 0x10)
+    TMap<class EFortModificationType, class FFacilityModification> Modifications;     // 0x0870 (size: 0x50)
+    FName RequiredResourceFieldCodeName;                                              // 0x08C0 (size: 0x8)
+    TArray<FFuelTank> FuelTanks;                                                      // 0x08C8 (size: 0x10)
+    FPowerGridInfo PowerGridInfo;                                                     // 0x08D8 (size: 0x5C)
+    FReservePower ReservePower;                                                       // 0x0934 (size: 0x8)
+    bool bAlwaysSetOrdersToBlocked;                                                   // 0x093C (size: 0x1)
+    int8 ReplicatedIndex;                                                             // 0x093D (size: 0x1)
+    bool bReplicatedIsActive;                                                         // 0x093E (size: 0x1)
+    uint8 MaxOrders;                                                                  // 0x093F (size: 0x1)
+    TArray<FFacilityRefineryOrder> PendingOrders;                                     // 0x0948 (size: 0x10)
+    TArray<FFacilityRefineryOrder> Orders;                                            // 0x0958 (size: 0x10)
+    TArray<FFacilityRefineryOrder> CompletedOrders;                                   // 0x0968 (size: 0x10)
+    int32 ItemInputBuffer;                                                            // 0x0A18 (size: 0x4)
 
     void OnRep_ReplicatedIsActive();
     void OnRep_ReplicatedIndex();
@@ -7920,28 +7912,28 @@ class AFacilityRefinery : public ATeamStructure
     void MulticastSetMaxOrderCount(const uint8 MaxOrderCount);
     void BPOnStateInactive();
     void BPOnStateActive();
-}; // Size: 0xA60
+}; // Size: 0xA70
 
 class AFacilityRefineryBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
-    class UGenericStockpileComponent* CrateGenericStockpileComponent;                 // 0x07E8 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07F0 (size: 0x8)
-    TArray<FFuelTank> FuelTanks;                                                      // 0x07F8 (size: 0x10)
-    TArray<FFacilityRefineryOrder> PendingOrders;                                     // 0x0808 (size: 0x10)
-    TArray<FFacilityRefineryOrder> Orders;                                            // 0x0818 (size: 0x10)
-    TArray<FFacilityRefineryOrder> CompletedOrders;                                   // 0x0828 (size: 0x10)
-    int32 ItemInputBuffer;                                                            // 0x0838 (size: 0x4)
-    FReservePower ReservePower;                                                       // 0x083C (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
+    class UGenericStockpileComponent* CrateGenericStockpileComponent;                 // 0x07F8 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0800 (size: 0x8)
+    TArray<FFuelTank> FuelTanks;                                                      // 0x0808 (size: 0x10)
+    TArray<FFacilityRefineryOrder> PendingOrders;                                     // 0x0818 (size: 0x10)
+    TArray<FFacilityRefineryOrder> Orders;                                            // 0x0828 (size: 0x10)
+    TArray<FFacilityRefineryOrder> CompletedOrders;                                   // 0x0838 (size: 0x10)
+    int32 ItemInputBuffer;                                                            // 0x0848 (size: 0x4)
+    FReservePower ReservePower;                                                       // 0x084C (size: 0x8)
 
-}; // Size: 0x850
+}; // Size: 0x860
 
 class AFestivalFlagHolder : public ATeamStructure
 {
-    class UCapsuleComponent* DropOffLocation;                                         // 0x0810 (size: 0x8)
+    class UCapsuleComponent* DropOffLocation;                                         // 0x0820 (size: 0x8)
 
     void OnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AFestivalFlagPickUp : public AItemPickup
 {
@@ -7953,24 +7945,24 @@ class AFestivalFlagPickUp : public AItemPickup
 
 class AFestivalPortal : public ABuildableStructure
 {
-    class USceneComponent* TeleportLocation;                                          // 0x07F0 (size: 0x8)
-    FString Name;                                                                     // 0x07F8 (size: 0x10)
-    FString Destination;                                                              // 0x0808 (size: 0x10)
+    class USceneComponent* TeleportLocation;                                          // 0x0800 (size: 0x8)
+    FString Name;                                                                     // 0x0808 (size: 0x10)
+    FString Destination;                                                              // 0x0818 (size: 0x10)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AFieldBridge : public ABuildableStructure
 {
-    class UStaticMeshComponent* FrontRamp;                                            // 0x07F0 (size: 0x8)
-    class UStaticMeshComponent* BackRamp;                                             // 0x07F8 (size: 0x8)
-    class UBoxComponent* FrontKillVolume;                                             // 0x0800 (size: 0x8)
-    class UBoxComponent* BackKillVolume;                                              // 0x0808 (size: 0x8)
+    class UStaticMeshComponent* FrontRamp;                                            // 0x0800 (size: 0x8)
+    class UStaticMeshComponent* BackRamp;                                             // 0x0808 (size: 0x8)
+    class UBoxComponent* FrontKillVolume;                                             // 0x0810 (size: 0x8)
+    class UBoxComponent* BackKillVolume;                                              // 0x0818 (size: 0x8)
 
-}; // Size: 0x810
+}; // Size: 0x820
 
 class AFieldBridgeBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AFieldMachineGun : public ARWDSimVehicle
 {
@@ -7986,9 +7978,9 @@ class AFieldMachineGun : public ARWDSimVehicle
 
 class AFieldPier : public ABuildableStructure
 {
-    float ShippableZOffset;                                                           // 0x07F0 (size: 0x4)
+    float ShippableZOffset;                                                           // 0x0800 (size: 0x4)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AFireBarrel : public AActor
 {
@@ -8025,17 +8017,17 @@ class AFireInfo : public AInfo
 
 class AFirePit : public ABuildableStructure
 {
-    class UTemperatureModifierSphereComponent* TemperatureModifierComponent;          // 0x07F0 (size: 0x8)
-    class UStaticMeshComponent* FireMesh;                                             // 0x07F8 (size: 0x8)
-    class UParticleSystemComponent* Fire1ParticleSystem;                              // 0x0800 (size: 0x8)
-    class UParticleSystemComponent* Fire2ParticleSystem;                              // 0x0808 (size: 0x8)
-    class UParticleSystemComponent* Fire3ParticleSystem;                              // 0x0810 (size: 0x8)
-    class UAudioComponent* FireSFXLoop;                                               // 0x0818 (size: 0x8)
-    FFuelTank FuelTankDiesel;                                                         // 0x0820 (size: 0x14)
-    float DieselConsumptionRate;                                                      // 0x0834 (size: 0x4)
+    class UTemperatureModifierSphereComponent* TemperatureModifierComponent;          // 0x0800 (size: 0x8)
+    class UStaticMeshComponent* FireMesh;                                             // 0x0808 (size: 0x8)
+    class UParticleSystemComponent* Fire1ParticleSystem;                              // 0x0810 (size: 0x8)
+    class UParticleSystemComponent* Fire2ParticleSystem;                              // 0x0818 (size: 0x8)
+    class UParticleSystemComponent* Fire3ParticleSystem;                              // 0x0820 (size: 0x8)
+    class UAudioComponent* FireSFXLoop;                                               // 0x0828 (size: 0x8)
+    FFuelTank FuelTankDiesel;                                                         // 0x0830 (size: 0x14)
+    float DieselConsumptionRate;                                                      // 0x0844 (size: 0x4)
 
     void OnRep_FuelTankDiesel();
-}; // Size: 0x850
+}; // Size: 0x860
 
 class AFirearmPickup : public AGearPickup
 {
@@ -8094,189 +8086,189 @@ class AFlatbedTruck : public ARWDSimVehicle
 
 class AFort : public ABuildableStructure
 {
-    bool bSupportsEmplacedStructures;                                                 // 0x07F0 (size: 0x1)
-    class UBoxComponent* EmplacementLocation;                                         // 0x07F8 (size: 0x8)
-    float MinUpgradeTargetDistance;                                                   // 0x0800 (size: 0x4)
-    FVector ObstructionCheckOverrideExtents;                                          // 0x0804 (size: 0xC)
-    TWeakObjectPtr<class AEmplacedStructure> EmplacedStructure;                       // 0x0810 (size: 0x8)
+    bool bSupportsEmplacedStructures;                                                 // 0x0800 (size: 0x1)
+    class UBoxComponent* EmplacementLocation;                                         // 0x0808 (size: 0x8)
+    float MinUpgradeTargetDistance;                                                   // 0x0810 (size: 0x4)
+    FVector ObstructionCheckOverrideExtents;                                          // 0x0814 (size: 0xC)
+    TWeakObjectPtr<class AEmplacedStructure> EmplacedStructure;                       // 0x0820 (size: 0x8)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AFortArtilleryShelter : public AFort
 {
-    float BaseShelterBonus;                                                           // 0x0818 (size: 0x4)
+    float BaseShelterBonus;                                                           // 0x0828 (size: 0x4)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AFortBuildSite : public AFortBuildSiteBase
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AFortBuildSiteBase : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AFortConnector : public AFort
 {
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AFortConnectorBuildSite : public AFortBuildSiteBase
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AFortCorner : public AFort
 {
-    TArray<FName> IncompatibleCornerSockets;                                          // 0x0818 (size: 0x10)
-
-}; // Size: 0x830
-
-class AFortCornerBuildSite : public AFortBuildSiteBase
-{
-}; // Size: 0x7E0
-
-class AFortEmp : public ATeamStructure
-{
-    class UStaticMeshComponent* FirstSegmentMesh;                                     // 0x0818 (size: 0x8)
-    class UStaticMeshComponent* SecondSegmentMesh;                                    // 0x0820 (size: 0x8)
-    class UBoxComponent* BuildLocation;                                               // 0x0828 (size: 0x8)
-    class UBoxComponent* LRArtilleryObstructionShape;                                 // 0x0830 (size: 0x8)
-    class UBoxComponent* IntelCenterObstructionShape;                                 // 0x0838 (size: 0x8)
-    class UBoxComponent* WeatherStationObstructionShape;                              // 0x0840 (size: 0x8)
-    class UBoxComponent* FortGarrisonStationObstructionShape;                         // 0x0848 (size: 0x8)
-    FFortEmpConfig FortEmpConfig;                                                     // 0x0850 (size: 0x60)
-    EFortEmpStructure FortEmpSelectedStructure;                                       // 0x08B0 (size: 0x1)
-    uint8 RequiredSquadMembers;                                                       // 0x08B1 (size: 0x1)
-    int32 SquadId;                                                                    // 0x08B4 (size: 0x4)
-
-}; // Size: 0x8C0
-
-class AFortFirePit : public AFort
-{
-    FFuelTank FuelTankDiesel;                                                         // 0x0818 (size: 0x14)
-
-    void OnRep_FuelTankDiesel();
-}; // Size: 0x830
-
-class AFortFireSuppression : public ATeamStructure
-{
-    class UPowerConsumerComponent* PowerConsumerComponent;                            // 0x0810 (size: 0x8)
-    FFuelTank WaterTank;                                                              // 0x0818 (size: 0x14)
-    bool bIsDispensingWater;                                                          // 0x082C (size: 0x1)
-    class UParticleSystemComponent* SprinklerVFXComponent;                            // 0x0830 (size: 0x8)
-    class UAudioComponent* PumpingLoopComponent;                                      // 0x0838 (size: 0x8)
-    class UParticleSystemComponent* SteamVFXComponent;                                // 0x0840 (size: 0x8)
-    FName PipeInputAssociatedSocketName;                                              // 0x0848 (size: 0x8)
-    float DispenseAmountPerSec;                                                       // 0x0850 (size: 0x4)
-
-    void OnRep_IsDispensingWater();
-}; // Size: 0x860
-
-class AFortFireSuppressionBuildSite : public AStructureBuildSite
-{
-    FFuelTank WaterTank;                                                              // 0x07E0 (size: 0x14)
-
-}; // Size: 0x800
-
-class AFortForwardBase : public AForwardBase
-{
-    class USceneComponent* LadderLocation;                                            // 0x08C0 (size: 0x8)
-    TSubclassOf<class ALadder> LadderType;                                            // 0x08C8 (size: 0x8)
-    class ALadder* Ladder;                                                            // 0x08D0 (size: 0x8)
-
-}; // Size: 0x8E0
-
-class AFortForwardBaseBuildSite : public ABaseBuildSite
-{
-}; // Size: 0x850
-
-class AFortGarrisonStation : public ATeamStructure
-{
-    class UStaticMeshComponent* RoofMesh;                                             // 0x0818 (size: 0x8)
-    class UStaticMeshComponent* BasementMesh;                                         // 0x0820 (size: 0x8)
-    class UStaticMeshComponent* GroundStaircaseMesh;                                  // 0x0828 (size: 0x8)
-    class UBoatHullComponent* BoatHullComponent;                                      // 0x0830 (size: 0x8)
-    class USafeHouseVisibilityToggleComponent* VisibilityToggleComponent;             // 0x0838 (size: 0x8)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0840 (size: 0x8)
-    FSpawnPoints SpawnPoints;                                                         // 0x0848 (size: 0x28)
-
-}; // Size: 0x870
-
-class AFortObservation : public ATeamStructure
-{
-    FVector ObstructionCheckOverrideExtents;                                          // 0x0810 (size: 0xC)
-    class UMapIntelligenceSourceComponent* MapIntelligenceSource;                     // 0x0820 (size: 0x8)
-    class UPowerConsumerComponent* PowerConsumerComponent;                            // 0x0828 (size: 0x8)
-    class UTeamFlagMeshComponent* TeamFlagMeshComponent;                              // 0x0830 (size: 0x8)
+    TArray<FName> IncompatibleCornerSockets;                                          // 0x0828 (size: 0x10)
 
 }; // Size: 0x840
 
-class AFortStaticArtillery : public ATunnelNode
-{
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0848 (size: 0x8)
-    class UTeamFlagMeshComponent* FlagMesh;                                           // 0x0850 (size: 0x8)
-    class UParticleSystemComponent* FireShellParticleSystem;                          // 0x0858 (size: 0x8)
-    float MinDistance;                                                                // 0x0860 (size: 0x4)
-    float MaxDistance;                                                                // 0x0864 (size: 0x4)
-    float FiringAngle;                                                                // 0x0868 (size: 0x4)
-    float FiringCooldown;                                                             // 0x086C (size: 0x4)
-    float MinVerticalAngle;                                                           // 0x0870 (size: 0x4)
-    float MaxVerticalAngle;                                                           // 0x0874 (size: 0x4)
-    FStaticArtilleryDamageParams DamageParams;                                        // 0x0878 (size: 0x30)
-    float InitialDelay;                                                               // 0x08A8 (size: 0x4)
-    float ExplosionDelay;                                                             // 0x08AC (size: 0x4)
-    float HorizontalAngle;                                                            // 0x08B0 (size: 0x4)
-    float VerticalAngle;                                                              // 0x08B4 (size: 0x4)
-    bool bIsFiring;                                                                   // 0x08B8 (size: 0x1)
-
-    void OnRep_IsFiring();
-}; // Size: 0x8F0
-
-class AFortTurret : public AFoxholeTurret
-{
-}; // Size: 0x8A0
-
-class AFortTurretAT : public AGunTurret
-{
-}; // Size: 0x8C0
-
-class AFortTurretMG : public AFortTurret
-{
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0898 (size: 0x8)
-
-}; // Size: 0x8A0
-
-class AForwardBase : public AOutpost
-{
-    class UTeamFlagMeshComponent* TeamFlagMeshComponent;                              // 0x08B8 (size: 0x8)
-
-}; // Size: 0x8C0
-
-class AFoundation : public ATeamStructure
-{
-}; // Size: 0x810
-
-class AFoundationBuildSite : public AStructureBuildSite
-{
-}; // Size: 0x7E0
-
-class AFoxhole : public ABuildableStructure
+class AFortCornerBuildSite : public AFortBuildSiteBase
 {
 }; // Size: 0x7F0
 
+class AFortEmp : public ATeamStructure
+{
+    class UStaticMeshComponent* FirstSegmentMesh;                                     // 0x0828 (size: 0x8)
+    class UStaticMeshComponent* SecondSegmentMesh;                                    // 0x0830 (size: 0x8)
+    class UBoxComponent* BuildLocation;                                               // 0x0838 (size: 0x8)
+    class UBoxComponent* LRArtilleryObstructionShape;                                 // 0x0840 (size: 0x8)
+    class UBoxComponent* IntelCenterObstructionShape;                                 // 0x0848 (size: 0x8)
+    class UBoxComponent* WeatherStationObstructionShape;                              // 0x0850 (size: 0x8)
+    class UBoxComponent* FortGarrisonStationObstructionShape;                         // 0x0858 (size: 0x8)
+    FFortEmpConfig FortEmpConfig;                                                     // 0x0860 (size: 0x60)
+    EFortEmpStructure FortEmpSelectedStructure;                                       // 0x08C0 (size: 0x1)
+    uint8 RequiredSquadMembers;                                                       // 0x08C1 (size: 0x1)
+    int32 SquadId;                                                                    // 0x08C4 (size: 0x4)
+
+}; // Size: 0x8D0
+
+class AFortFirePit : public AFort
+{
+    FFuelTank FuelTankDiesel;                                                         // 0x0828 (size: 0x14)
+
+    void OnRep_FuelTankDiesel();
+}; // Size: 0x840
+
+class AFortFireSuppression : public ATeamStructure
+{
+    class UPowerConsumerComponent* PowerConsumerComponent;                            // 0x0820 (size: 0x8)
+    FFuelTank WaterTank;                                                              // 0x0828 (size: 0x14)
+    bool bIsDispensingWater;                                                          // 0x083C (size: 0x1)
+    class UParticleSystemComponent* SprinklerVFXComponent;                            // 0x0840 (size: 0x8)
+    class UAudioComponent* PumpingLoopComponent;                                      // 0x0848 (size: 0x8)
+    class UParticleSystemComponent* SteamVFXComponent;                                // 0x0850 (size: 0x8)
+    FName PipeInputAssociatedSocketName;                                              // 0x0858 (size: 0x8)
+    float DispenseAmountPerSec;                                                       // 0x0860 (size: 0x4)
+
+    void OnRep_IsDispensingWater();
+}; // Size: 0x870
+
+class AFortFireSuppressionBuildSite : public AStructureBuildSite
+{
+    FFuelTank WaterTank;                                                              // 0x07F0 (size: 0x14)
+
+}; // Size: 0x810
+
+class AFortForwardBase : public AForwardBase
+{
+    class USceneComponent* LadderLocation;                                            // 0x08D0 (size: 0x8)
+    TSubclassOf<class ALadder> LadderType;                                            // 0x08D8 (size: 0x8)
+    class ALadder* Ladder;                                                            // 0x08E0 (size: 0x8)
+
+}; // Size: 0x8F0
+
+class AFortForwardBaseBuildSite : public ABaseBuildSite
+{
+}; // Size: 0x860
+
+class AFortGarrisonStation : public ATeamStructure
+{
+    class UStaticMeshComponent* RoofMesh;                                             // 0x0828 (size: 0x8)
+    class UStaticMeshComponent* BasementMesh;                                         // 0x0830 (size: 0x8)
+    class UStaticMeshComponent* GroundStaircaseMesh;                                  // 0x0838 (size: 0x8)
+    class UBoatHullComponent* BoatHullComponent;                                      // 0x0840 (size: 0x8)
+    class USafeHouseVisibilityToggleComponent* VisibilityToggleComponent;             // 0x0848 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0850 (size: 0x8)
+    FSpawnPoints SpawnPoints;                                                         // 0x0858 (size: 0x28)
+
+}; // Size: 0x880
+
+class AFortObservation : public ATeamStructure
+{
+    FVector ObstructionCheckOverrideExtents;                                          // 0x0820 (size: 0xC)
+    class UMapIntelligenceSourceComponent* MapIntelligenceSource;                     // 0x0830 (size: 0x8)
+    class UPowerConsumerComponent* PowerConsumerComponent;                            // 0x0838 (size: 0x8)
+    class UTeamFlagMeshComponent* TeamFlagMeshComponent;                              // 0x0840 (size: 0x8)
+
+}; // Size: 0x850
+
+class AFortStaticArtillery : public ATunnelNode
+{
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0858 (size: 0x8)
+    class UTeamFlagMeshComponent* FlagMesh;                                           // 0x0860 (size: 0x8)
+    class UParticleSystemComponent* FireShellParticleSystem;                          // 0x0868 (size: 0x8)
+    float MinDistance;                                                                // 0x0870 (size: 0x4)
+    float MaxDistance;                                                                // 0x0874 (size: 0x4)
+    float FiringAngle;                                                                // 0x0878 (size: 0x4)
+    float FiringCooldown;                                                             // 0x087C (size: 0x4)
+    float MinVerticalAngle;                                                           // 0x0880 (size: 0x4)
+    float MaxVerticalAngle;                                                           // 0x0884 (size: 0x4)
+    FStaticArtilleryDamageParams DamageParams;                                        // 0x0888 (size: 0x30)
+    float InitialDelay;                                                               // 0x08B8 (size: 0x4)
+    float ExplosionDelay;                                                             // 0x08BC (size: 0x4)
+    float HorizontalAngle;                                                            // 0x08C0 (size: 0x4)
+    float VerticalAngle;                                                              // 0x08C4 (size: 0x4)
+    bool bIsFiring;                                                                   // 0x08C8 (size: 0x1)
+
+    void OnRep_IsFiring();
+}; // Size: 0x900
+
+class AFortTurret : public AFoxholeTurret
+{
+}; // Size: 0x8B0
+
+class AFortTurretAT : public AGunTurret
+{
+}; // Size: 0x8D0
+
+class AFortTurretMG : public AFortTurret
+{
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x08A8 (size: 0x8)
+
+}; // Size: 0x8B0
+
+class AForwardBase : public AOutpost
+{
+    class UTeamFlagMeshComponent* TeamFlagMeshComponent;                              // 0x08C8 (size: 0x8)
+
+}; // Size: 0x8D0
+
+class AFoundation : public ATeamStructure
+{
+}; // Size: 0x820
+
+class AFoundationBuildSite : public AStructureBuildSite
+{
+}; // Size: 0x7F0
+
+class AFoxhole : public ABuildableStructure
+{
+}; // Size: 0x800
+
 class AFoxholeTurret : public ATunnelNode
 {
-    class UAITurretComponent* AITurretComponent;                                      // 0x0848 (size: 0x8)
-    class UAITurretsControllerComponent* AITurretsController;                         // 0x0850 (size: 0x8)
-    class UArrowComponent* MuzzleFlashLocationComponent;                              // 0x0858 (size: 0x8)
-    bool ShouldAggroOnDamage;                                                         // 0x0860 (size: 0x1)
-    bool bUseSquareMuzzleBounds;                                                      // 0x0861 (size: 0x1)
-    bool bIsTutorialTurret;                                                           // 0x0862 (size: 0x1)
-    uint8 bDisallowForwardUpgradeInIsland;                                            // 0x0863 (size: 0x1)
-    bool bLimitOccupantFiringArc;                                                     // 0x0864 (size: 0x1)
-    float MaxOccupantFiringArcDeviation;                                              // 0x0868 (size: 0x4)
-    class UTeamFlagMeshComponent* FlagMesh;                                           // 0x0888 (size: 0x8)
+    class UAITurretComponent* AITurretComponent;                                      // 0x0858 (size: 0x8)
+    class UAITurretsControllerComponent* AITurretsController;                         // 0x0860 (size: 0x8)
+    class UArrowComponent* MuzzleFlashLocationComponent;                              // 0x0868 (size: 0x8)
+    bool ShouldAggroOnDamage;                                                         // 0x0870 (size: 0x1)
+    bool bUseSquareMuzzleBounds;                                                      // 0x0871 (size: 0x1)
+    bool bIsTutorialTurret;                                                           // 0x0872 (size: 0x1)
+    uint8 bDisallowForwardUpgradeInIsland;                                            // 0x0873 (size: 0x1)
+    bool bLimitOccupantFiringArc;                                                     // 0x0874 (size: 0x1)
+    float MaxOccupantFiringArcDeviation;                                              // 0x0878 (size: 0x4)
+    class UTeamFlagMeshComponent* FlagMesh;                                           // 0x0898 (size: 0x8)
 
-}; // Size: 0x8A0
+}; // Size: 0x8B0
 
 class AFreighter : public AShipVehicle
 {
@@ -8305,57 +8297,57 @@ class AFreighter : public AShipVehicle
 
 class AFuelContainer : public AContainer
 {
-    FFuelTankerInfo FuelTankerInfo;                                                   // 0x0828 (size: 0x98)
+    FFuelTankerInfo FuelTankerInfo;                                                   // 0x0838 (size: 0x98)
 
     void OnRep_FuelTankerInfo();
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class AGarrisonHouse : public ATunnelNode
 {
-    float TimeToStarvation;                                                           // 0x0848 (size: 0x4)
-    FDynamicTierInfo DynamicTierInfo;                                                 // 0x0850 (size: 0x10)
-    class UAITurretsControllerComponent* AITurretsController;                         // 0x0860 (size: 0x8)
+    float TimeToStarvation;                                                           // 0x0858 (size: 0x4)
+    FDynamicTierInfo DynamicTierInfo;                                                 // 0x0860 (size: 0x10)
+    class UAITurretsControllerComponent* AITurretsController;                         // 0x0870 (size: 0x8)
 
     bool IsNeutralHouse();
-}; // Size: 0x870
+}; // Size: 0x880
 
 class AGarrisonHouseBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AGarrisonStation : public AGarrisonHouse
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0878 (size: 0x8)
-    class UTechTreeComponent* TechTreeComponent;                                      // 0x0880 (size: 0x8)
-    class UMapIntelligenceSourceComponent* MapIntelligenceSourceComponent;            // 0x0888 (size: 0x8)
-    float TunnelConnectionRange;                                                      // 0x0890 (size: 0x4)
-    FDecayInfo DecayInfo;                                                             // 0x0894 (size: 0x4)
-    FSpawnPoints SpawnPoints;                                                         // 0x0898 (size: 0x28)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0888 (size: 0x8)
+    class UTechTreeComponent* TechTreeComponent;                                      // 0x0890 (size: 0x8)
+    class UMapIntelligenceSourceComponent* MapIntelligenceSourceComponent;            // 0x0898 (size: 0x8)
+    float TunnelConnectionRange;                                                      // 0x08A0 (size: 0x4)
+    FDecayInfo DecayInfo;                                                             // 0x08A4 (size: 0x4)
+    FSpawnPoints SpawnPoints;                                                         // 0x08A8 (size: 0x28)
 
-}; // Size: 0x8D0
+}; // Size: 0x8E0
 
 class AGarrisonStationBuildSite : public AGarrisonHouseBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E8 (size: 0x8)
-    class UTechTreeComponent* TechTreeComponent;                                      // 0x07F0 (size: 0x8)
-    FSpawnPoints SpawnPoints;                                                         // 0x07F8 (size: 0x28)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F8 (size: 0x8)
+    class UTechTreeComponent* TechTreeComponent;                                      // 0x0800 (size: 0x8)
+    FSpawnPoints SpawnPoints;                                                         // 0x0808 (size: 0x28)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AGate : public ATeamStructure
 {
-    class USoundCue* OpeningSoundCue;                                                 // 0x0810 (size: 0x8)
-    class UBoxComponent* NoBuildCollider;                                             // 0x0818 (size: 0x8)
-    class UBoxComponent* GateObstructionCollider;                                     // 0x0820 (size: 0x8)
-    class UBoxComponent* GateCollider;                                                // 0x0828 (size: 0x8)
-    class USkeletalMeshComponent* GateDoorMesh;                                       // 0x0830 (size: 0x8)
-    FName GateCollisionProfileName;                                                   // 0x0838 (size: 0x8)
-    class UMaterialInterface* GateDoorOverlapMaterial;                                // 0x0840 (size: 0x8)
-    EGateState GateState;                                                             // 0x0848 (size: 0x1)
-    float AutomaticCloseTime;                                                         // 0x084C (size: 0x4)
+    class USoundCue* OpeningSoundCue;                                                 // 0x0820 (size: 0x8)
+    class UBoxComponent* NoBuildCollider;                                             // 0x0828 (size: 0x8)
+    class UBoxComponent* GateObstructionCollider;                                     // 0x0830 (size: 0x8)
+    class UBoxComponent* GateCollider;                                                // 0x0838 (size: 0x8)
+    class USkeletalMeshComponent* GateDoorMesh;                                       // 0x0840 (size: 0x8)
+    FName GateCollisionProfileName;                                                   // 0x0848 (size: 0x8)
+    class UMaterialInterface* GateDoorOverlapMaterial;                                // 0x0850 (size: 0x8)
+    EGateState GateState;                                                             // 0x0858 (size: 0x1)
+    float AutomaticCloseTime;                                                         // 0x085C (size: 0x4)
 
     void OnRep_GateState();
-}; // Size: 0x860
+}; // Size: 0x870
 
 class AGearPickup : public AItemPickup
 {
@@ -8389,12 +8381,12 @@ class AGlobalShippableInfo : public AInfo
 
 class AGunTurret : public AFoxholeTurret
 {
-    class USkeletalMeshComponent* SkelMesh;                                           // 0x0898 (size: 0x8)
-    float GunnerYaw;                                                                  // 0x08A0 (size: 0x4)
+    class USkeletalMeshComponent* SkelMesh;                                           // 0x08A8 (size: 0x8)
+    float GunnerYaw;                                                                  // 0x08B0 (size: 0x4)
 
     void OnRep_GunnerYaw();
     float GetTrackingAngle();
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class AGunboat : public AShipVehicle
 {
@@ -8454,25 +8446,25 @@ class AHeadlessPlayerController : public ASimPlayerController
 
 class AHomeRegionBase : public AStaticBase
 {
-    int32 SpawnPriority;                                                              // 0x08F0 (size: 0x4)
+    int32 SpawnPriority;                                                              // 0x0900 (size: 0x4)
 
-}; // Size: 0x900
+}; // Size: 0x910
 
 class AHospital : public ATeamStructure
 {
-    class UHospitalComponent* HospitalComponent;                                      // 0x0818 (size: 0x8)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0820 (size: 0x8)
-    FSpawnPoints SpawnPoints;                                                         // 0x0828 (size: 0x28)
+    class UHospitalComponent* HospitalComponent;                                      // 0x0828 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0830 (size: 0x8)
+    FSpawnPoints SpawnPoints;                                                         // 0x0838 (size: 0x28)
 
-}; // Size: 0x850
+}; // Size: 0x860
 
 class AHospitalBuildSite : public AFortBuildSite
 {
-    class UHospitalComponent* HospitalComponent;                                      // 0x07E8 (size: 0x8)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
-    FSpawnPoints SpawnPoints;                                                         // 0x07F8 (size: 0x28)
+    class UHospitalComponent* HospitalComponent;                                      // 0x07F8 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0800 (size: 0x8)
+    FSpawnPoints SpawnPoints;                                                         // 0x0808 (size: 0x28)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AImpactEffect : public AActor
 {
@@ -8496,24 +8488,24 @@ class AInfantryRailVehicle : public ARailVehicle
 
 class AIntelCenter : public ATeamStructure
 {
-    class USkeletalMeshComponent* Mesh;                                               // 0x0818 (size: 0x8)
-    class USkeletalMeshComponent* BaseMesh;                                           // 0x0820 (size: 0x8)
-    class UAudioComponent* RotationSFXLoop;                                           // 0x0828 (size: 0x8)
-    class UAudioComponent* ListeningSFXLoop;                                          // 0x0830 (size: 0x8)
-    class USoundBase* StartListeningSound;                                            // 0x0838 (size: 0x8)
-    class USoundBase* EndListeningSound;                                              // 0x0840 (size: 0x8)
-    float RequiredPowerForFiring;                                                     // 0x0848 (size: 0x4)
-    float RequiredPowerForRotation;                                                   // 0x084C (size: 0x4)
-    uint8 RequiredSquadMembers;                                                       // 0x0851 (size: 0x1)
-    int32 SquadId;                                                                    // 0x0854 (size: 0x4)
-    FVector2D GunnerYawAndPitch;                                                      // 0x0858 (size: 0x8)
-    float LastListenEndTime;                                                          // 0x0860 (size: 0x4)
-    float ListenTimeRemaining;                                                        // 0x0864 (size: 0x4)
-    FRocketLaunchCodeInfo LaunchCodeInfo;                                             // 0x0868 (size: 0x1C)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0828 (size: 0x8)
+    class USkeletalMeshComponent* BaseMesh;                                           // 0x0830 (size: 0x8)
+    class UAudioComponent* RotationSFXLoop;                                           // 0x0838 (size: 0x8)
+    class UAudioComponent* ListeningSFXLoop;                                          // 0x0840 (size: 0x8)
+    class USoundBase* StartListeningSound;                                            // 0x0848 (size: 0x8)
+    class USoundBase* EndListeningSound;                                              // 0x0850 (size: 0x8)
+    float RequiredPowerForFiring;                                                     // 0x0858 (size: 0x4)
+    float RequiredPowerForRotation;                                                   // 0x085C (size: 0x4)
+    uint8 RequiredSquadMembers;                                                       // 0x0861 (size: 0x1)
+    int32 SquadId;                                                                    // 0x0864 (size: 0x4)
+    FVector2D GunnerYawAndPitch;                                                      // 0x0868 (size: 0x8)
+    float LastListenEndTime;                                                          // 0x0870 (size: 0x4)
+    float ListenTimeRemaining;                                                        // 0x0874 (size: 0x4)
+    FRocketLaunchCodeInfo LaunchCodeInfo;                                             // 0x0878 (size: 0x1C)
 
     void OnRep_LastListenEndTime(const float Previous);
     void OnRep_GunnerYawAndPitch(const FVector2D PreviousGunnerYawAndPitch);
-}; // Size: 0x8A0
+}; // Size: 0x8B0
 
 class AItemCratePickup : public AItemPickup
 {
@@ -8562,21 +8554,21 @@ class AItemProfileTable : public AInfo
 
 class AItemStash : public ATeamStructure
 {
-    float DecayTime;                                                                  // 0x0810 (size: 0x4)
-    float DespawnIfEmptyTime;                                                         // 0x0814 (size: 0x4)
-    class UBoxComponent* CollisionBox;                                                // 0x0818 (size: 0x8)
+    float DecayTime;                                                                  // 0x0820 (size: 0x4)
+    float DespawnIfEmptyTime;                                                         // 0x0824 (size: 0x4)
+    class UBoxComponent* CollisionBox;                                                // 0x0828 (size: 0x8)
 
-}; // Size: 0x830
+}; // Size: 0x840
 
 class AKeep : public AForwardBase
 {
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class AKeepBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ALadder : public AActor
 {
@@ -8695,9 +8687,9 @@ class ALightTank : public ATankBase
 
 class ALimitedVulnerabilityStructure : public ABuildableStructure
 {
-    TSubclassOf<class UDamageType> VulnerableDamageType;                              // 0x07F0 (size: 0x8)
+    TSubclassOf<class UDamageType> VulnerableDamageType;                              // 0x0800 (size: 0x8)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class ALineOfSightVisualizationActor : public AActor
 {
@@ -8715,19 +8707,19 @@ class ALineOfSightVisualizationActor : public AActor
 
 class ALiquidTransferStation : public AResourceTransferStation
 {
-    TArray<FFuelQuantity> FuelInputBuffers;                                           // 0x0820 (size: 0x10)
-    FFuelQuantity FuelOutputBuffer;                                                   // 0x0830 (size: 0xC)
-    class UBuildSocketComponent* InputSocket;                                         // 0x0840 (size: 0x8)
-    class UBuildSocketComponent* OutputSocket;                                        // 0x0848 (size: 0x8)
+    TArray<FFuelQuantity> FuelInputBuffers;                                           // 0x0830 (size: 0x10)
+    FFuelQuantity FuelOutputBuffer;                                                   // 0x0840 (size: 0xC)
+    class UBuildSocketComponent* InputSocket;                                         // 0x0850 (size: 0x8)
+    class UBuildSocketComponent* OutputSocket;                                        // 0x0858 (size: 0x8)
 
-}; // Size: 0x850
+}; // Size: 0x860
 
 class ALiquidTransferStationBuildSite : public AStructureBuildSite
 {
-    TArray<FFuelQuantity> FuelInputBuffers;                                           // 0x07E0 (size: 0x10)
-    FFuelQuantity FuelOutputBuffer;                                                   // 0x07F0 (size: 0xC)
+    TArray<FFuelQuantity> FuelInputBuffers;                                           // 0x07F0 (size: 0x10)
+    FFuelQuantity FuelOutputBuffer;                                                   // 0x0800 (size: 0xC)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AListeningArea : public AActor
 {
@@ -8738,23 +8730,23 @@ class AListeningArea : public AActor
 
 class ALongRangeArtillery : public ATeamStructure
 {
-    class USkeletalMeshComponent* Mesh;                                               // 0x0820 (size: 0x8)
-    class USkeletalMeshComponent* BaseMesh;                                           // 0x0828 (size: 0x8)
-    class UAudioComponent* RotationSFXLoop;                                           // 0x0830 (size: 0x8)
-    class UParticleSystemComponent* FireShellParticleSystem;                          // 0x0838 (size: 0x8)
-    class UParticleSystemComponent* EjectShellParticleSystem;                         // 0x0840 (size: 0x8)
-    float InitialDelay;                                                               // 0x0848 (size: 0x4)
-    float ExplosionDelay;                                                             // 0x084C (size: 0x4)
-    float MaxPower;                                                                   // 0x0850 (size: 0x4)
-    float RequiredPowerForFiring;                                                     // 0x0854 (size: 0x4)
-    float RequiredPowerForRotation;                                                   // 0x0858 (size: 0x4)
-    uint8 RequiredSquadMembers;                                                       // 0x085D (size: 0x1)
-    int32 SquadId;                                                                    // 0x0860 (size: 0x4)
-    FVector2D GunnerYawAndPitch;                                                      // 0x0864 (size: 0x8)
-    int32 StashedAmmo;                                                                // 0x086C (size: 0x4)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0830 (size: 0x8)
+    class USkeletalMeshComponent* BaseMesh;                                           // 0x0838 (size: 0x8)
+    class UAudioComponent* RotationSFXLoop;                                           // 0x0840 (size: 0x8)
+    class UParticleSystemComponent* FireShellParticleSystem;                          // 0x0848 (size: 0x8)
+    class UParticleSystemComponent* EjectShellParticleSystem;                         // 0x0850 (size: 0x8)
+    float InitialDelay;                                                               // 0x0858 (size: 0x4)
+    float ExplosionDelay;                                                             // 0x085C (size: 0x4)
+    float MaxPower;                                                                   // 0x0860 (size: 0x4)
+    float RequiredPowerForFiring;                                                     // 0x0864 (size: 0x4)
+    float RequiredPowerForRotation;                                                   // 0x0868 (size: 0x4)
+    uint8 RequiredSquadMembers;                                                       // 0x086D (size: 0x1)
+    int32 SquadId;                                                                    // 0x0870 (size: 0x4)
+    FVector2D GunnerYawAndPitch;                                                      // 0x0874 (size: 0x8)
+    int32 StashedAmmo;                                                                // 0x087C (size: 0x4)
 
     void OnRep_GunnerYawAndPitch(const FVector2D PreviousGunnerYawAndPitch);
-}; // Size: 0x890
+}; // Size: 0x8A0
 
 class ALoreKeyVerificationActor : public AActor
 {
@@ -8774,9 +8766,9 @@ class ALorePickup : public AItemPickup
 
 class AMGPillbox : public AFoxholeTurret
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0898 (size: 0x8)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x08A8 (size: 0x8)
 
-}; // Size: 0x8A0
+}; // Size: 0x8B0
 
 class AMainMenuGameMode : public AWarGameMode
 {
@@ -8791,15 +8783,15 @@ class AMainMenuPlayerController : public AWarPlayerController
 
 class AMaintenanceTunnel : public ATeamStructure
 {
-    FDecayInfo DecayInfo;                                                             // 0x0818 (size: 0x4)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0820 (size: 0x8)
-    float MinRange;                                                                   // 0x0828 (size: 0x4)
-    float MaxRange;                                                                   // 0x082C (size: 0x4)
-    float GrassCullRadius;                                                            // 0x0830 (size: 0x4)
-    float Range;                                                                      // 0x0834 (size: 0x4)
-    uint16 Filter;                                                                    // 0x0838 (size: 0x2)
+    FDecayInfo DecayInfo;                                                             // 0x0828 (size: 0x4)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0830 (size: 0x8)
+    float MinRange;                                                                   // 0x0838 (size: 0x4)
+    float MaxRange;                                                                   // 0x083C (size: 0x4)
+    float GrassCullRadius;                                                            // 0x0840 (size: 0x4)
+    float Range;                                                                      // 0x0844 (size: 0x4)
+    uint16 Filter;                                                                    // 0x0848 (size: 0x2)
 
-}; // Size: 0x840
+}; // Size: 0x850
 
 class AMapBoundary : public AActor
 {
@@ -8859,28 +8851,28 @@ class AMapMarker : public AActor
 
 class AMassProductionFactory : public ASpecializedFactory
 {
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0818 (size: 0x8)
-    class USceneComponent* TransferLocation;                                          // 0x0820 (size: 0x8)
-    class UBoxComponent* TransferLocationFootprint;                                   // 0x0828 (size: 0x8)
-    class USoundCue* ShippableCrateSound;                                             // 0x0830 (size: 0x8)
-    class UParticleSystem* ShippableCratePS;                                          // 0x0838 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0828 (size: 0x8)
+    class USceneComponent* TransferLocation;                                          // 0x0830 (size: 0x8)
+    class UBoxComponent* TransferLocationFootprint;                                   // 0x0838 (size: 0x8)
+    class USoundCue* ShippableCrateSound;                                             // 0x0840 (size: 0x8)
+    class UParticleSystem* ShippableCratePS;                                          // 0x0848 (size: 0x8)
 
     void MulticastPlayShippableCrateFX();
-}; // Size: 0x840
+}; // Size: 0x850
 
 class AMassProductionFactoryBuildSite : public ASpecializedFactoryBuildSite
 {
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07E8 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07F8 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AMaterialPlatform : public ABuildableStructure
 {
-    class UStaticMeshComponent* MeshComponent;                                        // 0x07F0 (size: 0x8)
-    class UBoxComponent* BoxCollision;                                                // 0x07F8 (size: 0x8)
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0800 (size: 0x8)
+    class UStaticMeshComponent* MeshComponent;                                        // 0x0800 (size: 0x8)
+    class UBoxComponent* BoxCollision;                                                // 0x0808 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0810 (size: 0x8)
 
-}; // Size: 0x810
+}; // Size: 0x820
 
 class AMech : public ATankBase
 {
@@ -8912,26 +8904,26 @@ class AMine : public AExplosive
 
 class AMineSpline : public ATeamStructure
 {
-    class USplineConnectorComponent* SplineConnector;                                 // 0x0868 (size: 0x8)
-    class UBuildSocketComponent* BackSocket;                                          // 0x0870 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0878 (size: 0x8)
-    FName AmmoCodeName;                                                               // 0x0880 (size: 0x8)
-    TSubclassOf<class AWarExplosionEffect> ExplosionTemplate;                         // 0x0888 (size: 0x8)
-    float DamageDelay;                                                                // 0x0890 (size: 0x4)
-    float ArmingDelay;                                                                // 0x0894 (size: 0x4)
-    float ExplosionFXOffsetZ;                                                         // 0x0898 (size: 0x4)
-    uint32 MineMask;                                                                  // 0x089C (size: 0x4)
-    uint8 MaxMineCount;                                                               // 0x08AD (size: 0x1)
-    uint8 bTriggeredByInfantry;                                                       // 0x08AE (size: 0x1)
-    uint8 bTriggeredByVehicles;                                                       // 0x08AE (size: 0x1)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0878 (size: 0x8)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0880 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0888 (size: 0x8)
+    FName AmmoCodeName;                                                               // 0x0890 (size: 0x8)
+    TSubclassOf<class AWarExplosionEffect> ExplosionTemplate;                         // 0x0898 (size: 0x8)
+    float DamageDelay;                                                                // 0x08A0 (size: 0x4)
+    float ArmingDelay;                                                                // 0x08A4 (size: 0x4)
+    float ExplosionFXOffsetZ;                                                         // 0x08A8 (size: 0x4)
+    uint32 MineMask;                                                                  // 0x08AC (size: 0x4)
+    uint8 MaxMineCount;                                                               // 0x08BD (size: 0x1)
+    uint8 bTriggeredByInfantry;                                                       // 0x08BE (size: 0x1)
+    uint8 bTriggeredByVehicles;                                                       // 0x08BE (size: 0x1)
 
     void OnRep_MineMask(uint32 PrevMask);
     void OnBeginOverlap(class UPrimitiveComponent* OverlappedComponent, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class AMineSplineBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AMiniMapCapturer : public AActor
 {
@@ -8987,11 +8979,11 @@ class ANoBuildArea : public AActor
 
 class ANonWalkableStructureBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AObservationTower : public AWatchTower
 {
-}; // Size: 0x840
+}; // Size: 0x850
 
 class AOfflineCharacter : public AActor
 {
@@ -9019,7 +9011,7 @@ class AOfflineCharacter : public AActor
 
 class AOilPipelineSegment : public ATeamStructure
 {
-}; // Size: 0x810
+}; // Size: 0x820
 
 class AOilTanker : public ARWDSimVehicle
 {
@@ -9027,9 +9019,9 @@ class AOilTanker : public ARWDSimVehicle
 
 class AOutpost : public ABase
 {
-    class UStaticMeshComponent* MeshComponent;                                        // 0x08B0 (size: 0x8)
+    class UStaticMeshComponent* MeshComponent;                                        // 0x08C0 (size: 0x8)
 
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class APersistentProxy : public ALandscapeEnvironmentActor
 {
@@ -9039,32 +9031,32 @@ class APersistentProxy : public ALandscapeEnvironmentActor
 
 class APipeline : public ATeamStructure
 {
-    class USplineConnectorComponent* SplineConnector;                                 // 0x0810 (size: 0x8)
-    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0818 (size: 0x8)
-    class UBuildSocketComponent* BackSocket;                                          // 0x0820 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0828 (size: 0x8)
-    class UBuildSocketComponent* LeftSocket;                                          // 0x0830 (size: 0x8)
-    class UBuildSocketComponent* RightSocket;                                         // 0x0838 (size: 0x8)
-    float MaxLiquidAmount;                                                            // 0x0840 (size: 0x4)
-    int32 SystemIndex;                                                                // 0x0844 (size: 0x4)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0820 (size: 0x8)
+    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0828 (size: 0x8)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0830 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0838 (size: 0x8)
+    class UBuildSocketComponent* LeftSocket;                                          // 0x0840 (size: 0x8)
+    class UBuildSocketComponent* RightSocket;                                         // 0x0848 (size: 0x8)
+    float MaxLiquidAmount;                                                            // 0x0850 (size: 0x4)
+    int32 SystemIndex;                                                                // 0x0854 (size: 0x4)
 
-}; // Size: 0x850
+}; // Size: 0x860
 
 class APipelineSilo : public APipeline
 {
-    uint8 VisibleMeshes;                                                              // 0x0850 (size: 0x1)
+    uint8 VisibleMeshes;                                                              // 0x0860 (size: 0x1)
 
     void OnRep_VisibleMeshes();
-}; // Size: 0x860
+}; // Size: 0x870
 
 class APipelineValve : public ATeamStructure
 {
-    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0810 (size: 0x8)
-    class UBuildSocketComponent* BackSocket;                                          // 0x0818 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0820 (size: 0x8)
-    float ThroughputNormalized;                                                       // 0x0828 (size: 0x4)
+    class UModificationSlotComponent* UpgradeSlotComponent;                           // 0x0820 (size: 0x8)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0828 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0830 (size: 0x8)
+    float ThroughputNormalized;                                                       // 0x0838 (size: 0x4)
 
-}; // Size: 0x830
+}; // Size: 0x840
 
 class APlayerCharacter : public ASimCharacter
 {
@@ -9091,28 +9083,28 @@ class APlayerImposter : public ASimVehicle
 
 class APowerLine : public ABuildableStructure
 {
-    class USplineConnectorComponent* SplineConnector;                                 // 0x07F0 (size: 0x8)
-    class UBuildSocketComponent* BackSocket;                                          // 0x07F8 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0800 (size: 0x8)
-    float BuildGhostOffsetZ;                                                          // 0x0808 (size: 0x4)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0800 (size: 0x8)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0808 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0810 (size: 0x8)
+    float BuildGhostOffsetZ;                                                          // 0x0818 (size: 0x4)
 
-}; // Size: 0x810
+}; // Size: 0x820
 
 class APowerPlant : public AFacilityRefinery
 {
-}; // Size: 0xA60
+}; // Size: 0xA70
 
 class APowerPole : public ATeamStructure
 {
-    class UBuildSocketComponent* PowerSocket;                                         // 0x0818 (size: 0x8)
-    class UFacilityLightComponent* LightComponent;                                    // 0x0820 (size: 0x8)
-    class UMaterialInterface* CableMaterial;                                          // 0x0828 (size: 0x8)
-    bool bAutoConnectToNearby;                                                        // 0x0830 (size: 0x1)
-    float AutoConnectSearchRadius;                                                    // 0x0834 (size: 0x4)
-    FPowerGridInfo PowerGridInfo;                                                     // 0x0838 (size: 0x5C)
+    class UBuildSocketComponent* PowerSocket;                                         // 0x0828 (size: 0x8)
+    class UFacilityLightComponent* LightComponent;                                    // 0x0830 (size: 0x8)
+    class UMaterialInterface* CableMaterial;                                          // 0x0838 (size: 0x8)
+    bool bAutoConnectToNearby;                                                        // 0x0840 (size: 0x1)
+    float AutoConnectSearchRadius;                                                    // 0x0844 (size: 0x4)
+    FPowerGridInfo PowerGridInfo;                                                     // 0x0848 (size: 0x5C)
 
     void OnRep_PowerGridInfo();
-}; // Size: 0x8F0
+}; // Size: 0x900
 
 class APrototypeKitPickup : public AItemPickup
 {
@@ -9213,11 +9205,11 @@ class ARailVehicle : public ASimVehicle
 
 class ARailVehicleBuildSite : public AVehicleBuildSite
 {
-    FString FrontTrackName;                                                           // 0x0720 (size: 0x10)
-    FString RearTrackName;                                                            // 0x0730 (size: 0x10)
-    float FrontTrackPackedAlpha;                                                      // 0x0740 (size: 0x4)
+    FString FrontTrackName;                                                           // 0x0730 (size: 0x10)
+    FString RearTrackName;                                                            // 0x0740 (size: 0x10)
+    float FrontTrackPackedAlpha;                                                      // 0x0750 (size: 0x4)
 
-}; // Size: 0x748
+}; // Size: 0x758
 
 class ARailVehicleCrane : public ARailVehicle
 {
@@ -9246,7 +9238,7 @@ class ARailVehicleHospital : public ARailVehicle
 
 class ARailVehicleProxy : public ABuildableStructure
 {
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ARailVehicleResourcePlatform : public ARailVehicle
 {
@@ -9256,49 +9248,49 @@ class ARailVehicleResourcePlatform : public ARailVehicle
 
 class ARailwayTrack : public ATeamStructure
 {
-    class USplineConnectorComponent* SplineConnector;                                 // 0x0810 (size: 0x8)
-    float GrassCullRadius;                                                            // 0x0818 (size: 0x4)
-    class UBuildSocketComponent* BackSocket;                                          // 0x0820 (size: 0x8)
-    class UBuildSocketComponent* FrontSocket;                                         // 0x0828 (size: 0x8)
-    class URailSwitchUseComponent* BackSwitch;                                        // 0x0830 (size: 0x8)
-    class URailSwitchUseComponent* FrontSwitch;                                       // 0x0838 (size: 0x8)
-    class USkeletalMeshComponent* BackSwitchMesh;                                     // 0x0840 (size: 0x8)
-    class USkeletalMeshComponent* FrontSwitchMesh;                                    // 0x0848 (size: 0x8)
-    ETrackGauge TrackGauge;                                                           // 0x0850 (size: 0x1)
-    float MaxHeightAboveRoad;                                                         // 0x0854 (size: 0x4)
-    float MaxHeightForPathConnection;                                                 // 0x0858 (size: 0x4)
-    float RailZOffset;                                                                // 0x085C (size: 0x4)
-    bool bIsNoVis;                                                                    // 0x0860 (size: 0x1)
-    bool bIsDisabled;                                                                 // 0x0861 (size: 0x1)
-    bool bIsShownOnMap;                                                               // 0x0862 (size: 0x1)
-    TArray<FRailSwitchState> SwitchStates;                                            // 0x0878 (size: 0x10)
-    TArray<class ARailVehicle*> Vehicles;                                             // 0x0888 (size: 0x10)
-    TArray<class UPhysicalMaterial*> RoadCheckPhysMaterials;                          // 0x0898 (size: 0x10)
-    bool bHasIncomingTravel;                                                          // 0x08A8 (size: 0x1)
+    class USplineConnectorComponent* SplineConnector;                                 // 0x0820 (size: 0x8)
+    float GrassCullRadius;                                                            // 0x0828 (size: 0x4)
+    class UBuildSocketComponent* BackSocket;                                          // 0x0830 (size: 0x8)
+    class UBuildSocketComponent* FrontSocket;                                         // 0x0838 (size: 0x8)
+    class URailSwitchUseComponent* BackSwitch;                                        // 0x0840 (size: 0x8)
+    class URailSwitchUseComponent* FrontSwitch;                                       // 0x0848 (size: 0x8)
+    class USkeletalMeshComponent* BackSwitchMesh;                                     // 0x0850 (size: 0x8)
+    class USkeletalMeshComponent* FrontSwitchMesh;                                    // 0x0858 (size: 0x8)
+    ETrackGauge TrackGauge;                                                           // 0x0860 (size: 0x1)
+    float MaxHeightAboveRoad;                                                         // 0x0864 (size: 0x4)
+    float MaxHeightForPathConnection;                                                 // 0x0868 (size: 0x4)
+    float RailZOffset;                                                                // 0x086C (size: 0x4)
+    bool bIsNoVis;                                                                    // 0x0870 (size: 0x1)
+    bool bIsDisabled;                                                                 // 0x0871 (size: 0x1)
+    bool bIsShownOnMap;                                                               // 0x0872 (size: 0x1)
+    TArray<FRailSwitchState> SwitchStates;                                            // 0x0888 (size: 0x10)
+    TArray<class ARailVehicle*> Vehicles;                                             // 0x0898 (size: 0x10)
+    TArray<class UPhysicalMaterial*> RoadCheckPhysMaterials;                          // 0x08A8 (size: 0x10)
+    bool bHasIncomingTravel;                                                          // 0x08B8 (size: 0x1)
 
     void OnRep_SwitchStates();
     void OnRep_IsDisabled();
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class ARefinery : public ATeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0810 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0818 (size: 0x8)
-    class USceneComponent* TransferLocation;                                          // 0x0820 (size: 0x8)
-    TMap<class FString, class FRefinementOrderInfo> RefinementOrderMap;               // 0x0828 (size: 0x50)
-    TArray<FRefinableItemInfo> RefinableItems;                                        // 0x08C8 (size: 0x10)
-    bool bIsRefining;                                                                 // 0x08D8 (size: 0x1)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0820 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0828 (size: 0x8)
+    class USceneComponent* TransferLocation;                                          // 0x0830 (size: 0x8)
+    TMap<class FString, class FRefinementOrderInfo> RefinementOrderMap;               // 0x0838 (size: 0x50)
+    TArray<FRefinableItemInfo> RefinableItems;                                        // 0x08D8 (size: 0x10)
+    bool bIsRefining;                                                                 // 0x08E8 (size: 0x1)
 
     bool IsRefining();
-}; // Size: 0x8E0
+}; // Size: 0x8F0
 
 class ARefineryBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07E8 (size: 0x8)
-    TMap<class FString, class FRefinementOrderInfo> RefinementOrderMap;               // 0x07F0 (size: 0x50)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07F8 (size: 0x8)
+    TMap<class FString, class FRefinementOrderInfo> RefinementOrderMap;               // 0x0800 (size: 0x50)
 
-}; // Size: 0x840
+}; // Size: 0x850
 
 class ARelicAPC : public ASimVehicle
 {
@@ -9313,13 +9305,13 @@ class ARelicAPC : public ASimVehicle
 
 class ARelicAPCStructure : public ABuildableStructure
 {
-    TSubclassOf<class ASimVehicle> VehicleClass;                                      // 0x07F0 (size: 0x8)
+    TSubclassOf<class ASimVehicle> VehicleClass;                                      // 0x0800 (size: 0x8)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class ARelicAPCStructureBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class ARelicArmouredCar : public AArmoredCar
 {
@@ -9327,7 +9319,7 @@ class ARelicArmouredCar : public AArmoredCar
 
 class ARelicBase : public AStaticBase
 {
-}; // Size: 0x8F0
+}; // Size: 0x900
 
 class ARelicBus : public ARWDSimVehicle
 {
@@ -9343,7 +9335,7 @@ class AReplicatedLadder : public ALadder
 
 class AReservableStructure : public ABuildableStructure
 {
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AResource : public AActor
 {
@@ -9375,76 +9367,76 @@ class AResource : public AActor
 
 class AResourceContainer : public AContainer
 {
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AResourceField : public ABuildableStructure
 {
-    class UStaticMeshComponent* ResourceFieldMeshComponent;                           // 0x07F0 (size: 0x8)
-    class USphereComponent* NoBuildVolume;                                            // 0x07F8 (size: 0x8)
-    class UStaticMesh* ResourceFieldMesh1;                                            // 0x0800 (size: 0x8)
-    class UStaticMesh* ResourceFieldMesh2;                                            // 0x0808 (size: 0x8)
-    class UStaticMesh* ResourceFieldMesh3;                                            // 0x0810 (size: 0x8)
-    TSubclassOf<class AResource> ResourceClass;                                       // 0x0818 (size: 0x8)
-    float SpawnPeriod;                                                                // 0x0820 (size: 0x4)
-    int32 MaxConcurrentNodes;                                                         // 0x0824 (size: 0x4)
-    float MinSpawnDistance;                                                           // 0x0828 (size: 0x4)
-    float MaxSpawnDistance;                                                           // 0x082C (size: 0x4)
-    int32 ResourcesPerReplenishment;                                                  // 0x0830 (size: 0x4)
-    int16 ResourcesLeftToSpawn;                                                       // 0x0834 (size: 0x2)
-    float TimeToReplenish;                                                            // 0x0838 (size: 0x4)
-    int32 ResourceFieldId;                                                            // 0x083C (size: 0x4)
-    float RemainingTimeToReplenish;                                                   // 0x0840 (size: 0x4)
-    float LandscapeTraceDistance;                                                     // 0x0844 (size: 0x4)
-    ESpawnActorCollisionHandlingMethod SpawnActorCollisionHandlingMethod;             // 0x0848 (size: 0x1)
-    float ResourceNodeSphereColliderRadius;                                           // 0x084C (size: 0x4)
-    bool bIgnoredByResourceRolling;                                                   // 0x0850 (size: 0x1)
-    bool bCheckTechForSecondaryResource;                                              // 0x0851 (size: 0x1)
-    TArray<FSecondaryResourceWeight> SecondaryResourceWeights;                        // 0x0858 (size: 0x10)
-    float ChanceToSpawnSecondaryNormalized;                                           // 0x0868 (size: 0x4)
-    TSubclassOf<class AItemPickup> SecondaryResourceToSpawn;                          // 0x0870 (size: 0x8)
+    class UStaticMeshComponent* ResourceFieldMeshComponent;                           // 0x0800 (size: 0x8)
+    class USphereComponent* NoBuildVolume;                                            // 0x0808 (size: 0x8)
+    class UStaticMesh* ResourceFieldMesh1;                                            // 0x0810 (size: 0x8)
+    class UStaticMesh* ResourceFieldMesh2;                                            // 0x0818 (size: 0x8)
+    class UStaticMesh* ResourceFieldMesh3;                                            // 0x0820 (size: 0x8)
+    TSubclassOf<class AResource> ResourceClass;                                       // 0x0828 (size: 0x8)
+    float SpawnPeriod;                                                                // 0x0830 (size: 0x4)
+    int32 MaxConcurrentNodes;                                                         // 0x0834 (size: 0x4)
+    float MinSpawnDistance;                                                           // 0x0838 (size: 0x4)
+    float MaxSpawnDistance;                                                           // 0x083C (size: 0x4)
+    int32 ResourcesPerReplenishment;                                                  // 0x0840 (size: 0x4)
+    int16 ResourcesLeftToSpawn;                                                       // 0x0844 (size: 0x2)
+    float TimeToReplenish;                                                            // 0x0848 (size: 0x4)
+    int32 ResourceFieldId;                                                            // 0x084C (size: 0x4)
+    float RemainingTimeToReplenish;                                                   // 0x0850 (size: 0x4)
+    float LandscapeTraceDistance;                                                     // 0x0854 (size: 0x4)
+    ESpawnActorCollisionHandlingMethod SpawnActorCollisionHandlingMethod;             // 0x0858 (size: 0x1)
+    float ResourceNodeSphereColliderRadius;                                           // 0x085C (size: 0x4)
+    bool bIgnoredByResourceRolling;                                                   // 0x0860 (size: 0x1)
+    bool bCheckTechForSecondaryResource;                                              // 0x0861 (size: 0x1)
+    TArray<FSecondaryResourceWeight> SecondaryResourceWeights;                        // 0x0868 (size: 0x10)
+    float ChanceToSpawnSecondaryNormalized;                                           // 0x0878 (size: 0x4)
+    TSubclassOf<class AItemPickup> SecondaryResourceToSpawn;                          // 0x0880 (size: 0x8)
 
     void OnRep_ResourcesLeftToSpawn();
-}; // Size: 0x8F0
+}; // Size: 0x900
 
 class AResourceMine : public ABuildableStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
-    FName ProducedItem;                                                               // 0x07F8 (size: 0x8)
-    int16 ProducedItemCount;                                                          // 0x0800 (size: 0x2)
-    FName ProducedRareItem;                                                           // 0x0804 (size: 0x8)
-    float ChanceToProduceRareItem;                                                    // 0x080C (size: 0x4)
-    float ProductionCycleTime;                                                        // 0x0810 (size: 0x4)
-    float PetrolEfficiencyMultiplier;                                                 // 0x0814 (size: 0x4)
-    float DieselConsumptionRate;                                                      // 0x0818 (size: 0x4)
-    float PetrolConsumptionRate;                                                      // 0x081C (size: 0x4)
-    FFuelTank FuelTankDiesel;                                                         // 0x0820 (size: 0x14)
-    FFuelTank FuelTankPetrol;                                                         // 0x0834 (size: 0x14)
-    bool bIsProducing;                                                                // 0x0848 (size: 0x1)
-    float ItemsInProduction;                                                          // 0x084C (size: 0x4)
-    class USceneComponent* TransferLocation;                                          // 0x0850 (size: 0x8)
-    FName RequiredFieldCodeName;                                                      // 0x0858 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0800 (size: 0x8)
+    FName ProducedItem;                                                               // 0x0808 (size: 0x8)
+    int16 ProducedItemCount;                                                          // 0x0810 (size: 0x2)
+    FName ProducedRareItem;                                                           // 0x0814 (size: 0x8)
+    float ChanceToProduceRareItem;                                                    // 0x081C (size: 0x4)
+    float ProductionCycleTime;                                                        // 0x0820 (size: 0x4)
+    float PetrolEfficiencyMultiplier;                                                 // 0x0824 (size: 0x4)
+    float DieselConsumptionRate;                                                      // 0x0828 (size: 0x4)
+    float PetrolConsumptionRate;                                                      // 0x082C (size: 0x4)
+    FFuelTank FuelTankDiesel;                                                         // 0x0830 (size: 0x14)
+    FFuelTank FuelTankPetrol;                                                         // 0x0844 (size: 0x14)
+    bool bIsProducing;                                                                // 0x0858 (size: 0x1)
+    float ItemsInProduction;                                                          // 0x085C (size: 0x4)
+    class USceneComponent* TransferLocation;                                          // 0x0860 (size: 0x8)
+    FName RequiredFieldCodeName;                                                      // 0x0868 (size: 0x8)
 
     bool IsProducing();
-}; // Size: 0x870
+}; // Size: 0x880
 
 class AResourceMineBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AResourceTransferStation : public ATeamStructure
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0810 (size: 0x8)
-    class USceneComponent* TransferLocation;                                          // 0x0818 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0820 (size: 0x8)
+    class USceneComponent* TransferLocation;                                          // 0x0828 (size: 0x8)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AResourceTransferStationBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ARespawnSpectatorPawn : public ASpectatorPawn
 {
@@ -9452,69 +9444,69 @@ class ARespawnSpectatorPawn : public ASpectatorPawn
 
 class ARock : public AWall
 {
-}; // Size: 0x800
+}; // Size: 0x810
 
 class ARocket : public ATeamStructure
 {
-    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0810 (size: 0x8)
-    class UParticleSystemComponent* FuelingParticleSystem;                            // 0x0818 (size: 0x8)
-    class UParticleSystemComponent* GroundParticleSystem;                             // 0x0820 (size: 0x8)
-    class UParticleSystemComponent* LaunchParticleSystem;                             // 0x0828 (size: 0x8)
-    class UParticleSystemComponent* InFlightParticleSystem;                           // 0x0830 (size: 0x8)
-    class USoundCue* LaunchSoundCue;                                                  // 0x0838 (size: 0x8)
-    class USoundCue* ImpactSoundCue;                                                  // 0x0840 (size: 0x8)
-    TSubclassOf<class UCameraShake> InFlightCameraShake;                              // 0x0848 (size: 0x8)
-    float LaunchAnimationTime;                                                        // 0x0850 (size: 0x4)
-    float FlightAnimationTime;                                                        // 0x0854 (size: 0x4)
-    FRocketLaunchFire LaunchFire;                                                     // 0x0858 (size: 0x20)
-    TSubclassOf<class ARocketTarget> RocketTargetClass;                               // 0x0878 (size: 0x8)
-    TSubclassOf<class ARocketImpactEffect> ImpactEffectClass;                         // 0x0880 (size: 0x8)
-    TSubclassOf<class ARocketGroundZero> GroundZeroClass;                             // 0x0888 (size: 0x8)
-    class UAudioComponent* LaunchAudioComponent;                                      // 0x0890 (size: 0x8)
-    ERocketLaunchSequence State;                                                      // 0x08A8 (size: 0x1)
-    FLiquidTank LiquidTank;                                                           // 0x08AC (size: 0x14)
-    FVector SelectedStrikeLocation;                                                   // 0x08C0 (size: 0xC)
-    EWorldConquestMapId OriginMapID;                                                  // 0x08CC (size: 0x1)
-    FRocketLaunchCodeInfo SelectedCode;                                               // 0x08D0 (size: 0x1C)
+    class USkeletalMeshComponent* SkeletalMesh;                                       // 0x0820 (size: 0x8)
+    class UParticleSystemComponent* FuelingParticleSystem;                            // 0x0828 (size: 0x8)
+    class UParticleSystemComponent* GroundParticleSystem;                             // 0x0830 (size: 0x8)
+    class UParticleSystemComponent* LaunchParticleSystem;                             // 0x0838 (size: 0x8)
+    class UParticleSystemComponent* InFlightParticleSystem;                           // 0x0840 (size: 0x8)
+    class USoundCue* LaunchSoundCue;                                                  // 0x0848 (size: 0x8)
+    class USoundCue* ImpactSoundCue;                                                  // 0x0850 (size: 0x8)
+    TSubclassOf<class UCameraShake> InFlightCameraShake;                              // 0x0858 (size: 0x8)
+    float LaunchAnimationTime;                                                        // 0x0860 (size: 0x4)
+    float FlightAnimationTime;                                                        // 0x0864 (size: 0x4)
+    FRocketLaunchFire LaunchFire;                                                     // 0x0868 (size: 0x20)
+    TSubclassOf<class ARocketTarget> RocketTargetClass;                               // 0x0888 (size: 0x8)
+    TSubclassOf<class ARocketImpactEffect> ImpactEffectClass;                         // 0x0890 (size: 0x8)
+    TSubclassOf<class ARocketGroundZero> GroundZeroClass;                             // 0x0898 (size: 0x8)
+    class UAudioComponent* LaunchAudioComponent;                                      // 0x08A0 (size: 0x8)
+    ERocketLaunchSequence State;                                                      // 0x08B8 (size: 0x1)
+    FLiquidTank LiquidTank;                                                           // 0x08BC (size: 0x14)
+    FVector SelectedStrikeLocation;                                                   // 0x08D0 (size: 0xC)
+    EWorldConquestMapId OriginMapID;                                                  // 0x08DC (size: 0x1)
+    FRocketLaunchCodeInfo SelectedCode;                                               // 0x08E0 (size: 0x1C)
 
     void OnRep_State();
     void OnRep_LiquidTank();
     void BPBeginLaunch();
-}; // Size: 0x900
+}; // Size: 0x910
 
 class ARocketFacility : public ATeamStructure
 {
-    class UBoxComponent* BuildLocation;                                               // 0x0810 (size: 0x8)
-    FName FirstRocketPartCodeName;                                                    // 0x0818 (size: 0x8)
-    FVector FuelLocationOffset;                                                       // 0x0820 (size: 0xC)
-    ERocketLaunchSequence Sequence;                                                   // 0x082C (size: 0x1)
-    FRocketLaunchCodeInfo PendingLaunchCode;                                          // 0x0830 (size: 0x1C)
-    FRocketLaunchCodeInfo SelectedLaunchCode;                                         // 0x084C (size: 0x1C)
-    FName LinkedIntelCenter;                                                          // 0x0868 (size: 0x8)
-    uint8 RequiredSquadMembers;                                                       // 0x0870 (size: 0x1)
-    uint8 StartLaunchEntries;                                                         // 0x0871 (size: 0x1)
-    uint8 CancelLaunchEntries;                                                        // 0x0872 (size: 0x1)
-    EWorldConquestMapId TargetRegion;                                                 // 0x0873 (size: 0x1)
-    FWarGridCoordinate Coordinate;                                                    // 0x0874 (size: 0x6)
-    FFuelTank FuelTank;                                                               // 0x087C (size: 0x14)
-    double TimeToLaunch;                                                              // 0x0890 (size: 0x8)
-    ERocketLaunchResponse LastFailure;                                                // 0x08A0 (size: 0x1)
-    FDateTime LastFailureTime;                                                        // 0x08A8 (size: 0x8)
+    class UBoxComponent* BuildLocation;                                               // 0x0820 (size: 0x8)
+    FName FirstRocketPartCodeName;                                                    // 0x0828 (size: 0x8)
+    FVector FuelLocationOffset;                                                       // 0x0830 (size: 0xC)
+    ERocketLaunchSequence Sequence;                                                   // 0x083C (size: 0x1)
+    FRocketLaunchCodeInfo PendingLaunchCode;                                          // 0x0840 (size: 0x1C)
+    FRocketLaunchCodeInfo SelectedLaunchCode;                                         // 0x085C (size: 0x1C)
+    FName LinkedIntelCenter;                                                          // 0x0878 (size: 0x8)
+    uint8 RequiredSquadMembers;                                                       // 0x0880 (size: 0x1)
+    uint8 StartLaunchEntries;                                                         // 0x0881 (size: 0x1)
+    uint8 CancelLaunchEntries;                                                        // 0x0882 (size: 0x1)
+    EWorldConquestMapId TargetRegion;                                                 // 0x0883 (size: 0x1)
+    FWarGridCoordinate Coordinate;                                                    // 0x0884 (size: 0x6)
+    FFuelTank FuelTank;                                                               // 0x088C (size: 0x14)
+    double TimeToLaunch;                                                              // 0x08A0 (size: 0x8)
+    ERocketLaunchResponse LastFailure;                                                // 0x08B0 (size: 0x1)
+    FDateTime LastFailureTime;                                                        // 0x08B8 (size: 0x8)
 
     void OnRep_TimeToLaunch();
-}; // Size: 0x940
+}; // Size: 0x950
 
 class ARocketFacilityBuildSite : public AStructureBuildSite
 {
-    FFuelTank FuelTank;                                                               // 0x07E0 (size: 0x14)
+    FFuelTank FuelTank;                                                               // 0x07F0 (size: 0x14)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class ARocketGroundZero : public ATeamStructure
 {
-    float DamageDuration;                                                             // 0x0810 (size: 0x4)
+    float DamageDuration;                                                             // 0x0820 (size: 0x4)
 
-}; // Size: 0x8A0
+}; // Size: 0x8B0
 
 class ARocketImpactEffect : public AActor
 {
@@ -9532,20 +9524,20 @@ class ARocketLauncherProjectileDummy : public AActor
 
 class ARocketTarget : public ATeamStructure
 {
-    EWorldConquestMapId OriginMapID;                                                  // 0x0810 (size: 0x1)
-    uint16 LaunchCodeID;                                                              // 0x0812 (size: 0x2)
-    float LaunchTimeRemaining;                                                        // 0x0814 (size: 0x4)
-    bool bIsSirenActive;                                                              // 0x0818 (size: 0x1)
+    EWorldConquestMapId OriginMapID;                                                  // 0x0820 (size: 0x1)
+    uint16 LaunchCodeID;                                                              // 0x0822 (size: 0x2)
+    float LaunchTimeRemaining;                                                        // 0x0824 (size: 0x4)
+    bool bIsSirenActive;                                                              // 0x0828 (size: 0x1)
 
     void OnRep_IsSirenActive();
-}; // Size: 0x830
+}; // Size: 0x840
 
 class ARuinableStructure : public ADestroyedStructure
 {
-    bool bShowRuinedInEditor;                                                         // 0x0600 (size: 0x1)
-    class URuinedComponent* RuinedComponent;                                          // 0x0608 (size: 0x8)
+    bool bShowRuinedInEditor;                                                         // 0x0610 (size: 0x1)
+    class URuinedComponent* RuinedComponent;                                          // 0x0618 (size: 0x8)
 
-}; // Size: 0x610
+}; // Size: 0x620
 
 class AScoutTank : public ALightTank
 {
@@ -9582,28 +9574,28 @@ class AScreenshotCharacter : public AActor
 
 class ASeaport : public AStorageFacility
 {
-    class USceneComponent* TransferLocation2;                                         // 0x0870 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent2;                 // 0x0878 (size: 0x8)
-    class UPersistentProxyComponent* ProxyLoadingDockComponent;                       // 0x0880 (size: 0x8)
-    class UBoxComponent* PassengerUnloadingArea1;                                     // 0x0888 (size: 0x8)
-    class UBoxComponent* PassengerUnloadingArea2;                                     // 0x0890 (size: 0x8)
-    class USceneComponent* LadderLocationSeaport1;                                    // 0x0898 (size: 0x8)
-    class USceneComponent* LadderLocationSeaport2;                                    // 0x08A0 (size: 0x8)
-    class USceneComponent* LadderLocationDock1;                                       // 0x08A8 (size: 0x8)
-    class USceneComponent* LadderLocationDock2;                                       // 0x08B0 (size: 0x8)
-    TSubclassOf<class ALadder> LadderType;                                            // 0x08B8 (size: 0x8)
-    TArray<class ALadder*> SpawnedLadders;                                            // 0x08C0 (size: 0x10)
-    class UTeamFlagMeshComponent* FlagMesh;                                           // 0x08D0 (size: 0x8)
+    class USceneComponent* TransferLocation2;                                         // 0x0880 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent2;                 // 0x0888 (size: 0x8)
+    class UPersistentProxyComponent* ProxyLoadingDockComponent;                       // 0x0890 (size: 0x8)
+    class UBoxComponent* PassengerUnloadingArea1;                                     // 0x0898 (size: 0x8)
+    class UBoxComponent* PassengerUnloadingArea2;                                     // 0x08A0 (size: 0x8)
+    class USceneComponent* LadderLocationSeaport1;                                    // 0x08A8 (size: 0x8)
+    class USceneComponent* LadderLocationSeaport2;                                    // 0x08B0 (size: 0x8)
+    class USceneComponent* LadderLocationDock1;                                       // 0x08B8 (size: 0x8)
+    class USceneComponent* LadderLocationDock2;                                       // 0x08C0 (size: 0x8)
+    TSubclassOf<class ALadder> LadderType;                                            // 0x08C8 (size: 0x8)
+    TArray<class ALadder*> SpawnedLadders;                                            // 0x08D0 (size: 0x10)
+    class UTeamFlagMeshComponent* FlagMesh;                                           // 0x08E0 (size: 0x8)
 
-}; // Size: 0x8E0
+}; // Size: 0x8F0
 
 class ASeaportBuildSite : public AStorageFacilityBuildSite
 {
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent2;                 // 0x07F8 (size: 0x8)
-    class UPersistentProxyComponent* ProxyLoadingDockComponent;                       // 0x0800 (size: 0x8)
-    TArray<class ALadder*> SpawnedLadders;                                            // 0x0808 (size: 0x10)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent2;                 // 0x0808 (size: 0x8)
+    class UPersistentProxyComponent* ProxyLoadingDockComponent;                       // 0x0810 (size: 0x8)
+    TArray<class ALadder*> SpawnedLadders;                                            // 0x0818 (size: 0x10)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class ASensorReadingProxy : public AActor
 {
@@ -9636,28 +9628,28 @@ class AShipVehicle : public ASimVehicle
 
 class AShippable : public ABuildableStructure
 {
-    TSubclassOf<class AGlobalShippableInfo> GlobalShippableInfo;                      // 0x07F0 (size: 0x8)
-    class UStaticMeshComponent* BaseMesh;                                             // 0x07F8 (size: 0x8)
-    class UStaticMeshComponent* RopeMesh;                                             // 0x0800 (size: 0x8)
-    class UMeshComponent* DynamicMeshComponent;                                       // 0x0808 (size: 0x8)
-    FName ShippableType;                                                              // 0x0810 (size: 0x8)
-    FReplicatedShippableData ShippableData;                                           // 0x0818 (size: 0x18)
-    FSavedShippableData SavedData;                                                    // 0x0830 (size: 0xD0)
+    TSubclassOf<class AGlobalShippableInfo> GlobalShippableInfo;                      // 0x0800 (size: 0x8)
+    class UStaticMeshComponent* BaseMesh;                                             // 0x0808 (size: 0x8)
+    class UStaticMeshComponent* RopeMesh;                                             // 0x0810 (size: 0x8)
+    class UMeshComponent* DynamicMeshComponent;                                       // 0x0818 (size: 0x8)
+    FName ShippableType;                                                              // 0x0820 (size: 0x8)
+    FReplicatedShippableData ShippableData;                                           // 0x0828 (size: 0x18)
+    FSavedShippableData SavedData;                                                    // 0x0840 (size: 0xD0)
 
     void OnRep_ShippableType();
     void OnRep_ShippableData();
-}; // Size: 0x910
+}; // Size: 0x920
 
 class AShippableCrate : public ABuildableStructure
 {
-    class UStaticMesh* ShippableMesh;                                                 // 0x07F0 (size: 0x8)
-    FName StoredCodeName;                                                             // 0x07F8 (size: 0x8)
+    class UStaticMesh* ShippableMesh;                                                 // 0x0800 (size: 0x8)
+    FName StoredCodeName;                                                             // 0x0808 (size: 0x8)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AShippingContainer : public AContainer
 {
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AShootingRangeArea : public AActor
 {
@@ -9669,18 +9661,18 @@ class AShootingRangeArea : public AActor
 
 class ASignPost : public ABuildableStructure
 {
-    int32 HealPerUpVote;                                                              // 0x07F0 (size: 0x4)
-    int32 DamagePerDownVote;                                                          // 0x07F4 (size: 0x4)
-    FText Text;                                                                       // 0x07F8 (size: 0x18)
-    TArray<FSignPostVote> VoteList;                                                   // 0x0810 (size: 0x10)
-    int64 LastEditedTimeTicks;                                                        // 0x0820 (size: 0x8)
-    bool bIsWorldSignPost;                                                            // 0x0828 (size: 0x1)
+    int32 HealPerUpVote;                                                              // 0x0800 (size: 0x4)
+    int32 DamagePerDownVote;                                                          // 0x0804 (size: 0x4)
+    FText Text;                                                                       // 0x0808 (size: 0x18)
+    TArray<FSignPostVote> VoteList;                                                   // 0x0820 (size: 0x10)
+    int64 LastEditedTimeTicks;                                                        // 0x0830 (size: 0x8)
+    bool bIsWorldSignPost;                                                            // 0x0838 (size: 0x1)
 
-}; // Size: 0x830
+}; // Size: 0x840
 
 class ASignPostBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class ASimCharacter : public AWarCharacter
 {
@@ -10527,15 +10519,15 @@ class ASoldierItemPickUp : public AItemPickup
 
 class ASpecializedFactory : public ATeamStructure
 {
-    class USpecializedFactoryComponent* SpecializedFactoryComponent;                  // 0x0810 (size: 0x8)
+    class USpecializedFactoryComponent* SpecializedFactoryComponent;                  // 0x0820 (size: 0x8)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class ASpecializedFactoryBuildSite : public AStructureBuildSite
 {
-    class USpecializedFactoryComponent* SpecializedFactoryComponent;                  // 0x07E0 (size: 0x8)
+    class USpecializedFactoryComponent* SpecializedFactoryComponent;                  // 0x07F0 (size: 0x8)
 
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class ASpiderMech : public ATankBase
 {
@@ -10560,30 +10552,30 @@ class ASpoolProjectile : public AWarProjectile
 
 class AStaticBase : public ATownHall
 {
-    class UAITurretsControllerComponent* AITurretsController;                         // 0x08C0 (size: 0x8)
-    FDynamicTierInfo DynamicTierInfo;                                                 // 0x08C8 (size: 0x10)
-    bool bIsVictoryTownRep;                                                           // 0x08D8 (size: 0x1)
-    int32 TownConnectionLevel;                                                        // 0x08DC (size: 0x4)
+    class UAITurretsControllerComponent* AITurretsController;                         // 0x08D0 (size: 0x8)
+    FDynamicTierInfo DynamicTierInfo;                                                 // 0x08D8 (size: 0x10)
+    bool bIsVictoryTownRep;                                                           // 0x08E8 (size: 0x1)
+    int32 TownConnectionLevel;                                                        // 0x08EC (size: 0x4)
 
     void OnRep_IsVictoryTown();
-}; // Size: 0x8F0
+}; // Size: 0x900
 
 class AStaticCrane : public ATeamStructure
 {
-    class USkeletalMeshComponent* MainMesh;                                           // 0x0818 (size: 0x8)
-    class UStaticMeshComponent* BaseMesh;                                             // 0x0820 (size: 0x8)
-    class UStaticMeshComponent* RopeMesh;                                             // 0x0828 (size: 0x8)
-    class UBoxComponent* ShippableCollision;                                          // 0x0830 (size: 0x8)
-    class UAudioComponent* ArmMovementSFXLoop;                                        // 0x0838 (size: 0x8)
-    class UAudioComponent* DeployingSFXLoop;                                          // 0x0840 (size: 0x8)
-    class UAudioComponent* PulleyMovementSFXLoop;                                     // 0x0848 (size: 0x8)
-    class UBuildSocketComponent* PowerSocket;                                         // 0x0850 (size: 0x8)
-    class UFacilityLightComponent* LightComponent;                                    // 0x0858 (size: 0x8)
-    class UCraneComponent* CraneComponent;                                            // 0x0860 (size: 0x8)
-    FPowerGridInfo PowerGridInfo;                                                     // 0x0868 (size: 0x5C)
+    class USkeletalMeshComponent* MainMesh;                                           // 0x0828 (size: 0x8)
+    class UStaticMeshComponent* BaseMesh;                                             // 0x0830 (size: 0x8)
+    class UStaticMeshComponent* RopeMesh;                                             // 0x0838 (size: 0x8)
+    class UBoxComponent* ShippableCollision;                                          // 0x0840 (size: 0x8)
+    class UAudioComponent* ArmMovementSFXLoop;                                        // 0x0848 (size: 0x8)
+    class UAudioComponent* DeployingSFXLoop;                                          // 0x0850 (size: 0x8)
+    class UAudioComponent* PulleyMovementSFXLoop;                                     // 0x0858 (size: 0x8)
+    class UBuildSocketComponent* PowerSocket;                                         // 0x0860 (size: 0x8)
+    class UFacilityLightComponent* LightComponent;                                    // 0x0868 (size: 0x8)
+    class UCraneComponent* CraneComponent;                                            // 0x0870 (size: 0x8)
+    FPowerGridInfo PowerGridInfo;                                                     // 0x0878 (size: 0x5C)
 
     void OnRep_PowerGridInfo();
-}; // Size: 0x8D0
+}; // Size: 0x8E0
 
 class AStickyBombExplosive : public AExplosive
 {
@@ -10603,31 +10595,31 @@ class AStickyBombProjectile : public AWarProjectile
 
 class AStorageBox : public ABuildableStructure
 {
-    class UStaticMeshComponent* MeshComponent;                                        // 0x07F0 (size: 0x8)
-    TArray<FItemInstance> ItemsToReplenish;                                           // 0x07F8 (size: 0x10)
-    float ReplenishRate;                                                              // 0x0808 (size: 0x4)
-    bool bReplenishFirstItem;                                                         // 0x080C (size: 0x1)
-    bool bReplenishedOnce;                                                            // 0x080D (size: 0x1)
+    class UStaticMeshComponent* MeshComponent;                                        // 0x0800 (size: 0x8)
+    TArray<FItemInstance> ItemsToReplenish;                                           // 0x0808 (size: 0x10)
+    float ReplenishRate;                                                              // 0x0818 (size: 0x4)
+    bool bReplenishFirstItem;                                                         // 0x081C (size: 0x1)
+    bool bReplenishedOnce;                                                            // 0x081D (size: 0x1)
 
-}; // Size: 0x820
+}; // Size: 0x830
 
 class AStorageFacility : public ATunnelNode
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0848 (size: 0x8)
-    class UReserveStockpileComponent* ReserveStockpileComponent;                      // 0x0850 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0858 (size: 0x8)
-    class USceneComponent* TransferLocation;                                          // 0x0860 (size: 0x8)
-    class UAITurretsControllerComponent* AITurretsController;                         // 0x0868 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x0858 (size: 0x8)
+    class UReserveStockpileComponent* ReserveStockpileComponent;                      // 0x0860 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0868 (size: 0x8)
+    class USceneComponent* TransferLocation;                                          // 0x0870 (size: 0x8)
+    class UAITurretsControllerComponent* AITurretsController;                         // 0x0878 (size: 0x8)
 
-}; // Size: 0x870
+}; // Size: 0x880
 
 class AStorageFacilityBuildSite : public AStructureBuildSite
 {
-    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07E0 (size: 0x8)
-    class UReserveStockpileComponent* ReserveStockpileComponent;                      // 0x07E8 (size: 0x8)
-    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x07F0 (size: 0x8)
+    class UGenericStockpileComponent* GenericStockpileComponent;                      // 0x07F0 (size: 0x8)
+    class UReserveStockpileComponent* ReserveStockpileComponent;                      // 0x07F8 (size: 0x8)
+    class UCraneSpawnLocationComponent* CraneSpawnLocationComponent;                  // 0x0800 (size: 0x8)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AStructure : public AActor
 {
@@ -10688,30 +10680,27 @@ class AStructure : public AActor
     TArray<FStructureBuildStep> BuildSteps;                                           // 0x0498 (size: 0x10)
     uint8 bHasMeshVisibilityComponent;                                                // 0x04A9 (size: 0x1)
     uint8 bIsBlankFortPiece;                                                          // 0x04A9 (size: 0x1)
-    bool bAddLandscapeHolesOnBeginPlay;                                               // 0x04AA (size: 0x1)
-    bool bRemoveLandscapeHolesOnDestroy;                                              // 0x04AB (size: 0x1)
-    bool bHasLandscapeHoles;                                                          // 0x04AC (size: 0x1)
-    bool bHasRemovedLandscapeHoles;                                                   // 0x04AD (size: 0x1)
-    TWeakObjectPtr<class AStructureIsland> Island;                                    // 0x04B0 (size: 0x8)
-    TArray<class UMultiplexedStaticMeshComponent*> MultiplexedStaticMeshComponents;   // 0x04B8 (size: 0x10)
-    TArray<class UMultiplexedSkeletalMeshComponent*> MultiplexedSkeletalMeshComponents; // 0x04C8 (size: 0x10)
-    class UStealthComponent* StealthComponent;                                        // 0x04D8 (size: 0x8)
-    float Rainfall;                                                                   // 0x04E8 (size: 0x4)
-    uint8 QuantizedRainfall;                                                          // 0x04F0 (size: 0x1)
-    class UStaticMeshComponent* PuddleVisualsMesh;                                    // 0x04F8 (size: 0x8)
-    bool bReceivesRainfall;                                                           // 0x0500 (size: 0x1)
-    float StructureFlameCountFactor;                                                  // 0x0504 (size: 0x4)
-    int32 DecaySupplyDrain;                                                           // 0x0508 (size: 0x4)
-    EFireIntensity FireIntensity;                                                     // 0x050C (size: 0x1)
-    float PreMitigationFireDamagePerTick;                                             // 0x0510 (size: 0x4)
-    class UTemperatureModifierBoxComponent* BurningHeatArea;                          // 0x0518 (size: 0x8)
-    class UTemperatureModifierBoxComponent* WarmingHeatArea;                          // 0x0520 (size: 0x8)
-    TArray<class AFlameActor*> FlameActors;                                           // 0x0540 (size: 0x10)
-    bool bRecentExtinguishingHit;                                                     // 0x0584 (size: 0x1)
-    TArray<class UStructureSeatComponent*> SeatComponents;                            // 0x05B0 (size: 0x10)
-    TArray<class USeatComponent*> ModularSeatComponents;                              // 0x05C0 (size: 0x10)
-    class UParkingSpotComponent* ParkingSpotComponent;                                // 0x05D0 (size: 0x8)
-    class UFirePitComponent* FirePitComponent;                                        // 0x05D8 (size: 0x8)
+    TArray<class UBoxComponent*> LandscapeHoleComponents;                             // 0x04B0 (size: 0x10)
+    TWeakObjectPtr<class AStructureIsland> Island;                                    // 0x04C0 (size: 0x8)
+    TArray<class UMultiplexedStaticMeshComponent*> MultiplexedStaticMeshComponents;   // 0x04C8 (size: 0x10)
+    TArray<class UMultiplexedSkeletalMeshComponent*> MultiplexedSkeletalMeshComponents; // 0x04D8 (size: 0x10)
+    class UStealthComponent* StealthComponent;                                        // 0x04E8 (size: 0x8)
+    float Rainfall;                                                                   // 0x04F8 (size: 0x4)
+    uint8 QuantizedRainfall;                                                          // 0x0500 (size: 0x1)
+    class UStaticMeshComponent* PuddleVisualsMesh;                                    // 0x0508 (size: 0x8)
+    bool bReceivesRainfall;                                                           // 0x0510 (size: 0x1)
+    float StructureFlameCountFactor;                                                  // 0x0514 (size: 0x4)
+    int32 DecaySupplyDrain;                                                           // 0x0518 (size: 0x4)
+    EFireIntensity FireIntensity;                                                     // 0x051C (size: 0x1)
+    float PreMitigationFireDamagePerTick;                                             // 0x0520 (size: 0x4)
+    class UTemperatureModifierBoxComponent* BurningHeatArea;                          // 0x0528 (size: 0x8)
+    class UTemperatureModifierBoxComponent* WarmingHeatArea;                          // 0x0530 (size: 0x8)
+    TArray<class AFlameActor*> FlameActors;                                           // 0x0550 (size: 0x10)
+    bool bRecentExtinguishingHit;                                                     // 0x0594 (size: 0x1)
+    TArray<class UStructureSeatComponent*> SeatComponents;                            // 0x05C0 (size: 0x10)
+    TArray<class USeatComponent*> ModularSeatComponents;                              // 0x05D0 (size: 0x10)
+    class UParkingSpotComponent* ParkingSpotComponent;                                // 0x05E0 (size: 0x8)
+    class UFirePitComponent* FirePitComponent;                                        // 0x05E8 (size: 0x8)
 
     void Use(class AWarCharacter* UsingPlayer);
     void OnRep_RecentExtinguishingHit(bool Previous);
@@ -10727,37 +10716,37 @@ class AStructure : public AActor
     void BPOnVehicleDrivingOverDamage();
     void BPOnFireIntensityReduced(int32 OldIntensity, int32 NewIntensity);
     void BPOnFireIntensityIncreased(int32 OldIntensity, int32 NewIntensity);
-}; // Size: 0x5F8
+}; // Size: 0x608
 
 class AStructureBuildSite : public ABuildSite
 {
-    FName StructureBeingBuiltCodeName;                                                // 0x06F0 (size: 0x8)
-    TArray<class UModificationSlotComponent*> ModificationSlots;                      // 0x06F8 (size: 0x10)
-    uint32 ModificationMask;                                                          // 0x0708 (size: 0x4)
-    TArray<FModificationSlotMigration> ModificationSlotMigrations;                    // 0x0710 (size: 0x10)
-    TArray<FName> DisabledSockets;                                                    // 0x0720 (size: 0x10)
-    uint32 MigratedModificationMask;                                                  // 0x0730 (size: 0x4)
-    class UBoxComponent* ObstructionCheckVolume;                                      // 0x0738 (size: 0x8)
-    bool bIsUpgrade;                                                                  // 0x0740 (size: 0x1)
-    TSubclassOf<class AStructure> BaseStructureClassToRespawn;                        // 0x0748 (size: 0x8)
-    int32 BaseStructureHealth;                                                        // 0x0750 (size: 0x4)
-    uint8 BaseStructureTeamId;                                                        // 0x0754 (size: 0x1)
-    EFactionId LastHeldFactionID;                                                     // 0x0755 (size: 0x1)
-    bool bHasSavedRotation;                                                           // 0x0756 (size: 0x1)
-    FQuat BaseStructureRotation;                                                      // 0x0760 (size: 0x10)
-    float DecayStartHours;                                                            // 0x0770 (size: 0x4)
-    float DecayDurationHours;                                                         // 0x0774 (size: 0x4)
-    FString PreviousBuilderOnlineID;                                                  // 0x0778 (size: 0x10)
-    FString PreviousBuilderName;                                                      // 0x0788 (size: 0x10)
-    FConnectorConfiguration ConnectorConfiguration;                                   // 0x07A0 (size: 0x30)
+    FName StructureBeingBuiltCodeName;                                                // 0x0700 (size: 0x8)
+    TArray<class UModificationSlotComponent*> ModificationSlots;                      // 0x0708 (size: 0x10)
+    uint32 ModificationMask;                                                          // 0x0718 (size: 0x4)
+    TArray<FModificationSlotMigration> ModificationSlotMigrations;                    // 0x0720 (size: 0x10)
+    TArray<FName> DisabledSockets;                                                    // 0x0730 (size: 0x10)
+    uint32 MigratedModificationMask;                                                  // 0x0740 (size: 0x4)
+    class UBoxComponent* ObstructionCheckVolume;                                      // 0x0748 (size: 0x8)
+    bool bIsUpgrade;                                                                  // 0x0750 (size: 0x1)
+    TSubclassOf<class AStructure> BaseStructureClassToRespawn;                        // 0x0758 (size: 0x8)
+    int32 BaseStructureHealth;                                                        // 0x0760 (size: 0x4)
+    uint8 BaseStructureTeamId;                                                        // 0x0764 (size: 0x1)
+    EFactionId LastHeldFactionID;                                                     // 0x0765 (size: 0x1)
+    bool bHasSavedRotation;                                                           // 0x0766 (size: 0x1)
+    FQuat BaseStructureRotation;                                                      // 0x0770 (size: 0x10)
+    float DecayStartHours;                                                            // 0x0780 (size: 0x4)
+    float DecayDurationHours;                                                         // 0x0784 (size: 0x4)
+    FString PreviousBuilderOnlineID;                                                  // 0x0788 (size: 0x10)
+    FString PreviousBuilderName;                                                      // 0x0798 (size: 0x10)
+    FConnectorConfiguration ConnectorConfiguration;                                   // 0x07B0 (size: 0x30)
 
     void OnRep_MigratedModificationMask();
     void OnRep_IsUpgrade();
-}; // Size: 0x7E0
+}; // Size: 0x7F0
 
 class AStructureCrate : public AShippableCrate
 {
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AStructureIsland : public AActor
 {
@@ -10863,15 +10852,15 @@ class ATargetingWall : public AActor
 
 class ATeamStructure : public ABuildableStructure
 {
-    uint8 TeamId;                                                                     // 0x07F0 (size: 0x1)
-    bool bAllowUseByEnemy;                                                            // 0x07F1 (size: 0x1)
-    bool bCanBeFlaggedForDisruptivePlacement;                                         // 0x07F2 (size: 0x1)
-    uint8 bCanBlockAIUpgrade;                                                         // 0x07F3 (size: 0x1)
-    float DisruptivePlacementVoteMultiplier;                                          // 0x07F4 (size: 0x4)
+    uint8 TeamId;                                                                     // 0x0800 (size: 0x1)
+    bool bAllowUseByEnemy;                                                            // 0x0801 (size: 0x1)
+    bool bCanBeFlaggedForDisruptivePlacement;                                         // 0x0802 (size: 0x1)
+    uint8 bCanBlockAIUpgrade;                                                         // 0x0803 (size: 0x1)
+    float DisruptivePlacementVoteMultiplier;                                          // 0x0804 (size: 0x4)
 
     void OnRep_TeamIdNotify();
     void BPSetTeamVisuals(const int32 VisualTeamId);
-}; // Size: 0x810
+}; // Size: 0x820
 
 class ATechTree : public AInfo
 {
@@ -10912,22 +10901,22 @@ class ATorpedoProjectile : public AWarProjectile
 
 class ATownBase : public AStaticBase
 {
-}; // Size: 0x8F0
+}; // Size: 0x900
 
 class ATownBaseBuildSite : public ATownHallBuildSite
 {
-}; // Size: 0x850
+}; // Size: 0x860
 
 class ATownHall : public ABase
 {
-    bool bIsFort;                                                                     // 0x08B1 (size: 0x1)
-    class UMapIntelligenceSourceComponent* MapIntelligenceSourceComponent;            // 0x08B8 (size: 0x8)
+    bool bIsFort;                                                                     // 0x08C1 (size: 0x1)
+    class UMapIntelligenceSourceComponent* MapIntelligenceSourceComponent;            // 0x08C8 (size: 0x8)
 
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class ATownHallBuildSite : public ABaseBuildSite
 {
-}; // Size: 0x850
+}; // Size: 0x860
 
 class ATractor : public ARWDSimVehicle
 {
@@ -10965,32 +10954,32 @@ class ATravelBlockingArea : public AActor
 
 class ATripodMountedStructure : public ADeployedStructure
 {
-    class USkeletalMeshComponent* TripodMesh;                                         // 0x0810 (size: 0x8)
-    class USkeletalMeshComponent* GunMesh;                                            // 0x0818 (size: 0x8)
-    FName ItemCodeName;                                                               // 0x0820 (size: 0x8)
-    FName BaseItemCodeName;                                                           // 0x0828 (size: 0x8)
+    class USkeletalMeshComponent* TripodMesh;                                         // 0x0820 (size: 0x8)
+    class USkeletalMeshComponent* GunMesh;                                            // 0x0828 (size: 0x8)
+    FName ItemCodeName;                                                               // 0x0830 (size: 0x8)
+    FName BaseItemCodeName;                                                           // 0x0838 (size: 0x8)
 
-}; // Size: 0x830
+}; // Size: 0x840
 
 class ATunnelNode : public ATeamStructure
 {
-    FVector ObstructionCheckOverrideExtents;                                          // 0x0810 (size: 0xC)
-    float VisibilityTraceOffsetZ;                                                     // 0x081C (size: 0x4)
-    bool bAggroSingleStructureOnDamage;                                               // 0x0820 (size: 0x1)
-    ETunnelNodeType TunnelNodeType;                                                   // 0x0821 (size: 0x1)
-    bool bCanBeHidden;                                                                // 0x0822 (size: 0x1)
-    ETunnelConnectionState TunnelConnectionState;                                     // 0x0823 (size: 0x1)
-    TArray<class ATunnelNode*> ConnectedTunnelNodes;                                  // 0x0828 (size: 0x10)
+    FVector ObstructionCheckOverrideExtents;                                          // 0x0820 (size: 0xC)
+    float VisibilityTraceOffsetZ;                                                     // 0x082C (size: 0x4)
+    bool bAggroSingleStructureOnDamage;                                               // 0x0830 (size: 0x1)
+    ETunnelNodeType TunnelNodeType;                                                   // 0x0831 (size: 0x1)
+    bool bCanBeHidden;                                                                // 0x0832 (size: 0x1)
+    ETunnelConnectionState TunnelConnectionState;                                     // 0x0833 (size: 0x1)
+    TArray<class ATunnelNode*> ConnectedTunnelNodes;                                  // 0x0838 (size: 0x10)
 
     void OnRep_TunnelConnectionState();
     void BPSetTunnelConnectionStateVisuals(const ETunnelConnectionState NewTunnelConnectionState);
-}; // Size: 0x850
+}; // Size: 0x860
 
 class ATunnelNodeProxy : public ATunnelNode
 {
-    float ProxyConnectionRange;                                                       // 0x0848 (size: 0x4)
+    float ProxyConnectionRange;                                                       // 0x0858 (size: 0x4)
 
-}; // Size: 0x850
+}; // Size: 0x860
 
 class AUniformPickup : public AItemPickup
 {
@@ -11000,25 +10989,25 @@ class AUniformPickup : public AItemPickup
 
 class AVehicleBuildSite : public ABuildSite
 {
-    FName OriginatorVehicleName;                                                      // 0x06F0 (size: 0x8)
-    int32 SquadId;                                                                    // 0x06F8 (size: 0x4)
-    FVector BuildOffset;                                                              // 0x06FC (size: 0xC)
-    FRotator BuildRotation;                                                           // 0x0708 (size: 0xC)
-    FName VehicleCodeName;                                                            // 0x0714 (size: 0x8)
+    FName OriginatorVehicleName;                                                      // 0x0700 (size: 0x8)
+    int32 SquadId;                                                                    // 0x0708 (size: 0x4)
+    FVector BuildOffset;                                                              // 0x070C (size: 0xC)
+    FRotator BuildRotation;                                                           // 0x0718 (size: 0xC)
+    FName VehicleCodeName;                                                            // 0x0724 (size: 0x8)
 
-}; // Size: 0x720
+}; // Size: 0x730
 
 class AVehicleCrate : public AShippableCrate
 {
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AVehicleFactory : public AConstructionSite
 {
-}; // Size: 0x830
+}; // Size: 0x840
 
 class AVehicleFactoryBuildSite : public AConstructionSiteBuildSite
 {
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AVehicleMovementProfileList : public AInfo
 {
@@ -11040,14 +11029,14 @@ class AVehiclesRenderInfo : public AInfo
 
 class AWall : public ABuildableStructure
 {
-    bool bAllowStanding;                                                              // 0x07F0 (size: 0x1)
-    bool UpgradeRequiresConnectedWalls;                                               // 0x07F1 (size: 0x1)
+    bool bAllowStanding;                                                              // 0x0800 (size: 0x1)
+    bool UpgradeRequiresConnectedWalls;                                               // 0x0801 (size: 0x1)
 
-}; // Size: 0x800
+}; // Size: 0x810
 
 class AWallBuildSite : public AStructureBuildSite
 {
-}; // Size: 0x7F0
+}; // Size: 0x800
 
 class AWarBaseHUD : public AHUD
 {
@@ -11250,11 +11239,11 @@ class AWarReplicationGraphDebugActor : public AReplicationGraphDebugActor
 
 class AWatchTower : public ATeamStructure
 {
-    class UMapIntelligenceSourceComponent* MapIntelligenceSourceComponent;            // 0x0810 (size: 0x8)
-    class UTeamFlagMeshComponent* TeamFlagMeshComponent;                              // 0x0818 (size: 0x8)
-    float GunnerYaw;                                                                  // 0x0820 (size: 0x4)
+    class UMapIntelligenceSourceComponent* MapIntelligenceSourceComponent;            // 0x0820 (size: 0x8)
+    class UTeamFlagMeshComponent* TeamFlagMeshComponent;                              // 0x0828 (size: 0x8)
+    float GunnerYaw;                                                                  // 0x0830 (size: 0x4)
 
-}; // Size: 0x840
+}; // Size: 0x850
 
 class AWaterMeshActor : public AStaticMeshActor
 {
@@ -11332,35 +11321,35 @@ class AWeatherIceMapData : public AActor
 
 class AWeatherStation : public ATeamStructure
 {
-    class USkeletalMeshComponent* Mesh;                                               // 0x0818 (size: 0x8)
-    class USkeletalMeshComponent* BaseMesh;                                           // 0x0820 (size: 0x8)
-    class UWarAudioComponent* ActiveSFXLoop;                                          // 0x0828 (size: 0x8)
-    class UWarAudioComponent* RotationSFXLoop;                                        // 0x0830 (size: 0x8)
-    class UFacilityLightComponent* LightComponent;                                    // 0x0838 (size: 0x8)
-    class USoundCue* ActivateSFX;                                                     // 0x0840 (size: 0x8)
-    class USoundCue* DeactivateSFX;                                                   // 0x0848 (size: 0x8)
-    float MaxPower;                                                                   // 0x0850 (size: 0x4)
-    float RequiredPowerForFiring;                                                     // 0x0854 (size: 0x4)
-    float RequiredPowerForRotation;                                                   // 0x0858 (size: 0x4)
-    float ActiveDuration;                                                             // 0x085C (size: 0x4)
-    float MaxTargetAngle;                                                             // 0x0860 (size: 0x4)
-    float ConnectionDistance;                                                         // 0x0864 (size: 0x4)
-    EWeatherStationState State;                                                       // 0x0868 (size: 0x1)
-    uint8 NetworkedStations;                                                          // 0x0869 (size: 0x1)
-    int8 PredictionOffset;                                                            // 0x086A (size: 0x1)
-    uint8 RequiredSquadMembers;                                                       // 0x086B (size: 0x1)
-    int32 SquadId;                                                                    // 0x086C (size: 0x4)
-    float Yaw;                                                                        // 0x0870 (size: 0x4)
-    FWeatherStationID GlobalID;                                                       // 0x0874 (size: 0x2)
-    FWeatherStationID ConnectionTo;                                                   // 0x0876 (size: 0x2)
-    FWarGridCoordinate CoordConnectionTo;                                             // 0x0878 (size: 0x6)
-    FWeatherStationID ConnectionFrom;                                                 // 0x087E (size: 0x2)
-    FWarGridCoordinate CoordConnectionFrom;                                           // 0x0880 (size: 0x6)
-    float RemainingActiveTime;                                                        // 0x0888 (size: 0x4)
+    class USkeletalMeshComponent* Mesh;                                               // 0x0828 (size: 0x8)
+    class USkeletalMeshComponent* BaseMesh;                                           // 0x0830 (size: 0x8)
+    class UWarAudioComponent* ActiveSFXLoop;                                          // 0x0838 (size: 0x8)
+    class UWarAudioComponent* RotationSFXLoop;                                        // 0x0840 (size: 0x8)
+    class UFacilityLightComponent* LightComponent;                                    // 0x0848 (size: 0x8)
+    class USoundCue* ActivateSFX;                                                     // 0x0850 (size: 0x8)
+    class USoundCue* DeactivateSFX;                                                   // 0x0858 (size: 0x8)
+    float MaxPower;                                                                   // 0x0860 (size: 0x4)
+    float RequiredPowerForFiring;                                                     // 0x0864 (size: 0x4)
+    float RequiredPowerForRotation;                                                   // 0x0868 (size: 0x4)
+    float ActiveDuration;                                                             // 0x086C (size: 0x4)
+    float MaxTargetAngle;                                                             // 0x0870 (size: 0x4)
+    float ConnectionDistance;                                                         // 0x0874 (size: 0x4)
+    EWeatherStationState State;                                                       // 0x0878 (size: 0x1)
+    uint8 NetworkedStations;                                                          // 0x0879 (size: 0x1)
+    int8 PredictionOffset;                                                            // 0x087A (size: 0x1)
+    uint8 RequiredSquadMembers;                                                       // 0x087B (size: 0x1)
+    int32 SquadId;                                                                    // 0x087C (size: 0x4)
+    float Yaw;                                                                        // 0x0880 (size: 0x4)
+    FWeatherStationID GlobalID;                                                       // 0x0884 (size: 0x2)
+    FWeatherStationID ConnectionTo;                                                   // 0x0886 (size: 0x2)
+    FWarGridCoordinate CoordConnectionTo;                                             // 0x0888 (size: 0x6)
+    FWeatherStationID ConnectionFrom;                                                 // 0x088E (size: 0x2)
+    FWarGridCoordinate CoordConnectionFrom;                                           // 0x0890 (size: 0x6)
+    float RemainingActiveTime;                                                        // 0x0898 (size: 0x4)
 
     void OnRep_Yaw(const float PreviousYaw);
     void OnRep_State();
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 class AWorldProxyActor : public AActor
 {

@@ -3,6 +3,6 @@
 
 class ABPRailTrackSplineBiarc_C : public ABPRailTrackSpline_C
 {
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 #endif

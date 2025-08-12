@@ -3,9 +3,9 @@
 
 class ABPFacilityMineResource4_C : public ABPFacilityMineResource_C
 {
-    class UParticleSystemComponent* ProducingFX2;                                     // 0x0A90 (size: 0x8)
-    class UDecalComponent* Decal;                                                     // 0x0A98 (size: 0x8)
+    class UParticleSystemComponent* ProducingFX2;                                     // 0x0AA0 (size: 0x8)
+    class UDecalComponent* Decal;                                                     // 0x0AA8 (size: 0x8)
 
-}; // Size: 0xAA0
+}; // Size: 0xAB0
 
 #endif

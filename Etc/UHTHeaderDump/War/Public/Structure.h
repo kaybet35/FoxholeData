@@ -232,17 +232,8 @@ public:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     uint8 bIsBlankFortPiece: 1;
     
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool bAddLandscapeHolesOnBeginPlay;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool bRemoveLandscapeHolesOnDestroy;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool bHasLandscapeHoles;
-    
-    UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
-    bool bHasRemovedLandscapeHoles;
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Instanced, meta=(AllowPrivateAccess=true))
+    TArray<UBoxComponent*> LandscapeHoleComponents;
     
     UPROPERTY(BlueprintReadWrite, EditAnywhere, Transient, meta=(AllowPrivateAccess=true))
     TWeakObjectPtr<AStructureIsland> Island;

@@ -3,6 +3,6 @@
 
 class ABPTrenchConnectorFill_C : public ABPTrenchConnectorT1_C
 {
-}; // Size: 0x8D0
+}; // Size: 0x8E0
 
 #endif

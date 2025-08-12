@@ -3,6 +3,6 @@
 
 class ABPSmallRailTrackSplineFoundation_C : public ABPSmallRailTrackSpline_C
 {
-}; // Size: 0x8C0
+}; // Size: 0x8D0
 
 #endif

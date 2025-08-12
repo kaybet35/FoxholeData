@@ -3,10 +3,10 @@
 
 class ABPMGAIT1_C : public ABPMGAIBase_C
 {
-    class UTemplateComponent* FortCommonT1BreachedWalls;                              // 0x08D0 (size: 0x8)
-    class UBoxComponent* BlockBuildSiteMovement;                                      // 0x08D8 (size: 0x8)
-    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08E0 (size: 0x8)
+    class UTemplateComponent* FortCommonT1BreachedWalls;                              // 0x08E0 (size: 0x8)
+    class UBoxComponent* BlockBuildSiteMovement;                                      // 0x08E8 (size: 0x8)
+    class UMultiplexedSkeletalMeshComponent* MultiplexedSkeletalMesh;                 // 0x08F0 (size: 0x8)
 
-}; // Size: 0x8E8
+}; // Size: 0x8F8
 
 #endif

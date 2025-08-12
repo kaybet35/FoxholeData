@@ -3,9 +3,9 @@
 
 class ABPPowerPole_C : public APowerPole
 {
-    class UModificationSlotComponent* UpgradeModificationSlot;                        // 0x08F0 (size: 0x8)
-    class UStaticMeshComponent* MainMesh;                                             // 0x08F8 (size: 0x8)
+    class UModificationSlotComponent* UpgradeModificationSlot;                        // 0x0900 (size: 0x8)
+    class UStaticMeshComponent* MainMesh;                                             // 0x0908 (size: 0x8)
 
-}; // Size: 0x900
+}; // Size: 0x910
 
 #endif

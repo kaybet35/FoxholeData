@@ -3,8 +3,8 @@
 
 class ABPDestroyedCoastalGun_C : public ADestroyedStructure
 {
-    class UStaticMeshComponent* CoastalGun;                                           // 0x0600 (size: 0x8)
+    class UStaticMeshComponent* CoastalGun;                                           // 0x0610 (size: 0x8)
 
-}; // Size: 0x608
+}; // Size: 0x618
 
 #endif

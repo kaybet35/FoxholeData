@@ -3,9 +3,9 @@
 
 class ABPDestroyedBorderBase_C : public ADestroyedBorderBase
 {
-    class UBoxComponent* NoBuildVolume;                                               // 0x0658 (size: 0x8)
-    class UStaticMeshComponent* TownHallMesh;                                         // 0x0660 (size: 0x8)
+    class UBoxComponent* NoBuildVolume;                                               // 0x0668 (size: 0x8)
+    class UStaticMeshComponent* TownHallMesh;                                         // 0x0670 (size: 0x8)
 
-}; // Size: 0x668
+}; // Size: 0x678
 
 #endif

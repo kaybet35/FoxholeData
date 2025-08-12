@@ -3,6 +3,6 @@
 
 class ABPCraterLargeFill_C : public ABPCraterLarge_C
 {
-}; // Size: 0x848
+}; // Size: 0x838
 
 #endif

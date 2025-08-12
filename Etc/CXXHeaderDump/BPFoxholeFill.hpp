@@ -3,6 +3,6 @@
 
 class ABPFoxholeFill_C : public ABPFoxhole_C
 {
-}; // Size: 0x860
+}; // Size: 0x870
 
 #endif

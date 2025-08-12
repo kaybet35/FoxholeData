@@ -3,6 +3,6 @@
 
 class ABPDeployedBannerTW_C : public ABPDeployedBannerTC_C
 {
-}; // Size: 0x868
+}; // Size: 0x878
 
 #endif

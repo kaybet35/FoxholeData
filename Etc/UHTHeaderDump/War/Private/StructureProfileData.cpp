@@ -3,6 +3,7 @@
 FStructureProfileData::FStructureProfileData() {
     this->bHasDynamicStartingCondition = false;
     this->bIsRepairable = false;
+    this->bIsOnlyMountableByFriendly = false;
     this->bIsUpgradeRotationAllowed = false;
     this->bIsUsableFromVehicle = false;
     this->bAllowUpgradeWhenDamaged = false;

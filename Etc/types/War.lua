@@ -578,9 +578,7 @@ local ACraneRailwayTrack = {}
 
 
 ---@class ACrater : ABuildableStructure
----@field MeshStops TArray<FCraterMeshStop>
 local ACrater = {}
-
 
 
 ---@class ADamageProfiles : AInfo
@@ -4675,10 +4673,7 @@ local AStorageFacilityBuildSite = {}
 ---@field BuildSteps TArray<FStructureBuildStep>
 ---@field bHasMeshVisibilityComponent boolean
 ---@field bIsBlankFortPiece boolean
----@field bAddLandscapeHolesOnBeginPlay boolean
----@field bRemoveLandscapeHolesOnDestroy boolean
----@field bHasLandscapeHoles boolean
----@field bHasRemovedLandscapeHoles boolean
+---@field LandscapeHoleComponents TArray<UBoxComponent>
 ---@field Island TWeakObjectPtr<AStructureIsland>
 ---@field MultiplexedStaticMeshComponents TArray<UMultiplexedStaticMeshComponent>
 ---@field MultiplexedSkeletalMeshComponents TArray<UMultiplexedSkeletalMeshComponent>
@@ -6563,13 +6558,6 @@ local FCraneComponents = {}
 ---@field OuterRadius float
 ---@field SpawnWeight float
 local FCraterInfo = {}
-
-
-
----@class FCraterMeshStop
----@field Length float
----@field StaticMesh UStaticMesh
-local FCraterMeshStop = {}
 
 
 
@@ -10601,6 +10589,7 @@ local FStructureDynamicData = {}
 ---@class FStructureProfileData
 ---@field bHasDynamicStartingCondition boolean
 ---@field bIsRepairable boolean
+---@field bIsOnlyMountableByFriendly boolean
 ---@field bIsUpgradeRotationAllowed boolean
 ---@field bIsUsableFromVehicle boolean
 ---@field bAllowUpgradeWhenDamaged boolean
