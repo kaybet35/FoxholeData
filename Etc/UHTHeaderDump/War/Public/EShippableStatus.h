@@ -61,5 +61,6 @@ enum class EShippableStatus : uint8 {
     MustUndeploy,
     MustRetrievePatients,
     MustSelectStructure,
+    Overheating,
 };
 

@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPRocketSite_C : ARocketFacility
+---@field BPNoBuildBoxComponent1 UBPNoBuildBoxComponent_C
 ---@field BPNoBuildBoxComponent UBPNoBuildBoxComponent_C
 ---@field Corner04 UDecalComponent
 ---@field Corner03 UDecalComponent

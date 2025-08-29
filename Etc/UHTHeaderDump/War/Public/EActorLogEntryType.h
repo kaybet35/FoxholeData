@@ -27,7 +27,6 @@ enum class EActorLogEntryType : uint8 {
     StockpileTransferPublic,
     StockpileTransferReserve,
     Mounted,
-    Unmounted,
     Fired,
     OrderQueued,
     OrderStarted,

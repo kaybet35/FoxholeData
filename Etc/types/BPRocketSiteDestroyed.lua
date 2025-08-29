@@ -1,6 +1,7 @@
 ---@meta
 
 ---@class ABPRocketSiteDestroyed_C : ADestroyedStructure
+---@field BPNoBuildBoxComponent1 UBPNoBuildBoxComponent_C
 ---@field Corner03 UDecalComponent
 ---@field Corner01 UDecalComponent
 ---@field Corner04 UDecalComponent
