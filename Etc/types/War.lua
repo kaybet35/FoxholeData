@@ -14493,6 +14493,7 @@ local UPuddleComponent = {}
 ---@class UQuadrilateralCoverComponent : UInstancedStaticMeshComponent
 ---@field EndOffset float
 ---@field SideOffset float
+---@field bUseMaxZ boolean
 local UQuadrilateralCoverComponent = {}
 
 

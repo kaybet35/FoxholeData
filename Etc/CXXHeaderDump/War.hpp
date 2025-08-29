@@ -13408,8 +13408,9 @@ class UQuadrilateralCoverComponent : public UInstancedStaticMeshComponent
 {
     float EndOffset;                                                                  // 0x0518 (size: 0x4)
     float SideOffset;                                                                 // 0x051C (size: 0x4)
+    bool bUseMaxZ;                                                                    // 0x0520 (size: 0x1)
 
-}; // Size: 0x520
+}; // Size: 0x530
 
 class URWDVehicleMovementComponent : public USimpleVehicleMovementComponent
 {

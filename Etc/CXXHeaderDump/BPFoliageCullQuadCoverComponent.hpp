@@ -3,6 +3,6 @@
 
 class UBPFoliageCullQuadCoverComponent_C : public UQuadrilateralCoverComponent
 {
-}; // Size: 0x520
+}; // Size: 0x530
 
 #endif
