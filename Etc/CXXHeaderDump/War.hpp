@@ -9916,12 +9916,11 @@ class ASimGameMode : public AWarGameMode
     FString DefaultAutoSaveSlot;                                                      // 0x0308 (size: 0x10)
     TSubclassOf<class APawn> DefaultBotClass;                                         // 0x0318 (size: 0x8)
     TMap<uint32, AActor*> AssignableSpawnPoints;                                      // 0x0328 (size: 0x50)
-    uint32 CurrentVehicleID;                                                          // 0x0378 (size: 0x4)
-    TMap<class FString, class AOfflineCharacter*> OfflineCharacterMap;                // 0x0380 (size: 0x50)
-    TSubclassOf<class AOfflineCharacter> OfflineCharacterClass;                       // 0x03D0 (size: 0x8)
-    TMap<class FString, class FSavedCharacter> SavedCharacterMap;                     // 0x03D8 (size: 0x50)
-    class UPlayerProfileManager* PlayerProfileManager;                                // 0x04B8 (size: 0x8)
-    FWarReporter WarReporter;                                                         // 0x04C0 (size: 0x58)
+    TMap<class FString, class AOfflineCharacter*> OfflineCharacterMap;                // 0x0378 (size: 0x50)
+    TSubclassOf<class AOfflineCharacter> OfflineCharacterClass;                       // 0x03C8 (size: 0x8)
+    TMap<class FString, class FSavedCharacter> SavedCharacterMap;                     // 0x03D0 (size: 0x50)
+    class UPlayerProfileManager* PlayerProfileManager;                                // 0x04B0 (size: 0x8)
+    FWarReporter WarReporter;                                                         // 0x04B8 (size: 0x58)
     class UResourceMapping* ResourceMapping;                                          // 0x0658 (size: 0x8)
     TSet<AActor*> DecayPreventers;                                                    // 0x06E0 (size: 0x50)
 
@@ -14557,8 +14556,9 @@ class UWarSaveGame : public USaveGame
     TSet<FName> DestroyedDestructibleProps;                                           // 0x0288 (size: 0x50)
     int32 NextTechStateID;                                                            // 0x02D8 (size: 0x4)
     TArray<FPipelineSystem> PipelineSystems;                                          // 0x02E0 (size: 0x10)
+    int32 NextVehicleID;                                                              // 0x02F0 (size: 0x4)
 
-}; // Size: 0x2F0
+}; // Size: 0x2F8
 
 class UWarSessionSettings : public UObject
 {

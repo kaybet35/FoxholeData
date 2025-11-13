@@ -3347,7 +3347,6 @@ function ASimCharacter:BPCinematicDeath() end
 ---@field DefaultAutoSaveSlot FString
 ---@field DefaultBotClass TSubclassOf<APawn>
 ---@field AssignableSpawnPoints TMap<uint32, AActor>
----@field CurrentVehicleID uint32
 ---@field OfflineCharacterMap TMap<FString, AOfflineCharacter>
 ---@field OfflineCharacterClass TSubclassOf<AOfflineCharacter>
 ---@field SavedCharacterMap TMap<FString, FSavedCharacter>
@@ -15762,6 +15761,7 @@ local UWarReplicationGraphNode_RailVehicleNode = {}
 ---@field DestroyedDestructibleProps TSet<FName>
 ---@field NextTechStateID int32
 ---@field PipelineSystems TArray<FPipelineSystem>
+---@field NextVehicleID int32
 local UWarSaveGame = {}
 
 

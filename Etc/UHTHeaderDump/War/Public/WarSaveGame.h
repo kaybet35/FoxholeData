@@ -99,6 +99,9 @@ private:
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TArray<FPipelineSystem> PipelineSystems;
     
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
+    int32 NextVehicleID;
+    
 public:
     UWarSaveGame();
 

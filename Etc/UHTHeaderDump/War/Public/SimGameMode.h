@@ -30,9 +30,6 @@ private:
     UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<uint32, AActor*> AssignableSpawnPoints;
     
-    UPROPERTY(EditAnywhere, meta=(AllowPrivateAccess=true))
-    uint32 CurrentVehicleID;
-    
     UPROPERTY(BlueprintReadWrite, EditAnywhere, meta=(AllowPrivateAccess=true))
     TMap<FString, AOfflineCharacter*> OfflineCharacterMap;
     

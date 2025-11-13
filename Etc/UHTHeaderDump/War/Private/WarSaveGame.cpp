@@ -9,6 +9,7 @@ UWarSaveGame::UWarSaveGame() {
     this->bIsWeatherManual = false;
     this->bIsAutoSave = false;
     this->NextTechStateID = 0;
+    this->NextVehicleID = 0;
 }
 
 
